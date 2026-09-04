@@ -1,0 +1,22 @@
+; Native QA diagnostic fixture only. Not part of the production game or export.
+config_version=5
+
+[application]
+config/name="NULLSPACE Native QA Fixture"
+run/main_scene="res://fixture.tscn"
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=1
+
+[rendering]
+renderer/rendering_method="forward_plus"
+renderer/rendering_method.mobile="mobile"
+textures/default_filters/use_nearest_mipmap_filter=false
+
+[audio]
+driver/mix_rate=48000
