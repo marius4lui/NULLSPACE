@@ -1,0 +1,174 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Failed arrival retains its own detached failure across synchronous successful retry
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_reentrant_completion (res://tests/core/restore_contract_tests.gd:86)
+       [2] run (res://tests/core/restore_contract_tests.gd:64)
+       [3] _run (res://tests/core/run_core_tests.gd:26)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Early LOADING callbacks reject sentinel zero negative and unissued generation: new/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:138)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Premature callback cannot bypass or fail a valid paused load: new/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:140)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Rejected early callback preserves the one staged epoch and load notification: new/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:143)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Issued positive generation can be resolved exactly once: new/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:147)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Early LOADING callbacks reject sentinel zero negative and unissued generation: new/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:138)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Premature callback cannot bypass or fail a valid paused load: new/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:140)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Rejected early callback preserves the one staged epoch and load notification: new/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:143)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Issued positive generation can be resolved exactly once: new/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:147)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Early LOADING callbacks reject sentinel zero negative and unissued generation: continue/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:138)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Premature callback cannot bypass or fail a valid paused load: continue/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:140)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Rejected early callback preserves the one staged epoch and load notification: continue/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:143)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Issued positive generation can be resolved exactly once: continue/complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:147)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Early LOADING callbacks reject sentinel zero negative and unissued generation: continue/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:138)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Premature callback cannot bypass or fail a valid paused load: continue/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:140)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Rejected early callback preserves the one staged epoch and load notification: continue/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:143)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+ERROR: Issued positive generation can be resolved exactly once: continue/fail
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:38)
+       [1] _test_early_load_callbacks (res://tests/core/clock_restore_tests.gd:147)
+       [2] run (res://tests/core/clock_restore_tests.gd:17)
+       [3] _run (res://tests/core/run_core_tests.gd:28)
+       [4] _test_flow_and_input (res://tests/core/run_core_tests.gd:255)
+{
+	"checks": 256,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"failures": [
+		"Failed arrival retains its own detached failure across synchronous successful retry",
+		"Early LOADING callbacks reject sentinel zero negative and unissued generation: new/complete",
+		"Premature callback cannot bypass or fail a valid paused load: new/complete",
+		"Rejected early callback preserves the one staged epoch and load notification: new/complete",
+		"Issued positive generation can be resolved exactly once: new/complete",
+		"Early LOADING callbacks reject sentinel zero negative and unissued generation: new/fail",
+		"Premature callback cannot bypass or fail a valid paused load: new/fail",
+		"Rejected early callback preserves the one staged epoch and load notification: new/fail",
+		"Issued positive generation can be resolved exactly once: new/fail",
+		"Early LOADING callbacks reject sentinel zero negative and unissued generation: continue/complete",
+		"Premature callback cannot bypass or fail a valid paused load: continue/complete",
+		"Rejected early callback preserves the one staged epoch and load notification: continue/complete",
+		"Issued positive generation can be resolved exactly once: continue/complete",
+		"Early LOADING callbacks reject sentinel zero negative and unissued generation: continue/fail",
+		"Premature callback cannot bypass or fail a valid paused load: continue/fail",
+		"Rejected early callback preserves the one staged epoch and load notification: continue/fail",
+		"Issued positive generation can be resolved exactly once: continue/fail"
+	],
+	"isolated_data": "/tmp/nullspace_core_tests-20260905002632452186",
+	"scope": "logical tests, not gameplay or experiential validation",
+	"suite": "M2 core"
+}

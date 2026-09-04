@@ -1,0 +1,8 @@
+7f6652600000-7f6652cd6000 r-xp 00000000 00:23 46511630                   /usr/lib64/libvulkan_radeon.so
+7f6652cd6000-7f665372b000 r--p 006d6000 00:23 46511630                   /usr/lib64/libvulkan_radeon.so
+7f665372b000-7f665377c000 r--p 0112a000 00:23 46511630                   /usr/lib64/libvulkan_radeon.so
+7f665377c000-7f6653798000 rw-p 0117b000 00:23 46511630                   /usr/lib64/libvulkan_radeon.so
+7f6668770000-7f66687be000 r-xp 00000000 00:23 37262                      /usr/lib64/libvulkan.so.1.4.341
+7f66687be000-7f66687f6000 r--p 0004e000 00:23 37262                      /usr/lib64/libvulkan.so.1.4.341
+7f66687f6000-7f66687f8000 r--p 00086000 00:23 37262                      /usr/lib64/libvulkan.so.1.4.341
+7f66687f8000-7f66687f9000 rw-p 00088000 00:23 37262                      /usr/lib64/libvulkan.so.1.4.341

@@ -1,0 +1,9 @@
+{
+	"build_id": "0.2.0-m2",
+	"content_version": 1,
+	"format_version": 1,
+	"kind": "checkpoint",
+	"payload_json": "{\"campaign_id\":\"nullspace_campaign_v1\",\"checkpoint\":{\"id\":\"arrival_wake\",\"monster_anchor\":\"arrival_listener_dormant\",\"player_anchor\":\"arrival_wake_player\",\"reset_seed\":1,\"room_id\":\"a_01\"},\"inventory\":{\"weapons\":{\"pistol\":{\"chamber\":1,\"magazine\":5,\"owned\":true,\"reserve\":6},\"shotgun\":{\"chamber\":0,\"magazine\":0,\"owned\":false,\"reserve\":0}}},\"player\":{\"equipped_weapon\":\"pistol\",\"flashlight_enabled\":false,\"health\":100.0,\"stamina\":1.0},\"progress\":{\"ending\":true,\"exit_isolator\":true,\"neutralized_listener\":false,\"phase_breaker\":true,\"relays\":{\"circulation\":true,\"distribution\":true,\"return_feed\":true}},\"session\":{\"elapsed_seconds\":0.0,\"id\":\"eaeaddb79c014d2a734c5f57d9b73c8c\"},\"world\":{\"anomalies\":{},\"circuits\":{},\"consumed_pickups\":[],\"doors\":{},\"topology_revision\":0}}",
+	"saved_utc": "2026-09-04T22:41:09",
+	"sha256": "92ded3fabccdd28165abde6a99539d8efd80df60b6c6086c4437112bfa8154b8"
+}

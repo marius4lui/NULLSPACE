@@ -1,0 +1,37 @@
+{
+  "acquired_monotonic": 10036.75149356,
+  "acquired_utc": "2026-09-04T22:38:08.549+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/19-death-held-controls.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "dbb568faa4345324215ff34471120c5544151e7b393a2058ac322db4a27df899",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [
+      1
+    ],
+    "held_keys": [
+      "w"
+    ],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 19.588307000958594
+}

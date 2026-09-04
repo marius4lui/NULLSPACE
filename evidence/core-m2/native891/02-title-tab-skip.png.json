@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9746.983283557,
+  "acquired_utc": "2026-09-04T22:33:18.781+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/02-title-tab-skip.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "0e94a52680255bc7a05a648b015bab65ef7a16b8d336eb7c9b22cae2a8bba4e8",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      100,
+      100
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 18.762009000056423
+}

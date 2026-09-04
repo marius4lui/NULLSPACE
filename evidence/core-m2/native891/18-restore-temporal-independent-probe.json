@@ -1,0 +1,27 @@
+{
+    "programs": [
+
+    ],
+    "stream_groups": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "avg_frame_rate": "60/1",
+            "nb_read_frames": "600"
+        },
+        {
+            "codec_name": "flac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0",
+            "nb_read_frames": "105"
+        }
+    ],
+    "format": {
+        "duration": "10.000000"
+    }
+}

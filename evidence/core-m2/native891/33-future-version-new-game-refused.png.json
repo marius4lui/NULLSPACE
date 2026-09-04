@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 10257.946623533,
+  "acquired_utc": "2026-09-04T22:41:49.744+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/33-future-version-new-game-refused.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "2337088a31117ea61474391de0f7deecd0e1b500e0fe7c3c23eb931afb665024",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      216
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 15.029877000415581
+}

@@ -1,0 +1,197 @@
+{
+  "boot": {
+    "event": "boot",
+    "flow": "MENU",
+    "focused": true,
+    "frame": 0,
+    "input_provenance": "unverified_os_input",
+    "monotonic_usec": 1400596,
+    "paused": true,
+    "physics_tick": 0,
+    "session_id": "",
+    "simulation_epoch": 0,
+    "simulation_seconds": 0.0,
+    "simulation_tick": 0,
+    "utc": "2026-09-04T22:32:51",
+    "values": {
+      "build_id": "0.2.0-m2",
+      "crash_detection": "external_supervisor_required",
+      "display": "X11",
+      "engine": {
+        "build": "official",
+        "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+        "hex": 263938,
+        "major": 4,
+        "minor": 7,
+        "patch": 2,
+        "status": "stable",
+        "string": "4.7.2-stable (official)",
+        "timestamp": 0
+      },
+      "gpu_ms_available": false,
+      "os": "Linux",
+      "renderer": "forward_plus",
+      "settings": {
+        "ambience_volume": 0.8,
+        "camera_shake": 0.5,
+        "center_dot": true,
+        "display_mode": "windowed",
+        "effects_volume": 0.8,
+        "head_bob": 0.5,
+        "horizontal_fov": 88.0,
+        "invert_y": false,
+        "master_volume": 0.8,
+        "mouse_sensitivity": 1.0,
+        "quality": "high",
+        "reduced_flashes": false,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "subtitles": true,
+        "vsync": true
+      }
+    }
+  },
+  "diagnostic_fire": [
+    {
+      "utc": "2026-09-04T22:36:10",
+      "simulation_epoch": 1,
+      "values": {
+        "action": "fire",
+        "count": 1
+      }
+    },
+    {
+      "utc": "2026-09-04T22:36:40",
+      "simulation_epoch": 1,
+      "values": {
+        "action": "fire",
+        "count": 2
+      }
+    },
+    {
+      "utc": "2026-09-04T22:36:42",
+      "simulation_epoch": 1,
+      "values": {
+        "action": "fire",
+        "count": 3
+      }
+    },
+    {
+      "utc": "2026-09-04T22:38:05",
+      "simulation_epoch": 1,
+      "values": {
+        "action": "fire",
+        "count": 4
+      }
+    },
+    {
+      "utc": "2026-09-04T22:38:08",
+      "simulation_epoch": 1,
+      "values": {
+        "action": "fire",
+        "count": 5
+      }
+    },
+    {
+      "utc": "2026-09-04T22:38:10",
+      "simulation_epoch": 2,
+      "values": {
+        "action": "fire",
+        "count": 1
+      }
+    }
+  ],
+  "restores": [
+    {
+      "utc": "2026-09-04T22:35:54",
+      "simulation_seconds": 0.0,
+      "simulation_epoch": 1,
+      "simulation_tick": 0,
+      "values": {
+        "checkpoint_id": "arrival_wake",
+        "generation": 1
+      }
+    },
+    {
+      "utc": "2026-09-04T22:38:09",
+      "simulation_seconds": 17.4500000000003,
+      "simulation_epoch": 2,
+      "simulation_tick": 0,
+      "values": {
+        "checkpoint_id": "diagnostic_checkpoint",
+        "generation": 2
+      }
+    },
+    {
+      "utc": "2026-09-04T22:39:49",
+      "simulation_seconds": 17.4500000000003,
+      "simulation_epoch": 3,
+      "simulation_tick": 0,
+      "values": {
+        "checkpoint_id": "diagnostic_checkpoint",
+        "generation": 3
+      }
+    },
+    {
+      "utc": "2026-09-04T22:41:09",
+      "simulation_seconds": 0.0,
+      "simulation_epoch": 4,
+      "simulation_tick": 0,
+      "values": {
+        "checkpoint_id": "arrival_wake",
+        "generation": 4
+      }
+    },
+    {
+      "utc": "2026-09-04T22:41:48",
+      "simulation_seconds": 0.0,
+      "simulation_epoch": 5,
+      "simulation_tick": 0,
+      "values": {
+        "checkpoint_id": "arrival_wake",
+        "generation": 5
+      }
+    }
+  ],
+  "focus_pause_samples": {
+    "count": 59,
+    "first_utc": "2026-09-04T22:37:06",
+    "last_utc": "2026-09-04T22:38:05",
+    "seconds_values": [
+      70.4833333333306
+    ],
+    "epoch_values": [
+      1
+    ],
+    "focus_states": [
+      false,
+      true
+    ]
+  },
+  "last_state": {
+    "event": "frame_sample",
+    "flow": "MENU",
+    "focused": true,
+    "frame": 34069,
+    "input_provenance": "unverified_os_input",
+    "monotonic_usec": 569258882,
+    "paused": true,
+    "physics_tick": 34074,
+    "session_id": "eaa9b6c2fe187e601e22e31e65f583f5",
+    "simulation_epoch": 5,
+    "simulation_seconds": 0.183333333333333,
+    "simulation_tick": 11,
+    "utc": "2026-09-04T22:42:19",
+    "values": {
+      "cpu_physics_ms": 0.214,
+      "cpu_process_ms": 0.572,
+      "fps": 60.0,
+      "frame_ms": 16.6666666666667,
+      "gpu_measurement_available": false,
+      "gpu_ms": null,
+      "static_memory_bytes": 0
+    }
+  }
+}

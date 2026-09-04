@@ -1,0 +1,24 @@
+[gd_resource type="AudioBusLayout" format=3]
+
+[resource]
+bus/0/name = &"Master"
+bus/0/solo = false
+bus/0/mute = false
+bus/0/bypass_fx = false
+bus/0/volume_db = 0.0
+bus/0/send = &""
+bus/1/name = &"Ambience"
+bus/1/send = &"Master"
+bus/2/name = &"Fluorescent"
+bus/2/send = &"Ambience"
+bus/3/name = &"Environment"
+bus/3/send = &"Master"
+bus/4/name = &"Player"
+bus/4/send = &"Master"
+bus/5/name = &"Weapons"
+bus/5/send = &"Master"
+bus/6/name = &"Monster"
+bus/6/send = &"Master"
+bus/7/name = &"UI"
+bus/7/send = &"Master"
+

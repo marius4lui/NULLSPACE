@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 10123.435995896,
+  "acquired_utc": "2026-09-04T22:39:35.233+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/25-corrupt-primary-recovered-title.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "d47175b5abef458ce3396eacdd4943b6c5b2ce35869e38805f2aea1e62bf3b7a",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      396
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 17.02343800025119
+}

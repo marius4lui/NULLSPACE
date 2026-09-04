@@ -1,0 +1,77 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] savepack | Started Packing (102 steps)
+[   1% ] savepack | Storing File: res://core/config/game_tuning.gdc
+[   4% ] savepack | Storing File: res://core/config/quality_profile.gdc
+[   7% ] savepack | Storing File: res://core/events/event_hub.gdc
+[  11% ] savepack | Storing File: res://core/events/perception_observation.gdc
+[  14% ] savepack | Storing File: res://core/events/shot_event.gdc
+[  17% ] savepack | Storing File: res://core/events/shot_hit.gdc
+[  21% ] savepack | Storing File: res://core/events/sound_event.gdc
+[  24% ] savepack | Storing File: res://core/flow/game_flow.gdc
+[  27% ] savepack | Storing File: res://core/input/input_gate.gdc
+[  31% ] savepack | Storing File: res://core/persistence/atomic_json_store.gdc
+[  33% ] savepack | Storing File: res://core/persistence/checkpoint_restore_participant.gdc
+[  36% ] savepack | Storing File: res://core/persistence/checkpoint_system.gdc
+[  40% ] savepack | Storing File: res://core/persistence/restore_barrier.gdc
+[  43% ] savepack | Storing File: res://core/persistence/restore_context.gdc
+[  46% ] savepack | Storing File: res://core/persistence/save_system.gdc
+[  50% ] savepack | Storing File: res://core/persistence/snapshot_schema.gdc
+[  53% ] savepack | Storing File: res://core/persistence/storage_result.gdc
+[  56% ] savepack | Storing File: res://core/settings/settings_manager.gdc
+[  60% ] savepack | Storing File: res://core/settings/settings_schema.gdc
+[  63% ] savepack | Storing File: res://core/telemetry/telemetry.gdc
+[  66% ] savepack | Storing File: res://core/time/simulation_clock.gdc
+[  69% ] savepack | Storing File: res://core/time/simulation_stamp.gdc
+[  72% ] savepack | Storing File: res://.godot/exported/133200997/export-b7e868376ec453a2144346124b0b2d96-high.res
+[  75% ] savepack | Storing File: res://.godot/exported/133200997/export-82f8b0ce203af5d262ba21c648706356-low.res
+[  79% ] savepack | Storing File: res://.godot/exported/133200997/export-d45564cfb3f0652718ac2f786283c725-medium.res
+[  82% ] savepack | Storing File: res://.godot/exported/133200997/export-4281724c42e380fb4d19b54d18b61553-ultra.res
+[  85% ] savepack | Storing File: res://.godot/exported/133200997/export-911868316ba78034388a155067a74f01-default_tuning.res
+[  89% ] savepack | Storing File: res://scenes/bootstrap/diagnostic_boot.gdc
+[  92% ] savepack | Storing File: res://.godot/exported/133200997/export-2fa2511b19fe1a51ac7deda7bea31ad7-diagnostic_boot.scn
+[  95% ] savepack | Storing File: res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+[  95% ] savepack | Storing File: res://core/config/game_tuning.gd.remap
+[  95% ] savepack | Storing File: res://core/config/quality_profile.gd.remap
+[  95% ] savepack | Storing File: res://core/events/event_hub.gd.remap
+[  95% ] savepack | Storing File: res://core/events/perception_observation.gd.remap
+[  95% ] savepack | Storing File: res://core/events/shot_event.gd.remap
+[  95% ] savepack | Storing File: res://core/events/shot_hit.gd.remap
+[  95% ] savepack | Storing File: res://core/events/sound_event.gd.remap
+[  95% ] savepack | Storing File: res://core/flow/game_flow.gd.remap
+[  95% ] savepack | Storing File: res://core/input/input_gate.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/atomic_json_store.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/checkpoint_restore_participant.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/checkpoint_system.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/restore_barrier.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/restore_context.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/save_system.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/snapshot_schema.gd.remap
+[  95% ] savepack | Storing File: res://core/persistence/storage_result.gd.remap
+[  95% ] savepack | Storing File: res://core/settings/settings_manager.gd.remap
+[  95% ] savepack | Storing File: res://core/settings/settings_schema.gd.remap
+[  95% ] savepack | Storing File: res://core/telemetry/telemetry.gd.remap
+[  95% ] savepack | Storing File: res://core/time/simulation_clock.gd.remap
+[  95% ] savepack | Storing File: res://core/time/simulation_stamp.gd.remap
+[  95% ] savepack | Storing File: res://data/quality/high.tres.remap
+[  95% ] savepack | Storing File: res://data/quality/low.tres.remap
+[  95% ] savepack | Storing File: res://data/quality/medium.tres.remap
+[  95% ] savepack | Storing File: res://data/quality/ultra.tres.remap
+[  95% ] savepack | Storing File: res://data/default_tuning.tres.remap
+[  95% ] savepack | Storing File: res://scenes/bootstrap/diagnostic_boot.gd.remap
+[  95% ] savepack | Storing File: res://scenes/bootstrap/diagnostic_boot.tscn.remap
+[  95% ] savepack | Storing File: res://default_bus_layout.tres.remap
+[  95% ] savepack | Storing File: res://.godot/global_script_class_cache.cfg
+[  95% ] savepack | Storing File: res://.godot/uid_cache.bin
+[  95% ] savepack | Storing File: res://project.binary
+[ DONE ] savepack
+

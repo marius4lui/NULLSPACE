@@ -1,0 +1,431 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Attempted to find a variable of type 'Nil' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'Array' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'Dictionary' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'bool' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'bool' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'int' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'int' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'float' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'float' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'float' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Attempted to find a variable of type 'float' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] validate (res://core/settings/settings_schema.gd:31)
+       [1] run (res://tests/core/storage_hardening_tests.gd:10)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Mutating get_value resolution does not mutate active preferences
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:14)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Getter mutation preserves valid settings schema
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:15)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 100001 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 100001 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 3
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 2147483647 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 2147483647 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 4
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 9223372036854775807 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 9223372036854775807 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 5
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 1000000000000000019884624838656.0 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 1000000000000000019884624838656.0 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 6
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future format_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 7
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 100001 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 100001 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 10
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 2147483647 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 2147483647 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 11
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 9223372036854775807 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 9223372036854775807 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 12
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 1000000000000000019884624838656.0 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 1000000000000000019884624838656.0 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 13
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 never falls back to old backup
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:32)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future content_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 primary and backup bytes retained
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:34)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+ERROR: Future backup is not replaced 14
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/core/run_core_tests.gd:35)
+       [1] run (res://tests/core/storage_hardening_tests.gd:41)
+       [2] _run (res://tests/core/run_core_tests.gd:25)
+       [3] _test_flow_and_input (res://tests/core/run_core_tests.gd:252)
+{
+	"checks": 151,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"failures": [
+		"Mutating get_value resolution does not mutate active preferences",
+		"Getter mutation preserves valid settings schema",
+		"Future format_version 100001 never falls back to old backup",
+		"Future format_version 100001 primary and backup bytes retained",
+		"Future backup is not replaced 3",
+		"Future format_version 2147483647 never falls back to old backup",
+		"Future format_version 2147483647 primary and backup bytes retained",
+		"Future backup is not replaced 4",
+		"Future format_version 9223372036854775807 never falls back to old backup",
+		"Future format_version 9223372036854775807 primary and backup bytes retained",
+		"Future backup is not replaced 5",
+		"Future format_version 1000000000000000019884624838656.0 never falls back to old backup",
+		"Future format_version 1000000000000000019884624838656.0 primary and backup bytes retained",
+		"Future backup is not replaced 6",
+		"Future format_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 never falls back to old backup",
+		"Future format_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 primary and backup bytes retained",
+		"Future backup is not replaced 7",
+		"Future content_version 100001 never falls back to old backup",
+		"Future content_version 100001 primary and backup bytes retained",
+		"Future backup is not replaced 10",
+		"Future content_version 2147483647 never falls back to old backup",
+		"Future content_version 2147483647 primary and backup bytes retained",
+		"Future backup is not replaced 11",
+		"Future content_version 9223372036854775807 never falls back to old backup",
+		"Future content_version 9223372036854775807 primary and backup bytes retained",
+		"Future backup is not replaced 12",
+		"Future content_version 1000000000000000019884624838656.0 never falls back to old backup",
+		"Future content_version 1000000000000000019884624838656.0 primary and backup bytes retained",
+		"Future backup is not replaced 13",
+		"Future content_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 never falls back to old backup",
+		"Future content_version 1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.0 primary and backup bytes retained",
+		"Future backup is not replaced 14"
+	],
+	"isolated_data": "/tmp/nullspace_core_tests-20260904235302399105",
+	"scope": "logical tests, not gameplay or experiential validation",
+	"suite": "M2 core"
+}

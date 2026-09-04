@@ -1,0 +1,10 @@
+WARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.
+     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)
+ERROR: Attempt to disconnect a nonexistent connection from 'root:<Window#36775658856>'. Signal: 'focus_entered', callable: ''.
+   at: _disconnect (core/object/object.cpp:1644)
+ERROR: Attempt to disconnect a nonexistent connection from 'root:<Window#36775658856>'. Signal: 'tree_exited', callable: ''.
+   at: _disconnect (core/object/object.cpp:1644)
+ERROR: Attempt to disconnect a nonexistent connection from 'root:<Window#36775658856>'. Signal: 'focus_entered', callable: ''.
+   at: _disconnect (core/object/object.cpp:1644)
+ERROR: Attempt to disconnect a nonexistent connection from 'root:<Window#36775658856>'. Signal: 'tree_exited', callable: ''.
+   at: _disconnect (core/object/object.cpp:1644)
