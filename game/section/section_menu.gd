@@ -176,7 +176,7 @@ func _controls() -> void:
 	_show_screen()
 
 func _credits() -> void:
-	_notice = "NULLSPACE — marius4lui\nOriginal project content created with GPT-6 Astra through Codex.\nMade with Godot and Blender. Bundled font: Noto Sans (SIL OFL)."
+	_notice = "NULLSPACE — marius4lui\nOriginal project content created with GPT-6 Astra through Codex.\nMade with Godot and Blender. Bundled font: Open Sans (SIL OFL)."
 	if GameFlow.state != NullGameFlow.State.ENDING:
 		_show_screen()
 	else:
