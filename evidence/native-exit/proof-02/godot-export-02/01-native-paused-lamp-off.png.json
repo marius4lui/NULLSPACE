@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9574.305589782,
+  "acquired_utc": "2026-09-04T22:30:26.103+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit/evidence/native-exit/proof-02/godot-export-02/01-native-paused-lamp-off.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "3f81cb0daa1b33a003fc9b73188daf4f74121ec3a6dd7925207f934c09873282",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      100,
+      100
+    ],
+    "title": "NULLSPACE M0 Toolchain Diagnostic",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 119739
+  },
+  "x_readback_ms": 34.08717500133207
+}

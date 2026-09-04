@@ -1,0 +1,8 @@
+{
+  "exact_rgb_match": true,
+  "hud_mean_difference": 0.0,
+  "maximum_difference": 0,
+  "mean_absolute_difference": 0.0,
+  "native_rgb_sha256": "40481493b5e8c5512bf66791aa5630a70b93e0c18ee7d99e63efb0723107d5a2",
+  "reference_rgb_sha256": "40481493b5e8c5512bf66791aa5630a70b93e0c18ee7d99e63efb0723107d5a2"
+}

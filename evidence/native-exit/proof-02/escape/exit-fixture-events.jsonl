@@ -1,0 +1,21 @@
+{"delay": 0.4, "event": "ready", "exit_code": 0, "monotonic": 9554.084599531, "pid": 118980, "utc_unix": 1788561005.8825767, "window_id": 6291456}
+{"event": "key", "keycode": 25, "monotonic": 9554.308931303, "pressed": true, "utc_unix": 1788561006.1069078}
+{"event": "key", "keycode": 9, "monotonic": 9554.313944963, "pressed": true, "utc_unix": 1788561006.11192}
+{"event": "window_destroyed", "monotonic": 9554.314221327, "utc_unix": 1788561006.1121974, "window_id": 6291456}
+{"event": "after_destroy_keymap", "monotonic": 9554.31479382, "pressed_keycodes": [9, 25], "utc_unix": 1788561006.1127698}
+{"event": "after_destroy_keymap", "monotonic": 9554.340080794, "pressed_keycodes": [9, 25], "utc_unix": 1788561006.1380575}
+{"event": "after_destroy_keymap", "monotonic": 9554.365446828, "pressed_keycodes": [], "utc_unix": 1788561006.1634233}
+{"event": "after_destroy_keymap", "monotonic": 9554.390820616, "pressed_keycodes": [], "utc_unix": 1788561006.1887972}
+{"event": "after_destroy_keymap", "monotonic": 9554.416326544, "pressed_keycodes": [], "utc_unix": 1788561006.214303}
+{"event": "after_destroy_keymap", "monotonic": 9554.441628464, "pressed_keycodes": [], "utc_unix": 1788561006.2396054}
+{"event": "after_destroy_keymap", "monotonic": 9554.467043039, "pressed_keycodes": [], "utc_unix": 1788561006.2650201}
+{"event": "after_destroy_keymap", "monotonic": 9554.492668047, "pressed_keycodes": [], "utc_unix": 1788561006.2906444}
+{"event": "after_destroy_keymap", "monotonic": 9554.518041345, "pressed_keycodes": [], "utc_unix": 1788561006.3160176}
+{"event": "after_destroy_keymap", "monotonic": 9554.543769998, "pressed_keycodes": [], "utc_unix": 1788561006.3417463}
+{"event": "after_destroy_keymap", "monotonic": 9554.569280117, "pressed_keycodes": [], "utc_unix": 1788561006.367257}
+{"event": "after_destroy_keymap", "monotonic": 9554.594640005, "pressed_keycodes": [], "utc_unix": 1788561006.3926163}
+{"event": "after_destroy_keymap", "monotonic": 9554.619980827, "pressed_keycodes": [], "utc_unix": 1788561006.4179568}
+{"event": "after_destroy_keymap", "monotonic": 9554.645408951, "pressed_keycodes": [], "utc_unix": 1788561006.4433854}
+{"event": "after_destroy_keymap", "monotonic": 9554.670850136, "pressed_keycodes": [], "utc_unix": 1788561006.4688272}
+{"event": "after_destroy_keymap", "monotonic": 9554.696236146, "pressed_keycodes": [], "utc_unix": 1788561006.4942126}
+{"event": "exiting", "exit_code": 0, "monotonic": 9554.721377569, "utc_unix": 1788561006.519354}

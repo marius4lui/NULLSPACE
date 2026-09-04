@@ -1,0 +1,3 @@
+{"delay": 0.4, "event": "ready", "exit_code": 0, "monotonic": 9678.648868824, "pid": 122237, "utc_unix": 1788561130.4468455, "window_id": 6291456}
+{"event": "key", "keycode": 25, "monotonic": 9678.759601382, "pressed": true, "utc_unix": 1788561130.557578}
+{"event": "key", "keycode": 25, "monotonic": 9678.964665003, "pressed": false, "utc_unix": 1788561130.7626407}

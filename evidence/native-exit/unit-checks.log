@@ -1,0 +1,27 @@
+test_cancel_prevents_new_input_before_focus_or_xtest (test_exit_lifecycle.ExitTests.test_cancel_prevents_new_input_before_focus_or_xtest) ... ok
+test_changed_process_start_identity_refused (test_exit_lifecycle.ExitTests.test_changed_process_start_identity_refused) ... ok
+test_clean_child_exit_is_preserved_without_signal (test_exit_lifecycle.ExitTests.test_clean_child_exit_is_preserved_without_signal) ... ok
+test_closing_refuses_input_focus_and_capture_but_allows_status_release_stop (test_exit_lifecycle.ExitTests.test_closing_refuses_input_focus_and_capture_but_allows_status_release_stop) ... ok
+test_concurrent_begin_and_manifest_save_do_not_extend_grace_or_race_tmp (test_exit_lifecycle.ExitTests.test_concurrent_begin_and_manifest_save_do_not_extend_grace_or_race_tmp) ... ok
+test_exact_destroyed_verified_target_enters_fixed_grace (test_exit_lifecycle.ExitTests.test_exact_destroyed_verified_target_enters_fixed_grace) ... ok
+test_expired_grace_terminates_only_owned_child_and_fails (test_exit_lifecycle.ExitTests.test_expired_grace_terminates_only_owned_child_and_fails) ... ok
+test_foreign_window_during_grace_remains_failure (test_exit_lifecycle.ExitTests.test_foreign_window_during_grace_remains_failure) ... ok
+test_hidden_window_failure_is_not_normal_exit (test_exit_lifecycle.ExitTests.test_hidden_window_failure_is_not_normal_exit) ... ok
+test_mapped_foreign_window_refused_before_grace (test_exit_lifecycle.ExitTests.test_mapped_foreign_window_refused_before_grace) ... ok
+test_nonzero_child_exit_is_not_hidden_by_grace (test_exit_lifecycle.ExitTests.test_nonzero_child_exit_is_not_hidden_by_grace) ... ok
+test_seat_fault_during_grace_remains_failure (test_exit_lifecycle.ExitTests.test_seat_fault_during_grace_remains_failure) ... ok
+test_still_existing_target_is_not_normal_exit (test_exit_lifecycle.ExitTests.test_still_existing_target_is_not_normal_exit) ... ok
+test_unverified_target_is_not_normal_exit (test_exit_lifecycle.ExitTests.test_unverified_target_is_not_normal_exit) ... ok
+test_wrong_resource_error_is_not_normal_exit (test_exit_lifecycle.ExitTests.test_wrong_resource_error_is_not_normal_exit) ... ok
+test_pixel_equality_and_stale_hud_rejection (test_freshness.FreshnessTests.test_pixel_equality_and_stale_hud_rejection) ... ok
+test_wrong_resolution_rejected (test_freshness.FreshnessTests.test_wrong_resolution_rejected) ... ok
+test_capture_wait_cannot_starve_lease (test_safety.SafetyTests.test_capture_wait_cannot_starve_lease) ... ok
+test_drip_fed_command_has_total_deadline (test_safety.SafetyTests.test_drip_fed_command_has_total_deadline) ... ok
+test_focus_loss_releases_before_long_lease (test_safety.SafetyTests.test_focus_loss_releases_before_long_lease) ... ok
+test_partial_command_cannot_starve_lease (test_safety.SafetyTests.test_partial_command_cannot_starve_lease) ... ok
+test_stop_releases_and_cancels_long_hold (test_safety.SafetyTests.test_stop_releases_and_cancels_long_hold) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 2.617s
+
+OK

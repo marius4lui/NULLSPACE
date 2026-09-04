@@ -1,0 +1,13 @@
+{
+  "status": "closing",
+  "window_lifecycle": {
+    "deadline_monotonic": 9570.590405547,
+    "destroyed_utc": "2026-09-04T22:30:20.388+00:00",
+    "game_pid": 119588,
+    "grace_seconds": 2.0,
+    "new_input_disabled": true,
+    "phase": "waiting_for_owned_process_exit",
+    "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600002>, sequence_number = 391, major_opcode = 20, minor_opcode = 0",
+    "window_id": 6291458
+  }
+}

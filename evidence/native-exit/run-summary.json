@@ -1,0 +1,294 @@
+{
+  "proof-01/escape": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:29:20.474+00:00",
+    "error": null,
+    "game_exit_code": 0,
+    "game_git": {
+      "clean": null,
+      "commit": null,
+      "root": "/usr/bin"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "f34e03e5772d8cea3c862f4862b5d3cb52626eba",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:29:18.872+00:00",
+    "status": "stopped",
+    "window_lifecycle": {
+      "deadline_monotonic": 9509.888609346,
+      "destroyed_utc": "2026-09-04T22:29:19.686+00:00",
+      "exit_code": 0,
+      "exited_utc": "2026-09-04T22:29:20.288+00:00",
+      "game_pid": 118002,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "exited",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291456
+    }
+  },
+  "proof-02/escape": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:30:06.724+00:00",
+    "error": null,
+    "game_exit_code": 0,
+    "game_git": {
+      "clean": null,
+      "commit": null,
+      "root": "/usr/bin"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:05.408+00:00",
+    "status": "stopped",
+    "window_lifecycle": {
+      "deadline_monotonic": 9556.341101461,
+      "destroyed_utc": "2026-09-04T22:30:06.139+00:00",
+      "exit_code": 0,
+      "exited_utc": "2026-09-04T22:30:06.541+00:00",
+      "game_pid": 118980,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "exited",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291456
+    }
+  },
+  "proof-02/foreign-during-grace": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": false,
+    "ended_utc": "2026-09-04T22:30:14.624+00:00",
+    "error": "Native safety guard: Unexpected mapped windows on private display: [6291458]",
+    "game_exit_code": -15,
+    "game_git": {
+      "clean": null,
+      "commit": null,
+      "root": "/usr/bin"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:13.535+00:00",
+    "status": "failed",
+    "window_lifecycle": {
+      "deadline_monotonic": 9564.435876404,
+      "destroyed_utc": "2026-09-04T22:30:14.233+00:00",
+      "game_pid": 119398,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "waiting_for_owned_process_exit",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291456
+    }
+  },
+  "proof-02/godot-export-01": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:30:20.780+00:00",
+    "error": null,
+    "game_exit_code": 0,
+    "game_git": {
+      "clean": true,
+      "commit": "9bdcfc35be84020f4340e5f727893793e409df5e",
+      "root": "/tmp/nullspace-m0-independent-tVzIFF/source"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:14.817+00:00",
+    "status": "stopped",
+    "window_lifecycle": {
+      "deadline_monotonic": 9570.590405547,
+      "destroyed_utc": "2026-09-04T22:30:20.388+00:00",
+      "exit_code": 0,
+      "exited_utc": "2026-09-04T22:30:20.590+00:00",
+      "game_pid": 119588,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "exited",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600002>, sequence_number = 391, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291458
+    }
+  },
+  "proof-02/godot-export-02": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:30:26.897+00:00",
+    "error": null,
+    "game_exit_code": 0,
+    "game_git": {
+      "clean": true,
+      "commit": "9bdcfc35be84020f4340e5f727893793e409df5e",
+      "root": "/tmp/nullspace-m0-independent-tVzIFF/source"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:20.973+00:00",
+    "status": "stopped",
+    "window_lifecycle": {
+      "deadline_monotonic": 9576.710764335,
+      "destroyed_utc": "2026-09-04T22:30:26.508+00:00",
+      "exit_code": 0,
+      "exited_utc": "2026-09-04T22:30:26.710+00:00",
+      "game_pid": 119739,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "exited",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600002>, sequence_number = 399, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291458
+    }
+  },
+  "proof-02/nonzero": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:30:10.071+00:00",
+    "error": "Owned game exited unexpectedly: 7",
+    "game_exit_code": 7,
+    "game_git": {
+      "clean": null,
+      "commit": null,
+      "root": "/usr/bin"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:08.561+00:00",
+    "status": "failed",
+    "window_lifecycle": {
+      "deadline_monotonic": 9559.470717139,
+      "destroyed_utc": "2026-09-04T22:30:09.268+00:00",
+      "game_pid": 119108,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "waiting_for_owned_process_exit",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291456
+    }
+  },
+  "proof-02/quit-click": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:30:08.400+00:00",
+    "error": null,
+    "game_exit_code": 0,
+    "game_git": {
+      "clean": null,
+      "commit": null,
+      "root": "/usr/bin"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:06.904+00:00",
+    "status": "stopped",
+    "window_lifecycle": {
+      "deadline_monotonic": 9557.81832104,
+      "destroyed_utc": "2026-09-04T22:30:07.616+00:00",
+      "exit_code": 0,
+      "exited_utc": "2026-09-04T22:30:08.218+00:00",
+      "game_pid": 119044,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "exited",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 155, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291456
+    }
+  },
+  "proof-02/windowless-timeout": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": false,
+    "ended_utc": "2026-09-04T22:30:13.351+00:00",
+    "error": "Native safety guard: Owned game did not exit within the 2-second window-destruction grace",
+    "game_exit_code": -15,
+    "game_git": {
+      "clean": null,
+      "commit": null,
+      "root": "/usr/bin"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:10.228+00:00",
+    "status": "failed",
+    "window_lifecycle": {
+      "deadline_monotonic": 9561.162995741,
+      "destroyed_utc": "2026-09-04T22:30:10.960+00:00",
+      "game_pid": 119167,
+      "grace_seconds": 2.0,
+      "new_input_disabled": true,
+      "phase": "waiting_for_owned_process_exit",
+      "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+      "window_id": 6291456
+    }
+  },
+  "proof-03-regression": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:31:33.766+00:00",
+    "error": null,
+    "game_exit_code": -15,
+    "game_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:30:54.996+00:00",
+    "status": "stopped",
+    "window_lifecycle": null
+  },
+  "proof-04-explicit-stop": {
+    "cleanup_errors": [],
+    "controlled_provenance_valid": true,
+    "ended_utc": "2026-09-04T22:32:10.976+00:00",
+    "error": null,
+    "game_exit_code": -15,
+    "game_git": {
+      "clean": null,
+      "commit": null,
+      "root": "/usr/bin"
+    },
+    "harness_git": {
+      "clean": true,
+      "commit": "fb3a09dcc686fc48220fe2d99080d572b68743a8",
+      "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit"
+    },
+    "host_defaults_unchanged": true,
+    "started_utc": "2026-09-04T22:32:09.917+00:00",
+    "status": "stopped",
+    "window_lifecycle": null
+  }
+}
