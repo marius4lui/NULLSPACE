@@ -136,12 +136,16 @@ func _settings() -> void:
 
 func _option(title: String, key: String, values: Array, captions: Array) -> void:
 	var row: HBoxContainer = _row(title)
-	var choice := OptionButton.new()
+	# A few fixed choices do not need a popup window (which triggered native focus
+	# connection errors on this engine build when the settings screen was rebuilt).
+	var choice := Button.new()
 	choice.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	for caption: String in captions:
-		choice.add_item(caption)
-	choice.select(maxi(0, values.find(_draft[key])))
-	choice.item_selected.connect(func(index: int) -> void: _draft[key] = values[index])
+	choice.text = str(captions[maxi(0, values.find(_draft[key]))]) + "  ›"
+	choice.tooltip_text = "Click or press Enter to choose the next value. Apply to save."
+	choice.pressed.connect(func() -> void:
+		var index: int = (values.find(_draft[key]) + 1) % values.size()
+		_draft[key] = values[index]
+		choice.text = str(captions[index]) + "  ›")
 	row.add_child(choice)
 
 func _number(title: String, key: String, minimum: float, maximum: float, step: float) -> void:
