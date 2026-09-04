@@ -8,6 +8,6 @@ multi_agent = true
 [agents]
 default_subagent_model = "gpt-6-astra"
 default_subagent_reasoning_effort = "max"
-# This runtime advertises four total slots and enforces this value including root.
-# Verified: value 3 rejected a third worker alongside root + two running workers.
+# Current resumed runtime advertises five total slots, root plus four workers.
+# Config reference defines this limit as spawned threads excluding the primary.
 max_concurrent_threads_per_session = 4

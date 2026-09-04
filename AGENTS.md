@@ -4,7 +4,7 @@ Read GOAL_CONTRACT.md and QUALITY_GATES.md before task work. Those are binding a
 
 ## Role and model
 
-Root is executive producer, technical director and orchestrator only. Root MUST NOT implement gameplay, shaders, scenes, weapons, AI, environments, animations, asset generation, production assets/audio/UI or behavioral tests. Root can edit orchestration/design/configuration documents, inspect, run tools/builds/tests/playthroughs, operate Git and delegate. ALL implementation goes to GPT-6 Astra agents with explicit model `gpt-6-astra`, effort `max`. Never downgrade. Current runtime capacity: four total slots, root plus three workers. Use bounded parallel work and queue later assignments. Child agents obey identical model and role policies.
+Root is executive producer, technical director and orchestrator only. Root MUST NOT implement gameplay, shaders, scenes, weapons, AI, environments, animations, asset generation, production assets/audio/UI or behavioral tests. Root can edit orchestration/design/configuration documents, inspect, run tools/builds/tests/playthroughs, operate Git and delegate. ALL implementation goes to GPT-6 Astra agents with explicit model `gpt-6-astra`, effort `max`. Never downgrade. Current resumed runtime capacity: five total slots, root plus four workers (verified runtime declaration). Use bounded parallel work and queue later assignments. Child agents obey identical model and role policies.
 
 ## Resume protocol
 

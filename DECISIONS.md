@@ -1,5 +1,9 @@
 # Decisions
 
+## D008 — Resumed runtime and usage revalidation
+
+Previous goal turn made concrete progress: research/design/contract freeze and isolated implementation worktrees. Initial toolchain/project-skeleton workers then terminated with account usage-limit errors; no implementation files or installed binaries existed at resumed inspection. No live worker/process handle remained. Fresh usage tool now reports0% used and no reached-limit flag, so retry normal Astra/max assignments; no reset credit redeemed or credits purchased. Current runtime explicitly advertises5 total slots; configure4 spawned workers. Earlier D007 inference that root counted inside config was unproven: completed threads remained in roster and runtime config may not change live. Supersede that interpretation with current documented4-worker/5-total capacity, preserving error history.
+
 ## D007 — Runtime concurrency correction, 2026-09-04
 
 Official reference described max_concurrent_threads_per_session as excluding primary, so initial value3 intended root+3. Actual runtime twice rejected a third worker at value3 while root+2 workers ran. Runtime tool explicitly advertises4 total slots. Set supported value4 to match that actual enforced total and probe third-worker launch. Do not exceed4 total or launch nested untracked sessions. This corrects config to observed runtime behavior, not invented concurrency.
