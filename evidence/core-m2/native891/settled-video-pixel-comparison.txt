@@ -1,0 +1,2 @@
+normalized_max_difference=0.027451
+normalized_mean_difference=0.000166066

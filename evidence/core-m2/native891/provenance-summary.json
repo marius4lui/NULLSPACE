@@ -1,0 +1,23 @@
+{
+  "raw_count": 322,
+  "source_ids": [
+    4,
+    5
+  ],
+  "non_xtest_count": 0,
+  "first_raw_utc": "2026-09-04T22:33:18.690+00:00",
+  "cleanup": [
+    {
+      "event": "cleanup_keys_released",
+      "monotonic": 10287.76126381,
+      "utc": "2026-09-04T22:42:19.559+00:00"
+    },
+    {
+      "defaults_unchanged": true,
+      "errors": [],
+      "event": "cleanup_finished",
+      "monotonic": 10288.009056938,
+      "utc": "2026-09-04T22:42:19.807+00:00"
+    }
+  ]
+}

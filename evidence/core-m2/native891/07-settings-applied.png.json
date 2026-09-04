@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9860.254491585,
+  "acquired_utc": "2026-09-04T22:35:12.052+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/07-settings-applied.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "d17acc70d10ef8b844e771703b3f7edda55b00d8d990b09de56eea7b148bfb72",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      645,
+      873
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 16.58133900127723
+}

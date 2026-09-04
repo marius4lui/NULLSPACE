@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9984.659939759,
+  "acquired_utc": "2026-09-04T22:37:16.457+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/16-focus-lost-settled.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "064707ffc4000de7f752e3c815ece312ca5d600339d7e153912cb14b4b61e435",
+  "window": {
+    "focus_window_id": 861,
+    "focused": false,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 19.070149999606656
+}

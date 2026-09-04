@@ -1,0 +1,37 @@
+{
+  "acquired_monotonic": 10038.950777034,
+  "acquired_utc": "2026-09-04T22:38:10.748+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/21-restored-input-still-blocked.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "bf7ef4318357f6d007bc041c964eb8a22c1a73cae48551d46f22d8f197c1b004",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [
+      1
+    ],
+    "held_keys": [
+      "w"
+    ],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 18.262570998558658
+}

@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 10036.193083693,
+  "acquired_utc": "2026-09-04T22:38:07.991+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/18-unsaved-flashlight-change.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "c3d1ca2e59da67b7697ac996052927ef33c61996f29a04adac55c9738e25f9c5",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 23.072222000337206
+}
