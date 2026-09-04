@@ -1,0 +1,102 @@
+name: Repository checks
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-site:
+    name: Website links and assets
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - name: Verify static files and local references
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+          import re
+          import sys
+
+          root = Path("site").resolve()
+          errors = []
+          pages = {}
+
+          class Page(HTMLParser):
+              def __init__(self, path):
+                  super().__init__()
+                  self.path = path
+                  self.ids = set()
+                  self.refs = []
+
+              def handle_starttag(self, tag, attributes):
+                  attrs = dict(attributes)
+                  if "id" in attrs:
+                      value = attrs["id"]
+                      if value in self.ids:
+                          errors.append(f"{self.path}: duplicate id {value!r}")
+                      self.ids.add(value)
+                  for key in ("href", "src", "poster"):
+                      if attrs.get(key):
+                          self.refs.append(attrs[key])
+                  if attrs.get("srcset"):
+                      self.refs.extend(item.strip().split()[0]
+                                       for item in attrs["srcset"].split(",") if item.strip())
+
+          if not (root / "index.html").is_file():
+              errors.append("site/index.html is missing")
+          for path in root.rglob("*"):
+              if path.is_symlink():
+                  errors.append(f"{path}: symlinks are not deployable Pages content")
+          for path in root.rglob("*.html"):
+              page = Page(path.relative_to(root))
+              page.feed(path.read_text(encoding="utf-8"))
+              pages[path] = page
+
+          def verify(source, reference):
+              url = urlsplit(reference)
+              if url.scheme or url.netloc:
+                  return
+              path = unquote(url.path)
+              if path.startswith("/"):
+                  if path == "/NULLSPACE":
+                      path = "/NULLSPACE/"
+                  if not path.startswith("/NULLSPACE/"):
+                      errors.append(f"{source.relative_to(root)}: root URL escapes project base: {reference}")
+                      return
+                  target = root / path.removeprefix("/NULLSPACE/")
+              else:
+                  target = source.parent / path if path else source
+              target = target.resolve()
+              if not target.is_relative_to(root):
+                  errors.append(f"{source.relative_to(root)}: link leaves site/: {reference}")
+                  return
+              if target.is_dir():
+                  target /= "index.html"
+              if not target.is_file():
+                  errors.append(f"{source.relative_to(root)}: missing target: {reference}")
+              elif url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
+                  errors.append(f"{source.relative_to(root)}: missing fragment: {reference}")
+
+          for path, page in pages.items():
+              for reference in page.refs:
+                  verify(path, reference)
+          for path in root.rglob("*.css"):
+              for match in re.finditer(r"url\(\s*['\"]?([^'\")]+)['\"]?\s*\)", path.read_text(encoding="utf-8")):
+                  verify(path, match.group(1).strip())
+          if errors:
+              print("\n".join(errors), file=sys.stderr)
+              sys.exit(1)
+          print(f"Verified {len(pages)} HTML pages and their local asset/link targets.")
+          PY
