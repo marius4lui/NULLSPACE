@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111310">
+  <meta name="description" content="You have a weapon. The building has ears. NULLSPACE is an original single-player survival horror game, in early development with GPT-6 Astra through Codex.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NULLSPACE">
+  <meta property="og:title" content="NULLSPACE — The building has ears.">
+  <meta property="og:description" content="Six connected sectors. One persistent threat. Find your way out. An original survival horror game in early development.">
+  <meta property="og:url" content="https://github.marius4lui.dev/NULLSPACE/">
+  <meta property="og:image" content="https://github.marius4lui.dev/NULLSPACE/assets/environment.webp">
+  <meta property="og:image:alt" content="Early original environment render: empty office rooms under fluorescent lights.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://github.marius4lui.dev/NULLSPACE/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/environment.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>NULLSPACE — The building has ears.</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="NULLSPACE home"><span class="brand-mark" aria-hidden="true">N/</span>NULLSPACE</a>
+    <nav aria-label="Main navigation"><a href="#world">The world</a><a href="#media">Media</a><a href="#development">Development</a></nav>
+    <a class="repo-link" href="https://github.com/marius4lui/NULLSPACE">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/environment.webp" width="1600" height="900" alt="Empty, fluorescent-lit office rooms with faded wallpaper and worn carpet." fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-top"><span class="signal"><i aria-hidden="true"></i> Early development</span><span class="mono">Single-player / Survival horror</span></div>
+      <div class="hero-copy"><p>You have a weapon.<br><em>The building has ears.</em></p><a class="round-link" href="#premise" aria-label="Enter the world of NULLSPACE"><span aria-hidden="true">↓</span></a></div>
+      <h1 id="hero-title">NULLSPACE<span class="title-period" aria-hidden="true">.</span></h1>
+      <div class="hero-foot"><span>Windows + Linux <b>— planned</b></span><span>Original environment render · Work in progress</span></div>
+    </section>
+
+    <section class="premise section-shell" id="premise" aria-labelledby="premise-title">
+      <div class="eyebrow"><span>01 / The premise</span><span class="tiny-cross" aria-hidden="true">+</span></div>
+      <div class="premise-layout"><h2 id="premise-title">The exit is real.<br>The way back<br><span class="muted">might not be.</span></h2><div class="body-copy"><p>You wake up on damp carpet beneath fluorescent lights. An empty commercial building stretches beyond the next doorway. Somewhere inside, an exit is waiting for power.</p><p>Find three relays. Restore the circuit. Reach the phase breaker. Then remember your way back through a building that no longer quite matches your memory.</p><p class="statement">Something else is learning the building with you.</p><a class="text-link" href="https://github.com/marius4lui/NULLSPACE/blob/main/GAME_DESIGN.md">Read the game design <span aria-hidden="true">↗</span></a></div></div>
+      <div class="target-strip" aria-label="Design targets"><div><strong>06</strong><span>Connected sectors</span></div><div><strong>56</strong><span>Authored spaces</span></div><div><strong>01</strong><span>Persistent threat</span></div><div><strong>35–60<span> min</span></strong><span>First escape</span></div></div>
+      <p class="caption">Campaign design targets. The complete game is still being built.</p>
+    </section>
+
+    <section class="world section-shell" id="world" aria-labelledby="world-title">
+      <div class="eyebrow"><span>02 / A familiar kind of wrong</span><span class="mono">Sector directory</span></div>
+      <div class="section-heading"><h2 id="world-title">No room is<br><span class="muted">just a room.</span></h2><p>One continuous building. Six distinct kinds of unease. Routes, landmarks and doorways are the things you can trust. Most of the time.</p></div>
+      <div class="sector-browser">
+        <div class="sector-list" aria-label="Explore the planned sectors">
+          <button type="button" class="sector-button active" data-sector="0" aria-pressed="true" aria-controls="sector-panel"><span>A / 01</span>Arrival<i aria-hidden="true">↗</i></button>
+          <button type="button" class="sector-button" data-sector="1" aria-pressed="false" aria-controls="sector-panel"><span>B / 02</span>Grid<i aria-hidden="true">↗</i></button>
+          <button type="button" class="sector-button" data-sector="2" aria-pressed="false" aria-controls="sector-panel"><span>C / 03</span>Open Plan<i aria-hidden="true">↗</i></button>
+          <button type="button" class="sector-button" data-sector="3" aria-pressed="false" aria-controls="sector-panel"><span>D / 04</span>Service<i aria-hidden="true">↗</i></button>
+          <button type="button" class="sector-button" data-sector="4" aria-pressed="false" aria-controls="sector-panel"><span>E / 05</span>Blackout<i aria-hidden="true">↗</i></button>
+          <button type="button" class="sector-button" data-sector="5" aria-pressed="false" aria-controls="sector-panel"><span>F / 06</span>Red Threshold<i aria-hidden="true">↗</i></button>
+        </div>
+        <article class="sector-panel" id="sector-panel" aria-live="polite" aria-atomic="true">
+          <div class="sector-panel-top"><span class="mono" id="sector-type">Orientation / 08 spaces planned</span><span class="sector-letter" id="sector-letter" aria-hidden="true">A</span></div>
+          <div><p class="sector-quote" id="sector-quote">Everything looks<br>almost normal.</p><h3 id="sector-name">Arrival</h3><p id="sector-description">An empty reception suite. A dead exit. A circuit diagram that promises a way out. Learn the building while it is still quiet.</p><div class="sector-function"><span class="mono">Your bearings</span><span id="sector-objective">Find the exit. Understand what it needs.</span></div></div>
+          <p class="caption">From the planned campaign · Sector content is not yet playable.</p>
+        </article>
+      </div>
+      <noscript><p class="notice">Interactive sector descriptions need JavaScript. All six sectors are documented in the <a href="https://github.com/marius4lui/NULLSPACE/blob/main/GAME_DESIGN.md">game design</a>.</p></noscript>
+    </section>
+
+    <section class="listener" id="listener" aria-labelledby="listener-title">
+      <div class="listener-visual"><img src="assets/listener.webp" width="1200" height="1400" alt="Early full-body 3D model of the Listener: long articulated arms, an asymmetrical torso and a folded, unreadable head." loading="lazy"><span class="image-note">Original 3D model / Source render / WIP</span></div>
+      <div class="listener-copy"><div class="eyebrow"><span>03 / You are not alone</span></div><h2 id="listener-title">THE<br>LISTENER<span>.</span></h2><p class="listener-intro">It does not need to know<br>where you are.<br><span class="muted">It only needs a reason to look.</span></p><p>One threat, built around sight, sound and imperfect memory. The plan is a creature that observes before it commits, follows credible clues, and eventually loses your trail.</p><dl class="listener-facts"><div><dt>Approximate height</dt><dd>2.3 m</dd></div><div><dt>Current asset</dt><dd>Rigged 3D model</dd></div><div><dt>Initial clips</dt><dd>Idle · breathe · listen</dd></div><div><dt>Gameplay behavior</dt><dd>Not integrated yet</dd></div></dl><a class="text-link" href="https://github.com/marius4lui/NULLSPACE/blob/main/ART_DIRECTION.md">Inside the creature design <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="arsenal section-shell" id="arsenal" aria-labelledby="arsenal-title">
+      <div class="eyebrow"><span>04 / Buy yourself a moment</span><span class="mono">Planned weapon systems</span></div>
+      <div class="section-heading"><h2 id="arsenal-title">Every shot<br><span class="muted">is an invitation.</span></h2><p>A hit should create a chance to escape. The sound should give something a reason to come closer. Ammunition is a choice, never a key to progression.</p></div>
+      <div class="weapon-grid"><article class="weapon"><div class="weapon-top"><span class="mono">01 / Semi-automatic</span><span class="outline-label">Planned</span></div><h3>Compact pistol</h3><div class="ammo">12<span>+1</span><small>Magazine + chamber</small></div><p>A precise first shot. A locked-back slide when empty. Distinct tactical and empty reloads, with every round accounted for.</p></article><article class="weapon"><div class="weapon-top"><span class="mono">02 / Pump-action</span><span class="outline-label">Planned</span></div><h3>Pump shotgun</h3><div class="ammo">5<span>+1</span><small>Tube + chamber</small></div><p>Close-range stopping power. A deliberate pump cycle. Reload one shell at a time, and interrupt the reload when the room changes.</p></article></div>
+      <p class="arsenal-note"><span aria-hidden="true">↳</span> Escape remains possible with zero ammunition. Learn the doors. Break sight. Move.</p>
+    </section>
+
+    <section class="media section-shell" id="media" aria-labelledby="media-title">
+      <div class="eyebrow"><span>05 / From the workbench</span><span class="mono">Original project imagery</span></div>
+      <div class="section-heading"><h2 id="media-title">Evidence of<br><span class="muted">another place.</span></h2><p>Actual early project assets. These are development renders, not finished gameplay screenshots. Open an image to inspect it.</p></div>
+      <div class="gallery"><a class="media-item media-wide" href="assets/environment.webp" data-lightbox data-caption="Environment study — original Blender source render. Early room candidate; not a campaign screenshot."><figure><div class="image-wrap"><img src="assets/environment.webp" width="1600" height="900" alt="Wide environment study showing fluorescent fixtures, patterned wallpaper and an offset office corridor." loading="lazy"><span class="expand" aria-hidden="true">↗</span></div><figcaption><span>001 / The empty building</span><span>Environment study</span></figcaption></figure></a><a class="media-item" href="assets/listener.webp" data-lightbox data-caption="The Listener — original full-body Blender source render, revision 03. Model and animations remain in development."><figure><div class="image-wrap"><img src="assets/listener.webp" width="1200" height="1400" alt="Listener full-body model study with elongated limbs and an uneven shoulder line." loading="lazy"><span class="expand" aria-hidden="true">↗</span></div><figcaption><span>002 / The Listener</span><span>Model study</span></figcaption></figure></a><a class="media-item" href="assets/listener-detail.webp" data-lightbox data-caption="Cranial detail — original Blender source render, revision 03. An early biological head study, subject to further art review."><figure><div class="image-wrap"><img src="assets/listener-detail.webp" width="1600" height="1200" alt="Close study of the Listener's closed, folded cranial structure." loading="lazy"><span class="expand" aria-hidden="true">↗</span></div><figcaption><span>003 / Something listening</span><span>Cranial study</span></figcaption></figure></a></div>
+    </section>
+
+    <section class="development section-shell" id="development" aria-labelledby="development-title">
+      <div class="eyebrow"><span>06 / Built in the open</span><span class="signal"><i aria-hidden="true"></i> In production</span></div>
+      <div class="section-heading"><h2 id="development-title">A game<br><span class="muted">taking shape.</span></h2><p>NULLSPACE is an AI-developed game created with <strong>GPT-6 Astra through Codex</strong>, under the direction of <a href="https://github.com/marius4lui">marius4lui</a>. Original assets. Source-controlled development. Independent review.</p></div>
+      <div class="development-layout"><div class="development-status"><span class="mono">Current state / 05 Sep 2026</span><h3>Early foundations.<br>Real first assets.</h3><p>Separate development branches contain a walkable room preview, a rigged Listener with three initial animation clips, and core settings, save and state systems. These candidates still need integration and acceptance.</p><p class="status-warning">There is no public playable campaign or release download yet.</p><a class="button" href="https://github.com/marius4lui/NULLSPACE">Follow the repository <span aria-hidden="true">↗</span></a></div><ol class="roadmap"><li class="current"><span class="roadmap-index">01</span><div><div class="roadmap-title"><h3>Establish the world</h3><span>In progress</span></div><p>Original environment, creature studies and the technical foundations.</p></div></li><li><span class="roadmap-index">02</span><div><div class="roadmap-title"><h3>Make the encounter</h3><span>Next</span></div><p>Player handling, weapons, perception and one integrated survival loop.</p></div></li><li><span class="roadmap-index">03</span><div><div class="roadmap-title"><h3>Connect the building</h3><span>Planned</span></div><p>Six sectors, three relays, the phase breaker and a complete escape.</p></div></li><li><span class="roadmap-index">04</span><div><div class="roadmap-title"><h3>Make it hold up</h3><span>Planned</span></div><p>Audio, animation, atmosphere, performance and full independent playthroughs.</p></div></li></ol></div>
+      <details class="specs"><summary><span>Technical direction</span><span aria-hidden="true">+</span></summary><dl><div><dt>Engine</dt><dd>Godot 4.7.2 · Forward+</dd></div><div><dt>Art pipeline</dt><dd>Blender 5.2.1 LTS · Original assets</dd></div><div><dt>Planned platforms</dt><dd>Windows + Linux · x86-64</dd></div><div><dt>Performance target</dt><dd>1080p / 60 FPS · RTX 2060 or RX 6600 class</dd></div></dl><p class="caption">Performance is a development goal, not a measured result or a finalized system requirement. No release date has been announced.</p></details>
+      <div class="document-links"><a href="https://github.com/marius4lui/NULLSPACE/blob/main/GAME_DESIGN.md">Game design <span aria-hidden="true">↗</span></a><a href="https://github.com/marius4lui/NULLSPACE/blob/main/ARCHITECTURE.md">Architecture <span aria-hidden="true">↗</span></a><a href="https://github.com/marius4lui/NULLSPACE/blob/main/STATUS.md">Development status <span aria-hidden="true">↗</span></a><a href="https://github.com/marius4lui/NULLSPACE/issues">Report an issue <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="outro section-shell" aria-label="Follow development"><span class="mono">The lights are still on.</span><p>Stay close.<br><span class="muted">Keep your distance.</span></p><a class="text-link" href="https://github.com/marius4lui/NULLSPACE">Watch NULLSPACE take shape <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#">N/ NULLSPACE</a><p>Created with GPT-6 Astra through Codex.</p><div><a href="assets/PROVENANCE.md">Image provenance</a><a href="https://github.com/marius4lui/NULLSPACE">Source ↗</a><a href="#">Back to top ↑</a></div></footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Development image viewer"><form method="dialog"><button class="lightbox-close" aria-label="Close image">Close <span aria-hidden="true">×</span></button></form><img id="lightbox-image" src="assets/environment.webp" alt=""><p id="lightbox-caption"></p></dialog>
+</body>
+</html>
