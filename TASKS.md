@@ -4,12 +4,12 @@
 
 | ID | Assignment | Status |
 |---|---|---|
-| A | Backrooms visual/lore/original architectural language | active: research_backrooms |
-| B | Survival horror design and pacing | active: research_horror |
-| C | FPS game feel and weapon/controller validation | active: research_fps |
-| D | Predator/stalker AI, evidence, acoustics, fairness | queued |
-| E | Exact Godot 4.7.2 availability/render/navigation/performance | queued |
-| F | Exact Blender 5.2 LTS and procedural production asset pipeline | queued |
+| A | Backrooms visual/lore/original architectural language | complete: evidence/research/A-C-design-research.md |
+| B | Survival horror design and pacing | complete: evidence/research/A-C-design-research.md |
+| C | FPS game feel and weapon/controller validation | complete: evidence/research/A-C-design-research.md |
+| D | Predator/stalker AI, evidence, acoustics, fairness | active: research_ai |
+| E | Exact Godot 4.7.2 availability/render/navigation/performance | active: research_godot |
+| F | Exact Blender 5.2 LTS and procedural production asset pipeline | active: research_blender |
 | G | Original audio/horror/spatial acoustics | queued |
 | H | Autonomous actual-play/visual/audio QA methodology | queued |
 | I | Originality/provenance/legal/license research | queued |
