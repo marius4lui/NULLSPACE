@@ -54,6 +54,8 @@ func _part(size: Vector3, color: Color, bevel: float) -> MeshInstance3D:
 		Vector2(-x + bevel, y), Vector2(-x, y - bevel), Vector2(-x, -y + bevel)]
 	var surface := SurfaceTool.new()
 	surface.begin(Mesh.PRIMITIVE_TRIANGLES)
+	# The plate is flat, not a rounded blob: do not average normals across its faces.
+	surface.set_smooth_group(-1)
 	for i: int in range(8):
 		var a: Vector2 = outline[i]
 		var b: Vector2 = outline[(i + 1) % 8]

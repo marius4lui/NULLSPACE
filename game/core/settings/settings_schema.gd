@@ -12,7 +12,7 @@ const BOOLEANS: Array[String] = ["vsync", "invert_y", "subtitles", "center_dot",
 
 static func defaults() -> Dictionary:
 	return {"resolution": [1920, 1080], "display_mode": "windowed", "vsync": true,
-		"quality": "high", "master_volume": 0.8, "ambience_volume": 0.8, "effects_volume": 0.8,
+		"quality": "low", "master_volume": 0.8, "ambience_volume": 0.8, "effects_volume": 0.8,
 		"mouse_sensitivity": 1.0, "invert_y": false, "horizontal_fov": 88.0,
 		"head_bob": 0.5, "camera_shake": 0.5, "subtitles": true,
 		"center_dot": true, "reduced_flashes": false}
