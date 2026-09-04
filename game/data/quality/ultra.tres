@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QualityProfile" load_steps=2 format=3]
+[ext_resource type="Script" path="res://core/config/quality_profile.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"ultra"
+msaa = 2
+direct_light_budget = 32
+shadow_light_budget = 6
+particle_budget_scale = 1.25
+
