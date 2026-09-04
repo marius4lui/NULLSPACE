@@ -31,3 +31,6 @@ Fedora 44, x86-64, Ryzen 5 7535HS six cores/twelve threads, 30 GiB RAM, 659 GiB 
 ## D004 — Research originality watch, 2026-09-04
 
 Research A reports current Wikidot Level 0 title overlaps working title THRESHOLD and includes blackouts/red rooms. Preserve user concept/title but do not copy that page's text, imagery, named lore rules or entity designs. Independent original architecture, assets and mechanics; license researcher to assess provenance needs.
+# D009 — retain supported worker pool for independent cross-review
+
+2026-09-04: Four child workers started successfully with current5total runtime and configured4worker limit. After qa_native completed, attempting to create a new distinct review_native worker still returned `agent thread limit reached`; completed worker handles evidently did not free that creation path. Do not infer or invent a larger supported capacity. Reuse an existing idle worker for a bounded independent review of a feature it did not implement: qa_native reviews bootstrap_m0's toolchain; bootstrap_m0 subsequently reviews qa_native's harness. Separate review worktrees/evidence, frozen implementation during review, no self-grading. Dedicated sequential integration remains required. This operational adjustment does not weaken quality gates.
