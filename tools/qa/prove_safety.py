@@ -107,12 +107,29 @@ def prove(directory: Path) -> dict[str, Any]:
                   and time.monotonic() - started[0] < 0.9, response)
 
         started = begin("a")
-        thread, response = async_request({"action": "screenshot", "name": "06-lease-during-capture.png"})
+        # Named-pixmap snapshots can finish before a 200 ms lease. Exercise a
+        # real capture burst across that deadline instead of requiring one
+        # deliberately slow screenshot or inserting a fake supervisor delay.
+        response = {"captures": [], "started_monotonic": time.monotonic()}
+        def capture_burst() -> None:
+            try:
+                for index in range(32):
+                    name = "06-lease-during-capture.png" if index == 0 else f"06-lease-burst-{index:02d}.png"
+                    response["captures"].append(send(directory, {"action": "screenshot", "name": name}))
+                    if time.monotonic() - response["started_monotonic"] >= 0.8:
+                        break
+            except Exception as error:
+                response["error"] = str(error)
+            response["ended_monotonic"] = time.monotonic()
+        thread = threading.Thread(target=capture_burst)
+        thread.start()
         observed = key_release("a", started)
-        check("capture_does_not_starve_native_lease", observed["release_since_request_seconds"] < 0.45
+        check("capture_burst_does_not_starve_native_lease", observed["release_since_request_seconds"] < 0.45
               and thread.is_alive(), observed)
         thread.join(18)
-        check("capture_completed_after_release", not thread.is_alive() and "error" not in response, response)
+        check("capture_burst_completed_after_release", not thread.is_alive() and "error" not in response
+              and len(response["captures"]) >= 2
+              and response["ended_monotonic"] - response["started_monotonic"] >= 0.8, response)
 
         started = (time.monotonic(), time.time())
         thread, response = async_request({"action": "input", "key_down": ["s"], "hold": 0.9, "lease": 0.2})
