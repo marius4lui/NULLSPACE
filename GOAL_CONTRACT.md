@@ -1,6 +1,8 @@
-# THRESHOLD — Immutable Goal Contract
+# NULLSPACE — Immutable Goal Contract
 
 Status: initial archival copy; becomes immutable at design freeze. The text below is the complete original user instruction, preserved verbatim. Implementation notes and decisions live elsewhere and cannot weaken this contract.
+
+Authoritative user amendment, 2026-09-04: “nenne das game NULLSPACE”. The game is named NULLSPACE; THRESHOLD below is the original working title and has no naming authority after this amendment. All other requirements remain binding. Preserve the original instruction below verbatim.
 
 /goal Build from an empty repository a complete, polished, release-ready single-player first-person Backrooms survival-shooter, including all code, environments, original 3D assets, materials, textures, animation, creature AI, weapons, VFX, UI, audio, level design, builds, testing, optimization, documentation, screenshots and release artifacts. Continue autonomously without stopping until every Definition-of-Done and Quality Gate in this contract has passed, the entire game has been played from beginning to end successfully in at least two independent final validation runs, no P0/P1 defect remains, and a fresh-clone reproducible release build exists.
 
@@ -2400,4 +2402,3 @@ Every failed review creates another iteration.
 The loop continues until the GAME — not merely the code — satisfies the GOAL.
 
 Begin now. implement this as a goal
-

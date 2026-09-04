@@ -8,4 +8,7 @@ No playable game exists; product gates remain unverified. This is not a zero-def
 | ENV-002 | validation blocker | open | Native interaction/video/audio inspection pipeline not established. QA research to determine supported path. |
 | ENV-003 | performance evidence | open | Only integrated Radeon 660M available; cannot assert target discrete-GPU measurements. Benchmark host and seek defensible target evidence. |
 | GOV-001 | configuration discrepancy | open | Root turn metadata Astra/ultra; request says max. Persistent project defaults and explicit worker max set; check supported active-turn control without pretending config retroactive. |
-| IP-001 | originality review | open | Working title overlaps current Level 0 page title. User-defined scope retained; no external content copied. Research I to review. |
+| IP-001 | public naming risk | documented; private production proceeds | User chose NULLSPACE; Kaigan and Domension also use that game title. No trademark/rights clearance claimed; keep user name. Sources in research I; no public storefront commitment authorized or made. |
+| QA-001 | release evidence limitation | open | Actual native Windows runtime absent; cross-export/Wine alone cannot be called native certification. |
+| QA-002 | experiential review limitation | open | Native image/input/capture path proposed; actual audio listening and continuous temporal review modality unproven. Metrics/frame extraction do not substitute. |
+| DESIGN-001 | pre-freeze audit | corrections prepared | Independent design audit failed on ambiguous Windows condition, missing original UI/font brief, implicit relay mappings/unlock, undefined final interaction and pending research. Root corrected docs; independent rereview pending. |

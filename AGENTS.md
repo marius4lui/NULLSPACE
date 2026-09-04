@@ -1,4 +1,4 @@
-# THRESHOLD agent operating contract
+# NULLSPACE agent operating contract
 
 Read GOAL_CONTRACT.md and QUALITY_GATES.md before task work. Those are binding and immutable after design freeze. No milestone, passing test, score without evidence, or partial game fulfills the goal.
 

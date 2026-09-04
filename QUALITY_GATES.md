@@ -1,4 +1,4 @@
-# THRESHOLD quality gates
+# NULLSPACE quality gates
 
 Status: initial gate register; freeze with GOAL_CONTRACT.md after research/design. This register operationalizes the entire contract and never replaces or weakens it. Unverified means NOT PASSED. No release scores have been assigned.
 
@@ -37,7 +37,7 @@ Status: initial gate register; freeze with GOAL_CONTRACT.md after research/desig
 ## Release gates
 
 - R01: Zero P0 and P1; strongly target zero known P2. Open issues and limitations honest. No crashes/hardlocks/save corruption/unfinishable campaign/major broken systems/consistent cheating/softlocks/severe perf collapse.
-- R02: Exported Windows x86-64 and Linux x86-64 where host supports; release launch and all menu/campaign/AI/weapons/doors/save/settings behaviors pass; no debug spam/visualization.
+- R02: Windows x86-64 export is mandatory. Linux x86-64 export is also required when the build environment supports it. Release launch and all menu/campaign/AI/weapons/doors/save/settings behaviors pass; no debug spam/visualization. Cross-export success or Wine execution must not be represented as native Windows runtime validation.
 - R03: Fresh checkout reproduces build via documented pinned software/content steps. Record exact clean commit, commands, tool hashes, checksums and launch results. Runtime needs no development tooling or external asset access.
 - R04: README premise/controls/requirements/launch/build/limitations, architecture/design/art docs, credits/license inventory/release notes, builds, final representative screenshots, final QA and 60–120 second honest representative gameplay video if environment permits.
 - R05: Root independently rereads frozen contract/gates, issues/commits, rebuilds and launches release, inspects gameplay/screenshots/video and all QA evidence, verifies post-final-change dual runs. Any uncertainty blocks completion and creates verification/fix task.

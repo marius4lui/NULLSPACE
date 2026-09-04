@@ -1,5 +1,9 @@
 # Decisions
 
+## D005 — User-named NULLSPACE, 2026-09-04
+
+User explicitly directed “nenne das game NULLSPACE”. Adopt NULLSPACE for the game, production UI, builds and current documentation. THRESHOLD is only original working-title history; retain original archived prompt verbatim with this amendment. No other scope or quality criterion changes. Legal research will record known title overlap honestly, without silently substituting another name or blocking private production.
+
 ## D001 — Goal and authority, 2026-09-04
 
 THRESHOLD is a persisted active goal; complete original prompt archived verbatim in GOAL_CONTRACT.md. Root orchestrates only. No acceptance criterion has been weakened. Design remains pre-freeze pending A–I research.
