@@ -21,4 +21,11 @@ Godot `4.7.2.stable.official.ed1daf0bf`, headless, fresh isolated XDG profiles; 
 
 Reproduction: `bash game/tests/core/run.sh /home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 /absolute/new/log`. The external independent helper remains reviewer-owned at `review-core-clock/evidence/reviews/core-clock/clock_probe.tscn`, commit `710af25`; its README/report provides the direct command. Owner repetitions use this project's `--path game`, that absolute scene path, new output paths, and disposable case/profile directories.
 
-Next required evidence: clean exact-source import/cross-exports, corrected exported native diagnostic operation, and separate exact-source reviewer rerun. Native cold-start persisted settings, audio listening, native Windows, production physical restoration, campaign coordination and target-GPU measurements remain unverified. Previous contaminated native runs are not rehabilitated by this fix.
+## Clean committed build
+
+Correction source frozen at `891344e0dd986373e9a9e6d38bf513bc7fda93ab`. Starting with a clean checkout, the editor import, both release cross-exports and three-frame packed Linux headless launch completed exit0 with no engine/script errors. Logs are `import.log`, `export-linux.log`, `export-windows.log`, and `linux-headless.log`. Build used a new isolated XDG profile; only its `data/godot/export_templates` symlink reads the existing verified matching templates. No production source changed during this build.
+
+- Linux: `/tmp/nullspace-callback-build.VyQfbM/linux/nullspace.x86_64`, SHA256 `f6a37cbddebaa902a4cfaf6ff78017908b17bc8fe0e6a47ade2acbe0d05192f0`.
+- Windows: `/tmp/nullspace-callback-build.VyQfbM/windows/NULLSPACE.exe`, SHA256 `ef2091bef1a4f277d049c5be0982e807194f687da579cf5a37eab47cf0d6ff0a`.
+
+Next required evidence: corrected exported native diagnostic operation and separate exact-source reviewer rerun. Native cold-start persisted settings, audio listening, native Windows, production physical restoration, campaign coordination and target-GPU measurements remain unverified. Previous contaminated native runs are not rehabilitated by this fix.
