@@ -36,7 +36,7 @@ def main() -> None:
         "recipe_seed": 41073,
         "creator": "Delegated NULLSPACE environment-art production agent, GPT-6 Astra",
         "content_inputs": "Original procedural geometry, mathematical textures and directed composition only; no external game-content assets.",
-        "source_pipeline": ["generate_textures.py", "build_environment.py", "validate_exports.cjs", "record_provenance.py"],
+        "source_pipeline": ["generate_textures.py", "build_environment.py", "validate_exports.cjs", "configure_texture_imports.py", "preview/verify_texture_imports.gd", "record_provenance.py"],
         "software": {"Blender": "5.2.1 LTS / 9e2066aef7ef", "Godot": "4.7.2 stable / ed1daf0bf",
                      "Python": "3.14.7 (host)", "numpy": "2.4.6 (host)", "Pillow": "12.3.0", "Khronos glTF validator": "2.0.0-dev.3.10"},
         "source_reproduction": "Pinned recipes reproduce material and mesh exports. Blender master byte identity is not asserted; editable sources are retained.",

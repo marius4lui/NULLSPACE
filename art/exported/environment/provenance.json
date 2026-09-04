@@ -8,6 +8,8 @@
     "generate_textures.py",
     "build_environment.py",
     "validate_exports.cjs",
+    "configure_texture_imports.py",
+    "preview/verify_texture_imports.gd",
     "record_provenance.py"
   ],
   "software": {
@@ -21,7 +23,7 @@
   "source_reproduction": "Pinned recipes reproduce material and mesh exports. Blender master byte identity is not asserted; editable sources are retained.",
   "runtime_reproduction": "Explicit glTF/binary/PNG files plus intentional Godot .import and .uid metadata are retained; engine .godot cache is excluded.",
   "licensing": "Original project content; distribution license is the repository owner's decision. Listed software dependencies are authoring tooling, not third-party art.",
-  "base_commit": "f019853b3000c0dd58a0038fa5c6cbd0393e2577",
+  "base_commit": "9f438b2c566bf2304d5b89403c8377ba107c8962",
   "files": [
     {
       "path": "tools/art/environment/.gitignore",
@@ -30,13 +32,23 @@
     },
     {
       "path": "tools/art/environment/README.md",
-      "bytes": 6769,
-      "sha256": "c3579d8da9d5164e81dc18e6775d8645abd9b29ab703af9c76d08218b2d3db18"
+      "bytes": 8057,
+      "sha256": "dba4a75cbfac406b27d9eca5cfaca55e82e03fdd3f83a566a14849d4f84c6d87"
+    },
+    {
+      "path": "tools/art/environment/analyze_native_run.py",
+      "bytes": 4516,
+      "sha256": "ef974410ecf9a60c7c5047eee165dd0c96aeb276c3375fbd0ccc4f465c7042f5"
     },
     {
       "path": "tools/art/environment/build_environment.py",
       "bytes": 35033,
       "sha256": "57ec8a1c7c88013f85e4e8291a1a05b1e2b9ffef6fad595dfc186d40ac3e5d35"
+    },
+    {
+      "path": "tools/art/environment/configure_texture_imports.py",
+      "bytes": 4693,
+      "sha256": "0841a2c0303a64e7034760b8271e55c80158e52b09e0fdfba2db90c47a38fd54"
     },
     {
       "path": "tools/art/environment/generate_textures.py",
@@ -84,9 +96,19 @@
       "sha256": "14bed877be24300546d8ce525a8b81ee7f49f7f3399fdc3df44650c954554c1b"
     },
     {
+      "path": "tools/art/environment/preview/verify_texture_imports.gd",
+      "bytes": 5197,
+      "sha256": "0f3ca95f047b8ee47880ef9e40857d1cf76131bdadd952a29cad237c4f99f935"
+    },
+    {
+      "path": "tools/art/environment/preview/verify_texture_imports.gd.uid",
+      "bytes": 20,
+      "sha256": "a739443ce5e3294a607125ca47431dd444d5144aa4e67f1777fc7d87fb66b0a6"
+    },
+    {
       "path": "tools/art/environment/record_provenance.py",
-      "bytes": 2933,
-      "sha256": "670fcdac4dfa96b1b0310020ec181790799dcee23aec76e01b913204776b1cfc"
+      "bytes": 3002,
+      "sha256": "e318021f084b4e0b6e6be7fcaaee8f69a62afbaf682eec1ba38305010b03a9ed"
     },
     {
       "path": "tools/art/environment/validate_exports.cjs",
@@ -755,8 +777,8 @@
     },
     {
       "path": "game/assets/environment/textures/baseboard_basecolor.png.import",
-      "bytes": 989,
-      "sha256": "226c7d6bd47ebb920cb75159d1aee44a54c1e49145f83ed04de60565349a7bb2"
+      "bytes": 1037,
+      "sha256": "77d4a32b86bcd5b13e8e5d9dcb256dfc7e3a12162b63770e396509f3db02d12d"
     },
     {
       "path": "game/assets/environment/textures/baseboard_normal.png",
@@ -765,8 +787,8 @@
     },
     {
       "path": "game/assets/environment/textures/baseboard_normal.png.import",
-      "bytes": 980,
-      "sha256": "a41928e2dc061fe08d8570326cd773340803969943ebeb4fbe309d869bb375ff"
+      "bytes": 1029,
+      "sha256": "4267dd527a6e6635f1c465a5642a2fc7583146929c96e96adfd63d54f5a9164c"
     },
     {
       "path": "game/assets/environment/textures/baseboard_orm.png",
@@ -775,8 +797,8 @@
     },
     {
       "path": "game/assets/environment/textures/baseboard_orm.png.import",
-      "bytes": 971,
-      "sha256": "5b7ee01612bf1f3aa8e9319dcb90d57d5a362ef451913b754caa9006c4009841"
+      "bytes": 1073,
+      "sha256": "fe774ffe2293f55de8cae1c4a1a129bb2b812375c7b7c6218b713832bebc4405"
     },
     {
       "path": "game/assets/environment/textures/carpet_basecolor.png",
@@ -785,8 +807,8 @@
     },
     {
       "path": "game/assets/environment/textures/carpet_basecolor.png.import",
-      "bytes": 980,
-      "sha256": "685c679459600cb01c118dc3c2da50bf9972a2753d395676ae8e00475d352ed4"
+      "bytes": 1028,
+      "sha256": "afb258b209e99886a66a3fdba12cf45613ab6e3d27aceacde7ec77f7969ff1ec"
     },
     {
       "path": "game/assets/environment/textures/carpet_normal.png",
@@ -795,8 +817,8 @@
     },
     {
       "path": "game/assets/environment/textures/carpet_normal.png.import",
-      "bytes": 971,
-      "sha256": "5ff2b02fde7ea13211d124bc7c978cfe61b291e5bd560c51e32ac129e38fdac2"
+      "bytes": 1020,
+      "sha256": "c2f40fda57d0a5bda3bf2689b1cbbeabd0f388378ff74e7fc803b2f8ace0e725"
     },
     {
       "path": "game/assets/environment/textures/carpet_orm.png",
@@ -805,8 +827,8 @@
     },
     {
       "path": "game/assets/environment/textures/carpet_orm.png.import",
-      "bytes": 962,
-      "sha256": "58fb139fbc60435597573706866a2444f5c2e386d081cac198c37c5e08aa2484"
+      "bytes": 1061,
+      "sha256": "226f843a0f73121a950bc0d4502adf8748b93345300425a9539e798c00b244e8"
     },
     {
       "path": "game/assets/environment/textures/ceiling_basecolor.png",
@@ -815,8 +837,8 @@
     },
     {
       "path": "game/assets/environment/textures/ceiling_basecolor.png.import",
-      "bytes": 983,
-      "sha256": "54200904ec1e895fff3fbb567d2080f4e9a086b39fdb6f8ec0eae894ce6e8f99"
+      "bytes": 1031,
+      "sha256": "c2e61a923eef771f51405ec0839c7a73966d475e8825e0dfeea41e15e1ef9da6"
     },
     {
       "path": "game/assets/environment/textures/ceiling_normal.png",
@@ -825,8 +847,8 @@
     },
     {
       "path": "game/assets/environment/textures/ceiling_normal.png.import",
-      "bytes": 974,
-      "sha256": "e9044e5c45bdf8840f5a9c73f78521be83dd49e55698fdea81222076b8905242"
+      "bytes": 1023,
+      "sha256": "fad7e3e11d9dd2da28fce8a750322f9cc80206b49bb24af58e5f4769328484b4"
     },
     {
       "path": "game/assets/environment/textures/ceiling_orm.png",
@@ -835,8 +857,8 @@
     },
     {
       "path": "game/assets/environment/textures/ceiling_orm.png.import",
-      "bytes": 965,
-      "sha256": "ada6879cba790bb324ab05ee069a68cf9906f8d97ec1a2156c92a73f596430d4"
+      "bytes": 1065,
+      "sha256": "07703b12bde2c4c9677df154557669f88088ae72a5b27e38203ff09086837d33"
     },
     {
       "path": "game/assets/environment/textures/diffuser_basecolor.png",
@@ -845,8 +867,8 @@
     },
     {
       "path": "game/assets/environment/textures/diffuser_basecolor.png.import",
-      "bytes": 986,
-      "sha256": "72faad6baf0117d1abeb4b48f10219dfb6200b66d98621d4fcc0250d8bd2c784"
+      "bytes": 1034,
+      "sha256": "dc09358d7c07be27f51b1a10672d615e7d61717829f96882b5fd06f3de1cceef"
     },
     {
       "path": "game/assets/environment/textures/diffuser_normal.png",
@@ -855,8 +877,8 @@
     },
     {
       "path": "game/assets/environment/textures/diffuser_normal.png.import",
-      "bytes": 976,
-      "sha256": "f470771b6507368214ab4ae8549ea17e3047fb14bfcbb3b192791c9cc8b69b96"
+      "bytes": 1025,
+      "sha256": "96d186d1aa7302f881de81dd40ad0bee6d52a1bed738264d5c14f1bf685f6da5"
     },
     {
       "path": "game/assets/environment/textures/diffuser_orm.png",
@@ -865,8 +887,8 @@
     },
     {
       "path": "game/assets/environment/textures/diffuser_orm.png.import",
-      "bytes": 968,
-      "sha256": "4f13daed58fe9995e7b8f4d2f973ab94652416cabea0efebb1b4737ce1fd45ac"
+      "bytes": 1069,
+      "sha256": "ecbd80f9e7606065d9bb9ecb56b4bf7565c49ef4b76c729c5de81f615fe8dfe0"
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_basecolor.png",
@@ -875,8 +897,8 @@
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_basecolor.png.import",
-      "bytes": 1004,
-      "sha256": "3474a28cc08965f0aabd714c673cc8886efe8f2773771541845f10284d3db8b2"
+      "bytes": 1052,
+      "sha256": "19b8030afbf5d69fd6548ef32240e61674786e70d4f6acb63bf87f765a42ef66"
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_emission.png",
@@ -885,8 +907,8 @@
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_emission.png.import",
-      "bytes": 1000,
-      "sha256": "8e3591176547028f39ca8e9d1ae5213f6b5b124d5adf9aa198f75fc7fb352f11"
+      "bytes": 1048,
+      "sha256": "4f4a11fec45fee829ecc70f1252d232c1da7c54c32ed6950f2dd18aa87694b22"
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_normal.png",
@@ -895,8 +917,8 @@
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_normal.png.import",
-      "bytes": 995,
-      "sha256": "0f192faa6c45bccf77cc5f8dc4ce73f6e2658f3071f2f6dc7729b519734d00b0"
+      "bytes": 1044,
+      "sha256": "e5cc4de83216b6497377eb4eebff5af7a30fe3d57656486c72796bf9c8d267d7"
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_orm.png",
@@ -905,8 +927,8 @@
     },
     {
       "path": "game/assets/environment/textures/fixture_detail_orm.png.import",
-      "bytes": 986,
-      "sha256": "fd5d7cc1abed60fdf24d08e44a4d546e86a9db6f1d01617184fc44873902ed68"
+      "bytes": 1093,
+      "sha256": "1f156a732d67e1aafd4581b17788390362cefe202acc4aabd89440ac4002e1d0"
     },
     {
       "path": "game/assets/environment/textures/material_manifest.json",
@@ -920,8 +942,8 @@
     },
     {
       "path": "game/assets/environment/textures/painted_metal_basecolor.png.import",
-      "bytes": 1000,
-      "sha256": "d950be5d9c1a07a03890a8cf00911460a3bdc4a1bf97ddb410c63ff409fa56bf"
+      "bytes": 1048,
+      "sha256": "7818a50d9ce851ca9f7ce5507a887bba7b50a66b1ba57b3b85d461f519948977"
     },
     {
       "path": "game/assets/environment/textures/painted_metal_normal.png",
@@ -930,8 +952,8 @@
     },
     {
       "path": "game/assets/environment/textures/painted_metal_normal.png.import",
-      "bytes": 992,
-      "sha256": "ba6feda24e01b5c4a00cff628e1a6cb9d95518eab077b3e2a10e7f91a6946f47"
+      "bytes": 1041,
+      "sha256": "2a94d03fc11c89c1437107ea3618e0956535223a15f57c1c324ff2c733888aa6"
     },
     {
       "path": "game/assets/environment/textures/painted_metal_orm.png",
@@ -940,8 +962,8 @@
     },
     {
       "path": "game/assets/environment/textures/painted_metal_orm.png.import",
-      "bytes": 982,
-      "sha256": "e15d0c25e5061d5f45431b828d3eaf4d197dc7e8c041f87c7512392e9ed4a36c"
+      "bytes": 1088,
+      "sha256": "ef70a9d415e61d41838e0db20c1950243a9bb06e02de17c613b44eb14fb92136"
     },
     {
       "path": "game/assets/environment/textures/room_m4_macro.png",
@@ -950,8 +972,8 @@
     },
     {
       "path": "game/assets/environment/textures/room_m4_macro.png.import",
-      "bytes": 971,
-      "sha256": "950ae5e3ff9e1a78d4d4a0ff6516cbd41bf7a81038488f09d83eef1193c531d7"
+      "bytes": 1019,
+      "sha256": "d0174c8013979b4597247b146c20720539ef725eac3658d0d9b3f0580c5a59f7"
     },
     {
       "path": "game/assets/environment/textures/wallpaper_basecolor.png",
@@ -960,8 +982,8 @@
     },
     {
       "path": "game/assets/environment/textures/wallpaper_basecolor.png.import",
-      "bytes": 989,
-      "sha256": "8ca3df97347884cdf5b207adfefc2b3933ed1cb42595554957ababa8d588c29e"
+      "bytes": 1037,
+      "sha256": "afeaff759cc354ec6775d6055b3c3edc0a1999d12dacfb9252e8f0d84cfe256d"
     },
     {
       "path": "game/assets/environment/textures/wallpaper_normal.png",
@@ -970,8 +992,8 @@
     },
     {
       "path": "game/assets/environment/textures/wallpaper_normal.png.import",
-      "bytes": 980,
-      "sha256": "fa344988076b38a8de94d28f3ca71684265cff902fda7377b4eff9d8dc45f516"
+      "bytes": 1029,
+      "sha256": "87a269946b628bc6fd73bddb30b9b5292161628c19da830102ca4d7b965b9328"
     },
     {
       "path": "game/assets/environment/textures/wallpaper_orm.png",
@@ -980,8 +1002,8 @@
     },
     {
       "path": "game/assets/environment/textures/wallpaper_orm.png.import",
-      "bytes": 971,
-      "sha256": "7c59fe70623714f80c9b63fab558949ba0da57254d02840daa6d252b5d6d8727"
+      "bytes": 1073,
+      "sha256": "4012d910787a73a86ceeb81d046651933ea58beb39f0a103ecb92edc472eea68"
     },
     {
       "path": "game/assets/environment/wall_061.bin",

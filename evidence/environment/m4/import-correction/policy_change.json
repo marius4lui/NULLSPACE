@@ -1,0 +1,1405 @@
+{
+  "schema": 1,
+  "mode": "apply",
+  "textures": 23,
+  "mismatched_before": 23,
+  "result": "SIDECARS_UPDATED_REIMPORT_REQUIRED",
+  "note": "Actual VRAM formats/mipmaps/content must be verified after Godot reimport. No visual/performance PASS from this policy check.",
+  "primary_source": "https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/editor/import/resource_importer_texture.cpp",
+  "records": [
+    {
+      "source": "game/assets/environment/textures/baseboard_basecolor.png",
+      "source_sha256": "bfe1e44e0d803b1b3dc52bf581bf169d09204c25d3ab08cf15a27d120b9370f3",
+      "uid_preserved": "\"uid://ceeuhnh0s66fe\"",
+      "sidecar_before_sha256": "226c7d6bd47ebb920cb75159d1aee44a54c1e49145f83ed04de60565349a7bb2",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/baseboard_normal.png",
+      "source_sha256": "1021760936bcc24456b554536028099847d0e8b04c61f1d9ce8745a4be62f8b1",
+      "uid_preserved": "\"uid://dp1nykombi87b\"",
+      "sidecar_before_sha256": "a41928e2dc061fe08d8570326cd773340803969943ebeb4fbe309d869bb375ff",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "1"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "false",
+        "compress/normal_map": "1",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": "+Y; unchanged RG channels"
+    },
+    {
+      "source": "game/assets/environment/textures/baseboard_orm.png",
+      "source_sha256": "4533105f9d14d950a28e508f4bbf5f47b51968eca5800430183d737ae767da2c",
+      "uid_preserved": "\"uid://bxjwd13va3ith\"",
+      "sidecar_before_sha256": "5b7ee01612bf1f3aa8e9319dcb90d57d5a362ef451913b754caa9006c4009841",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "3"
+        },
+        "roughness/src_normal": {
+          "before": "\"\"",
+          "expected": "\"res://assets/environment/textures/baseboard_normal.png\""
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "3",
+        "roughness/src_normal": "\"res://assets/environment/textures/baseboard_normal.png\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/carpet_basecolor.png",
+      "source_sha256": "03e4e8878e0fc57b47bed3a65322dd7fd4dc5238b78561e114bf563ad823bf49",
+      "uid_preserved": "\"uid://c5w3fk36k5jir\"",
+      "sidecar_before_sha256": "685c679459600cb01c118dc3c2da50bf9972a2753d395676ae8e00475d352ed4",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/carpet_normal.png",
+      "source_sha256": "4eefb5bee7734b8de3351045c962339bdbe67527f76d1434d037393af63ab4a7",
+      "uid_preserved": "\"uid://diafny46m50dr\"",
+      "sidecar_before_sha256": "5ff2b02fde7ea13211d124bc7c978cfe61b291e5bd560c51e32ac129e38fdac2",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "1"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "false",
+        "compress/normal_map": "1",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": "+Y; unchanged RG channels"
+    },
+    {
+      "source": "game/assets/environment/textures/carpet_orm.png",
+      "source_sha256": "9c6df287c178064b68ed02ba82d1da59001ba0068939d4fb766b94144008656f",
+      "uid_preserved": "\"uid://cxcsphe58qjki\"",
+      "sidecar_before_sha256": "58fb139fbc60435597573706866a2444f5c2e386d081cac198c37c5e08aa2484",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "3"
+        },
+        "roughness/src_normal": {
+          "before": "\"\"",
+          "expected": "\"res://assets/environment/textures/carpet_normal.png\""
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "3",
+        "roughness/src_normal": "\"res://assets/environment/textures/carpet_normal.png\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/ceiling_basecolor.png",
+      "source_sha256": "aadc46c21612af736044b15ded8db2e35a90514cff152e71a410d3950883dbf2",
+      "uid_preserved": "\"uid://b6peekphqkwff\"",
+      "sidecar_before_sha256": "54200904ec1e895fff3fbb567d2080f4e9a086b39fdb6f8ec0eae894ce6e8f99",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/ceiling_normal.png",
+      "source_sha256": "3da17bd465f03ae5d5fa4f50fac29bdec446022476a319b5f450b32e3445d124",
+      "uid_preserved": "\"uid://bo08i4jel2wmg\"",
+      "sidecar_before_sha256": "e9044e5c45bdf8840f5a9c73f78521be83dd49e55698fdea81222076b8905242",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "1"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "false",
+        "compress/normal_map": "1",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": "+Y; unchanged RG channels"
+    },
+    {
+      "source": "game/assets/environment/textures/ceiling_orm.png",
+      "source_sha256": "52eb334e8236363804b93d6d14d844c9240844dac86cabb25d3bd1941ad9bcb1",
+      "uid_preserved": "\"uid://c4ti4ynqr4cgf\"",
+      "sidecar_before_sha256": "ada6879cba790bb324ab05ee069a68cf9906f8d97ec1a2156c92a73f596430d4",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "3"
+        },
+        "roughness/src_normal": {
+          "before": "\"\"",
+          "expected": "\"res://assets/environment/textures/ceiling_normal.png\""
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "3",
+        "roughness/src_normal": "\"res://assets/environment/textures/ceiling_normal.png\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/diffuser_basecolor.png",
+      "source_sha256": "2a00f3c35a9292846921d62eefa9daebda972738d07f39852440bc0d68552014",
+      "uid_preserved": "\"uid://ci5qei8jb6j2o\"",
+      "sidecar_before_sha256": "72faad6baf0117d1abeb4b48f10219dfb6200b66d98621d4fcc0250d8bd2c784",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/diffuser_normal.png",
+      "source_sha256": "e4f18417acdbe0b90bc488c9baffdc6be053e52377153fac7381674a4dc786f1",
+      "uid_preserved": "\"uid://lm2mfk40l11w\"",
+      "sidecar_before_sha256": "f470771b6507368214ab4ae8549ea17e3047fb14bfcbb3b192791c9cc8b69b96",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "1"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "false",
+        "compress/normal_map": "1",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": "+Y; unchanged RG channels"
+    },
+    {
+      "source": "game/assets/environment/textures/diffuser_orm.png",
+      "source_sha256": "f1b7dd05aad612ead41e723fc554664e228538c01c7b32567e703775594c35c3",
+      "uid_preserved": "\"uid://bp0hxs11sq4k5\"",
+      "sidecar_before_sha256": "4f13daed58fe9995e7b8f4d2f973ab94652416cabea0efebb1b4737ce1fd45ac",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "3"
+        },
+        "roughness/src_normal": {
+          "before": "\"\"",
+          "expected": "\"res://assets/environment/textures/diffuser_normal.png\""
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "3",
+        "roughness/src_normal": "\"res://assets/environment/textures/diffuser_normal.png\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/fixture_detail_basecolor.png",
+      "source_sha256": "88d11c0f8af26a94ebc2378f461169d63398f32725e337c5309554764591aa20",
+      "uid_preserved": "\"uid://b4120uce8sbg8\"",
+      "sidecar_before_sha256": "3474a28cc08965f0aabd714c673cc8886efe8f2773771541845f10284d3db8b2",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/fixture_detail_emission.png",
+      "source_sha256": "e9663408931e28e300f1a666abf090e22ce103690e0ac1ff394c121827d54a1f",
+      "uid_preserved": "\"uid://vrxtjdyhjufu\"",
+      "sidecar_before_sha256": "8e3591176547028f39ca8e9d1ae5213f6b5b124d5adf9aa198f75fc7fb352f11",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/fixture_detail_normal.png",
+      "source_sha256": "71d432413a10aab25e5dee0aa377a1ca29dddef8eb2e30584135268d218c9d96",
+      "uid_preserved": "\"uid://c26twxajalk5j\"",
+      "sidecar_before_sha256": "0f192faa6c45bccf77cc5f8dc4ce73f6e2658f3071f2f6dc7729b519734d00b0",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "1"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "false",
+        "compress/normal_map": "1",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": "+Y; unchanged RG channels"
+    },
+    {
+      "source": "game/assets/environment/textures/fixture_detail_orm.png",
+      "source_sha256": "9719f89ec6b4e9660b7148d8a5e1c2757e37fdef38abe2fc33512244a1c9fbef",
+      "uid_preserved": "\"uid://clejs6eip8bng\"",
+      "sidecar_before_sha256": "fd5d7cc1abed60fdf24d08e44a4d546e86a9db6f1d01617184fc44873902ed68",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "3"
+        },
+        "roughness/src_normal": {
+          "before": "\"\"",
+          "expected": "\"res://assets/environment/textures/fixture_detail_normal.png\""
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "3",
+        "roughness/src_normal": "\"res://assets/environment/textures/fixture_detail_normal.png\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/painted_metal_basecolor.png",
+      "source_sha256": "210b366bea82397ff82b6db58660b6492ce34e7b1a1626efb2695a1bb5265ac2",
+      "uid_preserved": "\"uid://2wpnxn6mvb27\"",
+      "sidecar_before_sha256": "d950be5d9c1a07a03890a8cf00911460a3bdc4a1bf97ddb410c63ff409fa56bf",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/painted_metal_normal.png",
+      "source_sha256": "7cb6cf3cff5a9a4c7515494c5b563725524c3e6dc0a0dc24866ff41af7e4f178",
+      "uid_preserved": "\"uid://dwi0ogocjoxi5\"",
+      "sidecar_before_sha256": "ba6feda24e01b5c4a00cff628e1a6cb9d95518eab077b3e2a10e7f91a6946f47",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "1"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "false",
+        "compress/normal_map": "1",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": "+Y; unchanged RG channels"
+    },
+    {
+      "source": "game/assets/environment/textures/painted_metal_orm.png",
+      "source_sha256": "bda574b2b212e95ad14e6f5c34acfa60740880a615ebaf4049d7cbc47719cf50",
+      "uid_preserved": "\"uid://5gmy7ckwqj25\"",
+      "sidecar_before_sha256": "e15d0c25e5061d5f45431b828d3eaf4d197dc7e8c041f87c7512392e9ed4a36c",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "3"
+        },
+        "roughness/src_normal": {
+          "before": "\"\"",
+          "expected": "\"res://assets/environment/textures/painted_metal_normal.png\""
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "3",
+        "roughness/src_normal": "\"res://assets/environment/textures/painted_metal_normal.png\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/room_m4_macro.png",
+      "source_sha256": "0f866e710983d864c910dad410d82085b1706ac3f8f05450a87dde581ec4c1b2",
+      "uid_preserved": "\"uid://b7fv8jt2wnuxo\"",
+      "sidecar_before_sha256": "950ae5e3ff9e1a78d4d4a0ff6516cbd41bf7a81038488f09d83eef1193c531d7",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/wallpaper_basecolor.png",
+      "source_sha256": "50356c1162bf5a053b9e676de6c342007303c8bd4351715f51fdd0bf3e499e58",
+      "uid_preserved": "\"uid://bjhp4013un1xk\"",
+      "sidecar_before_sha256": "8ca3df97347884cdf5b207adfefc2b3933ed1cb42595554957ababa8d588c29e",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "0",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": true,
+      "normal_convention": null
+    },
+    {
+      "source": "game/assets/environment/textures/wallpaper_normal.png",
+      "source_sha256": "f14d7e681fed7707cb651bbd20ab2ac5d6d2946cfb02a5771b2a09c72e17056c",
+      "uid_preserved": "\"uid://cy66rfhwt5yn5\"",
+      "sidecar_before_sha256": "fa344988076b38a8de94d28f3ca71684265cff902fda7377b4eff9d8dc45f516",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "1"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "1"
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "false",
+        "compress/normal_map": "1",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "1",
+        "roughness/src_normal": "\"\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": "+Y; unchanged RG channels"
+    },
+    {
+      "source": "game/assets/environment/textures/wallpaper_orm.png",
+      "source_sha256": "61ec1361158666ce5708f4c56f1cd9d578410d312837adab821ca13a6111a2a1",
+      "uid_preserved": "\"uid://cfwo2lg8x2mm5\"",
+      "sidecar_before_sha256": "7c59fe70623714f80c9b63fab558949ba0da57254d02840daa6d252b5d6d8727",
+      "differences": {
+        "compress/mode": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/high_quality": {
+          "before": "false",
+          "expected": "true"
+        },
+        "compress/normal_map": {
+          "before": "0",
+          "expected": "2"
+        },
+        "compress/channel_pack": {
+          "before": "0",
+          "expected": "1"
+        },
+        "mipmaps/generate": {
+          "before": "false",
+          "expected": "true"
+        },
+        "roughness/mode": {
+          "before": "0",
+          "expected": "3"
+        },
+        "roughness/src_normal": {
+          "before": "\"\"",
+          "expected": "\"res://assets/environment/textures/wallpaper_normal.png\""
+        },
+        "process/fix_alpha_border": {
+          "before": "true",
+          "expected": "false"
+        },
+        "detect_3d/compress_to": {
+          "before": "1",
+          "expected": "0"
+        }
+      },
+      "policy": {
+        "compress/mode": "2",
+        "compress/high_quality": "true",
+        "compress/normal_map": "2",
+        "compress/channel_pack": "1",
+        "mipmaps/generate": "true",
+        "mipmaps/limit": "-1",
+        "roughness/mode": "3",
+        "roughness/src_normal": "\"res://assets/environment/textures/wallpaper_normal.png\"",
+        "process/fix_alpha_border": "false",
+        "process/premult_alpha": "false",
+        "process/normal_map_invert_y": "false",
+        "process/channel_remap/red": "0",
+        "process/channel_remap/green": "1",
+        "process/channel_remap/blue": "2",
+        "process/channel_remap/alpha": "3",
+        "process/hdr_as_srgb": "false",
+        "process/size_limit": "0",
+        "detect_3d/compress_to": "0"
+      },
+      "source_color": false,
+      "normal_convention": null
+    }
+  ]
+}

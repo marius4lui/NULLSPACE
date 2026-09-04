@@ -10,7 +10,10 @@ python3 tools/art/environment/generate_textures.py
 npm ci --prefix tools/art/environment --ignore-scripts --no-audit --no-fund
 node tools/art/environment/validate_exports.cjs
 python3 tools/art/environment/prepare_preview.py
+python3 tools/art/environment/configure_texture_imports.py --apply
 /home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 --headless --path tools/art/environment/preview --editor --import --quit
+python3 tools/art/environment/configure_texture_imports.py --check
+NULLSPACE_TEXTURE_IMPORT_REPORT=/absolute/evidence/imported-resources.json /home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64 --headless --path tools/art/environment/preview --script res://verify_texture_imports.gd
 ```
 
 The exact Blender executable is a local bootstrap installation convention. Any verified Blender5.2.1 executable can run the same recipe. Host dependencies recorded by the material manifest: Python3.14.7, numpy2.4.6, Pillow12.3.0. Khronos glTF-Validator2.0.0-dev.3.10 is pinned by the local package lock and is authoring tooling only. It is not shipped in the game.
@@ -35,6 +38,8 @@ Material sources live under `art/source/textures/environment`; the editable mast
 The M4 room deliberately combines a12.2x14.64m shell, offset full-height partition, two nonuniformly placed columns, three complete architectural continuations, one wall vent and one displaced board. The board/stain area provides a sparse clue; most floor area is empty. This composition is not a campaign graph or a full set of all56 room designs. The kit can compose later narrow/wide/T/four-way/offset/open/divided/low service variants.
 
 Wallpaper and carpet use2K maps over2.44m; mineral board and coated metal use1K over1.22m; small rubber/diffuser/fixture atlas use512px. UV0 preserves physical scale; UV2 is independently packed for any later invariant light bake. The room-specific1K macro mask only changes broad moisture/traffic/dye response; it never substitutes for tiled close-view detail. Normal maps use tangent+Y. ORM is R=AO,G=roughness,B=metallic. No baked lighting is put into base color.
+
+Texture import is explicit, not dependent on Godot's runtime/editor3D detection. `configure_texture_imports.py` mechanically preserves existing UIDs while setting full mip chains and desktop VRAM compression: BC7 for subtle color/packed data, BC5/RGTC for normals. ORM roughness filtering uses green and its corresponding normal. Base/emission remain sRGB through material/sampler intent; normal/ORM/macro remain linear, with no Y inversion or channel permutation. All authored PNGs are unchanged by import. The verification script loads actual stored images and checks formats, mip counts, UIDs and sampled compression error; writing flags alone is not acceptance. Native visual and same-pose timing review must follow. A newly introduced texture needs its first Godot `.import` generated and retained before the explicit policy can be applied; missing metadata fails instead of inventing a UID.
 
 Imported fixture material parts are consolidated into three surfaces for the prismatic model and two for the exposed model. A guarded512px atlas carries original steel/recess/ceramic/reflector/phosphor swatches. Emission is restricted to its phosphor cell. Runtime creates distinct state material copies without mutating imported materials. Four fixture shadows are selected by the reference manifest; the circuit/quality owner can call `set_direct_light_active` to enforce its own budget. NORMAL,WEAK,INTERMITTENT,FAILING,OFF states and `reduce_flashes` are supported. No hum asset or audio claim is supplied by this environment assignment.
 
