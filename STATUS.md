@@ -1,9 +1,9 @@
 # Status
 
-- Current milestone: M1 frozen; M0/M2/M4 candidates await native acceptance; bounded original Listener M11A source production active.
-- Last known good commit: 092859e (governance/evidence/README baseline; design freeze4f96c79; no integrated playable build).
-- Verified completed systems: Active goal/unchanged freeze/research/design audit; exact tools/templates. Nativefb3a09d bounded PASS2f10706 (unmerged), root193hashes/source/images/22offlinechecks. Storagedca6c73 PASS85dd980; clock891344e PASSda1e1f4 with256+45 independent checks. Corrected56-space document PASSd2da321. M4/Listener remain unaccepted candidates; no product acceptance.
-- Current blockers: Independent M0 natural-exit repeat active. M2 whole-native, M4 corrected native/material/performance/visual review and integration pending. Audio listening/cold-start native preferences/native Windows/target-GPU evidence absent; root effort variance pending. No unknown process stopped or credit/reset purchased.
-- Current active agents: qa_native owns GPU for independent M0; bootstrap_m0 prepares independent M2/cloned-private-profile check; core_m2 packages33-screen self-native evidence and plans M3 interfaces; environment_m4 native candidatee70fec5 queues after M0/M2. All Astra/max in4-worker pool.
-- Remaining acceptance failures: all product/release gates unverified; no integrated game or campaign/playthrough/quality scores. Isolated milestone exports exist. Runtime660M cannot establish target discrete-GPU performance.
-- Next integration point: independent review of committed M0/native QA, then dedicated integration agent sequentially accepts core M2 and original room M4 with real launch/regression evidence.
+- Current milestone: User-authorized playable-first strategy; block A original room + concrete Player starts. Then pistol, fair Listener, relay/exit/death/restart in the same scene.
+- Last known good commit: 552c340 (strategy/governance baseline; original contract retained in Git; no integrated playable build).
+- Verified completed systems: M0 source9bdcfc3 PASScef92e4; nativefb3a09d PASS2f10706; bounded core storage/time/restore checks and actual33-image self-native evidence988c18b. Original room e70fec5 and Listener3b67be9 retained with open quality limitations. No product acceptance.
+- Current blockers: A needs concrete Player and scene wiring. Goal reports usageLimited but direct limits report1%/no reached flag; two normal worker continuations now respond. No purchase/reset/downgrade. Audio/platform/cold-start/target-GPU evidence remains open, not a prerequisite for independent gameplay. Interrupted owned art preview stopped cleanly, evidence preserved.
+- Current active agents: qa_native stages isolated section-base and will independently review/integrate coherent A; core_m2 implements A after handoff. Both Astra/max. Other workers are deferred; no automatic capacity filling.
+- Remaining acceptance failures: A not yet playable; complete5–10minute section and all final campaign/release gates remain unverified; final full runs0/2. Original final content is not reduced.
+- Next integration point: actual playable A export, native movement/collision/light/interaction/pause and targeted regressions, independent combined review, then sequential Main promotion. No old generic-interface or perfect-room micro-gates beforehand.
