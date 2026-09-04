@@ -1,5 +1,9 @@
 # Decisions
 
+## D010 — User-authorized playable-first simplification, 2026-09-05
+
+The user expressly replaces conflicting architecture/decomposition/max-parallelism/milestone-order requirements. Adopt STRATEGY_CHANGE_2026-09-05.md: preserve original assets/tested core/tools/evidence, bind concrete scenes directly, build one integrated5–10minute section A–E before full-campaign expansion. No content cuts or final score reductions authorized. Preserve frozen originals in Git and add explicit amendment pointers; old universal-interface plans become historical, not prerequisites. Root remains orchestrator/Astra-max delegation; use one cohesive implementation owner and independent reviewer/integrator, not four jobs for capacity's sake. No new website/presentation/preview/framework work. Stop unsafe/unattended owned sessions; no quota purchases/resets/downgrade. Current goal usage status and live limit response disagree; only a normal bounded worker retry may establish availability.
+
 ## D008 — Resumed runtime and usage revalidation
 
 Previous goal turn made concrete progress: research/design/contract freeze and isolated implementation worktrees. Initial toolchain/project-skeleton workers then terminated with account usage-limit errors; no implementation files or installed binaries existed at resumed inspection. No live worker/process handle remained. Fresh usage tool now reports0% used and no reached-limit flag, so retry normal Astra/max assignments; no reset credit redeemed or credits purchased. Current runtime explicitly advertises5 total slots; configure4 spawned workers. Earlier D007 inference that root counted inside config was unproven: completed threads remained in roster and runtime config may not change live. Supersede that interpretation with current documented4-worker/5-total capacity, preserving error history.

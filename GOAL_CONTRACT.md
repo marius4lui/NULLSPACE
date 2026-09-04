@@ -1,5 +1,7 @@
 # NULLSPACE — Immutable Goal Contract
 
+Authoritative user process amendment, 2026-09-05: [STRATEGY_CHANGE_2026-09-05.md](STRATEGY_CHANGE_2026-09-05.md). The user explicitly replaces conflicting architecture, decomposition, maximum-utilization and milestone-order rules with a concrete integrated5–10minute section first. Original final content/quality requirements and the original instruction below are preserved; this amendment does not declare a prototype complete. The original frozen document is retained at4f96c79 (SHA2560b4187bb6212c9ca87bb14dd653bbc1a975eea1c3209c5827c67eb98c47c02e6).
+
 Status: FROZEN on 2026-09-04 after research A–I and independent design audit PASS. Immutable except an evidenced unavoidable technical contradiction. The text below is the complete original user instruction, preserved verbatim. Implementation notes and decisions live elsewhere and cannot weaken this contract.
 
 Authoritative user amendment, 2026-09-04: “nenne das game NULLSPACE”. The game is named NULLSPACE; THRESHOLD below is the original working title and has no naming authority after this amendment. All other requirements remain binding. Preserve the original instruction below verbatim.

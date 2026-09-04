@@ -1,5 +1,7 @@
 # NULLSPACE quality gates
 
+User-authorized process amendment, 2026-09-05: STRATEGY_CHANGE_2026-09-05.md supersedes conflicting architecture/task-order/max-parallelism/mini-handoff interpretations of governance gates. Independently review and sequentially integrate coherent playable blocks. Existing tests/evidence and ALL final content, honesty, safety and release-quality requirements remain. The original frozen register is preserved at4f96c79 (SHA2567bf70305d9caa47aa6e09c68bd59e9d7a5f676ae6366e3c8f7e6faa6adb4fc48).
+
 Status: FROZEN on 2026-09-04 after research A–I and independent design audit PASS. Immutable except an evidenced unavoidable technical contradiction. This register operationalizes the entire contract and never replaces or weakens it. Unverified means NOT PASSED. No release scores have been assigned.
 
 ## Governance gates

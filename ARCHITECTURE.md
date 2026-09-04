@@ -1,5 +1,9 @@
 # NULLSPACE architecture
 
+## Current authority — integrated section first, 2026-09-05
+
+STRATEGY_CHANGE_2026-09-05.md replaces conflicting prescriptions below. Build one concrete game scene, Player, pistol, Listener, doors and relay using direct typed references/signals and few Resources. Reuse the tested core/time/save contracts without rewriting them. Do not introduce a generic service/adapter/provider/registry/plugin layer or complete-campaign acoustics before a current need. Listener begins with a fair small state machine and dated, decaying sight/sound evidence; richer behavior follows working play. The next sequence is room/player → pistol → Listener → relay/exit/death/restart → laptop play. The original technical plan below remains historical rationale and later options, not mandatory infrastructure prerequisites.
+
 Production architecture baseline, 2026-09-04; research A–I incorporated and independent design-readiness audit PASS at c737443. Required engine Godot4.7.2 stable, Forward+, typed modular GDScript and tunable Resources. No implementation exists at freeze. Delegated implementers own code/scenes/tests.
 
 ## Runtime ownership

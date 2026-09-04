@@ -1,5 +1,9 @@
 # Task ledger
 
+## ACTIVE OVERRIDE — integrated playable section, 2026-09-05
+
+User-authorized STRATEGY_CHANGE_2026-09-05.md supersedes the old milestone/interface queue below. Preserve its history, not its blocking order. Immediate coherent task A: merge existing room/core in an isolated working candidate and implement a concrete Player + section scene for movement, collision, flashlight, interaction and pause. Independent reviewer/integrator reviews actual same-scene operation as one block before Main promotion. B adds pistol; C simple fair Listener; D relay/exit/death/restart; E laptop play and targeted fixes. No further standalone preview/website/framework work. Old whole-M2/room-perfect micro-handoffs and cloned-profile infrastructure are deferred unless a reproduced defect blocks A. Two active workers normally suffice; all implementation Astra/max.
+
 ## Research before production
 
 | ID | Assignment | Status |

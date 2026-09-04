@@ -1,5 +1,7 @@
 # Next production assignments
 
+**Superseded task-order/interface plan, 2026-09-05.** The active assignments and acceptance are in STRATEGY_CHANGE_2026-09-05.md. Begin A: one runnable original room + concrete Player with movement/collision/look/flashlight/interaction/pause, reusing core and assets. No prerequisite sensory-adapter/general restore-coordinator project; add only concrete wiring actually needed by this scene. Preserve tests and existing contracts. The old M3/M6 detail below is retained for traceability and risk reminders, not permission to delay A with abstract interfaces. Review the coherent playable change before Main integration.
+
 Orchestration acceptance contracts, not implementation or scope changes. Frozen goal/design/art/gates remain authoritative. Assign a named Astra/max owner and isolated `agent/…` worktree before writing. No parallel source ownership; dependencies may not be represented as accepted before independent review and sequential integration.
 
 ## M3 — grounded player foundation
