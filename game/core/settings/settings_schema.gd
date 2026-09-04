@@ -28,7 +28,7 @@ static func validate(settings: Dictionary) -> PackedStringArray:
 		errors.append("Resolution must be between 960x540 and 7680x4320.")
 	if settings["display_mode"] not in ["windowed", "fullscreen"]:
 		errors.append("Unknown display mode.")
-	if settings["quality"] not in QUALITY_IDS:
+	if not settings["quality"] is String or settings["quality"] not in QUALITY_IDS:
 		errors.append("Unknown quality preset.")
 	for key: String in RANGES:
 		if not SnapshotSchema.number_in(settings[key], RANGES[key][0], RANGES[key][1]):

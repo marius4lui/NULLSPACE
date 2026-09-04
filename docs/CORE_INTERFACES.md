@@ -39,11 +39,13 @@ Structural validation does not prove a named anchor exists, is collision-safe, i
 
 Storage lives under `user://saves/checkpoint.json`, with `.backup`, `.tmp`, and `.backup.tmp`. The JSON envelope contains format/content versions, document kind, build ID, UTC timestamp, payload JSON text and its SHA-256. Size is bounded at 2 MiB. Validation and a readback precede same-directory rename replacement; a validated previous copy is preserved first. Corrupt primaries never overwrite good backups. Orphan temp files are ignored. Future versions are rejected without silently loading an older backup or overwriting future data. No automatic schema migration exists yet. SHA-256 detects accidental corruption; it is not an anti-tamper mechanism. Godot's flush/rename is used; physical power-loss durability and native Windows filesystem behavior are not yet validated.
 
-`StorageResult` exposes `ok`, `code`, human-readable `message`, isolated `payload`, and `recovered`. Missing/corrupt/incompatible data must be shown to the player, never silently represented as current saved progress.
+`StorageResult` exposes `ok`, `code`, human-readable `message`, isolated `payload`, and `recovered`. Missing/corrupt/incompatible data must be shown to the player, never silently represented as current saved progress. Version comparison has no arbitrary upper ceiling: any unsupported nonnegative finite integral metadata remains incompatible rather than becoming eligible for old-backup fallback or overwrite.
 
 ## Settings and rendering
 
 Persistent schema v1 contains `resolution:[width,height]`, `display_mode` (`windowed`/`fullscreen`), `vsync`, `quality` (`low`/`medium`/`high`/`ultra`), `master_volume`, `ambience_volume`, `effects_volume`, `mouse_sensitivity`, `invert_y`, `horizontal_fov`, `head_bob`, `camera_shake`, `subtitles`, `center_dot`, `reduced_flashes`.
+
+Both `snapshot()` and container-valued `get_value()` results are detached deep copies. Changing a returned resolution array cannot bypass validation or mutate active preferences.
 
 Default horizontal FOV is 88°. A Godot camera using KEEP_HEIGHT needs `SettingsSchema.vertical_fov(horizontal_fov, viewport_aspect)`; recalculate when aspect changes. InputGate applies screen-relative mouse displacement × sensitivity × configured radians/pixel, including invert Y. No gameplay camera exists in this milestone, so no camera, head-bob, shake, subtitle, dot or flash-effect application is claimed yet.
 

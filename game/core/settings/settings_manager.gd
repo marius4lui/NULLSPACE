@@ -23,7 +23,8 @@ func snapshot() -> Dictionary:
 	return _values.duplicate(true)
 
 func get_value(key: String) -> Variant:
-	return _values.get(key)
+	var value: Variant = _values.get(key)
+	return value.duplicate(true) if value is Array or value is Dictionary else value
 
 func current_quality() -> QualityProfile:
 	return PROFILES[_values["quality"]]

@@ -100,7 +100,7 @@ func _read_file(target: String) -> StorageResult:
 	if parser.parse(text) != OK or not parser.data is Dictionary:
 		return StorageResult.failure(&"corrupt", "File contains incomplete or invalid JSON.")
 	var envelope: Dictionary = parser.data
-	if not SnapshotSchema.integer_in(envelope.get("format_version"), 0, 100000) or not SnapshotSchema.integer_in(envelope.get("content_version"), 0, 100000):
+	if not _is_version_number(envelope.get("format_version")) or not _is_version_number(envelope.get("content_version")):
 		return StorageResult.failure(&"corrupt", "Saved data has no valid version metadata.")
 	if envelope.get("format_version") != FORMAT_VERSION or envelope.get("content_version") != content_version:
 		return StorageResult.failure(&"incompatible", "Saved data uses an unsupported version.")
@@ -118,3 +118,11 @@ func _read_file(target: String) -> StorageResult:
 	if not problems.is_empty():
 		return StorageResult.failure(&"invalid", "; ".join(problems))
 	return StorageResult.success(normalizer.call(payload) if normalizer.is_valid() else payload)
+
+static func _is_version_number(value: Variant) -> bool:
+	# No arbitrary upper bound: a newer integer version must remain incompatible,
+	# never become "corrupt" and thereby eligible for fallback/overwrite. Do not
+	# convert JSON doubles to int64 (which would overflow for large future values).
+	if value is int:
+		return value >= 0
+	return value is float and is_finite(value) and value >= 0.0 and value == floor(value)

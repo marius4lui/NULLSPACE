@@ -22,6 +22,7 @@ func _run() -> void:
 	_test_settings()
 	await _test_flow_and_input()
 	_test_passive_telemetry()
+	CoreStorageHardeningTests.new().run(_check, _directory)
 	print(JSON.stringify({"suite": "M2 core", "checks": _checks, "failures": _failures,
 		"engine": Engine.get_version_info(), "isolated_data": _directory,
 		"scope": "logical tests, not gameplay or experiential validation"}, "\t"))
