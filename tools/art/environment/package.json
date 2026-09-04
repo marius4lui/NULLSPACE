@@ -1,0 +1,9 @@
+{
+  "name": "nullspace-environment-validation-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Offline Khronos glTF validation for original NULLSPACE environment exports; tooling only.",
+  "dependencies": {
+    "gltf-validator": "2.0.0-dev.3.10"
+  }
+}

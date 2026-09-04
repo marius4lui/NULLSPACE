@@ -1,0 +1,41 @@
+{
+  "name": "carpet",
+  "recipe": "environment-materials-1.0",
+  "seed": 41073,
+  "description": "Original tightly looped commercial carpet; short directional pile, warm grey-beige flecks and irregular compressed tufts. Room moisture comes from a separate world mask.",
+  "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+  "meters_per_tile": [
+    2.44,
+    2.44
+  ],
+  "resolution": [
+    2048,
+    2048
+  ],
+  "normal_convention": "tangent +Y; image rows top-down",
+  "height_source_mm_range": [
+    -0.629570031193077,
+    0.6781846261610701
+  ],
+  "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+  "colorspace": {
+    "basecolor": "sRGB",
+    "normal": "linear",
+    "orm": "linear",
+    "height_source": "linear 16-bit"
+  },
+  "maps": {
+    "basecolor": {
+      "path": "art/source/textures/environment/carpet/carpet_basecolor.png",
+      "sha256": "03e4e8878e0fc57b47bed3a65322dd7fd4dc5238b78561e114bf563ad823bf49"
+    },
+    "normal": {
+      "path": "art/source/textures/environment/carpet/carpet_normal.png",
+      "sha256": "4eefb5bee7734b8de3351045c962339bdbe67527f76d1434d037393af63ab4a7"
+    },
+    "orm": {
+      "path": "art/source/textures/environment/carpet/carpet_orm.png",
+      "sha256": "9c6df287c178064b68ed02ba82d1da59001ba0068939d4fb766b94144008656f"
+    }
+  }
+}
