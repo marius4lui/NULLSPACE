@@ -1,0 +1,78 @@
+{
+  "checks": {
+    "enter_captures_mouse": {
+      "observation": {
+        "audio_skips": 18214,
+        "captured": false,
+        "event": "state",
+        "focused": true,
+        "fps": 1.0,
+        "frame": 326,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "menu",
+        "monotonic_usec": 58851820,
+        "mouse_total": [
+          0.0,
+          0.0
+        ],
+        "physics_frame": 707,
+        "pitch": 0.0,
+        "position": [
+          0.0,
+          1.79999995231628,
+          7.0
+        ],
+        "shots": 0,
+        "utc_unix": 1788554746.78027,
+        "yaw": 0.0
+      },
+      "passed": false
+    },
+    "initial_menu": {
+      "observation": {
+        "audio_skips": 17179,
+        "captured": false,
+        "event": "state",
+        "focused": true,
+        "fps": 1.0,
+        "frame": 323,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "menu",
+        "monotonic_usec": 55849251,
+        "mouse_total": [
+          0.0,
+          0.0
+        ],
+        "physics_frame": 679,
+        "pitch": 0.0,
+        "position": [
+          0.0,
+          1.79999995231628,
+          7.0
+        ],
+        "shots": 0,
+        "utc_unix": 1788554743.77767,
+        "yaw": 0.0
+      },
+      "passed": true
+    }
+  },
+  "ended_utc": "2026-09-04T20:45:47.595+00:00",
+  "error": "enter_captures_mouse",
+  "experiential_review": "unverified",
+  "method": "scripted_diagnostic",
+  "started_utc": "2026-09-04T20:45:44.456+00:00",
+  "status": "FAIL"
+}

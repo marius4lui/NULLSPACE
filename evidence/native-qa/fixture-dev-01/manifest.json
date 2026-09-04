@@ -1,0 +1,62 @@
+{
+  "artifacts": {
+    "fixture-events.jsonl": {
+      "bytes": 512590,
+      "sha256": "1f560e5939637b24870ba2f5ecdb759d7ab48d7543c8497045cb1de6515e0e1d"
+    },
+    "game.log": {
+      "bytes": 327,
+      "sha256": "ad4ec1ceaedacf8fd4da5dc48d265615ccc0456517381d280369d5aac6493e2c"
+    },
+    "launch.json": {
+      "bytes": 619,
+      "sha256": "3392b02825d42fd137c045215da24ab96d4386936d2c597da28326fdc7876de8"
+    },
+    "menu.png": {
+      "bytes": 72511,
+      "sha256": "ca8c0a3d7427314cbdbdc122e21fc3312eaacfeda325731517e261be9c5351eb"
+    },
+    "menu.png.json": {
+      "bytes": 507,
+      "sha256": "230eda271f7120d49a3c5b16ff238362ceed7b218316a4a3bd5553e6646d7880"
+    },
+    "moved.png": {
+      "bytes": 77136,
+      "sha256": "c28f6456daef4130a1a5be17a251e9169c0a7aeb70852a8697e41d2dc8b6d6d7"
+    },
+    "moved.png.json": {
+      "bytes": 508,
+      "sha256": "71512a216480d5a9a036a36ec8e5078acdc91701d8f34dae5b4b0dd60c6e56c2"
+    },
+    "recovery.json": {
+      "bytes": 542,
+      "sha256": "827511daca354aba5a58e287c611767fdc6cf852c0a41c573a120dd785e7baf4"
+    },
+    "state.json": {
+      "bytes": 3660,
+      "sha256": "5355532dee3a14abf0de376b820bfa8b4c446f16d5d4c8de777026acafe9a1f6"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 4580,
+      "sha256": "2f25b9a2f0ef4a13c72ccba7f7e853184d0527f64c7594be1435883c60e21fa2"
+    },
+    "vulkaninfo.txt": {
+      "bytes": 2385,
+      "sha256": "bf0dc0913675988bf673ca47db4a90f716f24571249e65abef40700b7883f8ad"
+    },
+    "xwayland.log": {
+      "bytes": 732,
+      "sha256": "906bbcb0e45c4180c5f3f275be89b64c810e4db3da7fbe5efac918759235157e"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "f3da72c33de8dc34fe98a67fc0af424f797439e9",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa"
+  },
+  "packaged_utc": "2026-09-04T20:58:36.934+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}

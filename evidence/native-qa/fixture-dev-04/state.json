@@ -1,0 +1,123 @@
+{
+  "audio": {
+    "channel_map": "front-left,front-right",
+    "monitor": "nullspace_qa_5d6097e03eb45bca.monitor",
+    "owner_module": 536870918,
+    "sample_specification": "float32le 2ch 48000Hz",
+    "sink_index": 318,
+    "sink_name": "nullspace_qa_5d6097e03eb45bca",
+    "stream_ids": [],
+    "stream_pids": []
+  },
+  "authority": "/run/user/1000/nullspace-qa-rous67ay/Xauthority",
+  "cleanup_errors": [],
+  "command": [
+    "/home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+    "--path",
+    "tools/qa/fixtures/input_render_audio",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--resolution",
+    "1920x1080",
+    "--windowed",
+    "--disable-vsync",
+    "--max-fps",
+    "60"
+  ],
+  "control_socket": "/run/user/1000/nullspace-qa-rous67ay/control.sock",
+  "defaults_after": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "defaults_before": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "display": ":2",
+  "ended_utc": "2026-09-04T20:49:36.934+00:00",
+  "executable_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
+  "experiential_review": "unverified",
+  "game_git": {
+    "clean": false,
+    "commit": "4f96c7921878c93e9d465103b53d9f53d467cce9",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa"
+  },
+  "gpu_icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+  "harness_git": {
+    "clean": false,
+    "commit": "4f96c7921878c93e9d465103b53d9f53d467cce9",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa"
+  },
+  "host": {
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "os": "Linux 7.1.12-200.fc44.x86_64 x86_64 GNU/Linux",
+    "pipewire": "pipewire\nCompiled with libpipewire 1.6.8\nLinked with libpipewire 1.6.8",
+    "xwayland": "xorg-x11-server-Xwayland-24.1.13-1.fc44.x86_64"
+  },
+  "host_defaults_unchanged": true,
+  "method": "scripted_diagnostic",
+  "monitor": "nullspace_qa_5d6097e03eb45bca.monitor",
+  "observed_or_heard": [],
+  "processes": {
+    "game": {
+      "exit_code": -15,
+      "pid": 42645,
+      "process_group": 42645,
+      "session": 42645,
+      "start_ticks": 349536
+    },
+    "recording": {
+      "pid": 42745,
+      "process_group": 42745,
+      "session": 42745,
+      "start_ticks": 349941
+    },
+    "xwayland": {
+      "exit_code": 0,
+      "pid": 42627,
+      "process_group": 42627,
+      "session": 42627,
+      "start_ticks": 349524
+    }
+  },
+  "profile": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa/evidence/native-qa/fixture-dev-04/profile",
+  "ready_utc": "2026-09-04T20:49:07.599+00:00",
+  "run_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa/evidence/native-qa/fixture-dev-04",
+  "runtime_dir": "/run/user/1000/nullspace-qa-rous67ay",
+  "schema": 1,
+  "sink_module": "536870918",
+  "sink_name": "nullspace_qa_5d6097e03eb45bca",
+  "started_utc": "2026-09-04T20:49:06.798+00:00",
+  "status": "stopped",
+  "supervisor": {
+    "pid": 42613,
+    "process_group": 42613,
+    "session": 42613,
+    "start_ticks": 349493
+  },
+  "vulkan_device_lines": [
+    "deviceType         = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU",
+    "deviceName         = AMD Radeon 660M (RADV REMBRANDT)",
+    "driverName         = radv",
+    "driverInfo         = Mesa 26.1.8"
+  ],
+  "window": {
+    "focus_window_id": 4194306,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [
+      "d"
+    ],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 4194306,
+    "window_pid": 42645
+  }
+}

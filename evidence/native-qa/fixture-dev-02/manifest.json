@@ -1,0 +1,78 @@
+{
+  "artifacts": {
+    "01-menu.png": {
+      "bytes": 72511,
+      "sha256": "ca8c0a3d7427314cbdbdc122e21fc3312eaacfeda325731517e261be9c5351eb"
+    },
+    "01-menu.png.json": {
+      "bytes": 510,
+      "sha256": "947f62fc53a67a0dc120912c8f78f480889b7f3900ce73cedf38dfc1cfcd3458"
+    },
+    "after-retry.png": {
+      "bytes": 73302,
+      "sha256": "3b4bbfb22a9bcbe8e3fd9497fc01e18a060226833a5039c60886b5a802c79b88"
+    },
+    "after-retry.png.json": {
+      "bytes": 514,
+      "sha256": "7fcd6c3bf3c54a661d70b247145cc80aff5ca338a24fe630cc44e31860c2efa7"
+    },
+    "fixture-events.jsonl": {
+      "bytes": 72132,
+      "sha256": "7edff05ab195ab89d2e44dc1677100c038422d4750e7594a55b3f9938d48a8af"
+    },
+    "game.log": {
+      "bytes": 327,
+      "sha256": "ad4ec1ceaedacf8fd4da5dc48d265615ccc0456517381d280369d5aac6493e2c"
+    },
+    "input-proof.ffmpeg.log": {
+      "bytes": 5588,
+      "sha256": "f167a54ec0c487a01f30b1ff9c97e2629a162e4ff1944f1219631cf45f5325c9"
+    },
+    "input-proof.mkv": {
+      "bytes": 472557,
+      "sha256": "3f49711d36931d7650010d5e0d840a11f438e8ac3d203fd7ecf3c32211da1b42"
+    },
+    "input-proof.mkv.json": {
+      "bytes": 5265,
+      "sha256": "651216fd6a39185a539345c18f2c429c879368badef20f3fbe22fbe9de9b27ac"
+    },
+    "input-verification.json": {
+      "bytes": 1693,
+      "sha256": "eb0d10c6105c680f0dd2f5c056888843dbfd9d959804ceb439c6f7e4e2dd8385"
+    },
+    "launch.json": {
+      "bytes": 619,
+      "sha256": "3392b02825d42fd137c045215da24ab96d4386936d2c597da28326fdc7876de8"
+    },
+    "recovery.json": {
+      "bytes": 542,
+      "sha256": "94fd258b6e35297cf64821ea0488de27eb97fd04f972db1dd17f6652f36e2562"
+    },
+    "state.json": {
+      "bytes": 3788,
+      "sha256": "b07cbab12bfd95be9bbddbc4cdbd413b4ea2f9c104543334ef02c012dc2754c0"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 5092,
+      "sha256": "752c91771fe3f68a284e80e4e40bc4d55748cb4b4a3008a7539b21d02593b7cc"
+    },
+    "vulkaninfo.txt": {
+      "bytes": 2385,
+      "sha256": "bf0dc0913675988bf673ca47db4a90f716f24571249e65abef40700b7883f8ad"
+    },
+    "xwayland.log": {
+      "bytes": 732,
+      "sha256": "906bbcb0e45c4180c5f3f275be89b64c810e4db3da7fbe5efac918759235157e"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "f3da72c33de8dc34fe98a67fc0af424f797439e9",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa"
+  },
+  "packaged_utc": "2026-09-04T20:58:37.040+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}

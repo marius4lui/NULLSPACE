@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "launch.json": {
+      "bytes": 669,
+      "sha256": "be6d259d5ed5de42e70cbf3d9692a860c8b85853a6b0d0bce2be51078d501ff4"
+    },
+    "state.json": {
+      "bytes": 746,
+      "sha256": "6035f6c48027e525876570e98ddc330e5d34c2a8d6b3029e6c9d150d249495d2"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 403,
+      "sha256": "6118063bb4234b25c4fa52c439438cf1844d7ae269bcbcb3aa4ffab44abfc397"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "f3da72c33de8dc34fe98a67fc0af424f797439e9",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa"
+  },
+  "packaged_utc": "2026-09-04T20:58:37.157+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}
