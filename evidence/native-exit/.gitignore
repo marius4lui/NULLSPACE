@@ -1,0 +1,9 @@
+**/profile/
+**/supervisor.log
+**/Xauthority
+**/control.sock
+**/__pycache__/
+# Preserve a clean source identity while runs are being generated. Stage only
+# selected public root-level artifacts explicitly after inspection.
+proof-*/
+development-*/

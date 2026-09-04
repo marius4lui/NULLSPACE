@@ -26,6 +26,8 @@ from window_capture import WindowCapture
 
 
 class NativeSession:
+    NATURAL_EXIT_GRACE_SECONDS = 2.0
+
     def __init__(self, directory: Path) -> None:
         self.directory = directory
         self.launch = json.loads((directory / "launch.json").read_text())
@@ -50,9 +52,12 @@ class NativeSession:
         self.safety_thread: threading.Thread | None = None
         self.safety_error: str | None = None
         self.event_lock = threading.Lock()
+        self.lifecycle_lock = threading.RLock()
+        self.window_exit_deadline: float | None = None
 
     def save(self) -> None:
-        write_json(self.directory / "state.json", self.state)
+        with self.lifecycle_lock:
+            write_json(self.directory / "state.json", self.state)
 
     def event(self, kind: str, **values: Any) -> None:
         with self.event_lock:
@@ -227,6 +232,42 @@ class NativeSession:
         self.save()
         self.event("session_ready", window=self.state["window"], audio=self.state["audio"])
 
+    def begin_owned_window_exit(self, error: Exception) -> bool:
+        """Release immediately, then allow only the verified child to exit.
+
+        No X error is ignored: only an absent, previously owned window's exact
+        BadWindow may enter this bounded lifecycle. Seat and foreign-window
+        guards remain active; a process that does not exit fails the run.
+        """
+        assert self.window is not None
+        with self.lifecycle_lock:
+            if not self.window.confirms_destroyed_owned_target(error):
+                return False
+            game = self.processes["game"]
+            expected = self.state["processes"]["game"]
+            if self.window.game_pid != game.pid or expected["pid"] != game.pid:
+                raise RuntimeError("Owned-window exit process identity does not match")
+            if game.poll() is None:
+                current = process_identity(game.pid)
+                if current is None or any(current[key] != expected[key] for key in current):
+                    # Recheck a child which could have exited during /proc read.
+                    if game.poll() is None:
+                        raise RuntimeError("Owned-window exit PID/start identity changed")
+            self.window.cancel.set()
+            self.window.release()
+            if self.window_exit_deadline is None:
+                self.window_exit_deadline = time.monotonic() + self.NATURAL_EXIT_GRACE_SECONDS
+                self.state["status"] = "closing"
+                self.state["window_lifecycle"] = {
+                    "phase": "waiting_for_owned_process_exit",
+                    "window_id": self.window.verified_window_id, "game_pid": game.pid,
+                    "destroyed_utc": utc(), "deadline_monotonic": self.window_exit_deadline,
+                    "grace_seconds": self.NATURAL_EXIT_GRACE_SECONDS,
+                    "new_input_disabled": True, "trigger": str(error)}
+                self.event("owned_window_destroyed_input_released", **self.state["window_lifecycle"])
+                self.save()
+            return True
+
     def safety_loop(self) -> None:
         """Independent of blocking capture, audio queries, hold and IPC parsing."""
         assert self.window is not None and self.seat is not None
@@ -242,14 +283,25 @@ class NativeSession:
                 if self.processes["game"].poll() is not None:
                     return
                 self.state["private_seat"] = self.seat.audit()
+                if self.window_exit_deadline is not None:
+                    self.window.ensure_no_foreign_windows()
+                    if time.monotonic() >= self.window_exit_deadline:
+                        raise RuntimeError("Owned game did not exit within the 2-second window-destruction grace")
+                    continue
                 released = self.window.safety_tick()
                 if released:
                     self.event(released)
             except Exception as error:
-                self.safety_error = str(error)
-                self.state["error"] = "Native safety guard: " + str(error)
-                self.state["controlled_provenance_valid"] = False
-                self.event("safety_guard_failed", error=str(error))
+                try:
+                    if self.begin_owned_window_exit(error):
+                        continue
+                except Exception as classification_error:
+                    error = classification_error
+                with self.lifecycle_lock:
+                    self.safety_error = str(error)
+                    self.state["error"] = "Native safety guard: " + str(error)
+                    self.state["controlled_provenance_valid"] = False
+                    self.event("safety_guard_failed", error=str(error))
                 try:
                     self.window.release()
                 finally:
@@ -272,6 +324,11 @@ class NativeSession:
             self.stop_requested = True
             self.window.release()
             return {"stopping": True}
+        if self.window_exit_deadline is not None:
+            if action in ("status", "release"):
+                self.window.release()
+                return {"status": "closing", "window_lifecycle": self.state["window_lifecycle"]}
+            raise RuntimeError("Owned window was destroyed; new input and capture are disabled while its process exits")
         if action == "release":
             self.window.release()
             return self.window.status()
@@ -326,6 +383,9 @@ class NativeSession:
                 if process.poll() is not None:
                     self.event("process_exited", name=name, exit_code=process.returncode)
                     if name == "game" and process.returncode == 0:
+                        if self.window_exit_deadline is not None:
+                            self.state["window_lifecycle"].update({"phase": "exited", "exit_code": 0,
+                                                                 "exited_utc": utc()})
                         self.stop_requested = True
                         break
                     raise RuntimeError(f"Owned {name} exited unexpectedly: {process.returncode}")
@@ -338,13 +398,19 @@ class NativeSession:
                 self.save()
                 self.event("recording_finished", path=result["path"], exit_code=result["exit_code"])
             if time.monotonic() - last_health >= 1.0:
-                window = self.window.status()
-                if self.recording:
-                    expected = self.recording[1]["window"]
-                    if any(window[key] != expected[key] for key in ("window_id", "width", "height")):
-                        raise RuntimeError("Game capture target changed geometry during recording")
-                    owned_sink(self.host_env, self.sink_name, self.processes["game"].pid,
-                               require_stream=True)
+                if self.window_exit_deadline is None:
+                    try:
+                        window = self.window.status()
+                    except Exception as error:
+                        if not self.begin_owned_window_exit(error):
+                            raise
+                    else:
+                        if self.recording:
+                            expected = self.recording[1]["window"]
+                            if any(window[key] != expected[key] for key in ("window_id", "width", "height")):
+                                raise RuntimeError("Game capture target changed geometry during recording")
+                            owned_sink(self.host_env, self.sink_name, self.processes["game"].pid,
+                                       require_stream=True)
                 last_health = time.monotonic()
             try:
                 client, _ = self.server.accept()
@@ -375,8 +441,17 @@ class NativeSession:
                     response = {"ok": True, "result": self.handle(request)}
                 except Exception as error:
                     self.window.release()
-                    self.event("command_failed_all_keys_released", error=str(error))
-                    response = {"ok": False, "error": str(error)}
+                    try:
+                        closing = self.begin_owned_window_exit(error)
+                    except Exception as classification_error:
+                        error = classification_error
+                        closing = False
+                    if closing:
+                        response = {"ok": True, "result": {"status": "closing",
+                            "window_lifecycle": self.state["window_lifecycle"]}}
+                    else:
+                        self.event("command_failed_all_keys_released", error=str(error))
+                        response = {"ok": False, "error": str(error)}
                 try:
                     client.sendall(json.dumps(response).encode() + b"\n")
                 except (BrokenPipeError, ConnectionResetError, socket.timeout):

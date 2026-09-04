@@ -85,6 +85,10 @@ Each run has `profile/data`, `profile/config`, `profile/cache`, and `profile/sta
 
 `stop` first releases input, finalizes recording, terminates owned game/Xwayland/Weston process handles in that order, removes only the owned sink after validating its exact name+module ID, and deletes known private runtime credentials/sockets. Unknown runtime files are retained with a cleanup error, never recursively removed. Run evidence/profiles remain. Host audio defaults are compared, never forcibly restored over user changes. Do not call a run clean if `cleanup_errors` is nonempty.
 
+A game can destroy its X window before its process has finished normal shutdown. A `BadWindow` qualifies for natural-exit handling **only** when its resource is the previously verified owned target, that XID is now absent from the same private root, no foreign mapped window is present, and the owned Popen PID/start identity remains consistent. The runner immediately cancels new input and releases its keys/buttons, publishes `status: closing`, then allows that exact child a fixed two-second grace period to exit and flush buffered output. During grace the safety thread still audits XI2, foreign windows and the deadline. Status, release and explicit stop remain available; new input/focus/capture requests are refused. Repeated errors cannot extend the deadline. Only actual child exit 0 is normal; nonzero exit, a still-live windowless child after the deadline, hidden-but-existing targets, wrong resource/PID, foreign windows or seat faults remain failures. Explicit stop/signals may deliberately terminate the child and are not claimed as natural exit 0.
+
+QA-007 was exposed by M0's Escape exit on source `bb6fb09`: the old safety thread mistook the destroyed window for a provenance fault and sent SIGTERM before buffered stdout flushed. The unchanged failed run is retained in `evidence/reviews/toolchain/native-final-01` at review commit `68ba035`. Correction evidence belongs in `evidence/native-exit/`; earlier normal-stop/signal tests did not establish this window-first natural-exit path.
+
 If the supervisor itself is killed with SIGKILL, use the exact run's recovery command:
 
 ```sh
@@ -101,6 +105,8 @@ python3 tools/qa/analyze_fixture_media.py --run-dir evidence/native-qa/example-0
 python3 tools/qa/prove_freshness.py --run-dir evidence/native-qa/example-01
 python3 tools/qa/prove_safety.py --run-dir evidence/native-qa/example-01
 ```
+
+The separate `tools/qa/fixtures/window_exit.py` draws a native diagnostic Quit area and handles Escape. It deliberately destroys its own window 0.4 seconds before returning, records the private X server's actual pressed-key bitmap during that gap, and leaves a stdout marker buffered until natural process exit. It refuses execution outside the inputless supervisor. `prove_exit.py --run-root NEW_ABSOLUTE_DIR --godot-export FRESH_M0_LINUX_EXPORT` checks native Escape and clicked Quit, nonzero exit, bounded windowless timeout, a deliberately foreign-labelled private test window, and two normal exits of the actual Godot export with opened-image/viewport comparisons still required. This is a lifecycle diagnostic, not game content or a standalone rendering-quality gate.
 
 Run `prove_fixture.py` immediately after a fresh fixture launch. It performs native XTEST controls, reads **observed application events**, saves menu/movement/pause/final PNGs, and records10 seconds. It checks simultaneous W+D+Shift; captured relative deltas; changed position/camera; three accepted clicks; pause/menu rejection; resume; explicit release; lease expiry; and release on an invalid command. Its result is named `PASS_SCRIPTED_DIAGNOSTIC`, never “independent playthrough.”
 

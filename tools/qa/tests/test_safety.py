@@ -68,6 +68,8 @@ class SafetyTests(unittest.TestCase):
         session.stop_requested = False
         session.safety_error = None
         session.safety_stop = threading.Event()
+        session.lifecycle_lock = threading.RLock()
+        session.window_exit_deadline = None
         session.state = {"status": "ready"}
         session.directory = Path(self.temporary.name)
         session.env = {}

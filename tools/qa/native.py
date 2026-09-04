@@ -17,7 +17,8 @@ from qa_common import resolve_executable, write_json
 
 def send(directory: Path, request: dict[str, Any]) -> Any:
     state = json.loads((directory / "state.json").read_text())
-    if state["status"] != "ready":
+    allowed_closing = state["status"] == "closing" and request.get("action") in ("status", "release", "stop")
+    if state["status"] != "ready" and not allowed_closing:
         raise RuntimeError(f'Session is {state["status"]}: {state.get("error", "")}')
     with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:
         client.settimeout(30)
@@ -127,7 +128,7 @@ def main() -> int:
             request = {key: value for key, value in vars(args).items() if key != "run_dir"}
             if args.action == "status":
                 state = json.loads((args.run_dir / "state.json").read_text())
-                if state["status"] == "ready":
+                if state["status"] in ("ready", "closing"):
                     try:
                         result = send(args.run_dir, request)
                     except (OSError, RuntimeError):
@@ -135,10 +136,10 @@ def main() -> int:
                         # Return the terminal manifest once present; never turn
                         # an unresolved live-session error into a success.
                         deadline = time.monotonic() + 5
-                        while state["status"] == "ready" and time.monotonic() < deadline:
+                        while state["status"] in ("ready", "closing") and time.monotonic() < deadline:
                             time.sleep(0.1)
                             state = json.loads((args.run_dir / "state.json").read_text())
-                        if state["status"] == "ready":
+                        if state["status"] in ("ready", "closing"):
                             raise
                         result = state
                 else:

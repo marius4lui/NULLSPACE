@@ -10,7 +10,7 @@ from collections.abc import Callable
 from typing import Any
 
 import Xlib.threaded
-from Xlib import X, XK, display
+from Xlib import X, XK, display, error as xerror
 from Xlib.ext import xtest
 
 
@@ -35,6 +35,7 @@ class GameWindow:
         self.pid_atom = self.connection.intern_atom("_NET_WM_PID")
         self.game_pid = game_pid
         self.window: Any = None
+        self.verified_window_id: int | None = None
         self.keys: dict[int, str] = {}
         self.buttons: set[int] = set()
         self.release_deadline = 0.0
@@ -63,6 +64,12 @@ class GameWindow:
             raise RuntimeError("Capture/input target no longer belongs to the launched process")
         if self.window.get_attributes().map_state != X.IsViewable:
             raise RuntimeError("Owned game window is not viewable")
+        self.ensure_no_foreign_windows()
+        self.verified_window_id = self.window.id
+
+    @locked
+    def ensure_no_foreign_windows(self) -> None:
+        """Still enforced while the owned window is gone and its PID exits."""
         foreign = []
         for window in self.root.query_tree().children:
             if window.get_attributes().map_state == X.IsViewable:
@@ -70,6 +77,25 @@ class GameWindow:
                     foreign.append(window.id)
         if foreign:
             raise RuntimeError(f"Unexpected mapped windows on private display: {foreign}")
+
+    @locked
+    def confirms_destroyed_owned_target(self, failure: Exception) -> bool:
+        """Classify only BadWindow for our previously verified, now absent XID.
+
+        A failed foreign/root/pixmap request, changed owner or merely hidden
+        window is not a natural-exit allowance. Querying the same private root
+        also proves the X connection is still usable before allowing grace.
+        """
+        if not isinstance(failure, xerror.BadWindow) or self.window is None:
+            return False
+        resource = getattr(failure, "resource_id", None)
+        resource_id = resource.id if hasattr(resource, "id") else resource
+        if resource_id != self.window.id or resource_id != self.verified_window_id:
+            return False
+        if any(child.id == resource_id for child in self.root.query_tree().children):
+            return False
+        self.ensure_no_foreign_windows()
+        return True
 
     @locked
     def focus(self) -> dict[str, Any]:
@@ -130,6 +156,8 @@ class GameWindow:
 
     @locked
     def _begin_input(self, request: dict[str, Any]) -> tuple[list[tuple[int, str]], list[int], float]:
+        if self.cancel.is_set():
+            raise RuntimeError("Native input is cancelled; no new controls may be pressed")
         self.focus()
         # Validate the complete command before changing any key state.
         down = [(self._keycode(name), name) for name in request.get("key_down", [])]
