@@ -12,3 +12,9 @@ Opened native diagnostic screenshot at original1920×1080: `/home/marius/Projekt
 Later agent findings require correction/retest: obscured surface VSync throttling, PipeWire sink cleanup lookup and unexplained later dev01 input. Initial screenshot corroborates rendered input capability, not final harness acceptance, native Windows support, audible quality, game feel or performance target.
 
 Frozen contract, gates, game design and art direction SHA256 were rechecked and exactly match `evidence/design-freeze.md`.
+
+Later root checks:
+
+- Executed M2 logical test scene independently with a fresh XDG profile on exactGodot:70checks, no failures, exit0. This is not native interaction or a feature PASS. Static flow inspection identified focus loss during loading defectM2-001, correction assigned.
+- Opened native-qa/fixture-dev-04/04-final.png at original1080p: playing/captured,3accepted fixture fires, expected60/-15mouse total. Read input/media verification:10s600frames,48kHzstereo, measured55–58ms pulse synchronization. This clean scripted diagnostic replaces unexplained dev01 inputs for controlled evidence, pending independent review.
+- Attempted actual audio input using10s `fixture-stereo.ogg` (107175bytes) through the supported AudioContent helper. Runtime returned `audio content omitted because you do not support audio input`. No auditory review occurred; QA-002 remains open. Capture and numerical analysis cannot establish perceived audio quality.
