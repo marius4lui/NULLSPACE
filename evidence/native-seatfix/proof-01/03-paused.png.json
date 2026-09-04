@@ -1,0 +1,20 @@
+{
+  "method": "x11grab_owned_window_native_resolution",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-01/03-paused.png",
+  "sha256": "62561a0bf8e8f6caa23888c793c85b70ca2218954634bdebb057b56fc3570b68",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      1020,
+      560
+    ],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 84607
+  }
+}

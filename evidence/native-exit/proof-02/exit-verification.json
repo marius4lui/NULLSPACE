@@ -1,0 +1,437 @@
+{
+  "checks": {
+    "escape/actual_private_keys_released": {
+      "observation": {
+        "after_destroy_seconds": 0.05122550099986256,
+        "observed_keymap": {
+          "event": "after_destroy_keymap",
+          "monotonic": 9554.365446828,
+          "pressed_keycodes": [],
+          "utc_unix": 1788561006.1634233
+        }
+      },
+      "passed": true
+    },
+    "escape/buffered_stdout_flushed": {
+      "observation": "QA_EXIT_BUFFERED_NATURAL_SHUTDOWN 0\n",
+      "passed": true
+    },
+    "escape/exit_result": {
+      "observation": {
+        "error": null,
+        "exit_code": 0,
+        "lifecycle": {
+          "deadline_monotonic": 9556.341101461,
+          "destroyed_utc": "2026-09-04T22:30:06.139+00:00",
+          "exit_code": 0,
+          "exited_utc": "2026-09-04T22:30:06.541+00:00",
+          "game_pid": 118980,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "exited",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        },
+        "status": "stopped"
+      },
+      "passed": true
+    },
+    "escape/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": true
+    },
+    "escape/request_race_handled": {
+      "observation": {
+        "status": "closing",
+        "window_lifecycle": {
+          "deadline_monotonic": 9556.341101461,
+          "destroyed_utc": "2026-09-04T22:30:06.139+00:00",
+          "game_pid": 118980,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        }
+      },
+      "passed": true
+    },
+    "escape/xtest_only": {
+      "observation": {
+        "raw_events": 10,
+        "source_ids": [
+          5
+        ]
+      },
+      "passed": true
+    },
+    "foreign-during-grace/actual_private_keys_released": {
+      "observation": {
+        "after_destroy_seconds": 0.025984203999541933,
+        "observed_keymap": {
+          "event": "after_destroy_keymap",
+          "monotonic": 9562.452293266,
+          "pressed_keycodes": [],
+          "utc_unix": 1788561014.2502697
+        }
+      },
+      "passed": true
+    },
+    "foreign-during-grace/exit_result": {
+      "observation": {
+        "error": "Native safety guard: Unexpected mapped windows on private display: [6291458]",
+        "exit_code": -15,
+        "lifecycle": {
+          "deadline_monotonic": 9564.435876404,
+          "destroyed_utc": "2026-09-04T22:30:14.233+00:00",
+          "game_pid": 119398,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        },
+        "status": "failed"
+      },
+      "passed": true
+    },
+    "foreign-during-grace/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": true
+    },
+    "foreign-during-grace/request_race_handled": {
+      "observation": {
+        "status": "closing",
+        "window_lifecycle": {
+          "deadline_monotonic": 9564.435876404,
+          "destroyed_utc": "2026-09-04T22:30:14.233+00:00",
+          "game_pid": 119398,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        }
+      },
+      "passed": true
+    },
+    "foreign-during-grace/xtest_only": {
+      "observation": {
+        "raw_events": 10,
+        "source_ids": [
+          5
+        ]
+      },
+      "passed": true
+    },
+    "godot-export-01/actual_godot_forward_plus_radv": {
+      "observation": "WARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nVulkan 1.4.354 - Forward+ - Using Device #0: AMD - AMD Radeon 660M (RADV REMBRANDT)\n\nNULLSPACE_BOOTSTRAP {\"clips\":[\"BootstrapRotation\"],\"display\":\"X11\",\"event\":\"import_verified\",\"godot\":\"4.7.2-stable (official)\",\"meshes\":3,\"milliseconds\":1604}\nNULLSPACE_BOOTSTRAP {\"adapter\":\"AMD Radeon 660M (RADV REMBRANDT)\",\"event\":\"native_ready\",\"milliseconds\":1610,\"renderer\":\"forward_plus\",\"viewport\":\"(1920.0, 1080.0)\"}\nNULLSPACE_BOOTSTRAP {\"error\":0,\"event\":\"capture\",\"height\":1080,\"lamp\":true,\"milliseconds\":4019,\"orbit\":0.38,\"path\":\"/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit/evidence/native-exit/proof-02/godot-export-01/viewport-000-initial.png\",\"width\":1920}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4082,\"physical_key\":32}\nNULLSPACE_BOOTSTRAP {\"event\":\"animation_changed\",\"milliseconds\":4083,\"speed\":0.0}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4158,\"physical_key\":65}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4425,\"physical_key\":70}\nNULLSPACE_BOOTSTRAP {\"enabled\":false,\"event\":\"lamp_changed\",\"milliseconds\":4425}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4842,\"physical_key\":4194343}\nNULLSPACE_BOOTSTRAP {\"error\":0,\"event\":\"capture\",\"height\":1080,\"lamp\":false,\"milliseconds\":4919,\"orbit\":0.122355555555556,\"path\":\"/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit/evidence/native-exit/proof-02/godot-export-01/viewport-001-requested.png\",\"width\":1920}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":5012,\"physical_key\":4194305}\nNULLSPACE_BOOTSTRAP {\"event\":\"exit\",\"milliseconds\":5012}\n",
+      "passed": true
+    },
+    "godot-export-01/current_full_rgb": {
+      "observation": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "40481493b5e8c5512bf66791aa5630a70b93e0c18ee7d99e63efb0723107d5a2",
+        "reference_rgb_sha256": "40481493b5e8c5512bf66791aa5630a70b93e0c18ee7d99e63efb0723107d5a2"
+      },
+      "passed": true
+    },
+    "godot-export-01/natural_exit_zero": {
+      "observation": {
+        "exit_code": 0,
+        "lifecycle": {
+          "deadline_monotonic": 9570.590405547,
+          "destroyed_utc": "2026-09-04T22:30:20.388+00:00",
+          "exit_code": 0,
+          "exited_utc": "2026-09-04T22:30:20.590+00:00",
+          "game_pid": 119588,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "exited",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600002>, sequence_number = 391, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291458
+        },
+        "status": "stopped"
+      },
+      "passed": true
+    },
+    "godot-export-01/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": true
+    },
+    "godot-export-01/xtest_only": {
+      "observation": {
+        "raw_events": 20,
+        "source_ids": [
+          5
+        ]
+      },
+      "passed": true
+    },
+    "godot-export-02/actual_godot_forward_plus_radv": {
+      "observation": "WARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nVulkan 1.4.354 - Forward+ - Using Device #0: AMD - AMD Radeon 660M (RADV REMBRANDT)\n\nNULLSPACE_BOOTSTRAP {\"clips\":[\"BootstrapRotation\"],\"display\":\"X11\",\"event\":\"import_verified\",\"godot\":\"4.7.2-stable (official)\",\"meshes\":3,\"milliseconds\":1517}\nNULLSPACE_BOOTSTRAP {\"adapter\":\"AMD Radeon 660M (RADV REMBRANDT)\",\"event\":\"native_ready\",\"milliseconds\":1521,\"renderer\":\"forward_plus\",\"viewport\":\"(1920.0, 1080.0)\"}\nNULLSPACE_BOOTSTRAP {\"error\":0,\"event\":\"capture\",\"height\":1080,\"lamp\":true,\"milliseconds\":3996,\"orbit\":0.38,\"path\":\"/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit/evidence/native-exit/proof-02/godot-export-02/viewport-000-initial.png\",\"width\":1920}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4049,\"physical_key\":32}\nNULLSPACE_BOOTSTRAP {\"event\":\"animation_changed\",\"milliseconds\":4049,\"speed\":0.0}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4132,\"physical_key\":65}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4398,\"physical_key\":70}\nNULLSPACE_BOOTSTRAP {\"enabled\":false,\"event\":\"lamp_changed\",\"milliseconds\":4398}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":4798,\"physical_key\":4194343}\nNULLSPACE_BOOTSTRAP {\"error\":0,\"event\":\"capture\",\"height\":1080,\"lamp\":false,\"milliseconds\":4892,\"orbit\":0.130090666666667,\"path\":\"/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit/evidence/native-exit/proof-02/godot-export-02/viewport-001-requested.png\",\"width\":1920}\nNULLSPACE_BOOTSTRAP {\"event\":\"native_key\",\"milliseconds\":5009,\"physical_key\":4194305}\nNULLSPACE_BOOTSTRAP {\"event\":\"exit\",\"milliseconds\":5009}\n",
+      "passed": true
+    },
+    "godot-export-02/current_full_rgb": {
+      "observation": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "e955ce0fe0751340f3d9d489ea6d10a0736480f5470429863ba81e4ceaa1a116",
+        "reference_rgb_sha256": "e955ce0fe0751340f3d9d489ea6d10a0736480f5470429863ba81e4ceaa1a116"
+      },
+      "passed": true
+    },
+    "godot-export-02/natural_exit_zero": {
+      "observation": {
+        "exit_code": 0,
+        "lifecycle": {
+          "deadline_monotonic": 9576.710764335,
+          "destroyed_utc": "2026-09-04T22:30:26.508+00:00",
+          "exit_code": 0,
+          "exited_utc": "2026-09-04T22:30:26.710+00:00",
+          "game_pid": 119739,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "exited",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600002>, sequence_number = 399, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291458
+        },
+        "status": "stopped"
+      },
+      "passed": true
+    },
+    "godot-export-02/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": true
+    },
+    "godot-export-02/xtest_only": {
+      "observation": {
+        "raw_events": 22,
+        "source_ids": [
+          5
+        ]
+      },
+      "passed": true
+    },
+    "nonzero/actual_private_keys_released": {
+      "observation": {
+        "after_destroy_seconds": 0.025917574999766657,
+        "observed_keymap": {
+          "event": "after_destroy_keymap",
+          "monotonic": 9557.483128996,
+          "pressed_keycodes": [],
+          "utc_unix": 1788561009.281105
+        }
+      },
+      "passed": true
+    },
+    "nonzero/buffered_stdout_flushed": {
+      "observation": "QA_EXIT_BUFFERED_NATURAL_SHUTDOWN 7\n",
+      "passed": true
+    },
+    "nonzero/exit_result": {
+      "observation": {
+        "error": "Owned game exited unexpectedly: 7",
+        "exit_code": 7,
+        "lifecycle": {
+          "deadline_monotonic": 9559.470717139,
+          "destroyed_utc": "2026-09-04T22:30:09.268+00:00",
+          "game_pid": 119108,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        },
+        "status": "failed"
+      },
+      "passed": true
+    },
+    "nonzero/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": true
+    },
+    "nonzero/request_race_handled": {
+      "observation": {
+        "status": "closing",
+        "window_lifecycle": {
+          "deadline_monotonic": 9559.470717139,
+          "destroyed_utc": "2026-09-04T22:30:09.268+00:00",
+          "game_pid": 119108,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        }
+      },
+      "passed": true
+    },
+    "nonzero/xtest_only": {
+      "observation": {
+        "raw_events": 10,
+        "source_ids": [
+          5
+        ]
+      },
+      "passed": true
+    },
+    "quit-click/actual_private_keys_released": {
+      "observation": {
+        "after_destroy_seconds": 0.025826711000263458,
+        "observed_keymap": {
+          "event": "after_destroy_keymap",
+          "monotonic": 9555.829960028,
+          "pressed_keycodes": [],
+          "utc_unix": 1788561007.6279366
+        }
+      },
+      "passed": true
+    },
+    "quit-click/buffered_stdout_flushed": {
+      "observation": "QA_EXIT_BUFFERED_NATURAL_SHUTDOWN 0\n",
+      "passed": true
+    },
+    "quit-click/exit_result": {
+      "observation": {
+        "error": null,
+        "exit_code": 0,
+        "lifecycle": {
+          "deadline_monotonic": 9557.81832104,
+          "destroyed_utc": "2026-09-04T22:30:07.616+00:00",
+          "exit_code": 0,
+          "exited_utc": "2026-09-04T22:30:08.218+00:00",
+          "game_pid": 119044,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "exited",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 155, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        },
+        "status": "stopped"
+      },
+      "passed": true
+    },
+    "quit-click/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": true
+    },
+    "quit-click/request_race_handled": {
+      "observation": {
+        "status": "closing",
+        "window_lifecycle": {
+          "deadline_monotonic": 9557.81832104,
+          "destroyed_utc": "2026-09-04T22:30:07.616+00:00",
+          "game_pid": 119044,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 155, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        }
+      },
+      "passed": true
+    },
+    "quit-click/xtest_only": {
+      "observation": {
+        "raw_events": 12,
+        "source_ids": [
+          4,
+          5
+        ]
+      },
+      "passed": true
+    },
+    "windowless-timeout/actual_private_keys_released": {
+      "observation": {
+        "after_destroy_seconds": 0.05134905200065987,
+        "observed_keymap": {
+          "event": "after_destroy_keymap",
+          "monotonic": 9559.187073614,
+          "pressed_keycodes": [],
+          "utc_unix": 1788561010.9850507
+        }
+      },
+      "passed": true
+    },
+    "windowless-timeout/exit_result": {
+      "observation": {
+        "error": "Native safety guard: Owned game did not exit within the 2-second window-destruction grace",
+        "exit_code": -15,
+        "lifecycle": {
+          "deadline_monotonic": 9561.162995741,
+          "destroyed_utc": "2026-09-04T22:30:10.960+00:00",
+          "game_pid": 119167,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        },
+        "status": "failed"
+      },
+      "passed": true
+    },
+    "windowless-timeout/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": true
+    },
+    "windowless-timeout/request_race_handled": {
+      "observation": {
+        "status": "closing",
+        "window_lifecycle": {
+          "deadline_monotonic": 9561.162995741,
+          "destroyed_utc": "2026-09-04T22:30:10.960+00:00",
+          "game_pid": 119167,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        }
+      },
+      "passed": true
+    },
+    "windowless-timeout/xtest_only": {
+      "observation": {
+        "raw_events": 10,
+        "source_ids": [
+          5
+        ]
+      },
+      "passed": true
+    }
+  },
+  "ended_utc": "2026-09-04T22:30:26.939+00:00",
+  "experiential_review": "unverified",
+  "export_sha256": "c75d780ed3024047a83d281338d15fbf2c5043728892eb62170c20d58bb86dbd",
+  "method": "scripted_native_exit_diagnostic",
+  "started_utc": "2026-09-04T22:30:05.244+00:00",
+  "status": "PASS_SCRIPTED_NATIVE_EXIT"
+}

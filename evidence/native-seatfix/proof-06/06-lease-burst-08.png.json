@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 7704.721943269,
+  "acquired_utc": "2026-09-04T21:59:16.519+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-08.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 99733
+  },
+  "x_readback_ms": 23.937292000482557
+}

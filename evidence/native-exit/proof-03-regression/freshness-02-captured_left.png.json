@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9631.57790084,
+  "acquired_utc": "2026-09-04T22:31:23.375+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit/evidence/native-exit/proof-03-regression/freshness-02-captured_left.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "729f495780275787bec092d2df658909e7206628815a2a5f405e860956eaa6d4",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 120408
+  },
+  "x_readback_ms": 22.417246998884366
+}

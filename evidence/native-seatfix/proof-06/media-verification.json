@@ -1,0 +1,167 @@
+{
+  "audio": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/fixture-stereo.wav",
+  "audio_pulse_onsets_seconds": [
+    0.835,
+    1.795,
+    3.02
+  ],
+  "audio_sha256": "a30e96a271f53f07e8d71631a069c4ef234c88a196fd8d1032e0f9bcf5b21eb7",
+  "channels": 2,
+  "checks": {
+    "48khz_stereo": true,
+    "60_fps_stream": true,
+    "nonzero_unclipped_audio": true,
+    "resolution_1920x1080": true,
+    "separate_left440_right660": true,
+    "sync_within150ms": true,
+    "ten_seconds_600_frames": true,
+    "three_recorded_visual_audio_pulses": true
+  },
+  "continuous_video_experiential_review": "unverified",
+  "dominant_quiet_frequencies_hz": [
+    440.0,
+    660.0
+  ],
+  "limitation": "Stream cadence and sampled sync establish capture integrity, not actual rendered 60 FPS or experiential quality.",
+  "listening": "unverified",
+  "peak_per_channel": [
+    0.344970703125,
+    0.344696044921875
+  ],
+  "rate": 48000,
+  "rms_per_channel": [
+    0.058156524661768495,
+    0.058156548271965605
+  ],
+  "status": "PASS_OBJECTIVE_MEDIA",
+  "streams": [
+    {
+      "avg_frame_rate": "60/1",
+      "bits_per_raw_sample": "8",
+      "chroma_location": "left",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "codec_name": "h264",
+      "codec_tag": "0x0000",
+      "codec_tag_string": "[0][0][0][0]",
+      "codec_type": "video",
+      "coded_height": 1088,
+      "coded_width": 1920,
+      "color_range": "tv",
+      "disposition": {
+        "attached_pic": 0,
+        "captions": 0,
+        "clean_effects": 0,
+        "comment": 0,
+        "default": 0,
+        "dependent": 0,
+        "descriptions": 0,
+        "dub": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "karaoke": 0,
+        "lyrics": 0,
+        "metadata": 0,
+        "multilayer": 0,
+        "non_diegetic": 0,
+        "original": 0,
+        "still_image": 0,
+        "timed_thumbnails": 0,
+        "visual_impaired": 0
+      },
+      "extradata_size": 39,
+      "field_order": "progressive",
+      "has_b_frames": 0,
+      "height": 1080,
+      "index": 0,
+      "is_avc": "true",
+      "level": 42,
+      "mime_codec_string": "avc1.42c02a",
+      "nal_length_size": "4",
+      "nb_read_frames": "600",
+      "pix_fmt": "yuv420p",
+      "profile": "Constrained Baseline",
+      "r_frame_rate": "60/1",
+      "refs": 1,
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "tags": {
+        "DURATION": "00:00:10.000000000",
+        "ENCODER": "Lavc62.28.102 libx264"
+      },
+      "time_base": "1/1000",
+      "width": 1920
+    },
+    {
+      "avg_frame_rate": "0/0",
+      "bits_per_raw_sample": "16",
+      "bits_per_sample": 0,
+      "channel_layout": "stereo",
+      "channels": 2,
+      "codec_long_name": "FLAC (Free Lossless Audio Codec)",
+      "codec_name": "flac",
+      "codec_tag": "0x0000",
+      "codec_tag_string": "[0][0][0][0]",
+      "codec_type": "audio",
+      "disposition": {
+        "attached_pic": 0,
+        "captions": 0,
+        "clean_effects": 0,
+        "comment": 0,
+        "default": 0,
+        "dependent": 0,
+        "descriptions": 0,
+        "dub": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "karaoke": 0,
+        "lyrics": 0,
+        "metadata": 0,
+        "multilayer": 0,
+        "non_diegetic": 0,
+        "original": 0,
+        "still_image": 0,
+        "timed_thumbnails": 0,
+        "visual_impaired": 0
+      },
+      "extradata_size": 34,
+      "index": 1,
+      "initial_padding": 0,
+      "mime_codec_string": "flac",
+      "nb_read_frames": "105",
+      "r_frame_rate": "0/0",
+      "sample_fmt": "s16",
+      "sample_rate": "48000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "tags": {
+        "DURATION": "00:00:10.000000000",
+        "ENCODER": "Lavc62.28.102 flac"
+      },
+      "time_base": "1/1000"
+    }
+  ],
+  "sync_pairs": [
+    {
+      "audio_minus_video_ms": 51.999999999999936,
+      "audio_seconds": 0.835,
+      "video_seconds": 0.783
+    },
+    {
+      "audio_minus_video_ms": 61.99999999999983,
+      "audio_seconds": 1.795,
+      "video_seconds": 1.733
+    },
+    {
+      "audio_minus_video_ms": 52.999999999999936,
+      "audio_seconds": 3.02,
+      "video_seconds": 2.967
+    }
+  ],
+  "video": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/input-proof.mkv",
+  "video_flash_onsets_seconds": [
+    0.783,
+    1.733,
+    2.967
+  ],
+  "video_sha256": "3e44046056b587acac1c3838c5bba3d42ce78f90e2da05890ced0c589b2c9af6"
+}

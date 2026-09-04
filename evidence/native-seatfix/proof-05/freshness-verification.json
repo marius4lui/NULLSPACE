@@ -1,0 +1,699 @@
+{
+  "boundary": "External screenshot first, then F12 frame_post_draw viewport PNG; exact RGB match.",
+  "completed_recordings": [
+    "input-proof.mkv.json"
+  ],
+  "ended_utc": "2026-09-04T21:58:46.858+00:00",
+  "experiential_review": "unverified",
+  "method": "scripted_diagnostic_freshness",
+  "pairs": [
+    {
+      "before": {
+        "audio_skips": 185,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 773,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 15402736,
+        "mouse_total": [
+          60.0,
+          -15.0
+        ],
+        "physics_frame": 784,
+        "pitch": 0.045,
+        "position": [
+          2.07265424728394,
+          1.79999995231628,
+          5.150550365448
+        ],
+        "shots": 3,
+        "utc_unix": 1788559121.3734,
+        "yaw": -0.18
+      },
+      "comparison": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "3683364b572d4568878dcce4ffa6e62e2d1080faa94c8ec73890519a1eb1f3ee",
+        "reference_rgb_sha256": "3683364b572d4568878dcce4ffa6e62e2d1080faa94c8ec73890519a1eb1f3ee"
+      },
+      "native": {
+        "acquired_monotonic": 7669.583548675,
+        "acquired_utc": "2026-09-04T21:58:41.381+00:00",
+        "composite": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "method": "composite_named_pixmap_getimage",
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/freshness-01-baseline.png",
+        "pixel_layout": "32-bit little-endian BGRX, RGB output",
+        "sha256": "4aea82d7ce2ca66d2ca88232a3d7dbc2fa45db2142691bb0ea166b05227a6e6e",
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99204
+        },
+        "x_readback_ms": 29.669765000107873
+      },
+      "reference": {
+        "captured": true,
+        "event": "viewport_capture",
+        "frame": 780,
+        "mode": "playing",
+        "monotonic_usec": 15631597,
+        "mouse_total": [
+          60.0,
+          -15.0
+        ],
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/viewport-001.png",
+        "physics_frame": 791,
+        "pitch": 0.045,
+        "position": [
+          2.07265424728394,
+          1.79999995231628,
+          5.150550365448
+        ],
+        "result": 0,
+        "shots": 3,
+        "utc_unix": 1788559121.60226,
+        "yaw": -0.18
+      },
+      "scenario": "baseline"
+    },
+    {
+      "before": {
+        "audio_skips": 194,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 53.0,
+        "frame": 828,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 16446466,
+        "mouse_total": [
+          -40.0,
+          5.0
+        ],
+        "physics_frame": 847,
+        "pitch": -0.015,
+        "position": [
+          1.99284601211548,
+          1.79999995231628,
+          4.48868131637573
+        ],
+        "shots": 4,
+        "utc_unix": 1788559122.41714,
+        "yaw": 0.12
+      },
+      "comparison": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "970916fc5145040a988618e6ea97ba45a819fc510e1254f3697d1a5e62b33dcf",
+        "reference_rgb_sha256": "970916fc5145040a988618e6ea97ba45a819fc510e1254f3697d1a5e62b33dcf"
+      },
+      "native": {
+        "acquired_monotonic": 7670.636183518,
+        "acquired_utc": "2026-09-04T21:58:42.434+00:00",
+        "composite": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "method": "composite_named_pixmap_getimage",
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/freshness-02-captured_left.png",
+        "pixel_layout": "32-bit little-endian BGRX, RGB output",
+        "sha256": "a531e5e977016b79201525fb6e3faf5e0569b012743214924d2ee11dc7815e62",
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99204
+        },
+        "x_readback_ms": 51.91821400057961
+      },
+      "reference": {
+        "captured": true,
+        "event": "viewport_capture",
+        "frame": 836,
+        "mode": "playing",
+        "monotonic_usec": 16666245,
+        "mouse_total": [
+          -40.0,
+          5.0
+        ],
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/viewport-002.png",
+        "physics_frame": 855,
+        "pitch": -0.015,
+        "position": [
+          1.99284601211548,
+          1.79999995231628,
+          4.48868131637573
+        ],
+        "result": 0,
+        "shots": 4,
+        "utc_unix": 1788559122.63692,
+        "yaw": 0.12
+      },
+      "scenario": "captured_left"
+    },
+    {
+      "before": {
+        "audio_skips": 195,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 55.0,
+        "frame": 880,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 17386542,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "physics_frame": 903,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "shots": 5,
+        "utc_unix": 1788559123.35722,
+        "yaw": -0.015
+      },
+      "comparison": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "b191b811167156ac7440b4b241154f3c376599b43e6d8e63c058fdfb598b738f",
+        "reference_rgb_sha256": "b191b811167156ac7440b4b241154f3c376599b43e6d8e63c058fdfb598b738f"
+      },
+      "native": {
+        "acquired_monotonic": 7671.638350203,
+        "acquired_utc": "2026-09-04T21:58:43.436+00:00",
+        "composite": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "method": "composite_named_pixmap_getimage",
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/freshness-03-captured_right.png",
+        "pixel_layout": "32-bit little-endian BGRX, RGB output",
+        "sha256": "d53ecf25550ff6b71b0b5050c227c630fd50adbfc233c8c712a4bedc158e2682",
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99204
+        },
+        "x_readback_ms": 21.147880999706103
+      },
+      "reference": {
+        "captured": true,
+        "event": "viewport_capture",
+        "frame": 890,
+        "mode": "playing",
+        "monotonic_usec": 17627178,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/viewport-003.png",
+        "physics_frame": 913,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "result": 0,
+        "shots": 5,
+        "utc_unix": 1788559123.59786,
+        "yaw": -0.015
+      },
+      "scenario": "captured_right"
+    },
+    {
+      "before": {
+        "audio_skips": 195,
+        "captured": false,
+        "event": "state",
+        "focused": true,
+        "fps": 58.0,
+        "frame": 926,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "paused",
+        "monotonic_usec": 18194320,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "physics_frame": 952,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "shots": 5,
+        "utc_unix": 1788559124.165,
+        "yaw": -0.015
+      },
+      "comparison": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "1cd32db620a374009612f630fd98352c505ebeff057a6ffff90add0e580ddf84",
+        "reference_rgb_sha256": "1cd32db620a374009612f630fd98352c505ebeff057a6ffff90add0e580ddf84"
+      },
+      "native": {
+        "acquired_monotonic": 7672.388844129,
+        "acquired_utc": "2026-09-04T21:58:44.186+00:00",
+        "composite": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "method": "composite_named_pixmap_getimage",
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/freshness-04-paused.png",
+        "pixel_layout": "32-bit little-endian BGRX, RGB output",
+        "sha256": "125455898f4793776d36b65a104e983ebb3104b1aa808a420302c6b6fe5ab9e9",
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99204
+        },
+        "x_readback_ms": 25.57494200027577
+      },
+      "reference": {
+        "captured": false,
+        "event": "viewport_capture",
+        "frame": 932,
+        "mode": "paused",
+        "monotonic_usec": 18361186,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/viewport-004.png",
+        "physics_frame": 958,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "result": 0,
+        "shots": 5,
+        "utc_unix": 1788559124.33187,
+        "yaw": -0.015
+      },
+      "scenario": "paused"
+    },
+    {
+      "before": {
+        "audio_skips": 195,
+        "captured": false,
+        "event": "state",
+        "focused": true,
+        "fps": 58.0,
+        "frame": 965,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "menu",
+        "monotonic_usec": 18902903,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "physics_frame": 994,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "shots": 5,
+        "utc_unix": 1788559124.87359,
+        "yaw": -0.015
+      },
+      "comparison": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "5fb9b9bf4fffc4ca6a8bf17f4482c922c77094a732124dc7fb8c867d2f929664",
+        "reference_rgb_sha256": "5fb9b9bf4fffc4ca6a8bf17f4482c922c77094a732124dc7fb8c867d2f929664"
+      },
+      "native": {
+        "acquired_monotonic": 7673.102773159,
+        "acquired_utc": "2026-09-04T21:58:44.900+00:00",
+        "composite": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "method": "composite_named_pixmap_getimage",
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/freshness-05-menu.png",
+        "pixel_layout": "32-bit little-endian BGRX, RGB output",
+        "sha256": "3b8ba8ea5ed30c133334620fd117fd322b77312b66f0f6c9070b168511a7f1dc",
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99204
+        },
+        "x_readback_ms": 15.03469999988738
+      },
+      "reference": {
+        "captured": false,
+        "event": "viewport_capture",
+        "frame": 971,
+        "mode": "menu",
+        "monotonic_usec": 19077474,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/viewport-005.png",
+        "physics_frame": 1000,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "result": 0,
+        "shots": 5,
+        "utc_unix": 1788559125.04816,
+        "yaw": -0.015
+      },
+      "scenario": "menu"
+    },
+    {
+      "before": {
+        "audio_skips": 195,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 56.0,
+        "frame": 1003,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 19587634,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "physics_frame": 1036,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "shots": 5,
+        "utc_unix": 1788559125.55833,
+        "yaw": -0.015
+      },
+      "comparison": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "b191b811167156ac7440b4b241154f3c376599b43e6d8e63c058fdfb598b738f",
+        "reference_rgb_sha256": "b191b811167156ac7440b4b241154f3c376599b43e6d8e63c058fdfb598b738f"
+      },
+      "native": {
+        "acquired_monotonic": 7673.842488263,
+        "acquired_utc": "2026-09-04T21:58:45.640+00:00",
+        "composite": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "method": "composite_named_pixmap_getimage",
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/freshness-06-resumed.png",
+        "pixel_layout": "32-bit little-endian BGRX, RGB output",
+        "sha256": "d53ecf25550ff6b71b0b5050c227c630fd50adbfc233c8c712a4bedc158e2682",
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99204
+        },
+        "x_readback_ms": 16.58085800045228
+      },
+      "reference": {
+        "captured": true,
+        "event": "viewport_capture",
+        "frame": 1012,
+        "mode": "playing",
+        "monotonic_usec": 19813529,
+        "mouse_total": [
+          5.0,
+          -10.0
+        ],
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/viewport-006.png",
+        "physics_frame": 1045,
+        "pitch": 0.03,
+        "position": [
+          2.59277677536011,
+          1.79999995231628,
+          4.49768495559692
+        ],
+        "result": 0,
+        "shots": 5,
+        "utc_unix": 1788559125.78422,
+        "yaw": -0.015
+      },
+      "scenario": "resumed"
+    },
+    {
+      "before": {
+        "audio_skips": 195,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 53.0,
+        "frame": 1056,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 20541748,
+        "mouse_total": [
+          95.0,
+          -20.0
+        ],
+        "physics_frame": 1092,
+        "pitch": 0.06,
+        "position": [
+          2.43345284461975,
+          1.79999995231628,
+          5.04149150848389
+        ],
+        "shots": 6,
+        "utc_unix": 1788559126.51245,
+        "yaw": -0.285
+      },
+      "comparison": {
+        "exact_rgb_match": true,
+        "hud_mean_difference": 0.0,
+        "maximum_difference": 0,
+        "mean_absolute_difference": 0.0,
+        "native_rgb_sha256": "f1ca853d8857c68eb339bd7b2dfbd304c2548bfad78d44f3fdbdf6276f7c1a10",
+        "reference_rgb_sha256": "f1ca853d8857c68eb339bd7b2dfbd304c2548bfad78d44f3fdbdf6276f7c1a10"
+      },
+      "native": {
+        "acquired_monotonic": 7674.804295688,
+        "acquired_utc": "2026-09-04T21:58:46.602+00:00",
+        "composite": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "method": "composite_named_pixmap_getimage",
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/freshness-07-captured_final.png",
+        "pixel_layout": "32-bit little-endian BGRX, RGB output",
+        "sha256": "6c19a6035a47b7fdca553e760e97d6a1d0595efca1035335b15e5c35d80faf6e",
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99204
+        },
+        "x_readback_ms": 16.459333000057086
+      },
+      "reference": {
+        "captured": true,
+        "event": "viewport_capture",
+        "frame": 1066,
+        "mode": "playing",
+        "monotonic_usec": 20784766,
+        "mouse_total": [
+          95.0,
+          -20.0
+        ],
+        "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-05/viewport-007.png",
+        "physics_frame": 1102,
+        "pitch": 0.06,
+        "position": [
+          2.43345284461975,
+          1.79999995231628,
+          5.04149150848389
+        ],
+        "result": 0,
+        "shots": 6,
+        "utc_unix": 1788559126.75547,
+        "yaw": -0.285
+      },
+      "scenario": "captured_final"
+    }
+  ],
+  "started_utc": "2026-09-04T21:58:40.955+00:00",
+  "status": "PASS_SCRIPTED_FRESHNESS"
+}

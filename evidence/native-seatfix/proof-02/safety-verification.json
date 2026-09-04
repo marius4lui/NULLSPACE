@@ -1,0 +1,828 @@
+{
+  "checks": {
+    "all_raw_input_from_verified_xtest_devices": {
+      "observation": {
+        "event_count": 106,
+        "source_ids": [
+          4,
+          5
+        ]
+      },
+      "passed": true
+    },
+    "capture_completed_after_release": {
+      "observation": {
+        "ended_monotonic": 6377.014123504,
+        "result": {
+          "method": "x11grab_owned_window_native_resolution",
+          "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-02/06-lease-during-capture.png",
+          "sha256": "a450577b2d7809297b8617d15847d1994ae0994606258bf52b3c47dbe4d7d5d8",
+          "window": {
+            "focus_window_id": 6291458,
+            "focused": true,
+            "height": 1080,
+            "held_buttons": [],
+            "held_keys": [
+              "a"
+            ],
+            "pointer": [
+              960,
+              540
+            ],
+            "title": "NULLSPACE Native QA Fixture (DEBUG)",
+            "width": 1920,
+            "window_id": 6291458,
+            "window_pid": 85118
+          }
+        }
+      },
+      "passed": true
+    },
+    "capture_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.2388751990001765,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1163,
+          "keycode": 65,
+          "monotonic_usec": 21375383,
+          "physical_keycode": 65,
+          "physics_frame": 1176,
+          "pressed": true,
+          "utc_unix": 1788557826.70262
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1176,
+          "keycode": 65,
+          "monotonic_usec": 21592056,
+          "physical_keycode": 65,
+          "physics_frame": 1189,
+          "pressed": false,
+          "utc_unix": 1788557826.91929
+        },
+        "release_since_request_seconds": 0.23094630241394043
+      },
+      "passed": true
+    },
+    "drip_ipc_cannot_extend_deadline": {
+      "observation": "{\"ok\": false, \"error\": \"Incomplete command exceeded 500 ms total deadline\"}\n",
+      "passed": true
+    },
+    "drip_ipc_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.3570680779994291,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1132,
+          "keycode": 68,
+          "monotonic_usec": 20858768,
+          "physical_keycode": 68,
+          "physics_frame": 1145,
+          "pressed": true,
+          "utc_unix": 1788557826.186
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1144,
+          "keycode": 68,
+          "monotonic_usec": 21058730,
+          "physical_keycode": 68,
+          "physics_frame": 1157,
+          "pressed": false,
+          "utc_unix": 1788557826.38596
+        },
+        "release_since_request_seconds": 0.20430707931518555
+      },
+      "passed": true
+    },
+    "inputless_private_seat": {
+      "observation": {
+        "audits": 363,
+        "devices": [
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 2,
+            "name": "Virtual core pointer",
+            "role": "master",
+            "use": 1,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 3,
+            "name": "Virtual core keyboard",
+            "role": "master",
+            "use": 2,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 4,
+            "name": "Virtual core XTEST pointer",
+            "role": "xtest",
+            "use": 3,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 5,
+            "name": "Virtual core XTEST keyboard",
+            "role": "xtest",
+            "use": 4,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 6,
+            "name": "xwayland-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 7,
+            "name": "xwayland-relative-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 8,
+            "name": "xwayland-pointer-gestures:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 9,
+            "name": "xwayland-keyboard:16",
+            "role": "inputless_protocol",
+            "use": 4,
+            "xtest_property": null
+          }
+        ],
+        "policy": "xtest_only_inputless_compositor",
+        "raw_counts": {
+          "button_press": 10,
+          "button_release": 10,
+          "key_press": 28,
+          "key_release": 28,
+          "motion": 6
+        }
+      },
+      "passed": true
+    },
+    "long_hold_cannot_extend_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.23132320800050366,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1290,
+          "keycode": 83,
+          "monotonic_usec": 23491995,
+          "physical_keycode": 83,
+          "physics_frame": 1303,
+          "pressed": true,
+          "utc_unix": 1788557828.81924
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1303,
+          "keycode": 83,
+          "monotonic_usec": 23708604,
+          "physical_keycode": 83,
+          "physics_frame": 1316,
+          "pressed": false,
+          "utc_unix": 1788557829.03585
+        },
+        "release_since_request_seconds": 0.22366547584533691
+      },
+      "passed": true
+    },
+    "long_hold_returns_released": {
+      "observation": {
+        "ended_monotonic": 6377.919612075,
+        "result": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 85118
+        }
+      },
+      "passed": true
+    },
+    "no_seat_drift_or_guard_error": {
+      "observation": {
+        "audits": 492,
+        "devices": [
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 2,
+            "name": "Virtual core pointer",
+            "role": "master",
+            "use": 1,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 3,
+            "name": "Virtual core keyboard",
+            "role": "master",
+            "use": 2,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 4,
+            "name": "Virtual core XTEST pointer",
+            "role": "xtest",
+            "use": 3,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 5,
+            "name": "Virtual core XTEST keyboard",
+            "role": "xtest",
+            "use": 4,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 6,
+            "name": "xwayland-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 7,
+            "name": "xwayland-relative-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 8,
+            "name": "xwayland-pointer-gestures:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 9,
+            "name": "xwayland-keyboard:16",
+            "role": "inputless_protocol",
+            "use": 4,
+            "xtest_property": null
+          }
+        ],
+        "policy": "xtest_only_inputless_compositor",
+        "raw_counts": {
+          "button_press": 10,
+          "button_release": 10,
+          "key_press": 40,
+          "key_release": 40,
+          "motion": 6
+        }
+      },
+      "passed": true
+    },
+    "owned_cleanup_after_fault_tests": {
+      "observation": {
+        "audio": {
+          "channel_map": "front-left,front-right",
+          "monitor": "nullspace_qa_0dfa0d694a85cbcf.monitor",
+          "owner_module": 536870918,
+          "sample_specification": "float32le 2ch 48000Hz",
+          "sink_index": 892,
+          "sink_name": "nullspace_qa_0dfa0d694a85cbcf",
+          "stream_ids": [],
+          "stream_pids": []
+        },
+        "authority": "/run/user/1000/nullspace-qa-ia3e7wxz/Xauthority",
+        "cleanup_errors": [],
+        "command": [
+          "/home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--path",
+          "tools/qa/fixtures/input_render_audio",
+          "--display-driver",
+          "x11",
+          "--rendering-method",
+          "forward_plus",
+          "--rendering-driver",
+          "vulkan",
+          "--audio-driver",
+          "PulseAudio",
+          "--resolution",
+          "1920x1080",
+          "--windowed",
+          "--disable-vsync",
+          "--max-fps",
+          "60"
+        ],
+        "compositor": {
+          "backend": "weston_headless_gl_fake_seat",
+          "command": [
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+            "--backend=headless",
+            "--renderer=gl",
+            "--fake-seat",
+            "--no-config",
+            "--socket=wayland-private",
+            "--width=1920",
+            "--height=1080",
+            "--refresh-rate=60000",
+            "--idle-time=0",
+            "--shell=kiosk-shell.so"
+          ],
+          "device_descriptors": [
+            "/dev/dri/renderD128",
+            "/dev/null"
+          ],
+          "executable": "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+          "executable_sha256": "b9f15748a1612c321896f3f2d24f6ea2417db7bedeb68a303cef28d007615747",
+          "host_parent_display": null,
+          "meaning": "Headless backend has no physical input/output or parent compositor; fake seat is protocol compatibility only.",
+          "module_hashes": {
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/color-lcms.so": "5dc15cc9d7abae94fbf3dcd2e136b365e46d559de3fff3a585ed1679bd73ad67",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/drm-backend.so": "4564e174102baf0126c5f51f3a59d02f67e3dc859151692e982580c8d01a6957",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/gl-renderer.so": "34850394518bf8e085fdf6d59b5efac5cc6182a2070d0592b42332d7565f1ccb",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/headless-backend.so": "1aa3669519b4953819afd7e1e64de87e8750650fed6d906971dbc3a1a65ed077",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/pipewire-backend.so": "92967b5edacf90da279b94b1f747e1455d6f76c06adb14efda0f0d1c1e2627e0",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/rdp-backend.so": "9359842032dc1c4f1ac38ac60a8517839da10bc00e14c2000c9a72b7f0b1ca8b",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/vnc-backend.so": "c5622e6a30b4f9ee6d05a48278b44f2954689bd0fdcd958e2ad1047dbb89930e",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/vulkan-renderer.so": "df97025db075ab8460b6eae06a7ca048640e10019af425d0f5d1a74fe3ebcba5",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/wayland-backend.so": "0192a67861ae3b530521a19e091661d8508d61df5ab088629717c96a1bc4cdfb",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/x11-backend.so": "411af33fdcbe1dc1b1da3a273097b6be46d8e4eb976607d28591500f24ed770b",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/xwayland.so": "367a1c1df16e84f0a47d6a6a022d87cd99c867a951b9ed0b45953899885f55c5",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/desktop-shell.so": "c96518fcc3555dc80e93c68c63189003221a2a719a92ecf37223e1d945ed8836",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/hmi-controller.so": "e512ff676afbb75f639148cb223764ede2a04e868ab22d8ef5fd5f065f094072",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/ivi-shell.so": "902ad87382db192d2d8427e538f990a0294fa9554fb346db1979c7b0ac85141a",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/kiosk-shell.so": "a73ced8ea7ecf7532b6a6616a216afb9a3110be4304f7d29a56f03c2faf9a859",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/libexec_weston.so": "dc4d58b305f7a25071d44eec14ae619d619e33f53b8a9a6d9b663a81cb538687",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/lua-shell.so": "fa6a7329b656ca2eb3cd312deb66602b472f6b4cb5bf2e460879e029b4b374b8",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/systemd-notify.so": "596d819b7fabc63b88cd0f6799d28ab4d025c47effcce475e75ada8ac07bd53c"
+          },
+          "runtime": "/run/user/1000/nullspace-qa-ia3e7wxz/wayland-runtime",
+          "socket": "/run/user/1000/nullspace-qa-ia3e7wxz/wayland-runtime/wayland-private",
+          "socket_peer": {
+            "gid": 1000,
+            "pid": 85083,
+            "uid": 1000
+          },
+          "version": "weston 15.0.1"
+        },
+        "control_socket": "/run/user/1000/nullspace-qa-ia3e7wxz/control.sock",
+        "controlled_provenance_valid": true,
+        "defaults_after": {
+          "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+          "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+        },
+        "defaults_before": {
+          "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+          "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+        },
+        "display": ":2",
+        "ended_utc": "2026-09-04T21:37:10.246+00:00",
+        "executable_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
+        "experiential_review": "unverified",
+        "game_git": {
+          "clean": true,
+          "commit": "0076de52b233c9269a2f48b936eed55ac4242138",
+          "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+        },
+        "game_project": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/tools/qa/fixtures/input_render_audio",
+        "game_source_hashes": {
+          "fixture.gd": "9b3f5fb49778f7d1c06aed4e2e7be7491de85d083c4f980d6539a64887a5009e",
+          "fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+          "project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863"
+        },
+        "gpu_icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+        "harness_git": {
+          "clean": true,
+          "commit": "0076de52b233c9269a2f48b936eed55ac4242138",
+          "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+        },
+        "harness_source_hashes": {
+          "analyze_fixture_media.py": "90c010791bca2736ba981c9c975bd46ea188d1e9580d0afc08663dd6edf5d2b7",
+          "fixtures/input_render_audio/fixture.gd": "9b3f5fb49778f7d1c06aed4e2e7be7491de85d083c4f980d6539a64887a5009e",
+          "fixtures/input_render_audio/fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+          "fixtures/input_render_audio/project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863",
+          "headless_backend.py": "7beea28b470dba1f1c61a26c776068a7306b43fe77529381086f74e5fbcf39b4",
+          "manifest.py": "719e633dca86e65a3aa54306b552066c35a06bc0842c81861bebd84d43e5f34c",
+          "media_capture.py": "17ba3c63999e90b13ffeb834eccd6f2e71a9f2b037b9089c3742796e2fb7913c",
+          "native.py": "9d9316c9c5f69336fe759992f234232a53934f12f87b5168436a458a2b174b6a",
+          "native_session.py": "c0bb049f2c3aaa4c3e2eb68d2a278941dfaa2420d1937712666400abb231cb90",
+          "private_seat.py": "5d6141ae05b9a438363f11f6d31d38987b41c3d85222b6134e6da22740b1460d",
+          "prove_fixture.py": "1edb665831c5ebc0d1a4a4ef1f73b799fc08e6ba207324b57e4eccf3d7626a97",
+          "prove_safety.py": "e05ad955fb1b06797239871c3b45b4440fe24ca9aebe69755ebaa05342939e03",
+          "qa_common.py": "a528e789415f61ce916f0ca8854e3706b44e5dae52bb2cd3887100a5a894df35",
+          "recover_session.py": "28c02e4a2fa6e0cd7b1f4216d3af0d9f577a7a2d26380a87c60138df5200f633",
+          "tests/test_safety.py": "edd3c4823409d8f12d6f6845f4539fc6fb4137054db05fbb86e9361e4b464d0e",
+          "x11_input.py": "0ba00c90ba64a8485efd1ffe5a1b06268a2365b25fdfe3db6df915e0a595c1db"
+        },
+        "host": {
+          "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+          "os": "Linux 7.1.12-200.fc44.x86_64 x86_64 GNU/Linux",
+          "pipewire": "pipewire\nCompiled with libpipewire 1.6.8\nLinked with libpipewire 1.6.8",
+          "xwayland": "xorg-x11-server-Xwayland-24.1.13-1.fc44.x86_64"
+        },
+        "host_defaults_unchanged": true,
+        "method": "scripted_diagnostic",
+        "monitor": "nullspace_qa_0dfa0d694a85cbcf.monitor",
+        "observed_or_heard": [],
+        "private_seat": {
+          "audits": 492,
+          "devices": [
+            {
+              "attachment": 3,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 2,
+              "name": "Virtual core pointer",
+              "role": "master",
+              "use": 1,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 3,
+              "name": "Virtual core keyboard",
+              "role": "master",
+              "use": 2,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 4,
+              "name": "Virtual core XTEST pointer",
+              "role": "xtest",
+              "use": 3,
+              "xtest_property": 1
+            },
+            {
+              "attachment": 3,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 5,
+              "name": "Virtual core XTEST keyboard",
+              "role": "xtest",
+              "use": 4,
+              "xtest_property": 1
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 6,
+              "name": "xwayland-pointer:16",
+              "role": "inputless_protocol",
+              "use": 3,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 7,
+              "name": "xwayland-relative-pointer:16",
+              "role": "inputless_protocol",
+              "use": 3,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 8,
+              "name": "xwayland-pointer-gestures:16",
+              "role": "inputless_protocol",
+              "use": 3,
+              "xtest_property": null
+            },
+            {
+              "attachment": 3,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 9,
+              "name": "xwayland-keyboard:16",
+              "role": "inputless_protocol",
+              "use": 4,
+              "xtest_property": null
+            }
+          ],
+          "policy": "xtest_only_inputless_compositor",
+          "raw_counts": {
+            "button_press": 10,
+            "button_release": 10,
+            "key_press": 40,
+            "key_release": 40,
+            "motion": 6
+          }
+        },
+        "processes": {
+          "game": {
+            "exit_code": -15,
+            "pid": 85118,
+            "process_group": 85118,
+            "session": 85118,
+            "start_ticks": 635351
+          },
+          "recording": {
+            "pid": 85254,
+            "process_group": 85254,
+            "session": 85254,
+            "start_ticks": 635784
+          },
+          "weston": {
+            "exit_code": 0,
+            "pid": 85083,
+            "process_group": 85083,
+            "session": 85083,
+            "start_ticks": 635328
+          },
+          "xwayland": {
+            "exit_code": 0,
+            "pid": 85101,
+            "process_group": 85101,
+            "session": 85101,
+            "start_ticks": 635338
+          }
+        },
+        "profile": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-02/profile",
+        "ready_utc": "2026-09-04T21:36:45.744+00:00",
+        "run_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-02",
+        "runtime_dir": "/run/user/1000/nullspace-qa-ia3e7wxz",
+        "schema": 1,
+        "sink_module": "536870918",
+        "sink_name": "nullspace_qa_0dfa0d694a85cbcf",
+        "started_utc": "2026-09-04T21:36:44.830+00:00",
+        "status": "stopped",
+        "supervisor": {
+          "pid": 85069,
+          "process_group": 85069,
+          "session": 85069,
+          "start_ticks": 635296
+        },
+        "vulkan_device_lines": [
+          "deviceType         = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU",
+          "deviceName         = AMD Radeon 660M (RADV REMBRANDT)",
+          "driverName         = radv",
+          "driverInfo         = Mesa 26.1.8"
+        ],
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [
+            "w"
+          ],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 85118
+        }
+      },
+      "passed": true
+    },
+    "partial_ipc_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.25556333100030315,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1102,
+          "keycode": 87,
+          "monotonic_usec": 20358791,
+          "physical_keycode": 87,
+          "physics_frame": 1115,
+          "pressed": true,
+          "utc_unix": 1788557825.68602
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1116,
+          "keycode": 87,
+          "monotonic_usec": 20592082,
+          "physical_keycode": 87,
+          "physics_frame": 1129,
+          "pressed": false,
+          "utc_unix": 1788557825.91931
+        },
+        "release_since_request_seconds": 0.24625563621520996
+      },
+      "passed": true
+    },
+    "partial_ipc_total_deadline": {
+      "observation": "{\"ok\": false, \"error\": \"Incomplete command exceeded 500 ms total deadline\"}\n",
+      "passed": true
+    },
+    "private_root_blur_releases_keys": {
+      "observation": {
+        "focus_window_id": 861,
+        "focused": false,
+        "height": 1080,
+        "held_buttons": [],
+        "held_keys": [],
+        "pointer": [
+          960,
+          540
+        ],
+        "title": "NULLSPACE Native QA Fixture (DEBUG)",
+        "width": 1920,
+        "window_id": 6291458,
+        "window_pid": 85118
+      },
+      "passed": true
+    },
+    "quiet_idle_has_no_unrequested_controls": {
+      "observation": {
+        "after": {
+          "audio_skips": 137,
+          "captured": true,
+          "event": "state",
+          "focused": true,
+          "fps": 56.0,
+          "frame": 1099,
+          "keys": {
+            "a": false,
+            "d": false,
+            "s": false,
+            "shift": false,
+            "w": false
+          },
+          "mode": "playing",
+          "monotonic_usec": 20308793,
+          "mouse_total": [
+            60.0,
+            -15.0
+          ],
+          "physics_frame": 1113,
+          "pitch": 0.045,
+          "position": [
+            2.16020655632019,
+            1.79999995231628,
+            5.16180086135864
+          ],
+          "shots": 3,
+          "utc_unix": 1788557825.63602,
+          "yaw": -0.18
+        },
+        "before": {
+          "audio_skips": 137,
+          "captured": true,
+          "event": "state",
+          "focused": true,
+          "fps": 60.0,
+          "frame": 984,
+          "keys": {
+            "a": false,
+            "d": false,
+            "s": false,
+            "shift": false,
+            "w": false
+          },
+          "mode": "playing",
+          "monotonic_usec": 18330382,
+          "mouse_total": [
+            60.0,
+            -15.0
+          ],
+          "physics_frame": 994,
+          "pitch": 0.045,
+          "position": [
+            2.16020655632019,
+            1.79999995231628,
+            5.16180086135864
+          ],
+          "shots": 3,
+          "utc_unix": 1788557823.65759,
+          "yaw": -0.18
+        }
+      },
+      "passed": true
+    },
+    "sigterm_interrupts_ten_second_hold": {
+      "observation": {
+        "cleanup_after_signal_seconds": 0.3213702730008663,
+        "key_event": {
+          "observed_after_seconds": 0.10903383000004396,
+          "press": {
+            "echo": false,
+            "event": "key",
+            "frame": 1355,
+            "keycode": 87,
+            "monotonic_usec": 24575306,
+            "physical_keycode": 87,
+            "physics_frame": 1368,
+            "pressed": true,
+            "utc_unix": 1788557829.90256
+          },
+          "release": {
+            "echo": false,
+            "event": "key",
+            "frame": 1360,
+            "keycode": 87,
+            "monotonic_usec": 24658617,
+            "physical_keycode": 87,
+            "physics_frame": 1373,
+            "pressed": false,
+            "utc_unix": 1788557829.98587
+          },
+          "release_since_request_seconds": 0.10289597511291504
+        },
+        "response": {
+          "ended_monotonic": 6378.176902943,
+          "result": {
+            "focus_window_id": 6291458,
+            "focused": true,
+            "height": 1080,
+            "held_buttons": [],
+            "held_keys": [
+              "w"
+            ],
+            "pointer": [
+              960,
+              540
+            ],
+            "title": "NULLSPACE Native QA Fixture (DEBUG)",
+            "width": 1920,
+            "window_id": 6291458,
+            "window_pid": 85118
+          }
+        }
+      },
+      "passed": true
+    }
+  },
+  "ended_utc": "2026-09-04T21:37:10.295+00:00",
+  "experiential_review": "unverified",
+  "method": "scripted_native_fault_diagnostic",
+  "started_utc": "2026-09-04T21:37:03.501+00:00",
+  "status": "PASS_SCRIPTED_NATIVE_SAFETY"
+}

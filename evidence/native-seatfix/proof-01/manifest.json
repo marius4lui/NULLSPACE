@@ -1,0 +1,122 @@
+{
+  "artifacts": {
+    "01-menu.png": {
+      "bytes": 72511,
+      "sha256": "ca8c0a3d7427314cbdbdc122e21fc3312eaacfeda325731517e261be9c5351eb"
+    },
+    "01-menu.png.json": {
+      "bytes": 559,
+      "sha256": "7c602817de307ca2247d845003e9e8cba1f09830e590a66468d0a9ed1c73dd89"
+    },
+    "02-moved.png": {
+      "bytes": 77098,
+      "sha256": "1e56a27dd0f964070cf854f9894810fcef5bd18fd25be2f63c57836c131ddf67"
+    },
+    "02-moved.png.json": {
+      "bytes": 560,
+      "sha256": "f25970c80fe339885c9e5b042d15b074a8dd262f159914a184045cf1d59fdbb9"
+    },
+    "03-paused.png": {
+      "bytes": 76251,
+      "sha256": "62561a0bf8e8f6caa23888c793c85b70ca2218954634bdebb057b56fc3570b68"
+    },
+    "03-paused.png.json": {
+      "bytes": 562,
+      "sha256": "809f7d8dc9a1d677edc3fb84acbecf2cd9c3da12584e6cacd93db1260ed7e126"
+    },
+    "04-final.png": {
+      "bytes": 76116,
+      "sha256": "ea0c2d6af4696eeb26d15ca925203b52fb9bb11dc1a7ff1fb2d7c633c4d3e21d"
+    },
+    "04-final.png.json": {
+      "bytes": 560,
+      "sha256": "e7971c723c9eff84c3b9440cf9680b8e4e7e9a484ea4d7aa9cc0c48ad72fb322"
+    },
+    "05-shot-frame.png": {
+      "bytes": 207780,
+      "sha256": "90c7dba33fad286e16ae4dd8147fd7de9493405bf7b1ce2be15e5dfcf29c4769"
+    },
+    "06-lease-during-capture.png": {
+      "bytes": 77261,
+      "sha256": "a37ee2a4a5036a05e2255a93d866047167ad71dbf1115cec258715e9f42f6bfe"
+    },
+    "06-lease-during-capture.png.json": {
+      "bytes": 590,
+      "sha256": "bc6dbf5fa673ab8d5d8a651090e5a759c150348865429bfb5ee5d840cc597ace"
+    },
+    "fixture-events.jsonl": {
+      "bytes": 84016,
+      "sha256": "4f20e5e1c489d77535761c4ed1b2d933f1c06296cd912f2e74883ac385cbae91"
+    },
+    "fixture-stereo.ogg": {
+      "bytes": 162122,
+      "sha256": "05b0b005c4ef6851612b1890c94d33bbf2de84bb6ccbece58fa23d9d304e9665"
+    },
+    "fixture-stereo.wav": {
+      "bytes": 1919206,
+      "sha256": "6e6bcbdd46d179b33df13a990ce2f5774e8adca25fadd22348d8171045b895c3"
+    },
+    "game.log": {
+      "bytes": 327,
+      "sha256": "ad4ec1ceaedacf8fd4da5dc48d265615ccc0456517381d280369d5aac6493e2c"
+    },
+    "input-proof.ffmpeg.log": {
+      "bytes": 5576,
+      "sha256": "516eb39754fe40eadbf026097640600051cdf10f954d792d86cfb0bc47e3cfb1"
+    },
+    "input-proof.mkv": {
+      "bytes": 1437967,
+      "sha256": "aa4f0cc9164b908e38f03d25628864814a7235e719ab1b58402872c346f9ba6d"
+    },
+    "input-proof.mkv.json": {
+      "bytes": 5324,
+      "sha256": "3552e55ac869129ddd06222d5e01965d6825845185223dbc000cd863a4a8dda6"
+    },
+    "input-verification.json": {
+      "bytes": 9975,
+      "sha256": "781ad4d75c4e45a2a7b12e18f3654e83ed65f2b322403e92426bd6ca09846434"
+    },
+    "launch.json": {
+      "bytes": 807,
+      "sha256": "359ac18da5ee823d198f3f6f96ec6a993f6d294461935e954190e5fdc5157270"
+    },
+    "media-verification.json": {
+      "bytes": 4552,
+      "sha256": "f07ee9780ab4e2b34bf278c82f6587b4d31794c9ff5e9bd18cc2a38741c76f29"
+    },
+    "safety-verification.json": {
+      "bytes": 28955,
+      "sha256": "f00bcc65b3c1e96f3270a5492c8e27c8e54f2bb6b0e07f805ebd6fbaf0455a5b"
+    },
+    "state.json": {
+      "bytes": 12744,
+      "sha256": "f566451e5a278f7ff4b8b4990dc1100f5714ac54c7be20e5ec2623ec860153e2"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 47691,
+      "sha256": "40df7a92c71e750f880b15f8ac00c0ad08f1e32e8681b41c03f2df2469ccc30c"
+    },
+    "vulkaninfo.txt": {
+      "bytes": 2385,
+      "sha256": "bf0dc0913675988bf673ca47db4a90f716f24571249e65abef40700b7883f8ad"
+    },
+    "weston.log": {
+      "bytes": 3438,
+      "sha256": "62c99f240dddfd83fadb52759d9085908bb18f43e94bc86481ab3603baa94e56"
+    },
+    "xwayland.log": {
+      "bytes": 732,
+      "sha256": "906bbcb0e45c4180c5f3f275be89b64c810e4db3da7fbe5efac918759235157e"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "bb6fb09791c0ec65d5193f9dc045da7b8d16fecf",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+  },
+  "packaged_utc": "2026-09-04T22:05:05.680+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}

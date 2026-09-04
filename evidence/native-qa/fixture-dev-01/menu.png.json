@@ -1,0 +1,16 @@
+{
+  "method": "x11grab_owned_window_native_resolution",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa/evidence/native-qa/fixture-dev-01/menu.png",
+  "sha256": "ca8c0a3d7427314cbdbdc122e21fc3312eaacfeda325731517e261be9c5351eb",
+  "window": {
+    "focus_window_id": 4194306,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 4194306,
+    "window_pid": 37649
+  }
+}

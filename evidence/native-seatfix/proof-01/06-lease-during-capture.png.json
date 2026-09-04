@@ -1,0 +1,22 @@
+{
+  "method": "x11grab_owned_window_native_resolution",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-01/06-lease-during-capture.png",
+  "sha256": "a37ee2a4a5036a05e2255a93d866047167ad71dbf1115cec258715e9f42f6bfe",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [
+      "a"
+    ],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 84607
+  }
+}

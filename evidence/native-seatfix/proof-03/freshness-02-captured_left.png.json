@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 7274.101882114,
+  "acquired_utc": "2026-09-04T21:52:05.899+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-03/freshness-02-captured_left.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "71e5b97f47e979f5773a6e9acb842644da68db16fb7db685480050ddb3d3f4db",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 93744
+  },
+  "x_readback_ms": 15.678432000640896
+}
