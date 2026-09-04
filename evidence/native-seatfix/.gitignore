@@ -1,0 +1,11 @@
+**/profile/
+**/Xauthority
+**/control.sock
+**/__pycache__/
+**/supervisor.log
+**/flash-frame-stats.txt
+# Run output is ignored while recording so the exact source commit stays clean.
+# Public root-level artifacts are explicitly staged after review; never profile.
+development-*/
+proof-*/
+fault-*/

@@ -11,6 +11,7 @@ from typing import Any
 from media_capture import unload_owned_sink
 from qa_common import audio_defaults, same_process, utc, write_json
 from x11_input import GameWindow
+from headless_backend import cleanup_wayland_runtime
 
 
 def recover(directory: Path) -> dict[str, Any]:
@@ -32,7 +33,7 @@ def recover(directory: Path) -> dict[str, Any]:
             target.close()
         except Exception as error:
             report["errors"].append(f"private key release: {error}")
-    for name in ("recording", "game", "xwayland"):
+    for name in ("recording", "game", "xwayland", "weston"):
         identity = processes.get(name)
         if not identity or not same_process(identity):
             continue
@@ -56,6 +57,7 @@ def recover(directory: Path) -> dict[str, Any]:
             raise RuntimeError("Refused cleanup of unrecognized runtime path")
         for name in ("control.sock", "Xauthority"):
             (runtime / name).unlink(missing_ok=True)
+        cleanup_wayland_runtime(runtime)
         runtime.rmdir()
         report["actions"].append("removed_owned_runtime_directory")
     report["defaults_after"] = audio_defaults(os.environ.copy())

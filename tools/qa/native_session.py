@@ -12,6 +12,7 @@ import socket
 import struct
 import subprocess
 import tempfile
+import threading
 import time
 from typing import Any
 
@@ -19,6 +20,8 @@ from media_capture import finish_recording, owned_sink, screenshot, start_record
 from qa_common import (audio_defaults, git_identity, process_identity, run, sha256, source_hashes,
                        utc, write_json)
 from x11_input import GameWindow
+from private_seat import PrivateSeat
+from headless_backend import start_headless, cleanup_wayland_runtime
 
 
 class NativeSession:
@@ -40,14 +43,20 @@ class NativeSession:
         self.recording: tuple[subprocess.Popen[bytes], dict[str, Any]] | None = None
         self.stop_requested = False
         self.gpu_lock: Any = None
+        self.seat: PrivateSeat | None = None
+        self.safety_stop = threading.Event()
+        self.safety_thread: threading.Thread | None = None
+        self.safety_error: str | None = None
+        self.event_lock = threading.Lock()
 
     def save(self) -> None:
         write_json(self.directory / "state.json", self.state)
 
     def event(self, kind: str, **values: Any) -> None:
-        with (self.directory / "supervisor-events.jsonl").open("a", encoding="utf-8") as stream:
-            stream.write(json.dumps({"utc": utc(), "monotonic": time.monotonic(),
-                                     "event": kind, **values}, sort_keys=True) + "\n")
+        with self.event_lock:
+            with (self.directory / "supervisor-events.jsonl").open("a", encoding="utf-8") as stream:
+                stream.write(json.dumps({"utc": utc(), "monotonic": time.monotonic(),
+                                         "event": kind, **values}, sort_keys=True) + "\n")
 
     def spawn(self, name: str, command: list[str], env: dict[str, str],
               *, pass_fds: tuple[int, ...] = (), cwd: str | None = None
@@ -77,7 +86,7 @@ class NativeSession:
 
     def setup(self) -> None:
         runtime_parent = Path(self.host_env["XDG_RUNTIME_DIR"])
-        if not self.host_env.get("WAYLAND_DISPLAY"):
+        if self.launch["method"] == "manual_native" and not self.host_env.get("WAYLAND_DISPLAY"):
             raise RuntimeError("A native Wayland compositor is required for rootful Xwayland")
         self.gpu_lock = (runtime_parent / "nullspace-qa-gpu.lock").open("a")
         try:
@@ -115,6 +124,17 @@ class NativeSession:
         self.env.pop("VK_ICD_FILENAMES", None)
         self.env.pop("LIBGL_ALWAYS_SOFTWARE", None)
         self.env.pop("MESA_LOADER_DRIVER_OVERRIDE", None)
+        self.env.pop("WAYLAND_SOCKET", None)
+        allow_physical = self.launch.get("allow_physical_input", False)
+        if allow_physical != (self.launch["method"] == "manual_native"):
+            raise RuntimeError("Physical-seat opt-in/method mismatch")
+        if not allow_physical:
+            self.state["compositor"] = start_headless(self.launch["weston"], self.runtime,
+                self.directory, self.env, self.launch["width"], self.launch["height"], self.spawn)
+            self.env["XDG_RUNTIME_DIR"] = self.state["compositor"]["runtime"]
+            self.env["WAYLAND_DISPLAY"] = self.state["compositor"]["socket"]
+            self.env["DBUS_SESSION_BUS_ADDRESS"] = "unix:path=" + str(self.runtime / "no-session-bus")
+            self.save()
         reader, writer = os.pipe()
         try:
             command = ["Xwayland", "-displayfd", str(writer), "-auth", str(authority),
@@ -137,7 +157,18 @@ class NativeSession:
         del cookie
         self.env["DISPLAY"] = ":" + display_number
         self.env["XAUTHORITY"] = str(authority)
-        self.env.pop("WAYLAND_DISPLAY", None)
+        # Godot otherwise tries the host default Wayland socket after an X11
+        # failure even when WAYLAND_DISPLAY is simply absent. Fail closed.
+        self.env["WAYLAND_DISPLAY"] = str(self.runtime / "no-game-wayland")
+        self.state.update({"display": self.env["DISPLAY"], "authority": str(authority)})
+        self.save()
+        # Gate before Vulkan diagnostics or the first game window can exist.
+        self.seat = PrivateSeat(self.env["DISPLAY"], authority, self.runtime,
+                                self.state["processes"]["xwayland"],
+                                self.host_env.get("DISPLAY"), allow_physical, self.event,
+                                inputless_verified="compositor" in self.state)
+        self.state["private_seat"] = self.seat.audit()
+        self.save()
         # Keep runtime IPC available; isolate data/config/cache, not the host HOME.
         for suffix in ("data", "config", "cache", "state"):
             path = self.directory / "profile" / suffix
@@ -152,7 +183,7 @@ class NativeSession:
             raise RuntimeError("Pulse did not return a valid owned module identifier")
         self.env["PULSE_SINK"] = self.sink_name
         self.env["PULSE_SOURCE"] = self.sink_name + ".monitor"
-        self.env["PULSE_SERVER"] = self.host_env.get("PULSE_SERVER", str(runtime_parent / "pulse/native"))
+        self.env["PULSE_SERVER"] = self.host_env.get("PULSE_SERVER", "unix:" + str(runtime_parent / "pulse/native"))
         self.state.update({"display": self.env["DISPLAY"], "authority": str(authority),
                            "sink_name": self.sink_name, "sink_module": self.sink_module,
                            "monitor": self.sink_name + ".monitor",
@@ -169,13 +200,19 @@ class NativeSession:
         self.window = GameWindow(self.env["DISPLAY"], str(authority), game.pid)
         deadline = time.monotonic() + float(self.launch["startup_timeout"])
         while not self.window.discover():
+            self.seat.audit()
             if game.poll() is not None:
                 raise RuntimeError(f"Game exited before its window appeared: {game.returncode}; inspect game.log")
             if time.monotonic() > deadline:
                 raise RuntimeError("No viewable owned game window before startup timeout")
             time.sleep(0.1)
         self.state["window"] = self.window.focus()
+        self.state["private_seat"] = self.seat.audit()
+        self.safety_thread = threading.Thread(target=self.safety_loop, name="private-native-safety", daemon=True)
+        self.safety_thread.start()
         self.state["audio"] = owned_sink(self.host_env, self.sink_name, game.pid)
+        if self.safety_error:
+            raise RuntimeError(self.safety_error)
         self.server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.server.bind(str(self.runtime / "control.sock"))
         self.server.listen(4)
@@ -186,9 +223,46 @@ class NativeSession:
         self.save()
         self.event("session_ready", window=self.state["window"], audio=self.state["audio"])
 
+    def safety_loop(self) -> None:
+        """Independent of blocking capture, audio queries, hold and IPC parsing."""
+        assert self.window is not None and self.seat is not None
+        while not self.safety_stop.wait(0.05):
+            try:
+                if self.stop_requested:
+                    self.window.cancel.set()
+                    self.window.release()
+                    self.event("stop_requested_all_keys_released")
+                    return
+                # A normally exiting game may remove its window before the
+                # main loop observes exit. Do not turn that into a false fault.
+                if self.processes["game"].poll() is not None:
+                    return
+                self.state["private_seat"] = self.seat.audit()
+                released = self.window.safety_tick()
+                if released:
+                    self.event(released)
+            except Exception as error:
+                self.safety_error = str(error)
+                self.state["error"] = "Native safety guard: " + str(error)
+                self.state["controlled_provenance_valid"] = False
+                self.event("safety_guard_failed", error=str(error))
+                try:
+                    self.window.release()
+                finally:
+                    # Terminate the exact owned game immediately, even if an
+                    # unrelated bounded media operation is still returning.
+                    if self.processes["game"].poll() is None:
+                        self.processes["game"].terminate()
+                    self.stop_requested = True
+                return
+
     def handle(self, request: dict[str, Any]) -> dict[str, Any]:
         assert self.window is not None
         action = request.get("action")
+        if self.safety_error:
+            raise RuntimeError(self.safety_error)
+        assert self.seat is not None
+        self.state["private_seat"] = self.seat.audit()
         self.event("request", request=request)
         if action == "stop":
             self.stop_requested = True
@@ -211,7 +285,7 @@ class NativeSession:
             return {"window": self.window.status(), "audio": owned_sink(
                 self.host_env, self.sink_name, self.processes["game"].pid),
                     "recording": self.recording[1] if self.recording else None,
-                    "status": self.state["status"]}
+                    "status": self.state["status"], "private_seat": self.state["private_seat"]}
         if action == "screenshot":
             result = screenshot(self.directory, request["name"], self.env, self.window.status())
             self.event("screenshot_saved", **result)
@@ -251,8 +325,6 @@ class NativeSession:
                     raise RuntimeError(f"Owned {name} exited unexpectedly: {process.returncode}")
             if self.stop_requested:
                 break
-            if self.window.watchdog():
-                self.event("key_lease_expired_all_released")
             if self.recording and self.recording[0].poll() is not None:
                 result = finish_recording(*self.recording)
                 self.recording = None
@@ -267,26 +339,33 @@ class NativeSession:
                         raise RuntimeError("Game capture target changed geometry during recording")
                     owned_sink(self.host_env, self.sink_name, self.processes["game"].pid,
                                require_stream=True)
-                if (self.window.keys or self.window.buttons) and not window["focused"]:
-                    self.window.release()
-                    self.event("focus_lost_all_keys_released")
                 last_health = time.monotonic()
             try:
                 client, _ = self.server.accept()
             except socket.timeout:
                 continue
             with client:
-                client.settimeout(15)
+                client.settimeout(0.05)
                 try:
                     data = b""
+                    command_deadline = time.monotonic() + 0.5
                     while b"\n" not in data:
-                        block = client.recv(8192)
+                        if self.stop_requested or self.safety_error:
+                            raise RuntimeError("Session stopping during command read")
+                        if time.monotonic() >= command_deadline:
+                            raise ValueError("Incomplete command exceeded 500 ms total deadline")
+                        try:
+                            block = client.recv(8192)
+                        except socket.timeout:
+                            continue
                         if not block:
                             raise ValueError("Incomplete command")
                         data += block
                         if len(data) > 65536:
                             raise ValueError("Command too large")
                     request = json.loads(data.split(b"\n", 1)[0])
+                    if not isinstance(request, dict):
+                        raise ValueError("Command must be one JSON object")
                     response = {"ok": True, "result": self.handle(request)}
                 except Exception as error:
                     self.window.release()
@@ -294,12 +373,22 @@ class NativeSession:
                     response = {"ok": False, "error": str(error)}
                 try:
                     client.sendall(json.dumps(response).encode() + b"\n")
-                except (BrokenPipeError, ConnectionResetError):
+                except (BrokenPipeError, ConnectionResetError, socket.timeout):
                     self.window.release()
 
     def cleanup(self) -> None:
         errors = []
         self.event("cleanup_started")
+        self.safety_stop.set()
+        if self.safety_thread is not None:
+            self.safety_thread.join(timeout=2)
+            if self.safety_thread.is_alive():
+                errors.append("safety thread did not stop; terminating owned X server to unblock it")
+                for name in ("game", "xwayland", "weston"):
+                    process = self.processes.get(name)
+                    if process is not None and process.poll() is None:
+                        process.terminate()
+                self.safety_thread.join(timeout=2)
         if self.window is not None:
             try:
                 self.window.release()
@@ -307,6 +396,14 @@ class NativeSession:
                 time.sleep(0.12)
             except Exception as error:
                 errors.append(f"key release: {error}")
+        if self.seat is not None:
+            try:
+                self.state["private_seat"] = self.seat.audit()
+            except Exception as error:
+                self.state["controlled_provenance_valid"] = False
+                self.state.setdefault("error", "Final seat audit: " + str(error))
+            else:
+                self.state.setdefault("controlled_provenance_valid", not self.seat.allow_physical)
         if self.recording:
             try:
                 finish_recording(*self.recording, interrupt=True)
@@ -317,7 +414,12 @@ class NativeSession:
                 self.window.close()
             except Exception as error:
                 errors.append(f"X connection: {error}")
-        for name in ("game", "xwayland"):
+        if self.seat is not None:
+            try:
+                self.seat.close()
+            except Exception as error:
+                errors.append(f"seat X connection: {error}")
+        for name in ("game", "xwayland", "weston"):
             process = self.processes.get(name)
             if process is not None and process.poll() is None:
                 # Popen owns this exact PID and it has not been reaped/reused.
@@ -338,6 +440,10 @@ class NativeSession:
         if self.server is not None:
             self.server.close()
         if self.runtime is not None:
+            try:
+                cleanup_wayland_runtime(self.runtime)
+            except Exception as error:
+                errors.append(f"private Wayland runtime: {error}")
             for name in ("control.sock", "Xauthority"):
                 try:
                     (self.runtime / name).unlink(missing_ok=True)
@@ -365,6 +471,8 @@ def supervise(directory: Path) -> int:
     session = NativeSession(directory)
     def stop(_signum: int, _frame: Any) -> None:
         session.stop_requested = True
+        if session.window is not None:
+            session.window.cancel.set()
     signal.signal(signal.SIGTERM, stop)
     signal.signal(signal.SIGINT, stop)
     try:

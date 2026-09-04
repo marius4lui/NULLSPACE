@@ -40,13 +40,16 @@ def start(args: argparse.Namespace) -> Any:
     command = args.command[1:] if args.command[:1] == ["--"] else args.command
     if not command:
         raise ValueError("Provide a game executable after --")
+    if args.allow_physical_input != (args.method == "manual_native"):
+        raise ValueError("Physical input requires both --method manual_native and --allow-physical-input; controlled methods forbid it")
     command[0] = str(resolve_executable(command[0]))
     if directory.exists():
         raise ValueError("Start requires a new run directory; existing evidence is never overwritten")
     directory.mkdir(parents=True, mode=0o700)
     write_json(directory / "launch.json", {"command": command, "cwd": str(args.cwd.resolve()),
                "width": args.width, "height": args.height, "icd": str(args.icd.resolve()),
-               "startup_timeout": args.startup_timeout, "method": args.method})
+               "startup_timeout": args.startup_timeout, "method": args.method,
+               "allow_physical_input": args.allow_physical_input, "weston": args.weston})
     with (directory / "supervisor.log").open("wb") as log:
         process = subprocess.Popen([sys.executable, str(Path(__file__).resolve()), "_serve",
                                     "--run-dir", str(directory)], stdout=log, stderr=log,
@@ -79,6 +82,10 @@ def parser() -> argparse.ArgumentParser:
     launch.add_argument("--icd", type=Path, default=Path("/usr/share/vulkan/icd.d/radeon_icd.x86_64.json"))
     launch.add_argument("--method", choices=("scripted_diagnostic", "adaptive_native", "manual_native"),
                         default="scripted_diagnostic")
+    launch.add_argument("--allow-physical-input", action="store_true",
+                        help="Explicit physical-seat opt-in, permitted only with manual_native")
+    launch.add_argument("--weston", default=str(Path.home() / ".local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston"),
+                        help="Verified Weston 15.0.1 executable for inputless controlled sessions")
     launch.add_argument("command", nargs=argparse.REMAINDER)
     for action in ("status", "focus", "blur", "release", "stop", "record-stop", "recover", "_serve"):
         entry = commands.add_parser(action)

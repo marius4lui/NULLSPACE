@@ -2,15 +2,30 @@
 from __future__ import annotations
 
 import os
+import math
 import time
+import threading
+from functools import wraps
+from collections.abc import Callable
 from typing import Any
 
+import Xlib.threaded
 from Xlib import X, XK, display
 from Xlib.ext import xtest
 
 
+def locked(method: Callable[..., Any]) -> Callable[..., Any]:
+    @wraps(method)
+    def call(self: Any, *args: Any, **kwargs: Any) -> Any:
+        with self.lock:
+            return method(self, *args, **kwargs)
+    return call
+
+
 class GameWindow:
     def __init__(self, display_name: str, authority: str, game_pid: int) -> None:
+        self.lock = threading.RLock()
+        self.cancel = threading.Event()
         # This changes only the supervisor's environment, never the login session.
         os.environ["XAUTHORITY"] = authority
         self.connection = display.Display(display_name)
@@ -28,6 +43,7 @@ class GameWindow:
         prop = window.get_full_property(self.pid_atom, X.AnyPropertyType)
         return int(prop.value[0]) if prop is not None and len(prop.value) else None
 
+    @locked
     def discover(self) -> bool:
         candidates = []
         for window in self.root.query_tree().children:
@@ -41,6 +57,7 @@ class GameWindow:
         self.window = max(candidates, key=lambda item: item[0])[1]
         return True
 
+    @locked
     def ensure_owned(self) -> None:
         if self.window is None or self._pid(self.window) != self.game_pid:
             raise RuntimeError("Capture/input target no longer belongs to the launched process")
@@ -54,6 +71,7 @@ class GameWindow:
         if foreign:
             raise RuntimeError(f"Unexpected mapped windows on private display: {foreign}")
 
+    @locked
     def focus(self) -> dict[str, Any]:
         self.ensure_owned()
         self.window.configure(stack_mode=X.Above)
@@ -64,6 +82,7 @@ class GameWindow:
             raise RuntimeError("The owned game window did not acquire X11 input focus")
         return state
 
+    @locked
     def blur(self) -> dict[str, Any]:
         """Move X11 focus to this private root, never to a host desktop window."""
         self.ensure_owned()
@@ -72,6 +91,7 @@ class GameWindow:
         self.connection.sync()
         return self.status()
 
+    @locked
     def status(self) -> dict[str, Any]:
         self.ensure_owned()
         geo = self.window.get_geometry()
@@ -101,6 +121,15 @@ class GameWindow:
         return code
 
     def apply(self, request: dict[str, Any]) -> dict[str, Any]:
+        taps, clicks, hold = self._begin_input(request)
+        # Deliberately outside the X/key-state lock. The safety thread enforces
+        # lease/focus/device policy throughout a hold, capture, or stalled IPC.
+        if hold or taps or clicks:
+            self.cancel.wait(max(hold, 0.08))
+        return self._end_input(taps, clicks, bool(request.get("release", False)))
+
+    @locked
+    def _begin_input(self, request: dict[str, Any]) -> tuple[list[tuple[int, str]], list[int], float]:
         self.focus()
         # Validate the complete command before changing any key state.
         down = [(self._keycode(name), name) for name in request.get("key_down", [])]
@@ -121,7 +150,7 @@ class GameWindow:
                 raise ValueError("Absolute pointer must remain inside the owned game window")
         hold = float(request.get("hold", 0.0))
         lease = float(request.get("lease", 10.0))
-        if not 0.0 <= hold <= 10.0 or not 0.1 <= lease <= 30.0:
+        if not math.isfinite(hold) or not math.isfinite(lease) or not 0.0 <= hold <= 10.0 or not 0.1 <= lease <= 30.0:
             raise ValueError("Hold must be 0–10 seconds; lease must be 0.1–30 seconds")
         if pointer is not None:
             xtest.fake_input(self.connection, X.MotionNotify, detail=0,
@@ -148,9 +177,11 @@ class GameWindow:
             xtest.fake_input(self.connection, X.MotionNotify, detail=1,
                              x=int(move[0]), y=int(move[1]))
         self.connection.sync()
-        self.release_deadline = time.monotonic() + max(hold, lease)
-        if hold or taps or clicks:
-            time.sleep(max(hold, 0.08))
+        self.release_deadline = time.monotonic() + lease
+        return taps, clicks, hold
+
+    @locked
+    def _end_input(self, taps: list[tuple[int, str]], clicks: list[int], release: bool) -> dict[str, Any]:
         for code, _ in taps:
             xtest.fake_input(self.connection, X.KeyRelease, code)
             self.keys.pop(code, None)
@@ -158,10 +189,11 @@ class GameWindow:
             xtest.fake_input(self.connection, X.ButtonRelease, button)
             self.buttons.discard(button)
         self.connection.sync()
-        if request.get("release", False):
+        if release:
             self.release()
         return self.status()
 
+    @locked
     def release(self) -> None:
         # Release even if focus/ownership checks fail: this connection reaches
         # only the private X server, and must never leave a stuck key there.
@@ -173,6 +205,7 @@ class GameWindow:
         self.buttons.clear()
         self.connection.sync()
 
+    @locked
     def release_all_private(self) -> None:
         """Recovery after supervisor death: query pressed keys on this server only."""
         self.ensure_owned()
@@ -186,12 +219,23 @@ class GameWindow:
         self.buttons.clear()
         self.connection.sync()
 
+    @locked
     def watchdog(self) -> bool:
         if (self.keys or self.buttons) and time.monotonic() >= self.release_deadline:
             self.release()
             return True
         return False
 
+    @locked
+    def safety_tick(self) -> str | None:
+        if self.watchdog():
+            return "key_lease_expired_all_released"
+        if (self.keys or self.buttons) and not self.status()["focused"]:
+            self.release()
+            return "focus_lost_all_keys_released"
+        return None
+
+    @locked
     def close(self) -> None:
         try:
             self.release()
