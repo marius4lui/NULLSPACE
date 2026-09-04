@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9035.30126114,
+  "acquired_utc": "2026-09-04T22:21:27.099+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/paper_flashlight_composite.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "30f5f43f754985026a4a5111f1acb3c4d5146ddc6b1eb2566b098183d2312247",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE M4 Environment Inspection (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 108947
+  },
+  "x_readback_ms": 69.42972899923916
+}

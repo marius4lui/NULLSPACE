@@ -1,0 +1,44 @@
+{
+	"camera_position": "Vector3(4.78, 1.640306, -5.46)",
+	"camera_rotation": "Vector3(-0.0188613, 0.6650611, 0)",
+	"draw_calls": 22.0,
+	"elapsed_s": 275.860606060599,
+	"frame": 2921,
+	"frame_time_ms_p50": 77.2727272727273,
+	"frame_time_ms_p95": 78.2210303030368,
+	"godot_version": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"gpu_time_ms_p50": 75.9789962768555,
+	"gpu_time_ms_p95": 79.5749969482422,
+	"image_size": [
+		1920,
+		1080
+	],
+	"input_events": 193,
+	"input_provenance": "Native user/XTEST events; view presets are inspection shortcuts, not campaign play.",
+	"measurement_elapsed_s": 4.40144272727273,
+	"primitives": 165038.0,
+	"render_cpu_time_ms_p50": 0.339999987363815,
+	"render_cpu_time_ms_p95": 0.48099998664856,
+	"render_state": {
+		"scale_3d": 1.0,
+		"shadowed_fixtures": 4,
+		"ssao": true,
+		"ssil": true,
+		"taa": true
+	},
+	"rendering_method": "forward_plus",
+	"sample_count": 19,
+	"save_result": 0,
+	"timestamp_utc": "2026-09-04T22:20:19",
+	"video_memory_bytes": 536477352.0
+}

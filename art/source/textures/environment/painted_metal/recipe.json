@@ -1,0 +1,41 @@
+{
+  "name": "painted_metal",
+  "recipe": "environment-materials-1.0",
+  "seed": 41073,
+  "description": "Cream grey folded and powder-coated commercial steel; fine orange peel, mild age. Exposed fasteners use a separate untextured metal material.",
+  "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+  "meters_per_tile": [
+    1.22,
+    1.22
+  ],
+  "resolution": [
+    1024,
+    1024
+  ],
+  "normal_convention": "tangent +Y; image rows top-down",
+  "height_source_mm_range": [
+    -0.021000225096940994,
+    0.02493150159716606
+  ],
+  "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+  "colorspace": {
+    "basecolor": "sRGB",
+    "normal": "linear",
+    "orm": "linear",
+    "height_source": "linear 16-bit"
+  },
+  "maps": {
+    "basecolor": {
+      "path": "art/source/textures/environment/painted_metal/painted_metal_basecolor.png",
+      "sha256": "210b366bea82397ff82b6db58660b6492ce34e7b1a1626efb2695a1bb5265ac2"
+    },
+    "normal": {
+      "path": "art/source/textures/environment/painted_metal/painted_metal_normal.png",
+      "sha256": "7cb6cf3cff5a9a4c7515494c5b563725524c3e6dc0a0dc24866ff41af7e4f178"
+    },
+    "orm": {
+      "path": "art/source/textures/environment/painted_metal/painted_metal_orm.png",
+      "sha256": "bda574b2b212e95ad14e6f5c34acfa60740880a615ebaf4049d7cbc47719cf50"
+    }
+  }
+}

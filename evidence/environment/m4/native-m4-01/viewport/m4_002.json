@@ -1,0 +1,31 @@
+{
+	"camera_position": "Vector3(-4.95, 1.640306, -10.7)",
+	"camera_rotation": "Vector3(-0.38999867, 1.5427666, 0)",
+	"draw_calls": 6.0,
+	"elapsed_s": 36.9338809999999,
+	"frame": 393,
+	"frame_time_ms_p50": 95.8333333333333,
+	"frame_time_ms_p95": 96.6666666666667,
+	"godot_version": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"image_size": [
+		1920,
+		1080
+	],
+	"input_events": 5,
+	"input_provenance": "Native user/XTEST events; view presets are inspection shortcuts, not campaign play.",
+	"primitives": 133400.0,
+	"rendering_method": "forward_plus",
+	"save_result": 0,
+	"timestamp_utc": "2026-09-04T20:58:18",
+	"video_memory_bytes": 535728456.0
+}

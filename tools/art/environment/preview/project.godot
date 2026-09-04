@@ -1,0 +1,27 @@
+; Isolated art inspection project. The production project is owned by core/bootstrap.
+config_version=5
+
+[application]
+config/name="NULLSPACE M4 Environment Inspection"
+run/main_scene="res://preview.tscn"
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/vsync/vsync_mode=0
+
+[rendering]
+renderer/rendering_method.mobile="mobile"
+renderer/rendering_method="forward_plus"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/default_filters/anisotropic_filtering_level=3
+anti_aliasing/quality/msaa_3d=1
+anti_aliasing/quality/use_taa=true
+lights_and_shadows/positional_shadow/atlas_size=4096
+environment/ssao/quality=2
+environment/ssil/quality=2
+
+[physics]
+common/physics_ticks_per_second=60

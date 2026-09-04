@@ -1,0 +1,19 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+WARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.
+     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)
+Vulkan 1.4.354 - Forward+ - Using Device #0: AMD - AMD Radeon 660M (RADV REMBRANDT)
+
+M4_REVIEW_VIEW 1 camera=(2.7, 1.66, -0.85)
+M4_PREVIEW_READY Forward+; native WASD/mouse inspection; no campaign or gameplay claims
+M4_CONTROLS WASD Shift mouse Esc F flashlight 1-6 review views P still L fixture state
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-01/viewport/m4_001 result=0
+M4_REVIEW_VIEW 3 camera=(-4.95, 1.66, -10.7)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-01/viewport/m4_002 result=0
+M4_SAMPLE frames=600 inputs=75 camera=(-0.23588, 1.640836, -12.14195) fps=13.0 draw_calls=16.0 objects=18.0 primitives=154222.0
+M4_SAMPLE frames=1200 inputs=145 camera=(1.48642, 1.640836, -9.71006) fps=26.0 draw_calls=6.0 objects=6.0 primitives=133400.0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-01/viewport/m4_003 result=0
+M4_REVIEW_VIEW 2 camera=(4.78, 1.66, -5.46)
+M4_SAMPLE frames=1800 inputs=155 camera=(4.78, 1.640306, -5.46) fps=14.0 draw_calls=22.0 objects=26.0 primitives=164408.0
+M4_REVIEW_VIEW 6 camera=(2.85, 1.66, -10.36)
+M4_SAMPLE frames=2400 inputs=158 camera=(2.85, 1.640306, -10.36) fps=14.0 draw_calls=9.0 objects=9.0 primitives=139188.0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-01/viewport/m4_004 result=0

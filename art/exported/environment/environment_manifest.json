@@ -1,0 +1,796 @@
+{
+  "revision": "environment-kit-1.0",
+  "seed": 41073,
+  "meters_per_unit": 1.0,
+  "modules": {
+    "wall_061": {
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.61,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "f360e42def3a4a83173cca9df181e0ff0752658043f166e17da60a7b926d248d"
+    },
+    "wall_122": {
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.22,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "f70b3d9eaeae249c9657dc8df8cdc52c02736dbf40d37a7f0c4fa98ba51a4b52"
+    },
+    "wall_244": {
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "c67e6bb2e81a981467fc7c971d26128413c1319704c6cb34e58b056f2f0169c3"
+    },
+    "wall_366": {
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        3.66,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "6b0a4b67270840005ce3ddba7f8b769372449a085648e139083d8acbaa6693dc"
+    },
+    "wall_portal_366": {
+      "vertices": 1376,
+      "triangles": 2712,
+      "materials": 3,
+      "uv_layers": 2,
+      "dimensions_m": [
+        3.66,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "341353212ce414e09431b75a5ecf0385643a17935ba358541abee7e0c6ba17ba"
+    },
+    "wall_portal_244": {
+      "vertices": 1376,
+      "triangles": 2712,
+      "materials": 3,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "8cd7f05bf6888f476c5b37354d8c69707bb622ac9c2a3419205ea382b6038d9a"
+    },
+    "wall_low_244": {
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.208,
+        2.48
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "f32a362bfff5c2a33a850e9f21ef6f188510116b9abe42d36d69175125ca2996"
+    },
+    "column_061": {
+      "vertices": 896,
+      "triangles": 1772,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.658,
+        0.658,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "ba81141b7f98849c2bba76bb93ca81224ac5b4b906f6fbddeb62e1b204e1db8c"
+    },
+    "column_086": {
+      "vertices": 896,
+      "triangles": 1772,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.908,
+        0.908,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "bce18c4e322e406d749bb04d8e100240b23a8aeb26495f3a1244fc8a4e11f40c"
+    },
+    "ceiling_board_122": {
+      "vertices": 160,
+      "triangles": 316,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.197,
+        0.587,
+        0.024
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "112a2a353f4fa7bfd9bdfef3272ca5b5c9deb01e8baf0aa4429497fbb4d6ec71"
+    },
+    "ceiling_grid_122": {
+      "vertices": 192,
+      "triangles": 380,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.22,
+        0.024,
+        0.036
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "7fe6d23952a84f3f12f8eddf1d7882e2f566e5b908797cfb6778fbc9b978e205"
+    },
+    "ceiling_grid_244": {
+      "vertices": 192,
+      "triangles": 380,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.024,
+        0.036
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "88c7182d3c1ef032643ed77fc7ac416e13ed8ee85ab91e289c3eb2ab8e0e6dc9"
+    },
+    "cove_corner_090": {
+      "vertices": 317,
+      "triangles": 630,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.1042,
+        0.1042,
+        0.1074
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "d3d555b6db65afe1f5de55658edc866227dfe9eac1af79df02a6a7f7e50ffb32"
+    },
+    "floor_carpet_244": {
+      "vertices": 8,
+      "triangles": 12,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        2.44,
+        0.08
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "cb9d2d282b941343cf9cc665a5a7550953440efbfae08645bf9e35a12eb07098"
+    },
+    "fixture_prismatic": {
+      "vertices": 2944,
+      "triangles": 5788,
+      "materials": 3,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.206,
+        0.596,
+        0.136
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "214716aa31f0585d32658e7b9c0ee93ca24d4f91ffb9efe30f3c8901d9e53403"
+    },
+    "fixture_exposed": {
+      "vertices": 2848,
+      "triangles": 5600,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.206,
+        0.596,
+        0.136
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "7a4cc78e12b128c76787470d520bd585ff10a1dee35bf6d78b886d1e93f97e54"
+    },
+    "wall_vent": {
+      "vertices": 1696,
+      "triangles": 3328,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.607,
+        0.0615,
+        0.327
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "a7a3a05156eedb942fedbdf82bf6d7eb9047d0222ffd9b3dde7bc195f95c922c"
+    },
+    "room_m4_architecture": {
+      "vertices": 67853,
+      "triangles": 134030,
+      "materials": 6,
+      "uv_layers": 2,
+      "dimensions_m": [
+        16.068,
+        20.948,
+        2.83
+      ],
+      "role": "authored reference room, shared surfaces, fixtures instanced at runtime",
+      "sha256": "d794eb0eb166fe567a60cb37cbe1e50f2415437ffef39d17f7e77016eac4483f"
+    }
+  },
+  "fixtures": [
+    {
+      "id": "m4_f00",
+      "variant": "fixture_prismatic",
+      "position": [
+        -4.27,
+        2.704,
+        -4.575
+      ],
+      "state": "WEAK",
+      "shadow": false,
+      "warmth": 0.11
+    },
+    {
+      "id": "m4_f01",
+      "variant": "fixture_exposed",
+      "position": [
+        -4.27,
+        2.704,
+        -11.895
+      ],
+      "state": "OFF",
+      "shadow": false,
+      "warmth": 0.021420331483782955
+    },
+    {
+      "id": "m4_f02",
+      "variant": "fixture_prismatic",
+      "position": [
+        -3.05,
+        2.704,
+        -8.845
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.008010876567138201
+    },
+    {
+      "id": "m4_f03",
+      "variant": "fixture_prismatic",
+      "position": [
+        -1.83,
+        2.704,
+        -2.135
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.04631346650530796
+    },
+    {
+      "id": "m4_f04",
+      "variant": "fixture_prismatic",
+      "position": [
+        -0.6099999999999994,
+        2.704,
+        -6.405
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.040629700528511836
+    },
+    {
+      "id": "m4_f05",
+      "variant": "fixture_prismatic",
+      "position": [
+        -0.6099999999999994,
+        2.704,
+        -13.725
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.03735203329762703
+    },
+    {
+      "id": "m4_f06",
+      "variant": "fixture_prismatic",
+      "position": [
+        1.83,
+        2.704,
+        -10.674999999999999
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.05052282845208145
+    },
+    {
+      "id": "m4_f07",
+      "variant": "fixture_prismatic",
+      "position": [
+        3.0500000000000007,
+        2.704,
+        -1.525
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.011197368037697237
+    },
+    {
+      "id": "m4_f08",
+      "variant": "fixture_prismatic",
+      "position": [
+        3.0500000000000007,
+        2.704,
+        -4.575
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.017739672409972734
+    },
+    {
+      "id": "m4_f09",
+      "variant": "fixture_prismatic",
+      "position": [
+        4.27,
+        2.704,
+        -7.625
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.05279200005790753
+    },
+    {
+      "id": "m4_f10",
+      "variant": "fixture_prismatic",
+      "position": [
+        4.27,
+        2.704,
+        -13.115
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.040047951824946006
+    }
+  ],
+  "collision_boxes": [
+    {
+      "name": "M4_ContinuousCarpet",
+      "center": [
+        0.0,
+        -0.041999999433755875,
+        -7.320000171661377
+      ],
+      "size": [
+        12.199999809265137,
+        0.08399999886751175,
+        14.640000343322754
+      ]
+    },
+    {
+      "name": "SouthBlank_SouthBlank_PaperedShell",
+      "center": [
+        -2.43999981880188,
+        1.3600000143051147,
+        -0.0
+      ],
+      "size": [
+        7.320000171661377,
+        2.7200000286102295,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "SouthReturn_SouthReturn_PaperedShell",
+      "center": [
+        4.880000114440918,
+        1.3600000143051147,
+        -0.0
+      ],
+      "size": [
+        2.440000295639038,
+        2.7200000286102295,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "ArrivalOpening_Header",
+      "center": [
+        2.440000057220459,
+        2.5850000381469727,
+        -0.0
+      ],
+      "size": [
+        2.4600000381469727,
+        0.26999998092651367,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "WestBoundary_WestBoundary_PaperedShell",
+      "center": [
+        -6.100000381469727,
+        1.3600000143051147,
+        -7.320000171661377
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        14.640000343322754
+      ]
+    },
+    {
+      "name": "NorthPortal_NorthPortal_Pier",
+      "center": [
+        -4.880000114440918,
+        1.3600000143051147,
+        -14.640000343322754
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "NorthPortal_NorthPortal_Pier.001",
+      "center": [
+        2.384185791015625e-07,
+        1.3600000143051147,
+        -14.640000343322754
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "NorthPortal_NorthPortal_Lintel",
+      "center": [
+        -2.43999981880188,
+        2.5850000381469727,
+        -14.640000343322754
+      ],
+      "size": [
+        2.452000141143799,
+        0.26999998092651367,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "NorthPortal_NorthPortal_HeaderBead",
+      "center": [
+        -2.440000057220459,
+        2.4489998817443848,
+        -14.555999755859375
+      ],
+      "size": [
+        2.4599997997283936,
+        0.016000032424926758,
+        0.012000083923339844
+      ]
+    },
+    {
+      "name": "NorthBlank_NorthBlank_PaperedShell",
+      "center": [
+        3.6600003242492676,
+        1.3600000143051147,
+        -14.640000343322754
+      ],
+      "size": [
+        4.880000114440918,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "EastFront_EastFront_PaperedShell",
+      "center": [
+        6.09999942779541,
+        1.3600000143051147,
+        -3.6600000858306885
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        7.320000171661377
+      ]
+    },
+    {
+      "name": "EastRear_EastRear_PaperedShell",
+      "center": [
+        6.09999942779541,
+        1.3600000143051147,
+        -12.200000762939453
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        4.880000114440918
+      ]
+    },
+    {
+      "name": "EastOpening_Header",
+      "center": [
+        6.099999904632568,
+        2.5850000381469727,
+        -8.539999961853027
+      ],
+      "size": [
+        0.15999984741210938,
+        0.26999998092651367,
+        2.460000514984131
+      ]
+    },
+    {
+      "name": "OffsetPartition_OffsetPartition_PaperedShell",
+      "center": [
+        -1.5250000953674316,
+        1.3600000143051147,
+        -6.099999904632568
+      ],
+      "size": [
+        4.269999980926514,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "OffsetReturn_OffsetReturn_PaperedShell",
+      "center": [
+        0.60999995470047,
+        1.3600000143051147,
+        -7.319999694824219
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "FrontOffsetColumn_column_061_WrappedPier",
+      "center": [
+        -2.7899999618530273,
+        1.3600000143051147,
+        -3.4000000953674316
+      ],
+      "size": [
+        0.6100001335144043,
+        2.7200000286102295,
+        0.6100001335144043
+      ]
+    },
+    {
+      "name": "FarColumn_column_086_WrappedPier",
+      "center": [
+        3.799999952316284,
+        1.3600000143051147,
+        -11.039999961853027
+      ],
+      "size": [
+        0.8600001335144043,
+        2.7200000286102295,
+        0.8600006103515625
+      ]
+    },
+    {
+      "name": "NorthContinuationCarpet",
+      "center": [
+        -2.440000057220459,
+        -0.041999999433755875,
+        -16.469999313354492
+      ],
+      "size": [
+        2.440000057220459,
+        0.08399999886751175,
+        3.659998893737793
+      ]
+    },
+    {
+      "name": "NorthLeftReturn_NorthLeftReturn_PaperedShell",
+      "center": [
+        -3.6600003242492676,
+        1.3600000143051147,
+        -16.470001220703125
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        3.660000801086426
+      ]
+    },
+    {
+      "name": "NorthRightReturn_NorthRightReturn_PaperedShell",
+      "center": [
+        -1.2200000286102295,
+        1.3600000143051147,
+        -16.470001220703125
+      ],
+      "size": [
+        0.16000020503997803,
+        2.7200000286102295,
+        3.660000801086426
+      ]
+    },
+    {
+      "name": "NorthBlindTurn_NorthBlindTurn_PaperedShell",
+      "center": [
+        -2.440000057220459,
+        1.3600000143051147,
+        -18.299999237060547
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "EastContinuationCarpet",
+      "center": [
+        7.930000305175781,
+        -0.041999999433755875,
+        -8.539999961853027
+      ],
+      "size": [
+        3.6600003242492676,
+        0.08399999886751175,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "EastLeftReturn_EastLeftReturn_PaperedShell",
+      "center": [
+        7.930000305175781,
+        1.3600000143051147,
+        -7.320000171661377
+      ],
+      "size": [
+        3.6600003242492676,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "EastRightReturn_EastRightReturn_PaperedShell",
+      "center": [
+        7.930000305175781,
+        1.3600000143051147,
+        -9.760000228881836
+      ],
+      "size": [
+        3.6600003242492676,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "EastBlindTurn_EastBlindTurn_PaperedShell",
+      "center": [
+        9.760000228881836,
+        1.3600000143051147,
+        -8.539999961853027
+      ],
+      "size": [
+        0.15999984741210938,
+        2.7200000286102295,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "EntryCarpet",
+      "center": [
+        2.440000057220459,
+        -0.041999999433755875,
+        1.2200000286102295
+      ],
+      "size": [
+        2.440000057220459,
+        0.08399999886751175,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "EntryLeftReturn_EntryLeftReturn_PaperedShell",
+      "center": [
+        1.2200000286102295,
+        1.3600000143051147,
+        1.2200000286102295
+      ],
+      "size": [
+        0.16000020503997803,
+        2.7200000286102295,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "EntryRightReturn_EntryRightReturn_PaperedShell",
+      "center": [
+        3.6599998474121094,
+        1.3600000143051147,
+        1.2200000286102295
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "EntryBack_EntryBack_PaperedShell",
+      "center": [
+        2.440000057220459,
+        1.3600000143051147,
+        2.440000057220459
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    }
+  ],
+  "room": {
+    "id": "M4_REFERENCE",
+    "bounds_blender_m": [
+      -6.1,
+      6.1,
+      0,
+      14.64,
+      0,
+      2.72
+    ],
+    "ceiling_height_m": 2.72,
+    "grid_m": [
+      1.22,
+      0.61
+    ],
+    "minimum_opening_height_m": 2.45,
+    "materials": "Shared meter-UV PBR; tiled microdetail and original world-space room macro mask.",
+    "role": "Art validation composition; does not claim a campaign room graph or player systems.",
+    "portal_anchors_godot": [
+      [
+        2.44,
+        0,
+        0
+      ],
+      [
+        -2.44,
+        0,
+        -14.64
+      ],
+      [
+        6.1,
+        0,
+        -8.54
+      ]
+    ]
+  },
+  "tool": {
+    "blender": "5.2.1 LTS",
+    "binary": "/home/marius/.local/share/nullspace/toolchains/blender-5.2.1/blender",
+    "python": "3.13.13 (main, Apr 25 2025, 12:39:20) [GCC 14.2.1 20250110 (Red Hat 14.2.1-11)]"
+  },
+  "provenance": "Original authored mathematical geometry and project-created textures. No external game content, image generation, asset packs or franchise text. Recipe and editable modifiers retained."
+}

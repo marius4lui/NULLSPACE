@@ -1,0 +1,314 @@
+{
+  "version": "environment-materials-1.0",
+  "seed": 41073,
+  "materials": [
+    {
+      "name": "wallpaper",
+      "recipe": "environment-materials-1.0",
+      "seed": 41073,
+      "description": "Pale commercial paper; quiet broken-lozenge print, woven grain, 610mm roll seams, restrained raised edges and sparse adhesive bubbles.",
+      "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+      "meters_per_tile": [
+        2.44,
+        2.44
+      ],
+      "resolution": [
+        2048,
+        2048
+      ],
+      "normal_convention": "tangent +Y; image rows top-down",
+      "height_source_mm_range": [
+        -0.19355659186840057,
+        0.9794248342514038
+      ],
+      "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+      "colorspace": {
+        "basecolor": "sRGB",
+        "normal": "linear",
+        "orm": "linear",
+        "height_source": "linear 16-bit"
+      },
+      "maps": {
+        "basecolor": {
+          "path": "art/source/textures/environment/wallpaper/wallpaper_basecolor.png",
+          "sha256": "50356c1162bf5a053b9e676de6c342007303c8bd4351715f51fdd0bf3e499e58"
+        },
+        "normal": {
+          "path": "art/source/textures/environment/wallpaper/wallpaper_normal.png",
+          "sha256": "f14d7e681fed7707cb651bbd20ab2ac5d6d2946cfb02a5771b2a09c72e17056c"
+        },
+        "orm": {
+          "path": "art/source/textures/environment/wallpaper/wallpaper_orm.png",
+          "sha256": "61ec1361158666ce5708f4c56f1cd9d578410d312837adab821ca13a6111a2a1"
+        }
+      }
+    },
+    {
+      "name": "carpet",
+      "recipe": "environment-materials-1.0",
+      "seed": 41073,
+      "description": "Original tightly looped commercial carpet; short directional pile, warm grey-beige flecks and irregular compressed tufts. Room moisture comes from a separate world mask.",
+      "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+      "meters_per_tile": [
+        2.44,
+        2.44
+      ],
+      "resolution": [
+        2048,
+        2048
+      ],
+      "normal_convention": "tangent +Y; image rows top-down",
+      "height_source_mm_range": [
+        -0.629570031193077,
+        0.6781846261610701
+      ],
+      "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+      "colorspace": {
+        "basecolor": "sRGB",
+        "normal": "linear",
+        "orm": "linear",
+        "height_source": "linear 16-bit"
+      },
+      "maps": {
+        "basecolor": {
+          "path": "art/source/textures/environment/carpet/carpet_basecolor.png",
+          "sha256": "03e4e8878e0fc57b47bed3a65322dd7fd4dc5238b78561e114bf563ad823bf49"
+        },
+        "normal": {
+          "path": "art/source/textures/environment/carpet/carpet_normal.png",
+          "sha256": "4eefb5bee7734b8de3351045c962339bdbe67527f76d1434d037393af63ab4a7"
+        },
+        "orm": {
+          "path": "art/source/textures/environment/carpet/carpet_orm.png",
+          "sha256": "9c6df287c178064b68ed02ba82d1da59001ba0068939d4fb766b94144008656f"
+        }
+      }
+    },
+    {
+      "name": "ceiling",
+      "recipe": "environment-materials-1.0",
+      "seed": 41073,
+      "description": "Mineral-fiber acoustic board; thousands of original directional fissures, fine particulate grain and restrained neutral age. Tegular edge is geometry.",
+      "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+      "meters_per_tile": [
+        1.22,
+        1.22
+      ],
+      "resolution": [
+        1024,
+        1024
+      ],
+      "normal_convention": "tangent +Y; image rows top-down",
+      "height_source_mm_range": [
+        -0.4944385588169098,
+        0.09654638171195984
+      ],
+      "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+      "colorspace": {
+        "basecolor": "sRGB",
+        "normal": "linear",
+        "orm": "linear",
+        "height_source": "linear 16-bit"
+      },
+      "maps": {
+        "basecolor": {
+          "path": "art/source/textures/environment/ceiling/ceiling_basecolor.png",
+          "sha256": "aadc46c21612af736044b15ded8db2e35a90514cff152e71a410d3950883dbf2"
+        },
+        "normal": {
+          "path": "art/source/textures/environment/ceiling/ceiling_normal.png",
+          "sha256": "3da17bd465f03ae5d5fa4f50fac29bdec446022476a319b5f450b32e3445d124"
+        },
+        "orm": {
+          "path": "art/source/textures/environment/ceiling/ceiling_orm.png",
+          "sha256": "52eb334e8236363804b93d6d14d844c9240844dac86cabb25d3bd1941ad9bcb1"
+        }
+      }
+    },
+    {
+      "name": "painted_metal",
+      "recipe": "environment-materials-1.0",
+      "seed": 41073,
+      "description": "Cream grey folded and powder-coated commercial steel; fine orange peel, mild age. Exposed fasteners use a separate untextured metal material.",
+      "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+      "meters_per_tile": [
+        1.22,
+        1.22
+      ],
+      "resolution": [
+        1024,
+        1024
+      ],
+      "normal_convention": "tangent +Y; image rows top-down",
+      "height_source_mm_range": [
+        -0.021000225096940994,
+        0.02493150159716606
+      ],
+      "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+      "colorspace": {
+        "basecolor": "sRGB",
+        "normal": "linear",
+        "orm": "linear",
+        "height_source": "linear 16-bit"
+      },
+      "maps": {
+        "basecolor": {
+          "path": "art/source/textures/environment/painted_metal/painted_metal_basecolor.png",
+          "sha256": "210b366bea82397ff82b6db58660b6492ce34e7b1a1626efb2695a1bb5265ac2"
+        },
+        "normal": {
+          "path": "art/source/textures/environment/painted_metal/painted_metal_normal.png",
+          "sha256": "7cb6cf3cff5a9a4c7515494c5b563725524c3e6dc0a0dc24866ff41af7e4f178"
+        },
+        "orm": {
+          "path": "art/source/textures/environment/painted_metal/painted_metal_orm.png",
+          "sha256": "bda574b2b212e95ad14e6f5c34acfa60740880a615ebaf4049d7cbc47719cf50"
+        }
+      }
+    },
+    {
+      "name": "baseboard",
+      "recipe": "environment-materials-1.0",
+      "seed": 41073,
+      "description": "Dark brown extruded rubber cove base; subtle longitudinal extrusion and low soft sheen. Cove and rolled upper lip are actual profile geometry.",
+      "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+      "meters_per_tile": [
+        1.22,
+        1.22
+      ],
+      "resolution": [
+        512,
+        512
+      ],
+      "normal_convention": "tangent +Y; image rows top-down",
+      "height_source_mm_range": [
+        -0.016776293516159058,
+        0.015649504959583282
+      ],
+      "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+      "colorspace": {
+        "basecolor": "sRGB",
+        "normal": "linear",
+        "orm": "linear",
+        "height_source": "linear 16-bit"
+      },
+      "maps": {
+        "basecolor": {
+          "path": "art/source/textures/environment/baseboard/baseboard_basecolor.png",
+          "sha256": "bfe1e44e0d803b1b3dc52bf581bf169d09204c25d3ab08cf15a27d120b9370f3"
+        },
+        "normal": {
+          "path": "art/source/textures/environment/baseboard/baseboard_normal.png",
+          "sha256": "1021760936bcc24456b554536028099847d0e8b04c61f1d9ce8745a4be62f8b1"
+        },
+        "orm": {
+          "path": "art/source/textures/environment/baseboard/baseboard_orm.png",
+          "sha256": "4533105f9d14d950a28e508f4bbf5f47b51968eca5800430183d737ae767da2c"
+        }
+      }
+    },
+    {
+      "name": "diffuser",
+      "recipe": "environment-materials-1.0",
+      "seed": 41073,
+      "description": "Original molded micro-prism acrylic diffuser; fine pyramidal cells. Opaque energy-conserving approximation avoids expensive layered transparency.",
+      "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+      "meters_per_tile": [
+        0.61,
+        0.61
+      ],
+      "resolution": [
+        512,
+        512
+      ],
+      "normal_convention": "tangent +Y; image rows top-down",
+      "height_source_mm_range": [
+        0.0,
+        0.18000000715255737
+      ],
+      "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+      "colorspace": {
+        "basecolor": "sRGB",
+        "normal": "linear",
+        "orm": "linear",
+        "height_source": "linear 16-bit"
+      },
+      "maps": {
+        "basecolor": {
+          "path": "art/source/textures/environment/diffuser/diffuser_basecolor.png",
+          "sha256": "2a00f3c35a9292846921d62eefa9daebda972738d07f39852440bc0d68552014"
+        },
+        "normal": {
+          "path": "art/source/textures/environment/diffuser/diffuser_normal.png",
+          "sha256": "e4f18417acdbe0b90bc488c9baffdc6be053e52377153fac7381674a4dc786f1"
+        },
+        "orm": {
+          "path": "art/source/textures/environment/diffuser/diffuser_orm.png",
+          "sha256": "f1b7dd05aad612ead41e723fc554664e228538c01c7b32567e703775594c35c3"
+        }
+      }
+    },
+    {
+      "name": "fixture_detail",
+      "recipe": "environment-materials-1.0",
+      "seed": 41073,
+      "description": "Eight original swatches atlas tiny steel, recessed slots, reflector, ceramic and powered/unpowered phosphor parts. Two-by-four cells with guarded UVs; emission only on phosphor cell.",
+      "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+      "meters_per_tile": [
+        1.22,
+        1.22
+      ],
+      "resolution": [
+        512,
+        512
+      ],
+      "normal_convention": "tangent +Y; image rows top-down",
+      "height_source_mm_range": [
+        0.0,
+        0.0
+      ],
+      "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+      "colorspace": {
+        "basecolor": "sRGB",
+        "normal": "linear",
+        "orm": "linear",
+        "height_source": "linear 16-bit"
+      },
+      "maps": {
+        "basecolor": {
+          "path": "art/source/textures/environment/fixture_detail/fixture_detail_basecolor.png",
+          "sha256": "88d11c0f8af26a94ebc2378f461169d63398f32725e337c5309554764591aa20"
+        },
+        "normal": {
+          "path": "art/source/textures/environment/fixture_detail/fixture_detail_normal.png",
+          "sha256": "71d432413a10aab25e5dee0aa377a1ca29dddef8eb2e30584135268d218c9d96"
+        },
+        "orm": {
+          "path": "art/source/textures/environment/fixture_detail/fixture_detail_orm.png",
+          "sha256": "9719f89ec6b4e9660b7148d8a5e1c2757e37fdef38abe2fc33512244a1c9fbef"
+        }
+      },
+      "emission": {
+        "path": "art/source/textures/environment/fixture_detail/fixture_detail_emission.png",
+        "sha256": "e9663408931e28e300f1a666abf090e22ce103690e0ac1ff394c121827d54a1f"
+      }
+    }
+  ],
+  "room_macro": {
+    "path": "art/source/textures/environment/room_m4/room_m4_macro.png",
+    "sha256": "0f866e710983d864c910dad410d82085b1706ac3f8f05450a87dde581ec4c1b2",
+    "description": "R=moisture under authored ceiling leak; G=traffic compression and edge dust; B=broad dye variation. 12.2m by14.64m room. Macro only; 2K microdetail remains tiled at physical scale.",
+    "world_godot_bounds_xz": [
+      -6.1,
+      6.1,
+      -14.64,
+      0.0
+    ]
+  },
+  "creator": "NULLSPACE environment-art delegated production agent",
+  "license": "Original project content; ownership follows repository project terms.",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0"
+  }
+}

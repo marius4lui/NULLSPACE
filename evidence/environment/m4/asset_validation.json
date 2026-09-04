@@ -1,0 +1,673 @@
+{
+  "tool": "Khronos glTF-Validator",
+  "version": "2.0.0-dev.3.10",
+  "timestamp": "2026-09-04T21:24:57.558Z",
+  "scope": "Asset correctness and staging only; this is not visual, experiential or milestone acceptance.",
+  "modules": [
+    {
+      "name": "ceiling_board_122",
+      "sourceSha256": "112a2a353f4fa7bfd9bdfef3272ca5b5c9deb01e8baf0aa4429497fbb4d6ec71",
+      "vertices": 160,
+      "triangles": 316,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.197,
+        0.587,
+        0.024
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "112a2a353f4fa7bfd9bdfef3272ca5b5c9deb01e8baf0aa4429497fbb4d6ec71",
+      "exportedVertices": 304,
+      "primitives": 1,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ceiling_grid_122",
+      "sourceSha256": "7fe6d23952a84f3f12f8eddf1d7882e2f566e5b908797cfb6778fbc9b978e205",
+      "vertices": 192,
+      "triangles": 380,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.22,
+        0.024,
+        0.036
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "7fe6d23952a84f3f12f8eddf1d7882e2f566e5b908797cfb6778fbc9b978e205",
+      "exportedVertices": 432,
+      "primitives": 1,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ceiling_grid_244",
+      "sourceSha256": "88c7182d3c1ef032643ed77fc7ac416e13ed8ee85ab91e289c3eb2ab8e0e6dc9",
+      "vertices": 192,
+      "triangles": 380,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.024,
+        0.036
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "88c7182d3c1ef032643ed77fc7ac416e13ed8ee85ab91e289c3eb2ab8e0e6dc9",
+      "exportedVertices": 432,
+      "primitives": 1,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "column_061",
+      "sourceSha256": "ba81141b7f98849c2bba76bb93ca81224ac5b4b906f6fbddeb62e1b204e1db8c",
+      "vertices": 896,
+      "triangles": 1772,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.658,
+        0.658,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "ba81141b7f98849c2bba76bb93ca81224ac5b4b906f6fbddeb62e1b204e1db8c",
+      "exportedVertices": 1856,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "column_086",
+      "sourceSha256": "bce18c4e322e406d749bb04d8e100240b23a8aeb26495f3a1244fc8a4e11f40c",
+      "vertices": 896,
+      "triangles": 1772,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.908,
+        0.908,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "bce18c4e322e406d749bb04d8e100240b23a8aeb26495f3a1244fc8a4e11f40c",
+      "exportedVertices": 1917,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "cove_corner_090",
+      "sourceSha256": "d3d555b6db65afe1f5de55658edc866227dfe9eac1af79df02a6a7f7e50ffb32",
+      "vertices": 317,
+      "triangles": 630,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.1042,
+        0.1042,
+        0.1074
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "d3d555b6db65afe1f5de55658edc866227dfe9eac1af79df02a6a7f7e50ffb32",
+      "exportedVertices": 808,
+      "primitives": 1,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture_exposed",
+      "sourceSha256": "7a4cc78e12b128c76787470d520bd585ff10a1dee35bf6d78b886d1e93f97e54",
+      "vertices": 2848,
+      "triangles": 5600,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.206,
+        0.596,
+        0.136
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "7a4cc78e12b128c76787470d520bd585ff10a1dee35bf6d78b886d1e93f97e54",
+      "exportedVertices": 6768,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture_prismatic",
+      "sourceSha256": "214716aa31f0585d32658e7b9c0ee93ca24d4f91ffb9efe30f3c8901d9e53403",
+      "vertices": 2944,
+      "triangles": 5788,
+      "materials": 3,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.206,
+        0.596,
+        0.136
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "214716aa31f0585d32658e7b9c0ee93ca24d4f91ffb9efe30f3c8901d9e53403",
+      "exportedVertices": 6972,
+      "primitives": 3,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 3,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "floor_carpet_244",
+      "sourceSha256": "cb9d2d282b941343cf9cc665a5a7550953440efbfae08645bf9e35a12eb07098",
+      "vertices": 8,
+      "triangles": 12,
+      "materials": 1,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        2.44,
+        0.08
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "cb9d2d282b941343cf9cc665a5a7550953440efbfae08645bf9e35a12eb07098",
+      "exportedVertices": 24,
+      "primitives": 1,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "room_m4_architecture",
+      "sourceSha256": "d794eb0eb166fe567a60cb37cbe1e50f2415437ffef39d17f7e77016eac4483f",
+      "vertices": 67853,
+      "triangles": 134030,
+      "materials": 6,
+      "uv_layers": 2,
+      "dimensions_m": [
+        16.068,
+        20.948,
+        2.83
+      ],
+      "role": "authored reference room, shared surfaces, fixtures instanced at runtime",
+      "sha256": "d794eb0eb166fe567a60cb37cbe1e50f2415437ffef39d17f7e77016eac4483f",
+      "exportedVertices": 137687,
+      "primitives": 6,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 6,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/3/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/4/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/5/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_061",
+      "sourceSha256": "f360e42def3a4a83173cca9df181e0ff0752658043f166e17da60a7b926d248d",
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.61,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "f360e42def3a4a83173cca9df181e0ff0752658043f166e17da60a7b926d248d",
+      "exportedVertices": 1070,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_122",
+      "sourceSha256": "f70b3d9eaeae249c9657dc8df8cdc52c02736dbf40d37a7f0c4fa98ba51a4b52",
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        1.22,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "f70b3d9eaeae249c9657dc8df8cdc52c02736dbf40d37a7f0c4fa98ba51a4b52",
+      "exportedVertices": 1059,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_244",
+      "sourceSha256": "c67e6bb2e81a981467fc7c971d26128413c1319704c6cb34e58b056f2f0169c3",
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "c67e6bb2e81a981467fc7c971d26128413c1319704c6cb34e58b056f2f0169c3",
+      "exportedVertices": 1068,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_366",
+      "sourceSha256": "6b0a4b67270840005ce3ddba7f8b769372449a085648e139083d8acbaa6693dc",
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        3.66,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "6b0a4b67270840005ce3ddba7f8b769372449a085648e139083d8acbaa6693dc",
+      "exportedVertices": 1062,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_low_244",
+      "sourceSha256": "f32a362bfff5c2a33a850e9f21ef6f188510116b9abe42d36d69175125ca2996",
+      "vertices": 496,
+      "triangles": 980,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.208,
+        2.48
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "f32a362bfff5c2a33a850e9f21ef6f188510116b9abe42d36d69175125ca2996",
+      "exportedVertices": 1068,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_portal_244",
+      "sourceSha256": "8cd7f05bf6888f476c5b37354d8c69707bb622ac9c2a3419205ea382b6038d9a",
+      "vertices": 1376,
+      "triangles": 2712,
+      "materials": 3,
+      "uv_layers": 2,
+      "dimensions_m": [
+        2.44,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "8cd7f05bf6888f476c5b37354d8c69707bb622ac9c2a3419205ea382b6038d9a",
+      "exportedVertices": 2964,
+      "primitives": 3,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 3,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_portal_366",
+      "sourceSha256": "341353212ce414e09431b75a5ecf0385643a17935ba358541abee7e0c6ba17ba",
+      "vertices": 1376,
+      "triangles": 2712,
+      "materials": 3,
+      "uv_layers": 2,
+      "dimensions_m": [
+        3.66,
+        0.208,
+        2.72
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "341353212ce414e09431b75a5ecf0385643a17935ba358541abee7e0c6ba17ba",
+      "exportedVertices": 2964,
+      "primitives": 3,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 3,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wall_vent",
+      "sourceSha256": "a7a3a05156eedb942fedbdf82bf6d7eb9047d0222ffd9b3dde7bc195f95c922c",
+      "vertices": 1696,
+      "triangles": 3328,
+      "materials": 2,
+      "uv_layers": 2,
+      "dimensions_m": [
+        0.607,
+        0.0615,
+        0.327
+      ],
+      "role": "modular architecture / original fixture",
+      "sha256": "a7a3a05156eedb942fedbdf82bf6d7eb9047d0222ffd9b3dde7bc195f95c922c",
+      "exportedVertices": 3855,
+      "primitives": 2,
+      "khronos": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 2,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_1"
+          }
+        ]
+      }
+    }
+  ],
+  "collisionBoxes": 29,
+  "fixtureInstances": 11,
+  "shadowedFixtures": 4,
+  "failures": [],
+  "result": "PASS"
+}

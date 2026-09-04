@@ -1,0 +1,41 @@
+{
+  "name": "wallpaper",
+  "recipe": "environment-materials-1.0",
+  "seed": 41073,
+  "description": "Pale commercial paper; quiet broken-lozenge print, woven grain, 610mm roll seams, restrained raised edges and sparse adhesive bubbles.",
+  "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+  "meters_per_tile": [
+    2.44,
+    2.44
+  ],
+  "resolution": [
+    2048,
+    2048
+  ],
+  "normal_convention": "tangent +Y; image rows top-down",
+  "height_source_mm_range": [
+    -0.19355659186840057,
+    0.9794248342514038
+  ],
+  "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+  "colorspace": {
+    "basecolor": "sRGB",
+    "normal": "linear",
+    "orm": "linear",
+    "height_source": "linear 16-bit"
+  },
+  "maps": {
+    "basecolor": {
+      "path": "art/source/textures/environment/wallpaper/wallpaper_basecolor.png",
+      "sha256": "50356c1162bf5a053b9e676de6c342007303c8bd4351715f51fdd0bf3e499e58"
+    },
+    "normal": {
+      "path": "art/source/textures/environment/wallpaper/wallpaper_normal.png",
+      "sha256": "f14d7e681fed7707cb651bbd20ab2ac5d6d2946cfb02a5771b2a09c72e17056c"
+    },
+    "orm": {
+      "path": "art/source/textures/environment/wallpaper/wallpaper_orm.png",
+      "sha256": "61ec1361158666ce5708f4c56f1cd9d578410d312837adab821ca13a6111a2a1"
+    }
+  }
+}

@@ -1,0 +1,802 @@
+{
+	"errors": [],
+	"godot": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"result": "IMPORTED_RESOURCES_VERIFIED",
+	"schema": 1,
+	"scope": "Actual stored imported resources; no native graphics/performance PASS",
+	"textures": [
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 22,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/baseboard_basecolor.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.271188638869075,
+				0.0,
+				0.25899747098113
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				2,
+				0,
+				2
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://ceeuhnh0s66fe",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 21,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": false,
+			"params_normal_map": 1,
+			"path": "res://assets/environment/textures/baseboard_normal.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.504052914856365,
+				0.495687698592828,
+				255.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				1,
+				255
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://dp1nykombi87b",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 22,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/baseboard_orm.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.238441086829648,
+				0.112573763050386,
+				0.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				1,
+				0
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://bxjwd13va3ith",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 11,
+			"format_id": 22,
+			"height": 2048,
+			"mipmap_count": 11,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/carpet_basecolor.png",
+			"sample_pixels": 246724,
+			"sampled_mip0_channel_mae_8bit": [
+				0.663125597834017,
+				0.521817901784991,
+				1.00930999821663
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				6,
+				3,
+				7
+			],
+			"stored_image_bytes": 5592432,
+			"uid": "uid://c5w3fk36k5jir",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 2048
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 11,
+			"format_id": 21,
+			"height": 2048,
+			"mipmap_count": 11,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": false,
+			"params_normal_map": 1,
+			"path": "res://assets/environment/textures/carpet_normal.png",
+			"sample_pixels": 246724,
+			"sampled_mip0_channel_mae_8bit": [
+				1.1499205590052,
+				1.07991926200937,
+				254.555924839091
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				7,
+				7,
+				255
+			],
+			"stored_image_bytes": 5592432,
+			"uid": "uid://diafny46m50dr",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 2048
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 11,
+			"format_id": 22,
+			"height": 2048,
+			"mipmap_count": 11,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/carpet_orm.png",
+			"sample_pixels": 246724,
+			"sampled_mip0_channel_mae_8bit": [
+				0.00143480164069973,
+				0.585832752387283,
+				0.00100111865890631
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				4,
+				1
+			],
+			"stored_image_bytes": 5592432,
+			"uid": "uid://cxcsphe58qjki",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 2048
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 10,
+			"format_id": 22,
+			"height": 1024,
+			"mipmap_count": 10,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/ceiling_basecolor.png",
+			"sample_pixels": 61681,
+			"sampled_mip0_channel_mae_8bit": [
+				0.556654399247742,
+				0.0206060213031566,
+				0.306917851526402
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				3,
+				2,
+				3
+			],
+			"stored_image_bytes": 1398128,
+			"uid": "uid://b6peekphqkwff",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 1024
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 10,
+			"format_id": 21,
+			"height": 1024,
+			"mipmap_count": 10,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": false,
+			"params_normal_map": 1,
+			"path": "res://assets/environment/textures/ceiling_normal.png",
+			"sample_pixels": 61681,
+			"sampled_mip0_channel_mae_8bit": [
+				1.38489972600963,
+				1.37940370616559,
+				254.911998832704
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				5,
+				5,
+				255
+			],
+			"stored_image_bytes": 1398128,
+			"uid": "uid://bo08i4jel2wmg",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 1024
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 10,
+			"format_id": 22,
+			"height": 1024,
+			"mipmap_count": 10,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/ceiling_orm.png",
+			"sample_pixels": 61681,
+			"sampled_mip0_channel_mae_8bit": [
+				0.480780142993791,
+				0.0232810752095459,
+				0.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				1,
+				0
+			],
+			"stored_image_bytes": 1398128,
+			"uid": "uid://c4ti4ynqr4cgf",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 1024
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 22,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/diffuser_basecolor.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.0791777446339407,
+				0.0,
+				0.555216912003113
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				0,
+				2
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://ci5qei8jb6j2o",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 21,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": false,
+			"params_normal_map": 1,
+			"path": "res://assets/environment/textures/diffuser_normal.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				1.43771480448739,
+				1.43771480448739,
+				255.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				3,
+				3,
+				255
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://lm2mfk40l11w",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 22,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/diffuser_orm.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.0,
+				0.0431878607094222,
+				0.275922443421309
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				0,
+				1,
+				1
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://bp0hxs11sq4k5",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 22,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/fixture_detail_basecolor.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.391673691719084,
+				0.00201024576875689,
+				0.418585046365346
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				2,
+				1,
+				4
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://b4120uce8sbg8",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 22,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/fixture_detail_emission.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				0,
+				0,
+				0
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://vrxtjdyhjufu",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 21,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": false,
+			"params_normal_map": 1,
+			"path": "res://assets/environment/textures/fixture_detail_normal.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.0,
+				0.0,
+				255.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				0,
+				0,
+				255
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://c26twxajalk5j",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 9,
+			"format_id": 22,
+			"height": 512,
+			"mipmap_count": 9,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/fixture_detail_orm.png",
+			"sample_pixels": 15421,
+			"sampled_mip0_channel_mae_8bit": [
+				0.125024317489138,
+				0.0,
+				0.124959470851436
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				0,
+				1
+			],
+			"stored_image_bytes": 349552,
+			"uid": "uid://clejs6eip8bng",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 512
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 10,
+			"format_id": 22,
+			"height": 1024,
+			"mipmap_count": 10,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/painted_metal_basecolor.png",
+			"sample_pixels": 61681,
+			"sampled_mip0_channel_mae_8bit": [
+				0.101376436828197,
+				0.0000162124479175111,
+				0.525931810444059
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				1,
+				3
+			],
+			"stored_image_bytes": 1398128,
+			"uid": "uid://2wpnxn6mvb27",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 1024
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 10,
+			"format_id": 21,
+			"height": 1024,
+			"mipmap_count": 10,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": false,
+			"params_normal_map": 1,
+			"path": "res://assets/environment/textures/painted_metal_normal.png",
+			"sample_pixels": 61681,
+			"sampled_mip0_channel_mae_8bit": [
+				0.506363385807623,
+				0.504093643099172,
+				255.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				2,
+				2,
+				255
+			],
+			"stored_image_bytes": 1398128,
+			"uid": "uid://dwi0ogocjoxi5",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 1024
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 10,
+			"format_id": 22,
+			"height": 1024,
+			"mipmap_count": 10,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/painted_metal_orm.png",
+			"sample_pixels": 61681,
+			"sampled_mip0_channel_mae_8bit": [
+				0.291645725588107,
+				0.0590457353155753,
+				0.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				1,
+				0
+			],
+			"stored_image_bytes": 1398128,
+			"uid": "uid://5gmy7ckwqj25",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 1024
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 10,
+			"format_id": 22,
+			"height": 1024,
+			"mipmap_count": 10,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/room_m4_macro.png",
+			"sample_pixels": 61681,
+			"sampled_mip0_channel_mae_8bit": [
+				0.121171835735478,
+				0.00565814432321136,
+				0.246850731992023
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				2,
+				1,
+				6
+			],
+			"stored_image_bytes": 1398128,
+			"uid": "uid://b7fv8jt2wnuxo",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 1024
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 11,
+			"format_id": 22,
+			"height": 2048,
+			"mipmap_count": 11,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 0,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/wallpaper_basecolor.png",
+			"sample_pixels": 246724,
+			"sampled_mip0_channel_mae_8bit": [
+				0.608319417648871,
+				0.0279988975535416,
+				0.70160178985425
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				3,
+				2,
+				4
+			],
+			"stored_image_bytes": 5592432,
+			"uid": "uid://bjhp4013un1xk",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 2048
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 11,
+			"format_id": 21,
+			"height": 2048,
+			"mipmap_count": 11,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": false,
+			"params_normal_map": 1,
+			"path": "res://assets/environment/textures/wallpaper_normal.png",
+			"sample_pixels": 246724,
+			"sampled_mip0_channel_mae_8bit": [
+				1.4222086217798,
+				1.39605389017688,
+				254.999829769297
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				3,
+				3,
+				255
+			],
+			"stored_image_bytes": 5592432,
+			"uid": "uid://cy66rfhwt5yn5",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 2048
+		},
+		{
+			"compressed": true,
+			"decode_error": 0,
+			"expected_mips": 11,
+			"format_id": 22,
+			"height": 2048,
+			"mipmap_count": 11,
+			"normal_plus_y": true,
+			"note": "Normal blue intentionally discarded/reconstructed in Godot normal mapping; RG errors are relevant.",
+			"params_channel_pack": 1,
+			"params_high_quality": true,
+			"params_normal_map": 2,
+			"path": "res://assets/environment/textures/wallpaper_orm.png",
+			"sample_pixels": 246724,
+			"sampled_mip0_channel_mae_8bit": [
+				0.00000810622395875553,
+				0.148797846986917,
+				0.0
+			],
+			"sampled_mip0_channel_max_error_8bit": [
+				1,
+				2,
+				0
+			],
+			"stored_image_bytes": 5592432,
+			"uid": "uid://cfwo2lg8x2mm5",
+			"vram_metadata": {
+				"imported_formats": [
+					"s3tc_bptc"
+				],
+				"vram_texture": true
+			},
+			"width": 2048
+		}
+	],
+	"total_stored_image_bytes": 46837008
+}

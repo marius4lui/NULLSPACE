@@ -1,0 +1,41 @@
+{
+  "name": "ceiling",
+  "recipe": "environment-materials-1.0",
+  "seed": 41073,
+  "description": "Mineral-fiber acoustic board; thousands of original directional fissures, fine particulate grain and restrained neutral age. Tegular edge is geometry.",
+  "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+  "meters_per_tile": [
+    1.22,
+    1.22
+  ],
+  "resolution": [
+    1024,
+    1024
+  ],
+  "normal_convention": "tangent +Y; image rows top-down",
+  "height_source_mm_range": [
+    -0.4944385588169098,
+    0.09654638171195984
+  ],
+  "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+  "colorspace": {
+    "basecolor": "sRGB",
+    "normal": "linear",
+    "orm": "linear",
+    "height_source": "linear 16-bit"
+  },
+  "maps": {
+    "basecolor": {
+      "path": "art/source/textures/environment/ceiling/ceiling_basecolor.png",
+      "sha256": "aadc46c21612af736044b15ded8db2e35a90514cff152e71a410d3950883dbf2"
+    },
+    "normal": {
+      "path": "art/source/textures/environment/ceiling/ceiling_normal.png",
+      "sha256": "3da17bd465f03ae5d5fa4f50fac29bdec446022476a319b5f450b32e3445d124"
+    },
+    "orm": {
+      "path": "art/source/textures/environment/ceiling/ceiling_orm.png",
+      "sha256": "52eb334e8236363804b93d6d14d844c9240844dac86cabb25d3bd1941ad9bcb1"
+    }
+  }
+}

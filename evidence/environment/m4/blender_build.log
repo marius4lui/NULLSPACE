@@ -1,0 +1,166 @@
+UV_MICRO_ISLAND_REPAIR wall_061 2 beveled triangles
+INFO Draco is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_draco_bridge.so
+INFO MeshOptimizer is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_meshopt_bridge.so
+23:06:40 | INFO: Starting glTF 2.0 export
+23:06:40 | INFO: Extracting primitive: wall_061_PaperedShell_editable_mesh.001
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | INFO: Primitives created: 2
+23:06:40 | INFO: Finished glTF 2.0 export in 0.1379084587097168 s
+
+EXPORTED wall_061 {'vertices': 496, 'triangles': 980, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [0.61, 0.208, 2.72], 'role': 'modular architecture / original fixture', 'sha256': 'f360e42def3a4a83173cca9df181e0ff0752658043f166e17da60a7b926d248d'}
+UV_MICRO_ISLAND_REPAIR wall_122 2 beveled triangles
+23:06:40 | INFO: Starting glTF 2.0 export
+23:06:40 | INFO: Extracting primitive: wall_122_PaperedShell_editable_mesh.001
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | INFO: Primitives created: 2
+23:06:40 | INFO: Finished glTF 2.0 export in 0.04482316970825195 s
+
+EXPORTED wall_122 {'vertices': 496, 'triangles': 980, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [1.22, 0.208, 2.72], 'role': 'modular architecture / original fixture', 'sha256': 'f70b3d9eaeae249c9657dc8df8cdc52c02736dbf40d37a7f0c4fa98ba51a4b52'}
+UV_MICRO_ISLAND_REPAIR wall_244 2 beveled triangles
+23:06:40 | INFO: Starting glTF 2.0 export
+23:06:40 | INFO: Extracting primitive: wall_244_PaperedShell_editable_mesh.001
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | INFO: Primitives created: 2
+23:06:40 | INFO: Finished glTF 2.0 export in 0.04144287109375 s
+
+EXPORTED wall_244 {'vertices': 496, 'triangles': 980, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [2.44, 0.208, 2.72], 'role': 'modular architecture / original fixture', 'sha256': 'c67e6bb2e81a981467fc7c971d26128413c1319704c6cb34e58b056f2f0169c3'}
+UV_MICRO_ISLAND_REPAIR wall_366 1 beveled triangles
+23:06:40 | INFO: Starting glTF 2.0 export
+23:06:40 | INFO: Extracting primitive: wall_366_PaperedShell_editable_mesh.001
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | INFO: Primitives created: 2
+23:06:40 | INFO: Finished glTF 2.0 export in 0.04111218452453613 s
+
+EXPORTED wall_366 {'vertices': 496, 'triangles': 980, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [3.66, 0.208, 2.72], 'role': 'modular architecture / original fixture', 'sha256': '6b0a4b67270840005ce3ddba7f8b769372449a085648e139083d8acbaa6693dc'}
+UV_MICRO_ISLAND_REPAIR wall_portal_366 4 beveled triangles
+23:06:40 | INFO: Starting glTF 2.0 export
+23:06:40 | INFO: Extracting primitive: wall_portal_366_Pier_editable_mesh.002
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 3
+23:06:41 | INFO: Finished glTF 2.0 export in 0.08545899391174316 s
+
+EXPORTED wall_portal_366 {'vertices': 1376, 'triangles': 2712, 'materials': 3, 'uv_layers': 2, 'dimensions_m': [3.66, 0.208, 2.72], 'role': 'modular architecture / original fixture', 'sha256': '341353212ce414e09431b75a5ecf0385643a17935ba358541abee7e0c6ba17ba'}
+UV_MICRO_ISLAND_REPAIR wall_portal_244 4 beveled triangles
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: wall_portal_244_Pier_editable_mesh.002
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 3
+23:06:41 | INFO: Finished glTF 2.0 export in 0.0467839241027832 s
+
+EXPORTED wall_portal_244 {'vertices': 1376, 'triangles': 2712, 'materials': 3, 'uv_layers': 2, 'dimensions_m': [2.44, 0.208, 2.72], 'role': 'modular architecture / original fixture', 'sha256': '8cd7f05bf6888f476c5b37354d8c69707bb622ac9c2a3419205ea382b6038d9a'}
+UV_MICRO_ISLAND_REPAIR wall_low_244 2 beveled triangles
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: wall_low_244_PaperedShell_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 2
+23:06:41 | INFO: Finished glTF 2.0 export in 0.04024791717529297 s
+
+EXPORTED wall_low_244 {'vertices': 496, 'triangles': 980, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [2.44, 0.208, 2.48], 'role': 'modular architecture / original fixture', 'sha256': 'f32a362bfff5c2a33a850e9f21ef6f188510116b9abe42d36d69175125ca2996'}
+UV_MICRO_ISLAND_REPAIR column_061 5 beveled triangles
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: column_061_WrappedPier_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 2
+23:06:41 | INFO: Finished glTF 2.0 export in 0.041718482971191406 s
+
+EXPORTED column_061 {'vertices': 896, 'triangles': 1772, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [0.658, 0.658, 2.72], 'role': 'modular architecture / original fixture', 'sha256': 'ba81141b7f98849c2bba76bb93ca81224ac5b4b906f6fbddeb62e1b204e1db8c'}
+UV_MICRO_ISLAND_REPAIR column_086 13 beveled triangles
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: column_086_WrappedPier_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 2
+23:06:41 | INFO: Finished glTF 2.0 export in 0.04085898399353027 s
+
+EXPORTED column_086 {'vertices': 896, 'triangles': 1772, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [0.908, 0.908, 2.72], 'role': 'modular architecture / original fixture', 'sha256': 'bce18c4e322e406d749bb04d8e100240b23a8aeb26495f3a1244fc8a4e11f40c'}
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: ceiling_board_122_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 1
+23:06:41 | INFO: Finished glTF 2.0 export in 0.04296994209289551 s
+
+EXPORTED ceiling_board_122 {'vertices': 160, 'triangles': 316, 'materials': 1, 'uv_layers': 2, 'dimensions_m': [1.197, 0.587, 0.024], 'role': 'modular architecture / original fixture', 'sha256': '112a2a353f4fa7bfd9bdfef3272ca5b5c9deb01e8baf0aa4429497fbb4d6ec71'}
+UV_MICRO_ISLAND_REPAIR ceiling_grid_122 2 beveled triangles
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: ceiling_grid_122_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 1
+23:06:41 | INFO: Finished glTF 2.0 export in 0.013240575790405273 s
+
+EXPORTED ceiling_grid_122 {'vertices': 192, 'triangles': 380, 'materials': 1, 'uv_layers': 2, 'dimensions_m': [1.22, 0.024, 0.036], 'role': 'modular architecture / original fixture', 'sha256': '7fe6d23952a84f3f12f8eddf1d7882e2f566e5b908797cfb6778fbc9b978e205'}
+UV_MICRO_ISLAND_REPAIR ceiling_grid_244 2 beveled triangles
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: ceiling_grid_244_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 1
+23:06:41 | INFO: Finished glTF 2.0 export in 0.01187896728515625 s
+
+EXPORTED ceiling_grid_244 {'vertices': 192, 'triangles': 380, 'materials': 1, 'uv_layers': 2, 'dimensions_m': [2.44, 0.024, 0.036], 'role': 'modular architecture / original fixture', 'sha256': '88c7182d3c1ef032643ed77fc7ac416e13ed8ee85ab91e289c3eb2ab8e0e6dc9'}
+UV_MICRO_ISLAND_REPAIR cove_corner_090 33 beveled triangles
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: cove_corner_090_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 1
+23:06:41 | INFO: Finished glTF 2.0 export in 0.011289596557617188 s
+
+EXPORTED cove_corner_090 {'vertices': 317, 'triangles': 630, 'materials': 1, 'uv_layers': 2, 'dimensions_m': [0.1042, 0.1042, 0.1074], 'role': 'modular architecture / original fixture', 'sha256': 'd3d555b6db65afe1f5de55658edc866227dfe9eac1af79df02a6a7f7e50ffb32'}
+23:06:41 | INFO: Starting glTF 2.0 export
+23:06:41 | INFO: Extracting primitive: floor_carpet_244_editable_mesh.001
+23:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:41 | INFO: Primitives created: 1
+23:06:41 | INFO: Finished glTF 2.0 export in 0.1563122272491455 s
+
+EXPORTED floor_carpet_244 {'vertices': 8, 'triangles': 12, 'materials': 1, 'uv_layers': 2, 'dimensions_m': [2.44, 2.44, 0.08], 'role': 'modular architecture / original fixture', 'sha256': 'cb9d2d282b941343cf9cc665a5a7550953440efbfae08645bf9e35a12eb07098'}
+23:06:42 | INFO: Starting glTF 2.0 export
+23:06:42 | INFO: Extracting primitive: fixture_prismatic_FoldedHousing_editable_mesh.001
+23:06:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:42 | INFO: Primitives created: 3
+23:06:42 | INFO: Finished glTF 2.0 export in 0.05833077430725098 s
+
+EXPORTED fixture_prismatic {'vertices': 2944, 'triangles': 5788, 'materials': 3, 'uv_layers': 2, 'dimensions_m': [1.206, 0.596, 0.136], 'role': 'modular architecture / original fixture', 'sha256': '214716aa31f0585d32658e7b9c0ee93ca24d4f91ffb9efe30f3c8901d9e53403'}
+23:06:42 | INFO: Starting glTF 2.0 export
+23:06:42 | INFO: Extracting primitive: fixture_exposed_FoldedHousing_editable_mesh.001
+23:06:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:42 | INFO: Primitives created: 2
+23:06:42 | INFO: Finished glTF 2.0 export in 0.029989242553710938 s
+
+EXPORTED fixture_exposed {'vertices': 2848, 'triangles': 5600, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [1.206, 0.596, 0.136], 'role': 'modular architecture / original fixture', 'sha256': '7a4cc78e12b128c76787470d520bd585ff10a1dee35bf6d78b886d1e93f97e54'}
+23:06:42 | INFO: Starting glTF 2.0 export
+23:06:42 | INFO: Extracting primitive: wall_vent_Recess_editable_mesh.001
+23:06:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:42 | INFO: Primitives created: 2
+23:06:42 | INFO: Finished glTF 2.0 export in 0.026915311813354492 s
+
+EXPORTED wall_vent {'vertices': 1696, 'triangles': 3328, 'materials': 2, 'uv_layers': 2, 'dimensions_m': [0.607, 0.0615, 0.327], 'role': 'modular architecture / original fixture', 'sha256': 'a7a3a05156eedb942fedbdf82bf6d7eb9047d0222ffd9b3dde7bc195f95c922c'}
+UV_MICRO_ISLAND_REPAIR room_m4_architecture 208 beveled triangles
+23:06:44 | INFO: Starting glTF 2.0 export
+23:06:44 | INFO: Extracting primitive: M4_ContinuousCarpet_editable_mesh.001
+23:06:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:06:44 | INFO: Primitives created: 6
+23:06:44 | INFO: Finished glTF 2.0 export in 0.49413561820983887 s
+
+EXPORTED room_m4_architecture {'vertices': 67853, 'triangles': 134030, 'materials': 6, 'uv_layers': 2, 'dimensions_m': [16.068, 20.948, 2.83], 'role': 'authored reference room, shared surfaces, fixtures instanced at runtime', 'sha256': 'd794eb0eb166fe567a60cb37cbe1e50f2415437ffef39d17f7e77016eac4483f'}
+Info: Saved as "nullspace_environment_m4.blend"
+ENVIRONMENT_PIPELINE_OK modules=17 room=419 original master retained
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:12:34)
+
+Blender quit
