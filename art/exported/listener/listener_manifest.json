@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "asset": "NULLSPACE Listener M11A source candidate",
+  "seed": 61429,
+  "software": {
+    "blender": "5.2.1 LTS",
+    "build_hash": "9e2066aef7ef"
+  },
+  "originality": "Directed connected quad surface, mathematical tissue bakes, explicit 63-bone rig and original 3-clip curves. No external art inputs.",
+  "units": "metres",
+  "facing": "Blender -Y; Godot +Z",
+  "cage": {
+    "vertices": 5950,
+    "edges": 12028,
+    "faces": 6080,
+    "triangles": 11896,
+    "connected_components": 1,
+    "nonmanifold_edges": 0,
+    "wire_edges": 0
+  },
+  "runtime": {
+    "vertices": 24058,
+    "edges": 48112,
+    "faces": 24056,
+    "triangles": 48112,
+    "connected_components": 1,
+    "nonmanifold_edges": 0,
+    "wire_edges": 0
+  },
+  "bones": 63,
+  "materials": 1,
+  "weights": "normalized; maximum four influences",
+  "clips": {
+    "idle": {
+      "seconds": 8.0,
+      "frames": 241,
+      "fps": 30,
+      "loop": true,
+      "root_motion_m": 0,
+      "contact": "Both feet planted; pelvis and leg transforms fixed"
+    },
+    "breathing": {
+      "seconds": 6.0,
+      "frames": 181,
+      "fps": 30,
+      "loop": true,
+      "root_motion_m": 0,
+      "contact": "Both feet planted; pelvis and leg transforms fixed"
+    },
+    "listen": {
+      "seconds": 9.0,
+      "frames": 271,
+      "fps": 30,
+      "loop": true,
+      "root_motion_m": 0,
+      "contact": "Both feet planted; pelvis and leg transforms fixed"
+    }
+  },
+  "remaining_required_clips": [
+    "slow_walk",
+    "stalk_walk",
+    "turn",
+    "chase_run",
+    "door_interaction",
+    "investigate",
+    "search",
+    "flinch_front",
+    "flinch_side",
+    "heavy_stagger",
+    "attack",
+    "recovery",
+    "retreat_injured",
+    "final_sequence"
+  ],
+  "evidence_root": "tools/art/listener/evidence",
+  "acceptance": {
+    "source_render": "ITERATING; initial local FAIL retained",
+    "native_deformation": "PENDING",
+    "independent_review": "PENDING",
+    "M11": "NOT COMPLETE"
+  },
+  "collision_envelope": {
+    "type": "upright capsule",
+    "radius": 0.27,
+    "height": 2.3,
+    "center": [
+      0,
+      1.15,
+      0
+    ],
+    "note": "Conservative locomotion proxy; arms may extend laterally. AI collision integration not included."
+  }
+}

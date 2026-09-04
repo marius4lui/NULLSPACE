@@ -1,0 +1,7 @@
+{
+  "name": "nullspace-listener-authoring-validation",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Pinned original-asset validation tooling; not game content",
+  "devDependencies": {"gltf-validator": "2.0.0-dev.3.10"}
+}

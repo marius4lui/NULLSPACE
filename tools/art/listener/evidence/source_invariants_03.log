@@ -1,0 +1,76 @@
+00:00.725  blend            | Read blend: "/home/marius/Projekte/Dev/NULLSPACE-worktrees/monster-art/art/source/blender/listener/listener_master.blend"
+{
+  "schema": 1,
+  "result": "PASS",
+  "software": "5.2.1 LTS",
+  "source_topology": {
+    "vertices": 24058,
+    "edges": 48112,
+    "faces": 24056,
+    "triangles": 48112,
+    "connected_components": 1,
+    "nonmanifold_edges": 0,
+    "wire_edges": 0
+  },
+  "source_images_missing": [],
+  "maximum_influences": 4,
+  "source_foot_support_vertices": 768,
+  "pose_invariants": {
+    "idle": {
+      "sample_step_frames": 10,
+      "max_foot_surface_drift_m": 0.0,
+      "min_triangle_area_ratio": 0.954925512899204,
+      "max_triangle_area_ratio": 1.051432036549181,
+      "minimum_rest_pose_normal_dot": 0.999221163115575,
+      "worst_contraction": {
+        "frame": 60,
+        "triangle": 25352,
+        "rest_area_m2": 2.348521735930726e-07,
+        "centroid_m": [
+          -0.4731096824010213,
+          -0.05075037727753321,
+          0.7833400170008341
+        ]
+      }
+    },
+    "breathing": {
+      "sample_step_frames": 10,
+      "max_foot_surface_drift_m": 0.0,
+      "min_triangle_area_ratio": 0.9603337283640596,
+      "max_triangle_area_ratio": 1.0680055485995683,
+      "minimum_rest_pose_normal_dot": 0.994923554897867,
+      "worst_contraction": {
+        "frame": 40,
+        "triangle": 25352,
+        "rest_area_m2": 2.348521735930726e-07,
+        "centroid_m": [
+          -0.4731096824010213,
+          -0.05075037727753321,
+          0.7833400170008341
+        ]
+      }
+    },
+    "listen": {
+      "sample_step_frames": 10,
+      "max_foot_surface_drift_m": 0.0,
+      "min_triangle_area_ratio": 0.5083305587933346,
+      "max_triangle_area_ratio": 1.1457053886528477,
+      "minimum_rest_pose_normal_dot": 0.9096142839915664,
+      "worst_contraction": {
+        "frame": 90,
+        "triangle": 4620,
+        "rest_area_m2": 5.8555424633208515e-06,
+        "centroid_m": [
+          0.024346428612867992,
+          -0.015489529507855574,
+          1.9953052997589111
+        ]
+      }
+    }
+  },
+  "failures": [],
+  "limitation": "Sampled geometry invariants only. Native motion/contact/blending and independent art review remain required."
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:12:34)
+
+Blender quit

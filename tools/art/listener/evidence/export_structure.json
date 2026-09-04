@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "result": "PASS",
+  "triangles": 48112,
+  "surfaces": 1,
+  "bones": 63,
+  "materials": 1,
+  "position_bounds_gltf_y_up": [
+    [
+      -0.5715896487236023,
+      0.0,
+      -0.13574036955833435
+    ],
+    [
+      0.5715896487236023,
+      2.2997899055480957,
+      0.25049135088920593
+    ]
+  ],
+  "max_weight_sum_error": 1.1920928955078125e-07,
+  "clips": {
+    "breathing": {
+      "seconds": 6.0,
+      "channels": 189,
+      "max_loop_endpoint_component_error": 2.2192830994835125e-16
+    },
+    "idle": {
+      "seconds": 8.0,
+      "channels": 189,
+      "max_loop_endpoint_component_error": 2.2192830994835125e-16
+    },
+    "listen": {
+      "seconds": 9.0,
+      "channels": 189,
+      "max_loop_endpoint_component_error": 2.2192830994835125e-16
+    }
+  },
+  "glb_sha256": "03456431b190a28f1ab91319b4b3e894592aa79f21f84737eb5de8fb85ee0c6b",
+  "failures": [],
+  "limitations": "Structural checks only; no native deformation, silhouette or independent quality claim."
+}

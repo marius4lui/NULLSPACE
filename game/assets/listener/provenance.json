@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "creator": "NULLSPACE delegated original Listener art production, GPT-6 Astra",
+  "base_commit": "aeebffdf75b67aa8928a4df9a43eb7a93aa08237",
+  "seed": 61429,
+  "external_content_inputs": [],
+  "licensing": "Original project content; distribution license remains repository-owner decision. Tooling is not third-party game content.",
+  "reproduction": "Deterministic proportion/cage/sculpt/texture/rig/clip recipes and explicit GLB export. Blender container byte identity is not asserted.",
+  "evidence_root": "tools/art/listener/evidence",
+  "status": "Bounded source candidate; native and independent acceptance PENDING; M11 incomplete",
+  "files": [
+    {
+      "path": "tools/art/listener/.gitignore",
+      "bytes": 104,
+      "sha256": "f244cb732d5ba9b5ce3c011f3829fe8385817e8af2aa2e11564af295b566e10b"
+    },
+    {
+      "path": "tools/art/listener/README.md",
+      "bytes": 6581,
+      "sha256": "16f87603480cddbb16d0025fb32f7a5c1477547a52ef3c6fe74ecc3ce77cb789"
+    },
+    {
+      "path": "tools/art/listener/build_listener.py",
+      "bytes": 5922,
+      "sha256": "051f02d7403c2de213d3c2b8a419f6a286e8300e6e2e216f9fdbc5a70964f0c7"
+    },
+    {
+      "path": "tools/art/listener/geometry.py",
+      "bytes": 17473,
+      "sha256": "d8c5ebbdcec9dcbabc3af1b63039d22d6512ac8c0d796281001c661d9925a13b"
+    },
+    {
+      "path": "tools/art/listener/inspect_glb.py",
+      "bytes": 4695,
+      "sha256": "299e4394a79a61ca768405496b223de0c905fe500df1039e89be36d329a8dcfc"
+    },
+    {
+      "path": "tools/art/listener/package-lock.json",
+      "bytes": 665,
+      "sha256": "3abff91f911d44e4275a51498b18fcb5e0de8b0fe521e8490c9dc2893c84299a"
+    },
+    {
+      "path": "tools/art/listener/package.json",
+      "bytes": 235,
+      "sha256": "31d1c5e9099449a361a7e6246a1ce0760fc508e4fbd802c6bbdaf7e83230bba2"
+    },
+    {
+      "path": "tools/art/listener/prepare_preview.py",
+      "bytes": 493,
+      "sha256": "7dc440d2a7d30b9ead57add795ae4ba73f9508ba86d8447e38ccc877c5cb8572"
+    },
+    {
+      "path": "tools/art/listener/preview/preview.gd",
+      "bytes": 7859,
+      "sha256": "3164d1d8e9ec36e61dc188bfbe3967178d9fbf2453ce4389296b10777767bd66"
+    },
+    {
+      "path": "tools/art/listener/preview/preview.gd.uid",
+      "bytes": 20,
+      "sha256": "8f4818316e4c471b74ed604a88c55caf1de64eb99aef671dcaedf797e85ff5a0"
+    },
+    {
+      "path": "tools/art/listener/preview/preview.tscn",
+      "bytes": 167,
+      "sha256": "da5642ea79f3a2595c5c30a4b3ba1a2ccd171b2ee7d16f190b078515d6e59413"
+    },
+    {
+      "path": "tools/art/listener/preview/project.godot",
+      "bytes": 699,
+      "sha256": "1d41cd515ba0ff4dff06abd273425c3227efbf49e8ef4aba86d5900c8b11c8de"
+    },
+    {
+      "path": "tools/art/listener/recipe.py",
+      "bytes": 3891,
+      "sha256": "f21c702d10614597394c8f0eb0185fe3224f9d4220664fde92df8fa6a758b120"
+    },
+    {
+      "path": "tools/art/listener/record_provenance.py",
+      "bytes": 1908,
+      "sha256": "e00d236de729a7ddc2f06a8c8b21b69591c181395cb0cdaab5e6efab2d4f5663"
+    },
+    {
+      "path": "tools/art/listener/rig.py",
+      "bytes": 7808,
+      "sha256": "b267ee0b947588d45da92ba8d44f64d67b5314ecf9a45edbe9ea878abbe84184"
+    },
+    {
+      "path": "tools/art/listener/sculpt.py",
+      "bytes": 3090,
+      "sha256": "ac68a5cd85e28edbc213bc7a031059264e549e8ee248e2a6ab691a666664924a"
+    },
+    {
+      "path": "tools/art/listener/stage.py",
+      "bytes": 2447,
+      "sha256": "b7b3d2b34634d3971c6d27002e355c910d8d4398abcdd58d208348b8a3015bc3"
+    },
+    {
+      "path": "tools/art/listener/texture_bake.py",
+      "bytes": 8844,
+      "sha256": "d97c0a8d20303d1a73ec17754cea57533fb7db7ad724965cedcc9ce5da0fb4ed"
+    },
+    {
+      "path": "tools/art/listener/validate_export.cjs",
+      "bytes": 657,
+      "sha256": "bd754ac91424a595ec6e6901c5225ae7e2b8c755f6df41f6488ac32a6d6aea2f"
+    },
+    {
+      "path": "tools/art/listener/validate_source.py",
+      "bytes": 4664,
+      "sha256": "c2c021e25daf0ed4b3f4fe3196543507ca1c0c49244e3ec9df5ea54b1914007e"
+    },
+    {
+      "path": "art/source/blender/listener/listener_master.blend",
+      "bytes": 1869321,
+      "sha256": "3757c1de309538b3f2a1fb75b16f0da8588bb419cfb224ae52a0cb359a04c6bd"
+    },
+    {
+      "path": "art/source/textures/listener/listener_skin_basecolor.png",
+      "bytes": 1357207,
+      "sha256": "2064f99fc832ae837d1ec18b18cf24088c65acba26f19d01992da70001b82896"
+    },
+    {
+      "path": "art/source/textures/listener/listener_skin_height_source.png",
+      "bytes": 3835999,
+      "sha256": "2600524b10a972ca1b1ec25e26fe0ba6f3bbf5b6d96439a2fef55d9d00ca2f35"
+    },
+    {
+      "path": "art/source/textures/listener/listener_skin_normal.png",
+      "bytes": 1531436,
+      "sha256": "ed8593f7acdb52a73cf4258a1055e65be52e884d96d8112ce101e2db33291de6"
+    },
+    {
+      "path": "art/source/textures/listener/listener_skin_orm.png",
+      "bytes": 563427,
+      "sha256": "d075b147260b1553958aa06ea229bce27373471a6a0f7537e51e00b3fda45fef"
+    },
+    {
+      "path": "art/source/textures/listener/recipe.json",
+      "bytes": 522,
+      "sha256": "773f35670be7d5d5431a5438f13b5cf027c3b06fdfd6fe8c4fce02585b04ff12"
+    },
+    {
+      "path": "art/exported/listener/listener.glb",
+      "bytes": 6010032,
+      "sha256": "03456431b190a28f1ab91319b4b3e894592aa79f21f84737eb5de8fb85ee0c6b"
+    },
+    {
+      "path": "art/exported/listener/listener_manifest.json",
+      "bytes": 2241,
+      "sha256": "1e66775cb7f8c886e54eae15ffe1f4a2adba1a3ba835f62be74c640ef3d1b43d"
+    },
+    {
+      "path": "game/assets/listener/listener.glb",
+      "bytes": 6010032,
+      "sha256": "03456431b190a28f1ab91319b4b3e894592aa79f21f84737eb5de8fb85ee0c6b"
+    },
+    {
+      "path": "game/assets/listener/listener.glb.import",
+      "bytes": 1155,
+      "sha256": "57b29ff8789cff12dbdc4c27425b8d4a0f4d9373446da395859f67d5d6e4fce1"
+    },
+    {
+      "path": "game/assets/listener/listener_listener_skin_basecolor.png",
+      "bytes": 1357207,
+      "sha256": "2064f99fc832ae837d1ec18b18cf24088c65acba26f19d01992da70001b82896"
+    },
+    {
+      "path": "game/assets/listener/listener_listener_skin_basecolor.png.import",
+      "bytes": 1082,
+      "sha256": "27506b9ac48a9a5c1cfffabcbdb104a053a35551f13ec6650e102e5361d6834a"
+    },
+    {
+      "path": "game/assets/listener/listener_listener_skin_normal.png",
+      "bytes": 1531436,
+      "sha256": "ed8593f7acdb52a73cf4258a1055e65be52e884d96d8112ce101e2db33291de6"
+    },
+    {
+      "path": "game/assets/listener/listener_listener_skin_normal.png.import",
+      "bytes": 1072,
+      "sha256": "80cb39a6608385456cefef8b85476df8d3e276cab6c82ddfbc8c7776a9255738"
+    },
+    {
+      "path": "game/assets/listener/listener_listener_skin_orm.png",
+      "bytes": 563427,
+      "sha256": "d075b147260b1553958aa06ea229bce27373471a6a0f7537e51e00b3fda45fef"
+    },
+    {
+      "path": "game/assets/listener/listener_listener_skin_orm.png.import",
+      "bytes": 1064,
+      "sha256": "1f582136f94c793ae260e072422f8394af307b246c753f97846a5cc1cea0c90a"
+    },
+    {
+      "path": "game/assets/listener/listener_manifest.json",
+      "bytes": 2241,
+      "sha256": "1e66775cb7f8c886e54eae15ffe1f4a2adba1a3ba835f62be74c640ef3d1b43d"
+    }
+  ]
+}

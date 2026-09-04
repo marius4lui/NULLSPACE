@@ -1,0 +1,6 @@
+__pycache__/
+node_modules/
+preview/.godot/
+preview/assets/
+preview/captures/
+evidence/native-*/profile/

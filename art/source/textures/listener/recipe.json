@@ -1,0 +1,10 @@
+{
+  "seed": 61429,
+  "size": 2048,
+  "uv_coverage_pixels": 1894948,
+  "uv_padding_pixels": 16,
+  "original_fields": "Object-space hashed trilinear tissue noise, low-contrast capillary fields, joint compression creases; no image inputs",
+  "height_source_encoding": "16-bit; (value/65535-.5)*0.0005 metres",
+  "channels": "basecolor sRGB; tangent normal +Y; ORM=(1,roughness,0)",
+  "justification": "One shared 2K atlas supports close cranial/hand inspection on the complete 2.3m hero creature; no extra material slots."
+}

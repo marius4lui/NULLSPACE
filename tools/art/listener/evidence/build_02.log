@@ -1,0 +1,17 @@
+Info: 10 vertex weights limited
+LISTENER_TOPOLOGY {"cage": {"vertices": 6014, "edges": 12156, "faces": 6144, "triangles": 12024, "connected_components": 1, "nonmanifold_edges": 0, "wire_edges": 0}, "runtime": {"vertices": 24314, "edges": 48624, "faces": 24312, "triangles": 48624, "connected_components": 1, "nonmanifold_edges": 0, "wire_edges": 0}}
+LISTENER_ORIGINAL_TEXTURES_OK 1907790
+Info: Saved as "listener_master.blend"
+INFO Draco is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_draco_bridge.so
+INFO MeshOptimizer is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_meshopt_bridge.so
+23:45:18 | INFO: Starting glTF 2.0 export
+23:45:18 | WARNING: Armature must be the parent of skinned meshArmature is selected by its name, but may be false in case of instances
+23:45:18 | INFO: Extracting primitive: Listener_connected_quad_cage.001
+23:45:18 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+23:45:18 | INFO: Primitives created: 1
+23:45:38 | INFO: Finished glTF 2.0 export in 20.634971141815186 s
+
+LISTENER_SOURCE_EXPORT_OK
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:12:34)
+
+Blender quit
