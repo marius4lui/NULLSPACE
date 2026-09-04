@@ -25,7 +25,7 @@ Each row identifies a meaningful room space, not a requirement for an identical 
 | B07 | Divided office room / carpet repair | Sparse repaired carpet band is the second stable Grid landmark, not a glowing route stripe. |
 | B08 | Long exposed hall | Preview the change to Open Plan. A sightline is meaningful even with no creature present. |
 | B09 | Return shutter passage | Relay B opens the useful A06 shortcut, with visible mechanism and no collision/nav gap. |
-| B10 | Four-way/opening cluster transition | Two perceptible approaches into the same Open Plan entrance, not four identical empty exits. |
+| B10 | Widened Open Plan transition | Frame the distant continuation into C01 and make the return toward B08 recognizable. This space has two connections, not a four-way claim. |
 | C01 | Low entry opening into broad space | First exposure contrast; light and distant partitions reveal scale. |
 | C02 | Open column field | Long diagonal view; quiet observation opportunity uses real creature approach routes. |
 | C03 | Asymmetric peripheral junction | A stable missing ceiling-board recess identifies the return route; no collectible inside it. |
@@ -33,7 +33,7 @@ Each row identifies a meaningful room space, not a requirement for an identical 
 | C05 | Divided office island | Short occluded crossing lets a careful player reduce exposure. |
 | C06 | Broad relay approach room | Physical service routing makes the panel location comprehensible without an objective arrow. |
 | C07 | Distribution relay bay | Accessible panel, more than one escape direction, restored perimeter lighting and checkpoint. |
-| C08 | Perimeter return room | Reconnect to a sightline seen on the outward route; restored lights change actual visibility. |
+| C08 | Four-way perimeter return junction | Four distinct connections to C06/C07/C09/C10; reconnect to a previously seen sightline. Restored lights change actual visibility; vary opening offsets without concealing route choice. |
 | C09 | Long hall with isolated off-axis column | Alternate observation/stalking distance; avoid a creature exhibition stage. |
 | C10 | Lateral service passage | Distribution relay opens a shorter approach to D04, visible beforehand as an unavailable route. |
 | C11 | Maintenance transition | Familiar wallpaper gives way to utilitarian backing infrastructure, not an unrelated industrial map. |
@@ -54,7 +54,7 @@ Each row identifies a meaningful room space, not a requirement for an identical 
 | E05 | Service return opening | Rejoins D10 when powered. Its frame remains identifiable from either approach. |
 | E06 | Wide, mostly unlit crossing | An exposed choice contrasting E02; main return path stays geometrically stable. |
 | E07 | Low divided room | Quiet breathing/handling and localized distant movement become salient. |
-| E08 | Shallow dead-end side room with return loop | Optional respite/resource risk slot, not a required obscure puzzle or guaranteed monster-proof zone. |
+| E08 | Shallow dead-end side room | One connection back to E04; optional respite/resource risk slot, not a required obscure puzzle or guaranteed monster-proof zone. |
 | E09 | Threshold approach / physical access latch | All three committed relays required. Show missing circuit names accurately if any are absent. |
 | F01 | Desaturated red-brown entry frame | Rare palette anomaly in the same building; no arcade-red flood or automatic chase. |
 | F02 | Offset red intersection | Permanent uneven header is a return landmark despite secondary anomalies. |
@@ -75,7 +75,7 @@ Chains below mean consecutive bidirectional adjacency; commas separate extra con
 | Grid | A08–B01–B02–B03–B04–B05–B06–B07–B08–B10–C01; B02–B07; B03–B08; B05–B09 | Same Circulation shutter; never lock its B05 approach behind its own relay |
 | Open Plan | C01–C02–C03–C04–C05–C06–C08–C09–C11–D01; C06–C07–C08; C03–C10–C08 | C10–D04 after Distribution |
 | Service | D01–D02–D03–D05–D06–D08–E01; D02–D04–D05; D06–D07–D09–D08; D09–D10 | D10–E05 after Return Feed |
-| Blackout | E01–E02–E03–E04–E06–E07–E09; E02–E05–E06; E04–E08–E07 | E09–F01 after all three relays |
+| Blackout | E01–E02–E03–E04–E06–E07–E09; E02–E05–E06; E04–E08 | E09–F01 after all three relays |
 | Threshold | F01–F02–F03–F04–F05–F06–F08–F02; F03–F07–F06 | F08–E06 only after phase; no reverse bypass into F before all relays |
 
 All three relay rooms remain reachable before their own switch is activated. The expected first-time order is B, C, D, but persistent logic must tolerate other orders. Side-route gates are useful shortcuts, not disposable keys. A player reaching E09 early receives accurate circuit status and can walk back, not become trapped. The final return can use F08→E06→E05→D10, the Distribution passage and the Circulation shutter; those connections must remain intelligible in both directions.
@@ -99,7 +99,7 @@ Before implementing M8, assign one world architect an isolated worktree and excl
 Required greybox evidence before decorative expansion:
 
 - All56 distinct spaces exist, connect and serve their stated purposes; minimum structural variants are traceable. A room tally is not a level-quality score.
-- Walk the ordinary full route, all three relay orders relevant to gate logic, shortcut returns and zero-ammo ending path with real collision and controls. Logical reachability complements actual traversal, never replaces it.
+- Walk the ordinary full route, shortcut returns and zero-ammo ending path with real collision and controls. Exercise all six relay activation permutations through targeted gate/checkpoint scenarios, including interrupted/reloaded progress. Logical reachability complements actual traversal, never replaces it. Targeted scenarios do not count as the final full campaign playthroughs.
 - Measure first-time and learned traversal, objective discovery, backtracking, resource pressure, chase/search distribution and checkpoint repetition. Do not force35–60 minutes with speed restrictions, artificial waits or repeated empty laps.
 - Open full-resolution composition views for each sector and temporal evidence of intersections, door use, relay manipulation and return navigation. Reviewer does not receive a live hidden-monster overlay.
 - Probe dead ends, doors closing during passage, crouched clearance, save/load on each side of gates, anomaly refusal under visibility/occupancy and safe rollback. Failure opens a correction task.
