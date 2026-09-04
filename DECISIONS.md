@@ -1,5 +1,9 @@
 # Decisions
 
+## D007 — Runtime concurrency correction, 2026-09-04
+
+Official reference described max_concurrent_threads_per_session as excluding primary, so initial value3 intended root+3. Actual runtime twice rejected a third worker at value3 while root+2 workers ran. Runtime tool explicitly advertises4 total slots. Set supported value4 to match that actual enforced total and probe third-worker launch. Do not exceed4 total or launch nested untracked sessions. This corrects config to observed runtime behavior, not invented concurrency.
+
 ## D006 — Design freeze, 2026-09-04
 
 All9 independent research assignments complete and archived. Independent design_contract_audit initially failed5 documentation/specification omissions, all corrected; rereview PASS at c737443110d558ff4863b9ec202368bbe83f88b1. Freeze GOAL_CONTRACT.md and QUALITY_GATES.md without lowered criteria, and freeze GAME_DESIGN/ART_DIRECTION creative scope. Numeric tuning remains empirical. Production begins only now, delegated to isolated Astra/max workers. Actual game/release gates remain unpassed. No high-level concept reopening absent evidenced unavoidable contradiction.
