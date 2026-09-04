@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and conversation
+    url: https://github.com/marius4lui/NULLSPACE/discussions
+    about: Ask about the project or discuss an idea before turning it into a task.
+  - name: Report a security vulnerability privately
+    url: https://github.com/marius4lui/NULLSPACE/security/advisories/new
+    about: Keep sensitive security details out of public issues.

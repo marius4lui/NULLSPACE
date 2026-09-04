@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible website, documentation or development-build problem.
+title: "[Bug]: "
+labels: ["bug", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve NULLSPACE. The public repository does not contain a playable campaign yet. For sensitive security findings, use the private report link in SECURITY.md.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where is the problem?
+      options:
+        - Website
+        - Documentation
+        - Development preview or build
+        - Repository or workflow
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: What did you do?
+      description: Include the page URL or exact build/commit, then the steps needed to reproduce it.
+      placeholder: |
+        URL or commit:
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected and actual result
+      description: What should have happened, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS and screen size for the website; OS, GPU and graphics settings for a development build.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, recording or relevant log excerpt
+      description: Optional. Remove credentials and personal information before uploading.

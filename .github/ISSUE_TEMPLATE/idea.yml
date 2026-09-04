@@ -1,0 +1,28 @@
+name: Improvement idea
+description: Suggest a focused improvement to the site, documentation or planned game.
+title: "[Idea]: "
+labels: ["enhancement", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        NULLSPACE has a defined scope: one single-player survival-horror campaign, one creature and two weapons. Improvements within that scope are the most useful. Use Discussions for open-ended questions.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What could be better?
+      description: Describe the player or visitor problem and where you encountered it.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Your suggestion
+      description: Explain the change and how it would help. Link relevant screenshots or design sections if useful.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or tradeoffs
+      description: Optional. What else could solve the problem, and what should remain simple?
