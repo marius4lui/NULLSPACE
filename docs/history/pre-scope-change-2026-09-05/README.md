@@ -18,23 +18,23 @@ Single-player · First-person survival horror · In development
 
 *Early Blender environment render using original project assets. Work in progress.*
 
-Wake up on damp carpet beneath fluorescent lights. Somewhere inside an impossible commercial building, an exit is waiting for power. Find two power switches, restore the exit, and remember your way back.
+Wake up on damp carpet beneath fluorescent lights. Somewhere inside an impossible commercial building, an exit is waiting for power. Find three relay stations, restore the circuit, and remember your way back.
 
 Something else is learning the building with you.
 
 ## The intended experience
 
-- **One persistent threat.** The Listener is an original creature that follows sight and sound clues, searches, and can lose your trail.
-- **Every shot has a cost.** A compact semi-automatic pistol buys time, but its noise gives away your position. Doors, cover and route choices matter.
-- **A compact connected building.** Roughly 8–12 meaningful rooms: quiet arrival, nested offices, short service/blackout and the return to the exit.
-- **Architecture you almost remember.** Offset openings, sparse landmarks and tactical doors help you navigate and escape.
-- **A complete escape.** Two separated power switches and a return to the exit, designed for a 10–15 minute first successful run. Progression is designed to remain possible without ammunition.
+- **One persistent threat.** The Listener is a tall, original creature designed to observe, stalk and search using sight, sound and imperfect memory.
+- **Every shot has a cost.** A compact pistol and pump shotgun buy time, but their noise gives away your position. Doors, cover and route choices matter.
+- **Six connected sectors.** From faded office grids and exposed open-plan rooms to service corridors, blackout and the Red Threshold.
+- **Architecture you almost remember.** Rare changes happen out of sight. Familiar landmarks remain your best chance of getting home.
+- **A complete escape.** Three relays, a final phase breaker and a return to the exit. Progression is designed to remain possible without ammunition.
 
 These describe the intended game; implementation is still in early production.
 
 ## Built with GPT-6 Astra
 
-NULLSPACE is an AI-developed game created with **GPT-6 Astra through Codex**, under the direction of [marius4lui](https://github.com/marius4lui). One agent now handles implementation, original asset creation and practical in-engine checks, reusing the existing work. This repository follows the development of the game, from its first rooms to a playable release.
+NULLSPACE is an AI-developed game created with **GPT-6 Astra through Codex**, under the direction of [marius4lui](https://github.com/marius4lui). AI agents handle implementation and original asset creation, with separate review and in-engine testing. This repository follows the development of the game, from its first rooms to a playable release.
 
 ## Specifications
 
@@ -42,17 +42,17 @@ NULLSPACE is an AI-developed game created with **GPT-6 Astra through Codex**, un
 | :--- | :--- |
 | Engine | Godot 4.7.2 · Forward+ |
 | Asset pipeline | Blender 5.2.1 LTS · original models, materials and animation |
-| Platforms | Linux laptop first; Windows x86-64 cross-export when available |
-| Game | 10–15 minutes · approximately 8–12 connected rooms · two switches |
-| Equipment | One semi-automatic pistol · battery-free flashlight |
+| Platforms | Windows and Linux, x86-64 |
+| Campaign | 35–60 minutes · 56 authored spaces · 6 sectors |
+| Arsenal | Semi-automatic pistol · pump-action shotgun |
 | Threat | The Listener · approximately 2.3 m tall |
-| Performance | Stable responsive play on the existing Linux laptop; actual measurements pending |
+| Performance goal | 1080p / 60 FPS on RTX 2060 or RX 6600-class hardware |
 
-Minimum requirements are not established yet. Performance will be reported with the actual laptop, resolution and profile. A Windows cross-export is not native Windows validation.
+The performance target has not been validated on that hardware. Minimum system requirements are not established yet.
 
 ## Current state
 
-There is **no downloadable playable campaign yet**. Separate development worktrees contain a walkable environment preview, a rigged Listener with three initial animation clips, and core systems for settings, saves and game state. The pistol, creature behavior and complete two-switch flow still need integration. Interrupted Player work is secured; development continues solo on `feat/short-game`. No complete-run or release claim is made.
+There is **no downloadable playable campaign yet**. Separate development worktrees contain a walkable environment preview, a rigged Listener with three initial animation clips, and core systems for settings, saves and game state. Weapons, creature behavior and campaign integration remain in development. These candidates have not all passed independent acceptance.
 
 The published `main` branch contains the website, design, development records and this preview image. It is not yet a runnable Godot project. Build, launch and game-control instructions will accompany the integrated game.
 

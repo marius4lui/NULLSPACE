@@ -1,15 +1,18 @@
 # Release checklist
 
-All items outstanding. Full authoritative criteria: GOAL_CONTRACT.md and QUALITY_GATES.md.
+Current contract/gates replace old campaign/agent/numeric requirements.
 
-- [ ] All systems/features independently reviewed and actually operated.
-- [ ] Zero P0/P1; P2 resolution or honest remaining limitations.
-- [ ] All visual categories >=9; all 13 release categories >=9; mean >=9.2.
-- [ ] Performance target substantially met with honest hardware evidence.
-- [ ] Windows and Linux release exports launch and complete.
-- [ ] Fresh-clone reproducible build verified and documented.
-- [ ] TWO successful complete final runs after last gameplay-affecting change, including independent QA.
-- [ ] Final screenshots, representative video and QA evidence reviewed.
-- [ ] README, architecture/design/art, credits/licenses and release notes complete.
-- [ ] Root independent final build/launch/evidence/contract review.
-- [ ] Only then active goal marked complete.
+- [ ] Complete10–15minute first-success flow without padding, two switches/ending.
+- [ ] Actual movement/pistol/Listener/door/flashlight/checkpoint checks.
+- [ ] Both switch orders, zero-ammo escape, death/restart/valid Continue.
+- [ ] Persistent settings, two profiles, reduced motion/flashes.
+- [ ] No known crash/softlock/corruption/severe gameplay defect.
+- [ ] Coherent inspected graphics/sound, honest auditory limitations.
+- [ ] Actual laptop resolution/profile/frame-time evidence.
+- [ ] Fresh-checkout reproducible Linux export, launched/tested.
+- [ ] Two full successful runs after last gameplay change, commit/hash/duration/result/automation labels.
+- [ ] Windows cross-export if possible; native limitation disclosed.
+- [ ] README controls/launch/build/limits, credits/licenses/release notes/screens/evidence.
+- [ ] Final current contract/gates/issues/artifacts checked.
+
+No reduced-final-game gates passed yet.

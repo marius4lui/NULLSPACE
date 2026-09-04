@@ -2,7 +2,7 @@
 
 Useful bug reports, clear design feedback and small, focused improvements are welcome.
 
-NULLSPACE is in early production. Public `main` contains the website, original preview image and project documentation. Gameplay and asset candidates are being reviewed in isolated development worktrees; there is no integrated public game to build or play yet.
+NULLSPACE is in early production. Public `main` contains the website, original preview image and project documentation. Existing gameplay and asset work is preserved while a single implementer connects the reduced 10–15 minute game; there is no integrated public game to build or play yet.
 
 ## Pick the right place
 
@@ -17,7 +17,7 @@ Check existing issues and [the development issue register](ISSUES.md) first. A u
 1. Read [the current status](STATUS.md) and the relevant design document. The game scope in [GOAL_CONTRACT.md](GOAL_CONTRACT.md) and [QUALITY_GATES.md](QUALITY_GATES.md) is frozen.
 2. Start a branch from `main`. Discuss substantial gameplay or asset proposals before investing in them; a project-wide license has not been selected yet.
 3. Keep the change limited to one purpose. Describe the player or reader benefit and any known limitations.
-4. Validate what you changed. Website edits need a real browser check at desktop and mobile widths; use the [website guide](docs/WEBSITE.md). Documentation links should resolve. Gameplay changes require the relevant build, real interaction and inspection evidence, followed by an independent review.
+4. Validate what you changed. Website edits need a real browser check at desktop and mobile widths; use the [website guide](docs/WEBSITE.md). Documentation links should resolve. Gameplay changes require the relevant build, real interaction and inspection evidence. Current project development is solo; independent-agent reviews are not required.
 5. Open a pull request with the exact checks you performed and screenshots for visible changes.
 
 Do not present planned work as a released feature or a technical check as proof of game quality. Retain failing evidence when a correction depends on it. Agent contributors must also follow [AGENTS.md](AGENTS.md), including the GPT-6 Astra model policy and isolated ownership.

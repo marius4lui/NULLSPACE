@@ -1,9 +1,9 @@
 # Status
 
-- Current milestone: User-authorized playable-first strategy; block A original room + concrete Player starts. Then pistol, fair Listener, relay/exit/death/restart in the same scene.
-- Last known good commit: 552c340 (strategy/governance baseline; original contract retained in Git; no integrated playable build).
-- Verified completed systems: M0 source9bdcfc3 PASScef92e4; nativefb3a09d PASS2f10706; bounded core storage/time/restore checks and actual33-image self-native evidence988c18b. Original room e70fec5 and Listener3b67be9 retained with open quality limitations. No product acceptance.
-- Current blockers: A needs concrete Player and scene wiring. Goal reports usageLimited but direct limits report1%/no reached flag; two normal worker continuations now respond. No purchase/reset/downgrade. Audio/platform/cold-start/target-GPU evidence remains open, not a prerequisite for independent gameplay. Interrupted owned art preview stopped cleanly, evidence preserved.
-- Current active agents: qa_native stages isolated section-base and will independently review/integrate coherent A; core_m2 implements A after handoff. Both Astra/max. Other workers are deferred; no automatic capacity filling.
-- Remaining acceptance failures: A not yet playable; complete5–10minute section and all final campaign/release gates remain unverified; final full runs0/2. Original final content is not reduced.
-- Next integration point: actual playable A export, native movement/collision/light/interaction/pause and targeted regressions, independent combined review, then sequential Main promotion. No old generic-interface or perfect-room micro-gates beforehand.
+- Current milestone: Solo takeover; reduced final scope; next integrated core (room + Player).
+- Last known good commit:051d4f5 documentation/website baseline, not a playable game.
+- Verified completed systems: Existing Godot4.7.2/Blender5.2.1/templates/native runner and tested core; staged foundation52b8ace. Original room e70fec5, Listener3b67be9 retained. Interrupted Player WIP secured d0c60c1, unvalidated and missing coordinator.
+- Current blockers: Section coordinator, pistol, AI/doors and two-switch complete flow missing. Stored Goal objective cannot be edited with exposed tools; repo contract authoritative. Audio listening modality unavailable.
+- Current active agents: None. Root implements solo on feat/short-game. Worktrees preserved.
+- Remaining acceptance failures: Complete10–15minute game, integrated operation, laptop measurements, release/export and final full runs0/2.
+- Next integration point: Selected foundation + Player WIP; complete and operate original room/player/light/interact/pause, then pistol.

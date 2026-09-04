@@ -3,11 +3,5 @@ model_reasoning_effort = "max"
 
 [features]
 goals = true
-multi_agent = true
-
-[agents]
-default_subagent_model = "gpt-6-astra"
-default_subagent_reasoning_effort = "max"
-# Current resumed runtime advertises five total slots, root plus four workers.
-# Config reference defines this limit as spawned threads excluding the primary.
-max_concurrent_threads_per_session = 4
+# User ended delegation on 2026-09-05. One implementer only.
+multi_agent = false
