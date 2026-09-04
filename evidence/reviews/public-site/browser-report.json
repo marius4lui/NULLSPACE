@@ -1,0 +1,233 @@
+{
+  "browser": "149.0.7827.55",
+  "url": "http://127.0.0.1:8768/NULLSPACE/",
+  "errors": [],
+  "checks": [
+    {
+      "name": "hero image loaded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fragment links resolve",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "skip link first focus",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector Arrival",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector Grid",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector Open Plan",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector Service",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector Blackout",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector Red Threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector Home",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector arrow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "sector End",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 0 opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 0 caption",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 0 focused close",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 0 Escape and focus return",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 1 opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 1 caption",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 1 focused close",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 1 Escape and focus return",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 2 opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 2 caption",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 2 focused close",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery 2 Escape and focus return",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "all images loaded after traversal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "backdrop closes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "specifications expand",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no horizontal overflow 1920",
+      "pass": true,
+      "detail": {
+        "scroll": 1920,
+        "viewport": 1920
+      }
+    },
+    {
+      "name": "no horizontal overflow 1440",
+      "pass": true,
+      "detail": {
+        "scroll": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "name": "no horizontal overflow 1024",
+      "pass": true,
+      "detail": {
+        "scroll": 1024,
+        "viewport": 1024
+      }
+    },
+    {
+      "name": "no horizontal overflow 768",
+      "pass": true,
+      "detail": {
+        "scroll": 768,
+        "viewport": 768
+      }
+    },
+    {
+      "name": "no horizontal overflow 700",
+      "pass": true,
+      "detail": {
+        "scroll": 700,
+        "viewport": 700
+      }
+    },
+    {
+      "name": "no horizontal overflow 390",
+      "pass": true,
+      "detail": {
+        "scroll": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "no horizontal overflow 320",
+      "pass": true,
+      "detail": {
+        "scroll": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "name": "reduced motion disables smooth scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile sector selection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile image opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile lightbox fits",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile close",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "404 home link",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no browser errors",
+      "pass": true,
+      "detail": []
+    }
+  ]
+}
