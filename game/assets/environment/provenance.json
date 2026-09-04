@@ -1,0 +1,1194 @@
+{
+  "schema": 1,
+  "asset_family": "NULLSPACE original environment foundation and M4 reference room",
+  "recipe_seed": 41073,
+  "creator": "Delegated NULLSPACE environment-art production agent, GPT-6 Astra",
+  "content_inputs": "Original procedural geometry, mathematical textures and directed composition only; no external game-content assets.",
+  "source_pipeline": [
+    "generate_textures.py",
+    "build_environment.py",
+    "validate_exports.cjs",
+    "configure_texture_imports.py",
+    "preview/verify_texture_imports.gd",
+    "record_provenance.py"
+  ],
+  "software": {
+    "Blender": "5.2.1 LTS / 9e2066aef7ef",
+    "Godot": "4.7.2 stable / ed1daf0bf",
+    "Python": "3.14.7 (host)",
+    "numpy": "2.4.6 (host)",
+    "Pillow": "12.3.0",
+    "Khronos glTF validator": "2.0.0-dev.3.10"
+  },
+  "source_reproduction": "Pinned recipes reproduce material and mesh exports. Blender master byte identity is not asserted; editable sources are retained.",
+  "runtime_reproduction": "Explicit glTF/binary/PNG files plus intentional Godot .import and .uid metadata are retained; engine .godot cache is excluded.",
+  "licensing": "Original project content; distribution license is the repository owner's decision. Listed software dependencies are authoring tooling, not third-party art.",
+  "base_commit": "e01fdb0a9294659f312bc887f559c934354892f3",
+  "files": [
+    {
+      "path": "tools/art/environment/.gitignore",
+      "bytes": 14,
+      "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+    },
+    {
+      "path": "tools/art/environment/README.md",
+      "bytes": 9406,
+      "sha256": "c832095525f8e49d606cfa3e35280398cbcf9bbd72ee934e42166150aeca82e8"
+    },
+    {
+      "path": "tools/art/environment/analyze_native_run.py",
+      "bytes": 4516,
+      "sha256": "ef974410ecf9a60c7c5047eee165dd0c96aeb276c3375fbd0ccc4f465c7042f5"
+    },
+    {
+      "path": "tools/art/environment/build_environment.py",
+      "bytes": 35033,
+      "sha256": "57ec8a1c7c88013f85e4e8291a1a05b1e2b9ffef6fad595dfc186d40ac3e5d35"
+    },
+    {
+      "path": "tools/art/environment/configure_texture_imports.py",
+      "bytes": 4693,
+      "sha256": "0841a2c0303a64e7034760b8271e55c80158e52b09e0fdfba2db90c47a38fd54"
+    },
+    {
+      "path": "tools/art/environment/generate_textures.py",
+      "bytes": 14447,
+      "sha256": "e73db575a1560568d5f27a82624b1c403bca51966e9d69dd26236b5bb8088130"
+    },
+    {
+      "path": "tools/art/environment/package-lock.json",
+      "bytes": 641,
+      "sha256": "aba51952360634f33e9a49ab15d8e25410acc06b06f561007f068f2c8bab5d0f"
+    },
+    {
+      "path": "tools/art/environment/package.json",
+      "bytes": 270,
+      "sha256": "cf55cbd943d4420e1f3c4ba71e719e27f7fee2dd254390245454e2cb7131c38a"
+    },
+    {
+      "path": "tools/art/environment/prepare_preview.py",
+      "bytes": 731,
+      "sha256": "899b2e678403aa3b6cb4946dc00bb6e54c84b6f988abe4157f6f1c09f208e88d"
+    },
+    {
+      "path": "tools/art/environment/preview/.gitignore",
+      "bytes": 39,
+      "sha256": "f0dd2f0f6ab6197dbe481a9ffc77e2dbcc9fa6362a36d5fc2729138d290e4d6c"
+    },
+    {
+      "path": "tools/art/environment/preview/preview.gd",
+      "bytes": 12277,
+      "sha256": "15c758d89d5556f60fa8866200a23c14142281746ad36b6c89d58785543458cb"
+    },
+    {
+      "path": "tools/art/environment/preview/preview.gd.uid",
+      "bytes": 20,
+      "sha256": "851f76208ae5c4dd45a390c7e3a5603172c2e5a5c96f2337a33689da24b636fe"
+    },
+    {
+      "path": "tools/art/environment/preview/preview.tscn",
+      "bytes": 182,
+      "sha256": "b209395dfe28ed1851c4bc88f1620a0a84f0d99774e1e75c257a257236172de4"
+    },
+    {
+      "path": "tools/art/environment/preview/preview_render_diagnostics.gd",
+      "bytes": 4623,
+      "sha256": "092e5c23ccef1a001c120ace500b5d04ceedbece5f52639c859901619b0c4f02"
+    },
+    {
+      "path": "tools/art/environment/preview/preview_render_diagnostics.gd.uid",
+      "bytes": 20,
+      "sha256": "9f9effe0b88ced412ecfa1a6ac5ca03a2b009966b58ea7d8035dfa2f965efddd"
+    },
+    {
+      "path": "tools/art/environment/preview/project.godot",
+      "bytes": 813,
+      "sha256": "14bed877be24300546d8ce525a8b81ee7f49f7f3399fdc3df44650c954554c1b"
+    },
+    {
+      "path": "tools/art/environment/preview/verify_preview_diagnostics.gd",
+      "bytes": 3653,
+      "sha256": "57af8bbb7c84fcb096a5f5ff578f7b5ab78642637940bf97deb8d697b996fa15"
+    },
+    {
+      "path": "tools/art/environment/preview/verify_preview_diagnostics.gd.uid",
+      "bytes": 20,
+      "sha256": "6f2f58016bb6bee59ff452a995d428437078f0d763b0ad6c53d4c40e302f8c0e"
+    },
+    {
+      "path": "tools/art/environment/preview/verify_texture_imports.gd",
+      "bytes": 5197,
+      "sha256": "0f3ca95f047b8ee47880ef9e40857d1cf76131bdadd952a29cad237c4f99f935"
+    },
+    {
+      "path": "tools/art/environment/preview/verify_texture_imports.gd.uid",
+      "bytes": 20,
+      "sha256": "a739443ce5e3294a607125ca47431dd444d5144aa4e67f1777fc7d87fb66b0a6"
+    },
+    {
+      "path": "tools/art/environment/record_provenance.py",
+      "bytes": 3002,
+      "sha256": "e318021f084b4e0b6e6be7fcaaee8f69a62afbaf682eec1ba38305010b03a9ed"
+    },
+    {
+      "path": "tools/art/environment/validate_exports.cjs",
+      "bytes": 4154,
+      "sha256": "199ee3824771db5efa9dd5335136341b7990c1db1b81f155a6e832f885724182"
+    },
+    {
+      "path": "art/source/blender/architecture/nullspace_environment_m4.blend",
+      "bytes": 431544,
+      "sha256": "986d49028ff14b7d1642d6b2615a1fbf5f635c240703efbfde72256e5b3cc7bd"
+    },
+    {
+      "path": "art/source/textures/environment/baseboard/baseboard_basecolor.png",
+      "bytes": 168252,
+      "sha256": "bfe1e44e0d803b1b3dc52bf581bf169d09204c25d3ab08cf15a27d120b9370f3"
+    },
+    {
+      "path": "art/source/textures/environment/baseboard/baseboard_height_source.png",
+      "bytes": 512070,
+      "sha256": "8419a9f076ef3d0aea2e80a1ee4f9a56f2f7ec550cc95703dc2c99120c684ab5"
+    },
+    {
+      "path": "art/source/textures/environment/baseboard/baseboard_normal.png",
+      "bytes": 125984,
+      "sha256": "1021760936bcc24456b554536028099847d0e8b04c61f1d9ce8745a4be62f8b1"
+    },
+    {
+      "path": "art/source/textures/environment/baseboard/baseboard_orm.png",
+      "bytes": 22707,
+      "sha256": "4533105f9d14d950a28e508f4bbf5f47b51968eca5800430183d737ae767da2c"
+    },
+    {
+      "path": "art/source/textures/environment/baseboard/recipe.json",
+      "bytes": 1371,
+      "sha256": "4761d329b7854f64d8aee43d64cc2557ece43f62b17aa8e5bf34f95c1e4f8cd3"
+    },
+    {
+      "path": "art/source/textures/environment/carpet/carpet_basecolor.png",
+      "bytes": 6331946,
+      "sha256": "03e4e8878e0fc57b47bed3a65322dd7fd4dc5238b78561e114bf563ad823bf49"
+    },
+    {
+      "path": "art/source/textures/environment/carpet/carpet_height_source.png",
+      "bytes": 8041072,
+      "sha256": "d22f7b9f4a9726cc65c5c93758f7fb199434ff278e6108f7c16a7f82e1c2c759"
+    },
+    {
+      "path": "art/source/textures/environment/carpet/carpet_normal.png",
+      "bytes": 7191193,
+      "sha256": "4eefb5bee7734b8de3351045c962339bdbe67527f76d1434d037393af63ab4a7"
+    },
+    {
+      "path": "art/source/textures/environment/carpet/carpet_orm.png",
+      "bytes": 2876361,
+      "sha256": "9c6df287c178064b68ed02ba82d1da59001ba0068939d4fb766b94144008656f"
+    },
+    {
+      "path": "art/source/textures/environment/carpet/recipe.json",
+      "bytes": 1374,
+      "sha256": "4355f9f0da65565820c618458634178e4be955fd1ed84de61a689e1f654189d3"
+    },
+    {
+      "path": "art/source/textures/environment/ceiling/ceiling_basecolor.png",
+      "bytes": 776088,
+      "sha256": "aadc46c21612af736044b15ded8db2e35a90514cff152e71a410d3950883dbf2"
+    },
+    {
+      "path": "art/source/textures/environment/ceiling/ceiling_height_source.png",
+      "bytes": 1955609,
+      "sha256": "746d8e0c5548809041602efd20d2d504487f80154cad711384e1c6edd28cb5a8"
+    },
+    {
+      "path": "art/source/textures/environment/ceiling/ceiling_normal.png",
+      "bytes": 1175620,
+      "sha256": "3da17bd465f03ae5d5fa4f50fac29bdec446022476a319b5f450b32e3445d124"
+    },
+    {
+      "path": "art/source/textures/environment/ceiling/ceiling_orm.png",
+      "bytes": 21959,
+      "sha256": "52eb334e8236363804b93d6d14d844c9240844dac86cabb25d3bd1941ad9bcb1"
+    },
+    {
+      "path": "art/source/textures/environment/ceiling/recipe.json",
+      "bytes": 1364,
+      "sha256": "3741d9b6c6f6b496dce8c0c69723f41d297fe7f023be17a59a8471248bdbd524"
+    },
+    {
+      "path": "art/source/textures/environment/diffuser/diffuser_basecolor.png",
+      "bytes": 44762,
+      "sha256": "2a00f3c35a9292846921d62eefa9daebda972738d07f39852440bc0d68552014"
+    },
+    {
+      "path": "art/source/textures/environment/diffuser/diffuser_height_source.png",
+      "bytes": 2204,
+      "sha256": "af6202f0dc134e29b5f268e2272be1cc7ac0963e52eb3540eac7a533f5a8f954"
+    },
+    {
+      "path": "art/source/textures/environment/diffuser/diffuser_normal.png",
+      "bytes": 2805,
+      "sha256": "e4f18417acdbe0b90bc488c9baffdc6be053e52377153fac7381674a4dc786f1"
+    },
+    {
+      "path": "art/source/textures/environment/diffuser/diffuser_orm.png",
+      "bytes": 14033,
+      "sha256": "f1b7dd05aad612ead41e723fc554664e228538c01c7b32567e703775594c35c3"
+    },
+    {
+      "path": "art/source/textures/environment/diffuser/recipe.json",
+      "bytes": 1348,
+      "sha256": "cab40918286fd19b9d0d91c1dd25c80c8789bfc621d928c9acc1ee258d3e1b7a"
+    },
+    {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_basecolor.png",
+      "bytes": 208799,
+      "sha256": "88d11c0f8af26a94ebc2378f461169d63398f32725e337c5309554764591aa20"
+    },
+    {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_emission.png",
+      "bytes": 1023,
+      "sha256": "e9663408931e28e300f1a666abf090e22ce103690e0ac1ff394c121827d54a1f"
+    },
+    {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_height_source.png",
+      "bytes": 588,
+      "sha256": "4a793e24e6a384be0c4848d4a786281570f8de02dd43a1f2f7245efaa58af76e"
+    },
+    {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_normal.png",
+      "bytes": 1489,
+      "sha256": "71d432413a10aab25e5dee0aa377a1ca29dddef8eb2e30584135268d218c9d96"
+    },
+    {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_orm.png",
+      "bytes": 1527,
+      "sha256": "9719f89ec6b4e9660b7148d8a5e1c2757e37fdef38abe2fc33512244a1c9fbef"
+    },
+    {
+      "path": "art/source/textures/environment/fixture_detail/recipe.json",
+      "bytes": 1411,
+      "sha256": "796c5a10815a56e2fcfafdbb609eceb30b9bd9c6c50ded496fb20a06245d1e1a"
+    },
+    {
+      "path": "art/source/textures/environment/manifest.json",
+      "bytes": 11765,
+      "sha256": "295ae2bc85420a686a8211298c9cba31099f3120109c713d9aa632a8392612e4"
+    },
+    {
+      "path": "art/source/textures/environment/painted_metal/painted_metal_basecolor.png",
+      "bytes": 546450,
+      "sha256": "210b366bea82397ff82b6db58660b6492ce34e7b1a1626efb2695a1bb5265ac2"
+    },
+    {
+      "path": "art/source/textures/environment/painted_metal/painted_metal_height_source.png",
+      "bytes": 2041492,
+      "sha256": "79c3c31593c824e014e081cb296a2028bd79e3ef8f8c6286c9e2dc2c57ec5971"
+    },
+    {
+      "path": "art/source/textures/environment/painted_metal/painted_metal_normal.png",
+      "bytes": 518940,
+      "sha256": "7cb6cf3cff5a9a4c7515494c5b563725524c3e6dc0a0dc24866ff41af7e4f178"
+    },
+    {
+      "path": "art/source/textures/environment/painted_metal/painted_metal_orm.png",
+      "bytes": 51866,
+      "sha256": "bda574b2b212e95ad14e6f5c34acfa60740880a615ebaf4049d7cbc47719cf50"
+    },
+    {
+      "path": "art/source/textures/environment/painted_metal/recipe.json",
+      "bytes": 1399,
+      "sha256": "415aa9579b37e05c3198d4fc3dffb84c2df517e2cfe089d8a7a19a42af4ae58e"
+    },
+    {
+      "path": "art/source/textures/environment/room_m4/room_m4_macro.png",
+      "bytes": 221133,
+      "sha256": "0f866e710983d864c910dad410d82085b1706ac3f8f05450a87dde581ec4c1b2"
+    },
+    {
+      "path": "art/source/textures/environment/wallpaper/recipe.json",
+      "bytes": 1362,
+      "sha256": "54acf6d55258f5dfeec4914052b4314b33f10296e6ee3371eb5cce4560fcef38"
+    },
+    {
+      "path": "art/source/textures/environment/wallpaper/wallpaper_basecolor.png",
+      "bytes": 3637890,
+      "sha256": "50356c1162bf5a053b9e676de6c342007303c8bd4351715f51fdd0bf3e499e58"
+    },
+    {
+      "path": "art/source/textures/environment/wallpaper/wallpaper_height_source.png",
+      "bytes": 7484345,
+      "sha256": "3e6b179a8ff9431bc203afa4da403c709dc8ae180aba641258910ca04599a666"
+    },
+    {
+      "path": "art/source/textures/environment/wallpaper/wallpaper_normal.png",
+      "bytes": 4094395,
+      "sha256": "f14d7e681fed7707cb651bbd20ab2ac5d6d2946cfb02a5771b2a09c72e17056c"
+    },
+    {
+      "path": "art/source/textures/environment/wallpaper/wallpaper_orm.png",
+      "bytes": 1640596,
+      "sha256": "61ec1361158666ce5708f4c56f1cd9d578410d312837adab821ca13a6111a2a1"
+    },
+    {
+      "path": "art/exported/environment/ceiling_board_122.bin",
+      "bytes": 21352,
+      "sha256": "79b77f14f52709be7f16abf2862ddd4bad58083925439e75b22784fe1d9973cb"
+    },
+    {
+      "path": "art/exported/environment/ceiling_board_122.gltf",
+      "bytes": 2840,
+      "sha256": "112a2a353f4fa7bfd9bdfef3272ca5b5c9deb01e8baf0aa4429497fbb4d6ec71"
+    },
+    {
+      "path": "art/exported/environment/ceiling_grid_122.bin",
+      "bytes": 29928,
+      "sha256": "8a77bdf1f92a10668c2bb390b9935e188271f5fac4914b5b8b8aa81fa67ff58e"
+    },
+    {
+      "path": "art/exported/environment/ceiling_grid_122.gltf",
+      "bytes": 2866,
+      "sha256": "7fe6d23952a84f3f12f8eddf1d7882e2f566e5b908797cfb6778fbc9b978e205"
+    },
+    {
+      "path": "art/exported/environment/ceiling_grid_244.bin",
+      "bytes": 29928,
+      "sha256": "59280f08a2ff19704a23f94769f4e2fcdb36dbfbf2fdb06fec1a8c9328891bc8"
+    },
+    {
+      "path": "art/exported/environment/ceiling_grid_244.gltf",
+      "bytes": 2865,
+      "sha256": "88c7182d3c1ef032643ed77fc7ac416e13ed8ee85ab91e289c3eb2ab8e0e6dc9"
+    },
+    {
+      "path": "art/exported/environment/column_061.bin",
+      "bytes": 129416,
+      "sha256": "69202b9c315d35fba64f28f2637e90abfd07ddd470c9ae4879622d81011b8a78"
+    },
+    {
+      "path": "art/exported/environment/column_061.gltf",
+      "bytes": 5174,
+      "sha256": "ba81141b7f98849c2bba76bb93ca81224ac5b4b906f6fbddeb62e1b204e1db8c"
+    },
+    {
+      "path": "art/exported/environment/column_086.bin",
+      "bytes": 133320,
+      "sha256": "67be4ce4ce431fa9f43cd524e16cde6a927dde4079b1cc31518f1944562f1ccf"
+    },
+    {
+      "path": "art/exported/environment/column_086.gltf",
+      "bytes": 5174,
+      "sha256": "bce18c4e322e406d749bb04d8e100240b23a8aeb26495f3a1244fc8a4e11f40c"
+    },
+    {
+      "path": "art/exported/environment/cove_corner_090.bin",
+      "bytes": 55492,
+      "sha256": "817332baf7f05f7b10a3b17d666494521eda39553f2618fe646d31dd29671eba"
+    },
+    {
+      "path": "art/exported/environment/cove_corner_090.gltf",
+      "bytes": 2834,
+      "sha256": "d3d555b6db65afe1f5de55658edc866227dfe9eac1af79df02a6a7f7e50ffb32"
+    },
+    {
+      "path": "art/exported/environment/environment_manifest.json",
+      "bytes": 18069,
+      "sha256": "4ac4d3cdf8e1ac19ee2c35011ae81889a359e69670671d46c62c6d918ea94ee8"
+    },
+    {
+      "path": "art/exported/environment/fixture_exposed.bin",
+      "bytes": 466752,
+      "sha256": "f7be164302f40e8619e6b5736b2adefd610b2a8e14da2cc0aa4c5074efa2d5da"
+    },
+    {
+      "path": "art/exported/environment/fixture_exposed.gltf",
+      "bytes": 5718,
+      "sha256": "7a4cc78e12b128c76787470d520bd585ff10a1dee35bf6d78b886d1e93f97e54"
+    },
+    {
+      "path": "art/exported/environment/fixture_prismatic.bin",
+      "bytes": 480936,
+      "sha256": "e547c9b8964dc4c822b322e50a116458ab563ee1e6434db03b5270eaeda7f50b"
+    },
+    {
+      "path": "art/exported/environment/fixture_prismatic.gltf",
+      "bytes": 8246,
+      "sha256": "214716aa31f0585d32658e7b9c0ee93ca24d4f91ffb9efe30f3c8901d9e53403"
+    },
+    {
+      "path": "art/exported/environment/floor_carpet_244.bin",
+      "bytes": 1608,
+      "sha256": "a351be93398b48677c6db9cae227eb3efc2e4bbd3a8d9c0777b643cb7018cd77"
+    },
+    {
+      "path": "art/exported/environment/floor_carpet_244.gltf",
+      "bytes": 2768,
+      "sha256": "cb9d2d282b941343cf9cc665a5a7550953440efbfae08645bf9e35a12eb07098"
+    },
+    {
+      "path": "art/exported/environment/room_m4_architecture.bin",
+      "bytes": 10112900,
+      "sha256": "f11daa99eb99b363def9b9c7c2633316c89fcccae742d63bf51476e9de6fc658"
+    },
+    {
+      "path": "art/exported/environment/room_m4_architecture.gltf",
+      "bytes": 15045,
+      "sha256": "d794eb0eb166fe567a60cb37cbe1e50f2415437ffef39d17f7e77016eac4483f"
+    },
+    {
+      "path": "art/exported/environment/textures/baseboard_basecolor.png",
+      "bytes": 168252,
+      "sha256": "bfe1e44e0d803b1b3dc52bf581bf169d09204c25d3ab08cf15a27d120b9370f3"
+    },
+    {
+      "path": "art/exported/environment/textures/baseboard_normal.png",
+      "bytes": 125984,
+      "sha256": "1021760936bcc24456b554536028099847d0e8b04c61f1d9ce8745a4be62f8b1"
+    },
+    {
+      "path": "art/exported/environment/textures/baseboard_orm.png",
+      "bytes": 22707,
+      "sha256": "4533105f9d14d950a28e508f4bbf5f47b51968eca5800430183d737ae767da2c"
+    },
+    {
+      "path": "art/exported/environment/textures/carpet_basecolor.png",
+      "bytes": 6331946,
+      "sha256": "03e4e8878e0fc57b47bed3a65322dd7fd4dc5238b78561e114bf563ad823bf49"
+    },
+    {
+      "path": "art/exported/environment/textures/carpet_normal.png",
+      "bytes": 7191193,
+      "sha256": "4eefb5bee7734b8de3351045c962339bdbe67527f76d1434d037393af63ab4a7"
+    },
+    {
+      "path": "art/exported/environment/textures/carpet_orm.png",
+      "bytes": 2876361,
+      "sha256": "9c6df287c178064b68ed02ba82d1da59001ba0068939d4fb766b94144008656f"
+    },
+    {
+      "path": "art/exported/environment/textures/ceiling_basecolor.png",
+      "bytes": 776088,
+      "sha256": "aadc46c21612af736044b15ded8db2e35a90514cff152e71a410d3950883dbf2"
+    },
+    {
+      "path": "art/exported/environment/textures/ceiling_normal.png",
+      "bytes": 1175620,
+      "sha256": "3da17bd465f03ae5d5fa4f50fac29bdec446022476a319b5f450b32e3445d124"
+    },
+    {
+      "path": "art/exported/environment/textures/ceiling_orm.png",
+      "bytes": 21959,
+      "sha256": "52eb334e8236363804b93d6d14d844c9240844dac86cabb25d3bd1941ad9bcb1"
+    },
+    {
+      "path": "art/exported/environment/textures/diffuser_basecolor.png",
+      "bytes": 44762,
+      "sha256": "2a00f3c35a9292846921d62eefa9daebda972738d07f39852440bc0d68552014"
+    },
+    {
+      "path": "art/exported/environment/textures/diffuser_normal.png",
+      "bytes": 2805,
+      "sha256": "e4f18417acdbe0b90bc488c9baffdc6be053e52377153fac7381674a4dc786f1"
+    },
+    {
+      "path": "art/exported/environment/textures/diffuser_orm.png",
+      "bytes": 14033,
+      "sha256": "f1b7dd05aad612ead41e723fc554664e228538c01c7b32567e703775594c35c3"
+    },
+    {
+      "path": "art/exported/environment/textures/fixture_detail_basecolor.png",
+      "bytes": 208799,
+      "sha256": "88d11c0f8af26a94ebc2378f461169d63398f32725e337c5309554764591aa20"
+    },
+    {
+      "path": "art/exported/environment/textures/fixture_detail_emission.png",
+      "bytes": 1023,
+      "sha256": "e9663408931e28e300f1a666abf090e22ce103690e0ac1ff394c121827d54a1f"
+    },
+    {
+      "path": "art/exported/environment/textures/fixture_detail_normal.png",
+      "bytes": 1489,
+      "sha256": "71d432413a10aab25e5dee0aa377a1ca29dddef8eb2e30584135268d218c9d96"
+    },
+    {
+      "path": "art/exported/environment/textures/fixture_detail_orm.png",
+      "bytes": 1527,
+      "sha256": "9719f89ec6b4e9660b7148d8a5e1c2757e37fdef38abe2fc33512244a1c9fbef"
+    },
+    {
+      "path": "art/exported/environment/textures/material_manifest.json",
+      "bytes": 11765,
+      "sha256": "295ae2bc85420a686a8211298c9cba31099f3120109c713d9aa632a8392612e4"
+    },
+    {
+      "path": "art/exported/environment/textures/painted_metal_basecolor.png",
+      "bytes": 546450,
+      "sha256": "210b366bea82397ff82b6db58660b6492ce34e7b1a1626efb2695a1bb5265ac2"
+    },
+    {
+      "path": "art/exported/environment/textures/painted_metal_normal.png",
+      "bytes": 518940,
+      "sha256": "7cb6cf3cff5a9a4c7515494c5b563725524c3e6dc0a0dc24866ff41af7e4f178"
+    },
+    {
+      "path": "art/exported/environment/textures/painted_metal_orm.png",
+      "bytes": 51866,
+      "sha256": "bda574b2b212e95ad14e6f5c34acfa60740880a615ebaf4049d7cbc47719cf50"
+    },
+    {
+      "path": "art/exported/environment/textures/room_m4_macro.png",
+      "bytes": 221133,
+      "sha256": "0f866e710983d864c910dad410d82085b1706ac3f8f05450a87dde581ec4c1b2"
+    },
+    {
+      "path": "art/exported/environment/textures/wallpaper_basecolor.png",
+      "bytes": 3637890,
+      "sha256": "50356c1162bf5a053b9e676de6c342007303c8bd4351715f51fdd0bf3e499e58"
+    },
+    {
+      "path": "art/exported/environment/textures/wallpaper_normal.png",
+      "bytes": 4094395,
+      "sha256": "f14d7e681fed7707cb651bbd20ab2ac5d6d2946cfb02a5771b2a09c72e17056c"
+    },
+    {
+      "path": "art/exported/environment/textures/wallpaper_orm.png",
+      "bytes": 1640596,
+      "sha256": "61ec1361158666ce5708f4c56f1cd9d578410d312837adab821ca13a6111a2a1"
+    },
+    {
+      "path": "art/exported/environment/wall_061.bin",
+      "bytes": 74360,
+      "sha256": "b352f031100011917874ef1ef51fbeb6d9a9ddb1064b516628a8d372f7225ead"
+    },
+    {
+      "path": "art/exported/environment/wall_061.gltf",
+      "bytes": 5123,
+      "sha256": "f360e42def3a4a83173cca9df181e0ff0752658043f166e17da60a7b926d248d"
+    },
+    {
+      "path": "art/exported/environment/wall_122.bin",
+      "bytes": 73656,
+      "sha256": "06469fc830e3ec267a4ecbbdcfa205738112e482661ed1c89f1b1c0fe426de6f"
+    },
+    {
+      "path": "art/exported/environment/wall_122.gltf",
+      "bytes": 5123,
+      "sha256": "f70b3d9eaeae249c9657dc8df8cdc52c02736dbf40d37a7f0c4fa98ba51a4b52"
+    },
+    {
+      "path": "art/exported/environment/wall_244.bin",
+      "bytes": 74232,
+      "sha256": "43e953279b1a7ebee766601ad0222625c455c3f6b1116959287139e8cb3e73e5"
+    },
+    {
+      "path": "art/exported/environment/wall_244.gltf",
+      "bytes": 5121,
+      "sha256": "c67e6bb2e81a981467fc7c971d26128413c1319704c6cb34e58b056f2f0169c3"
+    },
+    {
+      "path": "art/exported/environment/wall_366.bin",
+      "bytes": 73848,
+      "sha256": "cb417af691df95dcbdaa59e79b4b692edad2fdfc10155b92bf23ea84dc6f8d00"
+    },
+    {
+      "path": "art/exported/environment/wall_366.gltf",
+      "bytes": 5123,
+      "sha256": "6b0a4b67270840005ce3ddba7f8b769372449a085648e139083d8acbaa6693dc"
+    },
+    {
+      "path": "art/exported/environment/wall_low_244.bin",
+      "bytes": 74232,
+      "sha256": "ebda6d390d747fcfeb7f4515ba3bab1b7017868d5038882cd596daa484328d33"
+    },
+    {
+      "path": "art/exported/environment/wall_low_244.gltf",
+      "bytes": 5133,
+      "sha256": "f32a362bfff5c2a33a850e9f21ef6f188510116b9abe42d36d69175125ca2996"
+    },
+    {
+      "path": "art/exported/environment/wall_portal_244.bin",
+      "bytes": 205968,
+      "sha256": "494f474f471e3f3d6a391c23a83f7b08761dbba62842ea62abdb16bde77e5e2c"
+    },
+    {
+      "path": "art/exported/environment/wall_portal_244.gltf",
+      "bytes": 7493,
+      "sha256": "8cd7f05bf6888f476c5b37354d8c69707bb622ac9c2a3419205ea382b6038d9a"
+    },
+    {
+      "path": "art/exported/environment/wall_portal_366.bin",
+      "bytes": 205968,
+      "sha256": "1b67f4e5b02fa2c4bd8dc7cbfa6227f0cab29fc60f85a5d682210fcb201fcae6"
+    },
+    {
+      "path": "art/exported/environment/wall_portal_366.gltf",
+      "bytes": 7495,
+      "sha256": "341353212ce414e09431b75a5ecf0385643a17935ba358541abee7e0c6ba17ba"
+    },
+    {
+      "path": "art/exported/environment/wall_vent.bin",
+      "bytes": 266688,
+      "sha256": "748597b38df18dbad9798946f82435bbcc5cabc097e3df0eda4c31fc8ac55fd7"
+    },
+    {
+      "path": "art/exported/environment/wall_vent.gltf",
+      "bytes": 5697,
+      "sha256": "a7a3a05156eedb942fedbdf82bf6d7eb9047d0222ffd9b3dde7bc195f95c922c"
+    },
+    {
+      "path": "game/assets/environment/ceiling_board_122.bin",
+      "bytes": 21352,
+      "sha256": "79b77f14f52709be7f16abf2862ddd4bad58083925439e75b22784fe1d9973cb"
+    },
+    {
+      "path": "game/assets/environment/ceiling_board_122.gltf",
+      "bytes": 2840,
+      "sha256": "112a2a353f4fa7bfd9bdfef3272ca5b5c9deb01e8baf0aa4429497fbb4d6ec71"
+    },
+    {
+      "path": "game/assets/environment/ceiling_board_122.gltf.import",
+      "bytes": 1187,
+      "sha256": "f920b49ba67d6c2fc1e90150252322b02c0aa764ff221a6fe32701beecc31857"
+    },
+    {
+      "path": "game/assets/environment/ceiling_grid_122.bin",
+      "bytes": 29928,
+      "sha256": "8a77bdf1f92a10668c2bb390b9935e188271f5fac4914b5b8b8aa81fa67ff58e"
+    },
+    {
+      "path": "game/assets/environment/ceiling_grid_122.gltf",
+      "bytes": 2866,
+      "sha256": "7fe6d23952a84f3f12f8eddf1d7882e2f566e5b908797cfb6778fbc9b978e205"
+    },
+    {
+      "path": "game/assets/environment/ceiling_grid_122.gltf.import",
+      "bytes": 1185,
+      "sha256": "db660f94a3595d4912d20c57dce5da5ebdb2fcec29c9395e0248d832bc235607"
+    },
+    {
+      "path": "game/assets/environment/ceiling_grid_244.bin",
+      "bytes": 29928,
+      "sha256": "59280f08a2ff19704a23f94769f4e2fcdb36dbfbf2fdb06fec1a8c9328891bc8"
+    },
+    {
+      "path": "game/assets/environment/ceiling_grid_244.gltf",
+      "bytes": 2865,
+      "sha256": "88c7182d3c1ef032643ed77fc7ac416e13ed8ee85ab91e289c3eb2ab8e0e6dc9"
+    },
+    {
+      "path": "game/assets/environment/ceiling_grid_244.gltf.import",
+      "bytes": 1185,
+      "sha256": "ab4a1b0d4ba24576827623fa142a4101b58242059733737f7ae08c7b9d135e99"
+    },
+    {
+      "path": "game/assets/environment/column_061.bin",
+      "bytes": 129416,
+      "sha256": "69202b9c315d35fba64f28f2637e90abfd07ddd470c9ae4879622d81011b8a78"
+    },
+    {
+      "path": "game/assets/environment/column_061.gltf",
+      "bytes": 5174,
+      "sha256": "ba81141b7f98849c2bba76bb93ca81224ac5b4b906f6fbddeb62e1b204e1db8c"
+    },
+    {
+      "path": "game/assets/environment/column_061.gltf.import",
+      "bytes": 1167,
+      "sha256": "e0ef231b0481ceb289fa0609d86be70c25e644bfae4e827937339905260e0fa0"
+    },
+    {
+      "path": "game/assets/environment/column_086.bin",
+      "bytes": 133320,
+      "sha256": "67be4ce4ce431fa9f43cd524e16cde6a927dde4079b1cc31518f1944562f1ccf"
+    },
+    {
+      "path": "game/assets/environment/column_086.gltf",
+      "bytes": 5174,
+      "sha256": "bce18c4e322e406d749bb04d8e100240b23a8aeb26495f3a1244fc8a4e11f40c"
+    },
+    {
+      "path": "game/assets/environment/column_086.gltf.import",
+      "bytes": 1167,
+      "sha256": "71909392b64a61eef5d4bb11a22262f6b809b7d9d9f806f785ba491a5b6ef856"
+    },
+    {
+      "path": "game/assets/environment/cove_corner_090.bin",
+      "bytes": 55492,
+      "sha256": "817332baf7f05f7b10a3b17d666494521eda39553f2618fe646d31dd29671eba"
+    },
+    {
+      "path": "game/assets/environment/cove_corner_090.gltf",
+      "bytes": 2834,
+      "sha256": "d3d555b6db65afe1f5de55658edc866227dfe9eac1af79df02a6a7f7e50ffb32"
+    },
+    {
+      "path": "game/assets/environment/cove_corner_090.gltf.import",
+      "bytes": 1182,
+      "sha256": "81e3b1415a511278d560ba7665d41eaefa8132ec02afe715946cdd5378b3b2a2"
+    },
+    {
+      "path": "game/assets/environment/environment_manifest.json",
+      "bytes": 18069,
+      "sha256": "4ac4d3cdf8e1ac19ee2c35011ae81889a359e69670671d46c62c6d918ea94ee8"
+    },
+    {
+      "path": "game/assets/environment/fixture_exposed.bin",
+      "bytes": 466752,
+      "sha256": "f7be164302f40e8619e6b5736b2adefd610b2a8e14da2cc0aa4c5074efa2d5da"
+    },
+    {
+      "path": "game/assets/environment/fixture_exposed.gltf",
+      "bytes": 5718,
+      "sha256": "7a4cc78e12b128c76787470d520bd585ff10a1dee35bf6d78b886d1e93f97e54"
+    },
+    {
+      "path": "game/assets/environment/fixture_exposed.gltf.import",
+      "bytes": 1182,
+      "sha256": "84b7b6ae116fbab3d0d16c348ec674313e87b38d9bf2e05906eb1477b089f658"
+    },
+    {
+      "path": "game/assets/environment/fixture_prismatic.bin",
+      "bytes": 480936,
+      "sha256": "e547c9b8964dc4c822b322e50a116458ab563ee1e6434db03b5270eaeda7f50b"
+    },
+    {
+      "path": "game/assets/environment/fixture_prismatic.gltf",
+      "bytes": 8246,
+      "sha256": "214716aa31f0585d32658e7b9c0ee93ca24d4f91ffb9efe30f3c8901d9e53403"
+    },
+    {
+      "path": "game/assets/environment/fixture_prismatic.gltf.import",
+      "bytes": 1188,
+      "sha256": "59dbec8940181733c43d6740efb21dc3d670a9260bd0aef957348c52a2fd0856"
+    },
+    {
+      "path": "game/assets/environment/floor_carpet_244.bin",
+      "bytes": 1608,
+      "sha256": "a351be93398b48677c6db9cae227eb3efc2e4bbd3a8d9c0777b643cb7018cd77"
+    },
+    {
+      "path": "game/assets/environment/floor_carpet_244.gltf",
+      "bytes": 2768,
+      "sha256": "cb9d2d282b941343cf9cc665a5a7550953440efbfae08645bf9e35a12eb07098"
+    },
+    {
+      "path": "game/assets/environment/floor_carpet_244.gltf.import",
+      "bytes": 1185,
+      "sha256": "82e9dff9bfc517af0dc3a4cb9b8e9bdf1bffc036549be7a5c3313c1ba8a5c8ee"
+    },
+    {
+      "path": "game/assets/environment/room_m4_architecture.bin",
+      "bytes": 10112900,
+      "sha256": "f11daa99eb99b363def9b9c7c2633316c89fcccae742d63bf51476e9de6fc658"
+    },
+    {
+      "path": "game/assets/environment/room_m4_architecture.gltf",
+      "bytes": 15045,
+      "sha256": "d794eb0eb166fe567a60cb37cbe1e50f2415437ffef39d17f7e77016eac4483f"
+    },
+    {
+      "path": "game/assets/environment/room_m4_architecture.gltf.import",
+      "bytes": 1197,
+      "sha256": "3e225c53f563e72babcc5f2ea245fa6c6ff8a8e0e0226cc13fa3eac2bf824782"
+    },
+    {
+      "path": "game/assets/environment/textures/baseboard_basecolor.png",
+      "bytes": 168252,
+      "sha256": "bfe1e44e0d803b1b3dc52bf581bf169d09204c25d3ab08cf15a27d120b9370f3"
+    },
+    {
+      "path": "game/assets/environment/textures/baseboard_basecolor.png.import",
+      "bytes": 1037,
+      "sha256": "77d4a32b86bcd5b13e8e5d9dcb256dfc7e3a12162b63770e396509f3db02d12d"
+    },
+    {
+      "path": "game/assets/environment/textures/baseboard_normal.png",
+      "bytes": 125984,
+      "sha256": "1021760936bcc24456b554536028099847d0e8b04c61f1d9ce8745a4be62f8b1"
+    },
+    {
+      "path": "game/assets/environment/textures/baseboard_normal.png.import",
+      "bytes": 1029,
+      "sha256": "4267dd527a6e6635f1c465a5642a2fc7583146929c96e96adfd63d54f5a9164c"
+    },
+    {
+      "path": "game/assets/environment/textures/baseboard_orm.png",
+      "bytes": 22707,
+      "sha256": "4533105f9d14d950a28e508f4bbf5f47b51968eca5800430183d737ae767da2c"
+    },
+    {
+      "path": "game/assets/environment/textures/baseboard_orm.png.import",
+      "bytes": 1073,
+      "sha256": "fe774ffe2293f55de8cae1c4a1a129bb2b812375c7b7c6218b713832bebc4405"
+    },
+    {
+      "path": "game/assets/environment/textures/carpet_basecolor.png",
+      "bytes": 6331946,
+      "sha256": "03e4e8878e0fc57b47bed3a65322dd7fd4dc5238b78561e114bf563ad823bf49"
+    },
+    {
+      "path": "game/assets/environment/textures/carpet_basecolor.png.import",
+      "bytes": 1028,
+      "sha256": "afb258b209e99886a66a3fdba12cf45613ab6e3d27aceacde7ec77f7969ff1ec"
+    },
+    {
+      "path": "game/assets/environment/textures/carpet_normal.png",
+      "bytes": 7191193,
+      "sha256": "4eefb5bee7734b8de3351045c962339bdbe67527f76d1434d037393af63ab4a7"
+    },
+    {
+      "path": "game/assets/environment/textures/carpet_normal.png.import",
+      "bytes": 1020,
+      "sha256": "c2f40fda57d0a5bda3bf2689b1cbbeabd0f388378ff74e7fc803b2f8ace0e725"
+    },
+    {
+      "path": "game/assets/environment/textures/carpet_orm.png",
+      "bytes": 2876361,
+      "sha256": "9c6df287c178064b68ed02ba82d1da59001ba0068939d4fb766b94144008656f"
+    },
+    {
+      "path": "game/assets/environment/textures/carpet_orm.png.import",
+      "bytes": 1061,
+      "sha256": "226f843a0f73121a950bc0d4502adf8748b93345300425a9539e798c00b244e8"
+    },
+    {
+      "path": "game/assets/environment/textures/ceiling_basecolor.png",
+      "bytes": 776088,
+      "sha256": "aadc46c21612af736044b15ded8db2e35a90514cff152e71a410d3950883dbf2"
+    },
+    {
+      "path": "game/assets/environment/textures/ceiling_basecolor.png.import",
+      "bytes": 1031,
+      "sha256": "c2e61a923eef771f51405ec0839c7a73966d475e8825e0dfeea41e15e1ef9da6"
+    },
+    {
+      "path": "game/assets/environment/textures/ceiling_normal.png",
+      "bytes": 1175620,
+      "sha256": "3da17bd465f03ae5d5fa4f50fac29bdec446022476a319b5f450b32e3445d124"
+    },
+    {
+      "path": "game/assets/environment/textures/ceiling_normal.png.import",
+      "bytes": 1023,
+      "sha256": "fad7e3e11d9dd2da28fce8a750322f9cc80206b49bb24af58e5f4769328484b4"
+    },
+    {
+      "path": "game/assets/environment/textures/ceiling_orm.png",
+      "bytes": 21959,
+      "sha256": "52eb334e8236363804b93d6d14d844c9240844dac86cabb25d3bd1941ad9bcb1"
+    },
+    {
+      "path": "game/assets/environment/textures/ceiling_orm.png.import",
+      "bytes": 1065,
+      "sha256": "07703b12bde2c4c9677df154557669f88088ae72a5b27e38203ff09086837d33"
+    },
+    {
+      "path": "game/assets/environment/textures/diffuser_basecolor.png",
+      "bytes": 44762,
+      "sha256": "2a00f3c35a9292846921d62eefa9daebda972738d07f39852440bc0d68552014"
+    },
+    {
+      "path": "game/assets/environment/textures/diffuser_basecolor.png.import",
+      "bytes": 1034,
+      "sha256": "dc09358d7c07be27f51b1a10672d615e7d61717829f96882b5fd06f3de1cceef"
+    },
+    {
+      "path": "game/assets/environment/textures/diffuser_normal.png",
+      "bytes": 2805,
+      "sha256": "e4f18417acdbe0b90bc488c9baffdc6be053e52377153fac7381674a4dc786f1"
+    },
+    {
+      "path": "game/assets/environment/textures/diffuser_normal.png.import",
+      "bytes": 1025,
+      "sha256": "96d186d1aa7302f881de81dd40ad0bee6d52a1bed738264d5c14f1bf685f6da5"
+    },
+    {
+      "path": "game/assets/environment/textures/diffuser_orm.png",
+      "bytes": 14033,
+      "sha256": "f1b7dd05aad612ead41e723fc554664e228538c01c7b32567e703775594c35c3"
+    },
+    {
+      "path": "game/assets/environment/textures/diffuser_orm.png.import",
+      "bytes": 1069,
+      "sha256": "ecbd80f9e7606065d9bb9ecb56b4bf7565c49ef4b76c729c5de81f615fe8dfe0"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_basecolor.png",
+      "bytes": 208799,
+      "sha256": "88d11c0f8af26a94ebc2378f461169d63398f32725e337c5309554764591aa20"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_basecolor.png.import",
+      "bytes": 1052,
+      "sha256": "19b8030afbf5d69fd6548ef32240e61674786e70d4f6acb63bf87f765a42ef66"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_emission.png",
+      "bytes": 1023,
+      "sha256": "e9663408931e28e300f1a666abf090e22ce103690e0ac1ff394c121827d54a1f"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_emission.png.import",
+      "bytes": 1048,
+      "sha256": "4f4a11fec45fee829ecc70f1252d232c1da7c54c32ed6950f2dd18aa87694b22"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_normal.png",
+      "bytes": 1489,
+      "sha256": "71d432413a10aab25e5dee0aa377a1ca29dddef8eb2e30584135268d218c9d96"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_normal.png.import",
+      "bytes": 1044,
+      "sha256": "e5cc4de83216b6497377eb4eebff5af7a30fe3d57656486c72796bf9c8d267d7"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_orm.png",
+      "bytes": 1527,
+      "sha256": "9719f89ec6b4e9660b7148d8a5e1c2757e37fdef38abe2fc33512244a1c9fbef"
+    },
+    {
+      "path": "game/assets/environment/textures/fixture_detail_orm.png.import",
+      "bytes": 1093,
+      "sha256": "1f156a732d67e1aafd4581b17788390362cefe202acc4aabd89440ac4002e1d0"
+    },
+    {
+      "path": "game/assets/environment/textures/material_manifest.json",
+      "bytes": 11765,
+      "sha256": "295ae2bc85420a686a8211298c9cba31099f3120109c713d9aa632a8392612e4"
+    },
+    {
+      "path": "game/assets/environment/textures/painted_metal_basecolor.png",
+      "bytes": 546450,
+      "sha256": "210b366bea82397ff82b6db58660b6492ce34e7b1a1626efb2695a1bb5265ac2"
+    },
+    {
+      "path": "game/assets/environment/textures/painted_metal_basecolor.png.import",
+      "bytes": 1048,
+      "sha256": "7818a50d9ce851ca9f7ce5507a887bba7b50a66b1ba57b3b85d461f519948977"
+    },
+    {
+      "path": "game/assets/environment/textures/painted_metal_normal.png",
+      "bytes": 518940,
+      "sha256": "7cb6cf3cff5a9a4c7515494c5b563725524c3e6dc0a0dc24866ff41af7e4f178"
+    },
+    {
+      "path": "game/assets/environment/textures/painted_metal_normal.png.import",
+      "bytes": 1041,
+      "sha256": "2a94d03fc11c89c1437107ea3618e0956535223a15f57c1c324ff2c733888aa6"
+    },
+    {
+      "path": "game/assets/environment/textures/painted_metal_orm.png",
+      "bytes": 51866,
+      "sha256": "bda574b2b212e95ad14e6f5c34acfa60740880a615ebaf4049d7cbc47719cf50"
+    },
+    {
+      "path": "game/assets/environment/textures/painted_metal_orm.png.import",
+      "bytes": 1088,
+      "sha256": "ef70a9d415e61d41838e0db20c1950243a9bb06e02de17c613b44eb14fb92136"
+    },
+    {
+      "path": "game/assets/environment/textures/room_m4_macro.png",
+      "bytes": 221133,
+      "sha256": "0f866e710983d864c910dad410d82085b1706ac3f8f05450a87dde581ec4c1b2"
+    },
+    {
+      "path": "game/assets/environment/textures/room_m4_macro.png.import",
+      "bytes": 1019,
+      "sha256": "d0174c8013979b4597247b146c20720539ef725eac3658d0d9b3f0580c5a59f7"
+    },
+    {
+      "path": "game/assets/environment/textures/wallpaper_basecolor.png",
+      "bytes": 3637890,
+      "sha256": "50356c1162bf5a053b9e676de6c342007303c8bd4351715f51fdd0bf3e499e58"
+    },
+    {
+      "path": "game/assets/environment/textures/wallpaper_basecolor.png.import",
+      "bytes": 1037,
+      "sha256": "afeaff759cc354ec6775d6055b3c3edc0a1999d12dacfb9252e8f0d84cfe256d"
+    },
+    {
+      "path": "game/assets/environment/textures/wallpaper_normal.png",
+      "bytes": 4094395,
+      "sha256": "f14d7e681fed7707cb651bbd20ab2ac5d6d2946cfb02a5771b2a09c72e17056c"
+    },
+    {
+      "path": "game/assets/environment/textures/wallpaper_normal.png.import",
+      "bytes": 1029,
+      "sha256": "87a269946b628bc6fd73bddb30b9b5292161628c19da830102ca4d7b965b9328"
+    },
+    {
+      "path": "game/assets/environment/textures/wallpaper_orm.png",
+      "bytes": 1640596,
+      "sha256": "61ec1361158666ce5708f4c56f1cd9d578410d312837adab821ca13a6111a2a1"
+    },
+    {
+      "path": "game/assets/environment/textures/wallpaper_orm.png.import",
+      "bytes": 1073,
+      "sha256": "4012d910787a73a86ceeb81d046651933ea58beb39f0a103ecb92edc472eea68"
+    },
+    {
+      "path": "game/assets/environment/wall_061.bin",
+      "bytes": 74360,
+      "sha256": "b352f031100011917874ef1ef51fbeb6d9a9ddb1064b516628a8d372f7225ead"
+    },
+    {
+      "path": "game/assets/environment/wall_061.gltf",
+      "bytes": 5123,
+      "sha256": "f360e42def3a4a83173cca9df181e0ff0752658043f166e17da60a7b926d248d"
+    },
+    {
+      "path": "game/assets/environment/wall_061.gltf.import",
+      "bytes": 1161,
+      "sha256": "5e0c09a806fa851c8be822128d06684cfab1c79428115ba126e6885e34efaf94"
+    },
+    {
+      "path": "game/assets/environment/wall_122.bin",
+      "bytes": 73656,
+      "sha256": "06469fc830e3ec267a4ecbbdcfa205738112e482661ed1c89f1b1c0fe426de6f"
+    },
+    {
+      "path": "game/assets/environment/wall_122.gltf",
+      "bytes": 5123,
+      "sha256": "f70b3d9eaeae249c9657dc8df8cdc52c02736dbf40d37a7f0c4fa98ba51a4b52"
+    },
+    {
+      "path": "game/assets/environment/wall_122.gltf.import",
+      "bytes": 1160,
+      "sha256": "cca091df09497dca98cb9dab0f6b1882343e1b6578ad0303fa2ad3560768781a"
+    },
+    {
+      "path": "game/assets/environment/wall_244.bin",
+      "bytes": 74232,
+      "sha256": "43e953279b1a7ebee766601ad0222625c455c3f6b1116959287139e8cb3e73e5"
+    },
+    {
+      "path": "game/assets/environment/wall_244.gltf",
+      "bytes": 5121,
+      "sha256": "c67e6bb2e81a981467fc7c971d26128413c1319704c6cb34e58b056f2f0169c3"
+    },
+    {
+      "path": "game/assets/environment/wall_244.gltf.import",
+      "bytes": 1161,
+      "sha256": "fe702ccae313ddeac7c6fcfb7ac1be5dcaeddbc261b40caae4775d24df567ce2"
+    },
+    {
+      "path": "game/assets/environment/wall_366.bin",
+      "bytes": 73848,
+      "sha256": "cb417af691df95dcbdaa59e79b4b692edad2fdfc10155b92bf23ea84dc6f8d00"
+    },
+    {
+      "path": "game/assets/environment/wall_366.gltf",
+      "bytes": 5123,
+      "sha256": "6b0a4b67270840005ce3ddba7f8b769372449a085648e139083d8acbaa6693dc"
+    },
+    {
+      "path": "game/assets/environment/wall_366.gltf.import",
+      "bytes": 1161,
+      "sha256": "bf9a37dfb953e03426c46c6fdc95a0dfa85c89f58aa0e0001bbfcb367c6bd958"
+    },
+    {
+      "path": "game/assets/environment/wall_low_244.bin",
+      "bytes": 74232,
+      "sha256": "ebda6d390d747fcfeb7f4515ba3bab1b7017868d5038882cd596daa484328d33"
+    },
+    {
+      "path": "game/assets/environment/wall_low_244.gltf",
+      "bytes": 5133,
+      "sha256": "f32a362bfff5c2a33a850e9f21ef6f188510116b9abe42d36d69175125ca2996"
+    },
+    {
+      "path": "game/assets/environment/wall_low_244.gltf.import",
+      "bytes": 1173,
+      "sha256": "be9960edb38f77b1618736232df34542ee3e69c77df89759b164152f6ab81e5a"
+    },
+    {
+      "path": "game/assets/environment/wall_portal_244.bin",
+      "bytes": 205968,
+      "sha256": "494f474f471e3f3d6a391c23a83f7b08761dbba62842ea62abdb16bde77e5e2c"
+    },
+    {
+      "path": "game/assets/environment/wall_portal_244.gltf",
+      "bytes": 7493,
+      "sha256": "8cd7f05bf6888f476c5b37354d8c69707bb622ac9c2a3419205ea382b6038d9a"
+    },
+    {
+      "path": "game/assets/environment/wall_portal_244.gltf.import",
+      "bytes": 1182,
+      "sha256": "36ddf7b493642220153c4f9bb16ae743ecdf80717a4640734e805e9a4f04a5c8"
+    },
+    {
+      "path": "game/assets/environment/wall_portal_366.bin",
+      "bytes": 205968,
+      "sha256": "1b67f4e5b02fa2c4bd8dc7cbfa6227f0cab29fc60f85a5d682210fcb201fcae6"
+    },
+    {
+      "path": "game/assets/environment/wall_portal_366.gltf",
+      "bytes": 7495,
+      "sha256": "341353212ce414e09431b75a5ecf0385643a17935ba358541abee7e0c6ba17ba"
+    },
+    {
+      "path": "game/assets/environment/wall_portal_366.gltf.import",
+      "bytes": 1181,
+      "sha256": "febf7795accb69e2c3174328afd782bc523972e46d3f26f8928ceba2b051be65"
+    },
+    {
+      "path": "game/assets/environment/wall_vent.bin",
+      "bytes": 266688,
+      "sha256": "748597b38df18dbad9798946f82435bbcc5cabc097e3df0eda4c31fc8ac55fd7"
+    },
+    {
+      "path": "game/assets/environment/wall_vent.gltf",
+      "bytes": 5697,
+      "sha256": "a7a3a05156eedb942fedbdf82bf6d7eb9047d0222ffd9b3dde7bc195f95c922c"
+    },
+    {
+      "path": "game/assets/environment/wall_vent.gltf.import",
+      "bytes": 1164,
+      "sha256": "ad1530b38b5802d84c8bddc88e50056d1608e4870b624e2bad73fa8e75e0385a"
+    },
+    {
+      "path": "game/environment/environment_surface.gdshader",
+      "bytes": 2087,
+      "sha256": "a1cc5886cbfcec0fc10decef830884b9bc81b5935f8bc076c3378184db61623a"
+    },
+    {
+      "path": "game/environment/environment_surface.gdshader.uid",
+      "bytes": 20,
+      "sha256": "1ae413a29886b666f1e382414741caeeb106b0df46eb6b4b965c6b776a928fdd"
+    },
+    {
+      "path": "game/environment/environment_surface_library.gd",
+      "bytes": 2746,
+      "sha256": "9c0674e6d5b32f6aba05068308e181e106fc9f7944543a72adc68424b4c27d43"
+    },
+    {
+      "path": "game/environment/environment_surface_library.gd.uid",
+      "bytes": 20,
+      "sha256": "4637aaea34c09eb121dc670fb745c8185417b4f5529d09a540873bb00ec5e6b9"
+    },
+    {
+      "path": "game/environment/fluorescent_fixture.gd",
+      "bytes": 3888,
+      "sha256": "40dfa214cdc8b753c02dd6e718bde77389c5be055f5446bccd82302d6e7cb9cc"
+    },
+    {
+      "path": "game/environment/fluorescent_fixture.gd.uid",
+      "bytes": 20,
+      "sha256": "7ac8ec83fffdd0a2548fcc22fc506ce8f3b2244ba378fa6f41a90c601f69ef34"
+    },
+    {
+      "path": "game/environment/m4_reference_room.gd",
+      "bytes": 1650,
+      "sha256": "21d7fbe1b68c9f26740cb67e2956b58c0a43356faf819a7f7f2a0782e88c7d45"
+    },
+    {
+      "path": "game/environment/m4_reference_room.gd.uid",
+      "bytes": 20,
+      "sha256": "83f99944037bea5e7baccba2bb9a769617f5735de0ae8c7ecb9c496b3c7b5835"
+    },
+    {
+      "path": "game/environment/m4_reference_room.tscn",
+      "bytes": 208,
+      "sha256": "dd6c0294ba769b421ee477c3a06e5d13675a0a47a31b626dc89e99c22f39b136"
+    }
+  ]
+}

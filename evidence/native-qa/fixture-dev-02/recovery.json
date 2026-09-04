@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      "name": "nullspace_qa_beef9d62d8590464",
+      "owned_sink_removed": true
+    }
+  ],
+  "defaults_after": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "defaults_before": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "errors": [],
+  "host_defaults_unchanged": true,
+  "status": "RECOVERED",
+  "utc": "2026-09-04T20:48:09.577+00:00"
+}

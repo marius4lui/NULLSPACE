@@ -1,0 +1,70 @@
+{
+  "checks": {
+    "escape/actual_private_keys_released": {
+      "observation": {
+        "after_destroy_seconds": 0.026012139998783823,
+        "observed_keymap": {
+          "event": "after_destroy_keymap",
+          "monotonic": 9507.91236001,
+          "pressed_keycodes": [],
+          "utc_unix": 1788560959.7103364
+        }
+      },
+      "passed": true
+    },
+    "escape/buffered_stdout_flushed": {
+      "observation": "QA_EXIT_BUFFERED_NATURAL_SHUTDOWN 0\n",
+      "passed": true
+    },
+    "escape/exit_result": {
+      "observation": {
+        "error": null,
+        "exit_code": 0,
+        "lifecycle": {
+          "deadline_monotonic": 9509.888609346,
+          "destroyed_utc": "2026-09-04T22:29:19.686+00:00",
+          "exit_code": 0,
+          "exited_utc": "2026-09-04T22:29:20.288+00:00",
+          "game_pid": 118002,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "exited",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        },
+        "status": "stopped"
+      },
+      "passed": true
+    },
+    "escape/owned_cleanup": {
+      "observation": {
+        "cleanup_errors": [],
+        "defaults_unchanged": true
+      },
+      "passed": false
+    },
+    "escape/request_race_handled": {
+      "observation": {
+        "status": "closing",
+        "window_lifecycle": {
+          "deadline_monotonic": 9509.888609346,
+          "destroyed_utc": "2026-09-04T22:29:19.686+00:00",
+          "game_pid": 118002,
+          "grace_seconds": 2.0,
+          "new_input_disabled": true,
+          "phase": "waiting_for_owned_process_exit",
+          "trigger": "<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600000>, sequence_number = 152, major_opcode = 20, minor_opcode = 0",
+          "window_id": 6291456
+        }
+      },
+      "passed": true
+    }
+  },
+  "ended_utc": "2026-09-04T22:29:22.516+00:00",
+  "error": "escape/owned_cleanup",
+  "experiential_review": "unverified",
+  "export_sha256": "c75d780ed3024047a83d281338d15fbf2c5043728892eb62170c20d58bb86dbd",
+  "method": "scripted_native_exit_diagnostic",
+  "started_utc": "2026-09-04T22:29:18.749+00:00",
+  "status": "FAIL"
+}

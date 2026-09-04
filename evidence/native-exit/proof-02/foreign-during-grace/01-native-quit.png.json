@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9562.360747982,
+  "acquired_utc": "2026-09-04T22:30:14.158+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291456
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-exit/evidence/native-exit/proof-02/foreign-during-grace/01-native-quit.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "e128a9683c75be82efecc628ccb2446ed361c5f2fc71272b7ea05edfec4a2a2d",
+  "window": {
+    "focus_window_id": 6291456,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      100,
+      100
+    ],
+    "title": "NULLSPACE QA-007 owned-window exit diagnostic",
+    "width": 1920,
+    "window_id": 6291456,
+    "window_pid": 119398
+  },
+  "x_readback_ms": 21.63655599906633
+}

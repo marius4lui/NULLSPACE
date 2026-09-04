@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "platform": "linux-x86_64",
+  "artifacts": [
+    {
+      "name": "godot",
+      "version": "4.7.2.stable",
+      "filename": "Godot_v4.7.2-stable_linux.x86_64.zip",
+      "url": "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip",
+      "bytes": 77860424,
+      "sha256": "cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4",
+      "published_manifest": "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/SHA512-SUMS.txt",
+      "published_algorithm": "sha512",
+      "published_digest": "9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65",
+      "directory": "godot-4.7.2",
+      "archive_prefix": "",
+      "executable": "Godot_v4.7.2-stable_linux.x86_64"
+    },
+    {
+      "name": "blender",
+      "version": "5.2.1",
+      "filename": "blender-5.2.1-linux-x64.tar.xz",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.1-linux-x64.tar.xz",
+      "bytes": 383688088,
+      "sha256": "a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9",
+      "published_manifest": "https://download.blender.org/release/Blender5.2/blender-5.2.1.sha256",
+      "published_algorithm": "sha256",
+      "published_digest": "a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9",
+      "directory": "blender-5.2.1",
+      "archive_prefix": "blender-5.2.1-linux-x64",
+      "executable": "blender"
+    },
+    {
+      "name": "templates",
+      "version": "4.7.2.stable",
+      "filename": "Godot_v4.7.2-stable_export_templates.tpz",
+      "url": "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz",
+      "bytes": 1281349702,
+      "sha256": "f298490b8d44d934be425a5a65a51bf15f422428b229a06a6e11d9ffea248011",
+      "published_manifest": "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/SHA512-SUMS.txt",
+      "published_algorithm": "sha512",
+      "published_digest": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+      "directory": "4.7.2.stable",
+      "archive_prefix": "templates",
+      "executable": null
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "artifacts": {
+    "game.log": {
+      "bytes": 776,
+      "sha256": "84b23d3ab38e2a5cb0b20bac8c0c82fc8e4ccf7b931d802beae7b8d579da1262"
+    },
+    "launch.json": {
+      "bytes": 707,
+      "sha256": "5b4ec44cd6bce7ac8bf66765bbfe3929b7874d6fe8e20bdb505094d2b82336e3"
+    },
+    "state.json": {
+      "bytes": 7154,
+      "sha256": "c7ac10b4e0568f636c50d1e2570c9084e6596606aafff7150e35d89c769e87e6"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 5822,
+      "sha256": "f55b372e3e6901de5879af64780f67de3d90a83e92522fd8e0bf3270df5fc08c"
+    },
+    "vulkaninfo.txt": {
+      "bytes": 2385,
+      "sha256": "bf0dc0913675988bf673ca47db4a90f716f24571249e65abef40700b7883f8ad"
+    },
+    "xwayland.log": {
+      "bytes": 2085,
+      "sha256": "9ce9825f33d146d24b4db84603dbffa44ec8d9618ebc25514d510536a8ffd92c"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "bb6fb09791c0ec65d5193f9dc045da7b8d16fecf",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+  },
+  "packaged_utc": "2026-09-04T22:05:05.663+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}

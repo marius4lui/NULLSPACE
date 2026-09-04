@@ -1,0 +1,8 @@
+MATERIAL wallpaper 2048x2048 height=-0.1936..0.9794mm
+MATERIAL carpet 2048x2048 height=-0.6296..0.6782mm
+MATERIAL ceiling 1024x1024 height=-0.4944..0.0965mm
+MATERIAL painted_metal 1024x1024 height=-0.0210..0.0249mm
+MATERIAL baseboard 512x512 height=-0.0168..0.0156mm
+MATERIAL diffuser 512x512 height=0.0000..0.1800mm
+MATERIAL fixture_detail 512x512 height=0.0000..0.0000mm
+TEXTURE_PIPELINE_OK 7 materials; editable height sources retained; staging hashes identical

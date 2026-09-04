@@ -1,0 +1,9 @@
+{
+	"build_id": "0.2.0-m2",
+	"content_version": 1,
+	"format_version": 1,
+	"kind": "settings",
+	"payload_json": "{\"ambience_volume\":0.8,\"camera_shake\":0.0,\"center_dot\":true,\"display_mode\":\"windowed\",\"effects_volume\":0.8,\"head_bob\":0.0,\"horizontal_fov\":88.0,\"invert_y\":true,\"master_volume\":0.8,\"mouse_sensitivity\":2.0,\"quality\":\"high\",\"reduced_flashes\":true,\"resolution\":[1920,1080],\"subtitles\":true,\"vsync\":false}",
+	"saved_utc": "2026-09-04T22:35:12",
+	"sha256": "a4ad990f2b3d0d9cc28331814f86c5c78edb1b3812ea38d1cb0bd62e2088805f"
+}

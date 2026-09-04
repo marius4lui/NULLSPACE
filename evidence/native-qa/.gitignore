@@ -1,0 +1,7 @@
+# Keep QA evidence reproducible and compact; caches and private sessions are local.
+**/profile/
+**/Xauthority
+**/*.sock
+**/*.tmp
+**/supervisor.log
+**/flash-frame-stats.txt

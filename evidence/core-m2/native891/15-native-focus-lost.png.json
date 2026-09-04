@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9973.692709396,
+  "acquired_utc": "2026-09-04T22:37:05.490+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/15-native-focus-lost.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "0c7b82b3fff6f27f3889161af067a6f3b293a02c2340263a64c245ad2e00d403",
+  "window": {
+    "focus_window_id": 861,
+    "focused": false,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 16.507027999978163
+}

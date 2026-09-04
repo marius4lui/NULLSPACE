@@ -1,0 +1,10 @@
+FAILED blender: Offline cache missing: /home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/empty-install/downloads/blender-published-checksums.txt
+FAILED godot: Offline cache missing: /home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/empty-install/downloads/godot-published-checksums.txt
+FAILED templates: Offline cache missing: /home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/empty-install/downloads/templates-published-checksums.txt
+Traceback (most recent call last):
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 259, in <module>
+    main()
+    ~~~~^^
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 254, in main
+    raise RuntimeError("; ".join(failures))
+RuntimeError: blender: Offline cache missing: /home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/empty-install/downloads/blender-published-checksums.txt; godot: Offline cache missing: /home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/empty-install/downloads/godot-published-checksums.txt; templates: Offline cache missing: /home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/empty-install/downloads/templates-published-checksums.txt

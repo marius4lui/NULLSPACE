@@ -1,0 +1,19 @@
+NULLSPACE / M2 TECHNICAL DIAGNOSTIC
+
+Temporary test interface and default font. No campaign, weapons, monster, production art or audio exists here.
+
+State: PLAYING | Input generation: 15 | Restored diagnostic_checkpoint
+INPUT OWNERSHIP FIXTURE — these counters are not gameplay.
+
+WASD: diagnostic displacement | Mouse: diagnostic look | LMB/R: accepted action edges
+F: flashlight state | E: save diagnostic checkpoint | Esc: pause
+F9: simulate death | F10: simulate completed save and ending. Neither is a campaign run.
+
+Accepted fire edges: 1 | Reload edges: 0
+
+Diagnostic displacement: (0.000, 0.000)
+
+Diagnostic look radians: (0.000, 0.000)
+
+Checkpoint: diagnostic_checkpoint | Saved circuit: true | Flashlight: true
+Focused: true | Input enabled: true | Generation: 15

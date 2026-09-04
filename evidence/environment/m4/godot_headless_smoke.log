@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 1 camera=(2.7, 1.66, -0.85)
+M4_PREVIEW_READY Forward+; native WASD/mouse inspection; no campaign or gameplay claims
+M4_CONTROLS WASD Shift mouse Esc F flashlight 1-8 review views P still L fixture state; F7 SSIL F8 SSAO F9 shadows F10 TAA diagnostic toggles

@@ -1,0 +1,41 @@
+{
+  "name": "diffuser",
+  "recipe": "environment-materials-1.0",
+  "seed": 41073,
+  "description": "Original molded micro-prism acrylic diffuser; fine pyramidal cells. Opaque energy-conserving approximation avoids expensive layered transparency.",
+  "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+  "meters_per_tile": [
+    0.61,
+    0.61
+  ],
+  "resolution": [
+    512,
+    512
+  ],
+  "normal_convention": "tangent +Y; image rows top-down",
+  "height_source_mm_range": [
+    0.0,
+    0.18000000715255737
+  ],
+  "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+  "colorspace": {
+    "basecolor": "sRGB",
+    "normal": "linear",
+    "orm": "linear",
+    "height_source": "linear 16-bit"
+  },
+  "maps": {
+    "basecolor": {
+      "path": "art/source/textures/environment/diffuser/diffuser_basecolor.png",
+      "sha256": "2a00f3c35a9292846921d62eefa9daebda972738d07f39852440bc0d68552014"
+    },
+    "normal": {
+      "path": "art/source/textures/environment/diffuser/diffuser_normal.png",
+      "sha256": "e4f18417acdbe0b90bc488c9baffdc6be053e52377153fac7381674a4dc786f1"
+    },
+    "orm": {
+      "path": "art/source/textures/environment/diffuser/diffuser_orm.png",
+      "sha256": "f1b7dd05aad612ead41e723fc554664e228538c01c7b32567e703775594c35c3"
+    }
+  }
+}

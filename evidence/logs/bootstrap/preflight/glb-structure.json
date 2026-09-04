@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "kind": "diagnostic-structure-check",
+  "sha256": "47d1c35f0825cd01e609d1f34dc9794c5d93ad9606fc1c4cf728504140e92402",
+  "bytes": 49880,
+  "mesh_count": 3,
+  "material_count": 3,
+  "animations": [
+    "BootstrapRotation"
+  ]
+}

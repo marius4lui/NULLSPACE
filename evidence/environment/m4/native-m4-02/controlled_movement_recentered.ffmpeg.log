@@ -1,0 +1,35 @@
+[in#0/x11grab @ 0x5582300d3500] Stream #0: not enough frames to estimate rate; consider increasing probesize
+Input #0, x11grab, from ':2':
+  Duration: N/A, start: 1788560709.087857, bitrate: 3981312 kb/s
+  Stream #0:0: Video: rawvideo (BGR[0] / 0x524742), bgr0, 1920x1080, 3981312 kb/s, 60 fps, 1000k tbr, 1000k tbn, start 1788560709.087857
+[aist#1:0/pcm_s16le @ 0x5582300e4140] Guessed Channel Layout: stereo
+Input #1, pulse, from 'nullspace_qa_d03a2dd86c502007.monitor':
+  Duration: N/A, start: 1788560709.266415, bitrate: 1536 kb/s
+  Stream #1:0: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s, start 1788560709.266415
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (pcm_s16le (native) -> flac (native))
+[libx264 @ 0x5582300e6880] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x5582300e6880] profile Constrained Baseline, level 4.2, 4:2:0, 8-bit
+[libx264 @ 0x5582300e6880] 264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=0:0:0 analyse=0:0 me=dia subme=0 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=18 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=25 scenecut=0 intra_refresh=0 rc=crf mbtree=0 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=0
+Output #0, matroska, to '/home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/controlled_movement_recentered.mkv':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0: Video: h264 (H264 / 0x34363248), yuv420p(tv, progressive), 1920x1080, q=2-31, 60 fps, 1k tbn
+    Metadata:
+      encoder         : Lavc62.28.102 libx264
+    Side data:
+      CPB properties: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: flac ([172][241][0][0] / 0xF1AC), 48000 Hz, stereo, s16, 128 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 flac
+frame=    0 fps=0.0 q=0.0 size=       1KiB time=N/A bitrate=N/A dup=19 drop=0 speed=N/A elapsed=0:00:00.50    frame=   51 fps= 51 q=13.0 size=       1KiB time=00:00:00.85 bitrate=   7.4kbits/s dup=46 drop=1 speed=0.85x elapsed=0:00:01.00    frame=   80 fps= 53 q=11.0 size=       1KiB time=00:00:01.33 bitrate=   4.7kbits/s dup=61 drop=2 speed=0.889x elapsed=0:00:01.50    frame=  114 fps= 57 q=11.0 size=       1KiB time=00:00:01.90 bitrate=   3.3kbits/s dup=80 drop=3 speed=0.95x elapsed=0:00:02.00    frame=  144 fps= 58 q=11.0 size=       1KiB time=00:00:02.40 bitrate=   2.6kbits/s dup=93 drop=3 speed=0.959x elapsed=0:00:02.50    frame=  172 fps= 57 q=11.0 size=       1KiB time=00:00:02.86 bitrate=   2.2kbits/s dup=109 drop=4 speed=0.955x elapsed=0:00:03.00    frame=  204 fps= 58 q=10.0 size=       1KiB time=00:00:03.40 bitrate=   1.9kbits/s dup=111 drop=106 speed=0.971x elapsed=0:00:03.50    frame=  233 fps= 58 q=10.0 size=       1KiB time=00:00:03.88 bitrate=   1.6kbits/s dup=111 drop=109 speed=0.97x elapsed=0:00:04.00    frame=  261 fps= 58 q=11.0 size=    4608KiB time=00:00:04.35 bitrate=8677.9kbits/s dup=124 drop=111 speed=0.966x elapsed=0:00:04.50    frame=  294 fps= 59 q=11.0 size=    4608KiB time=00:00:04.90 bitrate=7703.8kbits/s dup=140 drop=113 speed=0.979x elapsed=0:00:05.00    frame=  321 fps= 58 q=11.0 size=    4608KiB time=00:00:05.35 bitrate=7055.8kbits/s dup=153 drop=113 speed=0.972x elapsed=0:00:05.50    frame=  351 fps= 58 q=11.0 size=    4608KiB time=00:00:05.85 bitrate=6452.8kbits/s dup=165 drop=115 speed=0.975x elapsed=0:00:06.00    frame=  384 fps= 59 q=11.0 size=    4608KiB time=00:00:06.40 bitrate=5898.2kbits/s dup=181 drop=116 speed=0.984x elapsed=0:00:06.50    frame=  412 fps= 59 q=11.0 size=    4608KiB time=00:00:06.86 bitrate=5497.4kbits/s dup=193 drop=119 speed=0.98x elapsed=0:00:07.00    frame=  441 fps= 59 q=11.0 size=    4608KiB time=00:00:07.35 bitrate=5135.9kbits/s dup=210 drop=119 speed=0.98x elapsed=0:00:07.50    [out#0/matroska @ 0x5582300e5e80] video:5567KiB audio:1KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.084390%
+frame=  480 fps= 59 q=-1.0 Lsize=    5573KiB time=00:00:08.00 bitrate=5706.9kbits/s dup=221 drop=120 speed=0.983x elapsed=0:00:08.13    
+[libx264 @ 0x5582300e6880] frame I:2     Avg QP:11.50  size:231615
+[libx264 @ 0x5582300e6880] frame P:478   Avg QP:11.51  size: 10956
+[libx264 @ 0x5582300e6880] mb I  I16..4: 100.0%  0.0%  0.0%
+[libx264 @ 0x5582300e6880] mb P  I16..4:  2.0%  0.0%  0.0%  P16..4: 20.4%  0.0%  0.0%  0.0%  0.0%    skip:77.7%
+[libx264 @ 0x5582300e6880] coded y,uvDC,uvAC intra: 34.1% 23.3% 12.4% inter: 6.8% 3.4% 0.1%
+[libx264 @ 0x5582300e6880] i16 v,h,dc,p: 52% 18% 12% 17%
+[libx264 @ 0x5582300e6880] i8c dc,h,v,p: 72% 13% 12%  3%
+[libx264 @ 0x5582300e6880] kb/s:5700.29

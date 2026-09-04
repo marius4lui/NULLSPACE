@@ -1,0 +1,80 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+WARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.
+     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)
+Vulkan 1.4.354 - Forward+ - Using Device #0: AMD - AMD Radeon 660M (RADV REMBRANDT)
+
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 1 camera=(2.7, 1.66, -0.85)
+M4_PREVIEW_READY Forward+; native WASD/mouse inspection; no campaign or gameplay claims
+M4_CONTROLS WASD Shift mouse Esc F flashlight 1-8 review views P still L fixture state; F7 SSIL F8 SSAO F9 shadows F10 TAA diagnostic toggles
+M4_SAMPLE frames=600 inputs=0 camera=(2.7, 1.640094, -0.85) fps=11.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_SAMPLE frames=1200 inputs=0 camera=(2.7, 1.640094, -0.85) fps=11.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_SAMPLE frames=1800 inputs=0 camera=(2.7, 1.640094, -0.85) fps=11.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 1 camera=(2.7, 1.66, -0.85)
+M4_SAMPLE frames=2400 inputs=59 camera=(2.7, 1.640306, -0.85) fps=10.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_001 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 2 camera=(4.78, 1.66, -5.46)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_002 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 3 camera=(-4.95, 1.66, -10.7)
+M4_SAMPLE frames=3000 inputs=196 camera=(-4.95, 1.640306, -10.7) fps=28.0 draw_calls=6.0 objects=6.0 primitives=134030.0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_003 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 6 camera=(4.8, 1.66, -11.36)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_004 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 7 camera=(1.65, 1.66, -4.96)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_005 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 8 camera=(-5.55, 1.66, -10.4)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_006 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 4 camera=(-3.42, 1.66, -12.62)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_007 result=0
+M4_SAMPLE frames=3600 inputs=214 camera=(-3.42, 1.640306, -12.62) fps=19.0 draw_calls=6.0 objects=6.0 primitives=134030.0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 8 camera=(-5.55, 1.66, -10.4)
+M4_SAMPLE frames=4200 inputs=218 camera=(-5.55, 1.640306, -10.4) fps=27.0 draw_calls=6.0 objects=6.0 primitives=134030.0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_008 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 1 camera=(2.7, 1.66, -0.85)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_009 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": false, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_010 result=0
+M4_RENDER_STATE { "ssao": false, "ssil": false, "shadowed_fixtures": 4, "taa": true, "scale_3d": 1.0 }
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_011 result=0
+M4_RENDER_STATE { "ssao": false, "ssil": false, "shadowed_fixtures": 0, "taa": true, "scale_3d": 1.0 }
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_012 result=0
+M4_RENDER_STATE { "ssao": false, "ssil": false, "shadowed_fixtures": 0, "taa": false, "scale_3d": 1.0 }
+M4_SAMPLE frames=4800 inputs=240 camera=(2.7, 1.640306, -0.85) fps=22.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_013 result=0
+M4_SAMPLE frames=5400 inputs=242 camera=(2.7, 1.640306, -0.85) fps=23.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_SAMPLE frames=6000 inputs=242 camera=(2.7, 1.640306, -0.85) fps=23.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_014 result=0
+M4_SAMPLE frames=6600 inputs=244 camera=(2.7, 1.640306, -0.85) fps=12.0 draw_calls=29.0 objects=35.0 primitives=177742.0
+M4_RENDER_STATE { "ssao": false, "ssil": true, "shadowed_fixtures": 0, "taa": false, "scale_3d": 1.0 }
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 0, "taa": false, "scale_3d": 1.0 }
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 0, "taa": true, "scale_3d": 1.0 }
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 0, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 6 camera=(4.8, 1.66, -11.36)
+M4_FIXTURE_STATE 1
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_015 result=0
+M4_FIXTURE_STATE 2
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_016 result=0
+M4_FIXTURE_STATE 3
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_017 result=0
+M4_FIXTURE_STATE 4
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_018 result=0
+M4_FIXTURE_STATE 0
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_019 result=0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 0, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 1 camera=(2.7, 1.66, -0.85)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_020 result=0
+M4_SAMPLE frames=7200 inputs=291 camera=(5.598156, 1.640836, -2.023318) fps=28.0 draw_calls=6.0 objects=6.0 primitives=134030.0
+M4_SAMPLE frames=7800 inputs=291 camera=(5.598156, 1.640836, -2.023318) fps=25.0 draw_calls=6.0 objects=6.0 primitives=134030.0
+M4_RENDER_STATE { "ssao": true, "ssil": true, "shadowed_fixtures": 0, "taa": true, "scale_3d": 1.0 }
+M4_REVIEW_VIEW 1 camera=(2.7, 1.66, -0.85)
+M4_CAPTURE /home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/viewport/m4_021 result=0
+M4_SAMPLE frames=8400 inputs=305 camera=(1.937294, 1.640836, -3.544117) fps=12.0 draw_calls=23.0 objects=26.0 primitives=167368.0

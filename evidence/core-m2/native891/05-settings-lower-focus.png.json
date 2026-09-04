@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9836.91020361,
+  "acquired_utc": "2026-09-04T22:34:48.708+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/05-settings-lower-focus.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "f392faeb5c6c95fb0c20686ee4c0fa9dcd8b688f13f215f574facfc4a780214d",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      645,
+      873
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 22.10854599979939
+}

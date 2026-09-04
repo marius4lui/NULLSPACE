@@ -1,0 +1,12 @@
+godot: fetching/verifying Godot_v4.7.2-stable_linux.x86_64.zip
+blender: fetching/verifying blender-5.2.1-linux-x64.tar.xz
+templates: fetching/verifying Godot_v4.7.2-stable_export_templates.tpz
+godot: VERIFIED sha256=cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4
+godot: existing install integrity VERIFIED
+godot: actual version 4.7.2.stable.official.ed1daf0bf
+blender: VERIFIED sha256=a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9
+blender: existing install integrity VERIFIED
+blender: actual version Blender 5.2.1 LTS
+templates: VERIFIED sha256=f298490b8d44d934be425a5a65a51bf15f422428b229a06a6e11d9ffea248011
+templates: installed /home/marius/.local/share/godot/export_templates/4.7.2.stable
+Pinned toolchain verification complete. No game or release gate is implied.

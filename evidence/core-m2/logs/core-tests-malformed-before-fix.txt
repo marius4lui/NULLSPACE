@@ -1,0 +1,40 @@
+Evidence provenance: exact stdout copied from exec_command output chunk c21404,
+2026-09-04 21:05:29 UTC. The original named log was overwritten by the corrected
+rerun; this is a preserved tool-output transcript, not a separately captured file.
+The assertion counter and process exit0 did NOT establish PASS: these unexpected
+engine errors made this run FAIL. Root tracked the defect as M2-002.
+
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SCRIPT ERROR: Invalid operands 'Array' and 'bool' in operator '=='.
+          at: _validate_progress (res://core/persistence/snapshot_schema.gd:111)
+          GDScript backtrace (most recent call first):
+              [0] _validate_progress (res://core/persistence/snapshot_schema.gd:111)
+              [1] validate (res://core/persistence/snapshot_schema.gd:58)
+              [2] _test_snapshot_validation (res://tests/core/run_core_tests.gd:77)
+              [3] _run (res://tests/core/run_core_tests.gd:20)
+SCRIPT ERROR: Invalid operands 'Dictionary' and 'bool' in operator '=='.
+          at: _validate_progress (res://core/persistence/snapshot_schema.gd:115)
+          GDScript backtrace (most recent call first):
+              [0] _validate_progress (res://core/persistence/snapshot_schema.gd:115)
+              [1] validate (res://core/persistence/snapshot_schema.gd:58)
+              [2] _test_snapshot_validation (res://tests/core/run_core_tests.gd:80)
+              [3] _run (res://tests/core/run_core_tests.gd:20)
+{
+	"checks": 77,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"isolated_data": "/tmp/nullspace_core_tests-20260904230529522430",
+	"scope": "logical tests, not gameplay or experiential validation",
+	"suite": "M2 core"
+}

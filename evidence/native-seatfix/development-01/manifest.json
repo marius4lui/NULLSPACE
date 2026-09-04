@@ -1,0 +1,30 @@
+{
+  "artifacts": {
+    "launch.json": {
+      "bytes": 707,
+      "sha256": "5b4ec44cd6bce7ac8bf66765bbfe3929b7874d6fe8e20bdb505094d2b82336e3"
+    },
+    "state.json": {
+      "bytes": 4114,
+      "sha256": "799565a4284b975bf2950a2c760a838bc616ef553d29e55b545e861930006e7e"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 2179,
+      "sha256": "a0b65f9042ead5c3683ca5082cd6154b21dfbe7d1bca007129a8658acababc7b"
+    },
+    "xwayland.log": {
+      "bytes": 732,
+      "sha256": "906bbcb0e45c4180c5f3f275be89b64c810e4db3da7fbe5efac918759235157e"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "bb6fb09791c0ec65d5193f9dc045da7b8d16fecf",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+  },
+  "packaged_utc": "2026-09-04T22:05:05.655+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}

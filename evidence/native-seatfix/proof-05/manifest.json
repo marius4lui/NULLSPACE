@@ -1,0 +1,298 @@
+{
+  "artifacts": {
+    "01-menu.png": {
+      "bytes": 70482,
+      "sha256": "efa7f1a6dcb803559d16772e3f7dabb5cd7db7f39617946208f0f10b90359bf3"
+    },
+    "01-menu.png.json": {
+      "bytes": 966,
+      "sha256": "bd065fb47e0cf965974e081ffbabc9effed379e3b29016b0ff860723143ffbf3"
+    },
+    "02-moved.png": {
+      "bytes": 74422,
+      "sha256": "9958d51f46f780f468a3d14dd1c0067456e77ec2aad0f21bcee83437381eefdd"
+    },
+    "02-moved.png.json": {
+      "bytes": 966,
+      "sha256": "72b0f3572792514358f0f8b5d766adcd9b73910af27321d62bbcfb11d4c5850b"
+    },
+    "03-paused.png": {
+      "bytes": 73431,
+      "sha256": "336614af0ed6e069cf183ad2114fc3245c443a096535118592021c780b4620ac"
+    },
+    "03-paused.png.json": {
+      "bytes": 968,
+      "sha256": "61321b484aa0eebdc83c5dae7d40e909c3a4d53e563ed69d5df6ffc4c573941f"
+    },
+    "04-final.png": {
+      "bytes": 73513,
+      "sha256": "4aea82d7ce2ca66d2ca88232a3d7dbc2fa45db2142691bb0ea166b05227a6e6e"
+    },
+    "04-final.png.json": {
+      "bytes": 966,
+      "sha256": "94b78a8e43bd5110056b1bcfe0e563416547640e59df7827c4300a82bbc9a1a6"
+    },
+    "06-lease-burst-01.png": {
+      "bytes": 75123,
+      "sha256": "3a13004d4335fe9d20077b622d93f34b42572c6bb1c003c5ddfbe6bc615d67bc"
+    },
+    "06-lease-burst-01.png.json": {
+      "bytes": 990,
+      "sha256": "26a8bf88d360c41240971b82fe4d429178b4ea9f8f9ec9b56a659e894cc01439"
+    },
+    "06-lease-burst-02.png": {
+      "bytes": 75115,
+      "sha256": "85a193dd66f3efed5c99d8510ccfef175c53ab066ee9756ca518984010d942a2"
+    },
+    "06-lease-burst-02.png.json": {
+      "bytes": 990,
+      "sha256": "a63c32c174c69c447cd04f254eadf0740b28be53ffa864198a61450e4ad5eefe"
+    },
+    "06-lease-burst-03.png": {
+      "bytes": 75332,
+      "sha256": "b75f9b7aec0c948e45b27ecfafb253a64e558c11f4247c6a53e669f34233f802"
+    },
+    "06-lease-burst-03.png.json": {
+      "bytes": 989,
+      "sha256": "dbb5d749d75bc40446d5154cec0abddf5c48b80a80a669b3a6e095b015a60ca5"
+    },
+    "06-lease-burst-04.png": {
+      "bytes": 75766,
+      "sha256": "7d816564adc8afe309bbdd64d11605f50b0a31ecb033e4b84452b8b46cf55009"
+    },
+    "06-lease-burst-04.png.json": {
+      "bytes": 976,
+      "sha256": "735d9026a78420c7e0922111b9d49d290ac1aff178d3d6f41e3f1d6b235b4a78"
+    },
+    "06-lease-burst-05.png": {
+      "bytes": 75766,
+      "sha256": "7d816564adc8afe309bbdd64d11605f50b0a31ecb033e4b84452b8b46cf55009"
+    },
+    "06-lease-burst-05.png.json": {
+      "bytes": 976,
+      "sha256": "09bcd0699aaa63c390bfd5cf34c986457a96d2c45d775bad1a46697f9bc74bba"
+    },
+    "06-lease-burst-06.png": {
+      "bytes": 75766,
+      "sha256": "7d816564adc8afe309bbdd64d11605f50b0a31ecb033e4b84452b8b46cf55009"
+    },
+    "06-lease-burst-06.png.json": {
+      "bytes": 976,
+      "sha256": "5ba662be9003116a712e023d5e13daaa20281de103db6f8f1ad59aee342865c7"
+    },
+    "06-lease-burst-07.png": {
+      "bytes": 75766,
+      "sha256": "7d816564adc8afe309bbdd64d11605f50b0a31ecb033e4b84452b8b46cf55009"
+    },
+    "06-lease-burst-07.png.json": {
+      "bytes": 975,
+      "sha256": "6eedde5af14fe90f9f9470ec1916200b2c3eb79655885046306fb33aade86239"
+    },
+    "06-lease-burst-08.png": {
+      "bytes": 75766,
+      "sha256": "7d816564adc8afe309bbdd64d11605f50b0a31ecb033e4b84452b8b46cf55009"
+    },
+    "06-lease-burst-08.png.json": {
+      "bytes": 976,
+      "sha256": "1815a601769f7e4b0d9f1289c8033c074b106cac27d953cd6a795298afcfff8c"
+    },
+    "06-lease-burst-09.png": {
+      "bytes": 75766,
+      "sha256": "7d816564adc8afe309bbdd64d11605f50b0a31ecb033e4b84452b8b46cf55009"
+    },
+    "06-lease-burst-09.png.json": {
+      "bytes": 975,
+      "sha256": "ce09802dc79bad2927bed1f057c8fdafb32c9ed3429eaa8eb1829a552bd8a8ef"
+    },
+    "06-lease-burst-10.png": {
+      "bytes": 75766,
+      "sha256": "7d816564adc8afe309bbdd64d11605f50b0a31ecb033e4b84452b8b46cf55009"
+    },
+    "06-lease-burst-10.png.json": {
+      "bytes": 976,
+      "sha256": "bc86776f7426b4db6a8130cdbce99116aba9da5cda323673716e9600d75b5b74"
+    },
+    "06-lease-during-capture.png": {
+      "bytes": 75680,
+      "sha256": "6060e207d3443e634667cc91fd24e04220c9693935cd8941098e5021dd860ca6"
+    },
+    "06-lease-during-capture.png.json": {
+      "bytes": 996,
+      "sha256": "a549ca5ea9bf73b5c82ec5edb006e96723e9c4dd25261146479538344654374a"
+    },
+    "fixture-events.jsonl": {
+      "bytes": 95503,
+      "sha256": "e3e26415dfa9527a25c4812888d40d1f0057fc166078fdc25489e821f4d63a1f"
+    },
+    "fixture-stereo.ogg": {
+      "bytes": 109985,
+      "sha256": "1b9ce96c24705c742070a25b54cead78a33270bcc3d8324e48bc8ff5ad59707f"
+    },
+    "fixture-stereo.wav": {
+      "bytes": 1920050,
+      "sha256": "6d21a8d5b40682fa88b285992d2622cfeb023690e761d464c868c8d844fe07db"
+    },
+    "freshness-01-baseline.png": {
+      "bytes": 73513,
+      "sha256": "4aea82d7ce2ca66d2ca88232a3d7dbc2fa45db2142691bb0ea166b05227a6e6e"
+    },
+    "freshness-01-baseline.png.json": {
+      "bytes": 980,
+      "sha256": "0127181a66db803738e9504bf4885046033548c855e166bd156a989253f5d191"
+    },
+    "freshness-02-captured_left.png": {
+      "bytes": 74881,
+      "sha256": "a531e5e977016b79201525fb6e3faf5e0569b012743214924d2ee11dc7815e62"
+    },
+    "freshness-02-captured_left.png.json": {
+      "bytes": 984,
+      "sha256": "4ad528861a3e40c2c5ffbc3239c56147c176e9e564c8e72c89c0a8aac003c9c5"
+    },
+    "freshness-03-captured_right.png": {
+      "bytes": 72849,
+      "sha256": "d53ecf25550ff6b71b0b5050c227c630fd50adbfc233c8c712a4bedc158e2682"
+    },
+    "freshness-03-captured_right.png.json": {
+      "bytes": 986,
+      "sha256": "e84c5ff98ba4a008f82ab433077e45d91edcd6d8b8222fcd45374129a2e3877b"
+    },
+    "freshness-04-paused.png": {
+      "bytes": 71735,
+      "sha256": "125455898f4793776d36b65a104e983ebb3104b1aa808a420302c6b6fe5ab9e9"
+    },
+    "freshness-04-paused.png.json": {
+      "bytes": 977,
+      "sha256": "971edf0ccbed63e5e57f6540e3fd6f01cecd977c805c531f1bec1a75e76f6672"
+    },
+    "freshness-05-menu.png": {
+      "bytes": 71974,
+      "sha256": "3b8ba8ea5ed30c133334620fd117fd322b77312b66f0f6c9070b168511a7f1dc"
+    },
+    "freshness-05-menu.png.json": {
+      "bytes": 975,
+      "sha256": "30ad169f3c8aacfebc470f2388ac2bd82fbb4b53772147625818cdc943d09c87"
+    },
+    "freshness-06-resumed.png": {
+      "bytes": 72849,
+      "sha256": "d53ecf25550ff6b71b0b5050c227c630fd50adbfc233c8c712a4bedc158e2682"
+    },
+    "freshness-06-resumed.png.json": {
+      "bytes": 978,
+      "sha256": "2aa489393a3217c0339d620080faecd76ccf06680999ab21cb5fd8fc3cec6a2a"
+    },
+    "freshness-07-captured_final.png": {
+      "bytes": 75551,
+      "sha256": "6c19a6035a47b7fdca553e760e97d6a1d0595efca1035335b15e5c35d80faf6e"
+    },
+    "freshness-07-captured_final.png.json": {
+      "bytes": 986,
+      "sha256": "b83a4d62c077d7eb4844ee3bbe2c362ba5feb383f7b6d70de85541f4b44d2830"
+    },
+    "freshness-verification.json": {
+      "bytes": 21013,
+      "sha256": "6b21d3bfacd2761729c675b9e5862af86365159140daef969219061377bee4b4"
+    },
+    "game.log": {
+      "bytes": 327,
+      "sha256": "ad4ec1ceaedacf8fd4da5dc48d265615ccc0456517381d280369d5aac6493e2c"
+    },
+    "input-proof.ffmpeg.log": {
+      "bytes": 5466,
+      "sha256": "e023bff0cded8738e350a5333a8de18b685f17b243bdbf1556184541218a0a0f"
+    },
+    "input-proof.mkv": {
+      "bytes": 1408038,
+      "sha256": "90ce3477c900e10013056212d2ca0e367326f244dfaa4ee5c7c71952353d773a"
+    },
+    "input-proof.mkv.json": {
+      "bytes": 5383,
+      "sha256": "8ed187805cf4dabdf7fbd1230840ce5d8e015de87d7c0cfcd5942214d77cd8c9"
+    },
+    "input-verification.json": {
+      "bytes": 9967,
+      "sha256": "cf6724bc34904bc75567b17d5cb8da7412ab6242d3e91b7a264a5dab435ae967"
+    },
+    "launch.json": {
+      "bytes": 807,
+      "sha256": "359ac18da5ee823d198f3f6f96ec6a993f6d294461935e954190e5fdc5157270"
+    },
+    "media-verification.json": {
+      "bytes": 4520,
+      "sha256": "7deee646f59f3948b947477d8f9fa44075d6bb86c319a8e7795adf2da4027653"
+    },
+    "safety-verification.json": {
+      "bytes": 43371,
+      "sha256": "5afdfd2c2a87fe6cc2fbe495425cb8f9cc49323013563787a7dccc3c2c6c545b"
+    },
+    "state.json": {
+      "bytes": 13255,
+      "sha256": "29f879caeac899d15ccfdba70477f886956ded361d3347adda1eef49b7b64203"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 93979,
+      "sha256": "d8d1c4f9b69ff57991ef5765a44429f18b81fed36d04c5e0040f96f228ac3d21"
+    },
+    "video-shot-1.png": {
+      "bytes": 202191,
+      "sha256": "b08859a55158a572f60b83840a2d7fa1e6870232493accce0b6c9dfc5ff0cad8"
+    },
+    "video-shot-2.png": {
+      "bytes": 232261,
+      "sha256": "b303eb5f90ebf369311c97b07b0781bea78dd818cf036092a2057e611554732c"
+    },
+    "video-shot-3.png": {
+      "bytes": 199654,
+      "sha256": "a6892ac5ea10e07003b4c086e1953a06e1f2793c3a25de5fe32d4c365bd1ad3f"
+    },
+    "viewport-001.png": {
+      "bytes": 74302,
+      "sha256": "59d57cbecff908af2a3b96fc8057f60235283ea3b6d46c052289817a78bc1a6f"
+    },
+    "viewport-002.png": {
+      "bytes": 75868,
+      "sha256": "09946965b25109962953ec7c8eedcca0c1951c8ae573415fa44c2d2aa10ae0ff"
+    },
+    "viewport-003.png": {
+      "bytes": 73828,
+      "sha256": "5e7b75243d16185573aae40776486b1fa047e73d919d2fd34b075f36c2d5801e"
+    },
+    "viewport-004.png": {
+      "bytes": 72550,
+      "sha256": "c398a4f40c5d2eb53a51946e4e0d9ad3f14931d5696e6e6dbd116fc2d3daaa66"
+    },
+    "viewport-005.png": {
+      "bytes": 72942,
+      "sha256": "f5b7ae87296d32327cc6564209ef107a512f13dbf98d47995eebaa0a69aac74e"
+    },
+    "viewport-006.png": {
+      "bytes": 73828,
+      "sha256": "5e7b75243d16185573aae40776486b1fa047e73d919d2fd34b075f36c2d5801e"
+    },
+    "viewport-007.png": {
+      "bytes": 76264,
+      "sha256": "7c2ea6e3e5d38341a43186cbc14cd6a55799840caef3f0e53dbe6b200987e07d"
+    },
+    "vulkaninfo.txt": {
+      "bytes": 2385,
+      "sha256": "bf0dc0913675988bf673ca47db4a90f716f24571249e65abef40700b7883f8ad"
+    },
+    "weston.log": {
+      "bytes": 3438,
+      "sha256": "6869910b2c3737ecbd22b8d183ad828d1b6369f91d7a8252fc6d38231946056b"
+    },
+    "xwayland.log": {
+      "bytes": 732,
+      "sha256": "906bbcb0e45c4180c5f3f275be89b64c810e4db3da7fbe5efac918759235157e"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "bb6fb09791c0ec65d5193f9dc045da7b8d16fecf",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+  },
+  "packaged_utc": "2026-09-04T22:05:05.755+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}

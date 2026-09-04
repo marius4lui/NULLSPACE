@@ -1,0 +1,41 @@
+{
+  "name": "baseboard",
+  "recipe": "environment-materials-1.0",
+  "seed": 41073,
+  "description": "Dark brown extruded rubber cove base; subtle longitudinal extrusion and low soft sheen. Cove and rolled upper lip are actual profile geometry.",
+  "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+  "meters_per_tile": [
+    1.22,
+    1.22
+  ],
+  "resolution": [
+    512,
+    512
+  ],
+  "normal_convention": "tangent +Y; image rows top-down",
+  "height_source_mm_range": [
+    -0.016776293516159058,
+    0.015649504959583282
+  ],
+  "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+  "colorspace": {
+    "basecolor": "sRGB",
+    "normal": "linear",
+    "orm": "linear",
+    "height_source": "linear 16-bit"
+  },
+  "maps": {
+    "basecolor": {
+      "path": "art/source/textures/environment/baseboard/baseboard_basecolor.png",
+      "sha256": "bfe1e44e0d803b1b3dc52bf581bf169d09204c25d3ab08cf15a27d120b9370f3"
+    },
+    "normal": {
+      "path": "art/source/textures/environment/baseboard/baseboard_normal.png",
+      "sha256": "1021760936bcc24456b554536028099847d0e8b04c61f1d9ce8745a4be62f8b1"
+    },
+    "orm": {
+      "path": "art/source/textures/environment/baseboard/baseboard_orm.png",
+      "sha256": "4533105f9d14d950a28e508f4bbf5f47b51968eca5800430183d737ae767da2c"
+    }
+  }
+}

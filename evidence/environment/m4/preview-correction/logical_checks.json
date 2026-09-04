@@ -1,0 +1,111 @@
+{
+	"baseline_render_state": {
+		"anisotropic_filtering_project": 3,
+		"fixture_states": [
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f00",
+				"state": 1,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f01",
+				"state": 4,
+				"visible": false
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f02",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f03",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f04",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f05",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f06",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f07",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f08",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f09",
+				"state": 0,
+				"visible": true
+			},
+			{
+				"direct_light_enabled": true,
+				"id": "m4_f10",
+				"state": 0,
+				"visible": true
+			}
+		],
+		"fog": false,
+		"glow": true,
+		"material_diagnostic_scope": "Architecture geometry unchanged; uniform StandardMaterial replaces surface shaders. Batching may change: compare draw calls too.",
+		"msaa_3d": 1,
+		"room_probe_counts": {
+			"lightmap_gi": 0,
+			"reflection_probe": 0,
+			"voxel_gi": 0
+		},
+		"scale_3d": 1.0,
+		"scale_3d_mode": 0,
+		"sdfgi": false,
+		"shadowed_fixtures": 4,
+		"simple_architecture_material": false,
+		"ssao": true,
+		"ssao_quality_project": 2,
+		"ssil": true,
+		"ssil_quality_project": 2,
+		"ssr": false,
+		"taa": true,
+		"visible_direct_fixtures": 10,
+		"volumetric_fog": false
+	},
+	"checks": 50,
+	"errors": [],
+	"godot": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"result": "LOGICAL_CHECKS_PASSED",
+	"schema": 1,
+	"scope": "Headless logical diagnostic checks only; actual native recapture, appearance and timings remain pending"
+}

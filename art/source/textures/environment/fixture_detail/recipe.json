@@ -1,0 +1,41 @@
+{
+  "name": "fixture_detail",
+  "recipe": "environment-materials-1.0",
+  "seed": 41073,
+  "description": "Eight original swatches atlas tiny steel, recessed slots, reflector, ceramic and powered/unpowered phosphor parts. Two-by-four cells with guarded UVs; emission only on phosphor cell.",
+  "source": "Entirely original mathematical and hand-directed construction; no downloaded or generated image inputs.",
+  "meters_per_tile": [
+    1.22,
+    1.22
+  ],
+  "resolution": [
+    512,
+    512
+  ],
+  "normal_convention": "tangent +Y; image rows top-down",
+  "height_source_mm_range": [
+    0.0,
+    0.0
+  ],
+  "orm": "R=ambient occlusion (unbaked 1); G=roughness; B=metallic",
+  "colorspace": {
+    "basecolor": "sRGB",
+    "normal": "linear",
+    "orm": "linear",
+    "height_source": "linear 16-bit"
+  },
+  "maps": {
+    "basecolor": {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_basecolor.png",
+      "sha256": "88d11c0f8af26a94ebc2378f461169d63398f32725e337c5309554764591aa20"
+    },
+    "normal": {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_normal.png",
+      "sha256": "71d432413a10aab25e5dee0aa377a1ca29dddef8eb2e30584135268d218c9d96"
+    },
+    "orm": {
+      "path": "art/source/textures/environment/fixture_detail/fixture_detail_orm.png",
+      "sha256": "9719f89ec6b4e9660b7148d8a5e1c2757e37fdef38abe2fc33512244a1c9fbef"
+    }
+  }
+}

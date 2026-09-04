@@ -1,0 +1,27 @@
+{
+  "allow_physical_input": false,
+  "command": [
+    "/tmp/nullspace-callback-build.VyQfbM/linux/nullspace.x86_64",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--resolution",
+    "1920x1080",
+    "--windowed",
+    "--disable-vsync",
+    "--max-fps",
+    "60"
+  ],
+  "cwd": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/project-skeleton",
+  "height": 1080,
+  "icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+  "method": "adaptive_native",
+  "startup_timeout": 60.0,
+  "weston": "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+  "width": 1920
+}

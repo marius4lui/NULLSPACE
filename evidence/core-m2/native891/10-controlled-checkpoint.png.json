@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9919.953248086,
+  "acquired_utc": "2026-09-04T22:36:11.751+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/tmp/nullspace-m2-native891-01/10-controlled-checkpoint.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "f4b8f98b4ca9e4dcb7c7ba7b4d15bbaafd4576de0f7bb8801cac08d9e2ea5be9",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 123127
+  },
+  "x_readback_ms": 16.3704870010406
+}
