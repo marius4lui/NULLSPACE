@@ -5,11 +5,12 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+import subprocess
 import sys
 import time
 from typing import Any
 
-from native import parser as native_parser, send, start
+from native import send
 from prove_freshness import compare_images
 from qa_common import same_process, sha256, utc, write_json
 
@@ -41,10 +42,13 @@ def terminal(directory: Path) -> dict[str, Any]:
 
 
 def launch(directory: Path, command: list[str]) -> None:
-    arguments = native_parser().parse_args(["start", "--run-dir", str(directory),
+    # Use the documented CLI process boundary. Calling start() in this long-
+    # lived proof process would leave its detached supervisor as our unreaped
+    # child until Python's next Popen, confusing actual cleanup with a zombie.
+    subprocess.run([sys.executable, str(Path(__file__).with_name("native.py")),
+        "start", "--run-dir", str(directory),
         "--cwd", str(Path(__file__).resolve().parents[2]), "--method", "scripted_diagnostic",
-        "--", *command])
-    start(arguments)
+        "--", *command], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 
 def prove(root: Path, godot_export: Path) -> dict[str, Any]:
