@@ -104,7 +104,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _on_restore_requested(snapshot: Dictionary, generation: int) -> void:
+	if state != State.LOADING:
+		operation_failed.emit(_invalid("Restore must be initiated through GameFlow."))
+		return
 	pending_generation = generation
+	if not SimulationClock._restore_for_load(float(snapshot["session"]["elapsed_seconds"]), generation):
+		fail_load(generation, "Could not initialize the checkpoint simulation clock.")
+		return
 	load_started.emit(snapshot, generation)
 
 func _finish_request(result: StorageResult, failure_state: State) -> StorageResult:

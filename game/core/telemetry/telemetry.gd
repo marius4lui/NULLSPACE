@@ -6,7 +6,9 @@ signal write_failed(detail: String)
 
 var log_path: String = ""
 var session_id: String = ""
-var simulation_seconds: float = 0.0
+# Compatibility read alias for the temporary M2 diagnostic. Production reads the clock.
+var simulation_seconds: float:
+	get: return SimulationClock.sample().elapsed_seconds
 var metrics: Dictionary = {}
 var _file: FileAccess
 var _sample_time: float = 0.0
@@ -17,6 +19,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	GameFlow.state_changed.connect(_on_flow)
 	GameFlow.load_started.connect(_on_load)
+	SimulationClock.stepped.connect(_on_clock_step)
 	InputGate.invalidated.connect(_on_input_invalidated)
 	EventHub.shot_accepted.connect(_on_shot)
 	EventHub.objective_committed.connect(_on_objective)
@@ -30,9 +33,6 @@ func _exit_tree() -> void:
 		_file.close()
 
 func _process(delta: float) -> void:
-	if GameFlow.state == NullGameFlow.State.PLAYING:
-		simulation_seconds += delta
-		metrics["play_seconds"] = float(metrics["play_seconds"]) + delta
 	_sample_time += delta
 	if _sample_time < SnapshotSchema.TUNING.telemetry_frame_sample_seconds:
 		return
@@ -55,8 +55,10 @@ func reset_metrics() -> void:
 func record(kind: StringName, values: Dictionary = {}) -> void:
 	if _file == null:
 		return
+	var stamp: SimulationStamp = SimulationClock.sample()
 	var entry: Dictionary = {"event": String(kind), "utc": Time.get_datetime_string_from_system(true),
-		"monotonic_usec": Time.get_ticks_usec(), "simulation_seconds": simulation_seconds,
+		"monotonic_usec": Time.get_ticks_usec(), "simulation_seconds": stamp.elapsed_seconds,
+		"simulation_epoch": stamp.epoch, "simulation_tick": stamp.physics_tick,
 		"frame": Engine.get_process_frames(), "physics_tick": Engine.get_physics_frames(),
 		"session_id": session_id, "flow": NullGameFlow.State.keys()[GameFlow.state],
 		"focused": InputGate.focused, "paused": get_tree().paused,
@@ -124,8 +126,13 @@ func _on_load(snapshot: Dictionary, generation: int) -> void:
 	if next_session != session_id:
 		reset_metrics()
 		session_id = next_session
-	simulation_seconds = float(snapshot["session"]["elapsed_seconds"])
+	# Evidence-derived temporal state cannot cross a reset into a lower clock origin.
+	_chase_started = -1.0
+	_last_encounter = -1.0
 	record(&"checkpoint_restore", {"checkpoint_id": snapshot["checkpoint"]["id"], "generation": generation})
+
+func _on_clock_step(delta_seconds: float) -> void:
+	metrics["play_seconds"] = float(metrics["play_seconds"]) + delta_seconds
 
 func _on_input_invalidated(generation: int, reason: StringName) -> void:
 	record(&"input_invalidated", {"generation": generation, "reason": reason})

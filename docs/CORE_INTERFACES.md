@@ -4,7 +4,7 @@ This is a technical foundation, not a playable game or any product acceptance pa
 
 ## Ownership and scene integration
 
-Autoload order is SettingsManager, SaveSystem, CheckpointSystem, InputGate, GameFlow, EventHub, Telemetry. Their global names differ from their `Null…` class names to avoid collisions. Numerical hypotheses live in `game/data/default_tuning.tres`; quality budgets in `game/data/quality/*.tres`.
+Autoload order is SettingsManager, SaveSystem, CheckpointSystem, InputGate, SimulationClock, GameFlow, EventHub, Telemetry. Their global names differ from their `Null…` class names to avoid collisions. Numerical hypotheses live in `game/data/default_tuning.tres`; quality budgets in `game/data/quality/*.tres`.
 
 | Interface | Intended consumer / contract |
 |---|---|
@@ -20,6 +20,28 @@ Autoload order is SettingsManager, SaveSystem, CheckpointSystem, InputGate, Game
 | `SettingsManager.settings_changed(values)`, `quality_changed(profile)` | Production cameras/motion/lighting/audio/UI subscribe, apply current snapshot on attach, and respect zero motion/flash reductions. `current_quality()` returns the shared read-only tuning Resource. |
 
 PLAYING is the only unpaused state. Load completion while unfocused enters PAUSED, and focus return still requires explicit Resume. GameFlow, settings, telemetry and UI run with `PROCESS_MODE_ALWAYS`; player/world descendants should normally inherit pausable processing. Use signals to clear queued commands, not animation-completion callbacks as gameplay authority.
+
+## Shared simulation clock
+
+`SimulationClock.sample() -> SimulationStamp` is the gameplay time source. The detached stamp exposes `elapsed_seconds`, `physics_tick`, and `epoch` through getters. The clock advances once per physics step only in unpaused PLAYING, at main-thread physics priority −1000 before normal consumers (keep their priority >=0). Paused/menu/settings/death/ending/LOADING time does not advance. Render frames, wall-clock time and Telemetry do not control it. Physics simulation seconds may differ from real elapsed seconds under load/time scaling; this is not a performance measurement.
+
+GameFlow alone calls the internal `_restore_for_load` entry point, restoring `session.elapsed_seconds`, resetting the runtime tick, and advancing a monotonically increasing runtime epoch **before** `load_started` is emitted. A duplicate/stale restore or write outside LOADING is rejected. Failed staging freezes the new epoch; retry receives another epoch, never resurrecting pre-load evidence. Runtime epoch/tick are not serialized and do not change save schema v1. The campaign coordinator reads this clock when capturing a coherent snapshot.
+
+M3/M6 inject or read this same clock; do not create parallel clocks or use passive `Telemetry.simulation_seconds` as an authority. That property remains only a read-through compatibility alias for the temporary diagnostic. Telemetry derives its attempted-play duration from clock step notifications and resets transient chase/encounter timing across a load; it cannot advance/reset the clock.
+
+`SoundEvent.simulation_seconds` and `PerceptionObservation.observed_at_seconds` use the shared elapsed-seconds domain. Both have a required runtime `simulation_epoch`; `is_current_epoch(stamp)` rejects an unset epoch, null stamp, or previous load. Sound `monotonic_usec` remains measurement/provenance only. The acoustic adapter preserves the source event's original time/epoch when creating uncertain evidence. M6 checks the current epoch at ingress and before delayed delivery, clears memory/search on load, ages evidence in simulation seconds, and never renews an observation by resampling time. These are consumer obligations, not implemented AI.
+
+## Restore participant contract (no campaign implementation)
+
+M2 supplies typed values/adapters under `core/persistence/`; actual level validation, staging and orchestration belong to **one future campaign-scene coordinator**. The temporary boot has no production participants and is not proof of physical anchor safety.
+
+- `RestoreContext.new(participant_id, generation, simulation_epoch, reset_seed, own_anchor_id, own_anchor_transform)` is participant-specific. Player receives only its validated player anchor; Listener only its validated monster anchor; doors/topology receive no anchor (empty ID and identity sentinel). Never put both actors' transforms or a live player node into a shared context. `validate()` checks structural values, not collision/visibility/separation.
+- `CheckpointRestoreParticipant` is a RefCounted adapter base, so CharacterBody/Node scripts need not change inheritance. M3 owns the player adapter; M6 owns world-door/topology and Listener adapters; the future weapon owner supplies its adapter. Override `_begin_restore(snapshot, context)` and `_cancel_restore(generation)`. The semantic snapshot is a detached copy. The coordinator supplies only the semantic sections each adapter needs; never add live nodes or hidden player truth.
+- `begin_restore` returns a start receipt, **not completion**. Connect `restore_finished(participant_id, generation, StorageResult)` before starting; readiness may be synchronous or asynchronous. Complete through `_finish_restore`. An unimplemented adapter emits failure. Duplicate starts, mismatched contexts, stale generations and late completions are rejected. A start failure must cause coordinator abort rather than indefinite waiting.
+- `cancel_restore(generation)` invalidates pending completion before the teardown hook. Adapters must test `is_restore_active(generation)` plus the clock epoch before every deferred world mutation, cancel animation/nav/attack callbacks and staged resources, and never regard a late completion guard alone as protection against earlier mutations.
+- `RestoreBarrier.begin(generation, required_ids)` freezes a nonempty unique registry. `arrive(id, generation, result)` accepts each expected success once; missing/delayed IDs remain pending, unknown/duplicate/stale acknowledgements do not count, any failed/null result closes failure. `cancel(generation, detail)` closes a timeout/aborted load. Each generation emits `completed` once. `pending_ids()` and `outcome()` are detached values. The barrier is pure: no scene access, timer, physics or flow transitions.
+
+Coordinator sequence: validate snapshot/level/own anchors; establish the complete expected registry and connect all signals; stage participants during LOADING; on all matching successes call `GameFlow.complete_load(generation)` exactly once. On start/completion/timeout failure, cancel participants, tear down partial staging, then `fail_load`. Invalidate old barrier/participants on replacement, menu return or scene exit. Use a bounded non-simulation readiness timeout because simulation time is frozen during LOADING. Only the coordinator acknowledges flow or assembles/commits full snapshots; participants never save partial state or add schema fields. Stable door semantics/topology must restore together, and Listener evidence/attacks reset at its own fair anchor before acknowledgment. Those world/AI effects require later owner tests and native validation.
 
 ## Snapshot schema v1
 
@@ -67,10 +89,10 @@ Exactly eight audio buses: Master, Ambience, Fluorescent, Environment, Player, W
 
 Import: `GODOT --headless --path game --editor --import --quit`.
 
-Logical tests: `bash game/tests/core/run.sh /absolute/path/to/godot /absolute/path/to/log`. The wrapper creates a fresh isolated XDG profile, starts `res://tests/core/test_runner.tscn` with the actual autoload graph, and rejects any unexpected SCRIPT ERROR/engine ERROR even if Godot returns exit0. Each test also creates a separate temporary storage root. `--script` is intentionally not used. The wrapper requires `rg` for the error scan.
+Logical tests: `bash game/tests/core/run.sh /absolute/path/to/godot /absolute/path/to/log`. The wrapper creates fresh isolated XDG profiles, starts `res://tests/core/test_runner.tscn` with actual autoloads, and rejects any unexpected SCRIPT ERROR/engine ERROR even if Godot returns exit0. Each test also creates separate temporary storage. `--script` is intentionally not used. `rg` and GNU `timeout` are required; each invocation is capped at45s plus5s forced-termination grace. A clock scene also runs fixed logical render schedules30/60/120: each must produce60 physics steps and1.0 simulation second. These are headless scheduling regressions, not native frame-rate/performance evidence.
 
 Native diagnostic: use the isolated `tools/qa/native.py` supervisor, never a shared player profile. Its per-run XDG environment places this project's `user://` under the run's profile. Ordinary keys/mouse/menu navigation test the real runtime. Commands and captures belong in evidence; this fixture cannot satisfy campaign, gun-feel, atmosphere, art or audio review gates.
 
 Export preset names are `Linux x86_64` and `Windows x86_64`; paths are `build/linux/nullspace.x86_64` and `build/windows/NULLSPACE.exe`, embedded PCK, no signing, standard matching templates. Tests are excluded. The temporary diagnostic remains the boot scene until production integration; these are milestone exports, not release-ready artifacts. Native Windows execution is separate from cross-export success.
 
-Primary API references used: [Godot DirAccess](https://docs.godotengine.org/en/stable/classes/class_diraccess.html), [Viewport](https://docs.godotengine.org/en/stable/classes/class_viewport.html), [Input](https://docs.godotengine.org/en/stable/classes/class_input.html). Frozen architecture/research documents remain authoritative.
+Primary API references used: [Godot DirAccess](https://docs.godotengine.org/en/stable/classes/class_diraccess.html), [Viewport](https://docs.godotengine.org/en/stable/classes/class_viewport.html), [Input](https://docs.godotengine.org/en/stable/classes/class_input.html), [Node physics processing and ordering](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-property-process-physics-priority). Frozen architecture/research documents remain authoritative.
