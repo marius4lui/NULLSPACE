@@ -22,6 +22,7 @@ from qa_common import (audio_defaults, git_identity, process_identity, run, sha2
 from x11_input import GameWindow
 from private_seat import PrivateSeat
 from headless_backend import start_headless, cleanup_wayland_runtime
+from window_capture import WindowCapture
 
 
 class NativeSession:
@@ -36,6 +37,7 @@ class NativeSession:
                                      "experiential_review": "unverified"}
         self.processes: dict[str, subprocess.Popen[bytes]] = {}
         self.window: GameWindow | None = None
+        self.capture: WindowCapture | None = None
         self.server: socket.socket | None = None
         self.runtime: Path | None = None
         self.sink_module: str | None = None
@@ -206,6 +208,8 @@ class NativeSession:
             if time.monotonic() > deadline:
                 raise RuntimeError("No viewable owned game window before startup timeout")
             time.sleep(0.1)
+        self.capture = WindowCapture(self.window)
+        self.state["capture"] = self.capture.metadata
         self.state["window"] = self.window.focus()
         self.state["private_seat"] = self.seat.audit()
         self.safety_thread = threading.Thread(target=self.safety_loop, name="private-native-safety", daemon=True)
@@ -287,7 +291,9 @@ class NativeSession:
                     "recording": self.recording[1] if self.recording else None,
                     "status": self.state["status"], "private_seat": self.state["private_seat"]}
         if action == "screenshot":
-            result = screenshot(self.directory, request["name"], self.env, self.window.status())
+            if self.capture is None:
+                raise RuntimeError("Owned-window Composite capture is unavailable")
+            result = screenshot(self.directory, request["name"], self.capture)
             self.event("screenshot_saved", **result)
             return result
         if action == "record":
@@ -409,6 +415,11 @@ class NativeSession:
                 finish_recording(*self.recording, interrupt=True)
             except Exception as error:
                 errors.append(f"recording: {error}")
+        if self.capture is not None:
+            try:
+                self.capture.close()
+            except Exception as error:
+                errors.append(f"Composite capture: {error}")
         if self.window is not None:
             try:
                 self.window.close()

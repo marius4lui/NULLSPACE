@@ -22,6 +22,8 @@ var _pulse_samples: int = 0
 var _sample_index: int = 0
 var _sample_timer: float = 0.0
 var _last_motion: Vector2 = Vector2.ZERO
+var _viewport_capture_count: int = 0
+var _viewport_capture_pending: bool = false
 
 
 func _ready() -> void:
@@ -125,6 +127,9 @@ func _input(event: InputEvent) -> void:
 				_set_mode("playing" if _mode == "paused" else "paused")
 			elif key.keycode == KEY_TAB:
 				_set_mode("menu")
+			elif key.keycode == KEY_F12 and not _viewport_capture_pending:
+				_viewport_capture_pending = true
+				_capture_viewport.call_deferred()
 	elif event is InputEventMouseMotion:
 		var motion := event as InputEventMouseMotion
 		_last_motion = motion.relative
@@ -148,6 +153,20 @@ func _set_mode(value: String) -> void:
 	_mode = value
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if value == "playing" else Input.MOUSE_MODE_VISIBLE
 	_log("mode", {"value": value, "mouse_mode": Input.mouse_mode})
+
+
+func _capture_viewport() -> void:
+	# Independent corroborating boundary, requested AFTER the external snapshot.
+	# It neither replaces the native transport nor forces that snapshot to refresh.
+	await RenderingServer.frame_post_draw
+	_viewport_capture_count += 1
+	var path: String = OS.get_environment("NULLSPACE_QA_RUN_DIR").path_join(
+		"viewport-%03d.png" % _viewport_capture_count)
+	var result: Error = get_viewport().get_texture().get_image().save_png(path)
+	_log("viewport_capture", {"path": path, "result": result, "mode": _mode,
+		"position": _vector3(_position), "yaw": _yaw, "pitch": _pitch, "shots": _shots,
+		"mouse_total": _vector2(_mouse_total), "captured": Input.mouse_mode == Input.MOUSE_MODE_CAPTURED})
+	_viewport_capture_pending = false
 
 
 func _physics_process(delta: float) -> void:

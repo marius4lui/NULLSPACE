@@ -9,6 +9,7 @@ import subprocess
 from typing import Any
 
 from qa_common import run, sha256, write_json
+from window_capture import WindowCapture
 
 
 def unload_owned_sink(env: dict[str, str], sink_name: str, module_id: str) -> bool:
@@ -63,15 +64,11 @@ def video_input(display_name: str, window: dict[str, Any], fps: int = 60) -> lis
             "-video_size", f'{window["width"]}x{window["height"]}', "-i", display_name]
 
 
-def screenshot(directory: Path, name: str, env: dict[str, str],
-               window: dict[str, Any]) -> dict[str, Any]:
+def screenshot(directory: Path, name: str, capture: WindowCapture) -> dict[str, Any]:
     path = target_path(directory, name, ".png")
-    command = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-nostdin",
-               *video_input(env["DISPLAY"], window, 1), "-frames:v", "1",
-               "-threads", "1", "-update", "1", str(path)]
-    run(command, env=env, timeout=15.0)
-    result = {"path": str(path), "sha256": sha256(path), "window": window,
-              "method": "x11grab_owned_window_native_resolution"}
+    pixels, result = capture.snapshot()
+    pixels.save(path)
+    result.update({"path": str(path), "sha256": sha256(path)})
     write_json(path.with_suffix(".png.json"), result)
     return result
 
@@ -94,7 +91,8 @@ def start_recording(directory: Path, name: str, env: dict[str, str],
         process = subprocess.Popen(command, env=env, stdout=log, stderr=log,
                                    stdin=subprocess.DEVNULL, start_new_session=True)
     return process, {"path": str(path), "pid": process.pid, "command": command,
-                     "seconds_requested": seconds, "window": window, "audio": sink}
+                     "seconds_requested": seconds, "window": window, "audio": sink,
+                     "method": "x11grab_composite_redirected_owned_window"}
 
 
 def finish_recording(process: subprocess.Popen[bytes], metadata: dict[str, Any],

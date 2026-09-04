@@ -61,6 +61,7 @@ class SafetyTests(unittest.TestCase):
         session = self.session
         session.server = self.server
         session.window = Window()
+        session.capture = object()
         session.seat = Seat()
         session.processes = {"game": Process()}
         session.recording = None
