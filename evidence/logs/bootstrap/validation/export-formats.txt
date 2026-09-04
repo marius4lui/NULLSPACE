@@ -1,0 +1,2 @@
+/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/linux/nullspace-bootstrap.x86_64: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 5.15.0, stripped
+/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/windows/nullspace-bootstrap.exe:  PE32+ executable for MS Windows 5.02 (GUI), x86-64 (stripped to external PDB), 12 sections

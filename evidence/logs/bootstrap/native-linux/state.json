@@ -1,0 +1,136 @@
+{
+  "audio": {
+    "channel_map": "front-left,front-right",
+    "monitor": "nullspace_qa_7e0b2273358d2590.monitor",
+    "owner_module": 536870918,
+    "sample_specification": "float32le 2ch 48000Hz",
+    "sink_index": 554,
+    "sink_name": "nullspace_qa_7e0b2273358d2590",
+    "stream_ids": [],
+    "stream_pids": []
+  },
+  "authority": "/run/user/1000/nullspace-qa-h158hzyb/Xauthority",
+  "cleanup_errors": [],
+  "command": [
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/fresh-checkout-YXz1DQ/repo/tools/bootstrap/output/linux/nullspace-bootstrap.x86_64",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--resolution",
+    "1920x1080",
+    "--windowed",
+    "--disable-vsync",
+    "--max-fps",
+    "60",
+    "--",
+    "--output-dir",
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/evidence/logs/bootstrap/native-linux"
+  ],
+  "control_socket": "/run/user/1000/nullspace-qa-h158hzyb/control.sock",
+  "defaults_after": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "defaults_before": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "display": ":2",
+  "ended_utc": "2026-09-04T21:01:48.170+00:00",
+  "executable_sha256": "3ab8519bb7477ab25ecfc3ef75cbfbd4909c92a0a62c07e40a9424c1304b26b9",
+  "experiential_review": "unverified",
+  "game_git": {
+    "clean": true,
+    "commit": "9bdcfc35be84020f4340e5f727893793e409df5e",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/fresh-checkout-YXz1DQ/repo"
+  },
+  "game_project": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/fresh-checkout-YXz1DQ/repo/tools/bootstrap/output/linux",
+  "game_source_hashes": {},
+  "gpu_icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+  "harness_git": {
+    "clean": true,
+    "commit": "76a9b644d4781ca92fa2fde82314a52576ed531f",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-qa"
+  },
+  "harness_source_hashes": {
+    "analyze_fixture_media.py": "90c010791bca2736ba981c9c975bd46ea188d1e9580d0afc08663dd6edf5d2b7",
+    "fixtures/input_render_audio/fixture.gd": "9b3f5fb49778f7d1c06aed4e2e7be7491de85d083c4f980d6539a64887a5009e",
+    "fixtures/input_render_audio/fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+    "fixtures/input_render_audio/project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863",
+    "manifest.py": "719e633dca86e65a3aa54306b552066c35a06bc0842c81861bebd84d43e5f34c",
+    "media_capture.py": "17ba3c63999e90b13ffeb834eccd6f2e71a9f2b037b9089c3742796e2fb7913c",
+    "native.py": "6a9913a3a8c20002a26d967692cdea7b830c4ee20e0f9034da35029f85093145",
+    "native_session.py": "ef7eff090efca6b9fa8af85662f5c4d6ac3ad2c3aa096e9ee2030782c4c2193d",
+    "prove_fixture.py": "1edb665831c5ebc0d1a4a4ef1f73b799fc08e6ba207324b57e4eccf3d7626a97",
+    "qa_common.py": "a528e789415f61ce916f0ca8854e3706b44e5dae52bb2cd3887100a5a894df35",
+    "recover_session.py": "6964b28230836c009d77a5a614734aaa78eb384f990cb9b3b3610a5157f02b96",
+    "x11_input.py": "99c76736dbbcb4cb90a16b0b2a345931702cc3cd5396be2aea2fc13b6efec200"
+  },
+  "host": {
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "os": "Linux 7.1.12-200.fc44.x86_64 x86_64 GNU/Linux",
+    "pipewire": "pipewire\nCompiled with libpipewire 1.6.8\nLinked with libpipewire 1.6.8",
+    "xwayland": "xorg-x11-server-Xwayland-24.1.13-1.fc44.x86_64"
+  },
+  "host_defaults_unchanged": true,
+  "method": "adaptive_native",
+  "monitor": "nullspace_qa_7e0b2273358d2590.monitor",
+  "observed_or_heard": [],
+  "processes": {
+    "game": {
+      "exit_code": 0,
+      "pid": 51545,
+      "process_group": 51545,
+      "session": 51545,
+      "start_ticks": 421580
+    },
+    "xwayland": {
+      "exit_code": 0,
+      "pid": 51529,
+      "process_group": 51529,
+      "session": 51529,
+      "start_ticks": 421568
+    }
+  },
+  "profile": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/native-linux/profile",
+  "ready_utc": "2026-09-04T21:01:08.144+00:00",
+  "run_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/native-linux",
+  "runtime_dir": "/run/user/1000/nullspace-qa-h158hzyb",
+  "schema": 1,
+  "sink_module": "536870918",
+  "sink_name": "nullspace_qa_7e0b2273358d2590",
+  "started_utc": "2026-09-04T21:01:07.291+00:00",
+  "status": "stopped",
+  "supervisor": {
+    "pid": 51516,
+    "process_group": 51516,
+    "session": 51516,
+    "start_ticks": 421542
+  },
+  "vulkan_device_lines": [
+    "deviceType         = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU",
+    "deviceName         = AMD Radeon 660M (RADV REMBRANDT)",
+    "driverName         = radv",
+    "driverInfo         = Mesa 26.1.8"
+  ],
+  "window": {
+    "focus_window_id": 4194306,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      495
+    ],
+    "title": "NULLSPACE M0 Toolchain Diagnostic",
+    "width": 1920,
+    "window_id": 4194306,
+    "window_pid": 51545
+  }
+}

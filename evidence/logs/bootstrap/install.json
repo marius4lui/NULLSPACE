@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "started_utc": "2026-09-04T20:51:22Z",
+  "lock_sha256": "0957e5d5f2f8174178d7336194a70888424d8ce16959f595b6936e99ea444a6a",
+  "platform": "Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43",
+  "artifacts": {
+    "godot": {
+      "version": "4.7.2.stable.official.ed1daf0bf",
+      "path": "/home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+      "binary_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
+      "archive_sha256": "cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4",
+      "archive_bytes": 77860424,
+      "published_algorithm": "sha512",
+      "published_digest": "9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65"
+    },
+    "blender": {
+      "version": "Blender 5.2.1 LTS\n\tbuild date: 2026-08-25\n\tbuild time: 02:12:34\n\tbuild commit date: 2026-08-24\n\tbuild commit time: 16:50\n\tbuild hash: 9e2066aef7ef\n\tbuild branch: blender-v5.2-release\n\tbuild platform: Linux\n\tbuild type: Release\n\tbuild c flags:  -Wall -Werror=implicit-function-declaration -Wstrict-prototypes -Werror=return-type -Werror=vla -Wmissing-prototypes -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wlogical-op -Wundef -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wformat-signedness -Wrestrict -Wno-stringop-overread -Wno-stringop-overflow -Wnonnull -Wabsolute-value -Wuninitialized -Wredundant-decls -Wshadow -Wimplicit-fallthrough=5 -Wno-error=unused-but-set-variable  -march=x86-64-v2 -std=gnu11 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild c++ flags:  -Wuninitialized -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Werror=return-type -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wundef -Wcomma-subscript -Wformat-signedness -Wrestrict -Wno-suggest-override -Wuninitialized -Wno-stringop-overread -Wno-stringop-overflow -Wimplicit-fallthrough=5 -Wundef -Wmissing-declarations  -march=x86-64-v2 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild link flags: \n\tbuild system: CMake",
+      "path": "/home/marius/.local/share/nullspace/toolchains/blender-5.2.1/blender",
+      "binary_sha256": "c2fd82553c979a7f6ba85202c487aa1173c90db588a67d74d70cc7b0c2bea01c",
+      "archive_sha256": "a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9",
+      "archive_bytes": 383688088,
+      "published_algorithm": "sha256",
+      "published_digest": "a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9"
+    },
+    "templates": {
+      "version": "4.7.2.stable",
+      "path": "/home/marius/.local/share/godot/export_templates/4.7.2.stable",
+      "archive_sha256": "f298490b8d44d934be425a5a65a51bf15f422428b229a06a6e11d9ffea248011",
+      "archive_bytes": 1281349702,
+      "published_algorithm": "sha512",
+      "published_digest": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079"
+    }
+  },
+  "finished_utc": "2026-09-04T20:51:33Z"
+}

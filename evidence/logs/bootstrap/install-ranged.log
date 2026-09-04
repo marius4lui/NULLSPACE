@@ -1,0 +1,30 @@
+blender: fetching/verifying blender-5.2.1-linux-x64.tar.xz
+blender: VERIFIED sha256=a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9
+godot: fetching/verifying Godot_v4.7.2-stable_linux.x86_64.zip
+godot: VERIFIED sha256=cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4
+templates: fetching/verifying Godot_v4.7.2-stable_export_templates.tpz
+blender: installed /home/marius/.local/share/nullspace/toolchains/blender-5.2.1
+templates: VERIFIED sha256=f298490b8d44d934be425a5a65a51bf15f422428b229a06a6e11d9ffea248011
+Traceback (most recent call last):
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 251, in <module>
+    args.report.parent.mkdir(parents=True, exist_ok=True)
+    
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 239, in main
+    try:
+    
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 201, in version
+    if not valid:
+        ^^^^^^^^^
+RuntimeError: Actual executable version mismatch: Blender 5.2.1 LTS
+	build date: 2026-08-25
+	build time: 02:12:34
+	build commit date: 2026-08-24
+	build commit time: 16:50
+	build hash: 9e2066aef7ef
+	build branch: blender-v5.2-release
+	build platform: Linux
+	build type: Release
+	build c flags:  -Wall -Werror=implicit-function-declaration -Wstrict-prototypes -Werror=return-type -Werror=vla -Wmissing-prototypes -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wlogical-op -Wundef -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wformat-signedness -Wrestrict -Wno-stringop-overread -Wno-stringop-overflow -Wnonnull -Wabsolute-value -Wuninitialized -Wredundant-decls -Wshadow -Wimplicit-fallthrough=5 -Wno-error=unused-but-set-variable  -march=x86-64-v2 -std=gnu11 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  
+	build c++ flags:  -Wuninitialized -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Werror=return-type -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wundef -Wcomma-subscript -Wformat-signedness -Wrestrict -Wno-suggest-override -Wuninitialized -Wno-stringop-overread -Wno-stringop-overflow -Wimplicit-fallthrough=5 -Wundef -Wmissing-declarations  -march=x86-64-v2 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  
+	build link flags: 
+	build system: CMake

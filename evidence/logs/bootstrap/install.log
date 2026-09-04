@@ -1,0 +1,46 @@
+blender: fetching/verifying blender-5.2.1-linux-x64.tar.xz
+godot: fetching/verifying Godot_v4.7.2-stable_linux.x86_64.zip
+templates: fetching/verifying Godot_v4.7.2-stable_export_templates.tpz
+blender: VERIFIED sha256=a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9
+godot: VERIFIED sha256=cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4
+Traceback (most recent call last):
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 206, in <module>
+    main()
+    ~~~~^^
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 188, in main
+    archives = list(workers.map(lambda item: verify_archive(item, cache, args.offline), artifacts))
+  File "/usr/lib64/python3.14/concurrent/futures/_base.py", line 645, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib64/python3.14/concurrent/futures/_base.py", line 312, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib64/python3.14/concurrent/futures/_base.py", line 454, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib64/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/usr/lib64/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 188, in <lambda>
+    archives = list(workers.map(lambda item: verify_archive(item, cache, args.offline), artifacts))
+                                             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 56, in verify_archive
+    fetch(artifact["url"], archive, offline)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/install.py", line 37, in fetch
+    subprocess.run(
+    ~~~~~~~~~~~~~~^
+        ["curl", "--fail", "--location", "--silent", "--show-error", "--retry", "3",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        check=True,
+        ^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib64/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['curl', '--fail', '--location', '--silent', '--show-error', '--retry', '3', '--connect-timeout', '20', '--max-time', '1800', '--proto', '=https', '--proto-redir', '=https', '--output', '/home/marius/.local/share/nullspace/toolchains/downloads/Godot_v4.7.2-stable_export_templates.tpz.download', 'https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz']' died with <Signals.SIGTERM: 15>.

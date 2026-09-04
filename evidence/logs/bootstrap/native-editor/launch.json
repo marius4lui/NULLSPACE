@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+    "--path",
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/diagnostic",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--resolution",
+    "1920x1080",
+    "--windowed",
+    "--disable-vsync",
+    "--max-fps",
+    "60",
+    "--",
+    "--output-dir",
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/evidence/logs/bootstrap/native-editor"
+  ],
+  "cwd": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain",
+  "height": 1080,
+  "icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+  "method": "adaptive_native",
+  "startup_timeout": 60.0,
+  "width": 1920
+}
