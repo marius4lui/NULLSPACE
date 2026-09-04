@@ -23,7 +23,7 @@
   "source_reproduction": "Pinned recipes reproduce material and mesh exports. Blender master byte identity is not asserted; editable sources are retained.",
   "runtime_reproduction": "Explicit glTF/binary/PNG files plus intentional Godot .import and .uid metadata are retained; engine .godot cache is excluded.",
   "licensing": "Original project content; distribution license is the repository owner's decision. Listed software dependencies are authoring tooling, not third-party art.",
-  "base_commit": "9f438b2c566bf2304d5b89403c8377ba107c8962",
+  "base_commit": "e01fdb0a9294659f312bc887f559c934354892f3",
   "files": [
     {
       "path": "tools/art/environment/.gitignore",
@@ -32,8 +32,8 @@
     },
     {
       "path": "tools/art/environment/README.md",
-      "bytes": 8057,
-      "sha256": "dba4a75cbfac406b27d9eca5cfaca55e82e03fdd3f83a566a14849d4f84c6d87"
+      "bytes": 9406,
+      "sha256": "c832095525f8e49d606cfa3e35280398cbcf9bbd72ee934e42166150aeca82e8"
     },
     {
       "path": "tools/art/environment/analyze_native_run.py",
@@ -77,8 +77,8 @@
     },
     {
       "path": "tools/art/environment/preview/preview.gd",
-      "bytes": 10799,
-      "sha256": "17e9be9f8d567ad6860e73063d6ead79341006b4694874feab6ad4bd45b7c129"
+      "bytes": 12277,
+      "sha256": "15c758d89d5556f60fa8866200a23c14142281746ad36b6c89d58785543458cb"
     },
     {
       "path": "tools/art/environment/preview/preview.gd.uid",
@@ -91,9 +91,29 @@
       "sha256": "b209395dfe28ed1851c4bc88f1620a0a84f0d99774e1e75c257a257236172de4"
     },
     {
+      "path": "tools/art/environment/preview/preview_render_diagnostics.gd",
+      "bytes": 4623,
+      "sha256": "092e5c23ccef1a001c120ace500b5d04ceedbece5f52639c859901619b0c4f02"
+    },
+    {
+      "path": "tools/art/environment/preview/preview_render_diagnostics.gd.uid",
+      "bytes": 20,
+      "sha256": "9f9effe0b88ced412ecfa1a6ac5ca03a2b009966b58ea7d8035dfa2f965efddd"
+    },
+    {
       "path": "tools/art/environment/preview/project.godot",
       "bytes": 813,
       "sha256": "14bed877be24300546d8ce525a8b81ee7f49f7f3399fdc3df44650c954554c1b"
+    },
+    {
+      "path": "tools/art/environment/preview/verify_preview_diagnostics.gd",
+      "bytes": 3653,
+      "sha256": "57af8bbb7c84fcb096a5f5ff578f7b5ab78642637940bf97deb8d697b996fa15"
+    },
+    {
+      "path": "tools/art/environment/preview/verify_preview_diagnostics.gd.uid",
+      "bytes": 20,
+      "sha256": "6f2f58016bb6bee59ff452a995d428437078f0d763b0ad6c53d4c40e302f8c0e"
     },
     {
       "path": "tools/art/environment/preview/verify_texture_imports.gd",
