@@ -1,0 +1,12 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "max"
+
+[features]
+goals = true
+multi_agent = true
+
+[agents]
+default_subagent_model = "gpt-6-astra"
+default_subagent_reasoning_effort = "max"
+# Current collaboration runtime provides four total slots including the root.
+max_concurrent_threads_per_session = 3

@@ -1,0 +1,11 @@
+.godot/
+*.blend1
+*.blend2
+__pycache__/
+.venv/
+/build/windows/*
+!/build/windows/.gitkeep
+/build/linux/*
+!/build/linux/.gitkeep
+/tools/local/
+*.tmp
