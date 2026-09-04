@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SCRIPT ERROR: Parse Error: Identifier "CoreStorageHardeningTests" not declared in the current scope.
+   at: GDScript::reload (res://tests/core/run_core_tests.gd:25)
+ERROR: Failed to load script "res://tests/core/run_core_tests.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
