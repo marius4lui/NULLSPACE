@@ -48,11 +48,10 @@ func arrive(participant_id: StringName, load_generation: int, result: StorageRes
 		return StorageResult.failure(&"restore_duplicate", "Participant already acknowledged this load.")
 	if result == null or not result.ok:
 		var detail: String = "Missing participant result." if result == null else result.message
-		_finish(State.FAILED, StorageResult.failure(&"restore_participant", "%s: %s" % [participant_id, detail]))
-		return outcome()
+		return _finish(State.FAILED, StorageResult.failure(&"restore_participant", "%s: %s" % [participant_id, detail]))
 	_pending.erase(participant_id)
 	if _pending.is_empty():
-		_finish(State.SUCCEEDED, StorageResult.success({}))
+		return _finish(State.SUCCEEDED, StorageResult.success({}))
 	return StorageResult.success({})
 
 func cancel(load_generation: int, detail: String = "Coordinator cancelled or timed out restoration.") -> bool:
@@ -72,7 +71,11 @@ func outcome() -> StorageResult:
 		return StorageResult.failure(&"restore_incomplete", "Restoration has not completed.")
 	return StorageResult.success(_result.payload) if _result.ok else StorageResult.failure(_result.code, _result.message)
 
-func _finish(next: State, result: StorageResult) -> void:
+func _finish(next: State, result: StorageResult) -> StorageResult:
 	_state = next
 	_result = result
+	# A synchronous subscriber may begin/finish the next generation or mutate its
+	# signal receipt. Preserve this call's detached result before crossing that boundary.
+	var receipt: StorageResult = outcome()
 	completed.emit(_generation, outcome())
+	return receipt

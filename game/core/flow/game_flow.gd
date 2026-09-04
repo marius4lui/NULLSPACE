@@ -32,7 +32,9 @@ func continue_game() -> StorageResult:
 	return _finish_request(result, return_state)
 
 func complete_load(generation: int) -> bool:
-	if state != State.LOADING or generation != pending_generation:
+	# LOADING is announced before synchronous storage work has issued a generation.
+	# Only load_started supplies a real acknowledgement token; -1 is never readiness.
+	if state != State.LOADING or generation < 1 or generation != pending_generation:
 		return false
 	pending_generation = -1
 	# Focus can be lost during asynchronous world staging. Keep a ready world paused
@@ -42,7 +44,7 @@ func complete_load(generation: int) -> bool:
 	return true
 
 func fail_load(generation: int, detail: String) -> bool:
-	if state != State.LOADING or generation != pending_generation:
+	if state != State.LOADING or generation < 1 or generation != pending_generation:
 		return false
 	pending_generation = -1
 	_transition(State.MENU, &"load_failed")

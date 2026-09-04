@@ -61,7 +61,53 @@ func run(check: Callable) -> void:
 	barrier.arrive(&"player", 5, StorageResult.success({}))
 	check.call(_completed.size() == 5, "Each accepted barrier completes at most once across success failure and cancel")
 	check.call(GameFlow.state == flow_before and InputGate.generation == input_before, "Pure restore barrier never changes GameFlow or input")
+	_test_reentrant_completion(check)
 	_test_participants(check)
+
+func _test_reentrant_completion(check: Callable) -> void:
+	var barrier: RestoreBarrier = RestoreBarrier.new()
+	var events: Array[Dictionary] = []
+	var retry: Callable = func(generation: int, result: StorageResult) -> void:
+		events.append({"generation": generation, "ok": result.ok, "code": result.code})
+		if generation == 1:
+			barrier.begin(2, [&"player"])
+			barrier.arrive(&"player", 2, StorageResult.success({}))
+		elif generation == 3:
+			barrier.begin(4, [&"player"])
+			barrier.arrive(&"player", 4, StorageResult.failure(&"anchor", "Retry anchor failed"))
+		elif generation == 5:
+			barrier.begin(6, [&"player"])
+		# Subscribers own their receipt, not the originating caller's result.
+		result.ok = not result.ok
+		result.message = "Observer mutation"
+	barrier.completed.connect(retry)
+	barrier.begin(1, [&"player"])
+	var failed: StorageResult = barrier.arrive(&"player", 1, StorageResult.failure(&"anchor", "First anchor failed"))
+	check.call(not failed.ok and failed.code == &"restore_participant" and failed.message == "player: First anchor failed",
+		"Failed arrival retains its own detached failure across synchronous successful retry")
+	check.call(barrier.generation == 2 and barrier.outcome().ok and events.size() == 2
+		and events[0]["ok"] == false and events[1]["ok"] == true,
+		"Synchronous retry emits exactly the separate failed and successful generation outcomes")
+	barrier.begin(3, [&"player"])
+	var succeeded: StorageResult = barrier.arrive(&"player", 3, StorageResult.success({}))
+	check.call(succeeded.ok and succeeded.code == &"ok" and barrier.generation == 4 and not barrier.outcome().ok,
+		"Successful arrival cannot inherit a synchronously failed replacement result")
+	check.call(events.size() == 4 and events[2]["generation"] == 3 and events[3]["generation"] == 4,
+		"Reentrant success and failure each emit only their originating generation")
+	barrier.begin(5, [&"player"])
+	check.call(barrier.cancel(5) and barrier.generation == 6 and barrier.state == RestoreBarrier.State.PENDING,
+		"Cancellation receipt survives a synchronously started replacement")
+	check.call(events.size() == 5 and events[-1]["code"] == &"restore_cancelled"
+		and not barrier.cancel(5) and not barrier.arrive(&"player", 5, null).ok,
+		"Old cancellation and completion cannot affect the replacement barrier")
+	var terminal: StorageResult = barrier.arrive(&"player", 6, StorageResult.failure(&"anchor", "Final anchor failed"))
+	check.call(not terminal.ok and terminal.message == "player: Final anchor failed",
+		"Observer mutation cannot alter the terminal caller receipt")
+	terminal.ok = true
+	terminal.message = "Caller mutation"
+	check.call(not barrier.outcome().ok and barrier.outcome().message == "player: Final anchor failed" and events.size() == 6,
+		"Caller receipt mutation cannot alter the barrier's stored outcome")
+	barrier.completed.disconnect(retry)
 
 func _test_participants(check: Callable) -> void:
 	var own_anchor: Transform3D = Transform3D(Basis.IDENTITY, Vector3(12.0, 0.0, 4.0))

@@ -14,6 +14,7 @@ func run(owner: Node, check: Callable, directory: String) -> void:
 	InputGate.focused = true
 	GameFlow.return_to_menu()
 	GameFlow.load_started.connect(_observe_load)
+	_test_early_load_callbacks(directory)
 	await _assert_frozen("MENU")
 	GameFlow.open_settings()
 	await _assert_frozen("title SETTINGS")
@@ -111,6 +112,42 @@ func run(owner: Node, check: Callable, directory: String) -> void:
 	_check.call(SnapshotSchema.VERSION == 1 and not final_snapshot.has("simulation_epoch"), "Runtime epoch does not alter save schema v1")
 	GameFlow.return_to_menu()
 	GameFlow.load_started.disconnect(_observe_load)
+
+func _test_early_load_callbacks(directory: String) -> void:
+	for request_kind: String in ["new", "continue"]:
+		for callback_kind: String in ["complete", "fail"]:
+			var label: String = "%s/%s" % [request_kind, callback_kind]
+			SaveSystem.storage_directory = directory.path_join("early_load_" + request_kind + "_" + callback_kind)
+			_check.call(CheckpointSystem.commit_snapshot(SnapshotSchema.initial_snapshot()).ok,
+				"Early callback isolated checkpoint prepared: " + label)
+			GameFlow.return_to_menu()
+			var before: SimulationStamp = SimulationClock.sample()
+			var load_count: int = _load_stamps.size()
+			var receipts: Array[bool] = []
+			var observed_pending: Array[int] = []
+			var callback: Callable = func(_previous: NullGameFlow.State, current: NullGameFlow.State, _reason: StringName) -> void:
+				if current != NullGameFlow.State.LOADING:
+					return
+				observed_pending.append(GameFlow.pending_generation)
+				for generation: int in [-1, 0, -33, CheckpointSystem.runtime_generation + 1]:
+					receipts.append(GameFlow.complete_load(generation) if callback_kind == "complete"
+						else GameFlow.fail_load(generation, "Premature synthetic failure"))
+			GameFlow.state_changed.connect(callback)
+			var requested: StorageResult = GameFlow.begin_new_game() if request_kind == "new" else GameFlow.continue_game()
+			GameFlow.state_changed.disconnect(callback)
+			_check.call(observed_pending == [-1] and receipts == [false, false, false, false],
+				"Early LOADING callbacks reject sentinel zero negative and unissued generation: " + label)
+			_check.call(requested.ok and GameFlow.state == NullGameFlow.State.LOADING and _owner.get_tree().paused
+				and not InputGate.gameplay_enabled and GameFlow.pending_generation > 0,
+				"Premature callback cannot bypass or fail a valid paused load: " + label)
+			_check.call(_load_stamps.size() == load_count + 1 and SimulationClock.sample().epoch == before.epoch + 1,
+				"Rejected early callback preserves the one staged epoch and load notification: " + label)
+			var generation: int = GameFlow.pending_generation
+			var acknowledged: bool = GameFlow.complete_load(generation) if callback_kind == "complete" else GameFlow.fail_load(generation, "Expected staged failure")
+			_check.call(acknowledged and not GameFlow.complete_load(generation) and not GameFlow.fail_load(generation, "Duplicate"),
+				"Issued positive generation can be resolved exactly once: " + label)
+	GameFlow.return_to_menu()
+	SaveSystem.storage_directory = directory.path_join("clock")
 
 func _observe_load(_snapshot: Dictionary, generation: int) -> void:
 	_load_stamps.append(SimulationClock.sample())
