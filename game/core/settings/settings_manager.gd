@@ -52,15 +52,18 @@ func _store() -> AtomicJsonStore:
 
 func _apply_runtime() -> void:
 	if DisplayServer.get_name() != "headless":
+		var window: Window = get_window()
 		var fullscreen: bool = _values["display_mode"] == "fullscreen"
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if fullscreen else DisplayServer.WINDOW_MODE_WINDOWED)
+		window.mode = Window.MODE_FULLSCREEN if fullscreen else Window.MODE_WINDOWED
 		if not fullscreen:
 			var desired: Vector2i = Vector2i(int(_values["resolution"][0]), int(_values["resolution"][1]))
 			var usable: Rect2i = DisplayServer.screen_get_usable_rect()
 			# Preserve requested resolution, but do not strand the window outside the screen.
 			desired = desired.min(usable.size)
-			DisplayServer.window_set_size(desired)
-			DisplayServer.window_set_position(usable.position + (usable.size - desired) / 2)
+			# Window owns the viewport geometry. Bypassing it through DisplayServer
+			# resized only the native surface and left the rendered image cropped.
+			window.size = desired
+			window.position = usable.position + (usable.size - desired) / 2
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if _values["vsync"] else DisplayServer.VSYNC_DISABLED)
 	_set_bus("Master", float(_values["master_volume"]))
 	_set_bus("Ambience", float(_values["ambience_volume"]))
