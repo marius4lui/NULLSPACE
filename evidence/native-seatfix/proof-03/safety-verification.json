@@ -1,0 +1,268 @@
+{
+  "checks": {
+    "capture_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.25993071099946974,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1226,
+          "keycode": 65,
+          "monotonic_usec": 22466581,
+          "physical_keycode": 65,
+          "physics_frame": 1256,
+          "pressed": true,
+          "utc_unix": 1788558733.29541
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1241,
+          "keycode": 65,
+          "monotonic_usec": 22716551,
+          "physical_keycode": 65,
+          "physics_frame": 1271,
+          "pressed": false,
+          "utc_unix": 1788558733.54538
+        },
+        "release_since_request_seconds": 0.25794076919555664
+      },
+      "passed": false
+    },
+    "drip_ipc_cannot_extend_deadline": {
+      "observation": "{\"ok\": false, \"error\": \"Incomplete command exceeded 500 ms total deadline\"}\n",
+      "passed": true
+    },
+    "drip_ipc_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.35797341499983304,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1196,
+          "keycode": 68,
+          "monotonic_usec": 21966586,
+          "physical_keycode": 68,
+          "physics_frame": 1226,
+          "pressed": true,
+          "utc_unix": 1788558732.79541
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1209,
+          "keycode": 68,
+          "monotonic_usec": 22183248,
+          "physical_keycode": 68,
+          "physics_frame": 1239,
+          "pressed": false,
+          "utc_unix": 1788558733.01207
+        },
+        "release_since_request_seconds": 0.23176980018615723
+      },
+      "passed": true
+    },
+    "inputless_private_seat": {
+      "observation": {
+        "audits": 429,
+        "devices": [
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 2,
+            "name": "Virtual core pointer",
+            "role": "master",
+            "use": 1,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 3,
+            "name": "Virtual core keyboard",
+            "role": "master",
+            "use": 2,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 4,
+            "name": "Virtual core XTEST pointer",
+            "role": "xtest",
+            "use": 3,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 5,
+            "name": "Virtual core XTEST keyboard",
+            "role": "xtest",
+            "use": 4,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 6,
+            "name": "xwayland-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 7,
+            "name": "xwayland-relative-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 8,
+            "name": "xwayland-pointer-gestures:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 9,
+            "name": "xwayland-keyboard:16",
+            "role": "inputless_protocol",
+            "use": 4,
+            "xtest_property": null
+          }
+        ],
+        "policy": "xtest_only_inputless_compositor",
+        "raw_counts": {
+          "button_press": 16,
+          "button_release": 16,
+          "key_press": 54,
+          "key_release": 54,
+          "motion": 12
+        }
+      },
+      "passed": true
+    },
+    "partial_ipc_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.2083953700002894,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1165,
+          "keycode": 87,
+          "monotonic_usec": 21449941,
+          "physical_keycode": 87,
+          "physics_frame": 1195,
+          "pressed": true,
+          "utc_unix": 1788558732.27876
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1177,
+          "keycode": 87,
+          "monotonic_usec": 21649923,
+          "physical_keycode": 87,
+          "physics_frame": 1207,
+          "pressed": false,
+          "utc_unix": 1788558732.47874
+        },
+        "release_since_request_seconds": 0.2058098316192627
+      },
+      "passed": true
+    },
+    "partial_ipc_total_deadline": {
+      "observation": "{\"ok\": false, \"error\": \"Incomplete command exceeded 500 ms total deadline\"}\n",
+      "passed": true
+    },
+    "quiet_idle_has_no_unrequested_controls": {
+      "observation": {
+        "after": {
+          "audio_skips": 142,
+          "captured": true,
+          "event": "state",
+          "focused": true,
+          "fps": 60.0,
+          "frame": 1159,
+          "keys": {
+            "a": false,
+            "d": false,
+            "s": false,
+            "shift": false,
+            "w": false
+          },
+          "mode": "playing",
+          "monotonic_usec": 21349945,
+          "mouse_total": [
+            95.0,
+            -20.0
+          ],
+          "physics_frame": 1190,
+          "pitch": 0.06,
+          "position": [
+            2.46683359146118,
+            1.79999995231628,
+            5.07974624633789
+          ],
+          "shots": 6,
+          "utc_unix": 1788558732.17876,
+          "yaw": -0.285
+        },
+        "before": {
+          "audio_skips": 142,
+          "captured": true,
+          "event": "state",
+          "focused": true,
+          "fps": 57.0,
+          "frame": 1040,
+          "keys": {
+            "a": false,
+            "d": false,
+            "s": false,
+            "shift": false,
+            "w": false
+          },
+          "mode": "playing",
+          "monotonic_usec": 19366698,
+          "mouse_total": [
+            95.0,
+            -20.0
+          ],
+          "physics_frame": 1071,
+          "pitch": 0.06,
+          "position": [
+            2.46683359146118,
+            1.79999995231628,
+            5.07974624633789
+          ],
+          "shots": 6,
+          "utc_unix": 1788558730.1955,
+          "yaw": -0.285
+        }
+      },
+      "passed": true
+    }
+  },
+  "ended_utc": "2026-09-04T21:52:13.547+00:00",
+  "error": "capture_does_not_starve_native_lease",
+  "experiential_review": "unverified",
+  "method": "scripted_native_fault_diagnostic",
+  "started_utc": "2026-09-04T21:52:10.098+00:00",
+  "status": "FAIL"
+}

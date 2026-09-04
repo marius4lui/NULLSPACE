@@ -1,0 +1,1225 @@
+{
+  "checks": {
+    "all_raw_input_from_verified_xtest_devices": {
+      "observation": {
+        "event_count": 176,
+        "source_ids": [
+          4,
+          5
+        ]
+      },
+      "passed": true
+    },
+    "capture_burst_completed_after_release": {
+      "observation": {
+        "captures": [
+          {
+            "acquired_monotonic": 7704.181316419,
+            "acquired_utc": "2026-09-04T21:59:15.979+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-during-capture.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "b79721bb5797426484c2722ed4d1f46e6a95382501cf48c48fbf3a1697a7a2d9",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [
+                "a"
+              ],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 15.094344999852183
+          },
+          {
+            "acquired_monotonic": 7704.240130182,
+            "acquired_utc": "2026-09-04T21:59:16.038+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-01.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "b43463b4356a7ca019c733efdebed107aa50908377b2c07905a5485c9c7a6309",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [
+                "a"
+              ],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 24.43072400001256
+          },
+          {
+            "acquired_monotonic": 7704.308888087,
+            "acquired_utc": "2026-09-04T21:59:16.106+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-02.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "966a1358841f0fef17eaa1a9b4c41ce259713a8cc3842cb32419de432f8d5e13",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [
+                "a"
+              ],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 24.245155000244267
+          },
+          {
+            "acquired_monotonic": 7704.377659123,
+            "acquired_utc": "2026-09-04T21:59:16.175+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-03.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "5546f43611ab9d007c6c92ae3282b060a919e8c28a55c47eac80b6a9afdbf353",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [
+                "a"
+              ],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 19.561006000003545
+          },
+          {
+            "acquired_monotonic": 7704.442433812,
+            "acquired_utc": "2026-09-04T21:59:16.240+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-04.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 21.60478600035276
+          },
+          {
+            "acquired_monotonic": 7704.507850417,
+            "acquired_utc": "2026-09-04T21:59:16.305+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-05.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 23.90991400079656
+          },
+          {
+            "acquired_monotonic": 7704.575110565,
+            "acquired_utc": "2026-09-04T21:59:16.373+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-06.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 27.29793900016375
+          },
+          {
+            "acquired_monotonic": 7704.646295752,
+            "acquired_utc": "2026-09-04T21:59:16.444+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-07.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 27.522061000126996
+          },
+          {
+            "acquired_monotonic": 7704.721943269,
+            "acquired_utc": "2026-09-04T21:59:16.519+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-08.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 23.937292000482557
+          },
+          {
+            "acquired_monotonic": 7704.791417262,
+            "acquired_utc": "2026-09-04T21:59:16.589+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-09.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 20.8581779997985
+          },
+          {
+            "acquired_monotonic": 7704.855930603,
+            "acquired_utc": "2026-09-04T21:59:16.653+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-10.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 36.06671499983349
+          },
+          {
+            "acquired_monotonic": 7704.934653604,
+            "acquired_utc": "2026-09-04T21:59:16.732+00:00",
+            "composite": {
+              "method": "composite_redirect_automatic_owned_window",
+              "scope": "verified game window only; no root/subwindow-list redirection",
+              "version": [
+                0,
+                4
+              ],
+              "window_id": 6291458
+            },
+            "method": "composite_named_pixmap_getimage",
+            "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/06-lease-burst-11.png",
+            "pixel_layout": "32-bit little-endian BGRX, RGB output",
+            "sha256": "46605bb5d5f571e61b9af8d275b390b56aaee117b09113e8d7206e5c314c094f",
+            "window": {
+              "focus_window_id": 6291458,
+              "focused": true,
+              "height": 1080,
+              "held_buttons": [],
+              "held_keys": [],
+              "pointer": [
+                960,
+                540
+              ],
+              "title": "NULLSPACE Native QA Fixture (DEBUG)",
+              "width": 1920,
+              "window_id": 6291458,
+              "window_pid": 99733
+            },
+            "x_readback_ms": 21.999670999321097
+          }
+        ],
+        "ended_monotonic": 7704.996924954,
+        "started_monotonic": 7704.176240598
+      },
+      "passed": true
+    },
+    "capture_burst_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.24695606400018733,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1227,
+          "keycode": 65,
+          "monotonic_usec": 23035292,
+          "physical_keycode": 65,
+          "physics_frame": 1264,
+          "pressed": true,
+          "utc_unix": 1788559155.98365
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1240,
+          "keycode": 65,
+          "monotonic_usec": 23251951,
+          "physical_keycode": 65,
+          "physics_frame": 1277,
+          "pressed": false,
+          "utc_unix": 1788559156.20031
+        },
+        "release_since_request_seconds": 0.2328188419342041
+      },
+      "passed": true
+    },
+    "drip_ipc_cannot_extend_deadline": {
+      "observation": "{\"ok\": false, \"error\": \"Incomplete command exceeded 500 ms total deadline\"}\n",
+      "passed": true
+    },
+    "drip_ipc_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.3577633300001253,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1196,
+          "keycode": 68,
+          "monotonic_usec": 22518632,
+          "physical_keycode": 68,
+          "physics_frame": 1233,
+          "pressed": true,
+          "utc_unix": 1788559155.46699
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1210,
+          "keycode": 68,
+          "monotonic_usec": 22751938,
+          "physical_keycode": 68,
+          "physics_frame": 1247,
+          "pressed": false,
+          "utc_unix": 1788559155.7003
+        },
+        "release_since_request_seconds": 0.23918652534484863
+      },
+      "passed": true
+    },
+    "inputless_private_seat": {
+      "observation": {
+        "audits": 429,
+        "devices": [
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 2,
+            "name": "Virtual core pointer",
+            "role": "master",
+            "use": 1,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 3,
+            "name": "Virtual core keyboard",
+            "role": "master",
+            "use": 2,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 4,
+            "name": "Virtual core XTEST pointer",
+            "role": "xtest",
+            "use": 3,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 5,
+            "name": "Virtual core XTEST keyboard",
+            "role": "xtest",
+            "use": 4,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 6,
+            "name": "xwayland-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 7,
+            "name": "xwayland-relative-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 8,
+            "name": "xwayland-pointer-gestures:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 9,
+            "name": "xwayland-keyboard:16",
+            "role": "inputless_protocol",
+            "use": 4,
+            "xtest_property": null
+          }
+        ],
+        "policy": "xtest_only_inputless_compositor",
+        "raw_counts": {
+          "button_press": 16,
+          "button_release": 16,
+          "key_press": 54,
+          "key_release": 54,
+          "motion": 12
+        }
+      },
+      "passed": true
+    },
+    "long_hold_cannot_extend_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.25476318699929834,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1277,
+          "keycode": 83,
+          "monotonic_usec": 23868583,
+          "physical_keycode": 83,
+          "physics_frame": 1314,
+          "pressed": true,
+          "utc_unix": 1788559156.81695
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1290,
+          "keycode": 83,
+          "monotonic_usec": 24085228,
+          "physical_keycode": 83,
+          "physics_frame": 1327,
+          "pressed": false,
+          "utc_unix": 1788559157.0336
+        },
+        "release_since_request_seconds": 0.23863530158996582
+      },
+      "passed": true
+    },
+    "long_hold_returns_released": {
+      "observation": {
+        "ended_monotonic": 7705.905015808,
+        "result": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99733
+        }
+      },
+      "passed": true
+    },
+    "no_seat_drift_or_guard_error": {
+      "observation": {
+        "audits": 541,
+        "devices": [
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 2,
+            "name": "Virtual core pointer",
+            "role": "master",
+            "use": 1,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 3,
+            "name": "Virtual core keyboard",
+            "role": "master",
+            "use": 2,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 4,
+            "name": "Virtual core XTEST pointer",
+            "role": "xtest",
+            "use": 3,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 5,
+            "name": "Virtual core XTEST keyboard",
+            "role": "xtest",
+            "use": 4,
+            "xtest_property": 1
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 6,
+            "name": "xwayland-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 7,
+            "name": "xwayland-relative-pointer:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 2,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 8,
+            "name": "xwayland-pointer-gestures:16",
+            "role": "inputless_protocol",
+            "use": 3,
+            "xtest_property": null
+          },
+          {
+            "attachment": 3,
+            "device_enabled": 1,
+            "enabled": true,
+            "id": 9,
+            "name": "xwayland-keyboard:16",
+            "role": "inputless_protocol",
+            "use": 4,
+            "xtest_property": null
+          }
+        ],
+        "policy": "xtest_only_inputless_compositor",
+        "raw_counts": {
+          "button_press": 16,
+          "button_release": 16,
+          "key_press": 66,
+          "key_release": 66,
+          "motion": 12
+        }
+      },
+      "passed": true
+    },
+    "owned_cleanup_after_fault_tests": {
+      "observation": {
+        "audio": {
+          "channel_map": "front-left,front-right",
+          "monitor": "nullspace_qa_7b6b6867f2fd36fe.monitor",
+          "owner_module": 536870918,
+          "sample_specification": "float32le 2ch 48000Hz",
+          "sink_index": 1306,
+          "sink_name": "nullspace_qa_7b6b6867f2fd36fe",
+          "stream_ids": [],
+          "stream_pids": []
+        },
+        "authority": "/run/user/1000/nullspace-qa-za9pn3eb/Xauthority",
+        "capture": {
+          "method": "composite_redirect_automatic_owned_window",
+          "scope": "verified game window only; no root/subwindow-list redirection",
+          "version": [
+            0,
+            4
+          ],
+          "window_id": 6291458
+        },
+        "cleanup_errors": [],
+        "command": [
+          "/home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+          "--path",
+          "tools/qa/fixtures/input_render_audio",
+          "--display-driver",
+          "x11",
+          "--rendering-method",
+          "forward_plus",
+          "--rendering-driver",
+          "vulkan",
+          "--audio-driver",
+          "PulseAudio",
+          "--resolution",
+          "1920x1080",
+          "--windowed",
+          "--disable-vsync",
+          "--max-fps",
+          "60"
+        ],
+        "compositor": {
+          "backend": "weston_headless_gl_fake_seat",
+          "command": [
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+            "--backend=headless",
+            "--renderer=gl",
+            "--fake-seat",
+            "--no-config",
+            "--socket=wayland-private",
+            "--width=1920",
+            "--height=1080",
+            "--refresh-rate=60000",
+            "--idle-time=0",
+            "--shell=kiosk-shell.so"
+          ],
+          "device_descriptors": [
+            "/dev/dri/renderD128",
+            "/dev/null"
+          ],
+          "executable": "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+          "executable_sha256": "b9f15748a1612c321896f3f2d24f6ea2417db7bedeb68a303cef28d007615747",
+          "host_parent_display": null,
+          "meaning": "Headless backend has no physical input/output or parent compositor; fake seat is protocol compatibility only.",
+          "module_hashes": {
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/color-lcms.so": "5dc15cc9d7abae94fbf3dcd2e136b365e46d559de3fff3a585ed1679bd73ad67",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/drm-backend.so": "4564e174102baf0126c5f51f3a59d02f67e3dc859151692e982580c8d01a6957",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/gl-renderer.so": "34850394518bf8e085fdf6d59b5efac5cc6182a2070d0592b42332d7565f1ccb",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/headless-backend.so": "1aa3669519b4953819afd7e1e64de87e8750650fed6d906971dbc3a1a65ed077",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/pipewire-backend.so": "92967b5edacf90da279b94b1f747e1455d6f76c06adb14efda0f0d1c1e2627e0",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/rdp-backend.so": "9359842032dc1c4f1ac38ac60a8517839da10bc00e14c2000c9a72b7f0b1ca8b",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/vnc-backend.so": "c5622e6a30b4f9ee6d05a48278b44f2954689bd0fdcd958e2ad1047dbb89930e",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/vulkan-renderer.so": "df97025db075ab8460b6eae06a7ca048640e10019af425d0f5d1a74fe3ebcba5",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/wayland-backend.so": "0192a67861ae3b530521a19e091661d8508d61df5ab088629717c96a1bc4cdfb",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/x11-backend.so": "411af33fdcbe1dc1b1da3a273097b6be46d8e4eb976607d28591500f24ed770b",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/xwayland.so": "367a1c1df16e84f0a47d6a6a022d87cd99c867a951b9ed0b45953899885f55c5",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/desktop-shell.so": "c96518fcc3555dc80e93c68c63189003221a2a719a92ecf37223e1d945ed8836",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/hmi-controller.so": "e512ff676afbb75f639148cb223764ede2a04e868ab22d8ef5fd5f065f094072",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/ivi-shell.so": "902ad87382db192d2d8427e538f990a0294fa9554fb346db1979c7b0ac85141a",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/kiosk-shell.so": "a73ced8ea7ecf7532b6a6616a216afb9a3110be4304f7d29a56f03c2faf9a859",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/libexec_weston.so": "dc4d58b305f7a25071d44eec14ae619d619e33f53b8a9a6d9b663a81cb538687",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/lua-shell.so": "fa6a7329b656ca2eb3cd312deb66602b472f6b4cb5bf2e460879e029b4b374b8",
+            "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/systemd-notify.so": "596d819b7fabc63b88cd0f6799d28ab4d025c47effcce475e75ada8ac07bd53c"
+          },
+          "runtime": "/run/user/1000/nullspace-qa-za9pn3eb/wayland-runtime",
+          "socket": "/run/user/1000/nullspace-qa-za9pn3eb/wayland-runtime/wayland-private",
+          "socket_peer": {
+            "gid": 1000,
+            "pid": 99697,
+            "uid": 1000
+          },
+          "version": "weston 15.0.1"
+        },
+        "control_socket": "/run/user/1000/nullspace-qa-za9pn3eb/control.sock",
+        "controlled_provenance_valid": true,
+        "defaults_after": {
+          "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+          "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+        },
+        "defaults_before": {
+          "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+          "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+        },
+        "display": ":2",
+        "ended_utc": "2026-09-04T21:59:18.143+00:00",
+        "executable_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
+        "experiential_review": "unverified",
+        "game_git": {
+          "clean": true,
+          "commit": "bb6fb09791c0ec65d5193f9dc045da7b8d16fecf",
+          "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+        },
+        "game_project": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/tools/qa/fixtures/input_render_audio",
+        "game_source_hashes": {
+          "fixture.gd": "f700705f4d4982b559d9a1dd23ad524883370db9c9b0d8ca89377c47e2e61687",
+          "fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+          "project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863"
+        },
+        "gpu_icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+        "harness_git": {
+          "clean": true,
+          "commit": "bb6fb09791c0ec65d5193f9dc045da7b8d16fecf",
+          "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+        },
+        "harness_source_hashes": {
+          "analyze_fixture_media.py": "90c010791bca2736ba981c9c975bd46ea188d1e9580d0afc08663dd6edf5d2b7",
+          "fixtures/input_render_audio/fixture.gd": "f700705f4d4982b559d9a1dd23ad524883370db9c9b0d8ca89377c47e2e61687",
+          "fixtures/input_render_audio/fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+          "fixtures/input_render_audio/project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863",
+          "headless_backend.py": "7beea28b470dba1f1c61a26c776068a7306b43fe77529381086f74e5fbcf39b4",
+          "manifest.py": "719e633dca86e65a3aa54306b552066c35a06bc0842c81861bebd84d43e5f34c",
+          "media_capture.py": "2df134d6835beaa758fe4f6a4b677365bd27dc573be759963eba48ebe958d188",
+          "native.py": "9d9316c9c5f69336fe759992f234232a53934f12f87b5168436a458a2b174b6a",
+          "native_session.py": "16589f72042f758787ca8edbef11317fb84bc5820499c49baa8125e3b698d6c3",
+          "private_seat.py": "5d6141ae05b9a438363f11f6d31d38987b41c3d85222b6134e6da22740b1460d",
+          "prove_fixture.py": "1edb665831c5ebc0d1a4a4ef1f73b799fc08e6ba207324b57e4eccf3d7626a97",
+          "prove_freshness.py": "116a7a4a0f65147c42c049d0bd5c8dc6010cfb6759796f80be57b091d3181b67",
+          "prove_safety.py": "15cb0d864441b10996490fa50547546ec163aa9943c80a0b8097ec3120e1b6ef",
+          "qa_common.py": "a528e789415f61ce916f0ca8854e3706b44e5dae52bb2cd3887100a5a894df35",
+          "recover_session.py": "28c02e4a2fa6e0cd7b1f4216d3af0d9f577a7a2d26380a87c60138df5200f633",
+          "tests/test_freshness.py": "02d96f00ab7a5ce5b81e79e7ec1bfac55631b82092e62d1fef4e404ec1525c39",
+          "tests/test_safety.py": "770294914f829d19d85744e39f8094df1f660abe3446c88f4b7b86c3c3153003",
+          "window_capture.py": "50c864519b2d0959550a9cfd6899e8487261b6f8c9b3c048028da273d88dfd48",
+          "x11_input.py": "0ba00c90ba64a8485efd1ffe5a1b06268a2365b25fdfe3db6df915e0a595c1db"
+        },
+        "host": {
+          "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+          "os": "Linux 7.1.12-200.fc44.x86_64 x86_64 GNU/Linux",
+          "pipewire": "pipewire\nCompiled with libpipewire 1.6.8\nLinked with libpipewire 1.6.8",
+          "xwayland": "xorg-x11-server-Xwayland-24.1.13-1.fc44.x86_64"
+        },
+        "host_defaults_unchanged": true,
+        "method": "scripted_diagnostic",
+        "monitor": "nullspace_qa_7b6b6867f2fd36fe.monitor",
+        "observed_or_heard": [],
+        "private_seat": {
+          "audits": 541,
+          "devices": [
+            {
+              "attachment": 3,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 2,
+              "name": "Virtual core pointer",
+              "role": "master",
+              "use": 1,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 3,
+              "name": "Virtual core keyboard",
+              "role": "master",
+              "use": 2,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 4,
+              "name": "Virtual core XTEST pointer",
+              "role": "xtest",
+              "use": 3,
+              "xtest_property": 1
+            },
+            {
+              "attachment": 3,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 5,
+              "name": "Virtual core XTEST keyboard",
+              "role": "xtest",
+              "use": 4,
+              "xtest_property": 1
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 6,
+              "name": "xwayland-pointer:16",
+              "role": "inputless_protocol",
+              "use": 3,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 7,
+              "name": "xwayland-relative-pointer:16",
+              "role": "inputless_protocol",
+              "use": 3,
+              "xtest_property": null
+            },
+            {
+              "attachment": 2,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 8,
+              "name": "xwayland-pointer-gestures:16",
+              "role": "inputless_protocol",
+              "use": 3,
+              "xtest_property": null
+            },
+            {
+              "attachment": 3,
+              "device_enabled": 1,
+              "enabled": true,
+              "id": 9,
+              "name": "xwayland-keyboard:16",
+              "role": "inputless_protocol",
+              "use": 4,
+              "xtest_property": null
+            }
+          ],
+          "policy": "xtest_only_inputless_compositor",
+          "raw_counts": {
+            "button_press": 16,
+            "button_release": 16,
+            "key_press": 66,
+            "key_release": 66,
+            "motion": 12
+          }
+        },
+        "processes": {
+          "game": {
+            "exit_code": -15,
+            "pid": 99733,
+            "process_group": 99733,
+            "session": 99733,
+            "start_ticks": 768113
+          },
+          "recording": {
+            "pid": 99886,
+            "process_group": 99886,
+            "session": 99886,
+            "start_ticks": 768355
+          },
+          "weston": {
+            "exit_code": 0,
+            "pid": 99697,
+            "process_group": 99697,
+            "session": 99697,
+            "start_ticks": 768089
+          },
+          "xwayland": {
+            "exit_code": 0,
+            "pid": 99715,
+            "process_group": 99715,
+            "session": 99715,
+            "start_ticks": 768099
+          }
+        },
+        "profile": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06/profile",
+        "ready_utc": "2026-09-04T21:58:53.268+00:00",
+        "run_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-06",
+        "runtime_dir": "/run/user/1000/nullspace-qa-za9pn3eb",
+        "schema": 1,
+        "sink_module": "536870918",
+        "sink_name": "nullspace_qa_7b6b6867f2fd36fe",
+        "started_utc": "2026-09-04T21:58:52.444+00:00",
+        "status": "stopped",
+        "supervisor": {
+          "pid": 99682,
+          "process_group": 99682,
+          "session": 99682,
+          "start_ticks": 768055
+        },
+        "vulkan_device_lines": [
+          "deviceType         = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU",
+          "deviceName         = AMD Radeon 660M (RADV REMBRANDT)",
+          "driverName         = radv",
+          "driverInfo         = Mesa 26.1.8"
+        ],
+        "window": {
+          "focus_window_id": 6291458,
+          "focused": true,
+          "height": 1080,
+          "held_buttons": [],
+          "held_keys": [
+            "w"
+          ],
+          "pointer": [
+            960,
+            540
+          ],
+          "title": "NULLSPACE Native QA Fixture (DEBUG)",
+          "width": 1920,
+          "window_id": 6291458,
+          "window_pid": 99733
+        }
+      },
+      "passed": true
+    },
+    "partial_ipc_does_not_starve_native_lease": {
+      "observation": {
+        "observed_after_seconds": 0.22491972599982546,
+        "press": {
+          "echo": false,
+          "event": "key",
+          "frame": 1166,
+          "keycode": 87,
+          "monotonic_usec": 22018641,
+          "physical_keycode": 87,
+          "physics_frame": 1203,
+          "pressed": true,
+          "utc_unix": 1788559154.96699
+        },
+        "release": {
+          "echo": false,
+          "event": "key",
+          "frame": 1178,
+          "keycode": 87,
+          "monotonic_usec": 22218650,
+          "physical_keycode": 87,
+          "physics_frame": 1215,
+          "pressed": false,
+          "utc_unix": 1788559155.16701
+        },
+        "release_since_request_seconds": 0.2131330966949463
+      },
+      "passed": true
+    },
+    "partial_ipc_total_deadline": {
+      "observation": "{\"ok\": false, \"error\": \"Incomplete command exceeded 500 ms total deadline\"}\n",
+      "passed": true
+    },
+    "private_root_blur_releases_keys": {
+      "observation": {
+        "focus_window_id": 861,
+        "focused": false,
+        "height": 1080,
+        "held_buttons": [],
+        "held_keys": [],
+        "pointer": [
+          960,
+          540
+        ],
+        "title": "NULLSPACE Native QA Fixture (DEBUG)",
+        "width": 1920,
+        "window_id": 6291458,
+        "window_pid": 99733
+      },
+      "passed": true
+    },
+    "quiet_idle_has_no_unrequested_controls": {
+      "observation": {
+        "after": {
+          "audio_skips": 199,
+          "captured": true,
+          "event": "state",
+          "focused": true,
+          "fps": 60.0,
+          "frame": 1159,
+          "keys": {
+            "a": false,
+            "d": false,
+            "s": false,
+            "shift": false,
+            "w": false
+          },
+          "mode": "playing",
+          "monotonic_usec": 21901964,
+          "mouse_total": [
+            95.0,
+            -20.0
+          ],
+          "physics_frame": 1197,
+          "pitch": 0.06,
+          "position": [
+            2.39868116378784,
+            1.79999995231628,
+            5.10141229629517
+          ],
+          "shots": 6,
+          "utc_unix": 1788559154.85032,
+          "yaw": -0.285
+        },
+        "before": {
+          "audio_skips": 199,
+          "captured": true,
+          "event": "state",
+          "focused": true,
+          "fps": 54.0,
+          "frame": 1040,
+          "keys": {
+            "a": false,
+            "d": false,
+            "s": false,
+            "shift": false,
+            "w": false
+          },
+          "mode": "playing",
+          "monotonic_usec": 19918739,
+          "mouse_total": [
+            95.0,
+            -20.0
+          ],
+          "physics_frame": 1078,
+          "pitch": 0.06,
+          "position": [
+            2.39868116378784,
+            1.79999995231628,
+            5.10141229629517
+          ],
+          "shots": 6,
+          "utc_unix": 1788559152.86708,
+          "yaw": -0.285
+        }
+      },
+      "passed": true
+    },
+    "sigterm_interrupts_ten_second_hold": {
+      "observation": {
+        "cleanup_after_signal_seconds": 0.2709854770000675,
+        "key_event": {
+          "observed_after_seconds": 0.04328095100026985,
+          "press": {
+            "echo": false,
+            "event": "key",
+            "frame": 1341,
+            "keycode": 87,
+            "monotonic_usec": 24935208,
+            "physical_keycode": 87,
+            "physics_frame": 1378,
+            "pressed": true,
+            "utc_unix": 1788559157.88358
+          },
+          "release": {
+            "echo": false,
+            "event": "key",
+            "frame": 1342,
+            "keycode": 87,
+            "monotonic_usec": 24951851,
+            "physical_keycode": 87,
+            "physics_frame": 1379,
+            "pressed": false,
+            "utc_unix": 1788559157.90022
+          },
+          "release_since_request_seconds": 0.033174991607666016
+        },
+        "response": {
+          "ended_monotonic": 7706.095379148,
+          "result": {
+            "focus_window_id": 6291458,
+            "focused": true,
+            "height": 1080,
+            "held_buttons": [],
+            "held_keys": [
+              "w"
+            ],
+            "pointer": [
+              960,
+              540
+            ],
+            "title": "NULLSPACE Native QA Fixture (DEBUG)",
+            "width": 1920,
+            "window_id": 6291458,
+            "window_pid": 99733
+          }
+        }
+      },
+      "passed": true
+    }
+  },
+  "ended_utc": "2026-09-04T21:59:18.164+00:00",
+  "experiential_review": "unverified",
+  "method": "scripted_native_fault_diagnostic",
+  "started_utc": "2026-09-04T21:59:12.781+00:00",
+  "status": "PASS_SCRIPTED_NATIVE_SAFETY"
+}

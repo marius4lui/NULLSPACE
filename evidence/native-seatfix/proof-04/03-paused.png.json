@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 7414.263396536,
+  "acquired_utc": "2026-09-04T21:54:26.061+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-04/03-paused.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "adee43db1e5e8cfbd8c6cc6634606b1d6682b68b8294d71b4e2fb8f8c6697f06",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      1020,
+      560
+    ],
+    "title": "NULLSPACE Native QA Fixture (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 95562
+  },
+  "x_readback_ms": 170.56417299954774
+}

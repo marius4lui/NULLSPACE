@@ -1,0 +1,96 @@
+{
+  "authority": "/run/user/1000/nullspace-qa-snoym8r5/Xauthority",
+  "cleanup_errors": [],
+  "command": [
+    "/home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+    "--path",
+    "tools/qa/fixtures/input_render_audio",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--resolution",
+    "1920x1080",
+    "--windowed",
+    "--disable-vsync",
+    "--max-fps",
+    "60"
+  ],
+  "defaults_after": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "defaults_before": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "display": ":2",
+  "ended_utc": "2026-09-04T21:15:50.055+00:00",
+  "error": "Xwayland physical device has unexpected role",
+  "executable_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
+  "experiential_review": "unverified",
+  "game_git": {
+    "clean": false,
+    "commit": "76a9b644d4781ca92fa2fde82314a52576ed531f",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+  },
+  "game_project": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/tools/qa/fixtures/input_render_audio",
+  "game_source_hashes": {
+    "fixture.gd": "9b3f5fb49778f7d1c06aed4e2e7be7491de85d083c4f980d6539a64887a5009e",
+    "fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+    "project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863"
+  },
+  "harness_git": {
+    "clean": false,
+    "commit": "76a9b644d4781ca92fa2fde82314a52576ed531f",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+  },
+  "harness_source_hashes": {
+    "analyze_fixture_media.py": "90c010791bca2736ba981c9c975bd46ea188d1e9580d0afc08663dd6edf5d2b7",
+    "fixtures/input_render_audio/fixture.gd": "9b3f5fb49778f7d1c06aed4e2e7be7491de85d083c4f980d6539a64887a5009e",
+    "fixtures/input_render_audio/fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+    "fixtures/input_render_audio/project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863",
+    "manifest.py": "719e633dca86e65a3aa54306b552066c35a06bc0842c81861bebd84d43e5f34c",
+    "media_capture.py": "17ba3c63999e90b13ffeb834eccd6f2e71a9f2b037b9089c3742796e2fb7913c",
+    "native.py": "bf4a2e23c379a1f106838a810dc56e12bc9f2ff9ccf31a9485d7343d16feac95",
+    "native_session.py": "9039cc7f626d8815291406d2d25ab40fa2fafd60bfdf7579cc1904d1f222bea1",
+    "private_seat.py": "4339204cd5d11ca760ed677c46924b5f99a3b2c60e73667be849480d67052ce3",
+    "prove_fixture.py": "1edb665831c5ebc0d1a4a4ef1f73b799fc08e6ba207324b57e4eccf3d7626a97",
+    "qa_common.py": "a528e789415f61ce916f0ca8854e3706b44e5dae52bb2cd3887100a5a894df35",
+    "recover_session.py": "6964b28230836c009d77a5a614734aaa78eb384f990cb9b3b3610a5157f02b96",
+    "x11_input.py": "7f3361e5f3b6d3190646a874263acc866338c8bae1cf650eefa7a206f90a7c1a"
+  },
+  "host": {
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "os": "Linux 7.1.12-200.fc44.x86_64 x86_64 GNU/Linux",
+    "pipewire": "pipewire\nCompiled with libpipewire 1.6.8\nLinked with libpipewire 1.6.8",
+    "xwayland": "xorg-x11-server-Xwayland-24.1.13-1.fc44.x86_64"
+  },
+  "host_defaults_unchanged": true,
+  "method": "scripted_diagnostic",
+  "observed_or_heard": [],
+  "processes": {
+    "xwayland": {
+      "exit_code": 0,
+      "pid": 62163,
+      "process_group": 62163,
+      "session": 62163,
+      "start_ticks": 509787
+    }
+  },
+  "run_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/development-01",
+  "runtime_dir": "/run/user/1000/nullspace-qa-snoym8r5",
+  "schema": 1,
+  "started_utc": "2026-09-04T21:15:49.044+00:00",
+  "status": "failed",
+  "supervisor": {
+    "pid": 62137,
+    "process_group": 62137,
+    "session": 62137,
+    "start_ticks": 509701
+  }
+}

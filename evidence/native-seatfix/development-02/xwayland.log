@@ -1,0 +1,38 @@
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+Errors from xkbcomp are not fatal to the X server
+(EE) 
+(EE) Backtrace:
+(EE) 0: Xwayland (0x55f253208000+0x18e389) [0x55f253396389]
+(EE) 1: Xwayland (0x55f253208000+0x18e495) [0x55f253396495]
+(EE) 2: /lib64/libc.so.6 (0x7f3a54d94000+0x19fb0) [0x7f3a54dadfb0]
+(EE) 3: Xwayland (0x55f253208000+0xb12ed) [0x55f2532b92ed]
+(EE) 4: Xwayland (0x55f253208000+0x21f97) [0x55f253229f97]
+(EE) 5: /lib64/libffi.so.8 (0x7f3a5556e000+0x8056) [0x7f3a55576056]
+(EE) 6: /lib64/libffi.so.8 (0x7f3a5556e000+0x405c) [0x7f3a5557205c]
+(EE) 7: /lib64/libffi.so.8 (ffi_call+0x13e) [0x7f3a55574d8e]
+(EE) 8: /lib64/libwayland-client.so.0 (0x7f3a5586e000+0x233b) [0x7f3a5587033b]
+(EE) 9: /lib64/libwayland-client.so.0 (0x7f3a5586e000+0x31f9) [0x7f3a558711f9]
+(EE) 10: /lib64/libwayland-client.so.0 (wl_display_dispatch_queue_pending+0x73) [0x7f3a55871613]
+(EE) 11: Xwayland (0x55f253208000+0x2137a) [0x55f25322937a]
+(EE) 12: Xwayland (0x55f253208000+0x190312) [0x55f253398312]
+(EE) 13: Xwayland (0x55f253208000+0x9eadf) [0x55f2532a6adf]
+(EE) 14: Xwayland (0x55f253208000+0x1549a) [0x55f25321d49a]
+(EE) 15: /lib64/libc.so.6 (0x7f3a54d94000+0x3681) [0x7f3a54d97681]
+(EE) 16: /lib64/libc.so.6 (__libc_start_main+0x88) [0x7f3a54d97798]
+(EE) 17: Xwayland (0x55f253208000+0x16db5) [0x55f25321edb5]
+(EE) 
+(EE) Segmentation fault at address 0x28
+(EE) 
+Fatal server error:
+(EE) Caught signal 11 (Segmentation fault). Server aborting
+(EE) 

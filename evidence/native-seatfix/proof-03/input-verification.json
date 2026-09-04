@@ -1,0 +1,438 @@
+{
+  "checks": {
+    "captured_relative_mouse": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 104,
+        "keys": {
+          "a": false,
+          "d": true,
+          "s": false,
+          "shift": true,
+          "w": true
+        },
+        "mode": "playing",
+        "monotonic_usec": 3394056,
+        "mouse_total": [
+          120.0,
+          -25.0
+        ],
+        "physics_frame": 112,
+        "pitch": 0.075,
+        "position": [
+          1.82174909114838,
+          1.79999995231628,
+          6.17463779449463
+        ],
+        "shots": 1,
+        "utc_unix": 1788558714.22275,
+        "yaw": -0.36
+      },
+      "passed": true
+    },
+    "command_failure_releases_key": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 314,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 6893900,
+        "mouse_total": [
+          60.0,
+          -15.0
+        ],
+        "physics_frame": 322,
+        "pitch": 0.045,
+        "position": [
+          2.11141657829285,
+          1.79999995231628,
+          5.12372303009033
+        ],
+        "shots": 3,
+        "utc_unix": 1788558717.72262,
+        "yaw": -0.18
+      },
+      "passed": true
+    },
+    "enter_captures_mouse": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 21.0,
+        "frame": 69,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 2810774,
+        "mouse_total": [
+          0.0,
+          0.0
+        ],
+        "physics_frame": 77,
+        "pitch": 0.0,
+        "position": [
+          0.0,
+          1.79999995231628,
+          7.0
+        ],
+        "shots": 0,
+        "utc_unix": 1788558713.63946,
+        "yaw": 0.0
+      },
+      "passed": true
+    },
+    "expired_lease_releases_key": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 307,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 6777252,
+        "mouse_total": [
+          60.0,
+          -15.0
+        ],
+        "physics_frame": 315,
+        "pitch": 0.045,
+        "position": [
+          2.04582715034485,
+          1.79999995231628,
+          5.11178779602051
+        ],
+        "shots": 3,
+        "utc_unix": 1788558717.60597,
+        "yaw": -0.18
+      },
+      "passed": true
+    },
+    "explicit_release": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 118,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 3627361,
+        "mouse_total": [
+          120.0,
+          -25.0
+        ],
+        "physics_frame": 126,
+        "pitch": 0.075,
+        "position": [
+          2.24682378768921,
+          1.79999995231628,
+          5.98205327987671
+        ],
+        "shots": 1,
+        "utc_unix": 1788558714.45605,
+        "yaw": -0.36
+      },
+      "passed": true
+    },
+    "initial_menu": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": false,
+        "event": "state",
+        "focused": true,
+        "fps": 1.0,
+        "frame": 13,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "menu",
+        "monotonic_usec": 1877384,
+        "mouse_total": [
+          0.0,
+          0.0
+        ],
+        "physics_frame": 21,
+        "pitch": 0.0,
+        "position": [
+          0.0,
+          1.79999995231628,
+          7.0
+        ],
+        "shots": 0,
+        "utc_unix": 1788558712.70606,
+        "yaw": 0.0
+      },
+      "passed": true
+    },
+    "invalid_command_rejected": {
+      "observation": "Unknown X11 key name: NoSuchKey_NULLSPACE",
+      "passed": true
+    },
+    "menu_blocks_motion_fire": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": false,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 251,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "menu",
+        "monotonic_usec": 5844178,
+        "mouse_total": [
+          60.0,
+          -15.0
+        ],
+        "physics_frame": 259,
+        "pitch": 0.045,
+        "position": [
+          1.96228051185608,
+          1.79999995231628,
+          5.5709171295166
+        ],
+        "shots": 3,
+        "utc_unix": 1788558716.67288,
+        "yaw": -0.18
+      },
+      "passed": true
+    },
+    "motion_and_fire": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 104,
+        "keys": {
+          "a": false,
+          "d": true,
+          "s": false,
+          "shift": true,
+          "w": true
+        },
+        "mode": "playing",
+        "monotonic_usec": 3394056,
+        "mouse_total": [
+          120.0,
+          -25.0
+        ],
+        "physics_frame": 112,
+        "pitch": 0.075,
+        "position": [
+          1.82174909114838,
+          1.79999995231628,
+          6.17463779449463
+        ],
+        "shots": 1,
+        "utc_unix": 1788558714.22275,
+        "yaw": -0.36
+      },
+      "passed": true
+    },
+    "native_x11_radv_fixture": {
+      "observation": {
+        "adapter": "AMD Radeon 660M (RADV REMBRANDT)",
+        "display": "X11",
+        "event": "ready",
+        "frame": 0,
+        "monotonic_usec": 1227638,
+        "physics_frame": 0,
+        "user_data_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix/evidence/native-seatfix/proof-03/profile/data/godot/app_userdata/NULLSPACE Native QA Fixture",
+        "utc_unix": 1788558712.05631,
+        "window_size": [
+          1920.0,
+          1080.0
+        ]
+      },
+      "passed": true
+    },
+    "pause_blocks_motion_fire": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": false,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 167,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": true
+        },
+        "mode": "paused",
+        "monotonic_usec": 4447271,
+        "mouse_total": [
+          120.0,
+          -25.0
+        ],
+        "physics_frame": 175,
+        "pitch": 0.075,
+        "position": [
+          2.24682378768921,
+          1.79999995231628,
+          5.98205327987671
+        ],
+        "shots": 2,
+        "utc_unix": 1788558715.27597,
+        "yaw": -0.36
+      },
+      "passed": true
+    },
+    "resume_input_works": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 216,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 5260643,
+        "mouse_total": [
+          60.0,
+          -15.0
+        ],
+        "physics_frame": 224,
+        "pitch": 0.045,
+        "position": [
+          1.96228051185608,
+          1.79999995231628,
+          5.5709171295166
+        ],
+        "shots": 3,
+        "utc_unix": 1788558716.08935,
+        "yaw": -0.18
+      },
+      "passed": true
+    },
+    "resume_recaptures_mouse": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 188,
+        "keys": {
+          "a": false,
+          "d": false,
+          "s": false,
+          "shift": false,
+          "w": false
+        },
+        "mode": "playing",
+        "monotonic_usec": 4794401,
+        "mouse_total": [
+          120.0,
+          -25.0
+        ],
+        "physics_frame": 196,
+        "pitch": 0.075,
+        "position": [
+          2.24682378768921,
+          1.79999995231628,
+          5.98205327987671
+        ],
+        "shots": 2,
+        "utc_unix": 1788558715.6231,
+        "yaw": -0.36
+      },
+      "passed": true
+    },
+    "simultaneous_keyboard": {
+      "observation": {
+        "audio_skips": 137,
+        "captured": true,
+        "event": "state",
+        "focused": true,
+        "fps": 60.0,
+        "frame": 104,
+        "keys": {
+          "a": false,
+          "d": true,
+          "s": false,
+          "shift": true,
+          "w": true
+        },
+        "mode": "playing",
+        "monotonic_usec": 3394056,
+        "mouse_total": [
+          120.0,
+          -25.0
+        ],
+        "physics_frame": 112,
+        "pitch": 0.075,
+        "position": [
+          1.82174909114838,
+          1.79999995231628,
+          6.17463779449463
+        ],
+        "shots": 1,
+        "utc_unix": 1788558714.22275,
+        "yaw": -0.36
+      },
+      "passed": true
+    }
+  },
+  "ended_utc": "2026-09-04T21:52:03.356+00:00",
+  "experiential_review": "unverified",
+  "method": "scripted_diagnostic",
+  "started_utc": "2026-09-04T21:51:51.189+00:00",
+  "status": "PASS_SCRIPTED_DIAGNOSTIC"
+}

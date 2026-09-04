@@ -1,0 +1,202 @@
+{
+  "artifacts": {
+    "01-menu.png": {
+      "bytes": 70482,
+      "sha256": "efa7f1a6dcb803559d16772e3f7dabb5cd7db7f39617946208f0f10b90359bf3"
+    },
+    "01-menu.png.json": {
+      "bytes": 966,
+      "sha256": "c45a9bde88b97ce7aac1042f0f01e60a1ea5ae97618a1b036c8e0e701d6de42e"
+    },
+    "02-moved.png": {
+      "bytes": 74422,
+      "sha256": "9958d51f46f780f468a3d14dd1c0067456e77ec2aad0f21bcee83437381eefdd"
+    },
+    "02-moved.png.json": {
+      "bytes": 967,
+      "sha256": "4bf57530cb7163f7aac234eb83f0195861b0a5d7597693c5778a2149b5c08fcc"
+    },
+    "03-paused.png": {
+      "bytes": 73431,
+      "sha256": "336614af0ed6e069cf183ad2114fc3245c443a096535118592021c780b4620ac"
+    },
+    "03-paused.png.json": {
+      "bytes": 969,
+      "sha256": "7a6a536c5675473b7fe1a615b8436d77593f9e18037abff384cd8cbd2e0fc4e1"
+    },
+    "04-final.png": {
+      "bytes": 73258,
+      "sha256": "8bfd23701818ec7ac6b9ce1edc8e93e1941080dd4e6f375ee32bf78be712d337"
+    },
+    "04-final.png.json": {
+      "bytes": 966,
+      "sha256": "578488d351d5ce089dca5933502d56413a2f242ac5b21083a8f490f83626a2e7"
+    },
+    "06-lease-during-capture.png": {
+      "bytes": 75606,
+      "sha256": "65fb97e6a0105dd76d62259b71a9e9cccefccb216684364828e28effc2307efa"
+    },
+    "06-lease-during-capture.png.json": {
+      "bytes": 997,
+      "sha256": "64a4802acf06881da08b0e23815437cba455664c6caaa3abc20285e6180f4ee5"
+    },
+    "fixture-events.jsonl": {
+      "bytes": 86090,
+      "sha256": "240a96c620d5c953421931837ec4bab53db1122520ec978e3dc912b5b0f0083b"
+    },
+    "fixture-stereo.wav": {
+      "bytes": 1920322,
+      "sha256": "f63752be8254022c8e2631f979a4a61126f06b9ecd64de4e5542245c4c8b43a1"
+    },
+    "freshness-01-baseline.png": {
+      "bytes": 73258,
+      "sha256": "8bfd23701818ec7ac6b9ce1edc8e93e1941080dd4e6f375ee32bf78be712d337"
+    },
+    "freshness-01-baseline.png.json": {
+      "bytes": 980,
+      "sha256": "5950aec0e1f22f89bbc755ae7162e3b9bceb20dea03e11d4d8d22a9f42764d6a"
+    },
+    "freshness-02-captured_left.png": {
+      "bytes": 74801,
+      "sha256": "71e5b97f47e979f5773a6e9acb842644da68db16fb7db685480050ddb3d3f4db"
+    },
+    "freshness-02-captured_left.png.json": {
+      "bytes": 985,
+      "sha256": "910130995684968a174abb1b158c75223ff00f627964d7f567527f6404f5d53f"
+    },
+    "freshness-03-captured_right.png": {
+      "bytes": 72757,
+      "sha256": "bed29260a46232c3e9e88f09b7064dd1d2399204275cf58b80fffbd92d2df463"
+    },
+    "freshness-03-captured_right.png.json": {
+      "bytes": 986,
+      "sha256": "3f7e98cb761fc3aea775583fefb5707e5a88e16472e48526cfbd254e767493a4"
+    },
+    "freshness-04-paused.png": {
+      "bytes": 71656,
+      "sha256": "d12d91cf62ba155d1fc62ed21c4e0abadeb8e390591b8be82366d307ed6a1939"
+    },
+    "freshness-04-paused.png.json": {
+      "bytes": 977,
+      "sha256": "299a0eb966a326efa94dfe92b63df747efc5e263ce6e2b84a5dd00369fb7d4fd"
+    },
+    "freshness-05-menu.png": {
+      "bytes": 71893,
+      "sha256": "5023675da01e5a175fd3c1796165c53a7cfc0ab128a26783e8731286a4968f73"
+    },
+    "freshness-05-menu.png.json": {
+      "bytes": 974,
+      "sha256": "11aa7bbb9f9209ba74f7dab7de8629c0d6da3289c731d10ecd1334dccf1b614a"
+    },
+    "freshness-06-resumed.png": {
+      "bytes": 72757,
+      "sha256": "bed29260a46232c3e9e88f09b7064dd1d2399204275cf58b80fffbd92d2df463"
+    },
+    "freshness-06-resumed.png.json": {
+      "bytes": 978,
+      "sha256": "85da9f18d032f51c393ac732ff14c29d20db428340d8f0406fd896281b1c1e77"
+    },
+    "freshness-07-captured_final.png": {
+      "bytes": 75230,
+      "sha256": "643f4c54fb8475af4f1de1a8432866e2ece4b914fa04cf9a4656786608c5b08d"
+    },
+    "freshness-07-captured_final.png.json": {
+      "bytes": 985,
+      "sha256": "24c0cfa224118047a51338af3e4f0bcd8f771ce4550c9af2eb11083b5a83010d"
+    },
+    "freshness-verification.json": {
+      "bytes": 21015,
+      "sha256": "00f0469dfcffcd9a01f93c2f8f80291bf9d02432806ad1bcfb9f7768b2de729d"
+    },
+    "game.log": {
+      "bytes": 327,
+      "sha256": "ad4ec1ceaedacf8fd4da5dc48d265615ccc0456517381d280369d5aac6493e2c"
+    },
+    "input-proof.ffmpeg.log": {
+      "bytes": 5598,
+      "sha256": "f59406750e2e46fdec04040fea0f3da8bfa44578b1ce0d91796d6a2d718388f8"
+    },
+    "input-proof.mkv": {
+      "bytes": 1440966,
+      "sha256": "509d96d8759717df86a520743af8130d0b0670cdab2c256261bc455c31a934b5"
+    },
+    "input-proof.mkv.json": {
+      "bytes": 5383,
+      "sha256": "4342090461f97884934ed3051f4629dcf16518275ad3daa177992db934c1893b"
+    },
+    "input-verification.json": {
+      "bytes": 9969,
+      "sha256": "f2521b21213b718688736b3fb2b888401b05e2ce970d30aed31c6a269adde810"
+    },
+    "launch.json": {
+      "bytes": 807,
+      "sha256": "359ac18da5ee823d198f3f6f96ec6a993f6d294461935e954190e5fdc5157270"
+    },
+    "media-verification.json": {
+      "bytes": 4553,
+      "sha256": "58a92cd23f2d4ac00d2bd960275ec0336fbf61e2e5680651e3047d2ec3d858ad"
+    },
+    "safety-verification.json": {
+      "bytes": 7331,
+      "sha256": "5d718988f40aefd073b88493d89625bb1f1cbe014cfe39c6e63aa50e8a2458eb"
+    },
+    "state.json": {
+      "bytes": 13255,
+      "sha256": "dc7c68cd029ac16625859fcf1023566495716cb44b36bcca39a8d7c010971b0e"
+    },
+    "supervisor-events.jsonl": {
+      "bytes": 78537,
+      "sha256": "1c788fa37ad175bc9a78281eda1a652dcfee2a3ef93c8587bd47f90357a9287b"
+    },
+    "viewport-001.png": {
+      "bytes": 73911,
+      "sha256": "813dc6c4126909fa8a4f214783f37968284f162835695f62ecc37d02f2eacdde"
+    },
+    "viewport-002.png": {
+      "bytes": 75818,
+      "sha256": "a066ba1f35e25e8618946c978ad3c8ffc07377c7c7cfeaeff324c7ca3194bf5c"
+    },
+    "viewport-003.png": {
+      "bytes": 73698,
+      "sha256": "745b7c119ce7ff430bdf6ea48aa9b34425111839d2a0d0e06a77fba1bbb64602"
+    },
+    "viewport-004.png": {
+      "bytes": 72420,
+      "sha256": "249189e8b5bc37864886d2626ab89f60a0d6ef74c56651568516bd09eae5aa9e"
+    },
+    "viewport-005.png": {
+      "bytes": 72819,
+      "sha256": "346c29dd53f95ab2fa831f9bd67f285de78bcbda1af07bdac15094266c090a94"
+    },
+    "viewport-006.png": {
+      "bytes": 73698,
+      "sha256": "745b7c119ce7ff430bdf6ea48aa9b34425111839d2a0d0e06a77fba1bbb64602"
+    },
+    "viewport-007.png": {
+      "bytes": 75984,
+      "sha256": "eccd87ed468295537af64015f6e69a23fb481d020087aedd0d01fce572737b43"
+    },
+    "vulkaninfo.txt": {
+      "bytes": 2385,
+      "sha256": "bf0dc0913675988bf673ca47db4a90f716f24571249e65abef40700b7883f8ad"
+    },
+    "weston.log": {
+      "bytes": 3438,
+      "sha256": "fff74301e930c766735aa884ef84592d9dcbe11ec9ee573629873213391a14f6"
+    },
+    "xwayland.log": {
+      "bytes": 732,
+      "sha256": "906bbcb0e45c4180c5f3f275be89b64c810e4db3da7fbe5efac918759235157e"
+    }
+  },
+  "meaning": "Artifact hashes establish identity; they do not assert review, hearing or quality.",
+  "package_git": {
+    "clean": false,
+    "commit": "bb6fb09791c0ec65d5193f9dc045da7b8d16fecf",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/native-seatfix"
+  },
+  "packaged_utc": "2026-09-04T22:05:05.717+00:00",
+  "profile_and_credentials": "excluded",
+  "runtime_provenance": "state.json; game.log; fixture-events.jsonl when present",
+  "schema": 1
+}
