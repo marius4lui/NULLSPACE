@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/fresh-checkout-YXz1DQ/repo/tools/bootstrap/output/linux/nullspace-bootstrap.x86_64",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--resolution",
+    "1920x1080",
+    "--windowed",
+    "--disable-vsync",
+    "--max-fps",
+    "60",
+    "--",
+    "--output-dir",
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/evidence/logs/bootstrap/native-linux"
+  ],
+  "cwd": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/toolchain/tools/bootstrap/output/fresh-checkout-YXz1DQ/repo",
+  "height": 1080,
+  "icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+  "method": "adaptive_native",
+  "startup_timeout": 60.0,
+  "width": 1920
+}
