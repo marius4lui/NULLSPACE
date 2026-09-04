@@ -1,6 +1,6 @@
 # NULLSPACE architecture
 
-Research A–I incorporated; independent freeze audit corrections prepared. Required engine Godot4.7.2 stable, Forward+, typed modular GDScript and tunable Resources. No implementation exists yet. Delegated implementers own code/scenes/tests.
+Production architecture baseline, 2026-09-04; research A–I incorporated and independent design-readiness audit PASS at c737443. Required engine Godot4.7.2 stable, Forward+, typed modular GDScript and tunable Resources. No implementation exists at freeze. Delegated implementers own code/scenes/tests.
 
 ## Runtime ownership
 

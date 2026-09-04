@@ -1,5 +1,9 @@
 # Decisions
 
+## D006 — Design freeze, 2026-09-04
+
+All9 independent research assignments complete and archived. Independent design_contract_audit initially failed5 documentation/specification omissions, all corrected; rereview PASS at c737443110d558ff4863b9ec202368bbe83f88b1. Freeze GOAL_CONTRACT.md and QUALITY_GATES.md without lowered criteria, and freeze GAME_DESIGN/ART_DIRECTION creative scope. Numeric tuning remains empirical. Production begins only now, delegated to isolated Astra/max workers. Actual game/release gates remain unpassed. No high-level concept reopening absent evidenced unavoidable contradiction.
+
 ## D005 — User-named NULLSPACE, 2026-09-04
 
 User explicitly directed “nenne das game NULLSPACE”. Adopt NULLSPACE for the game, production UI, builds and current documentation. THRESHOLD is only original working-title history; retain original archived prompt verbatim with this amendment. No other scope or quality criterion changes. Legal research will record known title overlap honestly, without silently substituting another name or blocking private production.

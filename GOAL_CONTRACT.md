@@ -1,6 +1,6 @@
 # NULLSPACE — Immutable Goal Contract
 
-Status: initial archival copy; becomes immutable at design freeze. The text below is the complete original user instruction, preserved verbatim. Implementation notes and decisions live elsewhere and cannot weaken this contract.
+Status: FROZEN on 2026-09-04 after research A–I and independent design audit PASS. Immutable except an evidenced unavoidable technical contradiction. The text below is the complete original user instruction, preserved verbatim. Implementation notes and decisions live elsewhere and cannot weaken this contract.
 
 Authoritative user amendment, 2026-09-04: “nenne das game NULLSPACE”. The game is named NULLSPACE; THRESHOLD below is the original working title and has no naming authority after this amendment. All other requirements remain binding. Preserve the original instruction below verbatim.
 

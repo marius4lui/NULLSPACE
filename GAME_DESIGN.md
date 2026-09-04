@@ -1,6 +1,6 @@
 # NULLSPACE game design
 
-Research A–I incorporated; independent freeze audit corrections prepared. Complete binding scope: GOAL_CONTRACT.md. This direction never replaces acceptance criteria. Numerical tuning remains adjustable through recorded playtests. Authoritative user-selected game/release name: NULLSPACE.
+FROZEN creative specification, 2026-09-04; research A–I incorporated and independent design-readiness audit PASS at c737443. Complete binding scope: GOAL_CONTRACT.md. This direction never replaces acceptance criteria. Numerical tuning remains adjustable through recorded playtests. Authoritative user-selected game/release name: NULLSPACE.
 
 ## Experience and campaign
 

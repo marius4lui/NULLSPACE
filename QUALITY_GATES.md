@@ -1,6 +1,6 @@
 # NULLSPACE quality gates
 
-Status: initial gate register; freeze with GOAL_CONTRACT.md after research/design. This register operationalizes the entire contract and never replaces or weakens it. Unverified means NOT PASSED. No release scores have been assigned.
+Status: FROZEN on 2026-09-04 after research A–I and independent design audit PASS. Immutable except an evidenced unavoidable technical contradiction. This register operationalizes the entire contract and never replaces or weakens it. Unverified means NOT PASSED. No release scores have been assigned.
 
 ## Governance gates
 

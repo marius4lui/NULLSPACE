@@ -1,6 +1,6 @@
 # NULLSPACE art direction
 
-Research A–I incorporated; independent freeze audit corrections prepared. Binding detailed requirements in GOAL_CONTRACT.md. All production art/audio original with editable source and provenance. Create commercial credibility through materials, proportions and restrained imperfections, then disturb spatial continuity.
+FROZEN art direction, 2026-09-04; research A–I incorporated and independent design-readiness audit PASS at c737443. Binding detailed requirements in GOAL_CONTRACT.md. All production art/audio original with editable source and provenance. Create commercial credibility through materials, proportions and restrained imperfections, then disturb spatial continuity.
 
 ## Palette and architecture
 
