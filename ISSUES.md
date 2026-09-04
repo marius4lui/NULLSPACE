@@ -12,3 +12,4 @@ No playable game exists; product gates remain unverified. This is not a zero-def
 | QA-001 | release evidence limitation | open | Actual native Windows runtime absent; cross-export/Wine alone cannot be called native certification. |
 | QA-002 | experiential review limitation | open | Native image/input/capture path proposed; actual audio listening and continuous temporal review modality unproven. Metrics/frame extraction do not substitute. |
 | DESIGN-001 | pre-freeze audit | resolved | Independent design audit initially failed5 findings. Root corrected docs; independent rereview PASS at c737443. Design readiness only, no game scores. |
+| OPS-001 | transient worker availability | recovered, monitor | Previous bootstrap/project workers quota-failed before files/install. Resume inspection found no live workers or partial source; fresh usage0%/no reached-limit. Four replacement Astra/max workers successfully started. No reset credit or purchase used. |
