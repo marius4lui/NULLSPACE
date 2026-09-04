@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 8922.44767417,
+  "acquired_utc": "2026-09-04T22:19:34.245+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/entry_composite.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "9e06c7a4f1eee0ea472e6564ac92bba65fc0ec263bd1f1ee18482205bf32480d",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE M4 Environment Inspection (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 108947
+  },
+  "x_readback_ms": 235.04026800037536
+}

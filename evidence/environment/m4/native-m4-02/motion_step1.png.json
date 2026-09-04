@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 9205.477190953,
+  "acquired_utc": "2026-09-04T22:24:17.275+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/environment-art/evidence/environment/m4/native-m4-02/motion_step1.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "3c9a55281470713163d729b541cac688cc4f82738bece7d7e4a2b199e0879974",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE M4 Environment Inspection (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 108947
+  },
+  "x_readback_ms": 26.836692999495426
+}
