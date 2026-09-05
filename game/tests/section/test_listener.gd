@@ -5,6 +5,13 @@ var failures: Array[String] = []
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	var isolated: DirAccess = DirAccess.create_temp("nullspace_listener_test", true)
+	if isolated == null:
+		get_tree().quit(2)
+		return
+	SaveSystem.storage_directory = isolated.get_current_dir().path_join("saves")
+	SettingsManager.storage_directory = isolated.get_current_dir().path_join("preferences")
+	SettingsManager.reload_settings()
 	var section := preload("res://section/section.tscn").instantiate() as NullspaceSection
 	add_child(section)
 	await _frames(5)

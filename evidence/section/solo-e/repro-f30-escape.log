@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"checks":26,"failures":[],"scope":"automated scene fixtures and exit input; not full exploration, enemy evasion, listening or first-run duration","suite":"two-switch escape risks"}

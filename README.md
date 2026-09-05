@@ -46,7 +46,7 @@ NULLSPACE is an AI-developed game created with **GPT-6 Astra through Codex**, un
 | Game | 10–15 minutes · approximately 8–12 connected rooms · two switches |
 | Equipment | One semi-automatic pistol · battery-free flashlight |
 | Threat | The Listener · approximately 2.3 m tall |
-| Performance | Stable responsive play on the existing Linux laptop; actual measurements pending |
+| Performance | Laptop profile measured on Radeon 660M; see [actual measurements](PERFORMANCE.md), no other-hardware guarantee |
 
 Minimum requirements are not established yet. Performance will be reported with the actual laptop, resolution and profile. A Windows cross-export is not native Windows validation.
 

@@ -5,6 +5,13 @@ var failures: Array[String] = []
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	var isolated: DirAccess = DirAccess.create_temp("nullspace_escape_test", true)
+	if isolated == null:
+		get_tree().quit(2)
+		return
+	SaveSystem.storage_directory = isolated.get_current_dir().path_join("saves")
+	SettingsManager.storage_directory = isolated.get_current_dir().path_join("preferences")
+	SettingsManager.reload_settings()
 	var section := preload("res://section/section.tscn").instantiate() as NullspaceSection
 	add_child(section)
 	section.listener.enabled = false # This isolates objective/restore risks; native runs cover escape under threat.

@@ -6,6 +6,13 @@ var heard_shots: int = 0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	var isolated: DirAccess = DirAccess.create_temp("nullspace_pistol_test", true)
+	if isolated == null:
+		get_tree().quit(2)
+		return
+	SaveSystem.storage_directory = isolated.get_current_dir().path_join("saves")
+	SettingsManager.storage_directory = isolated.get_current_dir().path_join("preferences")
+	SettingsManager.reload_settings()
 	EventHub.register_sound_propagator(func(sound: SoundEvent) -> void:
 		if sound.kind == &"pistol_shot": heard_shots += 1)
 	var section := preload("res://section/section.tscn").instantiate() as NullspaceSection
