@@ -216,7 +216,7 @@ func _perceive(delta: float) -> void:
 		var ray: Dictionary = get_world_3d().direct_space_state.intersect_ray(query)
 		sees_player = ray.get("collider") == player
 	if sees_player:
-		var exposure: float = 1.0 if section.light_switch.powered else 0.38
+		var exposure: float = section.room.light_exposure(player.global_position)
 		var motion: float = 1.45 if player.sprinting else (1.0 if player.velocity.length() > 0.4 else 0.7)
 		var posture: float = 0.50 if player.crouched else 1.0
 		_notice += delta * exposure * motion * posture * (3.8 if distance < 4 else 1.7) * (1.2 if player.flashlight.visible else 1.0)

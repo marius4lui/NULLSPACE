@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 21523.567409268,
+  "acquired_utc": "2026-09-05T01:49:35.365+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-01/14-service-cover.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "8afe43b119bd7740e5cb3694698d2667b47af5dc78f8719532f1c0641fc065a6",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 184069
+  },
+  "x_readback_ms": 20.924031003232813
+}

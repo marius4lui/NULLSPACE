@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 20888.449671637,
+  "acquired_utc": "2026-09-05T01:39:00.247+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-01/02-arrival.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "e1ab84a3f1f061cd9e446809e4ad457c62a081628d6ed75bdce86ae8dcee1697",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 184069
+  },
+  "x_readback_ms": 45.289233999938006
+}

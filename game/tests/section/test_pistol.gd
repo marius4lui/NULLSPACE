@@ -46,7 +46,9 @@ func _ready() -> void:
 	_check(gun.try_reload(), "Empty reload begins with remaining reserve")
 	await _frames(120)
 	_check(gun.chamber == 1 and gun.magazine == 5 and gun.reserve == 0, "Empty reload chambers one of remaining six, not a free round")
-	section.light_switch.use()
+	section.office_relay.use()
+	await _frames(50)
+	section.office_relay.use()
 	var saved: Dictionary = SaveSystem.load_checkpoint().payload
 	_check(saved["inventory"]["weapons"]["pistol"] == gun.snapshot(), "Physical switch checkpoint stores committed ammo")
 	_check("arrival_pistol" in saved["world"]["consumed_pickups"], "Consumed pickup persists")

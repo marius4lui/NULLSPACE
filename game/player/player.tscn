@@ -28,6 +28,7 @@ position = Vector3(0.12, -0.10, -0.02)
 visible = false
 light_color = Color(0.91, 0.95, 1, 1)
 light_energy = 3.8
+light_cull_mask = 1
 light_size = 0.018
 shadow_enabled = true
 shadow_bias = 0.025

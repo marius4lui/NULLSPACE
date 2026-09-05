@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 21579.561382532,
+  "acquired_utc": "2026-09-05T01:50:31.359+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-01/16-blackout-light.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "ed1604ddd1f0d540cc260aac0bb622090842f9bd76f6e8473a432169b3bc3d53",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 184069
+  },
+  "x_readback_ms": 23.387837998598116
+}

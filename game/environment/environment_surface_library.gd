@@ -8,6 +8,8 @@ const SURFACE_KINDS: Dictionary[String, int] = {
 	"wallpaper": 0, "carpet": 1, "ceiling": 2, "painted_metal": 3, "baseboard": 4,
 }
 var _materials: Dictionary[String, Material] = {}
+var wall_tint: Color = Color.WHITE
+var room_bounds: Vector4 = Vector4(-6.1, 0, 12.2, 14.64)
 
 
 func get_surface(material_name: String) -> Material:
@@ -22,6 +24,9 @@ func get_surface(material_name: String) -> Material:
 		result.set_shader_parameter(role + "_map", load(TEXTURE_ROOT + material_name + "_" + role + ".png"))
 	result.set_shader_parameter("room_macro_map", load(TEXTURE_ROOT + "room_m4_macro.png"))
 	result.set_shader_parameter("surface_kind", SURFACE_KINDS[material_name])
+	if material_name == "wallpaper":
+		result.set_shader_parameter("tint", Vector3(wall_tint.r, wall_tint.g, wall_tint.b))
+	result.set_shader_parameter("room_bounds", room_bounds)
 	result.set_shader_parameter("normal_strength", 0.78 if material_name != "carpet" else 0.85)
 	_materials[material_name] = result
 	return result

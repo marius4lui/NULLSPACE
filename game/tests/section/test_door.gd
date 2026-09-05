@@ -56,7 +56,9 @@ func _ready() -> void:
 	await _frames(130)
 	_check(door.opened and absf(door.angle) > .5, "Listener investigating a loud clue physically opens obstructing door")
 	enemy.enabled = false
-	section.light_switch.use()
+	section.office_relay.use()
+	await _frames(50)
+	section.office_relay.use()
 	var saved: Dictionary = SaveSystem.load_checkpoint().payload
 	_check(saved["world"]["doors"][door.door_id] == "open", "Checkpoint stores stable semantic door state")
 	door.restore(false)

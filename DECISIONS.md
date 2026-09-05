@@ -15,3 +15,9 @@ Prior current docs saved verbatim once under docs/history/pre-scope-change-2026-
 Integrated core reuses Listener 3b67be9, adds only walk/run/attack/stagger separately. Concrete FSM uses nav paths/dated clues; door attenuation uses real path segments. No general director/acoustic framework. Doorway Area corrects actual targeting difficulty. Bounded original spatial synthesis; explicit mixer shutdown corrects reproduced resource warnings.
 
 Next map preserves M4, opens its north/east/entry continuations, adds office return and service/blackout loops. Roughly eleven meaningful spaces including existing office subdivisions, not a square maze. Count/area does not prove 10–15 minute duration; first exploration/pacing remain to measure. No third switch/mandatory kill.
+
+Small-map native first flow reaches ending with inspection pauses. Never count its wall-clock duration as playtime: recorded simulation 74.78s, known geometry/route and Continue. Full-flow existence is proven, duration/pacing is not. Preserve this finding as DURATION-001 rather than artificially stretching time.
+
+Retain the existing tested completed-save policy: Continue is disabled for an ended campaign; New Game starts another. The new escape test initially assumed completed Continue should re-show credits. Corrected that new test expectation to the existing contract; no existing test or ending gate was disabled (test_escape-01 failure retained).
+
+Native Continue self-list messages resemble the physics reactivation ordering described in https://github.com/godotengine/godot/issues/122378 (not proof of identical cause; that report is 2D). Keep core unchanged; move this scene's completion acknowledgement out of physics_frame and verify natively with its twelve animated leaves.

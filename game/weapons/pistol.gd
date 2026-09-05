@@ -28,6 +28,8 @@ var magazine: int = 0
 var reserve: int = 0
 var state: State = State.READY
 var shots_fired: int = 0
+var light_exposure: float = 1.0
+var _bounce: OmniLight3D
 var _model: Node3D
 var _slide: Node3D
 var _mag: Node3D
@@ -50,6 +52,18 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	_model = MODEL.instantiate() as Node3D
 	add_child(_model)
+	for mesh: MeshInstance3D in _model.find_children("*", "MeshInstance3D", true, false):
+		mesh.layers = 2
+		mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	# First-person geometry is centimetres from the lamp: exclude that near-field
+	# glare and detached giant shadow, then approximate weak local bounce on it only.
+	_bounce = OmniLight3D.new()
+	_bounce.light_cull_mask = 2
+	_bounce.position = Vector3(-.3, .4, .15)
+	_bounce.omni_range = 1.5
+	_bounce.light_color = Color(.83, .87, .78)
+	_bounce.light_specular = .45
+	add_child(_bounce)
 	_slide = _model.find_child("Slide", true, false) as Node3D
 	_mag = _model.find_child("Magazine", true, false) as Node3D
 	_left = _model.find_child("LeftHand", true, false) as Node3D
@@ -281,6 +295,7 @@ func _exit_tree() -> void:
 			child.stop()
 
 func _animate(delta: float) -> void:
+	_bounce.light_energy = .22 if wielder.flashlight.visible else .065 * light_exposure
 	_recoil = move_toward(_recoil, 0.0, delta * 5.8)
 	_flash_time = maxf(0.0, _flash_time - delta)
 	_flash.visible = _flash_time > 0.0 and not _settings["reduced_flashes"]

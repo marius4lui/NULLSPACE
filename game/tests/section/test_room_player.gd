@@ -12,8 +12,13 @@ func _ready() -> void:
 	await _frames(3)
 	_check(GameFlow.begin_new_game().ok, "New Game creates a valid save")
 	await _frames(5)
+	await get_tree().process_frame # Scene intentionally acknowledges outside the physics query phase.
+	await _frames(8) # Includes gravity/contact ticks AFTER the idle-phase acknowledgement.
 	_check(GameFlow.state == NullGameFlow.State.PLAYING, "Concrete scene acknowledges safe restore")
 	_check(section.player.is_on_floor(), "Original carpet supports player")
+	# Keep the established partition-control fixture in the retained office, not the new arrival.
+	section.player.restore_at(Transform3D(Basis(Vector3.UP, .44), Vector3(2.7, .025, -.85)), SaveSystem.load_checkpoint().payload["player"])
+	await _frames(5)
 	Input.action_press("move_forward")
 	await _frames(95)
 	Input.action_release("move_forward")
@@ -40,9 +45,11 @@ func _ready() -> void:
 	await _frames(15)
 	Input.action_release("move_back")
 	_check(section.player.position.distance_to(paused_at) > 0.4, "Fresh press moves after pause")
-	section.light_switch.use()
-	_check(not section.room.fixtures[0]._light.visible, "Switch affects actual fixture")
-	_check(SaveSystem.load_checkpoint().payload["world"]["circuits"].get("arrival_lights") == false, "Actual switch checkpoint saved")
+	section.office_relay.use()
+	await _frames(50)
+	section.office_relay.use()
+	_check(section.office_relay.powered and section.room.power["office"], "Physical office relay restores room lighting")
+	_check(SaveSystem.load_checkpoint().payload["progress"]["relays"]["office"], "Actual relay checkpoint saved")
 	section.player.take_damage(55)
 	_check(section.player.health == 45.0, "First serious hit is survivable")
 	section.player.take_damage(55)
@@ -50,7 +57,7 @@ func _ready() -> void:
 	_check(GameFlow.continue_game().ok, "Death can request checkpoint")
 	await _frames(6)
 	_check(GameFlow.state == NullGameFlow.State.PLAYING and section.player.health == 100.0, "Checkpoint restores living player")
-	_check(not section.light_switch.powered and section.player.position.distance_to(NullspaceSection.ARRIVAL.origin) < 0.1, "Checkpoint restores lights and safe anchor")
+	_check(section.office_relay.powered and section.player.position.distance_to(NullspaceSection.OFFICE_SAFE.origin) < 0.1, "Checkpoint restores power and safe office anchor")
 	print(JSON.stringify({"suite": "integrated room/player", "checks": checks, "failures": failures,
 		"scope": "automated headless physics; not subjective play/audio"}))
 	for item: Dictionary in Engine.get_copyright_info():

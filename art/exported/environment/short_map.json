@@ -1,0 +1,1685 @@
+{
+  "revision": "short-map-1",
+  "origin": "Original M4 extended with authored connected rooms",
+  "rooms": [
+    {
+      "id": "office_core",
+      "asset": "short_office_core.gltf",
+      "bounds": [
+        -6.1,
+        9.76,
+        -18.3,
+        2.44
+      ],
+      "height": 2.72,
+      "style": "office",
+      "meaningful_spaces": "offset lobby / divided office / column room"
+    },
+    {
+      "id": "arrival",
+      "asset": "short_arrival.gltf",
+      "bounds": [
+        -1.22,
+        6.1,
+        2.44,
+        8.54
+      ],
+      "height": 2.72,
+      "style": "office"
+    },
+    {
+      "id": "exit",
+      "asset": "short_exit.gltf",
+      "bounds": [
+        1.22,
+        3.66,
+        8.54,
+        10.98
+      ],
+      "height": 2.72,
+      "style": "office"
+    },
+    {
+      "id": "west_return",
+      "asset": "short_west_return.gltf",
+      "bounds": [
+        -8.54,
+        -6.1,
+        -18.3,
+        -9.76
+      ],
+      "height": 2.72,
+      "style": "office"
+    },
+    {
+      "id": "archive",
+      "asset": "short_archive.gltf",
+      "bounds": [
+        -8.54,
+        -3.66,
+        -25.62,
+        -18.3
+      ],
+      "height": 2.72,
+      "style": "office"
+    },
+    {
+      "id": "office_switch",
+      "asset": "short_office_switch.gltf",
+      "bounds": [
+        -3.66,
+        1.22,
+        -25.62,
+        -18.3
+      ],
+      "height": 2.72,
+      "style": "office"
+    },
+    {
+      "id": "service",
+      "asset": "short_service.gltf",
+      "bounds": [
+        9.76,
+        17.08,
+        -12.2,
+        -4.88
+      ],
+      "height": 2.48,
+      "style": "service"
+    },
+    {
+      "id": "service_bypass",
+      "asset": "short_service_bypass.gltf",
+      "bounds": [
+        17.08,
+        21.96,
+        -12.2,
+        -4.88
+      ],
+      "height": 2.48,
+      "style": "service"
+    },
+    {
+      "id": "blackout",
+      "asset": "short_blackout.gltf",
+      "bounds": [
+        12.2,
+        17.08,
+        -20.74,
+        -12.2
+      ],
+      "height": 2.48,
+      "style": "blackout"
+    },
+    {
+      "id": "service_switch",
+      "asset": "short_service_switch.gltf",
+      "bounds": [
+        17.08,
+        21.96,
+        -20.74,
+        -12.2
+      ],
+      "height": 2.48,
+      "style": "blackout"
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "m4_f00",
+      "variant": "fixture_prismatic",
+      "position": [
+        -4.27,
+        2.704,
+        -4.575
+      ],
+      "state": "WEAK",
+      "shadow": false,
+      "warmth": 0.11,
+      "room": "office_core"
+    },
+    {
+      "id": "m4_f01",
+      "variant": "fixture_exposed",
+      "position": [
+        -4.27,
+        2.704,
+        -11.895
+      ],
+      "state": "OFF",
+      "shadow": false,
+      "warmth": 0.021420331483782955,
+      "room": "office_core"
+    },
+    {
+      "id": "m4_f02",
+      "variant": "fixture_prismatic",
+      "position": [
+        -3.05,
+        2.704,
+        -8.845
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.008010876567138201,
+      "room": "office_core"
+    },
+    {
+      "id": "m4_f03",
+      "variant": "fixture_prismatic",
+      "position": [
+        -1.83,
+        2.704,
+        -2.135
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.04631346650530796,
+      "room": "office_core"
+    },
+    {
+      "id": "m4_f04",
+      "variant": "fixture_prismatic",
+      "position": [
+        -0.6099999999999994,
+        2.704,
+        -6.405
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.040629700528511836,
+      "room": "office_core"
+    },
+    {
+      "id": "m4_f05",
+      "variant": "fixture_prismatic",
+      "position": [
+        -0.6099999999999994,
+        2.704,
+        -13.725
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.03735203329762703,
+      "room": "office_core",
+      "circuit": "office",
+      "unpowered": "OFF"
+    },
+    {
+      "id": "m4_f06",
+      "variant": "fixture_prismatic",
+      "position": [
+        1.83,
+        2.704,
+        -10.674999999999999
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.05052282845208145,
+      "room": "office_core",
+      "circuit": "office",
+      "unpowered": "OFF"
+    },
+    {
+      "id": "m4_f07",
+      "variant": "fixture_prismatic",
+      "position": [
+        3.0500000000000007,
+        2.704,
+        -1.525
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.011197368037697237,
+      "room": "office_core"
+    },
+    {
+      "id": "m4_f08",
+      "variant": "fixture_prismatic",
+      "position": [
+        3.0500000000000007,
+        2.704,
+        -4.575
+      ],
+      "state": "NORMAL",
+      "shadow": true,
+      "warmth": 0.017739672409972734,
+      "room": "office_core"
+    },
+    {
+      "id": "m4_f09",
+      "variant": "fixture_prismatic",
+      "position": [
+        4.27,
+        2.704,
+        -7.625
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.05279200005790753,
+      "room": "office_core",
+      "circuit": "office",
+      "unpowered": "OFF"
+    },
+    {
+      "id": "m4_f10",
+      "variant": "fixture_prismatic",
+      "position": [
+        4.27,
+        2.704,
+        -13.115
+      ],
+      "state": "NORMAL",
+      "shadow": false,
+      "warmth": 0.040047951824946006,
+      "room": "office_core"
+    },
+    {
+      "id": "arrival_1_2",
+      "variant": "fixture_prismatic",
+      "position": [
+        0.6100000000000001,
+        2.704,
+        7.014999999999999
+      ],
+      "state": "NORMAL",
+      "room": "arrival",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "arrival_4_7",
+      "variant": "fixture_prismatic",
+      "position": [
+        4.2700000000000005,
+        2.704,
+        3.964999999999999
+      ],
+      "state": "NORMAL",
+      "room": "arrival",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "exit_0_1",
+      "variant": "fixture_prismatic",
+      "position": [
+        1.83,
+        2.704,
+        10.065000000000001
+      ],
+      "state": "NORMAL",
+      "room": "exit",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "west_return_0_4",
+      "variant": "fixture_prismatic",
+      "position": [
+        -7.929999999999999,
+        2.704,
+        -12.504999999999999
+      ],
+      "state": "WEAK",
+      "room": "west_return",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "west_return_1_11",
+      "variant": "fixture_prismatic",
+      "position": [
+        -6.709999999999999,
+        2.704,
+        -16.775
+      ],
+      "state": "NORMAL",
+      "room": "west_return",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "archive_1_3",
+      "variant": "fixture_prismatic",
+      "position": [
+        -6.709999999999999,
+        2.704,
+        -20.435000000000002
+      ],
+      "state": "NORMAL",
+      "room": "archive",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "archive_2_9",
+      "variant": "fixture_prismatic",
+      "position": [
+        -5.489999999999999,
+        2.704,
+        -24.095
+      ],
+      "state": "NORMAL",
+      "room": "archive",
+      "warmth": 0.035,
+      "shadow": false,
+      "circuit": "office",
+      "unpowered": "WEAK"
+    },
+    {
+      "id": "office_switch_1_3",
+      "variant": "fixture_prismatic",
+      "position": [
+        -1.83,
+        2.704,
+        -20.435000000000002
+      ],
+      "state": "NORMAL",
+      "room": "office_switch",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "office_switch_2_9",
+      "variant": "fixture_prismatic",
+      "position": [
+        -0.6100000000000003,
+        2.704,
+        -24.095
+      ],
+      "state": "NORMAL",
+      "room": "office_switch",
+      "warmth": 0.035,
+      "shadow": false,
+      "circuit": "office",
+      "unpowered": "OFF"
+    },
+    {
+      "id": "service_1_2",
+      "variant": "fixture_prismatic",
+      "position": [
+        11.59,
+        2.464,
+        -6.404999999999999
+      ],
+      "state": "NORMAL",
+      "room": "service",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "service_4_8",
+      "variant": "fixture_prismatic",
+      "position": [
+        15.25,
+        2.464,
+        -10.065
+      ],
+      "state": "WEAK",
+      "room": "service",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "service_bypass_1_9",
+      "variant": "fixture_prismatic",
+      "position": [
+        18.909999999999997,
+        2.464,
+        -10.675
+      ],
+      "state": "NORMAL",
+      "room": "service_bypass",
+      "warmth": 0.035,
+      "shadow": false,
+      "circuit": "service",
+      "unpowered": "OFF"
+    },
+    {
+      "id": "service_bypass_2_2",
+      "variant": "fixture_prismatic",
+      "position": [
+        20.13,
+        2.464,
+        -6.404999999999999
+      ],
+      "state": "NORMAL",
+      "room": "service_bypass",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "blackout_1_3",
+      "variant": "fixture_prismatic",
+      "position": [
+        14.03,
+        2.464,
+        -14.334999999999999
+      ],
+      "state": "OFF",
+      "room": "blackout",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "blackout_2_10",
+      "variant": "fixture_prismatic",
+      "position": [
+        15.25,
+        2.464,
+        -18.605
+      ],
+      "state": "OFF",
+      "room": "blackout",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "service_switch_1_3",
+      "variant": "fixture_prismatic",
+      "position": [
+        18.909999999999997,
+        2.464,
+        -14.334999999999999
+      ],
+      "state": "OFF",
+      "room": "service_switch",
+      "warmth": 0.035,
+      "shadow": false
+    },
+    {
+      "id": "service_switch_2_10",
+      "variant": "fixture_prismatic",
+      "position": [
+        20.13,
+        2.464,
+        -18.605
+      ],
+      "state": "NORMAL",
+      "room": "service_switch",
+      "warmth": 0.035,
+      "shadow": false,
+      "circuit": "service",
+      "unpowered": "OFF"
+    }
+  ],
+  "collision_boxes": [
+    {
+      "name": "ReusedM4_M4_ContinuousCarpet",
+      "room": "office_core",
+      "center": [
+        0.0,
+        -0.041999999433755875,
+        -7.320000171661377
+      ],
+      "size": [
+        12.199999809265137,
+        0.08399999886751175,
+        14.640000343322754
+      ]
+    },
+    {
+      "name": "ReusedM4_SouthBlank_SouthBlank_PaperedShell",
+      "room": "office_core",
+      "center": [
+        -2.43999981880188,
+        1.3600000143051147,
+        -0.0
+      ],
+      "size": [
+        7.320000171661377,
+        2.7200000286102295,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "ReusedM4_SouthReturn_SouthReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        4.880000114440918,
+        1.3600000143051147,
+        -0.0
+      ],
+      "size": [
+        2.440000295639038,
+        2.7200000286102295,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "ReusedM4_ArrivalOpening_Header",
+      "room": "office_core",
+      "center": [
+        2.440000057220459,
+        2.5850000381469727,
+        -0.0
+      ],
+      "size": [
+        2.4600000381469727,
+        0.26999998092651367,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthPortal_NorthPortal_Pier",
+      "room": "office_core",
+      "center": [
+        -4.880000114440918,
+        1.3600000143051147,
+        -14.640000343322754
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthPortal_NorthPortal_Pier.001",
+      "room": "office_core",
+      "center": [
+        2.384185791015625e-07,
+        1.3600000143051147,
+        -14.640000343322754
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthPortal_NorthPortal_Lintel",
+      "room": "office_core",
+      "center": [
+        -2.43999981880188,
+        2.5850000381469727,
+        -14.640000343322754
+      ],
+      "size": [
+        2.452000141143799,
+        0.26999998092651367,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthPortal_NorthPortal_HeaderBead",
+      "room": "office_core",
+      "center": [
+        -2.440000057220459,
+        2.4489998817443848,
+        -14.555999755859375
+      ],
+      "size": [
+        2.4599997997283936,
+        0.016000032424926758,
+        0.012000083923339844
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthBlank_NorthBlank_PaperedShell",
+      "room": "office_core",
+      "center": [
+        3.6600003242492676,
+        1.3600000143051147,
+        -14.640000343322754
+      ],
+      "size": [
+        4.880000114440918,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReusedM4_EastFront_EastFront_PaperedShell",
+      "room": "office_core",
+      "center": [
+        6.09999942779541,
+        1.3600000143051147,
+        -3.6600000858306885
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        7.320000171661377
+      ]
+    },
+    {
+      "name": "ReusedM4_EastRear_EastRear_PaperedShell",
+      "room": "office_core",
+      "center": [
+        6.09999942779541,
+        1.3600000143051147,
+        -12.200000762939453
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        4.880000114440918
+      ]
+    },
+    {
+      "name": "ReusedM4_EastOpening_Header",
+      "room": "office_core",
+      "center": [
+        6.099999904632568,
+        2.5850000381469727,
+        -8.539999961853027
+      ],
+      "size": [
+        0.15999984741210938,
+        0.26999998092651367,
+        2.460000514984131
+      ]
+    },
+    {
+      "name": "ReusedM4_OffsetPartition_OffsetPartition_PaperedShell",
+      "room": "office_core",
+      "center": [
+        -1.5250000953674316,
+        1.3600000143051147,
+        -6.099999904632568
+      ],
+      "size": [
+        4.269999980926514,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReusedM4_OffsetReturn_OffsetReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        0.60999995470047,
+        1.3600000143051147,
+        -7.319999694824219
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "ReusedM4_FrontOffsetColumn_column_061_WrappedPier",
+      "room": "office_core",
+      "center": [
+        -2.7899999618530273,
+        1.3600000143051147,
+        -3.4000000953674316
+      ],
+      "size": [
+        0.6100001335144043,
+        2.7200000286102295,
+        0.6100001335144043
+      ]
+    },
+    {
+      "name": "ReusedM4_FarColumn_column_086_WrappedPier",
+      "room": "office_core",
+      "center": [
+        3.799999952316284,
+        1.3600000143051147,
+        -11.039999961853027
+      ],
+      "size": [
+        0.8600001335144043,
+        2.7200000286102295,
+        0.8600006103515625
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthContinuationCarpet",
+      "room": "office_core",
+      "center": [
+        -2.440000057220459,
+        -0.041999999433755875,
+        -16.469999313354492
+      ],
+      "size": [
+        2.440000057220459,
+        0.08399999886751175,
+        3.659998893737793
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthLeftReturn_NorthLeftReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        -3.6600003242492676,
+        1.3600000143051147,
+        -16.470001220703125
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        3.660000801086426
+      ]
+    },
+    {
+      "name": "ReusedM4_NorthRightReturn_NorthRightReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        -1.2200000286102295,
+        1.3600000143051147,
+        -16.470001220703125
+      ],
+      "size": [
+        0.16000020503997803,
+        2.7200000286102295,
+        3.660000801086426
+      ]
+    },
+    {
+      "name": "ReusedM4_EastContinuationCarpet",
+      "room": "office_core",
+      "center": [
+        7.930000305175781,
+        -0.041999999433755875,
+        -8.539999961853027
+      ],
+      "size": [
+        3.6600003242492676,
+        0.08399999886751175,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "ReusedM4_EastLeftReturn_EastLeftReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        7.930000305175781,
+        1.3600000143051147,
+        -7.320000171661377
+      ],
+      "size": [
+        3.6600003242492676,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReusedM4_EastRightReturn_EastRightReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        7.930000305175781,
+        1.3600000143051147,
+        -9.760000228881836
+      ],
+      "size": [
+        3.6600003242492676,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReusedM4_EntryCarpet",
+      "room": "office_core",
+      "center": [
+        2.440000057220459,
+        -0.041999999433755875,
+        1.2200000286102295
+      ],
+      "size": [
+        2.440000057220459,
+        0.08399999886751175,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "ReusedM4_EntryLeftReturn_EntryLeftReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        1.2200000286102295,
+        1.3600000143051147,
+        1.2200000286102295
+      ],
+      "size": [
+        0.16000020503997803,
+        2.7200000286102295,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "ReusedM4_EntryRightReturn_EntryRightReturn_PaperedShell",
+      "room": "office_core",
+      "center": [
+        3.6599998474121094,
+        1.3600000143051147,
+        1.2200000286102295
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "WestFrontRetained_WestFrontRetained_PaperedShell",
+      "room": "office_core",
+      "center": [
+        -6.100000381469727,
+        1.3600000143051147,
+        -4.880000114440918
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        9.760000228881836
+      ]
+    },
+    {
+      "name": "WestRearRetained_WestRearRetained_PaperedShell",
+      "room": "office_core",
+      "center": [
+        -6.099999904632568,
+        1.3600000143051147,
+        -13.420000076293945
+      ],
+      "size": [
+        0.15999984741210938,
+        2.7200000286102295,
+        2.440000534057617
+      ]
+    },
+    {
+      "name": "ServiceDoor_Lintel",
+      "room": "office_core",
+      "center": [
+        9.760000228881836,
+        2.615000009536743,
+        -8.539999961853027
+      ],
+      "size": [
+        0.15999984741210938,
+        0.21000003814697266,
+        2.460000514984131
+      ]
+    },
+    {
+      "name": "arrival_Floor",
+      "room": "arrival",
+      "center": [
+        2.440000057220459,
+        -0.041999999433755875,
+        5.489999771118164
+      ],
+      "size": [
+        7.319999694824219,
+        0.08399999886751175,
+        6.099999904632568
+      ]
+    },
+    {
+      "name": "ArrivalWest_ArrivalWest_PaperedShell",
+      "room": "arrival",
+      "center": [
+        -1.220000147819519,
+        1.3600000143051147,
+        5.489999771118164
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        6.099999904632568
+      ]
+    },
+    {
+      "name": "ArrivalEast_ArrivalEast_PaperedShell",
+      "room": "arrival",
+      "center": [
+        6.09999942779541,
+        1.3600000143051147,
+        5.489999771118164
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        6.099999904632568
+      ]
+    },
+    {
+      "name": "ArrivalNorthL_ArrivalNorthL_PaperedShell",
+      "room": "arrival",
+      "center": [
+        0.0,
+        1.3600000143051147,
+        2.440000057220459
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ArrivalNorthR_ArrivalNorthR_PaperedShell",
+      "room": "arrival",
+      "center": [
+        4.880000114440918,
+        1.3600000143051147,
+        2.440000057220459
+      ],
+      "size": [
+        2.440000295639038,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ExitSouthL_ExitSouthL_PaperedShell",
+      "room": "arrival",
+      "center": [
+        0.0,
+        1.3600000143051147,
+        8.539999961853027
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ExitSouthR_ExitSouthR_PaperedShell",
+      "room": "arrival",
+      "center": [
+        4.880000114440918,
+        1.3600000143051147,
+        8.539999961853027
+      ],
+      "size": [
+        2.440000295639038,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "Exit_Lintel",
+      "room": "arrival",
+      "center": [
+        2.440000057220459,
+        2.615000009536743,
+        8.539999961853027
+      ],
+      "size": [
+        2.4600000381469727,
+        0.21000003814697266,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "exit_Floor",
+      "room": "exit",
+      "center": [
+        2.440000057220459,
+        -0.041999999433755875,
+        9.760000228881836
+      ],
+      "size": [
+        2.440000057220459,
+        0.08399999886751175,
+        2.439999580383301
+      ]
+    },
+    {
+      "name": "ExitWest_ExitWest_PaperedShell",
+      "room": "exit",
+      "center": [
+        1.2200000286102295,
+        1.3600000143051147,
+        9.75999927520752
+      ],
+      "size": [
+        0.16000020503997803,
+        2.7200000286102295,
+        2.440000534057617
+      ]
+    },
+    {
+      "name": "ExitEast_ExitEast_PaperedShell",
+      "room": "exit",
+      "center": [
+        3.6599998474121094,
+        1.3600000143051147,
+        9.75999927520752
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        2.440000534057617
+      ]
+    },
+    {
+      "name": "ExitBack_ExitBack_PaperedShell",
+      "room": "exit",
+      "center": [
+        2.440000057220459,
+        1.3600000143051147,
+        10.979999542236328
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "west_return_Floor",
+      "room": "west_return",
+      "center": [
+        -7.319999694824219,
+        -0.041999999433755875,
+        -14.029999732971191
+      ],
+      "size": [
+        2.440000057220459,
+        0.08399999886751175,
+        8.539999008178711
+      ]
+    },
+    {
+      "name": "ReturnWest_ReturnWest_PaperedShell",
+      "room": "west_return",
+      "center": [
+        -8.539999961853027,
+        1.3600000143051147,
+        -14.030000686645508
+      ],
+      "size": [
+        0.15999984741210938,
+        2.7200000286102295,
+        8.540000915527344
+      ]
+    },
+    {
+      "name": "ReturnSouth_ReturnSouth_PaperedShell",
+      "room": "west_return",
+      "center": [
+        -7.319999694824219,
+        1.3600000143051147,
+        -9.760000228881836
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ReturnEast_ReturnEast_PaperedShell",
+      "room": "west_return",
+      "center": [
+        -6.099999904632568,
+        1.3600000143051147,
+        -16.470001220703125
+      ],
+      "size": [
+        0.15999984741210938,
+        2.7200000286102295,
+        3.660000801086426
+      ]
+    },
+    {
+      "name": "WestDoor_Lintel",
+      "room": "west_return",
+      "center": [
+        -6.099999904632568,
+        2.615000009536743,
+        -10.979999542236328
+      ],
+      "size": [
+        0.15999984741210938,
+        0.21000003814697266,
+        2.4600000381469727
+      ]
+    },
+    {
+      "name": "archive_Floor",
+      "room": "archive",
+      "center": [
+        -6.099999904632568,
+        -0.041999999433755875,
+        -21.959999084472656
+      ],
+      "size": [
+        4.880000114440918,
+        0.08399999886751175,
+        7.320001602172852
+      ]
+    },
+    {
+      "name": "ArchiveWest_ArchiveWest_PaperedShell",
+      "room": "archive",
+      "center": [
+        -8.539999961853027,
+        1.3600000143051147,
+        -21.959999084472656
+      ],
+      "size": [
+        0.15999984741210938,
+        2.7200000286102295,
+        7.319999694824219
+      ]
+    },
+    {
+      "name": "ArchiveNorth_ArchiveNorth_PaperedShell",
+      "room": "archive",
+      "center": [
+        -6.099999904632568,
+        1.3600000143051147,
+        -25.6200008392334
+      ],
+      "size": [
+        4.880000114440918,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ArchiveSouth_ArchiveSouth_PaperedShell",
+      "room": "archive",
+      "center": [
+        -4.880000114440918,
+        1.3600000143051147,
+        -18.299999237060547
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ArchiveDivideS_ArchiveDivideS_PaperedShell",
+      "room": "archive",
+      "center": [
+        -3.6600003242492676,
+        1.3600000143051147,
+        -19.520000457763672
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        2.440000534057617
+      ]
+    },
+    {
+      "name": "ArchiveDivideN_ArchiveDivideN_PaperedShell",
+      "room": "archive",
+      "center": [
+        -3.6600003242492676,
+        1.3600000143051147,
+        -24.400001525878906
+      ],
+      "size": [
+        0.16000008583068848,
+        2.7200000286102295,
+        2.440000534057617
+      ]
+    },
+    {
+      "name": "Column_archive_Column_WrappedPier",
+      "room": "archive",
+      "center": [
+        -6.650000095367432,
+        1.3600000143051147,
+        -22.649999618530273
+      ],
+      "size": [
+        0.6099996566772461,
+        2.7200000286102295,
+        0.6100006103515625
+      ]
+    },
+    {
+      "name": "office_switch_Floor",
+      "room": "office_switch",
+      "center": [
+        -1.2200000286102295,
+        -0.041999999433755875,
+        -21.959999084472656
+      ],
+      "size": [
+        4.880000114440918,
+        0.08399999886751175,
+        7.320001602172852
+      ]
+    },
+    {
+      "name": "OfficeNorth_OfficeNorth_PaperedShell",
+      "room": "office_switch",
+      "center": [
+        -1.2200000286102295,
+        1.3600000143051147,
+        -25.6200008392334
+      ],
+      "size": [
+        4.880000114440918,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "OfficeEast_OfficeEast_PaperedShell",
+      "room": "office_switch",
+      "center": [
+        1.21999990940094,
+        1.3600000143051147,
+        -21.959999084472656
+      ],
+      "size": [
+        0.16000032424926758,
+        2.7200000286102295,
+        7.319999694824219
+      ]
+    },
+    {
+      "name": "OfficeSouth_OfficeSouth_PaperedShell",
+      "room": "office_switch",
+      "center": [
+        0.0,
+        1.3600000143051147,
+        -18.299999237060547
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "OfficeScreen_OfficeScreen_PaperedShell",
+      "room": "office_switch",
+      "center": [
+        0.0,
+        1.3600000143051147,
+        -21.959999084472656
+      ],
+      "size": [
+        2.440000057220459,
+        2.7200000286102295,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "service_Floor",
+      "room": "service",
+      "center": [
+        13.420000076293945,
+        -0.041999999433755875,
+        -8.539999961853027
+      ],
+      "size": [
+        7.319999694824219,
+        0.08399999886751175,
+        7.319999694824219
+      ]
+    },
+    {
+      "name": "ServiceWestS_ServiceWestS_PaperedShell",
+      "room": "service",
+      "center": [
+        9.760000228881836,
+        1.2400000095367432,
+        -6.100000381469727
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "ServiceWestN_ServiceWestN_PaperedShell",
+      "room": "service",
+      "center": [
+        9.760000228881836,
+        1.2400000095367432,
+        -10.980000495910645
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        2.440000534057617
+      ]
+    },
+    {
+      "name": "ServiceSouth_ServiceSouth_PaperedShell",
+      "room": "service",
+      "center": [
+        13.420000076293945,
+        1.2400000095367432,
+        -4.880000114440918
+      ],
+      "size": [
+        7.319999694824219,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ServiceEastS_ServiceEastS_PaperedShell",
+      "room": "service",
+      "center": [
+        17.079999923706055,
+        1.2400000095367432,
+        -6.100000381469727
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        2.440000057220459
+      ]
+    },
+    {
+      "name": "ServiceEastN_ServiceEastN_PaperedShell",
+      "room": "service",
+      "center": [
+        17.079999923706055,
+        1.2400000095367432,
+        -10.980000495910645
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        2.440000534057617
+      ]
+    },
+    {
+      "name": "ServiceNorthL_ServiceNorthL_PaperedShell",
+      "room": "service",
+      "center": [
+        11.59000015258789,
+        1.2400000095367432,
+        -12.199999809265137
+      ],
+      "size": [
+        3.6599998474121094,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "ServiceNorthR_ServiceNorthR_PaperedShell",
+      "room": "service",
+      "center": [
+        16.469999313354492,
+        1.2400000095367432,
+        -12.199999809265137
+      ],
+      "size": [
+        1.2200002670288086,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "service_bypass_Floor",
+      "room": "service_bypass",
+      "center": [
+        19.520000457763672,
+        -0.041999999433755875,
+        -8.539999961853027
+      ],
+      "size": [
+        4.879999160766602,
+        0.08399999886751175,
+        7.319999694824219
+      ]
+    },
+    {
+      "name": "BypassSouth_BypassSouth_PaperedShell",
+      "room": "service_bypass",
+      "center": [
+        19.520000457763672,
+        1.2400000095367432,
+        -4.880000114440918
+      ],
+      "size": [
+        4.879999160766602,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "BypassEast_BypassEast_PaperedShell",
+      "room": "service_bypass",
+      "center": [
+        21.959999084472656,
+        1.2400000095367432,
+        -8.540000915527344
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        7.320000648498535
+      ]
+    },
+    {
+      "name": "BypassNorthL_BypassNorthL_PaperedShell",
+      "room": "service_bypass",
+      "center": [
+        17.689998626708984,
+        1.2400000095367432,
+        -12.199999809265137
+      ],
+      "size": [
+        1.2199993133544922,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "BypassNorthR_BypassNorthR_PaperedShell",
+      "room": "service_bypass",
+      "center": [
+        21.349998474121094,
+        1.2400000095367432,
+        -12.199999809265137
+      ],
+      "size": [
+        1.2199993133544922,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "BypassScreen_BypassScreen_PaperedShell",
+      "room": "service_bypass",
+      "center": [
+        20.740001678466797,
+        1.2400000095367432,
+        -8.539999961853027
+      ],
+      "size": [
+        2.440000534057617,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "blackout_Floor",
+      "room": "blackout",
+      "center": [
+        14.639999389648438,
+        -0.041999999433755875,
+        -16.469999313354492
+      ],
+      "size": [
+        4.880000114440918,
+        0.08399999886751175,
+        8.539999961853027
+      ]
+    },
+    {
+      "name": "BlackoutWest_BlackoutWest_PaperedShell",
+      "room": "blackout",
+      "center": [
+        12.199999809265137,
+        1.2400000095367432,
+        -16.469999313354492
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        8.539999961853027
+      ]
+    },
+    {
+      "name": "BlackoutNorth_BlackoutNorth_PaperedShell",
+      "room": "blackout",
+      "center": [
+        14.639999389648438,
+        1.2400000095367432,
+        -20.739999771118164
+      ],
+      "size": [
+        4.880000114440918,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    },
+    {
+      "name": "BlackoutDivideS_BlackoutDivideS_PaperedShell",
+      "room": "blackout",
+      "center": [
+        17.079999923706055,
+        1.2400000095367432,
+        -14.639999389648438
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        4.880000114440918
+      ]
+    },
+    {
+      "name": "BlackoutDivideN_BlackoutDivideN_PaperedShell",
+      "room": "blackout",
+      "center": [
+        17.079999923706055,
+        1.2400000095367432,
+        -20.130001068115234
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        1.2199993133544922
+      ]
+    },
+    {
+      "name": "Column_blackout_Column_WrappedPier",
+      "room": "blackout",
+      "center": [
+        14.699999809265137,
+        1.3600000143051147,
+        -16.75
+      ],
+      "size": [
+        0.6100006103515625,
+        2.7200000286102295,
+        0.6100006103515625
+      ]
+    },
+    {
+      "name": "service_switch_Floor",
+      "room": "service_switch",
+      "center": [
+        19.520000457763672,
+        -0.041999999433755875,
+        -16.469999313354492
+      ],
+      "size": [
+        4.879999160766602,
+        0.08399999886751175,
+        8.539999961853027
+      ]
+    },
+    {
+      "name": "SwitchEast_SwitchEast_PaperedShell",
+      "room": "service_switch",
+      "center": [
+        21.959999084472656,
+        1.2400000095367432,
+        -16.469999313354492
+      ],
+      "size": [
+        0.15999984741210938,
+        2.4800000190734863,
+        8.539999961853027
+      ]
+    },
+    {
+      "name": "SwitchNorth_SwitchNorth_PaperedShell",
+      "room": "service_switch",
+      "center": [
+        19.520000457763672,
+        1.2400000095367432,
+        -20.739999771118164
+      ],
+      "size": [
+        4.879999160766602,
+        2.4800000190734863,
+        0.15999984741210938
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "id": "office_door",
+      "position": [
+        -2.44,
+        0,
+        -14.64
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "west_door",
+      "position": [
+        -6.1,
+        0,
+        -10.98
+      ],
+      "yaw": 1.5707963267948966
+    },
+    {
+      "id": "service_door",
+      "position": [
+        9.76,
+        0,
+        -8.54
+      ],
+      "yaw": 1.5707963267948966
+    },
+    {
+      "id": "blackout_door",
+      "position": [
+        14.64,
+        0,
+        -12.2
+      ],
+      "yaw": 0
+    },
+    {
+      "id": "bypass_door",
+      "position": [
+        17.08,
+        0,
+        -8.54
+      ],
+      "yaw": 1.5707963267948966
+    },
+    {
+      "id": "exit_door",
+      "position": [
+        2.44,
+        0,
+        8.54
+      ],
+      "yaw": 0
+    }
+  ]
+}

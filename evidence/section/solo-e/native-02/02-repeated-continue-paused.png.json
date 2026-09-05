@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 22665.71662623,
+  "acquired_utc": "2026-09-05T02:08:37.514+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-02/02-repeated-continue-paused.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "f6cf5f53c157b19dcd1d0e84373385f68254167e0eb026ad7e7a4026569a683f",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 191373
+  },
+  "x_readback_ms": 40.58273599730455
+}

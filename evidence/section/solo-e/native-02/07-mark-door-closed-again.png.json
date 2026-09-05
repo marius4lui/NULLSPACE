@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 23502.628190308,
+  "acquired_utc": "2026-09-05T02:22:34.426+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-02/07-mark-door-closed-again.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "fa837e65caa527d31cec6b2884eb88265c8c8b82115d352e56989fb5053a3d71",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 191373
+  },
+  "x_readback_ms": 23.9201009972021
+}

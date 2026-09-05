@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 21174.829549454,
+  "acquired_utc": "2026-09-05T01:43:46.627+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-01/09-office-powered.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "a8227239f94ef6d6ace0a8654deaa86c17c271eb2da034b24f497c0704347ab8",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 184069
+  },
+  "x_readback_ms": 33.77023299981374
+}

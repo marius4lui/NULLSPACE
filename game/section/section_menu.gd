@@ -16,6 +16,9 @@ var _armed: bool = false
 var _draft: Dictionary = {}
 var _hint_time: float = 0.0
 var _notice: String = ""
+var objective: String = ""
+var _injury: Label
+var _injury_time: float = 0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -61,6 +64,8 @@ func _ready() -> void:
 	_dot.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_ammo = _hud_label(Control.PRESET_BOTTOM_RIGHT, Vector2(-270, -72), Vector2(230, 36))
 	_ammo.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	_injury = _hud_label(Control.PRESET_BOTTOM_LEFT, Vector2(40, -72), Vector2(600, 36))
+	_injury.add_theme_color_override("font_color", Color(.80, .61, .48))
 	_stamina = ProgressBar.new()
 	_stamina.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
 	_stamina.position += Vector2(-85, -44)
@@ -85,7 +90,9 @@ func _show_screen() -> void:
 	_dot.visible = playing and bool(SettingsManager.get_value("center_dot"))
 	_stamina.visible = false
 	_ammo.visible = playing and _armed
+	_injury.visible = playing
 	if playing:
+		_notice = ""
 		return
 	_label("NULLSPACE", 58)
 	match GameFlow.state:
@@ -98,12 +105,13 @@ func _show_screen() -> void:
 			_button("Controls", _controls)
 			_button("Credits", _credits)
 			_button("Quit", func() -> void: quit_requested.emit())
-			_label("Development build — room, pistol, Listener and tactical door.\nThe complete two-switch escape is still under construction.", 18)
+			_label("Development build — two-circuit escape.\nComplete-map playtesting and polish in progress.", 18)
 		NullGameFlow.State.PAUSED:
 			_label("Paused")
 			_button("Resume", func() -> void: GameFlow.resume_game())
 			_button("Settings", func() -> void: GameFlow.open_settings())
 			_button("Return to title", func() -> void: GameFlow.return_to_menu())
+			_label(objective, 20)
 		NullGameFlow.State.SETTINGS:
 			_settings()
 		NullGameFlow.State.DEAD:
@@ -125,6 +133,7 @@ func _settings() -> void:
 	_option("Resolution", "resolution", [[1280, 720], [1600, 900], [1920, 1080]], ["1280 × 720", "1600 × 900", "1920 × 1080"])
 	_option("Display", "display_mode", ["windowed", "fullscreen"], ["Windowed", "Fullscreen"])
 	_toggle("VSync", "vsync")
+	_option("Frame-rate limit", "fps_limit", [60, 90, 120, 30, 0], ["60 FPS", "90 FPS", "120 FPS", "30 FPS", "Unlimited"])
 	_number("Master volume", "master_volume", 0.0, 1.0, 0.05)
 	_number("Ambience", "ambience_volume", 0.0, 1.0, 0.05)
 	_number("Effects", "effects_volume", 0.0, 1.0, 0.05)
@@ -192,6 +201,7 @@ func _credits() -> void:
 		_show_screen()
 	else:
 		_label("You found the way out.")
+		_label("For the first time, there is no hum.", 22)
 		_button("Return to title", func() -> void: GameFlow.return_to_menu())
 
 func _label(text: String, font_size: int = 24) -> Label:
@@ -240,6 +250,13 @@ func set_stamina(value: float) -> void:
 	_stamina.visible = value < 0.98
 	_stamina.value = value
 
+func show_injury() -> void:
+	_injury_time = 4.0
+
+func set_health(value: float) -> void:
+	_injury.text = "Injured — break sight and get away." if value < 50 else ""
+	_injury.modulate.a = 1.0 if _injury_time > 0 else .5
+
 func set_ammunition(loaded: int, spare: int, armed: bool) -> void:
 	_armed = armed
 	_ammo.text = "%02d   /   %02d" % [loaded, spare]
@@ -247,5 +264,6 @@ func set_ammunition(loaded: int, spare: int, armed: bool) -> void:
 
 func _process(delta: float) -> void:
 	if GameFlow.state == NullGameFlow.State.PLAYING:
+		_injury_time = maxf(0, _injury_time - delta)
 		_hint_time = maxf(0.0, _hint_time - delta)
 		_hint.modulate.a = minf(_hint_time, 1.0)

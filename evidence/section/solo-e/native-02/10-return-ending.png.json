@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 23554.159450478,
+  "acquired_utc": "2026-09-05T02:23:25.957+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-02/10-return-ending.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "61a090ab7e16edfe416bb2959b0ac070053e1bc98def261e49fad3c428a76d44",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 191373
+  },
+  "x_readback_ms": 34.943643000588054
+}

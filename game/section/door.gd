@@ -7,6 +7,7 @@ const FRAME: PackedScene = preload("res://assets/doors/door_frame.glb")
 var player: SectionPlayer
 var listener: Listener
 var opened: bool = false
+var locked: bool = false
 var door_id: String = "office_door"
 var angle: float = 0
 var _target: float = 0
@@ -67,6 +68,7 @@ func _ready() -> void:
 	add_child(_audio)
 
 func prompt() -> String:
+	if locked: return "Exit unpowered — restore OFFICE A and SERVICE B"
 	if opened and _occupied():
 		return "Doorway obstructed"
 	return "E  ·  " + ("Close door" if opened else "Open door")
@@ -79,6 +81,7 @@ func open_for_listener(chasing: bool) -> void:
 		set_open(true, listener.global_position, chasing)
 
 func set_open(value: bool, actor: Vector3, fast: bool = false) -> void:
+	if locked: return
 	if opened == value:
 		return
 	if not value and _occupied():

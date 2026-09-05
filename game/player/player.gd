@@ -4,6 +4,7 @@ extends CharacterBody3D
 
 signal prompt_changed(text: String)
 signal flashlight_changed(enabled: bool)
+signal damaged
 
 const STANDING_HEIGHT: float = 1.78
 const CROUCHED_HEIGHT: float = 1.10
@@ -178,6 +179,7 @@ func take_damage(amount: float) -> void:
 	var actual: float = minf(amount, health)
 	health -= actual
 	_injury = 0.32
+	damaged.emit()
 	EventHub.gameplay_metric.emit(&"damage", {"amount": actual})
 	if health <= 0.0:
 		GameFlow.die()

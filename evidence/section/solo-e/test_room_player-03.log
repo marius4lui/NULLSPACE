@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"checks":16,"failures":["Concrete scene acknowledges safe restore","Original carpet supports player"],"scope":"automated headless physics; not subjective play/audio","suite":"integrated room/player"}
+BUNDLED_FONT_NOTICE {"name":"DroidSans font","parts":[{"copyright":["2008, The Android Open Source Project"],"files":["thirdparty/fonts/DroidSans*.woff2"],"license":"Apache-2.0"}]}
+BUNDLED_FONT_NOTICE {"name":"Inter font","parts":[{"copyright":["2016, The Inter Project Authors"],"files":["thirdparty/fonts/Inter*.woff2"],"license":"OFL-1.1"}]}
+BUNDLED_FONT_NOTICE {"name":"JetBrains Mono font","parts":[{"copyright":["2020, JetBrains s.r.o."],"files":["thirdparty/fonts/JetBrainsMono_Regular.woff2"],"license":"OFL-1.1"}]}
+BUNDLED_FONT_NOTICE {"name":"Noto Sans font","parts":[{"copyright":["2012, Google Inc."],"files":["thirdparty/fonts/NotoSans*.woff2"],"license":"OFL-1.1"}]}
+BUNDLED_FONT_NOTICE {"name":"Open Sans font","parts":[{"copyright":["2020, The Open Sans Project Authors"],"files":["thirdparty/fonts/OpenSans*.woff2"],"license":"OFL-1.1"}]}
+BUNDLED_FONT_NOTICE {"name":"Vazirmatn font","parts":[{"copyright":["2015, The Vazirmatn Project Authors."],"files":["thirdparty/fonts/Vazirmatn*.woff2"],"license":"OFL-1.1"}]}

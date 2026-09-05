@@ -2,14 +2,21 @@ class_name NullspaceSection
 extends Node3D
 ## The actual playable scene. New game systems extend this scene, not a second preview.
 
-const ROOM: PackedScene = preload("res://environment/m4_reference_room.tscn")
+const ROOM: PackedScene = preload("res://environment/short_map.tscn")
 const PLAYER: PackedScene = preload("res://player/player.tscn")
 const Menu = preload("res://section/section_menu.gd")
-const ARRIVAL := Transform3D(Basis(Vector3.UP, 0.44), Vector3(2.70, 0.025, -0.85))
+const ARRIVAL := Transform3D(Basis(Vector3.UP, 2.43), Vector3(4.8, 0.025, 5.8))
+const OFFICE_SAFE := Transform3D(Basis(Vector3.UP, 2.74), Vector3(-0.3, 0.025, -23.55))
+const SERVICE_SAFE := Transform3D(Basis(Vector3.UP, PI / 2), Vector3(19.8, 0.025, -18.2))
+const OFFICE_RESET := Vector3(-7.2, .03, -22.4)
+const SERVICE_RESET := Vector3(19.6, .03, -16.2)
 
-var room: NullspaceM4ReferenceRoom
+var room: ShortMap
 var player: SectionPlayer
-var light_switch: SectionLightSwitch
+var office_relay: PowerRelay
+var service_relay: PowerRelay
+var exit_door: SectionDoor
+var exit_status: Label3D
 var menu: NullspaceSectionMenu
 var pistol: SectionPistol
 var pistol_pickup: PistolPickup
@@ -20,7 +27,6 @@ var sound: SectionSound
 var doors: Array[SectionDoor] = []
 var _noise_sequence: int = 0
 var _environment: Environment
-var _fixture_states: Array[int] = []
 var _snapshot: Dictionary = {}
 var _frame_samples: Array[float] = []
 var _sample_time: float = 0.0
@@ -35,15 +41,14 @@ func _ready() -> void:
 	var world := WorldEnvironment.new()
 	world.environment = _environment
 	add_child(world)
-	room = ROOM.instantiate() as NullspaceM4ReferenceRoom
+	room = ROOM.instantiate() as ShortMap
 	room.process_mode = Node.PROCESS_MODE_PAUSABLE
 	add_child(room)
-	for fixture: NullspaceFluorescentFixture in room.fixtures:
-		_fixture_states.append(fixture.state)
 	_bake_navigation()
 	player = PLAYER.instantiate() as SectionPlayer
 	player.transform = ARRIVAL
 	add_child(player)
+	room.player = player
 	shot_effects = PistolEffects.new()
 	shot_effects.process_mode = Node.PROCESS_MODE_PAUSABLE
 	add_child(shot_effects)
@@ -56,30 +61,14 @@ func _ready() -> void:
 	pistol_pickup.position = Vector3(3.60, 0.008, -3.00)
 	add_child(pistol_pickup)
 	pistol_pickup.collected.connect(_on_pistol_collected)
-	light_switch = SectionLightSwitch.new()
-	light_switch.name = "LocalLightSwitch"
-	light_switch.position = Vector3(0.05, 1.45, -5.993)
-	add_child(light_switch)
-	light_switch.power_changed.connect(_on_local_power)
-	var plate_text := Label3D.new()
-	plate_text.text = "LOCAL LIGHTING"
-	plate_text.font_size = 24
-	plate_text.pixel_size = 0.0015
-	plate_text.modulate = Color(0.14, 0.15, 0.12)
-	plate_text.outline_size = 0
-	plate_text.position = Vector3(0, 0.23, 0)
-	light_switch.add_child(plate_text)
 	listener = Listener.new()
 	listener.player = player
 	listener.section = self
-	listener.position = Vector3(-4.3, 0.05, -11.3)
+	listener.position = OFFICE_RESET
+	listener.patrol = [OFFICE_RESET, Vector3(3, .03, -12), Vector3(12.6, .03, -8.2),
+		Vector3(19.4, .03, -7), Vector3(15.1, .03, -18.4)]
 	add_child(listener)
-	var door := SectionDoor.new()
-	door.player = player
-	door.listener = listener
-	door.position = Vector3(-2.44, 0, -14.64)
-	add_child(door)
-	doors.append(door)
+	_create_objectives()
 	EventHub.sound_emitted.connect(_propagate_noise)
 	sound = SectionSound.new()
 	sound.section = self
@@ -90,12 +79,67 @@ func _ready() -> void:
 	canvas.add_child(menu)
 	menu.quit_requested.connect(request_quit)
 	player.prompt_changed.connect(menu.set_prompt)
+	player.damaged.connect(menu.show_injury)
 	pistol.ammunition_changed.connect(menu.set_ammunition)
 	GameFlow.load_started.connect(_restore)
 	SettingsManager.settings_changed.connect(_apply_settings)
 	_apply_settings(SettingsManager.snapshot())
 	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(), true)
-	Telemetry.record(&"section_ready", {"room": "original_m4", "build_stage": "room_player"})
+	Telemetry.record(&"section_ready", {"map": "short-map-1", "build_stage": "two_switch_flow"})
+
+func _create_objectives() -> void:
+	for data: Dictionary in room.layout["doors"]:
+		var door := SectionDoor.new()
+		door.player = player
+		door.listener = listener
+		door.door_id = data["id"]
+		var at: Array = data["position"]
+		door.position = Vector3(at[0], at[1], at[2])
+		door.rotation.y = data["yaw"]
+		add_child(door)
+		doors.append(door)
+		if door.door_id == "exit_door":
+			exit_door = door
+			door.locked = true
+	office_relay = PowerRelay.new()
+	office_relay.position = Vector3(.1, 1.5, -25.51)
+	add_child(office_relay)
+	office_relay.power_changed.connect(func(_powered: bool) -> void: _on_relay_power("office"))
+	service_relay = PowerRelay.new()
+	service_relay.relay_id = "service"
+	service_relay.title = "SERVICE B"
+	service_relay.position = Vector3(21.85, 1.5, -19.1)
+	service_relay.rotation.y = -PI / 2
+	add_child(service_relay)
+	service_relay.power_changed.connect(func(_powered: bool) -> void: _on_relay_power("service"))
+	exit_status = _wall_sign("EXIT\nOFFICE A: OFFLINE\nSERVICE B: OFFLINE", Vector3(4.15, 1.65, 8.445), PI, 24)
+	_wall_sign("OFFICE A", Vector3(-2.44, 2.59, -14.535), 0, 26)
+	_wall_sign("SERVICE B", Vector3(5.99, 1.8, -6.6), -PI / 2, 28)
+	_wall_sign("EXIT", Vector3(3.55, 1.65, 1.5), -PI / 2, 30)
+	var exit_area := Area3D.new()
+	exit_area.collision_layer = 0
+	exit_area.collision_mask = 2
+	var shape := CollisionShape3D.new()
+	var box := BoxShape3D.new()
+	box.size = Vector3(2.1, 2, 1.25)
+	shape.shape = box
+	exit_area.position = Vector3(2.44, 1, 9.7)
+	exit_area.add_child(shape)
+	add_child(exit_area)
+	exit_area.body_entered.connect(func(body: Node3D) -> void:
+		if body == player: finish_escape())
+
+func _wall_sign(text: String, at: Vector3, yaw: float, size: int) -> Label3D:
+	var label := Label3D.new()
+	label.text = text
+	label.font_size = size
+	label.pixel_size = .0016
+	label.modulate = Color(.16, .19, .13)
+	label.outline_size = 0
+	label.position = at
+	label.rotation.y = yaw
+	add_child(label)
+	return label
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -107,6 +151,9 @@ func request_quit(code: int = 0) -> void:
 	_quitting = true
 	GameFlow.return_to_menu()
 	sound.shutdown()
+	for door: SectionDoor in doors: door._audio.stop()
+	office_relay.audio.stop()
+	service_relay.audio.stop()
 	shot_effects.clear()
 	pistol._exit_tree()
 	# AudioServer releases stopped loop playbacks on its next mix, including Dummy audio.
@@ -119,27 +166,52 @@ func _restore(snapshot: Dictionary, generation: int) -> void:
 	await get_tree().physics_frame
 	if generation != GameFlow.pending_generation:
 		return
-	var powered: bool = bool(snapshot["world"]["circuits"].get("arrival_lights", true))
-	light_switch.set_powered(powered)
-	_apply_local_power(powered)
+	office_relay.restore(snapshot["progress"]["relays"]["office"])
+	service_relay.restore(snapshot["progress"]["relays"]["service"])
+	_apply_power()
 	shot_effects.clear()
 	sound.reset()
 	pistol.restore(snapshot["inventory"]["weapons"]["pistol"])
 	pistol_pickup.set_consumed("arrival_pistol" in snapshot["world"]["consumed_pickups"])
-	listener.reset_at(Vector3(-4.3, 0.05, -11.3))
+	var anchor: Transform3D = ARRIVAL
+	var monster_anchor: Vector3 = OFFICE_RESET
+	if snapshot["checkpoint"]["player_anchor"] == "office_safe":
+		anchor = OFFICE_SAFE
+		monster_anchor = SERVICE_RESET
+	elif snapshot["checkpoint"]["player_anchor"] == "service_safe":
+		anchor = SERVICE_SAFE
+	listener.reset_at(monster_anchor)
 	for door: SectionDoor in doors:
 		door.restore(snapshot["world"]["doors"].get(door.door_id, "closed") == "open")
-	if not player.restore_at(ARRIVAL, snapshot["player"]):
-		GameFlow.fail_load(generation, "Arrival is obstructed. The checkpoint was not overwritten.")
+	if not player.restore_at(anchor, snapshot["player"]):
+		GameFlow.fail_load(generation, "Safe checkpoint is obstructed. The save was not overwritten.")
+		return
+	# Do not reactivate physics halfway through its query/step cycle. Native Continue
+	# with twelve animated door leaves exposed duplicate self-list entries there.
+	await get_tree().process_frame
+	if generation != GameFlow.pending_generation:
 		return
 	GameFlow.complete_load(generation)
-	menu.show_hint("Find your bearings.  WASD move · Shift sprint · Ctrl crouch\nF flashlight · E interact · Esc pause" + ("\nA security case lies to your right." if not pistol.owned else ""))
+	if snapshot["progress"]["ending"]:
+		GameFlow.end_campaign()
+	else:
+		menu.show_hint(_objective_hint() + "\nWASD move · Shift sprint · Ctrl crouch · F light · E interact · Esc pause")
 	Telemetry.record(&"section_restored", {"generation": generation, "position": [player.position.x, player.position.y, player.position.z]})
 
-func _on_local_power(enabled: bool) -> void:
-	_apply_local_power(enabled)
-	# Concrete local checkpoint binding; legacy schema fields are retained, not rewritten.
-	_snapshot["world"]["circuits"]["arrival_lights"] = enabled
+func _on_relay_power(id: String) -> void:
+	_snapshot["progress"]["relays"][id] = true
+	_apply_power()
+	player.health = 100.0
+	player.stamina = 1.0
+	_snapshot["checkpoint"]["id"] = id
+	_snapshot["checkpoint"]["room_id"] = id
+	_snapshot["checkpoint"]["player_anchor"] = id + "_safe"
+	_snapshot["checkpoint"]["monster_anchor"] = "service_reset" if id == "office" else "office_reset"
+	var result: StorageResult = _save_current()
+	menu.show_hint(_objective_hint() + ("\nYou steady your breathing. Checkpoint saved." if result.ok else "\nSave failed: " + result.message))
+	EventHub.objective_committed.emit(StringName(id))
+
+func _save_current() -> StorageResult:
 	_snapshot["player"]["health"] = player.health
 	_snapshot["player"]["stamina"] = player.stamina
 	_snapshot["player"]["flashlight_enabled"] = player.flashlight.visible
@@ -147,22 +219,38 @@ func _on_local_power(enabled: bool) -> void:
 	_snapshot["player"]["equipped_weapon"] = "pistol" if pistol.owned else ""
 	_snapshot["session"]["elapsed_seconds"] = SimulationClock.sample().elapsed_seconds
 	for door: SectionDoor in doors:
-		_snapshot["world"]["doors"][door.door_id] = "open" if door.opened else "closed"
-	var result: StorageResult = CheckpointSystem.commit_snapshot(_snapshot)
-	menu.show_hint("Local lighting " + ("restored." if enabled else "off.  F — flashlight.") + ("\nCheckpoint saved." if result.ok else "\nSave failed: " + result.message))
+		_snapshot["world"]["doors"][door.door_id] = "locked" if door.locked else ("open" if door.opened else "closed")
+	return CheckpointSystem.commit_snapshot(_snapshot)
 
 func _on_pistol_collected() -> void:
 	_snapshot["world"]["consumed_pickups"].append("arrival_pistol")
-	_snapshot["inventory"]["weapons"]["pistol"] = pistol.snapshot()
-	_snapshot["player"]["equipped_weapon"] = "pistol"
-	_snapshot["player"]["health"] = player.health
-	_snapshot["session"]["elapsed_seconds"] = SimulationClock.sample().elapsed_seconds
-	_snapshot["player"]["stamina"] = player.stamina
-	_snapshot["player"]["flashlight_enabled"] = player.flashlight.visible
-	for door: SectionDoor in doors:
-		_snapshot["world"]["doors"][door.door_id] = "open" if door.opened else "closed"
-	var result: StorageResult = CheckpointSystem.commit_snapshot(_snapshot)
-	menu.show_hint("Pistol acquired.  Left mouse — fire · R — reload\n" + ("Checkpoint saved." if result.ok else "Save failed: " + result.message))
+	var result: StorageResult = _save_current()
+	menu.show_hint("Pistol acquired. Left mouse — fire · R — reload\nShots draw attention. Hits buy time; you can also break sight and escape.\n" + ("Checkpoint saved." if result.ok else "Save failed: " + result.message))
+
+func _apply_power() -> void:
+	room.apply_power({"office": office_relay.powered, "service": service_relay.powered})
+	exit_door.locked = not (office_relay.powered and service_relay.powered)
+	exit_status.text = "EXIT\nOFFICE A: " + ("ONLINE" if office_relay.powered else "OFFLINE") + "\nSERVICE B: " + ("ONLINE" if service_relay.powered else "OFFLINE")
+	exit_status.modulate = Color(.12,.30,.15) if not exit_door.locked else Color(.24,.17,.10)
+	if is_instance_valid(menu): menu.objective = _objective_hint()
+
+func _objective_hint() -> String:
+	if not exit_door.locked: return "Both circuits are restored. Return to the EXIT where you arrived."
+	if office_relay.powered: return "Office A restored. Find SERVICE B beyond the utility doors."
+	if service_relay.powered: return "Service B restored. Find OFFICE A beyond the divided offices."
+	return "The exit has no power. Restore OFFICE A and SERVICE B."
+
+func finish_escape() -> void:
+	if GameFlow.state != NullGameFlow.State.PLAYING or exit_door.locked: return
+	_snapshot["progress"]["ending"] = true
+	var result: StorageResult = _save_current()
+	if result.ok:
+		Telemetry.record(&"escape_complete", {"seconds": SimulationClock.sample().elapsed_seconds,
+			"shots": pistol.shots_fired, "ammo": pistol.snapshot(), "health": player.health})
+		GameFlow.end_campaign()
+	else:
+		_snapshot["progress"]["ending"] = false
+		menu.show_hint("Could not save the ending: " + result.message + "\nStep back and enter the exit to retry.")
 
 func _bake_navigation() -> void:
 	navigation_region = NavigationRegion3D.new()
@@ -212,11 +300,6 @@ func _propagate_noise(sound: SoundEvent) -> void:
 	estimate = NavigationServer3D.map_get_closest_point(get_world_3d().navigation_map, estimate)
 	listener.hear_at(estimate, certainty, sound.kind, SimulationClock.sample())
 
-func _apply_local_power(enabled: bool) -> void:
-	for i: int in room.fixtures.size():
-		room.fixtures[i].set_fixture_state(_fixture_states[i] as NullspaceFluorescentFixture.State if enabled else NullspaceFluorescentFixture.State.OFF)
-	_environment.ambient_light_energy = 0.30 if enabled else 0.018
-
 func _apply_settings(values: Dictionary) -> void:
 	var profile: QualityProfile = SettingsManager.current_quality()
 	# The old room's screen-space effects dominated measured GPU time on this laptop.
@@ -226,31 +309,36 @@ func _apply_settings(values: Dictionary) -> void:
 	_environment.glow_enabled = profile.id != &"low"
 	get_viewport().use_taa = false
 	get_viewport().screen_space_aa = Viewport.SCREEN_SPACE_AA_FXAA
-	var shadow_count: int = 0
+	room.shadow_budget = profile.shadow_light_budget
 	for fixture: NullspaceFluorescentFixture in room.fixtures:
 		fixture.reduce_flashes = bool(values["reduced_flashes"])
-		var light := fixture.get_node("FluorescentDirect") as OmniLight3D
-		light.shadow_enabled = _fixture_states[room.fixtures.find(fixture)] == NullspaceFluorescentFixture.State.NORMAL and shadow_count < profile.shadow_light_budget
-		if light.shadow_enabled:
-			shadow_count += 1
 	Telemetry.record(&"section_render_settings", {"quality": profile.id, "render_scale": get_viewport().scaling_3d_scale,
-		"ssao": _environment.ssao_enabled, "ssil": false, "shadows": shadow_count, "resolution": values["resolution"]})
+		"ssao": _environment.ssao_enabled, "ssil": false, "shadow_budget": room.shadow_budget, "resolution": values["resolution"]})
 
 func _process(delta: float) -> void:
 	if GameFlow.state != NullGameFlow.State.PLAYING:
 		_last_frame_usec = 0
 		return
 	menu.set_stamina(player.stamina)
+	menu.set_health(player.health)
+	pistol.light_exposure = room.light_exposure(player.global_position)
+	_environment.ambient_light_energy = move_toward(_environment.ambient_light_energy,
+		.018 if room.is_dark(player.global_position) else .25, delta * .25)
 	var now: int = Time.get_ticks_usec()
 	if _last_frame_usec > 0:
-		_frame_samples.append(float(now - _last_frame_usec) / 1000.0)
+		var frame_ms: float = float(now - _last_frame_usec) / 1000.0
+		_frame_samples.append(frame_ms)
+		if frame_ms > 50:
+			Telemetry.record(&"frame_hitch", {"ms": frame_ms, "room": room.room_at(player.global_position),
+				"cpu_ms": Performance.get_monitor(Performance.TIME_PROCESS) * 1000.0})
 	_last_frame_usec = now
 	_sample_time += delta
-	if _sample_time >= 5.0:
+	if _sample_time >= 5.0 and not _frame_samples.is_empty():
 		_frame_samples.sort()
 		Telemetry.record(&"section_frame_window", {"samples": _frame_samples.size(),
 			"frame_ms_p50": _frame_samples[int(_frame_samples.size() * 0.5)],
 			"frame_ms_p95": _frame_samples[mini(int(_frame_samples.size() * 0.95), _frame_samples.size() - 1)],
+			"frame_ms_max": _frame_samples.back(), "room": room.room_at(player.global_position),
 			"gpu_ms_last": RenderingServer.viewport_get_measured_render_time_gpu(get_viewport().get_viewport_rid()),
 			"draw_calls": Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)})
 		_frame_samples.clear()

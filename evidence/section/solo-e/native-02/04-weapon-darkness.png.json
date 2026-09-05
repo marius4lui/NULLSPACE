@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 22793.922366124,
+  "acquired_utc": "2026-09-05T02:10:45.720+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-02/04-weapon-darkness.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "1f2f85e159859bbdbd0b7738393ef3ff3f883b69c464907addd46ec254801033",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 191373
+  },
+  "x_readback_ms": 23.726290000922745
+}

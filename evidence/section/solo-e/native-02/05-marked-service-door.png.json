@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 23055.935222909,
+  "acquired_utc": "2026-09-05T02:15:07.733+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-02/05-marked-service-door.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "a127a8659a5c5be4dd05418dc761948d78bc8011ddb9be55137125ac02960d1a",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 191373
+  },
+  "x_readback_ms": 39.22347499974421
+}

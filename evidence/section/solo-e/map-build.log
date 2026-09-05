@@ -1,0 +1,131 @@
+00:00.382  blend            | Read blend: "/home/marius/Projekte/Dev/NULLSPACE/art/source/blender/architecture/nullspace_environment_m4.blend"
+UV_MICRO_ISLAND_REPAIR short_office_core 205 beveled triangles
+INFO Draco is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_draco_bridge.so
+INFO MeshOptimizer is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_meshopt_bridge.so
+03:23:25 | INFO: Starting glTF 2.0 export
+03:23:25 | INFO: Extracting primitive: M4_ContinuousCarpet_editable_mesh.001
+03:23:25 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:25 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:25 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:25 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:25 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:25 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:26 | INFO: Primitives created: 6
+03:23:26 | INFO: Finished glTF 2.0 export in 0.8183960914611816 s
+
+EXPORTED short_office_core {'vertices': 66861, 'triangles': 132070, 'materials': 6, 'uv_layers': 2, 'dimensions_m': [15.976, 20.764, 2.83], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': '353c1174f56e42e55e959dd18ce50171179795f22f1de4affce499fe0b2ae74b'}
+UV_MICRO_ISLAND_REPAIR short_arrival 48 beveled triangles
+03:23:27 | INFO: Starting glTF 2.0 export
+03:23:27 | INFO: Extracting primitive: arrival_Floor_editable_mesh.001
+03:23:27 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:27 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:27 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:27 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:27 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:27 | INFO: Primitives created: 5
+03:23:27 | INFO: Finished glTF 2.0 export in 0.17206740379333496 s
+
+EXPORTED short_arrival {'vertices': 15720, 'triangles': 31060, 'materials': 5, 'uv_layers': 2, 'dimensions_m': [7.528, 6.308, 2.83], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': '3c108524aa4a9f05bfb87af6fe4ce768a14bbae871519df9dc62dec2d863801c'}
+UV_MICRO_ISLAND_REPAIR short_exit 22 beveled triangles
+03:23:28 | INFO: Starting glTF 2.0 export
+03:23:28 | INFO: Extracting primitive: exit_Floor_editable_mesh.001
+03:23:28 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:28 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:28 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:28 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:28 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:28 | INFO: Primitives created: 5
+03:23:28 | INFO: Finished glTF 2.0 export in 0.18390870094299316 s
+
+EXPORTED short_exit {'vertices': 4152, 'triangles': 8204, 'materials': 5, 'uv_layers': 2, 'dimensions_m': [2.648, 2.556, 2.83], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': '63f82508df79dbbd40822f06b76fd0c765a79b3fcde3d1836edb933dec852791'}
+UV_MICRO_ISLAND_REPAIR short_west_return 41 beveled triangles
+03:23:29 | INFO: Starting glTF 2.0 export
+03:23:29 | INFO: Extracting primitive: west_return_Floor_editable_mesh.001
+03:23:29 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:29 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:29 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:29 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:29 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:29 | INFO: Primitives created: 5
+03:23:29 | INFO: Finished glTF 2.0 export in 0.12218785285949707 s
+
+EXPORTED short_west_return {'vertices': 9112, 'triangles': 18008, 'materials': 5, 'uv_layers': 2, 'dimensions_m': [2.648, 8.656, 2.83], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': '0edb0c6fb58152d9a08fbb8b9191cf97a996d05a9bef5080496bd01efcd8ad4b'}
+UV_MICRO_ISLAND_REPAIR short_archive 50 beveled triangles
+03:23:30 | INFO: Starting glTF 2.0 export
+03:23:30 | INFO: Extracting primitive: archive_Floor_editable_mesh.001
+03:23:30 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:30 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:30 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:30 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:30 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:30 | INFO: Primitives created: 5
+03:23:30 | INFO: Finished glTF 2.0 export in 0.14120769500732422 s
+
+EXPORTED short_archive {'vertices': 14200, 'triangles': 28060, 'materials': 5, 'uv_layers': 2, 'dimensions_m': [5.088, 7.528, 2.83], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': '6292006f567dfcda387482a9a7c061a150373f26cc2de0320a747317f3f06816'}
+UV_MICRO_ISLAND_REPAIR short_office_switch 43 beveled triangles
+03:23:31 | INFO: Starting glTF 2.0 export
+03:23:31 | INFO: Extracting primitive: office_switch_Floor_editable_mesh.001
+03:23:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:31 | INFO: Primitives created: 5
+03:23:31 | INFO: Finished glTF 2.0 export in 0.13795137405395508 s
+
+EXPORTED short_office_switch {'vertices': 12808, 'triangles': 25308, 'materials': 5, 'uv_layers': 2, 'dimensions_m': [4.996, 7.528, 2.83], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': 'd1c0198d6afe9f15993b00cea63112067a0e66d013ab42be4e7357b53606682d'}
+UV_MICRO_ISLAND_REPAIR short_service 52 beveled triangles
+03:23:32 | INFO: Starting glTF 2.0 export
+03:23:32 | INFO: Extracting primitive: service_Floor_editable_mesh.001
+03:23:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:32 | INFO: Primitives created: 6
+03:23:32 | INFO: Finished glTF 2.0 export in 0.2124176025390625 s
+
+EXPORTED short_service {'vertices': 20472, 'triangles': 40424, 'materials': 6, 'uv_layers': 2, 'dimensions_m': [7.528, 7.528, 2.59], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': 'dae595942f3b33ff61f96507afa07cc2c2213cd9d2b3ea91b732dc3df4946ff4'}
+UV_MICRO_ISLAND_REPAIR short_service_bypass 45 beveled triangles
+03:23:33 | INFO: Starting glTF 2.0 export
+03:23:33 | INFO: Extracting primitive: service_bypass_Floor_editable_mesh.001
+03:23:33 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:33 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:33 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:33 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:33 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:33 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:33 | INFO: Primitives created: 6
+03:23:33 | INFO: Finished glTF 2.0 export in 0.16451549530029297 s
+
+EXPORTED short_service_bypass {'vertices': 15256, 'triangles': 30120, 'materials': 6, 'uv_layers': 2, 'dimensions_m': [4.996, 7.528, 2.59], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': 'b2d9501e370e8c8412b5a007db6960d653954f1e54bc7a0093a679394ce2f657'}
+UV_MICRO_ISLAND_REPAIR short_blackout 53 beveled triangles
+03:23:34 | INFO: Starting glTF 2.0 export
+03:23:34 | INFO: Extracting primitive: blackout_Floor_editable_mesh.001
+03:23:34 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:34 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:34 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:34 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:34 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:35 | INFO: Primitives created: 5
+03:23:35 | INFO: Finished glTF 2.0 export in 0.15676069259643555 s
+
+EXPORTED short_blackout {'vertices': 15368, 'triangles': 30368, 'materials': 5, 'uv_layers': 2, 'dimensions_m': [5.088, 8.656, 2.804], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': '19c5b38801e28a960bc709d9ce78392fe071eb8aff904c311a6c53c420aefb02'}
+UV_MICRO_ISLAND_REPAIR short_service_switch 44 beveled triangles
+03:23:36 | INFO: Starting glTF 2.0 export
+03:23:36 | INFO: Extracting primitive: service_switch_Floor_editable_mesh.001
+03:23:36 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:36 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:36 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:36 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:36 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+03:23:36 | INFO: Primitives created: 5
+03:23:36 | INFO: Finished glTF 2.0 export in 0.139481782913208 s
+
+EXPORTED short_service_switch {'vertices': 13480, 'triangles': 26636, 'materials': 5, 'uv_layers': 2, 'dimensions_m': [4.996, 8.656, 2.59], 'role': 'Authored compact campaign room, original shared material kit', 'sha256': '53a21772251ad309e3427c74992ee860c514f091dde97de3717b341aed6d5cf1'}
+Info: Saved as "nullspace_short_map.blend"
+NULLSPACE_SHORT_MAP {"assets": 10, "fixtures": 28, "colliders": 77, "doors": 6}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:12:34)
+
+Blender quit

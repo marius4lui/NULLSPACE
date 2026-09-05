@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 23057.398535082,
+  "acquired_utc": "2026-09-05T02:15:09.196+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-02/06-mark-moved-with-door.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "c46d01dd2fc584fce25dadfc27f1bc8638f20deda00518f79ccf15ee007573e6",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 191373
+  },
+  "x_readback_ms": 28.999690999626182
+}

@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 21133.025718846,
+  "acquired_utc": "2026-09-05T01:43:04.823+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-01/07-office-circuit.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "052060401f5fce25c375bc13979ef40c5ff255bd5ef20d2c8b112505d18e8b36",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 184069
+  },
+  "x_readback_ms": 26.296328000171343
+}

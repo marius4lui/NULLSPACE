@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 20936.39428236,
+  "acquired_utc": "2026-09-05T01:39:48.192+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/native-01/03-first-office.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "94c49f2dbc6fd83dc9f1ed43798ed0a5aadc4d3b2dc2d6fad42502b449bf78c4",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 184069
+  },
+  "x_readback_ms": 15.490690999286016
+}

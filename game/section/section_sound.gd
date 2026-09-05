@@ -4,6 +4,7 @@ extends Node3D
 const ROOT: String = "res://assets/audio/room/"
 var section: NullspaceSection
 var hums: Array[AudioStreamPlayer3D] = []
+var hum_fixtures: Array[NullspaceFluorescentFixture] = []
 var steps: Array[AudioStreamPlayer3D] = []
 var body_voice: AudioStreamPlayer3D
 var breath: AudioStreamPlayer3D
@@ -18,10 +19,11 @@ func _ready() -> void:
 	for i: int in range(0, section.room.fixtures.size(), 3):
 		var source := _voice(&"Fluorescent", 9)
 		source.position = section.room.fixtures[i].global_position
-		source.stream = _clip("hum_%s" % (i % 3), true)
+		source.stream = _clip("hum_%s" % (hums.size() % 3), true)
 		source.volume_db = -18
 		source.play(float(i % 5))
 		hums.append(source)
+		hum_fixtures.append(section.room.fixtures[i])
 	for i: int in 4:
 		steps.append(_voice(&"Player", 8))
 	body_voice = _voice(&"Monster", 22)
@@ -93,8 +95,9 @@ func _physics_process(delta: float) -> void:
 		var ray := PhysicsRayQueryParameters3D.create(section.player.camera.global_position, breath.position, 1)
 		_blocked = not get_world_3d().direct_space_state.intersect_ray(ray).is_empty()
 		breath.volume_db = -28 if _blocked else -20
-	for hum: AudioStreamPlayer3D in hums:
-		hum.volume_db = move_toward(hum.volume_db, -18 if section.light_switch.powered else -80, delta * 35)
+	for i: int in hums.size():
+		var powered: bool = hum_fixtures[i].state != NullspaceFluorescentFixture.State.OFF
+		hums[i].volume_db = move_toward(hums[i].volume_db, -18 if powered else -80, delta * 35)
 
 func reset() -> void:
 	for voice: AudioStreamPlayer3D in steps:

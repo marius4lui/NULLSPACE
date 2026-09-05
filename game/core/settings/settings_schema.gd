@@ -3,6 +3,7 @@ extends RefCounted
 
 const VERSION: int = 1
 const QUALITY_IDS: Array[String] = ["low", "medium", "high", "ultra"]
+const FPS_LIMITS: Array[int] = [0, 30, 60, 90, 120]
 const RANGES: Dictionary = {
 	"master_volume": [0.0, 1.0], "ambience_volume": [0.0, 1.0], "effects_volume": [0.0, 1.0],
 	"mouse_sensitivity": [0.05, 5.0], "horizontal_fov": [60.0, 110.0],
@@ -11,7 +12,7 @@ const RANGES: Dictionary = {
 const BOOLEANS: Array[String] = ["vsync", "invert_y", "subtitles", "center_dot", "reduced_flashes"]
 
 static func defaults() -> Dictionary:
-	return {"resolution": [1920, 1080], "display_mode": "windowed", "vsync": true,
+	return {"resolution": [1920, 1080], "display_mode": "windowed", "vsync": true, "fps_limit": 60,
 		"quality": "low", "master_volume": 0.8, "ambience_volume": 0.8, "effects_volume": 0.8,
 		"mouse_sensitivity": 1.0, "invert_y": false, "horizontal_fov": 88.0,
 		"head_bob": 0.5, "camera_shake": 0.5, "subtitles": true,
@@ -19,8 +20,13 @@ static func defaults() -> Dictionary:
 
 static func validate(settings: Dictionary) -> PackedStringArray:
 	var errors: PackedStringArray = []
-	if not SnapshotSchema.exact_keys(settings, defaults().keys()):
+	# Additive preference: keep existing valid v1 settings and normalize its absent cap to 60.
+	var with_cap: Dictionary = settings.duplicate()
+	if not with_cap.has("fps_limit"): with_cap["fps_limit"] = 60
+	if not SnapshotSchema.exact_keys(with_cap, defaults().keys()):
 		return PackedStringArray(["Settings are incomplete or contain unsupported fields."])
+	if not SnapshotSchema.integer_in(with_cap["fps_limit"], 0, 120) or with_cap["fps_limit"] not in FPS_LIMITS:
+		errors.append("Unsupported frame-rate limit.")
 	var resolution: Variant = settings["resolution"]
 	if not resolution is Array or resolution.size() != 2:
 		errors.append("Resolution requires width and height.")
@@ -43,6 +49,7 @@ static func vertical_fov(horizontal_degrees: float, aspect_ratio: float) -> floa
 
 static func normalize(settings: Dictionary) -> Dictionary:
 	var result: Dictionary = settings.duplicate(true)
+	result["fps_limit"] = int(result.get("fps_limit", 60))
 	result["resolution"] = [int(result["resolution"][0]), int(result["resolution"][1])]
 	for field: String in RANGES:
 		result[field] = float(result[field])

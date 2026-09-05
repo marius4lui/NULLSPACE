@@ -52,9 +52,24 @@ Minimum requirements are not established yet. Performance will be reported with 
 
 ## Current state
 
-There is **no downloadable playable campaign yet**. Separate development worktrees contain a walkable environment preview, a rigged Listener with three initial animation clips, and core systems for settings, saves and game state. The pistol, creature behavior and complete two-switch flow still need integration. Interrupted Player work is secured; development continues solo on `feat/short-game`. No complete-run or release claim is made.
+The `feat/short-game` development branch now joins the original rooms, Player, pistol, Listener, doors, both power switches, safe checkpoints and ending in one playable scene. A native diagnostic route reached the ending with inspection pauses. **This is not a finished release:** natural first-play duration, atmosphere/audio, final export checks and remaining defects are open. The known diagnostic route is substantially shorter than the 10–15 minute target; pauses are not counted as playtime.
 
-The published `main` branch contains the website, design, development records and this preview image. It is not yet a runnable Godot project. Build, launch and game-control instructions will accompany the integrated game.
+The public `main` baseline remains documentation-only until the integrated branch is verified and promoted. Existing worktrees/evidence are preserved; development continues solo.
+
+## Run and build the development branch
+
+With Godot **4.7.2 stable** and its matching export templates installed:
+
+```sh
+godot --editor --path game --import --quit
+godot --path game
+bash tools/build.sh linux
+./build/linux/nullspace.x86_64
+```
+
+For an official portable Godot binary, set `NULLSPACE_GODOT_BIN` to that executable when invoking `tools/build.sh`. Use `windows` or `all` instead of `linux` for cross-exports. Production assets are checked in; Blender is not required to reproduce a game export. Source asset generators live under `tools/art/` and use the retained originals under `art/source/`.
+
+Controls: WASD, mouse, Shift sprint, Ctrl crouch, F flashlight, E interact, left mouse fire, R reload, Escape pause. Settings cover audio, mouse/invert/FOV, display, VSync/FPS cap and reduced motion/flashes. See [playtest instructions](docs/PLAYTEST.md), [credits](CREDITS.md) and [licences/notices](LICENSES.md). Linux is the tested platform; Windows export is not native validation.
 
 ## Explore and contribute
 

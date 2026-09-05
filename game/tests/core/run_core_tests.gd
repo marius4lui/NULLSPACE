@@ -152,6 +152,13 @@ func _test_storage_transactions() -> void:
 func _test_settings() -> void:
 	var defaults: Dictionary = SettingsSchema.defaults()
 	_check(SettingsSchema.validate(defaults).is_empty(), "All contract settings have valid defaults")
+	var legacy: Dictionary = defaults.duplicate(true)
+	legacy.erase("fps_limit")
+	_check(SettingsSchema.validate(legacy).is_empty() and SettingsSchema.normalize(legacy)["fps_limit"] == 60,
+		"Existing preferences gain default frame cap without being discarded")
+	var bad_cap: Dictionary = defaults.duplicate(true)
+	bad_cap["fps_limit"] = 61
+	_check(not SettingsSchema.validate(bad_cap).is_empty(), "Unsupported frame cap rejected")
 	var changed: Dictionary = defaults.duplicate(true)
 	changed["mouse_sensitivity"] = 0
 	_check(not SettingsSchema.validate(changed).is_empty(), "Zero mouse sensitivity rejected")
@@ -173,6 +180,7 @@ func _test_settings() -> void:
 	changed["reduced_flashes"] = true
 	changed["invert_y"] = true
 	changed["quality"] = "low"
+	changed["fps_limit"] = 90
 	_check(SettingsManager.apply_settings(changed).ok, "Settings atomically persist")
 	_check(AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")), "Zero master volume mutes the bus")
 	_check(is_equal_approx(db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Weapons"))), 0.6), "Effects volume applies to Weapons bus")

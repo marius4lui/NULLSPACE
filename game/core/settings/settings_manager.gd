@@ -52,6 +52,7 @@ func _store() -> AtomicJsonStore:
 
 func _apply_runtime() -> void:
 	if DisplayServer.get_name() != "headless":
+		Engine.max_fps = int(_values["fps_limit"])
 		var window: Window = get_window()
 		var fullscreen: bool = _values["display_mode"] == "fullscreen"
 		window.mode = Window.MODE_FULLSCREEN if fullscreen else Window.MODE_WINDOWED
