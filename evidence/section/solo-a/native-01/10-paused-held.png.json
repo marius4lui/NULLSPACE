@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 13634.260763973,
+  "acquired_utc": "2026-09-04T23:38:06.058+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-01/10-paused-held.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "d636f6da7310358a51f10c4242fcfbba5a3b4d45534f75f97c5d1359f739ef03",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 154151
+  },
+  "x_readback_ms": 11.696049001329811
+}

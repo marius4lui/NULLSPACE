@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 14911.43306424,
+  "acquired_utc": "2026-09-04T23:59:23.231+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-cold-06/01-cold-title.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "3d61cc3d33a0b9c8aa4babdb1e81fb52e97a939ccc5138f0d73a3b2d5ecb453f",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 720,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      -220,
+      -80
+    ],
+    "title": "NULLSPACE",
+    "width": 1280,
+    "window_id": 6291458,
+    "window_pid": 161452
+  },
+  "x_readback_ms": 9.564407000652864
+}

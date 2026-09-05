@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 13580.083879177,
+  "acquired_utc": "2026-09-04T23:37:11.881+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-01/05-switch-prompt.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "b1706eecd48fe5249ef6d29ef72cd8781a4acb082b04e7273562ce9fae96b716",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 154151
+  },
+  "x_readback_ms": 23.57668799959356
+}

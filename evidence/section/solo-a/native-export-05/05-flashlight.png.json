@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 14793.786590688,
+  "acquired_utc": "2026-09-04T23:57:25.584+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-export-05/05-flashlight.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "71ab7a5124fabaaaa7de8ff05f3efb9510d70f18f184192133e2a31e93aa05bc",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 720,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      640,
+      360
+    ],
+    "title": "NULLSPACE",
+    "width": 1280,
+    "window_id": 6291458,
+    "window_pid": 160562
+  },
+  "x_readback_ms": 6.709066999974311
+}

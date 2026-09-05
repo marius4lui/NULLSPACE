@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 14001.548986771,
+  "acquired_utc": "2026-09-04T23:44:13.346+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-export-02/03-continued-checkpoint.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "1509243db57a249c5efa13ccc4029e1f4ca11651f04c6b57a0f205387dad9d99",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      250,
+      293
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 157697
+  },
+  "x_readback_ms": 17.60417100013001
+}

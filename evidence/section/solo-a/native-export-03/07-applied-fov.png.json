@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 14274.439831183,
+  "acquired_utc": "2026-09-04T23:48:46.237+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-export-03/07-applied-fov.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "40f7d9b4e1f26094d46ff8d3764c875352918135242ded3e2954ac9f3e81a91b",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 158324
+  },
+  "x_readback_ms": 22.397550001187483
+}

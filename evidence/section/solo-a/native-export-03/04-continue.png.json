@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 14159.423626883,
+  "acquired_utc": "2026-09-04T23:46:51.221+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-export-03/04-continue.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "cc9d8c2f79ee2faebd393a1caea8f5aeecb34d9523357be580e2fe541837e8a9",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 158324
+  },
+  "x_readback_ms": 25.032678999195923
+}

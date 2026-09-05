@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 14767.596782082,
+  "acquired_utc": "2026-09-04T23:56:59.394+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-export-05/03-switch-1280.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "97ac2fe31df64585a45bb7a42a6851638ff57088853d426e7a21d65bbb117e1e",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 720,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      193,
+      298
+    ],
+    "title": "NULLSPACE",
+    "width": 1280,
+    "window_id": 6291458,
+    "window_pid": 160562
+  },
+  "x_readback_ms": 11.879519999638433
+}

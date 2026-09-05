@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 14664.827822968,
+  "acquired_utc": "2026-09-04T23:55:16.625+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-export-04/04-resize-settled.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "f03d752ef06a74c903d9d836c2023ee58acb95da6dd2ddd995a68648f7c6bdcd",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 720,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      -50,
+      768
+    ],
+    "title": "NULLSPACE",
+    "width": 1280,
+    "window_id": 6291458,
+    "window_pid": 159359
+  },
+  "x_readback_ms": 11.305490999802714
+}

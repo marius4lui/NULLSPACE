@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 13635.160536604,
+  "acquired_utc": "2026-09-04T23:38:06.958+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-01/11-resume-held.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "1a76fbfbe1b6d2438405d52d375c3c816f94fdec18590351ae58d5942f1c4fe9",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 154151
+  },
+  "x_readback_ms": 17.311464000158594
+}

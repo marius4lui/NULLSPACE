@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 13539.475982074,
+  "acquired_utc": "2026-09-04T23:36:31.273+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-a/native-01/03-walk.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "d528e59d088e9c05117374c3a829dbd088406803a9d5b59ac7212ca5b6593628",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 154151
+  },
+  "x_readback_ms": 24.04420899983961
+}
