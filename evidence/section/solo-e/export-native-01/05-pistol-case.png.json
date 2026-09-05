@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 24001.273250385,
+  "acquired_utc": "2026-09-05T02:30:53.071+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/export-native-01/05-pistol-case.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "859e1ec94cdd915cc7f4063bf3384015914ad48f3530999059787fd8bb6e033c",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 196225
+  },
+  "x_readback_ms": 23.56884900291334
+}

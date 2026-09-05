@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 23937.226465253,
+  "acquired_utc": "2026-09-05T02:29:49.024+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/export-native-01/03-settings-scroll.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "bf6edc569e0df3962362f8eec71a175c9e7b1ad3be20830c42135501a985b73b",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      850,
+      905
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 196225
+  },
+  "x_readback_ms": 17.814382001233753
+}

@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 23971.507334932,
+  "acquired_utc": "2026-09-05T02:30:23.305+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/export-native-01/04-start-30fps.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "5ee761130fc511b66e1a7570693722700b754e911096e3386a9da3781eded4b6",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 196225
+  },
+  "x_readback_ms": 19.98869299859507
+}

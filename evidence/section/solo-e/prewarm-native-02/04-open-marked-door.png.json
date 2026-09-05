@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 24744.21076677,
+  "acquired_utc": "2026-09-05T02:43:16.008+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/prewarm-native-02/04-open-marked-door.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "6f12a9350bba7595e6ee296f52cf39677fca10bdd312b4bd2a931c4721eea71a",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 200847
+  },
+  "x_readback_ms": 50.88565099867992
+}

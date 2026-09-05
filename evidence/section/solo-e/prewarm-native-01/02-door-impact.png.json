@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 24547.089727077,
+  "acquired_utc": "2026-09-05T02:39:58.887+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/prewarm-native-01/02-door-impact.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "7239f0a53e897a75d2105211b1d6954ee92a929c3a5cc36c5a6af71581aa53bb",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 199736
+  },
+  "x_readback_ms": 29.580054000689415
+}

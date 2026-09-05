@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 24210.648288709,
+  "acquired_utc": "2026-09-05T02:34:22.446+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/export-native-01/12-restart.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "938a2530b7cde81ef5daa2cbb33a8dcd44f92bb20dd05c6b34def56cb114e11e",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 196225
+  },
+  "x_readback_ms": 15.808389001904288
+}

@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 24192.828866719,
+  "acquired_utc": "2026-09-05T02:34:04.626+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/export-native-01/11-death.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "677c641ffe4069af5780d710ecf1ac6e6fb080f6439676afe4e30661e244a7de",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 196225
+  },
+  "x_readback_ms": 36.10424600265105
+}

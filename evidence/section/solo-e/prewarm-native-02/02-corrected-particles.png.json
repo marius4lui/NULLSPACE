@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 24742.110089793,
+  "acquired_utc": "2026-09-05T02:43:13.908+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/prewarm-native-02/02-corrected-particles.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "9539aa828b0e52a0c0938609f74df866627bd8b5c9cc38e73fee943b623b8af0",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 200847
+  },
+  "x_readback_ms": 81.2320320001163
+}

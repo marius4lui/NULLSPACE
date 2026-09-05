@@ -2,6 +2,8 @@
 
 Primary host: Fedora44 laptop, Ryzen5 7535HS6c/12t,30GiB RAM, integrated Radeon660M reported by RADV, Mesa26.1.8. No other-hardware claims.
 
+Latest targeted correction: fresh-clone b9a9c9f export reproduced311.019ms immediately after its first shot with no capture running. Pre-instancing/sharing the existing shot effect render combinations during scene load removed that large first-shot hitch in two same-route native runs (prewarm-native-01/02): max31.191/32.338ms, p50 16.653ms, p95 17.072/17.067ms at1920×1080 /1440×810 internal, Laptop, VSync off,60cap. Next windows max17.246/17.283ms. No >50ms event. These short samples do not certify complete-map performance. Actual30FPS menu cap separately gave p50~33.33ms/p95~33.7ms, persisted into cold rebuilt executable; changed back to60 through UI. Evidence in solo-e/REPORT.md.
+
 Record actual resolution/render scale/profile/VSync/FPS cap/Godot/source and warm exploration/encounter frame times. Two profiles: laptop-first and enhanced. Responsiveness/readable fluorescents over expensive effects.
 
 Historical room472df44 at1920×1080 warmGPU p50/p95 approximately92.14/94.93ms, rendering CPU.384/.627ms. Diagnostic SSIL/SSAO/shadow/TAA reductions showed substantial cost. This predates3D texture import fixes and is not current-game performance. Full former record archived.

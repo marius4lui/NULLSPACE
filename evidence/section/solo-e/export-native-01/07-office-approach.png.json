@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 24095.349718616,
+  "acquired_utc": "2026-09-05T02:32:27.147+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/export-native-01/07-office-approach.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "3db38448eb7465f7327eb841448a07c26f2016b9dc17aeea77cce7400d2adb94",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 196225
+  },
+  "x_readback_ms": 17.815570001403103
+}
