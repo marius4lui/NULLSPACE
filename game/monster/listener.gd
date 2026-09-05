@@ -41,6 +41,9 @@ var _last_wound: float = -1000.0
 var _quiet_until: float = 18.0
 var _travel: float = 0.0
 var _metrics_time: float = 0.0
+var _door_detour: Vector3
+var _door_detour_time: float = 0.0
+var _blocked_time: float = 0.0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
@@ -83,6 +86,8 @@ func reset_at(anchor: Vector3) -> void:
 	_state_time = 0.0
 	_rest = 0.0
 	_path_timer = 0.0
+	_door_detour_time = 0.0
+	_blocked_time = 0.0
 	_travel = 0.0
 	_roam_index = 0
 	_goal = patrol[0]
@@ -167,10 +172,16 @@ func _physics_process(delta: float) -> void:
 				_set_state(State.ROAMING)
 				_goal = patrol[_roam_index]
 	_rest = maxf(_rest - delta, 0)
+	if _door_detour_time > 0:
+		_door_detour_time = maxf(0, _door_detour_time - delta)
+		if _horizontal_distance(_door_detour) < .23:
+			_door_detour_time = 0
+		if _door_detour_time == 0: _path_timer = 0
+	navigation.target_desired_distance = .16 if _door_detour_time > 0 else .45
 	_path_timer -= delta
 	if _path_timer <= 0:
 		_path_timer = 0.25
-		navigation.target_position = _goal
+		navigation.target_position = _door_detour if _door_detour_time > 0 else _goal
 	var direction := Vector3.ZERO
 	if not still and not navigation.is_navigation_finished():
 		direction = navigation.get_next_path_position() - global_position
@@ -192,6 +203,26 @@ func _physics_process(delta: float) -> void:
 	var before: Vector3 = global_position
 	move_and_slide()
 	var moved: float = Vector2(global_position.x - before.x, global_position.z - before.z).length()
+	# Native west-door evasion exposed a body stuck on the *open* leaf despite a
+	# valid static nav path. Require stalled motion and a real forward obstruction.
+	if not still and direction.length_squared() > .1 and moved < speed * delta * .25:
+		_blocked_time += delta
+		if _blocked_time > .25 and _door_detour_time == 0:
+			# Repeated floor-recovery contacts can occupy every slide report; the
+			# waist-height ray identifies the actual open leaf in front of the body.
+			var obstruction := PhysicsRayQueryParameters3D.create(global_position + Vector3.UP,
+				global_position + Vector3.UP + direction * 1.5, 1, [get_rid()])
+			var contact: Dictionary = get_world_3d().direct_space_state.intersect_ray(obstruction)
+			var leaf := contact.get("collider") as SectionDoor.Leaf
+			if leaf and leaf.door.opened and absf(leaf.door.angle) > .85:
+				_door_detour = NavigationServer3D.map_get_closest_point(get_world_3d().navigation_map,
+					leaf.door.open_leaf_clearance(global_position))
+				_door_detour_time = 3.0
+				_path_timer = 0
+				_blocked_time = 0
+				Telemetry.record(&"listener_door_detour", {"door": leaf.door.door_id, "point": _v(_door_detour)})
+	else:
+		_blocked_time = 0
 	_travel += moved
 	var stride: float = 1.15 if speed > 2.7 else 0.70
 	if _travel >= stride and is_on_floor():

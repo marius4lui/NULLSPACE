@@ -21,7 +21,7 @@ for nullspace_target in linux windows; do
   fi
   "$nullspace_godot" --headless --path game --export-release "$nullspace_preset" "$nullspace_root/build/$nullspace_target/$nullspace_binary"
   cp docs/PLAYTEST.md "build/$nullspace_target/README.md"
-  cp CREDITS.md LICENSES.md game/licenses/GODOT_THIRD_PARTY.txt "build/$nullspace_target/"
+  cp CREDITS.md LICENSES.md RELEASE_NOTES.md game/licenses/GODOT_THIRD_PARTY.txt "build/$nullspace_target/"
   {
     git rev-parse HEAD
     git diff --quiet -- game tools/art || printf 'Working tree contains uncommitted runtime/art changes.\n'

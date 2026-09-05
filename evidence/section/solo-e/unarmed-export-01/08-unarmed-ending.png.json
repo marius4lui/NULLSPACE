@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 25585.168933464,
+  "acquired_utc": "2026-09-05T02:57:16.966+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/unarmed-export-01/08-unarmed-ending.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "5d36aefd85f2cfea84fdbf34b754ec6b38139c91f7c77ef08e04a24e296e3231",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 202339
+  },
+  "x_readback_ms": 29.57337200132315
+}

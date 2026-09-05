@@ -66,7 +66,32 @@ func _ready() -> void:
 	GameFlow.continue_game()
 	await _frames(10)
 	_check(door.opened and GameFlow.state == NullGameFlow.State.PLAYING, "Death restore reinstates open door and safe player")
+	# Native unarmed-export-01 trapped the Listener at the open west leaf for >7s.
+	# Reproduce that real corner, keeping the player hidden and the old clue fixed.
+	var west: SectionDoor = section.doors[1]
+	enemy.enabled = false
+	player.global_position = Vector3(20.4, .03, -19.0)
+	west.set_open(true, Vector3(-4, .03, -10.98))
+	await _frames(80)
+	enemy.reset_at(Vector3(-6.82, .03, -11.88))
+	await _frames(3)
+	enemy.enabled = true
+	var clue := Vector3(-7.8, .03, -19.0)
+	enemy.hear_at(clue, .9, &"sprint_step", SimulationClock.sample())
+	var corner_path: Array[Dictionary] = []
+	for i: int in 5:
+		await _frames(60)
+		var contacts: Array[String] = []
+		for j: int in enemy.get_slide_collision_count():
+			contacts.append(str(enemy.get_slide_collision(j).get_collider()))
+		corner_path.append({"at": enemy.global_position, "detour": enemy._door_detour,
+			"detour_time": enemy._door_detour_time, "blocked": enemy._blocked_time,
+			"next": enemy.navigation.get_next_path_position(), "contacts": contacts})
+	_check(enemy.global_position.z < -15, "Listener routes past open west leaf instead of pinning against it")
+	_check(enemy.evidence_position.distance_to(clue) < .05 and not enemy.sees_player,
+		"Open-leaf detour does not reveal hidden player or replace remembered clue")
 	print(JSON.stringify({"suite": "Door actual-scene risks", "checks": checks, "failures": failures,
+		"west_corner_path": corner_path,
 		"scope": "automated physics fixtures; no auditory or experiential claim"}))
 	section.request_quit(0 if failures.is_empty() else 1)
 

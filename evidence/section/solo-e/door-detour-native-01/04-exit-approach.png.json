@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 26323.498600189,
+  "acquired_utc": "2026-09-05T03:09:35.296+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/door-detour-native-01/04-exit-approach.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "612cbaf8d43cee8b9709b940239b76931c467fd6b2cc82ef1b5e2b701290adc6",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      785,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 206591
+  },
+  "x_readback_ms": 29.701321000175085
+}

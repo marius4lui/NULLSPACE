@@ -137,5 +137,14 @@ func attenuates_segment(from: Vector3, to: Vector3) -> bool:
 	var crossing: Vector3 = a.lerp(b, a.z / (a.z - b.z))
 	return absf(crossing.x) < 1.3 and crossing.y < 2.6
 
+func open_leaf_clearance(actor: Vector3) -> Vector3:
+	# Navigation includes the doorway, but not a leaf's changing swept volume.
+	# A blocked body first clears the free tip; this uses door geometry, not a player clue.
+	var local: Vector3 = to_local(actor)
+	local.x = clampf(local.x, -.8, .8)
+	local.z = -signf(angle) * 1.80
+	local.y = .03
+	return to_global(local)
+
 func _exit_tree() -> void:
 	if _audio: _audio.stop()

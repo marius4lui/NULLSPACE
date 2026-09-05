@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 25060.544834791,
+  "acquired_utc": "2026-09-05T02:48:32.342+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/unarmed-export-01/01-service-panel-unarmed.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "900ecfed6ff9170915500a11eb758c962156faf7ab5d1efd56d682ca218a3bf7",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 202339
+  },
+  "x_readback_ms": 19.87416799966013
+}

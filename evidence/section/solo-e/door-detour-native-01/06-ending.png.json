@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 26405.467513013,
+  "acquired_utc": "2026-09-05T03:10:57.265+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/door-detour-native-01/06-ending.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "0ed9575e737082f8585fc4e631736da9d85ba75850904f4e3503fa43ff974d63",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 206591
+  },
+  "x_readback_ms": 34.155897999880835
+}

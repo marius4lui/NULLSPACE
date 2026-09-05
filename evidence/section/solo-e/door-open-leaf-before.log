@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"checks":15,"failures":["Listener routes past open west leaf instead of pinning against it"],"scope":"automated physics fixtures; no auditory or experiential claim","suite":"Door actual-scene risks"}

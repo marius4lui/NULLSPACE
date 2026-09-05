@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 26266.488830688,
+  "acquired_utc": "2026-09-05T03:08:38.286+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/door-detour-native-01/03-office-switch.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "f5440db2d5d06bf82c3f10c629dfef42e58f999fc597de9ff5b676c0e0f2c259",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 206591
+  },
+  "x_readback_ms": 59.025708000262966
+}

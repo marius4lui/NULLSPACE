@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 25228.509445285,
+  "acquired_utc": "2026-09-05T02:51:20.307+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-e/unarmed-export-01/04-core-listener-no-weapon.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "26645cd3fca5a9f5f5ac089880525efbd6592dc1d776bd03fa8e11b84e00e665",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 202339
+  },
+  "x_readback_ms": 28.085254001780413
+}

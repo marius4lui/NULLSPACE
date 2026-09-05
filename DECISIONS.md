@@ -21,3 +21,5 @@ Small-map native first flow reaches ending with inspection pauses. Never count i
 Retain the existing tested completed-save policy: Continue is disabled for an ended campaign; New Game starts another. The new escape test initially assumed completed Continue should re-show credits. Corrected that new test expectation to the existing contract; no existing test or ending gate was disabled (test_escape-01 failure retained).
 
 Native Continue self-list messages resemble the physics reactivation ordering described in https://github.com/godotengine/godot/issues/122378 (not proof of identical cause; that report is 2D). Keep core unchanged; move this scene's completion acknowledgement out of physics_frame and verify natively with its twelve animated leaves.
+
+Native unarmed play exposed an open door leaf missing from the static nav route. Keep the existing nav and evidence FSM: after a verified physical stall/ray to an open leaf, use a short local free-tip clearance path, then resume the credible old goal. Two focused physical checks reproduce/correct the actual failure. No dynamic world-nav framework, hidden-player target, teleport or test removal.
