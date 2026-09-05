@@ -1,0 +1,26 @@
+{
+  "walk": {
+    "seconds": 1.2,
+    "loop": true,
+    "source": "baked original contact paths / articulated pose",
+    "validation": "requires actual gameplay motion inspection"
+  },
+  "run": {
+    "seconds": 0.72,
+    "loop": true,
+    "source": "baked original contact paths / articulated pose",
+    "validation": "requires actual gameplay motion inspection"
+  },
+  "attack": {
+    "seconds": 1.4,
+    "loop": false,
+    "source": "baked original contact paths / articulated pose",
+    "validation": "requires actual gameplay motion inspection"
+  },
+  "stagger": {
+    "seconds": 0.9,
+    "loop": false,
+    "source": "baked original contact paths / articulated pose",
+    "validation": "requires actual gameplay motion inspection"
+  }
+}

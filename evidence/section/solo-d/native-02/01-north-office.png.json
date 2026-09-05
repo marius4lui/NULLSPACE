@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 18485.469970131,
+  "acquired_utc": "2026-09-05T00:58:57.267+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-d/native-02/01-north-office.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "1f77e2fc5272e9da8cf2b5587774270499a9c321738705d789e710df100bfb62",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 176229
+  },
+  "x_readback_ms": 27.553051000722917
+}

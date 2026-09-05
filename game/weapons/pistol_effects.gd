@@ -10,7 +10,7 @@ var _marks: Array[Node3D] = []
 var _casings: Array[RigidBody3D] = []
 var _sequence: int = 0
 
-func impact(point: Vector3, normal: Vector3, metal: bool = false) -> void:
+func impact(point: Vector3, normal: Vector3, metal: bool = false, moving_surface: Node3D = null) -> void:
 	_sequence += 1
 	var mark := MeshInstance3D.new()
 	var surface := SurfaceTool.new()
@@ -32,6 +32,8 @@ func impact(point: Vector3, normal: Vector3, metal: bool = false) -> void:
 	add_child(mark)
 	mark.global_position = point + normal * 0.002
 	mark.global_basis = Basis.looking_at(-normal, Vector3.RIGHT if absf(normal.y) > 0.9 else Vector3.UP)
+	if moving_surface:
+		mark.reparent(moving_surface, true)
 	_marks.append(mark)
 	if _marks.size() > 32:
 		_marks.pop_front().queue_free()
@@ -107,6 +109,8 @@ func play_world(stream: AudioStream, at: Vector3, volume: float) -> void:
 	voice.play()
 
 func clear() -> void:
+	for mark: Node3D in _marks:
+		if is_instance_valid(mark): mark.queue_free()
 	for child: Node in get_children():
 		if child is AudioStreamPlayer3D:
 			child.stop()

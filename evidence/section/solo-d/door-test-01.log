@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"checks":11,"failures":["Closed physical leaves block close sight and attack","Listener investigating a loud clue physically opens obstructing door","Checkpoint stores stable semantic door state","Death restore reinstates open door and safe player"],"scope":"automated physics fixtures; no auditory or experiential claim","suite":"Door actual-scene risks"}

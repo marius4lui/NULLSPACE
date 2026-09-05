@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 16399.912451536,
+  "acquired_utc": "2026-09-05T00:24:11.710+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-b/native-02/07-continue-pistol.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "5e40d9cd6ec101fbdb49c12ccf1df3c6e45083b6472feb39c73fcc071ce7d33f",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 165638
+  },
+  "x_readback_ms": 17.329049998807022
+}

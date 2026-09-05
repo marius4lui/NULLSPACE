@@ -8,6 +8,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	var section := preload("res://section/section.tscn").instantiate() as NullspaceSection
 	add_child(section)
+	section.listener.enabled = false # Focused controller/collision checks, not an encounter playthrough.
 	await _frames(3)
 	_check(GameFlow.begin_new_game().ok, "New Game creates a valid save")
 	await _frames(5)
@@ -55,7 +56,7 @@ func _ready() -> void:
 	for item: Dictionary in Engine.get_copyright_info():
 		if "font" in str(item.get("name", "")).to_lower() or "noto" in str(item).to_lower():
 			print("BUNDLED_FONT_NOTICE ", JSON.stringify(item))
-	get_tree().quit(0 if failures.is_empty() else 1)
+	section.request_quit(0 if failures.is_empty() else 1)
 
 func _frames(count: int) -> void:
 	for i: int in count:

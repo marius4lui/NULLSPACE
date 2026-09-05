@@ -1,0 +1,62 @@
+/home/marius/Projekte/Dev/NULLSPACE/tools/art/build_door.py:20: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  result.use_nodes = True
+Info: Saved as "service_door.blend"
+INFO Draco is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_draco_bridge.so
+INFO MeshOptimizer is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_meshopt_bridge.so
+02:53:08 | INFO: Starting glTF 2.0 export
+02:53:08 | INFO: Extracting primitive: Cube
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.001
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.002
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.008
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.009
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.010
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.016
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.017
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.018
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.003
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.011
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.006
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.004
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.005
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.012
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.013
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.014
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.007
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.015
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Finished glTF 2.0 export in 0.038899898529052734 s
+
+02:53:08 | INFO: Starting glTF 2.0 export
+02:53:08 | INFO: Extracting primitive: Cube.023
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.019
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.021
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.020
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Extracting primitive: Cube.022
+02:53:08 | INFO: Primitives created: 1
+02:53:08 | INFO: Finished glTF 2.0 export in 0.011526346206665039 s
+
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:12:34)
+
+Blender quit

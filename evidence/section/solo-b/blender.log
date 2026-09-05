@@ -1,0 +1,32 @@
+/home/marius/Projekte/Dev/NULLSPACE/tools/art/pistol/build_pistol.py:29: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Info: Saved as "nullspace_pistol.blend"
+INFO Draco is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_draco_bridge.so
+INFO MeshOptimizer is available, use library at /home/marius/.local/share/nullspace/toolchains/blender-5.2.1/lib/libbf_intern_meshopt_bridge.so
+02:04:47 | INFO: Starting glTF 2.0 export
+02:04:47 | INFO: Extracting primitive: Muzzle crown
+02:04:47 | INFO: Primitives created: 4
+02:04:47 | INFO: Extracting primitive: Cube.078
+02:04:47 | INFO: Primitives created: 2
+02:04:47 | INFO: Extracting primitive: Cube.056
+02:04:47 | INFO: Primitives created: 2
+02:04:47 | INFO: Extracting primitive: Cube.063
+02:04:47 | INFO: Primitives created: 3
+02:04:47 | INFO: Extracting primitive: Cube.001
+02:04:47 | INFO: Primitives created: 4
+02:04:47 | INFO: Finished glTF 2.0 export in 0.044408559799194336 s
+
+02:04:47 | INFO: Starting glTF 2.0 export
+02:04:47 | INFO: Extracting primitive: Cube.085
+02:04:47 | INFO: Primitives created: 4
+02:04:47 | INFO: Finished glTF 2.0 export in 0.008378267288208008 s
+
+02:04:47 | INFO: Starting glTF 2.0 export
+02:04:47 | INFO: Extracting primitive: Casing wall
+02:04:47 | INFO: Primitives created: 2
+02:04:47 | INFO: Finished glTF 2.0 export in 0.005565643310546875 s
+
+NULLSPACE_PISTOL_ASSET {"source": "Original scripted Blender mesh by NULLSPACE project; no external assets", "blender": "5.2.1 LTS", "units": "metres", "muzzle_godot": [0, 0.101, -0.147], "nodes": {"Slide": {"vertices": 2496, "polygons": 2548}, "Frame": {"vertices": 4264, "polygons": 4334}, "Magazine": {"vertices": 192, "polygons": 196}, "RightHand": {"vertices": 1440, "polygons": 1470}, "LeftHand": {"vertices": 672, "polygons": 686}, "Case": {"vertices": 672, "polygons": 686}, "Casing": {"vertices": 480, "polygons": 482}}}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:12:34)
+
+Blender quit

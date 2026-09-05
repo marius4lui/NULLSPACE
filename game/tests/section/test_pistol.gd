@@ -10,6 +10,7 @@ func _ready() -> void:
 		if sound.kind == &"pistol_shot": heard_shots += 1)
 	var section := preload("res://section/section.tscn").instantiate() as NullspaceSection
 	add_child(section)
+	section.listener.enabled = false # This focused ammo/restore scenario isolates combat AI; AI has its own checks.
 	await _frames(4)
 	_check(GameFlow.begin_new_game().ok, "New unarmed game saves")
 	await _frames(8)
@@ -59,7 +60,7 @@ func _ready() -> void:
 	_check(GameFlow.state == NullGameFlow.State.PLAYING, "Actual scene resumes after weapon restore")
 	print(JSON.stringify({"suite": "integrated pistol", "checks": checks, "failures": failures,
 		"scope": "automated headless actual scene; no subjective or audio-listening claim"}))
-	get_tree().quit(0 if failures.is_empty() else 1)
+	section.request_quit(0 if failures.is_empty() else 1)
 
 func _frames(count: int) -> void:
 	for i: int in count:

@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 15890.677052821,
+  "acquired_utc": "2026-09-05T00:15:42.475+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-b/native-01/03-idle.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "2c46382f97432401f3fb761477414dfd43004fc2e7e6a8ec0151566c0c1274f0",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 164119
+  },
+  "x_readback_ms": 21.90152900038811
+}

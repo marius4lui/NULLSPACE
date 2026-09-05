@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 18783.186780328,
+  "acquired_utc": "2026-09-05T01:03:54.984+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-d/native-03/02-door-tactical.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "8ddbd1098d70948f3bbfbd4a736de63c1131eb327129e701c583011daf1567fe",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 177466
+  },
+  "x_readback_ms": 19.620426999608753
+}

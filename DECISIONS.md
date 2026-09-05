@@ -11,3 +11,7 @@ Takeover: workers told to stop; active core interrupted after preservation reque
 Select foundation52b8ace: staged native5389c4c/toolchainb647a1e/core988c18b/roome70fec5 with import/core evidence. It is not a playable game. Player WIP missing section.gd/no actual-play evidence. Reuse Listener3b67be9 when needed.
 
 Prior current docs saved verbatim once under docs/history/pre-scope-change-2026-09-05 at051d4f5; all earlier failures remain. Goal tools lack objective-edit/resume; existing old objective remains uncompleted, reportedusageLimited. Continue updated repo per explicit user fallback. README/Pages factual correction authorized; no redesign.
+
+Integrated core reuses Listener 3b67be9, adds only walk/run/attack/stagger separately. Concrete FSM uses nav paths/dated clues; door attenuation uses real path segments. No general director/acoustic framework. Doorway Area corrects actual targeting difficulty. Bounded original spatial synthesis; explicit mixer shutdown corrects reproduced resource warnings.
+
+Next map preserves M4, opens its north/east/entry continuations, adds office return and service/blackout loops. Roughly eleven meaningful spaces including existing office subdivisions, not a square maze. Count/area does not prove 10–15 minute duration; first exploration/pacing remain to measure. No third switch/mandatory kill.

@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 18510.357783345,
+  "acquired_utc": "2026-09-05T00:59:22.155+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-d/native-02/02-door-closed.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "555a4b77be43975d7074250016e676a8e561d6d5eced4534c055a1e1d7a6d1e7",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 176229
+  },
+  "x_readback_ms": 20.514750998700038
+}

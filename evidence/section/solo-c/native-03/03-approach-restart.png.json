@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 17741.977941239,
+  "acquired_utc": "2026-09-05T00:46:33.775+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-c/native-03/03-approach-restart.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "9b2aee0ccb74a81e03be2187777e26619f775947eb01b3ac40301abf131f2e2e",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 171817
+  },
+  "x_readback_ms": 14.533434998156736
+}

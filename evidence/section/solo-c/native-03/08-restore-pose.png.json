@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 17860.632050997,
+  "acquired_utc": "2026-09-05T00:48:32.430+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-c/native-03/08-restore-pose.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "32e855378f4317466bca209b818349528dc103e0e4a553fe9ef61f41443c8faa",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 171817
+  },
+  "x_readback_ms": 21.966411000903463
+}

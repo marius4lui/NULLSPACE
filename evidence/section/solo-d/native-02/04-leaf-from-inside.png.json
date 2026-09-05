@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 18563.167748843,
+  "acquired_utc": "2026-09-05T01:00:14.965+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-d/native-02/04-leaf-from-inside.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "e9934bd2b52a95961887337873b8b6a4f153ea9d0dee9ef9cea93aff42b62e13",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 176229
+  },
+  "x_readback_ms": 28.065549999155337
+}

@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SCRIPT ERROR: Invalid assignment of property or key 'parsed_geometry_type' with value of type 'int' on a base object of type 'NavigationMesh'.
+          at: NullspaceSection._bake_navigation (res://section/section.gd:134)
+          GDScript backtrace (most recent call first):
+              [0] _bake_navigation (res://section/section.gd:134)
+              [1] _ready (res://section/section.gd:39)
+              [2] _ready (res://tests/section/test_pistol.gd:12)
+{"checks":20,"failures":[],"scope":"automated headless actual scene; no subjective or audio-listening claim","suite":"integrated pistol"}

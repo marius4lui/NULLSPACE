@@ -6,6 +6,7 @@ signal shot_accepted(event: ShotEvent)
 signal observation_received(observation: PerceptionObservation)
 signal objective_committed(objective_id: StringName)
 signal gameplay_metric(kind: StringName, values: Dictionary)
+signal sound_emitted(event: SoundEvent)
 
 var _sound_propagator: Callable
 var _spatial_audio: Callable
@@ -23,8 +24,8 @@ func register_spatial_audio(receiver: Callable) -> Error:
 	return OK
 
 func submit_sound(event: SoundEvent) -> void:
+	sound_emitted.emit(event)
 	if _sound_propagator.is_valid():
 		_sound_propagator.call(event)
 	if _spatial_audio.is_valid():
 		_spatial_audio.call(event)
-

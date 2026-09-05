@@ -1,5 +1,7 @@
 class_name NullspaceSectionMenu
 extends Control
+
+signal quit_requested
 ## Concrete title/pause/settings and restrained in-game prompts for the playable scene.
 
 var _shade: ColorRect
@@ -95,8 +97,8 @@ func _show_screen() -> void:
 			_button("Settings", func() -> void: GameFlow.open_settings())
 			_button("Controls", _controls)
 			_button("Credits", _credits)
-			_button("Quit", func() -> void: get_tree().quit())
-			_label("Development build — room, player and pistol.\nListener and complete escape are not integrated yet.", 18)
+			_button("Quit", func() -> void: quit_requested.emit())
+			_label("Development build — room, pistol, Listener and tactical door.\nThe complete two-switch escape is still under construction.", 18)
 		NullGameFlow.State.PAUSED:
 			_label("Paused")
 			_button("Resume", func() -> void: GameFlow.resume_game())

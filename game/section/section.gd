@@ -14,16 +14,23 @@ var menu: NullspaceSectionMenu
 var pistol: SectionPistol
 var pistol_pickup: PistolPickup
 var shot_effects: PistolEffects
+var listener: Listener
+var navigation_region: NavigationRegion3D
+var sound: SectionSound
+var doors: Array[SectionDoor] = []
+var _noise_sequence: int = 0
 var _environment: Environment
 var _fixture_states: Array[int] = []
 var _snapshot: Dictionary = {}
 var _frame_samples: Array[float] = []
 var _sample_time: float = 0.0
 var _last_frame_usec: int = 0
+var _quitting: bool = false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	Input.use_accumulated_input = false
+	get_tree().auto_accept_quit = false
 	_environment = EnvironmentSurfaceLibrary.make_reference_environment()
 	var world := WorldEnvironment.new()
 	world.environment = _environment
@@ -33,6 +40,7 @@ func _ready() -> void:
 	add_child(room)
 	for fixture: NullspaceFluorescentFixture in room.fixtures:
 		_fixture_states.append(fixture.state)
+	_bake_navigation()
 	player = PLAYER.instantiate() as SectionPlayer
 	player.transform = ARRIVAL
 	add_child(player)
@@ -61,10 +69,26 @@ func _ready() -> void:
 	plate_text.outline_size = 0
 	plate_text.position = Vector3(0, 0.23, 0)
 	light_switch.add_child(plate_text)
+	listener = Listener.new()
+	listener.player = player
+	listener.section = self
+	listener.position = Vector3(-4.3, 0.05, -11.3)
+	add_child(listener)
+	var door := SectionDoor.new()
+	door.player = player
+	door.listener = listener
+	door.position = Vector3(-2.44, 0, -14.64)
+	add_child(door)
+	doors.append(door)
+	EventHub.sound_emitted.connect(_propagate_noise)
+	sound = SectionSound.new()
+	sound.section = self
+	add_child(sound)
 	var canvas := CanvasLayer.new()
 	add_child(canvas)
 	menu = Menu.new()
 	canvas.add_child(menu)
+	menu.quit_requested.connect(request_quit)
 	player.prompt_changed.connect(menu.set_prompt)
 	pistol.ammunition_changed.connect(menu.set_ammunition)
 	GameFlow.load_started.connect(_restore)
@@ -72,6 +96,22 @@ func _ready() -> void:
 	_apply_settings(SettingsManager.snapshot())
 	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(), true)
 	Telemetry.record(&"section_ready", {"room": "original_m4", "build_stage": "room_player"})
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		request_quit()
+
+func request_quit(code: int = 0) -> void:
+	if _quitting:
+		return
+	_quitting = true
+	GameFlow.return_to_menu()
+	sound.shutdown()
+	shot_effects.clear()
+	pistol._exit_tree()
+	# AudioServer releases stopped loop playbacks on its next mix, including Dummy audio.
+	await get_tree().create_timer(0.10, true, false, true).timeout
+	get_tree().quit(code)
 
 func _restore(snapshot: Dictionary, generation: int) -> void:
 	_snapshot = snapshot.duplicate(true)
@@ -83,8 +123,12 @@ func _restore(snapshot: Dictionary, generation: int) -> void:
 	light_switch.set_powered(powered)
 	_apply_local_power(powered)
 	shot_effects.clear()
+	sound.reset()
 	pistol.restore(snapshot["inventory"]["weapons"]["pistol"])
 	pistol_pickup.set_consumed("arrival_pistol" in snapshot["world"]["consumed_pickups"])
+	listener.reset_at(Vector3(-4.3, 0.05, -11.3))
+	for door: SectionDoor in doors:
+		door.restore(snapshot["world"]["doors"].get(door.door_id, "closed") == "open")
 	if not player.restore_at(ARRIVAL, snapshot["player"]):
 		GameFlow.fail_load(generation, "Arrival is obstructed. The checkpoint was not overwritten.")
 		return
@@ -102,6 +146,8 @@ func _on_local_power(enabled: bool) -> void:
 	_snapshot["inventory"]["weapons"]["pistol"] = pistol.snapshot()
 	_snapshot["player"]["equipped_weapon"] = "pistol" if pistol.owned else ""
 	_snapshot["session"]["elapsed_seconds"] = SimulationClock.sample().elapsed_seconds
+	for door: SectionDoor in doors:
+		_snapshot["world"]["doors"][door.door_id] = "open" if door.opened else "closed"
 	var result: StorageResult = CheckpointSystem.commit_snapshot(_snapshot)
 	menu.show_hint("Local lighting " + ("restored." if enabled else "off.  F — flashlight.") + ("\nCheckpoint saved." if result.ok else "\nSave failed: " + result.message))
 
@@ -113,8 +159,58 @@ func _on_pistol_collected() -> void:
 	_snapshot["session"]["elapsed_seconds"] = SimulationClock.sample().elapsed_seconds
 	_snapshot["player"]["stamina"] = player.stamina
 	_snapshot["player"]["flashlight_enabled"] = player.flashlight.visible
+	for door: SectionDoor in doors:
+		_snapshot["world"]["doors"][door.door_id] = "open" if door.opened else "closed"
 	var result: StorageResult = CheckpointSystem.commit_snapshot(_snapshot)
 	menu.show_hint("Pistol acquired.  Left mouse — fire · R — reload\n" + ("Checkpoint saved." if result.ok else "Save failed: " + result.message))
+
+func _bake_navigation() -> void:
+	navigation_region = NavigationRegion3D.new()
+	add_child(navigation_region)
+	var mesh := NavigationMesh.new()
+	mesh.geometry_parsed_geometry_type = NavigationMesh.PARSED_GEOMETRY_STATIC_COLLIDERS
+	mesh.geometry_collision_mask = 1
+	mesh.cell_size = 0.20
+	mesh.cell_height = 0.10
+	mesh.agent_radius = 0.40 # Exact two-cell clearance, covering the 0.28m physical capsule.
+	mesh.agent_height = 2.30
+	mesh.agent_max_climb = 0.20
+	mesh.region_min_size = 1.0
+	var source := NavigationMeshSourceGeometryData3D.new()
+	NavigationServer3D.parse_source_geometry_data(mesh, source, room)
+	NavigationServer3D.bake_from_source_geometry_data(mesh, source)
+	var map: RID = get_world_3d().navigation_map
+	NavigationServer3D.map_set_cell_size(map, mesh.cell_size)
+	NavigationServer3D.map_set_cell_height(map, mesh.cell_height)
+	navigation_region.navigation_mesh = mesh
+	NavigationServer3D.map_force_update(map)
+	Telemetry.record(&"navigation_ready", {"polygons": mesh.get_polygon_count()})
+
+func _propagate_noise(sound: SoundEvent) -> void:
+	if sound.source_id != &"section_player" or not sound.is_current_epoch(SimulationClock.sample()):
+		return
+	# This actual small scene uses navigable acoustic distance around its partitions.
+	# No infinite Euclidean hearing and no retained live player transform.
+	var path: PackedVector3Array = NavigationServer3D.map_get_path(get_world_3d().navigation_map,
+		listener.global_position, sound.position, true)
+	if path.size() < 2:
+		return
+	var distance: float = 0.0
+	var attenuation: float = 1.0
+	for i: int in range(1, path.size()):
+		distance += path[i - 1].distance_to(path[i])
+		for door: SectionDoor in doors:
+			if door.attenuates_segment(path[i - 1], path[i]):
+				attenuation *= .36
+	var reach: float = 38.0 * sound.intensity * attenuation
+	if distance > reach:
+		return
+	_noise_sequence += 1
+	var certainty: float = clampf(1.0 - distance / maxf(reach, 0.01) * 0.6, 0.25, 0.95)
+	var error: float = (1.0 - certainty) * 2.0
+	var estimate: Vector3 = sound.position + Vector3(sin(_noise_sequence * 2.37), 0, cos(_noise_sequence * 1.53)) * error
+	estimate = NavigationServer3D.map_get_closest_point(get_world_3d().navigation_map, estimate)
+	listener.hear_at(estimate, certainty, sound.kind, SimulationClock.sample())
 
 func _apply_local_power(enabled: bool) -> void:
 	for i: int in room.fixtures.size():

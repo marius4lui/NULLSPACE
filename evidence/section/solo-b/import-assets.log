@@ -1,0 +1,88 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Projektinitialisierung (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Lese Dateistrucktur …[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Globale Klassennamen laden …[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifiziere GDExtensions…[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Autoload-Skripte erzeugen …[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Plugins initialisieren…[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Dateiscan starten …[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Aktionen scannen … (14 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | casing.wav[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | empty.wav[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | mag_in.wav[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | mag_out.wav[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | metal.wav[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | pickup.wav[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | pistol_0.wav[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | pistol_1.wav[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | pistol_2.wav[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | plaster.wav[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | slide.wav[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | pistol.glb[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | pistol_case.glb[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | pistol_casing.glb[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started Assets (erneut) importieren (14 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[   6% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  13% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  20% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  26% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  33% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  40% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  46% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  53% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  60% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  66% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  73% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  80% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[  86% ] [90m[1mreimport[22m | Dateien zum Neuimport vorbereiten …[39m[0m
+[   0% ] [90m[1mreimport[22m | Vor-Neuimport-Operationen ausführen …[39m[0m
+[   0% ] [90m[1mreimport[22m | casing.wav[39m[0m
+[   6% ] [90m[1mreimport[22m | empty.wav[39m[0m
+[  13% ] [90m[1mreimport[22m | mag_in.wav[39m[0m
+[  20% ] [90m[1mreimport[22m | mag_out.wav[39m[0m
+[  26% ] [90m[1mreimport[22m | metal.wav[39m[0m
+[  33% ] [90m[1mreimport[22m | pickup.wav[39m[0m
+[  40% ] [90m[1mreimport[22m | pistol_0.wav[39m[0m
+[  46% ] [90m[1mreimport[22m | pistol_1.wav[39m[0m
+[  53% ] [90m[1mreimport[22m | pistol_2.wav[39m[0m
+[  60% ] [90m[1mreimport[22m | plaster.wav[39m[0m
+[  66% ] [90m[1mreimport[22m | slide.wav[39m[0m
+[  73% ] [90m[1mreimport[22m | pistol.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Szene importieren (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importiere Szene…[39m[0m
+[   1% ] [90m[1mimport[22m | Eigenes Skript wird ausgeführt …[39m[0m
+[  99% ] [90m[1mimport[22m | Speichern …[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  80% ] [90m[1mreimport[22m | pistol_case.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Szene importieren (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importiere Szene…[39m[0m
+[   1% ] [90m[1mimport[22m | Eigenes Skript wird ausgeführt …[39m[0m
+[  99% ] [90m[1mimport[22m | Speichern …[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  86% ] [90m[1mreimport[22m | pistol_casing.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Szene importieren (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importiere Szene…[39m[0m
+[   1% ] [90m[1mimport[22m | Eigenes Skript wird ausgeführt …[39m[0m
+[  99% ] [90m[1mimport[22m | Speichern …[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  93% ] [90m[1mreimport[22m | Asset-Import fertigstellen …[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started Assets (erneut) importieren (14 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Nach-Neuimport-Operationen ausführen …[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Editor laden (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Editor-Layout laden …[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Docks laden …[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m

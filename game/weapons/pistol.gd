@@ -164,12 +164,12 @@ func try_fire() -> bool:
 		result.target_id = target.name
 		result.position = hit["position"]
 		result.normal = hit["normal"]
-		result.surface_id = &"metal" if target is SectionLightSwitch else &"plaster"
+		result.surface_id = &"metal" if target is SectionLightSwitch or target is SectionDoor.Leaf else &"plaster"
 		shot.hits.append(result)
 		if target.has_method("receive_shot"):
 			target.call("receive_shot", result.position, 1.0)
 		else:
-			effects.impact(result.position, result.normal, result.surface_id == &"metal")
+			effects.impact(result.position, result.normal, result.surface_id == &"metal", target as SectionDoor.Leaf)
 	var stamp: SimulationStamp = SimulationClock.sample()
 	var sound := SoundEvent.new()
 	sound.event_id = shot.action_id
@@ -240,6 +240,15 @@ func restore(values: Dictionary) -> void:
 	_timer = 0.0
 	_recoil = 0.0
 	_flash_time = 0.0
+	_wall_raise = 0.0
+	_bob_time = 0.0
+	position = HIP
+	rotation = Vector3(0, 0.12, 0)
+	_slide.position.z = 0.027 if chamber == 0 else 0.0
+	_mag.position = Vector3.ZERO
+	_left.position = Vector3.ZERO
+	_flash.visible = false
+	_flare.visible = false
 	visible = owned
 	_cancel_pending(0, &"restore")
 	_notify()
@@ -291,9 +300,10 @@ func _animate(delta: float) -> void:
 		lower = roll * 0.035
 	if state == State.EQUIPPING:
 		lower = (1.0 - minf(_timer / 0.5, 1.0)) * 0.25
-	position = HIP + Vector3(sin(_bob_time * 0.5) * 0.004 * motion, -lower + cos(_bob_time) * 0.003 * motion,
-		_recoil * 0.026 + _wall_raise * 0.09)
-	rotation = Vector3(_recoil * 0.11 + _wall_raise * 0.73 - (0.22 if wielder.sprinting else 0.0),
+	position = HIP + Vector3(sin(_bob_time * 0.5) * 0.004 * motion - _wall_raise * 0.04,
+		-lower + cos(_bob_time) * 0.003 * motion + _wall_raise * 0.09,
+		_recoil * 0.026 + _wall_raise * 0.18)
+	rotation = Vector3(_recoil * 0.11 + _wall_raise * 0.95 - (0.22 if wielder.sprinting else 0.0),
 		0.12 + (0.3 if wielder.sprinting else 0.0), roll * -0.35)
 	_slide.position.z = 0.035 * (1.0 - minf(_timer / 0.10, 1.0)) if state == State.CYCLING else (0.027 if chamber == 0 else 0.0)
 	_mag.position.y = -sin(clampf((_timer - 0.2) / 0.78, 0.0, 1.0) * PI) * 0.20 if state == State.RELOADING else 0.0

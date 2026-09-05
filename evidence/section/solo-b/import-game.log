@@ -1,0 +1,31 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Projektinitialisierung (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Lese Dateistrucktur …[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Globale Klassennamen laden …[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifiziere GDExtensions…[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Autoload-Skripte erzeugen …[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Plugins initialisieren…[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Dateiscan starten …[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Globale Klassen registrieren … (12 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | AtomicJsonStore[39m[0m
+[   7% ] [90m[1mupdate_scripts_classes[22m | NullSaveSystem[39m[0m
+[  15% ] [90m[1mupdate_scripts_classes[22m | SnapshotSchema[39m[0m
+[  23% ] [90m[1mupdate_scripts_classes[22m | SectionPlayer[39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  38% ] [90m[1mupdate_scripts_classes[22m | NullspaceSection[39m[0m
+[  46% ] [90m[1mupdate_scripts_classes[22m | NullspaceSectionMenu[39m[0m
+[  53% ] [90m[1mupdate_scripts_classes[22m | CoreClockRestoreTests[39m[0m
+[  61% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  69% ] [90m[1mupdate_scripts_classes[22m | SectionPistol[39m[0m
+[  76% ] [90m[1mupdate_scripts_classes[22m | PistolEffects[39m[0m
+[  84% ] [90m[1mupdate_scripts_classes[22m | PistolPickup[39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Editor laden (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Editor-Layout laden …[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Docks laden …[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m

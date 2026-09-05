@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 16027.930261275,
+  "acquired_utc": "2026-09-05T00:17:59.728+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-b/native-01/06-wall-clearance.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "a7cc51ac8bc182de092e428bcb72997e44f199f5fca3e5d1aa98ce276b787ec8",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 164119
+  },
+  "x_readback_ms": 25.35115200043947
+}

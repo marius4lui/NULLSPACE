@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 17794.237323367,
+  "acquired_utc": "2026-09-05T00:47:26.035+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-c/native-03/05-hit-retreat.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "3e8331b2f60a5d905d5dbb3a07dfcc9d4d660c3394688d956385c4d0b4d4b0c7",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 171817
+  },
+  "x_readback_ms": 27.86000500054797
+}

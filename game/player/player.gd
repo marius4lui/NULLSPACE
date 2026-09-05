@@ -37,7 +37,7 @@ var _settings: Dictionary = {}
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	collision_layer = 2
-	collision_mask = 1
+	collision_mask = 1 | 4
 	floor_snap_length = 0.24
 	floor_max_angle = deg_to_rad(44.0)
 	safe_margin = 0.002
@@ -135,10 +135,11 @@ func has_clearance(height: float = STANDING_HEIGHT) -> bool:
 
 func interaction_target() -> Node:
 	var start: Vector3 = camera.global_position
-	var query := PhysicsRayQueryParameters3D.create(start, start - camera.global_basis.z * INTERACTION_REACH, 1, [get_rid()])
+	var query := PhysicsRayQueryParameters3D.create(start, start - camera.global_basis.z * INTERACTION_REACH, 1 | 8, [get_rid()])
+	query.collide_with_areas = true
 	var hit: Dictionary = get_world_3d().direct_space_state.intersect_ray(query)
 	var target := hit.get("collider") as Node
-	return target if target is SectionLightSwitch or target is PistolPickup else null
+	return target if target is SectionLightSwitch or target is PistolPickup or target is SectionDoor.Leaf or target is SectionDoor.Trigger else null
 
 func add_recoil(pitch: float, yaw: float) -> void:
 	var strength: float = float(_settings["camera_shake"])

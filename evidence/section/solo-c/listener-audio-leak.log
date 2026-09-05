@@ -1,0 +1,279 @@
+WorkerThreadPool: 12 threads, 3 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+SDL: Init OK!
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+Loading resource: res://default_bus_layout.tres remapped: res://default_bus_layout.tres
+Completed load for: 'res://default_bus_layout.tres' remapped 'res://default_bus_layout.tres' at thread -1
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://core/settings/settings_manager.gd remapped: res://core/settings/settings_manager.gd
+Loading resource: res://data/quality/low.tres remapped: res://data/quality/low.tres
+Loading resource: res://core/config/quality_profile.gd remapped: res://core/config/quality_profile.gd
+Completed load for: 'res://core/config/quality_profile.gd' remapped 'res://core/config/quality_profile.gd' at thread -1
+Completed load for: 'res://data/quality/low.tres' remapped 'res://data/quality/low.tres' at thread -1
+Loading resource: res://data/quality/medium.tres remapped: res://data/quality/medium.tres
+Completed load for: 'res://data/quality/medium.tres' remapped 'res://data/quality/medium.tres' at thread -1
+Loading resource: res://data/quality/high.tres remapped: res://data/quality/high.tres
+Completed load for: 'res://data/quality/high.tres' remapped 'res://data/quality/high.tres' at thread -1
+Loading resource: res://data/quality/ultra.tres remapped: res://data/quality/ultra.tres
+Completed load for: 'res://data/quality/ultra.tres' remapped 'res://data/quality/ultra.tres' at thread -1
+Loading resource: res://data/default_tuning.tres remapped: res://data/default_tuning.tres
+Loading resource: res://core/config/game_tuning.gd remapped: res://core/config/game_tuning.gd
+Completed load for: 'res://core/config/game_tuning.gd' remapped 'res://core/config/game_tuning.gd' at thread -1
+Completed load for: 'res://data/default_tuning.tres' remapped 'res://data/default_tuning.tres' at thread -1
+Completed load for: 'res://core/settings/settings_manager.gd' remapped 'res://core/settings/settings_manager.gd' at thread -1
+Loading resource: res://core/persistence/save_system.gd remapped: res://core/persistence/save_system.gd
+Completed load for: 'res://core/persistence/save_system.gd' remapped 'res://core/persistence/save_system.gd' at thread -1
+Loading resource: res://core/persistence/checkpoint_system.gd remapped: res://core/persistence/checkpoint_system.gd
+Completed load for: 'res://core/persistence/checkpoint_system.gd' remapped 'res://core/persistence/checkpoint_system.gd' at thread -1
+Loading resource: res://core/input/input_gate.gd remapped: res://core/input/input_gate.gd
+Completed load for: 'res://core/input/input_gate.gd' remapped 'res://core/input/input_gate.gd' at thread -1
+Loading resource: res://core/events/event_hub.gd remapped: res://core/events/event_hub.gd
+Completed load for: 'res://core/events/event_hub.gd' remapped 'res://core/events/event_hub.gd' at thread -1
+Loading resource: res://core/telemetry/telemetry.gd remapped: res://core/telemetry/telemetry.gd
+Completed load for: 'res://core/telemetry/telemetry.gd' remapped 'res://core/telemetry/telemetry.gd' at thread -1
+Loaded system CA certificates
+Loading resource: res://tests/section/test_listener.tscn remapped: res://tests/section/test_listener.tscn
+Loading resource: res://tests/section/test_listener.gd remapped: res://tests/section/test_listener.gd
+Loading resource: res://section/section.tscn remapped: res://section/section.tscn
+Loading resource: res://section/section.gd remapped: res://section/section.gd
+Loading resource: res://environment/m4_reference_room.tscn remapped: res://environment/m4_reference_room.tscn
+Loading resource: res://environment/m4_reference_room.gd remapped: res://environment/m4_reference_room.gd
+Loading resource: res://assets/environment/room_m4_architecture.gltf remapped: res://assets/environment/room_m4_architecture.gltf
+Loading resource: res://.godot/imported/room_m4_architecture.gltf-840778a0fe3c0317d38bb2fdb8068f60.scn remapped: res://.godot/imported/room_m4_architecture.gltf-840778a0fe3c0317d38bb2fdb8068f60.scn
+Loading resource: res://assets/environment/textures/carpet_basecolor.png remapped: res://assets/environment/textures/carpet_basecolor.png
+Loading resource: res://.godot/imported/carpet_basecolor.png-28338427d014d5de5df3c4fe418e1698.bptc.ctex remapped: res://.godot/imported/carpet_basecolor.png-28338427d014d5de5df3c4fe418e1698.bptc.ctex
+Completed load for: 'res://assets/environment/textures/carpet_basecolor.png' remapped 'res://assets/environment/textures/carpet_basecolor.png' at thread -1
+Loading resource: res://assets/environment/textures/carpet_orm.png remapped: res://assets/environment/textures/carpet_orm.png
+Loading resource: res://.godot/imported/carpet_orm.png-9807bf9f410d246c00f41da47d3c013a.bptc.ctex remapped: res://.godot/imported/carpet_orm.png-9807bf9f410d246c00f41da47d3c013a.bptc.ctex
+Completed load for: 'res://assets/environment/textures/carpet_orm.png' remapped 'res://assets/environment/textures/carpet_orm.png' at thread -1
+Loading resource: res://assets/environment/textures/carpet_normal.png remapped: res://assets/environment/textures/carpet_normal.png
+Loading resource: res://.godot/imported/carpet_normal.png-6087c4da6264feef7e9a84fb33d21143.s3tc.ctex remapped: res://.godot/imported/carpet_normal.png-6087c4da6264feef7e9a84fb33d21143.s3tc.ctex
+Completed load for: 'res://assets/environment/textures/carpet_normal.png' remapped 'res://assets/environment/textures/carpet_normal.png' at thread -1
+Loading resource: res://assets/environment/textures/wallpaper_basecolor.png remapped: res://assets/environment/textures/wallpaper_basecolor.png
+Loading resource: res://.godot/imported/wallpaper_basecolor.png-220f3ea937eb89330ed8e88c9275f6ab.bptc.ctex remapped: res://.godot/imported/wallpaper_basecolor.png-220f3ea937eb89330ed8e88c9275f6ab.bptc.ctex
+Completed load for: 'res://assets/environment/textures/wallpaper_basecolor.png' remapped 'res://assets/environment/textures/wallpaper_basecolor.png' at thread -1
+Loading resource: res://assets/environment/textures/wallpaper_orm.png remapped: res://assets/environment/textures/wallpaper_orm.png
+Loading resource: res://.godot/imported/wallpaper_orm.png-4a757ce898b9b342a2b8365b43205e67.bptc.ctex remapped: res://.godot/imported/wallpaper_orm.png-4a757ce898b9b342a2b8365b43205e67.bptc.ctex
+Completed load for: 'res://assets/environment/textures/wallpaper_orm.png' remapped 'res://assets/environment/textures/wallpaper_orm.png' at thread -1
+Loading resource: res://assets/environment/textures/wallpaper_normal.png remapped: res://assets/environment/textures/wallpaper_normal.png
+Loading resource: res://.godot/imported/wallpaper_normal.png-6694747282e671da487d06ec104771bc.s3tc.ctex remapped: res://.godot/imported/wallpaper_normal.png-6694747282e671da487d06ec104771bc.s3tc.ctex
+Completed load for: 'res://assets/environment/textures/wallpaper_normal.png' remapped 'res://assets/environment/textures/wallpaper_normal.png' at thread -1
+Loading resource: res://assets/environment/textures/baseboard_basecolor.png remapped: res://assets/environment/textures/baseboard_basecolor.png
+Loading resource: res://.godot/imported/baseboard_basecolor.png-a49fe8429e89b4af933ea15583b03b56.bptc.ctex remapped: res://.godot/imported/baseboard_basecolor.png-a49fe8429e89b4af933ea15583b03b56.bptc.ctex
+Completed load for: 'res://assets/environment/textures/baseboard_basecolor.png' remapped 'res://assets/environment/textures/baseboard_basecolor.png' at thread -1
+Loading resource: res://assets/environment/textures/baseboard_orm.png remapped: res://assets/environment/textures/baseboard_orm.png
+Loading resource: res://.godot/imported/baseboard_orm.png-b6daf2f358a87c13ab14ab2939a68138.bptc.ctex remapped: res://.godot/imported/baseboard_orm.png-b6daf2f358a87c13ab14ab2939a68138.bptc.ctex
+Completed load for: 'res://assets/environment/textures/baseboard_orm.png' remapped 'res://assets/environment/textures/baseboard_orm.png' at thread -1
+Loading resource: res://assets/environment/textures/baseboard_normal.png remapped: res://assets/environment/textures/baseboard_normal.png
+Loading resource: res://.godot/imported/baseboard_normal.png-cef0066713c2f96c64a11f8f12997f4e.s3tc.ctex remapped: res://.godot/imported/baseboard_normal.png-cef0066713c2f96c64a11f8f12997f4e.s3tc.ctex
+Completed load for: 'res://assets/environment/textures/baseboard_normal.png' remapped 'res://assets/environment/textures/baseboard_normal.png' at thread -1
+Loading resource: res://assets/environment/textures/painted_metal_basecolor.png remapped: res://assets/environment/textures/painted_metal_basecolor.png
+Loading resource: res://.godot/imported/painted_metal_basecolor.png-319da07c42356afd2eaffd060d06d332.bptc.ctex remapped: res://.godot/imported/painted_metal_basecolor.png-319da07c42356afd2eaffd060d06d332.bptc.ctex
+Completed load for: 'res://assets/environment/textures/painted_metal_basecolor.png' remapped 'res://assets/environment/textures/painted_metal_basecolor.png' at thread -1
+Loading resource: res://assets/environment/textures/painted_metal_orm.png remapped: res://assets/environment/textures/painted_metal_orm.png
+Loading resource: res://.godot/imported/painted_metal_orm.png-a2161089307e56d61a18278c46d5fe53.bptc.ctex remapped: res://.godot/imported/painted_metal_orm.png-a2161089307e56d61a18278c46d5fe53.bptc.ctex
+Completed load for: 'res://assets/environment/textures/painted_metal_orm.png' remapped 'res://assets/environment/textures/painted_metal_orm.png' at thread -1
+Loading resource: res://assets/environment/textures/painted_metal_normal.png remapped: res://assets/environment/textures/painted_metal_normal.png
+Loading resource: res://.godot/imported/painted_metal_normal.png-a3ec1c1ffdd2746d9abb608b33c6445a.s3tc.ctex remapped: res://.godot/imported/painted_metal_normal.png-a3ec1c1ffdd2746d9abb608b33c6445a.s3tc.ctex
+Completed load for: 'res://assets/environment/textures/painted_metal_normal.png' remapped 'res://assets/environment/textures/painted_metal_normal.png' at thread -1
+Loading resource: res://assets/environment/textures/ceiling_basecolor.png remapped: res://assets/environment/textures/ceiling_basecolor.png
+Loading resource: res://.godot/imported/ceiling_basecolor.png-fad29bb3238c955d78c56fd5680e194c.bptc.ctex remapped: res://.godot/imported/ceiling_basecolor.png-fad29bb3238c955d78c56fd5680e194c.bptc.ctex
+Completed load for: 'res://assets/environment/textures/ceiling_basecolor.png' remapped 'res://assets/environment/textures/ceiling_basecolor.png' at thread -1
+Loading resource: res://assets/environment/textures/ceiling_orm.png remapped: res://assets/environment/textures/ceiling_orm.png
+Loading resource: res://.godot/imported/ceiling_orm.png-fe64f7c963ba2c80327626d115a9ca56.bptc.ctex remapped: res://.godot/imported/ceiling_orm.png-fe64f7c963ba2c80327626d115a9ca56.bptc.ctex
+Completed load for: 'res://assets/environment/textures/ceiling_orm.png' remapped 'res://assets/environment/textures/ceiling_orm.png' at thread -1
+Loading resource: res://assets/environment/textures/ceiling_normal.png remapped: res://assets/environment/textures/ceiling_normal.png
+Loading resource: res://.godot/imported/ceiling_normal.png-5806f4c7bc5621df28a5dc3996836176.s3tc.ctex remapped: res://.godot/imported/ceiling_normal.png-5806f4c7bc5621df28a5dc3996836176.s3tc.ctex
+Completed load for: 'res://assets/environment/textures/ceiling_normal.png' remapped 'res://assets/environment/textures/ceiling_normal.png' at thread -1
+Loading resource: res://assets/environment/textures/fixture_detail_basecolor.png remapped: res://assets/environment/textures/fixture_detail_basecolor.png
+Loading resource: res://.godot/imported/fixture_detail_basecolor.png-056bf5c38d1a493f9705cdabfe18789f.bptc.ctex remapped: res://.godot/imported/fixture_detail_basecolor.png-056bf5c38d1a493f9705cdabfe18789f.bptc.ctex
+Completed load for: 'res://assets/environment/textures/fixture_detail_basecolor.png' remapped 'res://assets/environment/textures/fixture_detail_basecolor.png' at thread -1
+Loading resource: res://assets/environment/textures/fixture_detail_orm.png remapped: res://assets/environment/textures/fixture_detail_orm.png
+Loading resource: res://.godot/imported/fixture_detail_orm.png-4f238058011c11a1f1d237174d02f43b.bptc.ctex remapped: res://.godot/imported/fixture_detail_orm.png-4f238058011c11a1f1d237174d02f43b.bptc.ctex
+Completed load for: 'res://assets/environment/textures/fixture_detail_orm.png' remapped 'res://assets/environment/textures/fixture_detail_orm.png' at thread -1
+Loading resource: res://assets/environment/textures/fixture_detail_emission.png remapped: res://assets/environment/textures/fixture_detail_emission.png
+Loading resource: res://.godot/imported/fixture_detail_emission.png-d763d66fd76fd21946c9057adfb00980.bptc.ctex remapped: res://.godot/imported/fixture_detail_emission.png-d763d66fd76fd21946c9057adfb00980.bptc.ctex
+Completed load for: 'res://assets/environment/textures/fixture_detail_emission.png' remapped 'res://assets/environment/textures/fixture_detail_emission.png' at thread -1
+Loading resource: res://assets/environment/textures/fixture_detail_normal.png remapped: res://assets/environment/textures/fixture_detail_normal.png
+Loading resource: res://.godot/imported/fixture_detail_normal.png-b0a0fd13eec55a16bbe2035cbeac710c.s3tc.ctex remapped: res://.godot/imported/fixture_detail_normal.png-b0a0fd13eec55a16bbe2035cbeac710c.s3tc.ctex
+Completed load for: 'res://assets/environment/textures/fixture_detail_normal.png' remapped 'res://assets/environment/textures/fixture_detail_normal.png' at thread -1
+Completed load for: 'res://assets/environment/room_m4_architecture.gltf' remapped 'res://assets/environment/room_m4_architecture.gltf' at thread -1
+Loading resource: res://environment/environment_surface.gdshader remapped: res://environment/environment_surface.gdshader
+Completed load for: 'res://environment/environment_surface.gdshader' remapped 'res://environment/environment_surface.gdshader' at thread -1
+Completed load for: 'res://environment/m4_reference_room.gd' remapped 'res://environment/m4_reference_room.gd' at thread -1
+Completed load for: 'res://environment/m4_reference_room.tscn' remapped 'res://environment/m4_reference_room.tscn' at thread -1
+Loading resource: res://player/player.tscn remapped: res://player/player.tscn
+Loading resource: res://player/player.gd remapped: res://player/player.gd
+Loading resource: res://assets/pistol/pistol.glb remapped: res://assets/pistol/pistol.glb
+Loading resource: res://.godot/imported/pistol.glb-c458c1ea88eb60c7e3c8cc86458b1f76.scn remapped: res://.godot/imported/pistol.glb-c458c1ea88eb60c7e3c8cc86458b1f76.scn
+Completed load for: 'res://assets/pistol/pistol.glb' remapped 'res://assets/pistol/pistol.glb' at thread -1
+Loading resource: res://assets/pistol/pistol_case.glb remapped: res://assets/pistol/pistol_case.glb
+Loading resource: res://.godot/imported/pistol_case.glb-caea7b592780f595860cdf0449ac358b.scn remapped: res://.godot/imported/pistol_case.glb-caea7b592780f595860cdf0449ac358b.scn
+Completed load for: 'res://assets/pistol/pistol_case.glb' remapped 'res://assets/pistol/pistol_case.glb' at thread -1
+Loading resource: res://assets/audio/pistol/pistol_0.wav remapped: res://assets/audio/pistol/pistol_0.wav
+Loading resource: res://.godot/imported/pistol_0.wav-4d4da175af5e5295269086f02fe4b2bd.sample remapped: res://.godot/imported/pistol_0.wav-4d4da175af5e5295269086f02fe4b2bd.sample
+Completed load for: 'res://assets/audio/pistol/pistol_0.wav' remapped 'res://assets/audio/pistol/pistol_0.wav' at thread -1
+Loading resource: res://assets/audio/pistol/pistol_1.wav remapped: res://assets/audio/pistol/pistol_1.wav
+Loading resource: res://.godot/imported/pistol_1.wav-55387ac04d3113fa9de34c462ac1e029.sample remapped: res://.godot/imported/pistol_1.wav-55387ac04d3113fa9de34c462ac1e029.sample
+Completed load for: 'res://assets/audio/pistol/pistol_1.wav' remapped 'res://assets/audio/pistol/pistol_1.wav' at thread -1
+Loading resource: res://assets/audio/pistol/pistol_2.wav remapped: res://assets/audio/pistol/pistol_2.wav
+Loading resource: res://.godot/imported/pistol_2.wav-63882a7a83eb90629f7d3e2dd884690f.sample remapped: res://.godot/imported/pistol_2.wav-63882a7a83eb90629f7d3e2dd884690f.sample
+Completed load for: 'res://assets/audio/pistol/pistol_2.wav' remapped 'res://assets/audio/pistol/pistol_2.wav' at thread -1
+Loading resource: res://assets/audio/pistol/empty.wav remapped: res://assets/audio/pistol/empty.wav
+Loading resource: res://.godot/imported/empty.wav-67fb203fe6e53767ee3d83065861626e.sample remapped: res://.godot/imported/empty.wav-67fb203fe6e53767ee3d83065861626e.sample
+Completed load for: 'res://assets/audio/pistol/empty.wav' remapped 'res://assets/audio/pistol/empty.wav' at thread -1
+Loading resource: res://assets/audio/pistol/mag_out.wav remapped: res://assets/audio/pistol/mag_out.wav
+Loading resource: res://.godot/imported/mag_out.wav-1f637ec99cd34a4f200df8ddbc721c06.sample remapped: res://.godot/imported/mag_out.wav-1f637ec99cd34a4f200df8ddbc721c06.sample
+Completed load for: 'res://assets/audio/pistol/mag_out.wav' remapped 'res://assets/audio/pistol/mag_out.wav' at thread -1
+Loading resource: res://assets/audio/pistol/mag_in.wav remapped: res://assets/audio/pistol/mag_in.wav
+Loading resource: res://.godot/imported/mag_in.wav-f44cdbbfd1876accba9f94349c5d7a4a.sample remapped: res://.godot/imported/mag_in.wav-f44cdbbfd1876accba9f94349c5d7a4a.sample
+Completed load for: 'res://assets/audio/pistol/mag_in.wav' remapped 'res://assets/audio/pistol/mag_in.wav' at thread -1
+Loading resource: res://assets/audio/pistol/slide.wav remapped: res://assets/audio/pistol/slide.wav
+Loading resource: res://.godot/imported/slide.wav-947bece26aee807e1e0e924b77bea76a.sample remapped: res://.godot/imported/slide.wav-947bece26aee807e1e0e924b77bea76a.sample
+Completed load for: 'res://assets/audio/pistol/slide.wav' remapped 'res://assets/audio/pistol/slide.wav' at thread -1
+Loading resource: res://assets/audio/pistol/pickup.wav remapped: res://assets/audio/pistol/pickup.wav
+Loading resource: res://.godot/imported/pickup.wav-5824ee37b86df41958dd08419f5afb90.sample remapped: res://.godot/imported/pickup.wav-5824ee37b86df41958dd08419f5afb90.sample
+Completed load for: 'res://assets/audio/pistol/pickup.wav' remapped 'res://assets/audio/pistol/pickup.wav' at thread -1
+Loading resource: res://assets/pistol/pistol_casing.glb remapped: res://assets/pistol/pistol_casing.glb
+Loading resource: res://.godot/imported/pistol_casing.glb-e2565110fb9b19fe806a5767a5ca0dc9.scn remapped: res://.godot/imported/pistol_casing.glb-e2565110fb9b19fe806a5767a5ca0dc9.scn
+Completed load for: 'res://assets/pistol/pistol_casing.glb' remapped 'res://assets/pistol/pistol_casing.glb' at thread -1
+Loading resource: res://assets/audio/pistol/casing.wav remapped: res://assets/audio/pistol/casing.wav
+Loading resource: res://.godot/imported/casing.wav-75bd4a599e6f3aee35c2ef836e7c7f75.sample remapped: res://.godot/imported/casing.wav-75bd4a599e6f3aee35c2ef836e7c7f75.sample
+Completed load for: 'res://assets/audio/pistol/casing.wav' remapped 'res://assets/audio/pistol/casing.wav' at thread -1
+Loading resource: res://assets/audio/pistol/plaster.wav remapped: res://assets/audio/pistol/plaster.wav
+Loading resource: res://.godot/imported/plaster.wav-0cdfe34e8c9ca64bdeed1c56ef14865e.sample remapped: res://.godot/imported/plaster.wav-0cdfe34e8c9ca64bdeed1c56ef14865e.sample
+Completed load for: 'res://assets/audio/pistol/plaster.wav' remapped 'res://assets/audio/pistol/plaster.wav' at thread -1
+Loading resource: res://assets/audio/pistol/metal.wav remapped: res://assets/audio/pistol/metal.wav
+Loading resource: res://.godot/imported/metal.wav-bd54180d05adbdc69604a889434e93cb.sample remapped: res://.godot/imported/metal.wav-bd54180d05adbdc69604a889434e93cb.sample
+Completed load for: 'res://assets/audio/pistol/metal.wav' remapped 'res://assets/audio/pistol/metal.wav' at thread -1
+Completed load for: 'res://player/player.gd' remapped 'res://player/player.gd' at thread -1
+Completed load for: 'res://player/player.tscn' remapped 'res://player/player.tscn' at thread -1
+Loading resource: res://assets/listener/listener_gameplay.glb remapped: res://assets/listener/listener_gameplay.glb
+Loading resource: res://.godot/imported/listener_gameplay.glb-262164ce190034a03fd671dc4490e748.scn remapped: res://.godot/imported/listener_gameplay.glb-262164ce190034a03fd671dc4490e748.scn
+Loading resource: res://assets/listener/listener_gameplay_listener_skin_basecolor.png remapped: res://assets/listener/listener_gameplay_listener_skin_basecolor.png
+Loading resource: res://.godot/imported/listener_gameplay_listener_skin_basecolor.png-ccc7cea7a53e706b2d216bf881f07983.ctex remapped: res://.godot/imported/listener_gameplay_listener_skin_basecolor.png-ccc7cea7a53e706b2d216bf881f07983.ctex
+Completed load for: 'res://assets/listener/listener_gameplay_listener_skin_basecolor.png' remapped 'res://assets/listener/listener_gameplay_listener_skin_basecolor.png' at thread -1
+Loading resource: res://assets/listener/listener_gameplay_listener_skin_orm.png remapped: res://assets/listener/listener_gameplay_listener_skin_orm.png
+Loading resource: res://.godot/imported/listener_gameplay_listener_skin_orm.png-bd3fd2d1b3dbf208685425cc5b4ac134.ctex remapped: res://.godot/imported/listener_gameplay_listener_skin_orm.png-bd3fd2d1b3dbf208685425cc5b4ac134.ctex
+Completed load for: 'res://assets/listener/listener_gameplay_listener_skin_orm.png' remapped 'res://assets/listener/listener_gameplay_listener_skin_orm.png' at thread -1
+Loading resource: res://assets/listener/listener_gameplay_listener_skin_normal.png remapped: res://assets/listener/listener_gameplay_listener_skin_normal.png
+Loading resource: res://.godot/imported/listener_gameplay_listener_skin_normal.png-c7b2e9e0925d202352169ac9d3e0a788.ctex remapped: res://.godot/imported/listener_gameplay_listener_skin_normal.png-c7b2e9e0925d202352169ac9d3e0a788.ctex
+Completed load for: 'res://assets/listener/listener_gameplay_listener_skin_normal.png' remapped 'res://assets/listener/listener_gameplay_listener_skin_normal.png' at thread -1
+Completed load for: 'res://assets/listener/listener_gameplay.glb' remapped 'res://assets/listener/listener_gameplay.glb' at thread -1
+Completed load for: 'res://section/section.gd' remapped 'res://section/section.gd' at thread -1
+Completed load for: 'res://section/section.tscn' remapped 'res://section/section.tscn' at thread -1
+Completed load for: 'res://tests/section/test_listener.gd' remapped 'res://tests/section/test_listener.gd' at thread -1
+Completed load for: 'res://tests/section/test_listener.tscn' remapped 'res://tests/section/test_listener.tscn' at thread -1
+Loading resource: res://assets/environment/textures/room_m4_macro.png remapped: res://assets/environment/textures/room_m4_macro.png
+Loading resource: res://.godot/imported/room_m4_macro.png-d0637167a0e912984ac2ba5932049c8b.bptc.ctex remapped: res://.godot/imported/room_m4_macro.png-d0637167a0e912984ac2ba5932049c8b.bptc.ctex
+Completed load for: 'res://assets/environment/textures/room_m4_macro.png' remapped 'res://assets/environment/textures/room_m4_macro.png' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Loading resource: res://assets/environment/textures/diffuser_basecolor.png remapped: res://assets/environment/textures/diffuser_basecolor.png
+Loading resource: res://.godot/imported/diffuser_basecolor.png-fd8e667013cfdcfcf0c22b8fc5e69a28.bptc.ctex remapped: res://.godot/imported/diffuser_basecolor.png-fd8e667013cfdcfcf0c22b8fc5e69a28.bptc.ctex
+Completed load for: 'res://assets/environment/textures/diffuser_basecolor.png' remapped 'res://assets/environment/textures/diffuser_basecolor.png' at thread -1
+Loading resource: res://assets/environment/textures/diffuser_orm.png remapped: res://assets/environment/textures/diffuser_orm.png
+Loading resource: res://.godot/imported/diffuser_orm.png-da238aa19dca35a0e322d0fe74ff0f66.bptc.ctex remapped: res://.godot/imported/diffuser_orm.png-da238aa19dca35a0e322d0fe74ff0f66.bptc.ctex
+Completed load for: 'res://assets/environment/textures/diffuser_orm.png' remapped 'res://assets/environment/textures/diffuser_orm.png' at thread -1
+Loading resource: res://assets/environment/textures/diffuser_normal.png remapped: res://assets/environment/textures/diffuser_normal.png
+Loading resource: res://.godot/imported/diffuser_normal.png-fe1cf6bc214a154881d45d87e2b6f754.s3tc.ctex remapped: res://.godot/imported/diffuser_normal.png-fe1cf6bc214a154881d45d87e2b6f754.s3tc.ctex
+Completed load for: 'res://assets/environment/textures/diffuser_normal.png' remapped 'res://assets/environment/textures/diffuser_normal.png' at thread -1
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_exposed.gltf remapped: res://assets/environment/fixture_exposed.gltf
+Loading resource: res://.godot/imported/fixture_exposed.gltf-01e661c8be58fbfc9973bc94f3c13c00.scn remapped: res://.godot/imported/fixture_exposed.gltf-01e661c8be58fbfc9973bc94f3c13c00.scn
+Completed load for: 'res://assets/environment/fixture_exposed.gltf' remapped 'res://assets/environment/fixture_exposed.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/environment/fixture_prismatic.gltf remapped: res://assets/environment/fixture_prismatic.gltf
+Loading resource: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn remapped: res://.godot/imported/fixture_prismatic.gltf-b81b4f48764ea1a58a577222c09629bb.scn
+Completed load for: 'res://assets/environment/fixture_prismatic.gltf' remapped 'res://assets/environment/fixture_prismatic.gltf' at thread -1
+Loading resource: res://assets/audio/room/hum_0.wav remapped: res://assets/audio/room/hum_0.wav
+Loading resource: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample remapped: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample
+Completed load for: 'res://assets/audio/room/hum_0.wav' remapped 'res://assets/audio/room/hum_0.wav' at thread -1
+Loading resource: res://assets/audio/room/hum_0.wav remapped: res://assets/audio/room/hum_0.wav
+Loading resource: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample remapped: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample
+Completed load for: 'res://assets/audio/room/hum_0.wav' remapped 'res://assets/audio/room/hum_0.wav' at thread -1
+Loading resource: res://assets/audio/room/hum_0.wav remapped: res://assets/audio/room/hum_0.wav
+Loading resource: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample remapped: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample
+Completed load for: 'res://assets/audio/room/hum_0.wav' remapped 'res://assets/audio/room/hum_0.wav' at thread -1
+Loading resource: res://assets/audio/room/hum_0.wav remapped: res://assets/audio/room/hum_0.wav
+Loading resource: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample remapped: res://.godot/imported/hum_0.wav-445422b829150132a01743c17e78bdc7.sample
+Completed load for: 'res://assets/audio/room/hum_0.wav' remapped 'res://assets/audio/room/hum_0.wav' at thread -1
+Loading resource: res://assets/audio/room/listener_breath.wav remapped: res://assets/audio/room/listener_breath.wav
+Loading resource: res://.godot/imported/listener_breath.wav-d15dbbbf22bd7f66e929119c8f863d9f.sample remapped: res://.godot/imported/listener_breath.wav-d15dbbbf22bd7f66e929119c8f863d9f.sample
+Completed load for: 'res://assets/audio/room/listener_breath.wav' remapped 'res://assets/audio/room/listener_breath.wav' at thread -1
+Loading resource: res://assets/audio/room/air.wav remapped: res://assets/audio/room/air.wav
+Loading resource: res://.godot/imported/air.wav-91f46220ffc100c14c841dc79a052e43.sample remapped: res://.godot/imported/air.wav-91f46220ffc100c14c841dc79a052e43.sample
+Completed load for: 'res://assets/audio/room/air.wav' remapped 'res://assets/audio/room/air.wav' at thread -1
+Loading resource: res://assets/audio/room/listener_step_0.wav remapped: res://assets/audio/room/listener_step_0.wav
+Loading resource: res://.godot/imported/listener_step_0.wav-fb76907a598bbf126284f531f98971f7.sample remapped: res://.godot/imported/listener_step_0.wav-fb76907a598bbf126284f531f98971f7.sample
+Completed load for: 'res://assets/audio/room/listener_step_0.wav' remapped 'res://assets/audio/room/listener_step_0.wav' at thread -1
+Loading resource: res://assets/audio/room/listener_step_1.wav remapped: res://assets/audio/room/listener_step_1.wav
+Loading resource: res://.godot/imported/listener_step_1.wav-7b246d331c45c4c4b2455e6affc8d17e.sample remapped: res://.godot/imported/listener_step_1.wav-7b246d331c45c4c4b2455e6affc8d17e.sample
+Completed load for: 'res://assets/audio/room/listener_step_1.wav' remapped 'res://assets/audio/room/listener_step_1.wav' at thread -1
+Loading resource: res://assets/audio/room/carpet_0.wav remapped: res://assets/audio/room/carpet_0.wav
+Loading resource: res://.godot/imported/carpet_0.wav-b388985a901ccd968f81793f8df1e9e4.sample remapped: res://.godot/imported/carpet_0.wav-b388985a901ccd968f81793f8df1e9e4.sample
+Completed load for: 'res://assets/audio/room/carpet_0.wav' remapped 'res://assets/audio/room/carpet_0.wav' at thread -1
+Loading resource: res://assets/audio/room/listener_step_2.wav remapped: res://assets/audio/room/listener_step_2.wav
+Loading resource: res://.godot/imported/listener_step_2.wav-06a12d480030cf823b36a68335fa2fed.sample remapped: res://.godot/imported/listener_step_2.wav-06a12d480030cf823b36a68335fa2fed.sample
+Completed load for: 'res://assets/audio/room/listener_step_2.wav' remapped 'res://assets/audio/room/listener_step_2.wav' at thread -1
+Loading resource: res://assets/audio/room/listener_step_3.wav remapped: res://assets/audio/room/listener_step_3.wav
+Loading resource: res://.godot/imported/listener_step_3.wav-1b05d9f14da9f2be86ddab22d9744e96.sample remapped: res://.godot/imported/listener_step_3.wav-1b05d9f14da9f2be86ddab22d9744e96.sample
+Completed load for: 'res://assets/audio/room/listener_step_3.wav' remapped 'res://assets/audio/room/listener_step_3.wav' at thread -1
+Loading resource: res://assets/audio/room/listener_step_0.wav remapped: res://assets/audio/room/listener_step_0.wav
+Loading resource: res://.godot/imported/listener_step_0.wav-fb76907a598bbf126284f531f98971f7.sample remapped: res://.godot/imported/listener_step_0.wav-fb76907a598bbf126284f531f98971f7.sample
+Completed load for: 'res://assets/audio/room/listener_step_0.wav' remapped 'res://assets/audio/room/listener_step_0.wav' at thread -1
+Loading resource: res://assets/audio/room/hurt.wav remapped: res://assets/audio/room/hurt.wav
+Loading resource: res://.godot/imported/hurt.wav-b286aea77cfcfb919d57770e53b000b7.sample remapped: res://.godot/imported/hurt.wav-b286aea77cfcfb919d57770e53b000b7.sample
+Completed load for: 'res://assets/audio/room/hurt.wav' remapped 'res://assets/audio/room/hurt.wav' at thread -1
+{"checks":12,"failures":[],"nav_polygons":45,"scope":"automated physics fixtures, not experiential or auditory validation","suite":"Listener actual-scene risks","wall_path_length":8.67220067977905}
+WARNING: 12 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+Leaked instance: AudioStreamWAV:9223372111681161083 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372111697938301 - Reference count: 1
+Leaked instance: AudioStreamWAV:9223372111932819328 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372111949596546 - Reference count: 1
+Leaked instance: AudioStreamWAV:9223372112184477573 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372112201254791 - Reference count: 1
+Leaked instance: AudioStreamWAV:9223372112436135818 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372112452913036 - Reference count: 1
+Leaked instance: AudioStreamWAV:9223372112939452318 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372112956229536 - Reference count: 1
+Leaked instance: AudioStreamWAV:9223372113174333346 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372113191110564 - Reference count: 1
+Hint: Leaked instances typically happen when nodes are removed from the scene tree (with `remove_child()`) but not freed (with `free()` or `queue_free()`).
+Orphan StringName: Monster (static: 0, total: 2)
+Orphan StringName: Ambience (static: 0, total: 2)
+Orphan StringName: Fluorescent (static: 0, total: 8)
+StringName: 3 unclaimed string names at exit.

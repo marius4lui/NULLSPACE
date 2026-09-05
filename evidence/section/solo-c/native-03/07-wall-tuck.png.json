@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 17829.568899171,
+  "acquired_utc": "2026-09-05T00:48:01.366+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-c/native-03/07-wall-tuck.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "87db2d619c8b8d761e2ef9e2f409600d4836e0cbfdf0f723d7888a2624925b2b",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 171817
+  },
+  "x_readback_ms": 16.130366999277612
+}

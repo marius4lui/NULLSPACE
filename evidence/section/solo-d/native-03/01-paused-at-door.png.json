@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 18761.288703789,
+  "acquired_utc": "2026-09-05T01:03:33.086+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE/evidence/section/solo-d/native-03/01-paused-at-door.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "555a0ddf6e1219afe235ff82c71f6dc5533faabfe98690dfb97e8f77d5dec92b",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE (DEBUG)",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 177466
+  },
+  "x_readback_ms": 26.341576001868816
+}
