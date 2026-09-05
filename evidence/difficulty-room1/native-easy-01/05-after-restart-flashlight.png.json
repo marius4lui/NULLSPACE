@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 42931.102900958,
+  "acquired_utc": "2026-09-05T07:46:22.900+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/difficulty-room1/evidence/difficulty-room1/native-easy-01/05-after-restart-flashlight.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "45487d77a643cd0e0b8f61e79c13deea3ab0f93677a582005fde8e75eb015ecd",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 251193
+  },
+  "x_readback_ms": 84.55500199488597
+}

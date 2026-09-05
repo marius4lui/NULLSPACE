@@ -16,8 +16,10 @@ func commit_snapshot(snapshot: Dictionary) -> StorageResult:
 		checkpoint_committed.emit(_current.duplicate(true))
 	return result
 
-func begin_new_campaign() -> StorageResult:
-	var result: StorageResult = commit_snapshot(SnapshotSchema.initial_snapshot())
+func begin_new_campaign(difficulty_id: String = DifficultyConfig.DEFAULT_ID) -> StorageResult:
+	var snapshot: Dictionary = SnapshotSchema.initial_snapshot()
+	DifficultyConfig.write_to_snapshot(snapshot, difficulty_id)
+	var result: StorageResult = commit_snapshot(snapshot)
 	if result.ok:
 		_request_restore(result.payload)
 	return result

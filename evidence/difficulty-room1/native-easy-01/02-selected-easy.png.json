@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 42854.436378507,
+  "acquired_utc": "2026-09-05T07:45:06.234+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/difficulty-room1/evidence/difficulty-room1/native-easy-01/02-selected-easy.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "d009481fd776524496b113f4f689e051986bc2f618c491a84f9023cf3bb8d5b2",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      100,
+      100
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 251193
+  },
+  "x_readback_ms": 137.7587509996374
+}

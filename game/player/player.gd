@@ -140,7 +140,7 @@ func interaction_target() -> Node:
 	query.collide_with_areas = true
 	var hit: Dictionary = get_world_3d().direct_space_state.intersect_ray(query)
 	var target := hit.get("collider") as Node
-	return target if target is SectionLightSwitch or target is PistolPickup or target is SectionDoor.Leaf or target is SectionDoor.Trigger else null
+	return target if target is SectionLightSwitch or target is SectionFusePickup or target is PistolPickup or target is SectionDoor.Leaf or target is SectionDoor.Trigger else null
 
 func add_recoil(pitch: float, yaw: float) -> void:
 	var strength: float = float(_settings["camera_shake"])
