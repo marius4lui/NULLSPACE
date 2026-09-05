@@ -152,8 +152,10 @@ func _physics_process(delta: float) -> void:
 				_attack_applied = true
 				# Physical contact at impact time, not a cached visible flag or through-wall hit.
 				if _clear_attack():
-					player.take_damage(55.0)
+					player.take_damage(55.0, self)
 					Telemetry.record(&"listener_hit", {"health": player.health})
+					if GameFlow.state != NullGameFlow.State.PLAYING:
+						return
 			if _state_time >= 1.55:
 				_set_state(State.CHASING if sees_player else State.INVESTIGATING)
 		State.STAGGERED:

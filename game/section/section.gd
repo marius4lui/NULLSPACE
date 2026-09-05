@@ -24,6 +24,7 @@ var shot_effects: PistolEffects
 var listener: Listener
 var navigation_region: NavigationRegion3D
 var sound: SectionSound
+var death: ListenerDeath
 var doors: Array[SectionDoor] = []
 var _noise_sequence: int = 0
 var _environment: Environment
@@ -77,6 +78,9 @@ func _ready() -> void:
 	add_child(canvas)
 	menu = Menu.new()
 	canvas.add_child(menu)
+	death = ListenerDeath.new()
+	death.section = self
+	add_child(death)
 	menu.quit_requested.connect(request_quit)
 	player.prompt_changed.connect(menu.set_prompt)
 	player.damaged.connect(menu.show_injury)

@@ -9,20 +9,24 @@ const RANGES: Dictionary = {
 	"mouse_sensitivity": [0.05, 5.0], "horizontal_fov": [60.0, 110.0],
 	"head_bob": [0.0, 1.0], "camera_shake": [0.0, 1.0]
 }
-const BOOLEANS: Array[String] = ["vsync", "invert_y", "subtitles", "center_dot", "reduced_flashes"]
+const DEATH_DEFAULTS: Dictionary = {"blood_effects": true, "intense_death": true, "reduced_motion": false}
+const BOOLEANS: Array[String] = ["vsync", "invert_y", "subtitles", "center_dot", "reduced_flashes", "blood_effects", "intense_death", "reduced_motion"]
 
 static func defaults() -> Dictionary:
 	return {"resolution": [1920, 1080], "display_mode": "windowed", "vsync": true, "fps_limit": 60,
 		"quality": "low", "master_volume": 0.8, "ambience_volume": 0.8, "effects_volume": 0.8,
 		"mouse_sensitivity": 1.0, "invert_y": false, "horizontal_fov": 88.0,
 		"head_bob": 0.5, "camera_shake": 0.5, "subtitles": true,
-		"center_dot": true, "reduced_flashes": false}
+		"center_dot": true, "reduced_flashes": false, "blood_effects": true,
+		"intense_death": true, "reduced_motion": false}
 
 static func validate(settings: Dictionary) -> PackedStringArray:
 	var errors: PackedStringArray = []
 	# Additive preference: keep existing valid v1 settings and normalize its absent cap to 60.
 	var with_cap: Dictionary = settings.duplicate()
 	if not with_cap.has("fps_limit"): with_cap["fps_limit"] = 60
+	for key: String in DEATH_DEFAULTS:
+		if not with_cap.has(key): with_cap[key] = DEATH_DEFAULTS[key]
 	if not SnapshotSchema.exact_keys(with_cap, defaults().keys()):
 		return PackedStringArray(["Settings are incomplete or contain unsupported fields."])
 	if not SnapshotSchema.integer_in(with_cap["fps_limit"], 0, 120) or with_cap["fps_limit"] not in FPS_LIMITS:
@@ -40,7 +44,7 @@ static func validate(settings: Dictionary) -> PackedStringArray:
 		if not SnapshotSchema.number_in(settings[key], RANGES[key][0], RANGES[key][1]):
 			errors.append("%s is outside its supported range." % key)
 	for key: String in BOOLEANS:
-		if not settings[key] is bool:
+		if not with_cap[key] is bool:
 			errors.append("%s must be on or off." % key)
 	return errors
 
@@ -50,7 +54,14 @@ static func vertical_fov(horizontal_degrees: float, aspect_ratio: float) -> floa
 static func normalize(settings: Dictionary) -> Dictionary:
 	var result: Dictionary = settings.duplicate(true)
 	result["fps_limit"] = int(result.get("fps_limit", 60))
+	for key: String in DEATH_DEFAULTS:
+		if not result.has(key): result[key] = DEATH_DEFAULTS[key]
 	result["resolution"] = [int(result["resolution"][0]), int(result["resolution"][1])]
 	for field: String in RANGES:
 		result[field] = float(result[field])
 	return result
+
+static func death_motion_allowed(values: Dictionary) -> bool:
+	# Zeroing both existing movement controls also remains a complete motion opt-out.
+	return bool(values["intense_death"]) and not bool(values["reduced_motion"]) \
+		and (float(values["head_bob"]) > 0 or float(values["camera_shake"]) > 0)

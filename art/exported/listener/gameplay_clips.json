@@ -22,5 +22,11 @@
     "loop": false,
     "source": "baked original contact paths / articulated pose",
     "validation": "requires actual gameplay motion inspection"
+  },
+  "death_grab": {
+    "seconds": 2.6,
+    "loop": false,
+    "source": "baked original contact paths / articulated pose",
+    "validation": "requires actual gameplay motion inspection"
   }
 }

@@ -60,6 +60,8 @@ func _ready() -> void:
 	section.player.take_damage(55)
 	_check(section.player.health == 45.0, "First serious hit is survivable")
 	section.player.take_damage(55)
+	_check(GameFlow.state == NullGameFlow.State.DYING, "Lethal damage locks play before the fade")
+	await get_tree().create_timer(1.0, true).timeout
 	_check(GameFlow.state == NullGameFlow.State.DEAD, "Lethal damage enters death state")
 	_check(GameFlow.continue_game().ok, "Death can request checkpoint")
 	await _frames(6)
