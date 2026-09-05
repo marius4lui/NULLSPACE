@@ -3,7 +3,7 @@ config_version=5
 
 [application]
 config/name="NULLSPACE"
-config/version="0.5.0-flow-dev"
+config/version="0.1.0-beta"
 run/main_scene="res://section/section.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/use_custom_user_dir=true

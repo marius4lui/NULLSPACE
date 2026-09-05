@@ -1,4 +1,4 @@
-# NULLSPACE — spielbarer Entwicklungsstand
+# NULLSPACE v0.1 — Raw Beta
 
 Ein Ausgang ohne Strom. Zwei getrennte Stromkreise. Ein Wesen, das Sicht- und Geräuschspuren verfolgt.
 
