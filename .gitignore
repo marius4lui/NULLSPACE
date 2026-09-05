@@ -8,5 +8,7 @@ __pycache__/
 /build/linux/*
 !/build/linux/.gitkeep
 /build/archive/
+/build/*.tar.gz
+/build/*.zip
 /tools/local/
 *.tmp

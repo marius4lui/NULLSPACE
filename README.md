@@ -61,6 +61,8 @@ The public `main` baseline remains documentation-only until the integrated branc
 With Godot **4.7.2 stable** and its matching export templates installed:
 
 ```sh
+git clone --single-branch --branch feat/short-game https://github.com/marius4lui/NULLSPACE.git
+cd NULLSPACE
 godot --editor --path game --import --quit
 godot --path game
 bash tools/build.sh linux
