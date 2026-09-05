@@ -1,5 +1,18 @@
 "use strict";
 
+// Native disclosure remains usable when JavaScript is unavailable.
+const mobileMenu = document.querySelector(".mobile-menu");
+if (mobileMenu) {
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => { mobileMenu.open = false; });
+  });
+  mobileMenu.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    mobileMenu.open = false;
+    mobileMenu.querySelector("summary").focus();
+  });
+}
+
 // Static, local-only interactions. No tracking, external requests or saved state.
 const sectors = [
   {letter:"A",type:"Orientation / Quiet arrival",name:"Arrival",quote:"Everything looks almost normal.",description:"An empty reception suite. A dead exit. A circuit diagram that promises a way out. Learn the building while it is still quiet.",objective:"Find the exit. Understand what it needs."},
@@ -16,6 +29,9 @@ function selectSector(index) {
     const selected = buttonIndex === index;
     button.classList.toggle("active", selected);
     button.setAttribute("aria-pressed", String(selected));
+  });
+  document.querySelectorAll("[data-route]").forEach((node) => {
+    node.classList.toggle("active", Number(node.dataset.route) === index);
   });
   for (const key of ["letter", "type", "name", "quote", "description", "objective"]) {
     document.getElementById(`sector-${key}`).textContent = sector[key];
@@ -57,4 +73,28 @@ if (lightbox && typeof lightbox.showModal === "function") {
     if (event.target === lightbox && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) lightbox.close();
   });
   lightbox.addEventListener("close", () => opener?.focus());
+}
+
+// Optional motion follows the system preference. No saved state or tracking.
+const motionToggle = document.querySelector(".motion-toggle");
+if (motionToggle) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let manualPause = false;
+  function syncMotion() {
+    const paused = reducedMotion.matches || manualPause;
+    document.documentElement.dataset.motion = paused ? "off" : "on";
+    motionToggle.setAttribute("aria-pressed", String(paused));
+    motionToggle.textContent = paused ? "Motion: off" : "Motion: on";
+    motionToggle.setAttribute("aria-label", reducedMotion.matches
+      ? "Motion disabled by your system preference"
+      : paused ? "Enable background motion" : "Pause background motion");
+    motionToggle.disabled = reducedMotion.matches;
+  }
+  motionToggle.hidden = false;
+  motionToggle.addEventListener("click", () => {
+    manualPause = !manualPause;
+    syncMotion();
+  });
+  reducedMotion.addEventListener("change", syncMotion);
+  syncMotion();
 }
