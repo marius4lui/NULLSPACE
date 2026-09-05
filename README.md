@@ -52,16 +52,16 @@ Minimum requirements are not established yet. Performance will be reported with 
 
 ## Current state
 
-The `feat/short-game` development branch now joins the original rooms, Player, pistol, Listener, doors, both power switches, safe checkpoints and ending in one playable scene. A native diagnostic route reached the ending with inspection pauses. **This is not a finished release:** natural first-play duration, atmosphere/audio, final export checks and remaining defects are open. The known diagnostic route is substantially shorter than the 10–15 minute target; pauses are not counted as playtime.
+**[Download v0.1 — Raw Beta](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.1)** · Linux x86-64 and Windows x86-64 · Unpolished prerelease.
 
-The public `main` baseline remains documentation-only until the integrated branch is verified and promoted. Existing worktrees/evidence are preserved; development continues solo.
+The public `main` branch now contains the integrated game: original rooms, Player, pistol, Listener, doors, both power switches, checkpoints and ending in one scene. **This is not a finished or fully optimized release.** A known-route Linux export run reached the ending in approximately 54 active seconds; the intended 10–15 minute first-play duration remains unmet/unverified. Audio review, pacing, balance and final acceptance remain open. Windows is cross-exported, not natively tested. Existing worktrees/evidence are preserved.
 
-## Run and build the development branch
+## Run and build from source
 
 With Godot **4.7.2 stable** and its matching export templates installed:
 
 ```sh
-git clone --single-branch --branch feat/short-game https://github.com/marius4lui/NULLSPACE.git
+git clone https://github.com/marius4lui/NULLSPACE.git
 cd NULLSPACE
 godot --editor --path game --import --quit
 godot --path game
@@ -84,7 +84,7 @@ Controls: WASD, mouse, Shift sprint, Ctrl crouch, F flashlight, E interact, left
 | A bug report or suggestion | [Open an issue](https://github.com/marius4lui/NULLSPACE/issues/new/choose) · [Join a discussion](https://github.com/marius4lui/NULLSPACE/discussions) |
 | A contribution or security report | [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) |
 
-Original production assets are being created for NULLSPACE, with editable sources and generation/export records. No downloaded game-content packs are used. No release date has been announced.
+Original production assets are being created for NULLSPACE, with editable sources and generation/export records. No downloaded game-content packs are used. The raw beta is available; no final release date has been announced.
 
 <div align="center">
 
