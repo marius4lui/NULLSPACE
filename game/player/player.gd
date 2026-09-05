@@ -95,7 +95,7 @@ func _physics_process(delta: float) -> void:
 			_step_distance = fmod(_step_distance, stride)
 			_emit_step()
 	_update_camera(delta, moved / maxf(delta, 0.00001))
-	var target: SectionLightSwitch = interaction_target()
+	var target: Node = interaction_target()
 	var text: String = target.prompt() if target != null and InputGate.accepts_input() else ""
 	if text != _prompt:
 		_prompt = text
@@ -133,11 +133,18 @@ func has_clearance(height: float = STANDING_HEIGHT) -> bool:
 	query.exclude = [get_rid()]
 	return get_world_3d().direct_space_state.intersect_shape(query, 1).is_empty()
 
-func interaction_target() -> SectionLightSwitch:
+func interaction_target() -> Node:
 	var start: Vector3 = camera.global_position
 	var query := PhysicsRayQueryParameters3D.create(start, start - camera.global_basis.z * INTERACTION_REACH, 1, [get_rid()])
 	var hit: Dictionary = get_world_3d().direct_space_state.intersect_ray(query)
-	return hit.get("collider") as SectionLightSwitch
+	var target := hit.get("collider") as Node
+	return target if target is SectionLightSwitch or target is PistolPickup else null
+
+func add_recoil(pitch: float, yaw: float) -> void:
+	var strength: float = float(_settings["camera_shake"])
+	_pitch = clampf(_pitch + pitch * strength, -1.42, 1.42)
+	rotation.y += yaw * strength
+	head.rotation.x = _pitch
 
 func restore_at(anchor: Transform3D, values: Dictionary) -> bool:
 	global_transform = anchor

@@ -2,10 +2,10 @@ class_name SnapshotSchema
 extends RefCounted
 ## Only committed semantic state. Scene transforms and in-flight actions are excluded.
 
-const VERSION: int = 1
-const CAMPAIGN_ID: String = "nullspace_campaign_v1"
+const VERSION: int = 2
+const CAMPAIGN_ID: String = "nullspace_short_v1"
 const TUNING: GameTuning = preload("res://data/default_tuning.tres")
-const RELAYS: Array[String] = ["circulation", "distribution", "return_feed"]
+const RELAYS: Array[String] = ["office", "service"]
 
 static func initial_snapshot() -> Dictionary:
 	return {
@@ -15,14 +15,11 @@ static func initial_snapshot() -> Dictionary:
 			"player_anchor": TUNING.initial_player_anchor, "monster_anchor": TUNING.initial_monster_anchor,
 			"reset_seed": 1},
 		"player": {"health": TUNING.max_health, "stamina": 1.0,
-			"flashlight_enabled": false, "equipped_weapon": "pistol"},
+			"flashlight_enabled": false, "equipped_weapon": ""},
 		"inventory": {"weapons": {
-			"pistol": {"owned": true, "chamber": TUNING.initial_pistol_chamber,
-				"magazine": TUNING.initial_pistol_magazine, "reserve": TUNING.initial_pistol_reserve},
-			"shotgun": {"owned": false, "chamber": 0, "magazine": 0, "reserve": 0}}},
-		"progress": {"relays": {"circulation": false, "distribution": false, "return_feed": false},
-			"phase_breaker": false, "exit_isolator": false, "ending": false, "neutralized_listener": false},
-		"world": {"doors": {}, "circuits": {}, "anomalies": {}, "consumed_pickups": [], "topology_revision": 0}
+			"pistol": {"owned": false, "chamber": 0, "magazine": 0, "reserve": 0}}},
+		"progress": {"relays": {"office": false, "service": false}, "ending": false},
+		"world": {"doors": {}, "circuits": {}, "consumed_pickups": []}
 	}
 
 static func validate(snapshot: Dictionary) -> PackedStringArray:
@@ -52,7 +49,7 @@ static func validate(snapshot: Dictionary) -> PackedStringArray:
 		errors.append("Player state is incomplete.")
 	if not number_in(player.get("health"), 0.001, TUNING.max_health) or not number_in(player.get("stamina"), 0.0, 1.0):
 		errors.append("Checkpoint must restore living player health and valid stamina.")
-	if not player.get("flashlight_enabled") is bool or player.get("equipped_weapon") not in ["", "pistol", "shotgun"]:
+	if not player.get("flashlight_enabled") is bool or player.get("equipped_weapon") not in ["", "pistol"]:
 		errors.append("Invalid player equipment state.")
 	_validate_inventory(snapshot["inventory"], player, errors)
 	_validate_progress(snapshot["progress"], errors)
@@ -66,8 +63,7 @@ static func normalize(snapshot: Dictionary) -> Dictionary:
 	result["checkpoint"]["reset_seed"] = int(result["checkpoint"]["reset_seed"])
 	result["player"]["health"] = float(result["player"]["health"])
 	result["player"]["stamina"] = float(result["player"]["stamina"])
-	result["world"]["topology_revision"] = int(result["world"]["topology_revision"])
-	for id: String in ["pistol", "shotgun"]:
+	for id: String in ["pistol"]:
 		for field: String in ["chamber", "magazine", "reserve"]:
 			result["inventory"]["weapons"][id][field] = int(result["inventory"]["weapons"][id][field])
 	return result
@@ -77,15 +73,15 @@ static func _validate_inventory(inventory: Dictionary, player: Dictionary, error
 		errors.append("Inventory is incomplete.")
 		return
 	var weapons: Dictionary = inventory["weapons"]
-	if not exact_keys(weapons, ["pistol", "shotgun"]):
+	if not exact_keys(weapons, ["pistol"]):
 		errors.append("Weapon inventory is incomplete.")
 		return
-	for id: String in ["pistol", "shotgun"]:
+	for id: String in ["pistol"]:
 		if not weapons[id] is Dictionary:
 			errors.append("Invalid %s state." % id)
 			continue
 		var weapon: Dictionary = weapons[id]
-		var capacity: int = TUNING.pistol_magazine_capacity if id == "pistol" else TUNING.shotgun_tube_capacity
+		var capacity: int = TUNING.pistol_magazine_capacity
 		if not exact_keys(weapon, ["owned", "chamber", "magazine", "reserve"]) or not weapon.get("owned") is bool:
 			errors.append("Incomplete %s state." % id)
 			continue
@@ -97,7 +93,7 @@ static func _validate_inventory(inventory: Dictionary, player: Dictionary, error
 			errors.append("Cannot equip an unowned weapon.")
 
 static func _validate_progress(progress: Dictionary, errors: PackedStringArray) -> void:
-	if not exact_keys(progress, ["relays", "phase_breaker", "exit_isolator", "ending", "neutralized_listener"]) or not progress.get("relays") is Dictionary:
+	if not exact_keys(progress, ["relays", "ending"]) or not progress.get("relays") is Dictionary:
 		errors.append("Progress is incomplete.")
 		return
 	var relays: Dictionary = progress["relays"]
@@ -110,22 +106,18 @@ static func _validate_progress(progress: Dictionary, errors: PackedStringArray) 
 			errors.append("Relay state must be committed boolean values.")
 			return
 		all_relays = all_relays and relays[id] == true
-	for flag: String in ["phase_breaker", "exit_isolator", "ending", "neutralized_listener"]:
+	for flag: String in ["ending"]:
 		if not progress[flag] is bool:
 			errors.append("Progress flags must be boolean values.")
 			return
-	if progress["phase_breaker"] == true and not all_relays:
-		errors.append("Phase breaker requires all three relays.")
-	if progress["exit_isolator"] == true and progress["phase_breaker"] != true:
-		errors.append("Exit isolator requires the phase breaker.")
-	if (progress["ending"] == true or progress["neutralized_listener"] == true) and progress["exit_isolator"] != true:
-		errors.append("Final outcome requires the exit isolator.")
+	if progress["ending"] == true and not all_relays:
+		errors.append("Escape requires both power switches.")
 
 static func _validate_world(world: Dictionary, errors: PackedStringArray) -> void:
-	if not exact_keys(world, ["doors", "circuits", "anomalies", "consumed_pickups", "topology_revision"]):
+	if not exact_keys(world, ["doors", "circuits", "consumed_pickups"]):
 		errors.append("World state is incomplete.")
 		return
-	for category: String in ["doors", "circuits", "anomalies"]:
+	for category: String in ["doors", "circuits"]:
 		if not world[category] is Dictionary or world[category].size() > 4096:
 			errors.append("Invalid world %s map." % category)
 			continue
@@ -137,9 +129,7 @@ static func _validate_world(world: Dictionary, errors: PackedStringArray) -> voi
 				if entries[id] not in ["open", "closed", "locked"]:
 					errors.append("Only stable door states may be saved.")
 			elif not entries[id] is bool:
-				errors.append("Circuits and anomalies require committed boolean states.")
-	if not integer_in(world["topology_revision"], 0, 2147483647):
-		errors.append("Invalid topology revision.")
+				errors.append("Circuits require committed boolean states.")
 	if not world["consumed_pickups"] is Array or world["consumed_pickups"].size() > 4096:
 		errors.append("Invalid consumed pickup list.")
 		return

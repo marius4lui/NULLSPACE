@@ -50,6 +50,7 @@ func _test_snapshot_validation() -> void:
 	changed["player"]["health"] = NAN
 	_check(not SnapshotSchema.validate(changed).is_empty(), "NaN health rejected")
 	changed = initial.duplicate(true)
+	changed["inventory"]["weapons"]["pistol"]["owned"] = true
 	changed["inventory"]["weapons"]["pistol"]["magazine"] = 12.5
 	_check(not SnapshotSchema.validate(changed).is_empty(), "Fractional ammo rejected")
 	changed["inventory"]["weapons"]["pistol"]["magazine"] = 13
@@ -59,11 +60,12 @@ func _test_snapshot_validation() -> void:
 	changed["inventory"]["weapons"]["pistol"]["chamber"] = 2
 	_check(not SnapshotSchema.validate(changed).is_empty(), "Two chambered rounds rejected")
 	changed = initial.duplicate(true)
-	changed["player"]["equipped_weapon"] = "shotgun"
+	changed["player"]["equipped_weapon"] = "pistol"
 	_check(not SnapshotSchema.validate(changed).is_empty(), "Unowned equipped weapon rejected")
 	changed = initial.duplicate(true)
-	changed["progress"]["phase_breaker"] = true
-	_check(not SnapshotSchema.validate(changed).is_empty(), "Phase breaker without all relays rejected")
+	changed["progress"]["relays"]["office"] = true
+	changed["progress"]["ending"] = true
+	_check(not SnapshotSchema.validate(changed).is_empty(), "One switch alone cannot permit escape")
 	changed = initial.duplicate(true)
 	changed["progress"]["ending"] = true
 	_check(not SnapshotSchema.validate(changed).is_empty(), "Ending without final progression rejected")
@@ -77,10 +79,10 @@ func _test_snapshot_validation() -> void:
 	changed["checkpoint"]["monster_anchor"] = changed["checkpoint"]["player_anchor"]
 	_check(not SnapshotSchema.validate(changed).is_empty(), "Identical player and monster checkpoint anchors rejected")
 	changed = initial.duplicate(true)
-	changed["progress"]["relays"]["circulation"] = []
+	changed["progress"]["relays"]["office"] = []
 	_check(not SnapshotSchema.validate(changed).is_empty(), "Array masquerading as relay flag rejected without throwing")
 	changed = initial.duplicate(true)
-	changed["progress"]["phase_breaker"] = {"enabled": true}
+	changed["progress"]["ending"] = {"enabled": true}
 	_check(not SnapshotSchema.validate(changed).is_empty(), "Object masquerading as progress flag rejected without throwing")
 	changed = initial.duplicate(true)
 	changed["world"]["doors"]["service_door"] = ["closed"]
@@ -101,10 +103,10 @@ func _test_storage_transactions() -> void:
 	_check(store.read().code == &"missing", "Missing checkpoint handled")
 	var first: Dictionary = SnapshotSchema.initial_snapshot()
 	first["inventory"]["weapons"]["pistol"] = {"owned": true, "chamber": 1, "magazine": 12, "reserve": 3}
-	first["inventory"]["weapons"]["shotgun"] = {"owned": true, "chamber": 1, "magazine": 5, "reserve": 2}
+	first["player"]["equipped_weapon"] = "pistol"
 	first["world"]["doors"] = {"service_door": "open"}
 	first["world"]["consumed_pickups"] = ["cache_1"]
-	first["progress"]["relays"]["distribution"] = true
+	first["progress"]["relays"]["service"] = true
 	_check(store.write(first).ok, "First checkpoint writes")
 	var loaded: StorageResult = store.read()
 	_check(loaded.ok and loaded.payload == first, "Every snapshot section roundtrips")
@@ -248,8 +250,7 @@ func _test_flow_and_input() -> void:
 	var complete: Dictionary = CheckpointSystem.current_snapshot()
 	for relay: String in SnapshotSchema.RELAYS:
 		complete["progress"]["relays"][relay] = true
-	for flag: String in ["phase_breaker", "exit_isolator", "ending"]:
-		complete["progress"][flag] = true
+	complete["progress"]["ending"] = true
 	_check(CheckpointSystem.commit_snapshot(complete).ok and GameFlow.end_campaign(), "Committed final flags permit ending state")
 	GameFlow.return_to_menu()
 	_check(not SaveSystem.continue_available() and not GameFlow.continue_game().ok, "Completed campaign cannot be continued into invalid play")

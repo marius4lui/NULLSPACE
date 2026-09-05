@@ -105,11 +105,10 @@ func run(owner: Node, check: Callable, directory: String) -> void:
 	var final_snapshot: Dictionary = CheckpointSystem.current_snapshot()
 	for relay: String in SnapshotSchema.RELAYS:
 		final_snapshot["progress"]["relays"][relay] = true
-	for flag: String in ["phase_breaker", "exit_isolator", "ending"]:
-		final_snapshot["progress"][flag] = true
+	final_snapshot["progress"]["ending"] = true
 	_check.call(CheckpointSystem.commit_snapshot(final_snapshot).ok and GameFlow.end_campaign(), "Clock scenario enters a committed ending")
 	await _assert_frozen("ENDING")
-	_check.call(SnapshotSchema.VERSION == 1 and not final_snapshot.has("simulation_epoch"), "Runtime epoch does not alter save schema v1")
+	_check.call(SnapshotSchema.VERSION == 2 and not final_snapshot.has("simulation_epoch"), "Runtime epoch does not leak into short-game save schema")
 	GameFlow.return_to_menu()
 	GameFlow.load_started.disconnect(_observe_load)
 

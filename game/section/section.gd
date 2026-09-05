@@ -11,6 +11,9 @@ var room: NullspaceM4ReferenceRoom
 var player: SectionPlayer
 var light_switch: SectionLightSwitch
 var menu: NullspaceSectionMenu
+var pistol: SectionPistol
+var pistol_pickup: PistolPickup
+var shot_effects: PistolEffects
 var _environment: Environment
 var _fixture_states: Array[int] = []
 var _snapshot: Dictionary = {}
@@ -33,6 +36,18 @@ func _ready() -> void:
 	player = PLAYER.instantiate() as SectionPlayer
 	player.transform = ARRIVAL
 	add_child(player)
+	shot_effects = PistolEffects.new()
+	shot_effects.process_mode = Node.PROCESS_MODE_PAUSABLE
+	add_child(shot_effects)
+	pistol = SectionPistol.new()
+	pistol.wielder = player
+	pistol.effects = shot_effects
+	player.camera.add_child(pistol)
+	pistol_pickup = PistolPickup.new()
+	pistol_pickup.pistol = pistol
+	pistol_pickup.position = Vector3(3.60, 0.008, -3.00)
+	add_child(pistol_pickup)
+	pistol_pickup.collected.connect(_on_pistol_collected)
 	light_switch = SectionLightSwitch.new()
 	light_switch.name = "LocalLightSwitch"
 	light_switch.position = Vector3(0.05, 1.45, -5.993)
@@ -51,6 +66,7 @@ func _ready() -> void:
 	menu = Menu.new()
 	canvas.add_child(menu)
 	player.prompt_changed.connect(menu.set_prompt)
+	pistol.ammunition_changed.connect(menu.set_ammunition)
 	GameFlow.load_started.connect(_restore)
 	SettingsManager.settings_changed.connect(_apply_settings)
 	_apply_settings(SettingsManager.snapshot())
@@ -66,11 +82,14 @@ func _restore(snapshot: Dictionary, generation: int) -> void:
 	var powered: bool = bool(snapshot["world"]["circuits"].get("arrival_lights", true))
 	light_switch.set_powered(powered)
 	_apply_local_power(powered)
+	shot_effects.clear()
+	pistol.restore(snapshot["inventory"]["weapons"]["pistol"])
+	pistol_pickup.set_consumed("arrival_pistol" in snapshot["world"]["consumed_pickups"])
 	if not player.restore_at(ARRIVAL, snapshot["player"]):
 		GameFlow.fail_load(generation, "Arrival is obstructed. The checkpoint was not overwritten.")
 		return
 	GameFlow.complete_load(generation)
-	menu.show_hint("Find your bearings.  WASD move · Shift sprint · Ctrl crouch\nF flashlight · E interact · Esc pause")
+	menu.show_hint("Find your bearings.  WASD move · Shift sprint · Ctrl crouch\nF flashlight · E interact · Esc pause" + ("\nA security case lies to your right." if not pistol.owned else ""))
 	Telemetry.record(&"section_restored", {"generation": generation, "position": [player.position.x, player.position.y, player.position.z]})
 
 func _on_local_power(enabled: bool) -> void:
@@ -80,9 +99,22 @@ func _on_local_power(enabled: bool) -> void:
 	_snapshot["player"]["health"] = player.health
 	_snapshot["player"]["stamina"] = player.stamina
 	_snapshot["player"]["flashlight_enabled"] = player.flashlight.visible
+	_snapshot["inventory"]["weapons"]["pistol"] = pistol.snapshot()
+	_snapshot["player"]["equipped_weapon"] = "pistol" if pistol.owned else ""
 	_snapshot["session"]["elapsed_seconds"] = SimulationClock.sample().elapsed_seconds
 	var result: StorageResult = CheckpointSystem.commit_snapshot(_snapshot)
 	menu.show_hint("Local lighting " + ("restored." if enabled else "off.  F — flashlight.") + ("\nCheckpoint saved." if result.ok else "\nSave failed: " + result.message))
+
+func _on_pistol_collected() -> void:
+	_snapshot["world"]["consumed_pickups"].append("arrival_pistol")
+	_snapshot["inventory"]["weapons"]["pistol"] = pistol.snapshot()
+	_snapshot["player"]["equipped_weapon"] = "pistol"
+	_snapshot["player"]["health"] = player.health
+	_snapshot["session"]["elapsed_seconds"] = SimulationClock.sample().elapsed_seconds
+	_snapshot["player"]["stamina"] = player.stamina
+	_snapshot["player"]["flashlight_enabled"] = player.flashlight.visible
+	var result: StorageResult = CheckpointSystem.commit_snapshot(_snapshot)
+	menu.show_hint("Pistol acquired.  Left mouse — fire · R — reload\n" + ("Checkpoint saved." if result.ok else "Save failed: " + result.message))
 
 func _apply_local_power(enabled: bool) -> void:
 	for i: int in room.fixtures.size():

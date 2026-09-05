@@ -9,6 +9,8 @@ var _prompt: Label
 var _hint: Label
 var _dot: Label
 var _stamina: ProgressBar
+var _ammo: Label
+var _armed: bool = false
 var _draft: Dictionary = {}
 var _hint_time: float = 0.0
 var _notice: String = ""
@@ -55,6 +57,8 @@ func _ready() -> void:
 	_dot = _hud_label(Control.PRESET_CENTER, Vector2(-10, -18), Vector2(20, 36))
 	_dot.text = "·"
 	_dot.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_ammo = _hud_label(Control.PRESET_BOTTOM_RIGHT, Vector2(-270, -72), Vector2(230, 36))
+	_ammo.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	_stamina = ProgressBar.new()
 	_stamina.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
 	_stamina.position += Vector2(-85, -44)
@@ -78,6 +82,7 @@ func _show_screen() -> void:
 	_hint.visible = playing
 	_dot.visible = playing and bool(SettingsManager.get_value("center_dot"))
 	_stamina.visible = false
+	_ammo.visible = playing and _armed
 	if playing:
 		return
 	_label("NULLSPACE", 58)
@@ -91,7 +96,7 @@ func _show_screen() -> void:
 			_button("Controls", _controls)
 			_button("Credits", _credits)
 			_button("Quit", func() -> void: get_tree().quit())
-			_label("Development build — original room and player.\nPistol, Listener and complete escape are not integrated yet.", 18)
+			_label("Development build — room, player and pistol.\nListener and complete escape are not integrated yet.", 18)
 		NullGameFlow.State.PAUSED:
 			_label("Paused")
 			_button("Resume", func() -> void: GameFlow.resume_game())
@@ -176,7 +181,7 @@ func _row(title: String) -> HBoxContainer:
 	return row
 
 func _controls() -> void:
-	_notice = "WASD — move · Mouse — look · Shift — sprint · Ctrl — crouch\nF — flashlight · E — interact · Escape — pause"
+	_notice = "WASD — move · Mouse — look · Shift — sprint · Ctrl — crouch\nF — flashlight · E — interact · Escape — pause\nLeft mouse — pistol · R — reload"
 	_show_screen()
 
 func _credits() -> void:
@@ -232,6 +237,11 @@ func show_hint(text: String) -> void:
 func set_stamina(value: float) -> void:
 	_stamina.visible = value < 0.98
 	_stamina.value = value
+
+func set_ammunition(loaded: int, spare: int, armed: bool) -> void:
+	_armed = armed
+	_ammo.text = "%02d   /   %02d" % [loaded, spare]
+	_ammo.visible = armed and GameFlow.state == NullGameFlow.State.PLAYING
 
 func _process(delta: float) -> void:
 	if GameFlow.state == NullGameFlow.State.PLAYING:

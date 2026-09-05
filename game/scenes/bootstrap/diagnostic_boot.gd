@@ -188,8 +188,7 @@ func _save_diagnostic() -> void:
 func _simulate_ending() -> void:
 	for relay: String in SnapshotSchema.RELAYS:
 		_live_snapshot["progress"]["relays"][relay] = true
-	for flag: String in ["phase_breaker", "exit_isolator", "ending"]:
-		_live_snapshot["progress"][flag] = true
+	_live_snapshot["progress"]["ending"] = true
 	var result: StorageResult = CheckpointSystem.commit_snapshot(_live_snapshot)
 	if result.ok:
 		GameFlow.end_campaign()

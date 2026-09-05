@@ -18,4 +18,5 @@ func continue_available() -> bool:
 	return result.ok and not result.payload["progress"]["ending"]
 
 func _store() -> AtomicJsonStore:
-	return AtomicJsonStore.new(storage_directory.path_join("checkpoint.json"), "checkpoint", SnapshotSchema.VERSION, SnapshotSchema.validate, SnapshotSchema.normalize)
+	# Keep former development-campaign saves untouched; they describe removed content.
+	return AtomicJsonStore.new(storage_directory.path_join("checkpoint-short.json"), "checkpoint", SnapshotSchema.VERSION, SnapshotSchema.validate, SnapshotSchema.normalize)

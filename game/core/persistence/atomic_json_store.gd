@@ -5,7 +5,7 @@ extends RefCounted
 
 const FORMAT_VERSION: int = 1
 const MAX_FILE_BYTES: int = 2 * 1024 * 1024
-const BUILD_ID: String = "0.2.0-m2"
+const BUILD_ID: String = "0.4.0-section-b"
 
 var path: String
 var kind: String

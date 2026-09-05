@@ -1,0 +1,40 @@
+{
+  "source": "Original scripted Blender mesh by NULLSPACE project; no external assets",
+  "blender": "5.2.1 LTS",
+  "units": "metres",
+  "muzzle_godot": [
+    0,
+    0.101,
+    -0.147
+  ],
+  "nodes": {
+    "Slide": {
+      "vertices": 2496,
+      "polygons": 2548
+    },
+    "Frame": {
+      "vertices": 4264,
+      "polygons": 4334
+    },
+    "Magazine": {
+      "vertices": 192,
+      "polygons": 196
+    },
+    "RightHand": {
+      "vertices": 1440,
+      "polygons": 1230
+    },
+    "LeftHand": {
+      "vertices": 672,
+      "polygons": 574
+    },
+    "Case": {
+      "vertices": 672,
+      "polygons": 686
+    },
+    "Casing": {
+      "vertices": 480,
+      "polygons": 482
+    }
+  }
+}
