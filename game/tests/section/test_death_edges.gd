@@ -15,6 +15,11 @@ func _ready() -> void:
 	await _frames(5)
 	GameFlow.begin_new_game()
 	await _frames(12)
+	var live_camera: Transform3D = section.player.camera.global_transform
+	GameFlow.return_to_menu()
+	_check(section.player.camera.global_transform.is_equal_approx(live_camera), "Returning to menu before any death preserves the live scene camera")
+	GameFlow.begin_new_game()
+	await _frames(12)
 	if native:
 		print("DEATH_CAPTURE_READY")
 		await get_tree().create_timer(12, true).timeout

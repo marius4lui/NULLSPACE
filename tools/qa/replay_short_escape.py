@@ -49,7 +49,16 @@ try:
     time.sleep(.3)
     for index, request in enumerate(requests):
         send(run, request)
-        time.sleep(.06 if index else .6)
+        if index == 0:
+            # A cold export may still compile the first menu/world pipelines.
+            # Never dispatch the opening look before the actual restore and gate.
+            deadline = time.monotonic() + 20
+            while not any(e["event"] == "section_restored" for e in events()):
+                if time.monotonic() > deadline: raise RuntimeError("Start did not restore the scene")
+                time.sleep(.1)
+            time.sleep(.25)
+        else:
+            time.sleep(.06)
         data = events()
         pose = next((e["values"] for e in reversed(data) if e["event"] == "player_pose"), {})
         flow = data[-1]["flow"]

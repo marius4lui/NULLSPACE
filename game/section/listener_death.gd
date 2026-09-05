@@ -14,6 +14,7 @@ var elapsed: float = 0
 var blood_enabled: bool = false
 var _attacker: Listener
 var _start: Transform3D
+var _has_camera_snapshot: bool = false
 var _near: Vector3
 var _low: Vector3
 var _look: Basis
@@ -57,6 +58,7 @@ func begin(attacker: Listener) -> void:
 	if active or GameFlow.state != NullGameFlow.State.PLAYING or section.player.health > 0:
 		return
 	_start = section.player.camera.global_transform
+	_has_camera_snapshot = true
 	# A supplied cause is not sufficient: require this scene's committed, valid hit.
 	_attacker = attacker if attacker == section.listener and attacker.state == Listener.State.ATTACKING \
 		and attacker._attack_applied and attacker._clear_attack() else null
@@ -165,8 +167,9 @@ func _finish(skipped: bool) -> void:
 	GameFlow.finish_death()
 
 func reset() -> void:
-	if active or GameFlow.state in [NullGameFlow.State.LOADING, NullGameFlow.State.MENU]:
-		if _start.basis.determinant() != 0: section.player.camera.global_transform = _start
+	if _has_camera_snapshot:
+		section.player.camera.global_transform = _start
+	_has_camera_snapshot = false
 	active = false
 	elapsed = 0
 	pulling = false
