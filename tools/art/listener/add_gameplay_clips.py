@@ -42,7 +42,7 @@ def root_offset(z):
     rig.pose.bones["root"].location = rig.data.bones["root"].matrix_local.to_3x3().inverted() @ Vector((0, 0, z))
 
 
-for clip, seconds in (("walk", 1.2), ("run", 0.72), ("attack", 1.4), ("stagger", 0.9), ("death_grab", 2.6)):
+for clip, seconds in (("walk", 1.2), ("run", 0.72), ("attack", 1.4), ("stagger", 0.9), ("death_grab", 2.6), ("death_local", .85)):
     reset()
     constraints, helpers, targets = [], [], {}
     for side in (".L", ".R"):
@@ -130,6 +130,12 @@ for clip, seconds in (("walk", 1.2), ("run", 0.72), ("attack", 1.4), ("stagger",
                         world_rotation(f"{finger}_{joint:02d}{side}", x=-.30 * pull * hold)
             world_rotation("spine_02", x=(.08 * reach + .13 * strike) * hold)
             world_rotation("neck_01", x=(.08 * pull + .10 * strike) * hold)
+        if clip == "death_local":
+            # Tight-space/comfort alternative: bounded chest/neck follow-through,
+            # no wide reaching arms, root travel or new rig. Camera remains still.
+            follow = min(1, t / .22) * (1 - t) ** 2
+            world_rotation("spine_02", x=.12 * follow)
+            world_rotation("neck_01", x=.18 * follow)
         if clip == "stagger":
             hit = min(1, t / 0.12) * (1 - t) ** 2
             world_rotation("spine_02", x=-0.25 * hit, y=0.15 * hit)

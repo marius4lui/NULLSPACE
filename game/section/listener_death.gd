@@ -34,8 +34,8 @@ func _ready() -> void:
 	_voice.bus = &"Player"
 	add_child(_voice)
 	var mesh := SphereMesh.new()
-	mesh.radius = .009
-	mesh.height = .026
+	mesh.radius = .0045
+	mesh.height = .015
 	mesh.radial_segments = 6
 	mesh.rings = 3
 	var material := StandardMaterial3D.new()
@@ -45,6 +45,7 @@ func _ready() -> void:
 	for i: int in 12:
 		var drop := MeshInstance3D.new()
 		drop.mesh = mesh
+		drop.scale = Vector3.ONE * (.45 + absf(sin(i * 1.71)) * .65)
 		drop.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		drop.visible = false
 		add_child(drop)
@@ -67,8 +68,9 @@ func begin(attacker: Listener) -> void:
 		var face: Vector3 = _attacker.global_position + Vector3.UP * 1.97
 		var toward: Vector3 = (face - _start.origin).normalized()
 		# No large forced turn when the player is looking away or down.
-		pulling = (-_start.basis.z).dot(toward) > .72 and _clear_path(_start.origin, _near) and _clear_path(_near, _low)
+		pulling = (-_start.basis.z).dot(toward) > .72 and _clear_path(_start.origin, _near) and _clear_path(_near, _low) and _clear_grab_space()
 		_look = Basis.looking_at(face - _near, Vector3.UP).rotated((face - _near).normalized(), .035)
+		pulling = pulling and _start.origin.y >= _near.y and _clear_path(_near, _near - _look.z * .025)
 	_duration = DURATION if pulling else .85
 	elapsed = 0
 	_struck = false
@@ -79,12 +81,24 @@ func begin(attacker: Listener) -> void:
 		_animation_mode = _attacker.animation.callback_mode_process
 		_attacker.animation.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 		_attacker.animation.speed_scale = 1
-		_attacker.animation.play(&"death_grab", .08)
+		_attacker.animation.play(&"death_grab" if pulling else &"death_local", .08)
 		_attacker.animation.advance(0)
 	GameFlow.begin_death()
 	_play(THUD, -14, .82)
 	Telemetry.record(&"death_sequence_started", {"listener": _attacker != null, "pull": pulling,
 		"blood": blood_enabled, "duration": _duration, "camera_start": _array(_start.origin)})
+
+func _clear_grab_space() -> bool:
+	# The arms extend beyond the locomotion capsule. A clear camera path alone
+	# still allowed the left/right reach to enter the actual archive side wall.
+	var box := BoxShape3D.new()
+	box.size = Vector3(1.35, 1.2, 1.3)
+	var query := PhysicsShapeQueryParameters3D.new()
+	query.shape = box
+	query.transform = Transform3D(_attacker.global_basis,
+		_attacker.global_position - _attacker.global_basis.z * .58 + Vector3.UP * 1.65)
+	query.collision_mask = 1
+	return get_world_3d().direct_space_state.intersect_shape(query, 1).is_empty()
 
 func _clear_path(from: Vector3, to: Vector3) -> bool:
 	var query := PhysicsShapeQueryParameters3D.new()
@@ -126,7 +140,8 @@ func _process(delta: float) -> void:
 		var drop: MeshInstance3D = _drops[i]
 		drop.visible = blood_enabled and blood_age >= 0 and blood_age < .40
 		if drop.visible:
-			var direction := Vector3(sin(i * 2.4) * .45, .2 + float(i % 3) * .14, -.18)
+			var direction := Vector3(sin(i * 2.4) * .52, .12 + absf(sin(i * 1.73)) * .62,
+				-.10 - absf(cos(i * 2.17)) * .22)
 			drop.global_position = _blood_origin + _blood_basis * direction * blood_age + Vector3.DOWN * blood_age * blood_age
 	var blood: float = (1.0 - smoothstep(.04, .55, blood_age)) if blood_enabled and blood_age >= 0 else 0.0
 	var fade: float = smoothstep(1.95, DURATION, elapsed) if pulling else smoothstep(.10, .85, elapsed)

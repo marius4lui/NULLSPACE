@@ -38,6 +38,7 @@ func _ready() -> void:
 	await _frames(10)
 	if native:
 		# Allow the external isolated capture supervisor to attach before motion.
+		print("DEATH_CAPTURE_READY")
 		await get_tree().create_timer(12, true).timeout
 	for combination: Array in [[true, true], [false, true], [true, false], [false, false]]:
 		await _restart()

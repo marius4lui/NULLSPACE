@@ -85,6 +85,11 @@ func reset_at(anchor: Vector3) -> void:
 	_wounds = 0
 	_state_time = 0.0
 	_rest = 0.0
+	_perception_timer = 0.0
+	_attack_applied = false
+	_last_wound = -1000.0
+	_search_index = 0
+	_search_points.clear()
 	_path_timer = 0.0
 	_door_detour_time = 0.0
 	_blocked_time = 0.0
