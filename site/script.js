@@ -1,100 +1,185 @@
-"use strict";
+(() => {
+  'use strict';
+  const $ = (selector) => document.querySelector(selector);
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const controls = $('.experience-controls');
+  const motionButton = $('.motion-toggle');
+  const soundButton = $('.sound-toggle');
+  const descent = $('.descent');
+  const encounter = $('.encounter');
+  let motionEnabled = !reducedMotion.matches;
+  let frame = 0;
+  let geometry = null;
+  let ambience = null;
+  let soundEnabled = false;
+  let soundPending = false;
+  let lightLevel = 1;
+  const clamp = (n) => Math.max(0, Math.min(1, n));
+  const ease = (n) => { n = clamp(n); return n * n * (3 - 2 * n); };
+  const range = (n, start, end) => ease((n - start) / (end - start));
+  const property = (element, name, value) => element.style.setProperty(name, String(value));
 
-// Native disclosure remains usable when JavaScript is unavailable.
-const mobileMenu = document.querySelector(".mobile-menu");
-if (mobileMenu) {
-  mobileMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => { mobileMenu.open = false; });
-  });
-  mobileMenu.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape") return;
-    mobileMenu.open = false;
-    mobileMenu.querySelector("summary").focus();
-  });
-}
-
-// Static, local-only interactions. No tracking, external requests or saved state.
-const sectors = [
-  {letter:"A",type:"Orientation / Quiet arrival",name:"Arrival",quote:"Everything looks almost normal.",description:"An empty reception suite. A dead exit. A circuit diagram that promises a way out. Learn the building while it is still quiet.",objective:"Find the exit. Understand what it needs."},
-  {letter:"B",type:"Circulation / Nested offices",name:"Offices",quote:"You have passed this wall before.",description:"Offset partitions, boxed columns and a carpet repair worth remembering. Find the pistol and the office power switch. A loop gives you more than one way out.",objective:"Restore the office circuit. Remember the doors."},
-  {letter:"C",type:"Power failure / Service route",name:"Service / Blackout",quote:"The worst part is the missing hum.",description:"Lower ceilings, utility doors and a short dark passage. The second switch waits beyond the familiar light. Your flashlight and directional hearing matter now.",objective:"Restore the service circuit. Keep an escape route."},
-  {letter:"D",type:"Escape / Return route",name:"Return",quote:"The exit is where you left it.",description:"Both circuits are restored. Return through a building you now partly understand. Doors, quiet movement and a well-timed shot can buy the time you need. You do not have to kill the Listener.",objective:"Reach the powered exit."}
-];
-
-const sectorButtons = [...document.querySelectorAll("[data-sector]")];
-function selectSector(index) {
-  const sector = sectors[index];
-  if (!sector) return;
-  sectorButtons.forEach((button, buttonIndex) => {
-    const selected = buttonIndex === index;
-    button.classList.toggle("active", selected);
-    button.setAttribute("aria-pressed", String(selected));
-  });
-  document.querySelectorAll("[data-route]").forEach((node) => {
-    node.classList.toggle("active", Number(node.dataset.route) === index);
-  });
-  for (const key of ["letter", "type", "name", "quote", "description", "objective"]) {
-    document.getElementById(`sector-${key}`).textContent = sector[key];
+  function measure() {
+    geometry = {
+      buildingTop: descent.getBoundingClientRect().top + window.scrollY,
+      buildingLength: Math.max(1, descent.offsetHeight - $('.building-stage').offsetHeight),
+      listenerTop: encounter.getBoundingClientRect().top + window.scrollY,
+      listenerLength: Math.max(1, encounter.offsetHeight - $('.encounter-stage').offsetHeight)
+    };
+    schedule();
   }
-}
-sectorButtons.forEach((button, index) => {
-  button.addEventListener("click", () => selectSector(index));
-  button.addEventListener("keydown", (event) => {
-    let next;
-    if (event.key === "ArrowDown" || event.key === "ArrowRight") next = (index + 1) % sectors.length;
-    if (event.key === "ArrowUp" || event.key === "ArrowLeft") next = (index + sectors.length - 1) % sectors.length;
-    if (event.key === "Home") next = 0;
-    if (event.key === "End") next = sectors.length - 1;
-    if (next === undefined) return;
-    event.preventDefault();
-    sectorButtons[next].focus();
-    selectSector(next);
-  });
-});
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightbox-image");
-const lightboxCaption = document.getElementById("lightbox-caption");
-let opener = null;
-if (lightbox && typeof lightbox.showModal === "function") {
-  document.querySelectorAll("[data-lightbox]").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      opener = link;
-      lightboxImage.src = link.href;
-      lightboxImage.alt = link.querySelector("img").alt;
-      lightboxCaption.textContent = link.dataset.caption;
-      lightbox.showModal();
+  function render() {
+    frame = 0;
+    if (!geometry) return;
+    if (!motionEnabled) { lightLevel = window.scrollY < encounter.offsetTop ? 1 : 0; updateVolume(); return; }
+    const p = clamp((window.scrollY - geometry.buildingTop) / geometry.buildingLength);
+    const q = clamp((window.scrollY - geometry.listenerTop) / geometry.listenerLength);
+    const arrival = 1 - range(p, .06, .27);
+    const passage = range(p, .23, .36) * (1 - range(p, .58, .72));
+    const blackout = range(p, .72, .87);
+    property(descent, '--travel', p.toFixed(4));
+    property(descent, '--arrival', arrival.toFixed(4));
+    property(descent, '--arrival-pointer', arrival > .2 ? 'auto' : 'none');
+    property(descent, '--passage', passage.toFixed(4));
+    property(descent, '--blackout', blackout.toFixed(4));
+    property(descent, '--office', (range(p, .25, .49) * (1 - range(p, .68, .91))).toFixed(4));
+    property(descent, '--dark', range(p, .53, .91).toFixed(4));
+    property(descent, '--advance', (1 + p * .34).toFixed(4));
+    property(descent, '--slide', (-p * 70) + 'px');
+    property(descent, '--turn', (p * 3) + 'deg');
+    property(descent, '--door', (-p * 150) + 'px');
+    const reveal = range(q, .37, .66);
+    property(encounter, '--reveal', reveal.toFixed(4));
+    property(encounter, '--lurk', (1 - range(q, .29, .43)).toFixed(4));
+    property(encounter, '--silhouette', ((.09 + range(q, 0, .32) * .6) * (1 - range(q, .36, .56))).toFixed(4));
+    property(encounter, '--approach', (1 + range(q, .05, .35) * .1).toFixed(4));
+    property(encounter, '--aperture', ((1 - range(q, .35, .67)) * 85) + '%');
+    $('.entry-link').tabIndex = arrival > .2 ? 0 : -1;
+    $('.reveal-copy .text-link').tabIndex = reveal > .5 ? 0 : -1;
+    const sceneText = p < .28 ? '01 — Arrival' : p < .68 ? '01 — Past reception' : '02 — Power lost';
+    if ($('.scene-status').textContent !== sceneText) $('.scene-status').textContent = sceneText;
+    const encounterText = reveal > .75 ? 'It knows you are here.' : 'Something is listening.';
+    if ($('.encounter-status').textContent !== encounterText) $('.encounter-status').textContent = encounterText;
+    lightLevel = 1 - range(p, .52, .87);
+    updateVolume();
+  }
+
+  function schedule() { if (!frame && !document.hidden) frame = requestAnimationFrame(render); }
+
+  function setMotion(enabled) {
+    const anchor = [$('.footer'), $('.download'), $('.records'), encounter, descent].find((element) => window.scrollY >= element.offsetTop) || descent;
+    const wasEnabled = document.body.classList.contains('motion-enabled');
+    const relativeTop = Math.max(-window.innerHeight * .25, anchor.getBoundingClientRect().top);
+    motionEnabled = enabled;
+    document.body.classList.toggle('motion-enabled', enabled);
+    motionButton.textContent = enabled ? 'Motion on' : 'Motion off';
+    motionButton.setAttribute('aria-pressed', String(enabled));
+    if (!enabled) {
+      descent.removeAttribute('style'); encounter.removeAttribute('style');
+      $('.entry-link').tabIndex = 0; $('.reveal-copy .text-link').tabIndex = 0;
+      if (wasEnabled && anchor === descent && window.scrollY > window.innerHeight) window.scrollTo({ top: window.innerHeight, behavior: 'instant' });
+    }
+    if (wasEnabled !== enabled && anchor !== descent) window.scrollTo({ top: Math.max(0, anchor.offsetTop - relativeTop), behavior: 'instant' });
+    measure();
+  }
+
+  function updateVolume() {
+    if (ambience) ambience.volume = soundEnabled && !document.hidden ? .22 * lightLevel : 0;
+  }
+
+  async function toggleSound() {
+    if (soundPending) return;
+    if (soundEnabled) {
+      soundEnabled = false;
+      ambience.pause();
+    } else {
+      // Created only inside this user gesture. Never preloaded or autoplayed.
+      ambience ||= new Audio('assets/audio/hum.wav');
+      ambience.loop = true;
+      ambience.volume = .22 * lightLevel;
+      soundPending = true;
+      try {
+        await ambience.play();
+        soundEnabled = true;
+        if (document.hidden) ambience.pause();
+      } catch {
+        $('#sound-status').textContent = 'Sound could not start. You can continue without it.';
+        return;
+      } finally { soundPending = false; }
+    }
+    soundButton.setAttribute('aria-pressed', String(soundEnabled));
+    soundButton.lastElementChild.textContent = soundEnabled ? 'Sound on' : 'Sound off';
+    updateVolume();
+  }
+
+  controls.hidden = false;
+  motionButton.addEventListener('click', () => setMotion(!motionEnabled));
+  reducedMotion.addEventListener('change', () => setMotion(!reducedMotion.matches));
+  soundButton.addEventListener('click', toggleSound);
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', measure, { passive: true });
+  window.addEventListener('load', measure, { once: true });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (frame) cancelAnimationFrame(frame);
+      frame = 0;
+      if (ambience) ambience.pause();
+    } else {
+      if (soundEnabled) ambience.play().catch(() => {
+        soundEnabled = false;
+        soundButton.setAttribute('aria-pressed', 'false');
+        soundButton.lastElementChild.textContent = 'Sound off';
+      });
+      measure();
+    }
+    updateVolume();
+  });
+  window.addEventListener('pagehide', () => { if (ambience) ambience.pause(); });
+  window.addEventListener('pageshow', measure);
+  $('.entry-link').addEventListener('click', (event) => {
+    if (!motionEnabled) return;
+    event.preventDefault();
+    window.scrollTo({ top: geometry.buildingTop + geometry.buildingLength * .43, behavior: 'smooth' });
+  });
+  setMotion(motionEnabled);
+
+  const sectors = [
+    ['Arrival', 'An empty reception. A dead exit. Find out what it needs before going deeper.', 'Find the exit. Understand the two circuits.'],
+    ['Offices', 'Quiet rooms and familiar doors. The first switch is somewhere in the offices. Remember your landmarks.', 'Restore the office circuit.'],
+    ['Service / Blackout', 'The service route takes you past the light. Use the flashlight, watch the doors, and find the second switch.', 'Restore the service circuit.'],
+    ['Return', 'Both circuits are live. The same building, on the way back. The Listener is still inside.', 'Return to the exit.']
+  ];
+  const sectorButtons = [...document.querySelectorAll('[data-sector]')];
+  function selectSector(index) {
+    sectorButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+    [$('#sector-name').textContent, $('#sector-description').textContent, $('#sector-objective').textContent] = sectors[index];
+  }
+  sectorButtons.forEach((button, index) => {
+    button.addEventListener('click', () => selectSector(index));
+    button.addEventListener('keydown', (event) => {
+      const target = { ArrowRight: (index + 1) % 4, ArrowDown: (index + 1) % 4, ArrowLeft: (index + 3) % 4, ArrowUp: (index + 3) % 4, Home: 0, End: 3 }[event.key];
+      if (target === undefined) return;
+      event.preventDefault(); selectSector(target); sectorButtons[target].focus();
     });
   });
-  lightbox.addEventListener("click", (event) => {
-    const rect = lightbox.getBoundingClientRect();
-    if (event.target === lightbox && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) lightbox.close();
-  });
-  lightbox.addEventListener("close", () => opener?.focus());
-}
 
-// Optional motion follows the system preference. No saved state or tracking.
-const motionToggle = document.querySelector(".motion-toggle");
-if (motionToggle) {
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let manualPause = false;
-  function syncMotion() {
-    const paused = reducedMotion.matches || manualPause;
-    document.documentElement.dataset.motion = paused ? "off" : "on";
-    motionToggle.setAttribute("aria-pressed", String(paused));
-    motionToggle.textContent = paused ? "Motion: off" : "Motion: on";
-    motionToggle.setAttribute("aria-label", reducedMotion.matches
-      ? "Motion disabled by your system preference"
-      : paused ? "Enable background motion" : "Pause background motion");
-    motionToggle.disabled = reducedMotion.matches;
-  }
-  motionToggle.hidden = false;
-  motionToggle.addEventListener("click", () => {
-    manualPause = !manualPause;
-    syncMotion();
+  const lightbox = $('.lightbox');
+  let lastTrigger = null;
+  document.querySelectorAll('[data-lightbox]').forEach((link) => link.addEventListener('click', (event) => {
+    if (typeof lightbox.showModal !== 'function' || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    lastTrigger = link;
+    $('#lightbox-image').src = link.href;
+    $('#lightbox-image').alt = link.querySelector('img').alt;
+    $('#lightbox-caption').textContent = link.dataset.caption;
+    lightbox.showModal();
+    document.body.classList.add('viewing-image');
+  }));
+  lightbox.addEventListener('close', () => { document.body.classList.remove('viewing-image'); lastTrigger?.focus({ preventScroll: true }); });
+  lightbox.addEventListener('click', (event) => {
+    if (event.target !== lightbox) return;
+    const rect = lightbox.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) lightbox.close();
   });
-  reducedMotion.addEventListener("change", syncMotion);
-  syncMotion();
-}
+})();
