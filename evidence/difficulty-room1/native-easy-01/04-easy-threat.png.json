@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 42914.178294491,
+  "acquired_utc": "2026-09-05T07:46:05.976+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/difficulty-room1/evidence/difficulty-room1/native-easy-01/04-easy-threat.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "5901f9082d6a5d3f62b5cd635c4cfdd4e250a182b31f611a33a8e64ea206e772",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      1140,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 251193
+  },
+  "x_readback_ms": 107.22157499549212
+}

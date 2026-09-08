@@ -18,7 +18,7 @@ Single-player · First-person survival horror · In development
 
 *Early Blender environment render using original project assets. Work in progress.*
 
-Wake up on damp carpet beneath fluorescent lights. Somewhere inside an impossible commercial building, an exit is waiting for power. Find two power switches, restore the exit, and remember your way back.
+Wake up on damp carpet beneath fluorescent lights. Somewhere inside an impossible commercial building, an exit is waiting for power. Choose a difficulty, restore its required Room 1 circuits, and remember your way back.
 
 Something else is learning the building with you.
 
@@ -28,7 +28,7 @@ Something else is learning the building with you.
 - **Every shot has a cost.** A compact semi-automatic pistol buys time, but its noise gives away your position. Doors, cover and route choices matter.
 - **A compact connected building.** Roughly 8–12 meaningful rooms: quiet arrival, nested offices, short service/blackout and the return to the exit.
 - **Architecture you almost remember.** Offset openings, sparse landmarks and tactical doors help you navigate and escape.
-- **A complete escape.** Two separated power switches and a return to the exit, designed for a 10–15 minute first successful run. Progression is designed to remain possible without ammunition.
+- **A complete escape.** Easy uses one switch, Medium the two-switch baseline, and Hard/Nightmare add a third local circuit with a short latch or marked-fuse step. Every mode returns to the same exit and remains possible without ammunition.
 
 These describe the intended game; implementation is still in early production.
 
@@ -54,7 +54,7 @@ Minimum requirements are not established yet. Performance will be reported with 
 
 **[Download v0.1 — Raw Beta](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.1)** · Linux x86-64 and Windows x86-64 · Unpolished prerelease.
 
-The public `main` branch now contains the integrated game: original rooms, Player, pistol, Listener, doors, both power switches, checkpoints and ending in one scene. **This is not a finished or fully optimized release.** A known-route Linux export run reached the ending in approximately 54 active seconds; the intended 10–15 minute first-play duration remains unmet/unverified. Audio review, pacing, balance and final acceptance remain open. Windows is cross-exported, not natively tested. Existing worktrees/evidence are preserved.
+The public `main` branch contains the integrated two-switch game. The `feat/difficulty-room1` branch adds four fixed pre-start modes without adding levels, enemies, weapons or an inventory framework. **This is not a finished or fully optimized release.** Easy has a complete native exported-game run; the other modes complete in actual-scene automation but still need full native endings and listening review. Windows is cross-exported, not natively tested.
 
 ## Run and build from source
 

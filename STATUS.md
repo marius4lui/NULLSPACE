@@ -8,6 +8,13 @@
 - Automated 24 touch +258 core +89 existing scene checks and three clock schedules pass. Linux Mobile-renderer title/Start/touch-HUD screenshots inspected; not physical Android evidence. See evidence/android/initial/REPORT.md and tools/android/README.md for precise limits/template issues.
 - adb currently lists no attached device. User-owned test phone needs connection for install/play/thermal acceptance; 0/2 Android final runs. No release publication yet.
 
+## Difficulty Room 1 branch
+
+- `feat/difficulty-room1` now offers Easy, Medium, Hard and Nightmare before Start, with Medium as the default. The fixed choice is stored in the existing checkpoint and survives death/restart.
+- The same Room 1 varies Listener speed/awareness, existing fixture and sound response, and concrete objectives: one switch; two switches; three plus a safety latch; or three plus one marked local fuse.
+- Automated actual-scene coverage passes 42/42 for all four modes through ending and death/restart. Existing room/player, pistol, Listener, door, escape and core suites pass (347 checks total), as do 30/60/120 logical clock probes. Linux and Windows exports reproduce successfully with Godot 4.7.2.
+- Native exported-game evidence includes complete Easy and Medium endings after death/restart, the complete Hard latch/relay interaction, and Nightmare fuse pickup/readability. Full native Hard/Nightmare endings and listening remain open, so this branch is not release acceptance.
+
 - Current milestone: Full small-map flow operated; observed defects and duration/pacing need work.
 - Last known good commit: gameplay f30b31e; raw-beta source/tag v0.1 at83da390 now integrated on public main. Metadata-only beta rebuild passed native menu/Start/movement/pause smoke. Prior unarmed-export-02 completes both switches→exit with one hit and zero ammunition. Not final release acceptance.
 - Verified completed systems: Same-scene Start/pickup/combat/doors/two switches/checkpoints/ending operated. Four native Continues pass without engine errors. Controller16, pistol20, Listener12, door15, objective26 and core258 +three clock probes pass. West-leaf fixture correction passes; actual west pursuit, death/restart and zero-ammo checkpoint-to-ending operated in door-detour-native-01.

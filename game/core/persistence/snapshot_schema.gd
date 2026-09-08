@@ -52,7 +52,7 @@ static func validate(snapshot: Dictionary) -> PackedStringArray:
 	if not player.get("flashlight_enabled") is bool or player.get("equipped_weapon") not in ["", "pistol"]:
 		errors.append("Invalid player equipment state.")
 	_validate_inventory(snapshot["inventory"], player, errors)
-	_validate_progress(snapshot["progress"], errors)
+	_validate_progress(snapshot["progress"], snapshot["world"], errors)
 	_validate_world(snapshot["world"], errors)
 	return errors
 
@@ -92,7 +92,7 @@ static func _validate_inventory(inventory: Dictionary, player: Dictionary, error
 		if player.get("equipped_weapon") is String and player["equipped_weapon"] == id and not weapon["owned"]:
 			errors.append("Cannot equip an unowned weapon.")
 
-static func _validate_progress(progress: Dictionary, errors: PackedStringArray) -> void:
+static func _validate_progress(progress: Dictionary, world: Dictionary, errors: PackedStringArray) -> void:
 	if not exact_keys(progress, ["relays", "ending"]) or not progress.get("relays") is Dictionary:
 		errors.append("Progress is incomplete.")
 		return
@@ -100,18 +100,22 @@ static func _validate_progress(progress: Dictionary, errors: PackedStringArray) 
 	if not exact_keys(relays, RELAYS):
 		errors.append("Relay progress is incomplete.")
 		return
-	var all_relays: bool = true
 	for id: String in RELAYS:
 		if not relays[id] is bool:
 			errors.append("Relay state must be committed boolean values.")
 			return
-		all_relays = all_relays and relays[id] == true
 	for flag: String in ["ending"]:
 		if not progress[flag] is bool:
 			errors.append("Progress flags must be boolean values.")
 			return
-	if progress["ending"] == true and not all_relays:
-		errors.append("Escape requires both power switches.")
+	if progress["ending"] == true:
+		var circuits: Dictionary = world["circuits"] if world.get("circuits") is Dictionary else {}
+		var difficulty_id := DifficultyConfig.from_snapshot({"world": {"circuits": circuits}})
+		for id: String in DifficultyConfig.profile(difficulty_id)["required_switches"]:
+			var powered: bool = bool(relays.get(id, false)) if id in RELAYS else bool(circuits.get("emergency_powered", false))
+			if not powered:
+				errors.append("Escape requires every %s power switch." % difficulty_id)
+				break
 
 static func _validate_world(world: Dictionary, errors: PackedStringArray) -> void:
 	if not exact_keys(world, ["doors", "circuits", "consumed_pickups"]):

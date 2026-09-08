@@ -14,6 +14,12 @@ Open [localhost:4173](http://localhost:4173). Stop the server with `Ctrl+C`.
 
 The site is static HTML, CSS, JavaScript and local assets in `site/`. There is no dependency installation, bundler, database or build step. Edit the source files directly. Keep local asset and page URLs relative so previews and the `/NULLSPACE/` project path both work.
 
+## Visual direction
+
+The September 2026 redesign uses oversized Barlow Condensed typography, charcoal surfaces and an acid-yellow release section. The original environment and Listener renders remain unchanged; their labels distinguish source studies from gameplay screenshots. The four-area selector drives a schematic route highlight. It is not a literal map of the game.
+
+Background motion is enabled only after its pause control is available. The control and CSS follow `prefers-reduced-motion`; no preference is saved. The mobile menu and technical disclosure use native `details` elements. Image links retain their direct-file fallback and the enhanced lightbox restores focus when closed. Fonts, imagery and scripts are served locally; font attribution and the license are in `site/assets/`.
+
 ## Review a change
 
 Check navigation, buttons, keyboard focus and any interactive controls in a real browser. Inspect a narrow mobile viewport as well as desktop. Check reduced-motion behavior, readable text and image captions. Screenshots should accurately describe their source and development status; planned gameplay must remain clearly identified.

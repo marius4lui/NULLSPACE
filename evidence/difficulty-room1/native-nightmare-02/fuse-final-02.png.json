@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 44862.010031719,
+  "acquired_utc": "2026-09-05T08:18:33.808+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/difficulty-room1/evidence/difficulty-room1/native-nightmare-02/fuse-final-02.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "c29469588f00417e969e4aa4cb5af4277d55d17caffe6c8ca510765c927e8aeb",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 275159
+  },
+  "x_readback_ms": 27.516673995705787
+}

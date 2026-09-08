@@ -6,6 +6,8 @@ User explicitly approved implementation of the complete Android plan. Android is
 
 Authority: user's explicit final scope and working-method replacement on2026-09-05. This replaces contradictory earlier instructions including freezes, mandatory delegation and the35–60minute campaign. Prior complete contract/records are preserved verbatim once in docs/history/pre-scope-change-2026-09-05/ and Git. Historical conditions are not current blockers.
 
+Active feature-branch addendum (2026-09-05): `feat/difficulty-room1` keeps this same Room 1 and adds Easy, Medium, Hard and Nightmare. Easy requires Office A; Medium retains the two-switch baseline; Hard and Nightmare require Office A, Service B and a local Emergency C interaction. This explicit difficulty objective supersedes the two-switch-only line below for this branch; it does not authorize new rooms, monsters, weapons or a general difficulty framework.
+
 ## Goal
 
 Complete good, budget-conscious single-player first-person survival horror, approximately10–15minutes for a meaningful first successful run. Two months is an upper horizon, not time to exhaust. No prototype/compilation/partial scene counts as completion. One GPT-6 Astra agent implements solo; no new subagents or independent-agent reviews. No model/purchase/account/reset changes without explicit instruction. Preserve existing work; selective reuse, not restart or blind bulk merge.

@@ -2,6 +2,7 @@ class_name NullspaceSectionMenu
 extends Control
 
 signal quit_requested
+signal start_requested(difficulty_id: String)
 ## Concrete title/pause/settings and restrained in-game prompts for the playable scene.
 
 var _shade: ColorRect
@@ -19,6 +20,7 @@ var _notice: String = ""
 var objective: String = ""
 var _injury: Label
 var _injury_time: float = 0
+var selected_difficulty: String = DifficultyConfig.DEFAULT_ID
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -102,14 +104,21 @@ func _show_screen() -> void:
 	match GameFlow.state:
 		NullGameFlow.State.MENU:
 			_label("The building has ears.", 26)
-			_button("Start", func() -> void: GameFlow.begin_new_game())
+			_label("Difficulty", 20)
+			var difficulty_button := _button(DifficultyConfig.title(selected_difficulty) + "  ›", func() -> void:
+				var index: int = (DifficultyConfig.IDS.find(selected_difficulty) + 1) % DifficultyConfig.IDS.size()
+				selected_difficulty = DifficultyConfig.IDS[index]
+				_show_screen())
+			difficulty_button.tooltip_text = "Click or press Enter to choose the next difficulty."
+			_label(str(DifficultyConfig.profile(selected_difficulty)["summary"]), 18)
+			_button("Start " + DifficultyConfig.title(selected_difficulty), func() -> void: start_requested.emit(selected_difficulty))
 			var resume := _button("Continue", func() -> void: GameFlow.continue_game())
 			resume.disabled = not SaveSystem.continue_available()
 			_button("Settings", func() -> void: GameFlow.open_settings())
 			_button("Controls", _controls)
 			_button("Credits", _credits)
 			_button("Quit", func() -> void: quit_requested.emit())
-			_label("Development build — two-circuit escape.\nComplete-map playtesting and polish in progress.", 18)
+			_label("Room 1 difficulty build — selection is fixed for the run.", 18)
 		NullGameFlow.State.PAUSED:
 			_label("Paused")
 			_button("Resume", func() -> void: GameFlow.resume_game())

@@ -21,6 +21,8 @@ var _elapsed: float = 0.0
 var _phase: float = 0.0
 var _warmth: float = 0.0
 var _intensity: float = -1.0
+var difficulty_energy: float = 1.0
+var difficulty_reaction: float = 1.0
 
 
 func configure(data: Dictionary, surface_library: EnvironmentSurfaceLibrary) -> void:
@@ -79,15 +81,22 @@ func set_direct_light_active(value: bool) -> void:
 		_light.visible = value and state != State.OFF
 
 
+func set_difficulty_lighting(energy: float, reaction: float) -> void:
+	difficulty_energy = clampf(energy, .5, 1.25)
+	difficulty_reaction = clampf(reaction, .25, 1.75)
+	_intensity = -1.0
+	_update_output(1.0)
+
+
 func _process(delta: float) -> void:
 	_elapsed += delta
 	var modulation: float = 1.0
 	if not reduce_flashes:
 		var cycle: float = fmod(_elapsed + _phase, 19.7)
 		if state == State.INTERMITTENT and cycle > 17.6 and cycle < 18.35:
-			modulation = 0.79 + 0.08 * sin(cycle * 21.0) * sin(cycle * 13.0)
+			modulation = 1.0 - (0.21 - 0.08 * sin(cycle * 21.0) * sin(cycle * 13.0)) * difficulty_reaction
 		elif state == State.FAILING:
-			modulation = 0.83 + 0.04 * sin((_elapsed + _phase) * 5.7)
+			modulation = 1.0 - (0.17 - 0.04 * sin((_elapsed + _phase) * 5.7)) * difficulty_reaction
 	_update_output(modulation)
 
 
@@ -99,7 +108,7 @@ func _update_output(modulation: float) -> void:
 		State.WEAK: base = 0.44
 		State.FAILING: base = 0.30
 		State.OFF: base = 0.0
-	var output: float = base * modulation
+	var output: float = maxf(0.0, base * modulation * difficulty_energy)
 	if is_equal_approx(output, _intensity):
 		return
 	_intensity = output

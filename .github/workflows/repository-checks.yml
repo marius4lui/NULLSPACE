@@ -100,3 +100,7 @@ jobs:
               sys.exit(1)
           print(f"Verified {len(pages)} HTML pages and their local asset/link targets.")
           PY
+      - name: Verify website JavaScript and interaction contracts
+        run: |
+          node --check site/script.js
+          node tools/check-site-interactions.mjs

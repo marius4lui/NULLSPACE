@@ -15,6 +15,8 @@ var room: ShortMap
 var player: SectionPlayer
 var office_relay: PowerRelay
 var service_relay: PowerRelay
+var emergency_relay: DifficultyRelay
+var fuse_pickup: SectionFusePickup
 var exit_door: SectionDoor
 var exit_status: Label3D
 var menu: NullspaceSectionMenu
@@ -32,6 +34,8 @@ var _frame_samples: Array[float] = []
 var _sample_time: float = 0.0
 var _last_frame_usec: int = 0
 var _quitting: bool = false
+var difficulty_id: String = DifficultyConfig.DEFAULT_ID
+var difficulty: Dictionary = DifficultyConfig.profile(DifficultyConfig.DEFAULT_ID)
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -80,12 +84,14 @@ func _ready() -> void:
 	if InputGate.uses_touch():
 		canvas.add_child(preload("res://section/touch_controls.tscn").instantiate())
 	menu.quit_requested.connect(request_quit)
+	menu.start_requested.connect(_begin_new_game)
 	player.prompt_changed.connect(menu.set_prompt)
 	player.damaged.connect(menu.show_injury)
 	pistol.ammunition_changed.connect(menu.set_ammunition)
 	GameFlow.load_started.connect(_restore)
 	SettingsManager.settings_changed.connect(_apply_settings)
 	_apply_settings(SettingsManager.snapshot())
+	_apply_difficulty(DifficultyConfig.DEFAULT_ID)
 	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(), true)
 	Telemetry.record(&"section_ready", {"map": "short-map-1", "build_stage": "two_switch_flow"})
 
@@ -114,6 +120,21 @@ func _create_objectives() -> void:
 	service_relay.rotation.y = -PI / 2
 	add_child(service_relay)
 	service_relay.power_changed.connect(func(_powered: bool) -> void: _on_relay_power("service"))
+	emergency_relay = DifficultyRelay.new()
+	emergency_relay.relay_id = "emergency"
+	emergency_relay.title = "EMERGENCY C"
+	emergency_relay.position = Vector3(-5.94, 1.5, -6.40)
+	emergency_relay.rotation.y = -PI / 2
+	emergency_relay.has_fuse = func() -> bool: return bool(_snapshot.get("world", {}).get("circuits", {}).get("emergency_fuse_carried", false))
+	emergency_relay.consume_fuse = func() -> void: _snapshot["world"]["circuits"]["emergency_fuse_carried"] = false
+	add_child(emergency_relay)
+	emergency_relay.power_changed.connect(func(_powered: bool) -> void: _on_emergency_power())
+	emergency_relay.prerequisite_changed.connect(_on_emergency_prerequisite)
+	fuse_pickup = SectionFusePickup.new()
+	fuse_pickup.position = Vector3(21.72, 1.38, -8.15)
+	fuse_pickup.rotation.y = -PI / 2
+	add_child(fuse_pickup)
+	fuse_pickup.collected.connect(_on_fuse_collected)
 	exit_status = _wall_sign("EXIT\nOFFICE A: OFFLINE\nSERVICE B: OFFLINE", Vector3(4.15, 1.65, 8.445), PI, 24)
 	_wall_sign("OFFICE A", Vector3(-2.44, 2.59, -14.535), 0, 26)
 	_wall_sign("SERVICE B", Vector3(5.99, 1.8, -6.6), -PI / 2, 28)
@@ -130,6 +151,9 @@ func _create_objectives() -> void:
 	add_child(exit_area)
 	exit_area.body_entered.connect(func(body: Node3D) -> void:
 		if body == player: finish_escape())
+
+func _begin_new_game(selected: String) -> void:
+	GameFlow.begin_new_game(DifficultyConfig.sanitize(selected))
 
 func _wall_sign(text: String, at: Vector3, yaw: float, size: int) -> Label3D:
 	var label := Label3D.new()
@@ -156,6 +180,7 @@ func request_quit(code: int = 0) -> void:
 	for door: SectionDoor in doors: door._audio.stop()
 	office_relay.audio.stop()
 	service_relay.audio.stop()
+	emergency_relay.audio.stop()
 	shot_effects.clear()
 	pistol._exit_tree()
 	# AudioServer releases stopped loop playbacks on its next mix, including Dummy audio.
@@ -164,12 +189,18 @@ func request_quit(code: int = 0) -> void:
 
 func _restore(snapshot: Dictionary, generation: int) -> void:
 	_snapshot = snapshot.duplicate(true)
+	_apply_difficulty(DifficultyConfig.from_snapshot(snapshot))
 	# Let physics register the authored colliders before testing the spawn capsule.
 	await get_tree().physics_frame
 	if generation != GameFlow.pending_generation:
 		return
 	office_relay.restore(snapshot["progress"]["relays"]["office"])
 	service_relay.restore(snapshot["progress"]["relays"]["service"])
+	var circuits: Dictionary = snapshot["world"]["circuits"]
+	emergency_relay.restore_difficulty(bool(circuits.get("emergency_powered", false)),
+		bool(circuits.get("emergency_prerequisite", false)))
+	fuse_pickup.set_consumed(bool(circuits.get("emergency_fuse_taken", false)))
+	_refresh_difficulty_visibility()
 	_apply_power()
 	shot_effects.clear()
 	sound.reset()
@@ -214,6 +245,29 @@ func _on_relay_power(id: String) -> void:
 	menu.show_hint(_objective_hint() + ("\nYou steady your breathing. Checkpoint saved." if result.ok else "\nSave failed: " + result.message))
 	EventHub.objective_committed.emit(StringName(id))
 
+func _on_fuse_collected() -> void:
+	_snapshot["world"]["circuits"]["emergency_fuse_taken"] = true
+	_snapshot["world"]["circuits"]["emergency_fuse_carried"] = true
+	var result := _save_current()
+	Telemetry.record(&"fuse_collected", {"id": "emergency"})
+	menu.objective = _objective_hint()
+	menu.show_hint("Marked fuse acquired. Carry it to EMERGENCY C in the divided offices.\n" +
+		("Progress saved." if result.ok else "Save failed: " + result.message))
+
+func _on_emergency_prerequisite() -> void:
+	_snapshot["world"]["circuits"]["emergency_prerequisite"] = true
+	var result := _save_current()
+	menu.show_hint(("Fuse seated." if emergency_relay.access_mode == "fuse" else "Safety latch released.") +
+		" Open the EMERGENCY C panel and throw its switch.\n" +
+		("Progress saved." if result.ok else "Save failed: " + result.message))
+
+func _on_emergency_power() -> void:
+	_snapshot["world"]["circuits"]["emergency_powered"] = true
+	_apply_power()
+	var result := _save_current()
+	menu.show_hint(_objective_hint() + ("\nProgress saved." if result.ok else "\nSave failed: " + result.message))
+	EventHub.objective_committed.emit(&"emergency")
+
 func _save_current() -> StorageResult:
 	_snapshot["player"]["health"] = player.health
 	_snapshot["player"]["stamina"] = player.stamina
@@ -232,16 +286,60 @@ func _on_pistol_collected() -> void:
 
 func _apply_power() -> void:
 	room.apply_power({"office": office_relay.powered, "service": service_relay.powered})
-	exit_door.locked = not (office_relay.powered and service_relay.powered)
-	exit_status.text = "EXIT\nOFFICE A: " + ("ONLINE" if office_relay.powered else "OFFLINE") + "\nSERVICE B: " + ("ONLINE" if service_relay.powered else "OFFLINE")
+	exit_door.locked = not _required_power_complete()
+	exit_status.text = "EXIT\nOFFICE A: " + ("ONLINE" if office_relay.powered else "OFFLINE")
+	if "service" in difficulty["required_switches"]:
+		exit_status.text += "\nSERVICE B: " + ("ONLINE" if service_relay.powered else "OFFLINE")
+	if "emergency" in difficulty["required_switches"]:
+		exit_status.text += "\nEMERGENCY C: " + ("ONLINE" if emergency_relay.powered else "OFFLINE")
 	exit_status.modulate = Color(.12,.30,.15) if not exit_door.locked else Color(.24,.17,.10)
 	if is_instance_valid(menu): menu.objective = _objective_hint()
 
 func _objective_hint() -> String:
-	if not exit_door.locked: return "Both circuits are restored. Return to the EXIT where you arrived."
+	if not exit_door.locked: return "Required power is restored. Return to the EXIT where you arrived."
+	if difficulty_id == "easy": return "Restore OFFICE A, then return to the EXIT."
+	if difficulty_id in ["hard", "nightmare"] and not emergency_relay.powered:
+		if emergency_relay.access_mode == "fuse" and not emergency_relay.fuse_inserted:
+			if bool(_snapshot.get("world", {}).get("circuits", {}).get("emergency_fuse_carried", false)):
+				return "Restore three circuits. Carry the marked fuse to EMERGENCY C in the divided offices."
+			return "Restore three circuits. Find the marked fuse in SERVICE BYPASS, then insert it at EMERGENCY C."
+		if emergency_relay.access_mode == "latch" and not emergency_relay.latch_released:
+			return "Restore three circuits. Release the safety latch at EMERGENCY C before using it."
+		return "Restore OFFICE A, SERVICE B, and EMERGENCY C."
 	if office_relay.powered: return "Office A restored. Find SERVICE B beyond the utility doors."
 	if service_relay.powered: return "Service B restored. Find OFFICE A beyond the divided offices."
 	return "The exit has no power. Restore OFFICE A and SERVICE B."
+
+func _required_power_complete() -> bool:
+	for id: String in difficulty["required_switches"]:
+		if id == "office" and not office_relay.powered: return false
+		if id == "service" and not service_relay.powered: return false
+		if id == "emergency" and not emergency_relay.powered: return false
+	return true
+
+func _apply_difficulty(selected: String) -> void:
+	difficulty_id = DifficultyConfig.sanitize(selected)
+	difficulty = DifficultyConfig.profile(difficulty_id)
+	listener.difficulty_speed = float(difficulty["monster_speed"])
+	listener.difficulty_awareness = float(difficulty["awareness"])
+	room.set_difficulty_lighting(float(difficulty["fixture_energy"]), float(difficulty["light_reaction"]))
+	if is_instance_valid(sound):
+		sound.set_atmosphere_intensity(float(difficulty["atmosphere"]))
+	emergency_relay.access_mode = str(difficulty["extra_step"])
+	_refresh_difficulty_visibility()
+	menu.selected_difficulty = difficulty_id
+	Telemetry.record(&"difficulty_applied", {"id": difficulty_id, "monster_speed": difficulty["monster_speed"],
+		"fixture_energy": difficulty["fixture_energy"], "required_switches": difficulty["required_switches"]})
+
+func _refresh_difficulty_visibility() -> void:
+	var emergency_active: bool = "emergency" in difficulty["required_switches"]
+	emergency_relay.visible = emergency_active
+	emergency_relay.collision_layer = 1 if emergency_active else 0
+	service_relay.visible = "service" in difficulty["required_switches"]
+	service_relay.collision_layer = 1 if service_relay.visible else 0
+	var fuse_active: bool = difficulty_id == "nightmare" and not fuse_pickup.consumed
+	fuse_pickup.visible = fuse_active
+	fuse_pickup.collision_layer = 8 if fuse_active else 0
 
 func finish_escape() -> void:
 	if GameFlow.state != NullGameFlow.State.PLAYING or exit_door.locked: return
@@ -327,7 +425,7 @@ func _process(delta: float) -> void:
 	menu.set_health(player.health)
 	pistol.light_exposure = room.light_exposure(player.global_position)
 	_environment.ambient_light_energy = move_toward(_environment.ambient_light_energy,
-		.018 if room.is_dark(player.global_position) else .25, delta * .25)
+		float(difficulty["ambient_dark"] if room.is_dark(player.global_position) else difficulty["ambient_lit"]), delta * .25)
 	var now: int = Time.get_ticks_usec()
 	if _last_frame_usec > 0:
 		var frame_ms: float = float(now - _last_frame_usec) / 1000.0
