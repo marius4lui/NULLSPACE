@@ -1,4 +1,21 @@
-# v0.1 — Raw Beta
+# v0.2 — Raw Beta
+
+Second public prerelease: Android touch support plus the current main changes.
+Download: https://github.com/marius4lui/NULLSPACE/releases/tag/v0.2
+
+- Android ARM64: signed **debug preview APK**, versionCode3, package `dev.marius4lui.nullspace.preview`. Analog movement, swipe look, tap/drag fire, reload, interaction, flashlight, sprint/crouch toggles, pause, mobile graphics and touch settings.
+- Fresh Linux and Windows x86-64 exports of the same source.
+- Retains Easy, Medium (default), Hard and Nightmare already merged on main, with the respective switch/latch/fuse objectives, plus the redesigned website.
+
+Extract desktop archives before launching. Android: copy the APK over USB and open it on the phone, permitting installation from the file manager. SHA256SUMS accompanies the assets. Preview updates use the same development signing key; do not uninstall to resolve a signing mismatch, since that deletes app data. Future final Android release uses a separate package; preview progress is not automatically migrated. Start replaces current progress; Continue restores a valid checkpoint.
+
+**Known limits:** Android installation, real multitouch/audio/lifecycle, thermal performance and full runs are unverified; no phone was visible to ADB. This APK uses the installed offline Godot template to avoid uncached Gradle downloads. Template minimumAPI24 is not a support promise; Android12+/ARM64 is the intended target and final API31 Gradle release remains pending. Legacy exporter optional Vulkan attribute typing causes `aapt dump badging` to fail; aapt2 XML inspection and v2/v3 signature verification succeed. An unused themed-icon reference warning remains. Installation is not guaranteed. Windows is cross-exported, not natively validated. Initial touch regression reports a24-object shutdown warning. Meaningful10–15minute first-play duration, pacing, listening/balance and final full runs remain open. No finished-game or phone-performance claim.
+
+Build instructions: tools/android/README.md and tools/build.sh. Original assets, credits and licences retained. Report device/OS, settings and reproduction steps in Issues.
+
+---
+
+## v0.1 — Raw Beta (previous release)
 
 First public prerelease of the current short-game development build. Unpolished, not a finished or fully optimized release. This release changes version metadata and packaging only; no new rooms, tasks or gameplay changes are included.
 
