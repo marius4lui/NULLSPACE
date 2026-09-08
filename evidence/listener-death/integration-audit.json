@@ -1,0 +1,107 @@
+{
+  "source_commit": "7371e47ab2776b5e1428ecbcfa3b86d6bb60200d",
+  "exports": {
+    "linux": {
+      "sha256": "ee0cd3de6e49ddee2f4d9f306fb2c03376d04aa810855ea6b88cea6f9b891037",
+      "build_info": "7371e47ab2776b5e1428ecbcfa3b86d6bb60200d\nEngine: 4.7.2.stable.official.ed1daf0bf\nPreset: Linux x86_64\n"
+    },
+    "windows": {
+      "sha256": "30e082a50bb6c54f7f68940eef4743a6293de71cea50dfe6c4a978ef58415a28",
+      "build_info": "7371e47ab2776b5e1428ecbcfa3b86d6bb60200d\nEngine: 4.7.2.stable.official.ed1daf0bf\nPreset: Windows x86_64\n"
+    }
+  },
+  "runs": {
+    "integration-native-matrix": {
+      "status": "stopped",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true,
+      "telemetry": "run_1788889164.05601_37409.jsonl",
+      "death_wall_durations": [
+        2.559549,
+        2.594319,
+        0.852852,
+        0.835522,
+        0.842421,
+        0.81912,
+        0.706219,
+        0.817805
+      ],
+      "frame_windows": {
+        "count": 4,
+        "p50_range": [
+          16.661,
+          16.96
+        ],
+        "p95_range": [
+          18.03,
+          37.474
+        ],
+        "max": 973.003
+      }
+    },
+    "integration-native-edges": {
+      "status": "stopped",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true,
+      "telemetry": "run_1788889203.4847_37780.jsonl",
+      "death_wall_durations": [
+        0.810489,
+        2.598799,
+        0.843706,
+        0.832557
+      ],
+      "frame_windows": {
+        "count": 3,
+        "p50_range": [
+          16.66,
+          16.67
+        ],
+        "p95_range": [
+          30.782,
+          39.337
+        ],
+        "max": 1302.742
+      }
+    },
+    "integration-route-01": {
+      "status": "stopped",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true,
+      "telemetry": "run_1788889234.90042_38238.jsonl",
+      "death_wall_durations": [],
+      "frame_windows": {
+        "count": 10,
+        "p50_range": [
+          16.658,
+          16.815
+        ],
+        "p95_range": [
+          16.918,
+          19.184
+        ],
+        "max": 33.228
+      },
+      "result": true
+    },
+    "integration-route-02": {
+      "status": "stopped",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true,
+      "telemetry": "run_1788889293.13913_38741.jsonl",
+      "death_wall_durations": [],
+      "frame_windows": {
+        "count": 10,
+        "p50_range": [
+          16.653,
+          16.725
+        ],
+        "p95_range": [
+          16.858,
+          18.889
+        ],
+        "max": 27.907
+      },
+      "result": true
+    }
+  }
+}

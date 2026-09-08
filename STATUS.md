@@ -3,12 +3,12 @@
 Listener death task (feat/listener-death): implemented and tested in the existing
 section. Guarded2.6s grab/local fallback, independent persisted blood/intensity,
 reduced-motion override and existing death menu/reset. Core258 plus scheduling,
-scene90, death175 and edge79 checks pass; rendered matrix/edge videos inspected.
-Final Linux export11dcf11 has two successful fresh-start functional runs after
-the last gameplay change (54.15/54.02s). Windows cross-export only; no heard-audio
+scene90, death176, edge79 and difficulty42 checks pass; rendered matrix/edge videos inspected.
+Final Linux export7371e47 integrates main4250b49 and has two successful fresh-start
+Medium functional runs after the last gameplay change (52.78/52.83s). Windows cross-export only; no heard-audio
 or10–15min first-play claim. [Evidence and batch record](evidence/listener-death/REPORT.md).
-PR #4 is open against main. Batches18–20 integrate updated main and repeat final
-checks; the runs above predate that integration. Main itself is preserved.
+[PR #4](https://github.com/marius4lui/NULLSPACE/pull/4) is open against main,
+not merged.20/20 batches; final integration checks complete. Main itself is preserved.
 
 The following records describe the raw-beta baseline before this scoped task;
 their broader first-play, pacing and listening gaps remain open:

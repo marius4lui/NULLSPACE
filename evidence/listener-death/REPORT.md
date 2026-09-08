@@ -9,6 +9,12 @@ Base: origin/main 2c1f97d2408d3bd75bc02729c58618d0afb3ef0e. Own worktree:
 /home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death, feat/listener-death.
 One agent, no delegation. Other worktrees/processes/preferences preserved.
 
+Delivery: [PR #4 against main](https://github.com/marius4lui/NULLSPACE/pull/4),
+not merged. **20/20 batches**. Current gameplay source is **7371e47** after
+integration of main4250b49; the final integration checks below supersede the
+earlier11dcf11 export results. No known blocking defect remains in the exercised
+feature scenarios; listening and native Windows are still unverified.
+
 ## Batches (maximum 20; final five reserved for playtests/corrections/delivery)
 
 1. Inspect current contract/gates/status/issues/Git and player, enemy, settings,
@@ -68,10 +74,25 @@ One agent, no delegation. Other worktrees/processes/preferences preserved.
     task telemetry, exclude shader/save profiles from Git, directly hash final
     binaries, audit cleanup, update this requirement/evidence report and status.
 17. Delivery: commit final tested replay helper/evidence, push feat/listener-death
-    and open a PR against main without merging. Remote verification recorded below
-    when complete. Two initial HTTP pushes timed out (408); complete compressed
+    and open PR #4 against main without merging. Two initial HTTP pushes timed out
+    (408); complete compressed
     MP4 review copies replace large MKVs in Git, with original MKVs kept locally.
-    Total planned completion:17/20; final five are13–17.
+    Remote check found that main had advanced through difficulty/website merges;
+    two integration conflicts remained, so use the final three available batches.
+18. Integrate main4250b49 into this feature branch, preserving its difficulty and
+    website work. Resolve two conflicts (menu fields/status); fallback Restart
+    now retains selected difficulty, and new main's difficulty test awaits the
+    death fade. Headless176 death/79 edges/42 difficulty/core258+three schedules/
+    existing90 scene checks pass. Commit7371e47 and rebuild Linux/Windows; recreate
+    expired QA-only template symlink after first export failed. No new install.
+19. Actual native integrated scene passes176 matrix and79 edge checks with videos.
+    Two fresh Medium exported campaigns reach both switches and exit, no deaths
+    or checkpoint restarts,52.783/52.833s. Second process reloads earlier isolated
+    saved preferences unchanged. All four owned sessions stop with cleanup empty.
+20. Open integrated temporal contact sheets and ending screenshot; verify full
+    video copies, binary hashes, telemetry and cleanup. Update evidence/status/PR,
+    push completion and verify remote head/base/mergeability. No merge into main.
+    Total20/20; final five16–20 cover evidence, corrections, playtests and delivery.
 
 ## Implementation/source provenance
 
@@ -111,10 +132,9 @@ the automation provenance. No human or subjective first-play claim is made.
 | Existing regressions | Core258 plus30/60/120 scheduling probes; player17, pistol20, Listener12, door15, escape26 pass. Four existing tests await the newly introduced fade; assertions retained. Initial failures remain in this directory. |
 | Original assets/source | [Asset comparison](asset-reuse.json):63 joints unchanged; all seven previous animation channels unchanged. Positions/normals/UV/joints/weights unchanged; exporter tangent maximum difference0.000100002. Editable Blend, generator and exported GLB retained. Existing provenance/licenses remain applicable. |
 
-## Final exported game runs and performance
+## Exported game runs before main integration
 
-Last gameplay source is **11dcf11a6b30c6016f6691f91d86bc81d8c53f5c**. Subsequent
-delivery changes affect QA helper/docs/evidence only. Both binaries were rebuilt
+At batch15 gameplay source was **11dcf11a6b30c6016f6691f91d86bc81d8c53f5c**. Both binaries were rebuilt
 from that source, and directly hashed again in batch16: [audit](final-audit.json).
 Linux SHA256 `a958b459d16e5c4ec2747564307a406021dbbaafa4b19a3d7a6308400906a31c`;
 Windows SHA256 `2fd23ba540436e827ed587558c94eca348656c6c6e3b8d36ffb31c4489adec38`.
@@ -128,7 +148,7 @@ Two successful complete functional runs follow the last gameplay change:
 
 These are fast known-route functional checks, **not evidence of10–15 minute
 first-player duration**. That pre-existing whole-game acceptance issue stays open.
-The final five batches13–17 cover final playtests, corrections and delivery.
+The later integration and its additional final runs are recorded below.
 
 Fedora laptop, Ryzen5 7535HS/Radeon660M RADV, Godot4.7.2 Forward+,1920x1080 window,
 Laptop quality75% internal scale, VSync and60 cap. Uncaptured route02's ten5s
@@ -165,6 +185,46 @@ the measured2.58s above. This is one laptop, not general hardware certification.
   shader caches and saves stay local under ignored profile/, while explicit
   telemetry/settings evidence is portable. Route04 deliberately reuses only
   route03's isolated data; its286611 telemetry is copied into route04 here.
-- Main's later branding-only commit is outside this branch's base. No main merge,
-  whole-game completion, audio listening, account/reset/model change or delegation
-  is claimed. PR delivery is the remaining step at the end of batch16.
+- The branch began at the then-current main2c1f97d. Later main4250b49 was integrated
+  in batch18, preserving unrelated work. No merge into main, whole-game completion,
+  audio listening, account/reset/model change or delegation is claimed.
+
+## Final integration validation (7371e47, 2026-09-08)
+
+Main advanced during the interrupted task to4250b49, including difficulty modes
+and website changes. Merge7371e47 keeps these and this feature together; it also
+preserves selected difficulty when the death menu must start without a checkpoint.
+All subsequent changes are evidence/docs. [Final audit](integration-audit.json)
+contains direct binary hashes, source manifests, cleanup and measured frame ranges.
+
+- Headless:176 death checks (one added difficulty-preserving restart check),79
+  actual wall/door/crouch,42 difficulty,90 existing scene checks, core258 and three
+  scheduling probes. Logs are `integration-*.log`. Difficulty's existing restart
+  assertions now wait for the real.85s fade; no assertions removed.
+- Rendered: [176 matrix checks](integration-native-matrix/game.log) and
+  [79 edge checks](integration-native-edges/game.log). Full [matrix video](integration-native-matrix/death-matrix.mp4)
+  and [edge video](integration-native-edges/death-edges.mp4); opened temporal
+  [matrix frames](frames/integration-native-matrix.jpg) and [edge frames](frames/integration-native-edges.jpg)
+  show reach/pull/strike/collapse, blood-on/off and calm/local alternatives after
+  integration. First two intense deaths take2.560/2.594 wall seconds. No new
+  clipping, blood-off tint or reset defect was observed in these scenarios.
+- Final Linux export [route01](integration-route-01/route-result.json): fresh
+  Medium Start -> both switches -> exit,52.7833 simulation seconds, session
+  4675bd42d2e3c1525fb02e85d03eec8b. [route02](integration-route-02/route-result.json):
+  another fresh Medium campaign,52.8333 seconds, session9e7848e6141a4aa71a64a0e9bbd99038.
+  Each ends with health45, no weapon/ammo/shots and no death/checkpoint restart.
+  Second process's boot settings retain blood/intense=false, motion/flashes=true
+  from the earlier isolated UI save. [Ending screenshot](integration-route-02/route-result.png)
+  opened. These are the two full successful functional runs after the final
+  gameplay change; earlier runs remain historical evidence, not a substitute.
+- Same laptop/settings as above, uncaptured ten5s windows per route: route01
+  p50 16.658–16.815ms, p95 16.918–19.184ms, max33.228ms; route02 p50 16.653–16.725ms,
+  p95 16.858–18.889ms, max27.907ms. Captured fixtures include setup/settings hitches
+  up to.973/1.303s and p95 windows up to37.474/39.337ms; no locked60 capture claim.
+- Linux SHA256 `ee0cd3de6e49ddee2f4d9f306fb2c03376d04aa810855ea6b88cea6f9b891037`;
+  Windows `30e082a50bb6c54f7f68940eef4743a6293de71cea50dfe6c4a978ef58415a28`.
+  Windows remains cross-export only. No listening or first-player duration claim.
+- All four integration sessions stopped, cleanup errors empty and default audio
+  unchanged. Route02 reused only export-route-03's isolated data; its38741 log is
+  copied into integration-route-02. No normal player profile or foreign process
+  was touched. Full MKVs remain locally preserved; full-length MP4 copies publish.

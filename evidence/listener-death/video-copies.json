@@ -3,6 +3,90 @@
   "copies": [
     {
       "original": {
+        "path": "integration-native-edges/death-edges.mkv",
+        "bytes": 16291901,
+        "sha256": "bc594c3d14823c2b60284004dfec867dbd80ae56d73d26a2dc8742c32483402a",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "26.014000"
+        }
+      },
+      "published_copy": {
+        "path": "integration-native-edges/death-edges.mp4",
+        "bytes": 2887198,
+        "sha256": "8c2f81a00a2639bcd5781c01f4926d8b3b8b4a72cf8d15d574e4d046693b1b60",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "26.014000"
+        }
+      }
+    },
+    {
+      "original": {
+        "path": "integration-native-matrix/death-matrix.mkv",
+        "bytes": 24498352,
+        "sha256": "51e6901f16d1a8d242bd529ff5f9b90a28e93854d61a32c344575d526fa45786",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "34.517000"
+        }
+      },
+      "published_copy": {
+        "path": "integration-native-matrix/death-matrix.mp4",
+        "bytes": 4505065,
+        "sha256": "8349b3166fe7c4aa7b9016d56b5bdcb1bf7ff6da26f0df3d5a5053dc92ed6667",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "34.517000"
+        }
+      }
+    },
+    {
+      "original": {
         "path": "native-04/death-matrix.mkv",
         "bytes": 24406257,
         "sha256": "c907422bb3fb62bd4afe5618ecf541b10a727206fd08b8bfa78f2a41363d99bc",

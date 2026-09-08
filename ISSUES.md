@@ -2,8 +2,9 @@
 
 Listener death scoped update: wall-reaching arms, blood-off red tint, oversized
 blood and pre-death menu camera reset were found and corrected in this branch.
-Rendered matrix175 / edges78 and final headless edges79 pass; final exported
-source11dcf11 completes two fresh-start routes after the last gameplay change.
+Rendered matrix176 / edges79 and final headless death176/edges79/difficulty42 pass;
+final exported source7371e47 integrates main4250b49 and completes two fresh-start
+Medium routes after the last gameplay change. Fallback Restart also retains difficulty.
 Actual death/checkpoint restart/settings persistence also operated. Detailed
 scenarios, original failures and limitations: [report](evidence/listener-death/REPORT.md).
 No known blocking defect remains in this feature's exercised scenarios. Audio

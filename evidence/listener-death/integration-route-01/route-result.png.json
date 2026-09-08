@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 7267.347866868,
+  "acquired_utc": "2026-09-08T17:41:31.142+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/listener-death/integration-route-01/route-result.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "fb6c69df84019aded4d72effb2f83c844295eda6c0fc47d9e65cf5007e846187",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 38238
+  },
+  "x_readback_ms": 20.532835999802046
+}
