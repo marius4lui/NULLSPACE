@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vrxtjdyhjufu"
 path.bptc="res://.godot/imported/fixture_detail_emission.png-d763d66fd76fd21946c9057adfb00980.bptc.ctex"
+path.astc="res://.godot/imported/fixture_detail_emission.png-d763d66fd76fd21946c9057adfb00980.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/environment/textures/fixture_detail_emission.png"
-dest_files=["res://.godot/imported/fixture_detail_emission.png-d763d66fd76fd21946c9057adfb00980.bptc.ctex"]
+dest_files=["res://.godot/imported/fixture_detail_emission.png-d763d66fd76fd21946c9057adfb00980.bptc.ctex", "res://.godot/imported/fixture_detail_emission.png-d763d66fd76fd21946c9057adfb00980.astc.ctex"]
 
 [params]
 

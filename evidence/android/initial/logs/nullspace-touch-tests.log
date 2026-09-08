@@ -1,0 +1,51 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Analog movement retains partial strength
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:32)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+ERROR: Second finger changes actual player aim
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:39)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+ERROR: Third finger fires once while moving and aiming
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:42)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+ERROR: Held/duplicate fire and fire dragging do not repeat shots
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:46)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+ERROR: Touch movement moves real CharacterBody
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:47)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+ERROR: New tap fires another shot
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:52)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+ERROR: Sprint toggles on
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:67)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+ERROR: Crouch toggles on
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/section/test_touch.gd:131)
+       [1] _ready (res://tests/section/test_touch.gd:73)
+       [2] _frames (res://tests/section/test_touch.gd:125)
+{"checks":24,"failures":["Analog movement retains partial strength","Second finger changes actual player aim","Third finger fires once while moving and aiming","Held/duplicate fire and fire dragging do not repeat shots","Touch movement moves real CharacterBody","New tap fires another shot","Sprint toggles on","Crouch toggles on"],"suite":"Android touch"}

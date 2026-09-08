@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxjwd13va3ith"
 path.bptc="res://.godot/imported/baseboard_orm.png-b6daf2f358a87c13ab14ab2939a68138.bptc.ctex"
+path.astc="res://.godot/imported/baseboard_orm.png-b6daf2f358a87c13ab14ab2939a68138.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/environment/textures/baseboard_orm.png"
-dest_files=["res://.godot/imported/baseboard_orm.png-b6daf2f358a87c13ab14ab2939a68138.bptc.ctex"]
+dest_files=["res://.godot/imported/baseboard_orm.png-b6daf2f358a87c13ab14ab2939a68138.bptc.ctex", "res://.godot/imported/baseboard_orm.png-b6daf2f358a87c13ab14ab2939a68138.astc.ctex"]
 
 [params]
 

@@ -28,6 +28,11 @@ window/size/min_width=960
 window/size/min_height=540
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=1
+window/handheld/orientation=6
+
+[input_devices]
+pointing/emulate_mouse_from_touch=true
+pointing/emulate_touch_from_mouse=false
 
 [input]
 move_forward={
@@ -85,5 +90,6 @@ fire={
 
 [rendering]
 renderer/rendering_method="forward_plus"
-renderer/rendering_method.mobile="forward_plus"
+renderer/rendering_method.mobile="mobile"
 textures/default_filters/use_nearest_mipmap_filter=false
+textures/vram_compression/import_etc2_astc=true

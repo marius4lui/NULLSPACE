@@ -44,21 +44,25 @@ func _ready() -> void:
 	safe_margin = 0.002
 	SettingsManager.settings_changed.connect(_apply_settings)
 	InputGate.invalidated.connect(_invalidate_controls)
+	InputGate.touch_looked.connect(_look)
 	get_viewport().size_changed.connect(_update_fov)
 	_apply_settings(SettingsManager.snapshot())
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		var motion: Vector2 = InputGate.look_delta(event)
-		rotation.y -= motion.x
-		_pitch = clampf(_pitch - motion.y, -1.42, 1.42)
-		head.rotation.x = _pitch
+		if not InputGate.uses_touch():
+			_look(InputGate.look_delta(event))
 	if InputGate.accept_press(event, &"flashlight"):
 		flashlight.visible = not flashlight.visible
 		flashlight_changed.emit(flashlight.visible)
 		Telemetry.record(&"player_flashlight", {"enabled": flashlight.visible})
 	if InputGate.accept_press(event, &"interact"):
 		_pending_interaction = InputGate.generation
+
+func _look(motion: Vector2) -> void:
+	rotation.y -= motion.x
+	_pitch = clampf(_pitch - motion.y, -1.42, 1.42)
+	head.rotation.x = _pitch
 
 func _physics_process(delta: float) -> void:
 	if GameFlow.state != NullGameFlow.State.PLAYING:
@@ -84,6 +88,7 @@ func _physics_process(delta: float) -> void:
 		_recovery_delay = 0.65
 		if stamina <= 0.0:
 			_exhausted = true
+			InputGate.set_touch_held(&"sprint", false)
 	else:
 		_recovery_delay = maxf(0.0, _recovery_delay - delta)
 		if _recovery_delay == 0.0:

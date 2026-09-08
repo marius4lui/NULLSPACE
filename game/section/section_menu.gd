@@ -54,6 +54,7 @@ func _ready() -> void:
 	_panel.add_child(scroll)
 	_stack = VBoxContainer.new()
 	_stack.custom_minimum_size.x = 680
+	_stack.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_stack.add_theme_constant_override("separation", 12)
 	scroll.add_child(_stack)
 	_hint = _hud_label(Control.PRESET_TOP_LEFT, Vector2(40, 36), Vector2(1100, 95))
@@ -74,6 +75,9 @@ func _ready() -> void:
 	_stamina.max_value = 1.0
 	_stamina.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_stamina)
+	if InputGate.uses_touch():
+		get_viewport().size_changed.connect(_mobile_layout)
+		_mobile_layout()
 	GameFlow.state_changed.connect(func(_a: int, _b: int, _reason: StringName) -> void: _show_screen())
 	GameFlow.operation_failed.connect(func(result: StorageResult) -> void: _notice = result.message; _show_screen())
 	_show_screen()
@@ -129,17 +133,24 @@ func _show_screen() -> void:
 func _settings() -> void:
 	_draft = SettingsManager.snapshot()
 	_label("Settings")
-	_option("Graphics", "quality", ["low", "high"], ["Laptop — 75% render scale, no AO", "Enhanced — native scale, ambient occlusion"])
-	_option("Resolution", "resolution", [[1280, 720], [1600, 900], [1920, 1080]], ["1280 × 720", "1600 × 900", "1920 × 1080"])
-	_option("Display", "display_mode", ["windowed", "fullscreen"], ["Windowed", "Fullscreen"])
-	_toggle("VSync", "vsync")
-	_option("Frame-rate limit", "fps_limit", [60, 90, 120, 30, 0], ["60 FPS", "90 FPS", "120 FPS", "30 FPS", "Unlimited"])
+	if InputGate.uses_touch():
+		_option("Graphics", "fps_limit", [60, 30], ["Standard · 60 FPS", "Battery saver · 30 FPS"])
+		_number("Touch sensitivity", "touch_sensitivity", 0.25, 3, 0.05)
+		_number("Touch size", "touch_size", 0.8, 1.3, 0.05)
+		_number("Touch opacity", "touch_opacity", 0.25, 1, 0.05)
+	else:
+		_option("Graphics", "quality", ["low", "high"], ["Laptop — 75% render scale, no AO", "Enhanced — native scale, ambient occlusion"])
+		_option("Resolution", "resolution", [[1280, 720], [1600, 900], [1920, 1080]], ["1280 × 720", "1600 × 900", "1920 × 1080"])
+		_option("Display", "display_mode", ["windowed", "fullscreen"], ["Windowed", "Fullscreen"])
+		_toggle("VSync", "vsync")
+		_option("Frame-rate limit", "fps_limit", [60, 90, 120, 30, 0], ["60 FPS", "90 FPS", "120 FPS", "30 FPS", "Unlimited"])
 	_number("Master volume", "master_volume", 0.0, 1.0, 0.05)
 	_number("Ambience", "ambience_volume", 0.0, 1.0, 0.05)
 	_number("Effects", "effects_volume", 0.0, 1.0, 0.05)
-	_number("Mouse sensitivity", "mouse_sensitivity", 0.05, 5.0, 0.05)
+	if not InputGate.uses_touch():
+		_number("Mouse sensitivity", "mouse_sensitivity", 0.05, 5.0, 0.05)
 	_number("Horizontal field of view", "horizontal_fov", 60, 110, 1)
-	_toggle("Invert mouse Y", "invert_y")
+	_toggle("Invert look Y", "invert_y")
 	_number("Head movement", "head_bob", 0, 1, 0.1)
 	_number("Camera shake", "camera_shake", 0, 1, 0.1)
 	_toggle("Reduce light flashes", "reduced_flashes")
@@ -172,6 +183,8 @@ func _number(title: String, key: String, minimum: float, maximum: float, step: f
 	number.step = step
 	number.value = float(_draft[key])
 	number.custom_minimum_size.x = 160
+	if InputGate.uses_touch():
+		number.custom_minimum_size = Vector2(240, 64)
 	number.value_changed.connect(func(value: float) -> void: _draft[key] = value)
 	row.add_child(number)
 
@@ -193,6 +206,8 @@ func _row(title: String) -> HBoxContainer:
 
 func _controls() -> void:
 	_notice = "WASD — move · Mouse — look · Shift — sprint · Ctrl — crouch\nF — flashlight · E — interact · Escape — pause\nLeft mouse — pistol · R — reload"
+	if InputGate.uses_touch():
+		_notice = "Left stick — move · Swipe right side — look\nFIRE — one shot per tap; drag to aim · LOAD — reload\nUSE — doors, switches, pistol · LIGHT — flashlight\nRUN / CROUCH — toggle · II / Android Back — pause"
 	_show_screen()
 
 func _credits() -> void:
@@ -216,6 +231,7 @@ func _button(text: String, action: Callable) -> Button:
 	var button := Button.new()
 	button.text = text
 	button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	if InputGate.uses_touch(): button.custom_minimum_size.y = 64
 	button.pressed.connect(action)
 	_stack.add_child(button)
 	return button
@@ -239,7 +255,36 @@ func _hud_label(preset: Control.LayoutPreset, offset: Vector2, dimensions: Vecto
 	return label
 
 func set_prompt(text: String) -> void:
-	_prompt.text = text
+	_prompt.text = text.replace("[E]", "USE").replace("E —", "USE —") if InputGate.uses_touch() else text
+
+func _mobile_layout() -> void:
+	var margin := Vector2(32, 24)
+	if OS.has_feature("android"):
+		var area := Rect2(DisplayServer.get_display_safe_area())
+		var display_size := Vector2(DisplayServer.screen_get_size())
+		if display_size.x > 0 and display_size.y > 0:
+			var ratio := get_viewport_rect().size / display_size
+			margin += area.position.max(display_size - area.end) * ratio
+	_panel.add_theme_constant_override("margin_left", int(margin.x))
+	_panel.add_theme_constant_override("margin_right", int(margin.x))
+	_panel.add_theme_constant_override("margin_top", int(margin.y))
+	_panel.add_theme_constant_override("margin_bottom", int(margin.y))
+	_stack.custom_minimum_size.x = minf(760, get_viewport_rect().size.x - margin.x * 2)
+	_hint.position = margin
+	_hint.size = Vector2(minf(850, get_viewport_rect().size.x - margin.x * 2 - 120), 80)
+	_prompt.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
+	_prompt.offset_left = -330
+	_prompt.offset_right = 330
+	_prompt.offset_top = -250
+	_prompt.offset_bottom = -190
+	_ammo.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	_ammo.offset_left = -250 - margin.x
+	_ammo.offset_right = -margin.x
+	_ammo.offset_top = margin.y + 95
+	_ammo.offset_bottom = margin.y + 135
+	_injury.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
+	_injury.position = margin + Vector2(0, 100)
+	_injury.size = Vector2(650, 50)
 
 func show_hint(text: String) -> void:
 	_hint.text = text

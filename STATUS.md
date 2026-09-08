@@ -1,5 +1,13 @@
 # Status
 
+## Android implementation — 2026-09-08
+
+- Active branch feat/short-game, fast-forwarded to current checkout 71a53e8 before Android changes. main and other worktrees preserved. Solo, no agents.
+- Implementing approved complete Android APK plan. Existing ten map entries reused; first-play duration/content and audio acceptance remain open.
+- Added touch overlay/InputGate integration, additive preferences, mobile profiles, lifecycle handling and Android export/build script. ETC2 import correction verified. Offline preview APK built and v2/v3 signature verified; final Gradle export blocked on uncached dependencies. User's limited connection: downloads stopped; script now requires explicit --allow-downloads for Gradle.
+- Automated 24 touch +258 core +89 existing scene checks and three clock schedules pass. Linux Mobile-renderer title/Start/touch-HUD screenshots inspected; not physical Android evidence. See evidence/android/initial/REPORT.md and tools/android/README.md for precise limits/template issues.
+- adb currently lists no attached device. User-owned test phone needs connection for install/play/thermal acceptance; 0/2 Android final runs. No release publication yet.
+
 - Current milestone: Full small-map flow operated; observed defects and duration/pacing need work.
 - Last known good commit: gameplay f30b31e; raw-beta source/tag v0.1 at83da390 now integrated on public main. Metadata-only beta rebuild passed native menu/Start/movement/pause smoke. Prior unarmed-export-02 completes both switches→exit with one hit and zero ammunition. Not final release acceptance.
 - Verified completed systems: Same-scene Start/pickup/combat/doors/two switches/checkpoints/ending operated. Four native Continues pass without engine errors. Controller16, pistol20, Listener12, door15, objective26 and core258 +three clock probes pass. West-leaf fixture correction passes; actual west pursuit, death/restart and zero-ammo checkpoint-to-ending operated in door-detour-native-01.

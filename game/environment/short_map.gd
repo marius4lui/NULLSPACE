@@ -7,6 +7,7 @@ var fixture_data: Array[Dictionary] = []
 var power: Dictionary = {"office": false, "service": false}
 var player: SectionPlayer
 var shadow_budget: int = 2
+var direct_light_budget: int = 12
 var _light_timer: float = 0
 
 func _ready() -> void:
@@ -82,8 +83,10 @@ func _process(delta: float) -> void:
 	ordered.sort_custom(func(a: NullspaceFluorescentFixture, b: NullspaceFluorescentFixture) -> bool:
 		return a.global_position.distance_squared_to(player.global_position) < b.global_position.distance_squared_to(player.global_position))
 	var shadows: int = 0
+	var active_lights: int = 0
 	for fixture: NullspaceFluorescentFixture in ordered:
-		var near: bool = fixture.global_position.distance_squared_to(player.global_position) < 196
+		var near: bool = fixture.global_position.distance_squared_to(player.global_position) < 196 and active_lights < direct_light_budget
+		if near and fixture.state != NullspaceFluorescentFixture.State.OFF: active_lights += 1
 		fixture.set_direct_light_active(near)
 		fixture._light.shadow_enabled = near and fixture.state != NullspaceFluorescentFixture.State.OFF and shadows < shadow_budget
 		if fixture._light.shadow_enabled: shadows += 1

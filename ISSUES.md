@@ -1,5 +1,7 @@
 # Issues
 
+Android scope 2026-09-08: ANDROID-001 open — no connected physical device; install/update, real multitouch/audio/thermal and final runs cannot yet be accepted. ANDROID-002 active — export and touch integration regression checks in progress. Existing DURATION-001 remains open; porting alone does not complete the approved game.
+
 Current GOAL_CONTRACT.md governs. No complete playable game/zero-defect claim. Full prior register and failures are archived and remain in evidence.
 
 | ID | State | Actual risk / next action |

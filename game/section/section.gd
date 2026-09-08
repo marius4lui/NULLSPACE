@@ -77,6 +77,8 @@ func _ready() -> void:
 	add_child(canvas)
 	menu = Menu.new()
 	canvas.add_child(menu)
+	if InputGate.uses_touch():
+		canvas.add_child(preload("res://section/touch_controls.tscn").instantiate())
 	menu.quit_requested.connect(request_quit)
 	player.prompt_changed.connect(menu.set_prompt)
 	player.damaged.connect(menu.show_injury)
@@ -195,7 +197,8 @@ func _restore(snapshot: Dictionary, generation: int) -> void:
 	if snapshot["progress"]["ending"]:
 		GameFlow.end_campaign()
 	else:
-		menu.show_hint(_objective_hint() + "\nWASD move · Shift sprint · Ctrl crouch · F light · E interact · Esc pause")
+		var controls: String = "Left stick move · Swipe right to look · USE interact · II pause" if InputGate.uses_touch() else "WASD move · Shift sprint · Ctrl crouch · F light · E interact · Esc pause"
+		menu.show_hint(_objective_hint() + "\n" + controls)
 	Telemetry.record(&"section_restored", {"generation": generation, "position": [player.position.x, player.position.y, player.position.z]})
 
 func _on_relay_power(id: String) -> void:
@@ -306,10 +309,11 @@ func _apply_settings(values: Dictionary) -> void:
 	# Keep physical materials and light; enhanced adds modest AO, not expensive SSIL.
 	_environment.ssil_enabled = false
 	_environment.ssao_enabled = profile.id == &"high" or profile.id == &"ultra"
-	_environment.glow_enabled = profile.id != &"low"
+	_environment.glow_enabled = profile.id in [&"medium", &"high", &"ultra"]
 	get_viewport().use_taa = false
 	get_viewport().screen_space_aa = Viewport.SCREEN_SPACE_AA_FXAA
 	room.shadow_budget = profile.shadow_light_budget
+	room.direct_light_budget = profile.direct_light_budget
 	for fixture: NullspaceFluorescentFixture in room.fixtures:
 		fixture.reduce_flashes = bool(values["reduced_flashes"])
 	Telemetry.record(&"section_render_settings", {"quality": profile.id, "render_scale": get_viewport().scaling_3d_scale,
