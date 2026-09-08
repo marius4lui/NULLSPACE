@@ -8,6 +8,8 @@ var power: Dictionary = {"office": false, "service": false}
 var player: SectionPlayer
 var shadow_budget: int = 2
 var _light_timer: float = 0
+var difficulty_energy: float = 1.0
+var difficulty_reaction: float = 1.0
 
 func _ready() -> void:
 	layout = JSON.parse_string(FileAccess.get_file_as_string(MAP_PATH)) as Dictionary
@@ -51,7 +53,14 @@ func apply_power(values: Dictionary) -> void:
 		if data.has("circuit") and not bool(power[data["circuit"]]):
 			state = data["unpowered"]
 		fixtures[i].set_fixture_state(NullspaceFluorescentFixture.State[state])
+		fixtures[i].set_difficulty_lighting(difficulty_energy, difficulty_reaction)
 	_light_timer = 1
+
+func set_difficulty_lighting(energy: float, reaction: float) -> void:
+	difficulty_energy = energy
+	difficulty_reaction = reaction
+	for fixture: NullspaceFluorescentFixture in fixtures:
+		fixture.set_difficulty_lighting(energy, reaction)
 
 func room_at(at: Vector3) -> String:
 	for data: Dictionary in layout["rooms"]:

@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 45633.051340902,
+  "acquired_utc": "2026-09-05T08:31:24.849+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/difficulty-room1/evidence/difficulty-room1/native-hard-final-02/death.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "23112e642b5c4fec1e47ebd9fcd6681c3f93281d59c9000fa605fcbd859504a5",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      398,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 281496
+  },
+  "x_readback_ms": 37.94521700183395
+}
