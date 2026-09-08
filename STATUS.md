@@ -1,5 +1,12 @@
 # Status
 
+## v0.2 beta publication — user authorized 2026-09-08
+
+Merged current remote main4250b49 (difficulty/website) with Android work. Release source7307821;
+fresh Linux/Windows/Android-preview exports,413 automated assertions and three clock probes pass.
+Fresh Linux title/Start/move/pause smoke passed; no Android device acceptance. v0.2 publication
+in progress, retaining all limitations. Private signing material stays outside Git.
+
 ## Android implementation — 2026-09-08
 
 - Active branch feat/short-game, fast-forwarded to current checkout 71a53e8 before Android changes. main and other worktrees preserved. Solo, no agents.
