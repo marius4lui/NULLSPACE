@@ -1,5 +1,17 @@
 # Status
 
+Listener death task (feat/listener-death): implemented and tested in the existing
+section. Guarded2.6s grab/local fallback, independent persisted blood/intensity,
+reduced-motion override and existing death menu/reset. Core258 plus scheduling,
+scene90, death175 and edge79 checks pass; rendered matrix/edge videos inspected.
+Final Linux export11dcf11 has two successful fresh-start functional runs after
+the last gameplay change (54.15/54.02s). Windows cross-export only; no heard-audio
+or10–15min first-play claim. [Evidence and batch record](evidence/listener-death/REPORT.md).
+Branch push/PR is the remaining delivery step at batch16/20; main is preserved.
+
+The following records describe the raw-beta baseline before this scoped task;
+their broader first-play, pacing and listening gaps remain open:
+
 - Current milestone: Full small-map flow operated; observed defects and duration/pacing need work.
 - Last known good commit: gameplay f30b31e; raw-beta source/tag v0.1 at83da390 now integrated on public main. Metadata-only beta rebuild passed native menu/Start/movement/pause smoke. Prior unarmed-export-02 completes both switches→exit with one hit and zero ammunition. Not final release acceptance.
 - Verified completed systems: Same-scene Start/pickup/combat/doors/two switches/checkpoints/ending operated. Four native Continues pass without engine errors. Controller16, pistol20, Listener12, door15, objective26 and core258 +three clock probes pass. West-leaf fixture correction passes; actual west pursuit, death/restart and zero-ammo checkpoint-to-ending operated in door-detour-native-01.

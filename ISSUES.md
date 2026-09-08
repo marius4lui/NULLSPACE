@@ -1,5 +1,16 @@
 # Issues
 
+Listener death scoped update: wall-reaching arms, blood-off red tint, oversized
+blood and pre-death menu camera reset were found and corrected in this branch.
+Rendered matrix175 / edges78 and final headless edges79 pass; final exported
+source11dcf11 completes two fresh-start routes after the last gameplay change.
+Actual death/checkpoint restart/settings persistence also operated. Detailed
+scenarios, original failures and limitations: [report](evidence/listener-death/REPORT.md).
+No known blocking defect remains in this feature's exercised scenarios. Audio
+listening and native Windows remain unverified; general game duration/pacing
+issues below are not resolved by this scoped feature. Older0/2 entries below
+describe the pre-feature baseline, not these two later functional runs.
+
 Current GOAL_CONTRACT.md governs. No complete playable game/zero-defect claim. Full prior register and failures are archived and remain in evidence.
 
 | ID | State | Actual risk / next action |

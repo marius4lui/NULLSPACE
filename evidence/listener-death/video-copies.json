@@ -1,0 +1,173 @@
+{
+  "method": "Full-length ffmpeg transcode, original1080p, libx264 fast CRF26, AAC128k; original MKVs retained locally",
+  "copies": [
+    {
+      "original": {
+        "path": "native-04/death-matrix.mkv",
+        "bytes": 24406257,
+        "sha256": "c907422bb3fb62bd4afe5618ecf541b10a727206fd08b8bfa78f2a41363d99bc",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "34.513000"
+        }
+      },
+      "published_copy": {
+        "path": "native-04/death-matrix.mp4",
+        "bytes": 4470634,
+        "sha256": "8323e27e2357b3711f28c3c6d6b9bb5beac327e675586a2d94dc1135f7f97283",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "34.513000"
+        }
+      }
+    },
+    {
+      "original": {
+        "path": "native-edges-01/death-edges.mkv",
+        "bytes": 15493970,
+        "sha256": "d4ab234f129f65fd2f06d88ae3d57d87c52f4f394d76148dc7cacdc0cb72587a",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "25.017000"
+        }
+      },
+      "published_copy": {
+        "path": "native-edges-01/death-edges.mp4",
+        "bytes": 2678605,
+        "sha256": "34e977f4b99fdcdfcfe179618803210da04da17c3f926caae3744a4fe6891e2c",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "25.017000"
+        }
+      }
+    },
+    {
+      "original": {
+        "path": "native-final-edges/death-edges.mkv",
+        "bytes": 15954124,
+        "sha256": "69737d3e889c77ba2fa51a49c97bb16777552d07fd06b9860fac45e319ddb92c",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "25.517000"
+        }
+      },
+      "published_copy": {
+        "path": "native-final-edges/death-edges.mp4",
+        "bytes": 2773439,
+        "sha256": "dd364c02e11e9d418c41299bfdccfeb55c2cd2742c07774aee2c38f474a69ce5",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "25.517000"
+        }
+      }
+    },
+    {
+      "original": {
+        "path": "native-final-matrix/death-matrix.mkv",
+        "bytes": 24616985,
+        "sha256": "80279b6196a034ad18b580938246e2851af1c6761c973e1aaf7c56aedd7caa6a",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "34.522000"
+        }
+      },
+      "published_copy": {
+        "path": "native-final-matrix/death-matrix.mp4",
+        "bytes": 4495861,
+        "sha256": "57141cefa73ef11e4c03f4967d5093dcf86a8bb93dd05d28022654a881463fb6",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "34.522000"
+        }
+      }
+    }
+  ]
+}

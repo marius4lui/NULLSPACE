@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+WARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.
+     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)
+Vulkan 1.4.354 - Forward+ - Using Device #0: AMD - AMD Radeon 660M (RADV REMBRANDT)
+
+DEATH_CAPTURE_READY
+EDGE_CASE Beside authored archive wall pull=true duration=2.6
+EDGE_CASE Through open authored doorway pull=true duration=2.6
+EDGE_CASE Facing away local fallback pull=false duration=0.85
+{"checks":58,"failures":[],"native":true,"suite":"Death actual wall/door"}
