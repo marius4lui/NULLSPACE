@@ -44,6 +44,8 @@ var _metrics_time: float = 0.0
 var _door_detour: Vector3
 var _door_detour_time: float = 0.0
 var _blocked_time: float = 0.0
+var difficulty_speed: float = 1.0
+var difficulty_awareness: float = 1.0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
@@ -196,6 +198,7 @@ func _physics_process(delta: float) -> void:
 		direction = direction.normalized()
 		if direction.length_squared() > 0.01:
 			rotation.y = lerp_angle(rotation.y, atan2(-direction.x, -direction.z), minf(delta * 5, 1))
+	speed *= difficulty_speed
 	var desired: Vector3 = direction * speed
 	if direction.length_squared() > .01:
 		var ray := PhysicsRayQueryParameters3D.create(global_position + Vector3.UP,
@@ -257,7 +260,7 @@ func _perceive(delta: float) -> void:
 		var exposure: float = section.room.light_exposure(player.global_position)
 		var motion: float = 1.45 if player.sprinting else (1.0 if player.velocity.length() > 0.4 else 0.7)
 		var posture: float = 0.50 if player.crouched else 1.0
-		_notice += delta * exposure * motion * posture * (3.8 if distance < 4 else 1.7) * (1.2 if player.flashlight.visible else 1.0)
+		_notice += delta * exposure * motion * posture * (3.8 if distance < 4 else 1.7) * (1.2 if player.flashlight.visible else 1.0) * difficulty_awareness
 		if _notice >= 1.0 or state in [State.CHASING, State.ATTACKING]:
 			evidence_position = player.global_position # DIRECT SIGHT only.
 			evidence_time = _now()

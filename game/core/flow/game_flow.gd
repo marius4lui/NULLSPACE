@@ -16,11 +16,11 @@ func _ready() -> void:
 	CheckpointSystem.restore_requested.connect(_on_restore_requested)
 	_transition(State.MENU, &"boot")
 
-func begin_new_game() -> StorageResult:
+func begin_new_game(difficulty_id: String = DifficultyConfig.DEFAULT_ID) -> StorageResult:
 	if state != State.MENU:
 		return _invalid("New Game is only available from the title menu.")
 	_transition(State.LOADING, &"new_game")
-	var result: StorageResult = CheckpointSystem.begin_new_campaign()
+	var result: StorageResult = CheckpointSystem.begin_new_campaign(difficulty_id)
 	return _finish_request(result, State.MENU)
 
 func continue_game() -> StorageResult:

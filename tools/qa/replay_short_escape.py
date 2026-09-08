@@ -61,6 +61,11 @@ try:
     baseline = len(events())
     already_open = False
     for index, request in enumerate(requests):
+        if index == 0:
+            # Current main adds Difficulty as the first focused title button.
+            # Tab to Start Medium and activate it through actual keyboard input.
+            send(run, {"action": "input", "tap": ["Tab"], "hold": .1})
+            request = {"action": "input", "tap": ["Return"], "hold": .5}
         if index in (59, 61):
             # The Listener may already have opened the return door. A blind
             # replay closed it in route03; observe its actual semantic state.

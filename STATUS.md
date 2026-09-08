@@ -7,10 +7,17 @@ scene90, death175 and edge79 checks pass; rendered matrix/edge videos inspected.
 Final Linux export11dcf11 has two successful fresh-start functional runs after
 the last gameplay change (54.15/54.02s). Windows cross-export only; no heard-audio
 or10–15min first-play claim. [Evidence and batch record](evidence/listener-death/REPORT.md).
-Branch push/PR is the remaining delivery step at batch16/20; main is preserved.
+PR #4 is open against main. Batches18–20 integrate updated main and repeat final
+checks; the runs above predate that integration. Main itself is preserved.
 
 The following records describe the raw-beta baseline before this scoped task;
 their broader first-play, pacing and listening gaps remain open:
+## Difficulty Room 1 branch
+
+- `feat/difficulty-room1` now offers Easy, Medium, Hard and Nightmare before Start, with Medium as the default. The fixed choice is stored in the existing checkpoint and survives death/restart.
+- The same Room 1 varies Listener speed/awareness, existing fixture and sound response, and concrete objectives: one switch; two switches; three plus a safety latch; or three plus one marked local fuse.
+- Automated actual-scene coverage passes 42/42 for all four modes through ending and death/restart. Existing room/player, pistol, Listener, door, escape and core suites pass (347 checks total), as do 30/60/120 logical clock probes. Linux and Windows exports reproduce successfully with Godot 4.7.2.
+- Native exported-game evidence includes complete Easy and Medium endings after death/restart, the complete Hard latch/relay interaction, and Nightmare fuse pickup/readability. Full native Hard/Nightmare endings and listening remain open, so this branch is not release acceptance.
 
 - Current milestone: Full small-map flow operated; observed defects and duration/pacing need work.
 - Last known good commit: gameplay f30b31e; raw-beta source/tag v0.1 at83da390 now integrated on public main. Metadata-only beta rebuild passed native menu/Start/movement/pause smoke. Prior unarmed-export-02 completes both switches→exit with one hit and zero ammunition. Not final release acceptance.

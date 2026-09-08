@@ -126,6 +126,7 @@ func _ready() -> void:
 	# Explicitly remove only this fixture's checkpoint, then test the real fallback button.
 	for file: String in DirAccess.get_files_at(SaveSystem.storage_directory):
 		DirAccess.remove_absolute(SaveSystem.storage_directory.path_join(file))
+	section.menu.selected_difficulty = "hard"
 	section.menu._show_screen()
 	var restart: Button
 	for child: Node in section.menu._stack.get_children():
@@ -134,6 +135,7 @@ func _ready() -> void:
 	if restart: restart.pressed.emit()
 	await _frames(12)
 	_check(GameFlow.state == NullGameFlow.State.PLAYING, "Fallback Restart starts a valid new game")
+	_check(section.difficulty_id == "hard", "Fallback Restart preserves selected difficulty after main integration")
 	print(JSON.stringify({"suite": "Listener death", "checks": checks, "failures": failures,
 		"method": "automated actual-scene lethal attack fixtures", "native": native}))
 	section.request_quit(0 if failures.is_empty() else 1)

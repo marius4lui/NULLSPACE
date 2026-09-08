@@ -1,7 +1,0 @@
-model = "gpt-6-astra"
-model_reasoning_effort = "max"
-
-[features]
-goals = true
-# User ended delegation on 2026-09-05. One implementer only.
-multi_agent = false

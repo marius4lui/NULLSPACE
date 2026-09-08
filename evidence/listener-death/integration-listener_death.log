@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DEATH_CASE {"blood":true,"duration":2.6,"intense":true,"max_camera_distance":0.597638130187988}
+DEATH_CASE {"blood":false,"duration":2.6,"intense":true,"max_camera_distance":0.597638130187988}
+DEATH_CASE {"blood":true,"duration":0.85,"intense":false,"max_camera_distance":0.000579714775085449}
+DEATH_CASE {"blood":false,"duration":0.85,"intense":false,"max_camera_distance":0.000579714775085449}
+{"checks":176,"failures":[],"method":"automated actual-scene lethal attack fixtures","native":false,"suite":"Listener death"}

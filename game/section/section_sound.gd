@@ -13,6 +13,7 @@ var _step_index: int = 0
 var _creature_index: int = 0
 var _occlusion_time: float = 0
 var _blocked: bool = false
+var atmosphere_intensity: float = 1.0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
@@ -73,7 +74,7 @@ func _player_foley(event: SoundEvent) -> void:
 func _monster_step() -> void:
 	body_voice.position = section.listener.global_position + Vector3.UP * 0.15
 	body_voice.stream = _clip("listener_step_%s" % (_creature_index % 4))
-	body_voice.volume_db = -12 if _blocked else -3
+	body_voice.volume_db = (-12 if _blocked else -3) + linear_to_db(atmosphere_intensity)
 	body_voice.play()
 	_creature_index += 1
 
@@ -82,7 +83,7 @@ func _monster_state(next: Listener.State) -> void:
 		return
 	body_voice.position = section.listener.global_position + Vector3.UP * 1.8
 	body_voice.stream = _clip("attack" if next == Listener.State.ATTACKING else "hurt")
-	body_voice.volume_db = -6
+	body_voice.volume_db = -6 + linear_to_db(atmosphere_intensity)
 	body_voice.play()
 
 func _physics_process(delta: float) -> void:
@@ -94,10 +95,15 @@ func _physics_process(delta: float) -> void:
 		_occlusion_time = 0
 		var ray := PhysicsRayQueryParameters3D.create(section.player.camera.global_position, breath.position, 1)
 		_blocked = not get_world_3d().direct_space_state.intersect_ray(ray).is_empty()
-		breath.volume_db = -28 if _blocked else -20
+		breath.volume_db = (-28 if _blocked else -20) + linear_to_db(atmosphere_intensity)
 	for i: int in hums.size():
 		var powered: bool = hum_fixtures[i].state != NullspaceFluorescentFixture.State.OFF
-		hums[i].volume_db = move_toward(hums[i].volume_db, -18 if powered else -80, delta * 35)
+		hums[i].volume_db = move_toward(hums[i].volume_db, (-18 + linear_to_db(atmosphere_intensity)) if powered else -80, delta * 35)
+
+func set_atmosphere_intensity(value: float) -> void:
+	atmosphere_intensity = clampf(value, .5, 1.5)
+	if air:
+		air.volume_db = -34 + linear_to_db(atmosphere_intensity)
 
 func reset() -> void:
 	for voice: AudioStreamPlayer3D in steps:
