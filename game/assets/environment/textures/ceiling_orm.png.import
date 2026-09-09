@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4ti4ynqr4cgf"
 path.bptc="res://.godot/imported/ceiling_orm.png-fe64f7c963ba2c80327626d115a9ca56.bptc.ctex"
+path.astc="res://.godot/imported/ceiling_orm.png-fe64f7c963ba2c80327626d115a9ca56.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/environment/textures/ceiling_orm.png"
-dest_files=["res://.godot/imported/ceiling_orm.png-fe64f7c963ba2c80327626d115a9ca56.bptc.ctex"]
+dest_files=["res://.godot/imported/ceiling_orm.png-fe64f7c963ba2c80327626d115a9ca56.bptc.ctex", "res://.godot/imported/ceiling_orm.png-fe64f7c963ba2c80327626d115a9ca56.astc.ctex"]
 
 [params]
 

@@ -52,7 +52,9 @@ Minimum requirements are not established yet. Performance will be reported with 
 
 ## Current state
 
-**[Download v0.1 — Raw Beta](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.1)** · Linux x86-64 and Windows x86-64 · Unpolished prerelease.
+**[Download v0.3 — Beta Unstable](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3)** · Listener death feature · Android ARM64 preview, Linux x86-64 and Windows x86-64 · Unstable prerelease.
+
+Android adds touch movement/look/fire/actions, mobile graphics profiles and pause/resume handling. The signed debug preview is built from the local offline template. Physical installation, real-device controls/audio/performance and full runs remain unverified; see [Android build and limitations](tools/android/README.md). Existing main difficulty modes and website changes are preserved. This is not the final Android release.
 
 The public `main` branch contains the integrated two-switch game. The `feat/difficulty-room1` branch adds four fixed pre-start modes without adding levels, enemies, weapons or an inventory framework. **This is not a finished or fully optimized release.** Easy has a complete native exported-game run; the other modes complete in actual-scene automation but still need full native endings and listening review. Windows is cross-exported, not natively tested.
 

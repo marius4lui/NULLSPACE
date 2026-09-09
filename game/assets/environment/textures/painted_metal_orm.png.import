@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://5gmy7ckwqj25"
 path.bptc="res://.godot/imported/painted_metal_orm.png-a2161089307e56d61a18278c46d5fe53.bptc.ctex"
+path.astc="res://.godot/imported/painted_metal_orm.png-a2161089307e56d61a18278c46d5fe53.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/environment/textures/painted_metal_orm.png"
-dest_files=["res://.godot/imported/painted_metal_orm.png-a2161089307e56d61a18278c46d5fe53.bptc.ctex"]
+dest_files=["res://.godot/imported/painted_metal_orm.png-a2161089307e56d61a18278c46d5fe53.bptc.ctex", "res://.godot/imported/painted_metal_orm.png-a2161089307e56d61a18278c46d5fe53.astc.ctex"]
 
 [params]
 

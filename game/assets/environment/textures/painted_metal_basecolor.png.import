@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://2wpnxn6mvb27"
 path.bptc="res://.godot/imported/painted_metal_basecolor.png-319da07c42356afd2eaffd060d06d332.bptc.ctex"
+path.astc="res://.godot/imported/painted_metal_basecolor.png-319da07c42356afd2eaffd060d06d332.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/environment/textures/painted_metal_basecolor.png"
-dest_files=["res://.godot/imported/painted_metal_basecolor.png-319da07c42356afd2eaffd060d06d332.bptc.ctex"]
+dest_files=["res://.godot/imported/painted_metal_basecolor.png-319da07c42356afd2eaffd060d06d332.bptc.ctex", "res://.godot/imported/painted_metal_basecolor.png-319da07c42356afd2eaffd060d06d332.astc.ctex"]
 
 [params]
 

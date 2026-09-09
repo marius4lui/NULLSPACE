@@ -16,6 +16,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("run_dir", type=Path)
 parser.add_argument("godot", type=Path)
 parser.add_argument("--edges", action="store_true")
+parser.add_argument("--mobile", action="store_true", help="Exercise the Mobile renderer and touch menu on the isolated desktop seat")
 args = parser.parse_args()
 root = Path(__file__).resolve().parents[2]
 run = args.run_dir.resolve()
@@ -28,9 +29,11 @@ signal.alarm(0)
 scene = "test_death_edges" if args.edges else "test_listener_death"
 command = [sys.executable, str(root / "tools/qa/native.py"), "start", "--run-dir", str(run),
            "--method", "scripted_diagnostic", "--cwd", str(root), "--", str(args.godot),
-           "--path", str(root / "game"), "--display-driver", "x11", "--rendering-method", "forward_plus",
+           "--path", str(root / "game"), "--display-driver", "x11", "--rendering-method", "mobile" if args.mobile else "forward_plus",
            "--rendering-driver", "vulkan", "--audio-driver", "PulseAudio", "--windowed",
            f"res://tests/section/{scene}.tscn"]
+if args.mobile:
+    command += ["--", "--touch-ui"]
 subprocess.run(command, check=True, stdout=subprocess.DEVNULL)
 try:
     deadline = time.monotonic() + 50

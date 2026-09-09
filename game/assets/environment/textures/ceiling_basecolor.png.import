@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6peekphqkwff"
 path.bptc="res://.godot/imported/ceiling_basecolor.png-fad29bb3238c955d78c56fd5680e194c.bptc.ctex"
+path.astc="res://.godot/imported/ceiling_basecolor.png-fad29bb3238c955d78c56fd5680e194c.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/environment/textures/ceiling_basecolor.png"
-dest_files=["res://.godot/imported/ceiling_basecolor.png-fad29bb3238c955d78c56fd5680e194c.bptc.ctex"]
+dest_files=["res://.godot/imported/ceiling_basecolor.png-fad29bb3238c955d78c56fd5680e194c.bptc.ctex", "res://.godot/imported/ceiling_basecolor.png-fad29bb3238c955d78c56fd5680e194c.astc.ctex"]
 
 [params]
 

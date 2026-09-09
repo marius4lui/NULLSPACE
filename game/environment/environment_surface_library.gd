@@ -57,13 +57,13 @@ static func make_reference_environment() -> Environment:
 	result.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	result.tonemap_exposure = 1.0
 	result.tonemap_white = 4.0
-	result.ssao_enabled = true
+	result.ssao_enabled = RenderingServer.get_current_rendering_method() == "forward_plus"
 	result.ssao_radius = 0.65
 	result.ssao_intensity = 1.35
 	result.ssao_power = 1.3
 	result.ssao_detail = 0.65
 	result.ssao_light_affect = 0.22
-	result.ssil_enabled = true
+	result.ssil_enabled = RenderingServer.get_current_rendering_method() == "forward_plus"
 	result.ssil_radius = 3.0
 	result.ssil_intensity = 0.50
 	result.ssil_sharpness = 0.65

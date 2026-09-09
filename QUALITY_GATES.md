@@ -1,5 +1,7 @@
 # NULLSPACE acceptance gates
 
+Android amendment (user-approved 2026-09-08) takes precedence over Linux-first release: signed ARM64 APK/API31+, all-touch completion, safe-area UI, Back/background/lock/relaunch, same-key upgrade preserving saves/settings, and real-device listening. Standard profile targets 60 FPS with active-game p95 ≤20ms and no recurrent >100ms hitches over a ≥30-minute thermal run. Record exact device/OS/settings. Two successful release-APK runs after the last gameplay change, including zero-ammo escape; unbiased first play must establish 10–15 minutes. No connected device means these gates remain open. Desktop regression is retained, not Android acceptance. Signing keys/passwords must never enter evidence/Git.
+
 Current GOAL_CONTRACT.md replaces the old gates on2026-09-05. No numeric scores or independent-agent reviews. Unverified means open.
 
 | Gate | Required evidence |

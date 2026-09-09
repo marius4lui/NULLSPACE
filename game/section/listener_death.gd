@@ -152,7 +152,8 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not active: return
-	if event.is_action_pressed(&"ui_accept", false) or event.is_action_pressed(&"pause", false):
+	var tap: bool = event is InputEventScreenTouch and event.pressed and not event.canceled
+	if tap or event.is_action_pressed(&"ui_accept", false) or event.is_action_pressed(&"pause", false):
 		get_viewport().set_input_as_handled()
 		if elapsed >= SKIP_AFTER: _finish(true)
 

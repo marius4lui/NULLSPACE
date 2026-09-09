@@ -5,6 +5,7 @@ const VERSION: int = 1
 const QUALITY_IDS: Array[String] = ["low", "medium", "high", "ultra"]
 const FPS_LIMITS: Array[int] = [0, 30, 60, 90, 120]
 const RANGES: Dictionary = {
+	"touch_sensitivity": [0.25, 3.0], "touch_size": [0.8, 1.3], "touch_opacity": [0.25, 1.0],
 	"master_volume": [0.0, 1.0], "ambience_volume": [0.0, 1.0], "effects_volume": [0.0, 1.0],
 	"mouse_sensitivity": [0.05, 5.0], "horizontal_fov": [60.0, 110.0],
 	"head_bob": [0.0, 1.0], "camera_shake": [0.0, 1.0]
@@ -14,6 +15,7 @@ const BOOLEANS: Array[String] = ["vsync", "invert_y", "subtitles", "center_dot",
 
 static func defaults() -> Dictionary:
 	return {"resolution": [1920, 1080], "display_mode": "windowed", "vsync": true, "fps_limit": 60,
+		"touch_sensitivity": 1.0, "touch_size": 1.0, "touch_opacity": 0.65,
 		"quality": "low", "master_volume": 0.8, "ambience_volume": 0.8, "effects_volume": 0.8,
 		"mouse_sensitivity": 1.0, "invert_y": false, "horizontal_fov": 88.0,
 		"head_bob": 0.5, "camera_shake": 0.5, "subtitles": true,
@@ -27,6 +29,8 @@ static func validate(settings: Dictionary) -> PackedStringArray:
 	if not with_cap.has("fps_limit"): with_cap["fps_limit"] = 60
 	for key: String in DEATH_DEFAULTS:
 		if not with_cap.has(key): with_cap[key] = DEATH_DEFAULTS[key]
+	for key: String in ["touch_sensitivity", "touch_size", "touch_opacity"]:
+		if not with_cap.has(key): with_cap[key] = defaults()[key]
 	if not SnapshotSchema.exact_keys(with_cap, defaults().keys()):
 		return PackedStringArray(["Settings are incomplete or contain unsupported fields."])
 	if not SnapshotSchema.integer_in(with_cap["fps_limit"], 0, 120) or with_cap["fps_limit"] not in FPS_LIMITS:
@@ -41,7 +45,7 @@ static func validate(settings: Dictionary) -> PackedStringArray:
 	if not settings["quality"] is String or settings["quality"] not in QUALITY_IDS:
 		errors.append("Unknown quality preset.")
 	for key: String in RANGES:
-		if not SnapshotSchema.number_in(settings[key], RANGES[key][0], RANGES[key][1]):
+		if not SnapshotSchema.number_in(with_cap[key], RANGES[key][0], RANGES[key][1]):
 			errors.append("%s is outside its supported range." % key)
 	for key: String in BOOLEANS:
 		if not with_cap[key] is bool:
@@ -53,6 +57,8 @@ static func vertical_fov(horizontal_degrees: float, aspect_ratio: float) -> floa
 
 static func normalize(settings: Dictionary) -> Dictionary:
 	var result: Dictionary = settings.duplicate(true)
+	for key: String in ["touch_sensitivity", "touch_size", "touch_opacity"]:
+		if not result.has(key): result[key] = defaults()[key]
 	result["fps_limit"] = int(result.get("fps_limit", 60))
 	for key: String in DEATH_DEFAULTS:
 		if not result.has(key): result[key] = DEATH_DEFAULTS[key]

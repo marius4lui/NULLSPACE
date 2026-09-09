@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci5qei8jb6j2o"
 path.bptc="res://.godot/imported/diffuser_basecolor.png-fd8e667013cfdcfcf0c22b8fc5e69a28.bptc.ctex"
+path.astc="res://.godot/imported/diffuser_basecolor.png-fd8e667013cfdcfcf0c22b8fc5e69a28.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/environment/textures/diffuser_basecolor.png"
-dest_files=["res://.godot/imported/diffuser_basecolor.png-fd8e667013cfdcfcf0c22b8fc5e69a28.bptc.ctex"]
+dest_files=["res://.godot/imported/diffuser_basecolor.png-fd8e667013cfdcfcf0c22b8fc5e69a28.bptc.ctex", "res://.godot/imported/diffuser_basecolor.png-fd8e667013cfdcfcf0c22b8fc5e69a28.astc.ctex"]
 
 [params]
 

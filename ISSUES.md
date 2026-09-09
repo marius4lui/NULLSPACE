@@ -11,6 +11,7 @@ No known blocking defect remains in this feature's exercised scenarios. Audio
 listening and native Windows remain unverified; general game duration/pacing
 issues below are not resolved by this scoped feature. Older0/2 entries below
 describe the pre-feature baseline, not these two later functional runs.
+Android scope 2026-09-08: ANDROID-001 open — no connected physical device; install/update, real multitouch/audio/thermal and final runs cannot yet be accepted. ANDROID-002 active — export and touch integration regression checks in progress. Existing DURATION-001 remains open; porting alone does not complete the approved game.
 
 Current GOAL_CONTRACT.md governs. No complete playable game/zero-defect claim. Full prior register and failures are archived and remain in evidence.
 

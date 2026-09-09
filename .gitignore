@@ -8,6 +8,11 @@ __pycache__/
 /build/linux/*
 !/build/linux/.gitkeep
 /build/archive/
+/build/android/
+*.keystore
+*.jks
+game/.godot/
+game/android/
 /build/*.tar.gz
 /build/*.zip
 /tools/local/

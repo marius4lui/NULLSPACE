@@ -1,5 +1,9 @@
 # NULLSPACE — current goal contract
 
+## Android scope amendment — 2026-09-08
+
+User explicitly approved implementation of the complete Android plan. Android is now the primary release target: signed offline APK, Android 12/API31+, ARM64, current flagship/8GB RAM target, touch-only operation, Mobile renderer, Standard 60 FPS and Battery saver 30 FPS. No Play Store or controller work. Existing complete-game content and fairness requirements remain; preserve Desktop behavior and original assets. SDK/toolchain, signing identity and build steps must be reproducible. Keep signing secrets outside Git. Android installation/update, multitouch, safe areas, Back, interruption/resume, safe checkpoint recovery, real listening, 30-minute thermal performance and two final exported full runs are required. Real first-play 10–15 minute duration is still open. Emulator and headless checks are supporting evidence only. Device not yet connected at amendment; no Android hardware claims. Earlier Linux-first delivery priority is replaced, not a fixed defect. One agent works sequentially on feat/short-game; main remains unchanged until acceptance.
+
 Authority: user's explicit final scope and working-method replacement on2026-09-05. This replaces contradictory earlier instructions including freezes, mandatory delegation and the35–60minute campaign. Prior complete contract/records are preserved verbatim once in docs/history/pre-scope-change-2026-09-05/ and Git. Historical conditions are not current blockers.
 
 Active feature-branch addendum (2026-09-05): `feat/difficulty-room1` keeps this same Room 1 and adds Easy, Medium, Hard and Nightmare. Easy requires Office A; Medium retains the two-switch baseline; Hard and Nightmare require Office A, Service B and a local Emergency C interaction. This explicit difficulty objective supersedes the two-switch-only line below for this branch; it does not authorize new rooms, monsters, weapons or a general difficulty framework.

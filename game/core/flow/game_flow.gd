@@ -119,6 +119,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			close_settings()
 		get_viewport().set_input_as_handled()
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		if state == State.SETTINGS:
+			close_settings()
+		elif state == State.PLAYING:
+			pause_game(&"android_back")
+
 func _on_restore_requested(snapshot: Dictionary, generation: int) -> void:
 	if state != State.LOADING:
 		operation_failed.emit(_invalid("Restore must be initiated through GameFlow."))

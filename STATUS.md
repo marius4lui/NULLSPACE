@@ -1,5 +1,13 @@
 # Status
 
+## v0.3 Beta Unstable — user authorized 2026-09-09
+
+PR #4 is being integrated with current main326eddf (Android/v0.2). Additive touch
+and death preferences are both retained; touch now skips death after its minimum.
+Version0.3.0-beta-unstable, Android preview versionCode4 with the existing key.
+Release checks/build/publication in progress; this is an unstable prerelease,
+not Android hardware or complete-game acceptance. Evidence: evidence/releases/v0.3/.
+
 Listener death task (feat/listener-death): implemented and tested in the existing
 section. Guarded2.6s grab/local fallback, independent persisted blood/intensity,
 reduced-motion override and existing death menu/reset. Core258 plus scheduling,
@@ -12,6 +20,21 @@ not merged.20/20 batches; final integration checks complete. Main itself is pres
 
 The following records describe the raw-beta baseline before this scoped task;
 their broader first-play, pacing and listening gaps remain open:
+## v0.2 beta publication — user authorized 2026-09-08
+
+Merged current remote main4250b49 (difficulty/website) with Android work. Release source7307821;
+fresh Linux/Windows/Android-preview exports,413 automated assertions and three clock probes pass.
+Fresh Linux title/Start/move/pause smoke passed; no Android device acceptance. v0.2 publication
+in progress, retaining all limitations. Private signing material stays outside Git.
+
+## Android implementation — 2026-09-08
+
+- Active branch feat/short-game, fast-forwarded to current checkout 71a53e8 before Android changes. main and other worktrees preserved. Solo, no agents.
+- Implementing approved complete Android APK plan. Existing ten map entries reused; first-play duration/content and audio acceptance remain open.
+- Added touch overlay/InputGate integration, additive preferences, mobile profiles, lifecycle handling and Android export/build script. ETC2 import correction verified. Offline preview APK built and v2/v3 signature verified; final Gradle export blocked on uncached dependencies. User's limited connection: downloads stopped; script now requires explicit --allow-downloads for Gradle.
+- Automated 24 touch +258 core +89 existing scene checks and three clock schedules pass. Linux Mobile-renderer title/Start/touch-HUD screenshots inspected; not physical Android evidence. See evidence/android/initial/REPORT.md and tools/android/README.md for precise limits/template issues.
+- adb currently lists no attached device. User-owned test phone needs connection for install/play/thermal acceptance; 0/2 Android final runs. No release publication yet.
+
 ## Difficulty Room 1 branch
 
 - `feat/difficulty-room1` now offers Easy, Medium, Hard and Nightmare before Start, with Medium as the default. The fixed choice is stored in the existing checkpoint and survives death/restart.

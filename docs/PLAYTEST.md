@@ -32,4 +32,6 @@ Linux-Daten liegen unter `${XDG_DATA_HOME:-~/.local/share}/NULLSPACE/`: `saves/c
 
 ## Noch offen
 
+v0.3 Beta Unstable ergänzt die Listener-Todesequenz. Auf Touch-Geräten lässt sie sich nach der kurzen Mindestdauer durch Antippen überspringen; am Desktop mit Enter/Escape. Blut und intensive Todesanimation sind getrennt einstellbar, reduzierte Bewegung verhindert das Heranziehen.
+
 Natürliche Erstspielzeit und Spannung, abschließende Audio-Hörprüfung, einzelne Präsentations-/Erstnutzungsruckler sowie zwei abschließende erfolgreiche Export-Durchläufe. Automatisierte Prüfungen und aufgezeichnetes Audio sind kein Beweis für subjektives Spielgefühl oder gehörte Audioqualität. Aktuelle Details: ISSUES.md und evidence/section/solo-e/ im Repository.

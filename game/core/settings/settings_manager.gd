@@ -9,6 +9,8 @@ const PROFILES: Dictionary = {
 	"low": preload("res://data/quality/low.tres"), "medium": preload("res://data/quality/medium.tres"),
 	"high": preload("res://data/quality/high.tres"), "ultra": preload("res://data/quality/ultra.tres")
 }
+const MOBILE_STANDARD: QualityProfile = preload("res://data/quality/mobile_standard.tres")
+const MOBILE_BATTERY: QualityProfile = preload("res://data/quality/mobile_battery.tres")
 const EFFECT_BUSES: Array[String] = ["Environment", "Player", "Weapons", "Monster", "UI"]
 
 var storage_directory: String = "user://preferences"
@@ -27,6 +29,8 @@ func get_value(key: String) -> Variant:
 	return value.duplicate(true) if value is Array or value is Dictionary else value
 
 func current_quality() -> QualityProfile:
+	if OS.has_feature("android"):
+		return MOBILE_BATTERY if int(_values["fps_limit"]) == 30 else MOBILE_STANDARD
 	return PROFILES[_values["quality"]]
 
 func reload_settings() -> StorageResult:
@@ -52,9 +56,9 @@ func _store() -> AtomicJsonStore:
 
 func _apply_runtime() -> void:
 	if DisplayServer.get_name() != "headless":
-		Engine.max_fps = int(_values["fps_limit"])
+		Engine.max_fps = (30 if int(_values["fps_limit"]) == 30 else 60) if OS.has_feature("android") else int(_values["fps_limit"])
 		var window: Window = get_window()
-		var fullscreen: bool = _values["display_mode"] == "fullscreen"
+		var fullscreen: bool = OS.has_feature("android") or _values["display_mode"] == "fullscreen"
 		window.mode = Window.MODE_FULLSCREEN if fullscreen else Window.MODE_WINDOWED
 		if not fullscreen:
 			var desired: Vector2i = Vector2i(int(_values["resolution"][0]), int(_values["resolution"][1]))
@@ -79,6 +83,10 @@ func _apply_runtime() -> void:
 			viewport.content_scale_size = Vector2i(int(_values["resolution"][0]), int(_values["resolution"][1]))
 			viewport.content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
 			viewport.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
+			if OS.has_feature("android") or OS.get_cmdline_user_args().has("--touch-ui"):
+				viewport.content_scale_size = Vector2i(1280, 720)
+				viewport.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
+				viewport.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_EXPAND
 		var profile: QualityProfile = current_quality()
 		viewport.scaling_3d_scale = profile.render_scale
 		viewport.msaa_3d = profile.msaa as Viewport.MSAA
