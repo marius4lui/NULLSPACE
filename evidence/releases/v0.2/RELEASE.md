@@ -1,4 +1,10 @@
-# v0.2 Raw Beta preparation
+# v0.2 Raw Beta publication
+
+Published at https://github.com/marius4lui/NULLSPACE/releases/tag/v0.2 (draft=false,
+prerelease=true). GitHub release384943844 contains all three platform files and SHA256SUMS;
+every remote asset size and SHA256 digest matched the local files before publication.
+Tagv0.2 points to326eddf. Main received the integrated source/evidence; Pages workflow34259346835
+succeeded. Publication verified again2026-09-09. Private signing material was not uploaded.
 
 User authorized all current work on GitHub main and the next beta release,2026-09-08.
 Source7307821d60cd8bf449a67d81f5a2487bdf6b9428 includes Android work plus remote main4250b49

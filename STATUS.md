@@ -4,8 +4,9 @@
 
 Merged current remote main4250b49 (difficulty/website) with Android work. Release source7307821;
 fresh Linux/Windows/Android-preview exports,413 automated assertions and three clock probes pass.
-Fresh Linux title/Start/move/pause smoke passed; no Android device acceptance. v0.2 publication
-in progress, retaining all limitations. Private signing material stays outside Git.
+Fresh Linux title/Start/move/pause smoke passed; no Android device acceptance. v0.2 is published
+as a prerelease with all three platform files and verified remote checksums, retaining all
+limitations. Main and Pages updated. Private signing material stays outside Git.
 
 ## Android implementation — 2026-09-08
 
