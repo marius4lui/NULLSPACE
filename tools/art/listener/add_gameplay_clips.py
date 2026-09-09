@@ -42,7 +42,7 @@ def root_offset(z):
     rig.pose.bones["root"].location = rig.data.bones["root"].matrix_local.to_3x3().inverted() @ Vector((0, 0, z))
 
 
-for clip, seconds in (("walk", 1.2), ("run", 0.72), ("attack", 1.4), ("stagger", 0.9)):
+for clip, seconds in (("walk", 1.2), ("run", 0.72), ("attack", 1.4), ("stagger", 0.9), ("death_grab", 2.6), ("death_local", .85)):
     reset()
     constraints, helpers, targets = [], [], {}
     for side in (".L", ".R"):
@@ -111,6 +111,31 @@ for clip, seconds in (("walk", 1.2), ("run", 0.72), ("attack", 1.4), ("stagger",
             world_rotation("upper_arm.R", x=-pose, y=0.28 * wind * (1 - recover))
             world_rotation("forearm.R", x=-0.30 * wind * (1 - recover))
             world_rotation("neck_01", x=-0.08 * wind * (1 - recover))
+        if clip == "death_grab":
+            # Both long arms reach, elbows draw the victim in, then one final
+            # committed downward strike and a visible release. Feet stay planted.
+            seconds_now = frame / 30
+            ease = lambda a, b: (lambda u: u * u * (3 - 2 * u))(max(0, min(1, (seconds_now-a)/(b-a))))
+            reach = ease(0, .32)
+            pull = ease(.36, 1.05)
+            strike = ease(1.30, 1.46)
+            release = ease(1.75, 2.40)
+            hold = 1 - release
+            for side in (".L", ".R"):
+                world_rotation("upper_arm" + side, x=(-1.38 * reach + .30 * pull + (.48 * strike if side == ".R" else 0)) * hold)
+                world_rotation("forearm" + side, x=(-.10 * reach - .48 * pull) * hold)
+                world_rotation("hand" + side, x=.14 * pull * hold)
+                for finger in ("index", "middle", "ring", "little", "thumb"):
+                    for joint in (1, 2, 3):
+                        world_rotation(f"{finger}_{joint:02d}{side}", x=-.30 * pull * hold)
+            world_rotation("spine_02", x=(.08 * reach + .13 * strike) * hold)
+            world_rotation("neck_01", x=(.08 * pull + .10 * strike) * hold)
+        if clip == "death_local":
+            # Tight-space/comfort alternative: bounded chest/neck follow-through,
+            # no wide reaching arms, root travel or new rig. Camera remains still.
+            follow = min(1, t / .22) * (1 - t) ** 2
+            world_rotation("spine_02", x=.12 * follow)
+            world_rotation("neck_01", x=.18 * follow)
         if clip == "stagger":
             hit = min(1, t / 0.12) * (1 - t) ** 2
             world_rotation("spine_02", x=-0.25 * hit, y=0.15 * hit)

@@ -96,6 +96,13 @@ func _ready() -> void:
 	section.player.take_damage(100)
 	await _frames(2)
 	_check(overlay.fingers.is_empty() and not InputGate.accepts_input(), "Death invalidates touch")
+	_press(7, Vector2(300, 300))
+	await _frames(1)
+	_check(GameFlow.state == NullGameFlow.State.DYING, "Touch cannot skip before death minimum")
+	await get_tree().create_timer(.67).timeout
+	_press(8, Vector2(300, 300))
+	await _frames(1)
+	_check(GameFlow.state == NullGameFlow.State.DEAD, "Touch skips death after minimum duration")
 	_check(GameFlow.continue_game().ok, "Checkpoint restarts after touch death")
 	await _frames(10)
 	_check(GameFlow.state == NullGameFlow.State.PLAYING and InputGate.movement_vector() == Vector2.ZERO, "Restored player has no stale movement")

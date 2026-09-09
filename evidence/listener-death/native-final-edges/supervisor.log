@@ -1,0 +1,2 @@
+X protocol error:
+<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x00600002>, sequence_number = 352, major_opcode = 142, minor_opcode = 3

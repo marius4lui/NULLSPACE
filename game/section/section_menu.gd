@@ -20,6 +20,10 @@ var _notice: String = ""
 var objective: String = ""
 var _injury: Label
 var _injury_time: float = 0
+var _death_overlay: ColorRect
+var _death_material: ShaderMaterial
+var _skip: Label
+var _dead_time: float = 0
 var selected_difficulty: String = DifficultyConfig.DEFAULT_ID
 
 func _ready() -> void:
@@ -77,6 +81,18 @@ func _ready() -> void:
 	_stamina.max_value = 1.0
 	_stamina.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_stamina)
+	_death_overlay = ColorRect.new()
+	_death_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_death_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_death_material = ShaderMaterial.new()
+	_death_material.shader = preload("res://section/death_overlay.gdshader")
+	_death_overlay.material = _death_material
+	_death_overlay.visible = false
+	add_child(_death_overlay)
+	_skip = _hud_label(Control.PRESET_CENTER_BOTTOM, Vector2(-400, -80), Vector2(800, 45))
+	_skip.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_skip.text = "Tap — skip" if InputGate.uses_touch() else "Enter / Esc — skip"
+	_skip.visible = false
 	if InputGate.uses_touch():
 		get_viewport().size_changed.connect(_mobile_layout)
 		_mobile_layout()
@@ -89,15 +105,17 @@ func _show_screen() -> void:
 		_stack.remove_child(child)
 		child.queue_free()
 	var playing: bool = GameFlow.state == NullGameFlow.State.PLAYING
-	_shade.visible = not playing
-	_panel.visible = not playing
+	var dying: bool = GameFlow.state == NullGameFlow.State.DYING
+	_shade.visible = not playing and not dying
+	_shade.color.a = .90
+	_panel.visible = not playing and not dying
 	_prompt.visible = playing
 	_hint.visible = playing
 	_dot.visible = playing and bool(SettingsManager.get_value("center_dot"))
 	_stamina.visible = false
 	_ammo.visible = playing and _armed
 	_injury.visible = playing
-	if playing:
+	if playing or dying:
 		_notice = ""
 		return
 	_label("NULLSPACE", 58)
@@ -128,9 +146,16 @@ func _show_screen() -> void:
 		NullGameFlow.State.SETTINGS:
 			_settings()
 		NullGameFlow.State.DEAD:
-			_label("You did not make it out.")
-			_button("Restart checkpoint", func() -> void: GameFlow.continue_game())
-			_button("Return to title", func() -> void: GameFlow.return_to_menu())
+			_dead_time = 0
+			_shade.color.a = .92
+			_label("YOU DIED", 44)
+			var checkpoint: bool = SaveSystem.continue_available()
+			_button("Restart from checkpoint" if checkpoint else "Restart", func() -> void:
+				if checkpoint: GameFlow.continue_game()
+				else:
+					GameFlow.return_to_menu()
+					GameFlow.begin_new_game(selected_difficulty))
+			_button("Main menu", func() -> void: GameFlow.return_to_menu())
 		NullGameFlow.State.ENDING:
 			_credits()
 		NullGameFlow.State.LOADING:
@@ -163,6 +188,10 @@ func _settings() -> void:
 	_number("Head movement", "head_bob", 0, 1, 0.1)
 	_number("Camera shake", "camera_shake", 0, 1, 0.1)
 	_toggle("Reduce light flashes", "reduced_flashes")
+	_toggle("Blood effects", "blood_effects")
+	_toggle("Intense death animation", "intense_death")
+	_toggle("Reduce motion", "reduced_motion")
+	_label("Reduce motion disables the death camera pull, head movement and shake.\nSetting both movement sliders to zero also disables the death camera pull.\nBlood effects are independent. Death animations can be skipped after a short moment.", 18)
 	_toggle("Center dot", "center_dot")
 	_button("Apply", func() -> void:
 		var result: StorageResult = SettingsManager.apply_settings(_draft)
@@ -317,7 +346,16 @@ func set_ammunition(loaded: int, spare: int, armed: bool) -> void:
 	_ammo.visible = armed and GameFlow.state == NullGameFlow.State.PLAYING
 
 func _process(delta: float) -> void:
+	if GameFlow.state == NullGameFlow.State.DEAD:
+		_dead_time += delta
+		_shade.color.a = lerpf(.92, 1.0, minf(_dead_time / .75, 1))
 	if GameFlow.state == NullGameFlow.State.PLAYING:
 		_injury_time = maxf(0, _injury_time - delta)
 		_hint_time = maxf(0.0, _hint_time - delta)
 		_hint.modulate.a = minf(_hint_time, 1.0)
+
+func set_death_effects(fade: float, blood: float, can_skip: bool) -> void:
+	_death_overlay.visible = fade > 0 or blood > 0
+	_death_material.set_shader_parameter("fade", fade)
+	_death_material.set_shader_parameter("blood", blood)
+	_skip.visible = can_skip

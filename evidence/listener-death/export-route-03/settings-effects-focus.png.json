@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 46064.663626981,
+  "acquired_utc": "2026-09-05T08:38:36.461+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/listener-death/export-route-03/settings-effects-focus.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "a8282abd3d687508708725a02c2d71459f0347c093c187fdeeb58f24ae6be437",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 284156
+  },
+  "x_readback_ms": 18.67194000078598
+}

@@ -1,0 +1,2825 @@
+{
+  "method": "OS-input replay of retained route; no state injection",
+  "source_route": "evidence/section/solo-e/unarmed-export-02/supervisor-events.jsonl",
+  "source_commit": "11dcf11a6b30c6016f6691f91d86bc81d8c53f5c",
+  "build_info": "11dcf11a6b30c6016f6691f91d86bc81d8c53f5c\nEngine: 4.7.2.stable.official.ed1daf0bf\nPreset: Linux x86_64\n",
+  "boot_settings": {
+    "ambience_volume": 0.8,
+    "blood_effects": false,
+    "camera_shake": 0.5,
+    "center_dot": true,
+    "display_mode": "windowed",
+    "effects_volume": 0.8,
+    "fps_limit": 60,
+    "head_bob": 0.5,
+    "horizontal_fov": 88.0,
+    "intense_death": false,
+    "invert_y": false,
+    "master_volume": 0.8,
+    "mouse_sensitivity": 1.0,
+    "quality": "low",
+    "reduced_flashes": true,
+    "reduced_motion": true,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "subtitles": true,
+    "vsync": true
+  },
+  "success": true,
+  "ending": [
+    {
+      "event": "escape_complete",
+      "flow": "PLAYING",
+      "focused": true,
+      "frame": 15228,
+      "input_provenance": "unverified_os_input",
+      "monotonic_usec": 334699639,
+      "paused": false,
+      "physics_tick": 19871,
+      "session_id": "b455f9e93013bc5de8b9b870ea5e7f45",
+      "simulation_epoch": 2,
+      "simulation_seconds": 54.0166666666649,
+      "simulation_tick": 3241,
+      "utc": "2026-09-05T08:46:55",
+      "values": {
+        "ammo": {
+          "chamber": 0,
+          "magazine": 0,
+          "owned": false,
+          "reserve": 0
+        },
+        "health": 45.0,
+        "seconds": 54.0166666666649,
+        "shots": 0
+      }
+    }
+  ],
+  "death_count": 0,
+  "history": [
+    {
+      "step": 0,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [
+          1
+        ],
+        "hold": 0.5,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": [
+          240,
+          230
+        ],
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          4.80000019073486,
+          0.00026041641831398,
+          5.80000019073486
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 0,
+        "travelled": 0.0,
+        "yaw": 2.4300000667572
+      }
+    },
+    {
+      "step": 1,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          1215,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          4.80000019073486,
+          0.00026041641831398,
+          5.80000019073486
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 0,
+        "travelled": 0.0,
+        "yaw": 2.4300000667572
+      }
+    },
+    {
+      "step": 2,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.7,
+        "key_down": [
+          "a"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          3.05222320556641,
+          0.00166516855824739,
+          5.80000019073486
+        ],
+        "speed": 3.39999675750732,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 1,
+        "travelled": 1.74777698516846,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 3,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 4.15,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.53888964653015,
+          0.00166384282056242,
+          -8.01768398284912
+        ],
+        "speed": 3.39998245239258,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 12,
+        "travelled": 16.0787947177887,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 4,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.53888964653015,
+          0.00166384282056242,
+          -8.01768398284912
+        ],
+        "speed": 3.39998245239258,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 12,
+        "travelled": 16.0787947177887,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 5,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.6,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          7.57341575622559,
+          0.00165887118782848,
+          -8.13833808898926
+        ],
+        "speed": 3.40001218020916,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 16,
+        "travelled": 21.2299892744049,
+        "yaw": -1.57000005245209
+      }
+    },
+    {
+      "step": 6,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.9,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          7.86008262634277,
+          0.00166667904704809,
+          -8.13856410980225
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 16,
+        "travelled": 21.5166562343948,
+        "yaw": -1.57000005245209
+      }
+    },
+    {
+      "step": 7,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.95,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          14.254433631897,
+          0.00166386202909052,
+          -8.14364528656006
+        ],
+        "speed": 3.39998356997967,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 21,
+        "travelled": 27.9110093410127,
+        "yaw": -1.57000005245209
+      }
+    },
+    {
+      "step": 8,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          14.254433631897,
+          0.00166386202909052,
+          -8.14364528656006
+        ],
+        "speed": 3.39998356997967,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 21,
+        "travelled": 27.9110093410127,
+        "yaw": -1.57000005245209
+      }
+    },
+    {
+      "step": 9,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.66,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          14.4844350814819,
+          0.00166373408865184,
+          -10.3338260650635
+        ],
+        "speed": 2.73330688476562,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 22,
+        "travelled": 30.3310094885528,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 10,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.9,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": false,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          14.4844350814819,
+          0.00165665394160897,
+          -10.4049377441406
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 23,
+        "travelled": 30.40212116763,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 11,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.1,
+        "key_down": [
+          "f"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          14.4844350814819,
+          0.00165665394160897,
+          -10.4049377441406
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 23,
+        "travelled": 30.40212116763,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 12,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.1,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          14.4844350814819,
+          0.00165922753512859,
+          -14.1260757446289
+        ],
+        "speed": 1.39995574951172,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 25,
+        "travelled": 34.1232591681182,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 13,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.41,
+        "key_down": [
+          "a"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          13.251558303833,
+          0.00166288553737104,
+          -14.1779365539551
+        ],
+        "speed": 3.39998245239258,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 26,
+        "travelled": 35.3781627342105,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 14,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.22,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          13.0963640213013,
+          0.00164864689577371,
+          -18.1874942779541
+        ],
+        "speed": 3.40003967285156,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 29,
+        "travelled": 39.5130799673498,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 15,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.73,
+        "key_down": [
+          "d"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          18.5225505828857,
+          0.00166010542307049,
+          -18.399356842041
+        ],
+        "speed": 3.40003967285156,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 34,
+        "travelled": 45.1212933789939,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 16,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.24,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          18.926061630249,
+          0.00165942520834506,
+          -19.0937614440918
+        ],
+        "speed": 2.06668853759766,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 35,
+        "travelled": 46.2157926894724,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 17,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          60
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          18.926061630249,
+          0.00165942520834506,
+          -19.0937614440918
+        ],
+        "speed": 2.06668853759766,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 35,
+        "travelled": 46.2157926894724,
+        "yaw": 0.0
+      }
+    },
+    {
+      "step": 18,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.49,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": -0.120000004768372,
+        "position": [
+          20.5493946075439,
+          0.0016519803320989,
+          -19.1317348480225
+        ],
+        "speed": 2.73319333791733,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 36,
+        "travelled": 47.8757911650464,
+        "yaw": -1.57000005245209
+      }
+    },
+    {
+      "step": 19,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.85,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": -0.120000004768372,
+        "position": [
+          20.6205081939697,
+          0.00165709550492465,
+          -19.1317901611328
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 36,
+        "travelled": 47.9469047738239,
+        "yaw": -1.57000005245209
+      }
+    },
+    {
+      "step": 20,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.15,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": -0.120000004768372,
+        "position": [
+          20.6205081939697,
+          0.00165709550492465,
+          -19.1317901611328
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 36,
+        "travelled": 47.9469047738239,
+        "yaw": -1.57000005245209
+      }
+    },
+    {
+      "step": 21,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          -60
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          20.6205081939697,
+          0.00165709550492465,
+          -19.1317901611328
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 36,
+        "travelled": 47.9469047738239,
+        "yaw": -3.14000010490417
+      }
+    },
+    {
+      "step": 22,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 2.56,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          20.470890045166,
+          0.00165447196923196,
+          -10.9275140762329
+        ],
+        "speed": 2.73331001400948,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 42,
+        "travelled": 56.2003467353061,
+        "yaw": -3.14000010490417
+      }
+    },
+    {
+      "step": 23,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          20.470890045166,
+          0.00165447196923196,
+          -10.9275140762329
+        ],
+        "speed": 2.73331001400948,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 42,
+        "travelled": 56.2003467353061,
+        "yaw": -3.14000010490417
+      }
+    },
+    {
+      "step": 24,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.43,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          19.0732192993164,
+          0.00165420561097562,
+          -10.8530654907227
+        ],
+        "speed": 1.39995966106653,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 43,
+        "travelled": 57.6692419934552,
+        "yaw": 1.57318532466888
+      }
+    },
+    {
+      "step": 25,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          19.0732192993164,
+          0.00165420561097562,
+          -10.8530654907227
+        ],
+        "speed": 1.39995966106653,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 43,
+        "travelled": 57.6692419934552,
+        "yaw": 1.57318532466888
+      }
+    },
+    {
+      "step": 26,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.5,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          19.0624561309814,
+          0.00165462715085596,
+          -9.22969913482666
+        ],
+        "speed": 2.73336723446846,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 44,
+        "travelled": 59.3059094080236,
+        "yaw": -3.1399998664856
+      }
+    },
+    {
+      "step": 27,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          19.0624561309814,
+          0.00165462715085596,
+          -9.22969913482666
+        ],
+        "speed": 2.73336723446846,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 44,
+        "travelled": 59.3059094080236,
+        "yaw": -3.1399998664856
+      }
+    },
+    {
+      "step": 28,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.9,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          19.0625705718994,
+          0.00166564132086933,
+          -9.15858745574951
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 44,
+        "travelled": 59.3770211800002,
+        "yaw": 1.57318532466888
+      }
+    },
+    {
+      "step": 29,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 3.17,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          8.41588878631592,
+          0.00165108859073371,
+          -9.1331615447998
+        ],
+        "speed": 0.73333952575922,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 53,
+        "travelled": 70.0237336535938,
+        "yaw": 1.57318532466888
+      }
+    },
+    {
+      "step": 30,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.61,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          3.55030918121338,
+          0.00166384654585272,
+          -9.1215353012085
+        ],
+        "speed": 3.39999228715897,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 56,
+        "travelled": 74.8893273086287,
+        "yaw": 1.57318532466888
+      }
+    },
+    {
+      "step": 31,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          786,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.92475652694702,
+          0.00166298798285425,
+          -9.12004280090332
+        ],
+        "speed": 0.733339414000511,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 57,
+        "travelled": 75.5148817640729,
+        "yaw": 1.57318532466888
+      }
+    },
+    {
+      "step": 32,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.2,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.92331957817078,
+          0.00166384049225599,
+          -9.39448547363281
+        ],
+        "speed": 3.39998491108418,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 57,
+        "travelled": 75.7904397207312,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 33,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.92291212081909,
+          0.00166615890339017,
+          -9.73781776428223
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 57,
+        "travelled": 76.1337722541066,
+        "yaw": 1.57118535041809
+      }
+    },
+    {
+      "step": 34,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.3,
+        "key_down": [
+          "Shift_L",
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -3.44042015075684,
+          0.00166387716308236,
+          -9.73532962799072
+        ],
+        "speed": 5.39999529719353,
+        "sprinting": true,
+        "stamina": 0.772,
+        "steps": 61,
+        "travelled": 82.4971049987944,
+        "yaw": 1.57118535041809
+      }
+    },
+    {
+      "step": 35,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -4.03041982650757,
+          0.00166615610942245,
+          -9.73509979248047
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 0.763,
+        "steps": 61,
+        "travelled": 83.0871047276305,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 36,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.43,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -4.03193283081055,
+          0.00166382268071175,
+          -11.0184297561646
+        ],
+        "speed": 2.73336589336395,
+        "sprinting": false,
+        "stamina": 0.763,
+        "steps": 62,
+        "travelled": 84.370435611927,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 37,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -4.03193283081055,
+          0.00166382268071175,
+          -11.0184297561646
+        ],
+        "speed": 2.73336589336395,
+        "sprinting": false,
+        "stamina": 0.763,
+        "steps": 62,
+        "travelled": 84.370435611927,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 38,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.2,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -4.70535135269165,
+          0.00166297680698335,
+          -11.0892782211304
+        ],
+        "speed": 0.733337458223104,
+        "sprinting": false,
+        "stamina": 0.818999999999999,
+        "steps": 63,
+        "travelled": 85.1148805593839,
+        "yaw": 1.57118535041809
+      }
+    },
+    {
+      "step": 39,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.85,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -4.70646238327026,
+          0.00166617333889008,
+          -11.0892782211304
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 0.94033333333333,
+        "steps": 63,
+        "travelled": 85.1159915899625,
+        "yaw": 1.57118535041809
+      }
+    },
+    {
+      "step": 40,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.65,
+        "key_down": [
+          "Shift_L",
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -7.28979682922363,
+          0.00164578389376402,
+          -11.088267326355
+        ],
+        "speed": 5.40000960230827,
+        "sprinting": true,
+        "stamina": 0.849999999999997,
+        "steps": 64,
+        "travelled": 87.6993262519827,
+        "yaw": 1.57118535041809
+      }
+    },
+    {
+      "step": 41,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -8.18326282501221,
+          0.00166723818983883,
+          -11.0879192352295
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 0.828999999999997,
+        "steps": 65,
+        "travelled": 88.5927923232084,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 42,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.7,
+        "key_down": [
+          "Shift_L",
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -8.19345855712891,
+          0.00164960965048522,
+          -19.701229095459
+        ],
+        "speed": 5.40001273155212,
+        "sprinting": true,
+        "stamina": 0.525999999999997,
+        "steps": 70,
+        "travelled": 97.2061079688137,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 43,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.53,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -8.19588756561279,
+          0.00164828915148973,
+          -21.7556953430176
+        ],
+        "speed": 1.3999567553401,
+        "sprinting": false,
+        "stamina": 0.52833333333333,
+        "steps": 72,
+        "travelled": 99.2605756021803,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 44,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -8.19588756561279,
+          0.00164828915148973,
+          -21.7556953430176
+        ],
+        "speed": 1.3999567553401,
+        "sprinting": false,
+        "stamina": 0.52833333333333,
+        "steps": 72,
+        "travelled": 99.2605756021803,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 45,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.85,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.19809532165527,
+          0.00166446773800999,
+          -21.7809143066406
+        ],
+        "speed": 3.40000346302986,
+        "sprinting": false,
+        "stamina": 0.801333333333326,
+        "steps": 77,
+        "travelled": 105.271727264277,
+        "yaw": -1.56881475448608
+      }
+    },
+    {
+      "step": 46,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.19809532165527,
+          0.00166446773800999,
+          -21.7809143066406
+        ],
+        "speed": 3.40000346302986,
+        "sprinting": false,
+        "stamina": 0.801333333333326,
+        "steps": 77,
+        "travelled": 105.271727264277,
+        "yaw": -1.56881475448608
+      }
+    },
+    {
+      "step": 47,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.72,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -1.91390419006348,
+          0.0016545025864616,
+          -23.8692569732666
+        ],
+        "speed": 3.40004190802574,
+        "sprinting": false,
+        "stamina": 0.922666666666657,
+        "steps": 78,
+        "travelled": 107.646169563872,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 48,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -1.91424405574799,
+          0.00165635568555444,
+          -24.1559181213379
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 0.95299999999999,
+        "steps": 79,
+        "travelled": 107.932830912992,
+        "yaw": -1.56881475448608
+      }
+    },
+    {
+      "step": 49,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.6,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          0.0035305842757225,
+          0.00165227032266557,
+          -24.1596927642822
+        ],
+        "speed": 3.40000033378601,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 80,
+        "travelled": 109.850609267596,
+        "yaw": -1.56881475448608
+      }
+    },
+    {
+      "step": 50,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          55
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          0.0035305842757225,
+          0.00165227032266557,
+          -24.1596927642822
+        ],
+        "speed": 3.40000033378601,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 80,
+        "travelled": 109.850609267596,
+        "yaw": -1.56881475448608
+      }
+    },
+    {
+      "step": 51,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.85,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": -0.110000006854534,
+        "position": [
+          0.120197050273418,
+          0.001656528795138,
+          -24.1599235534668
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 80,
+        "travelled": 109.967275961535,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 52,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.12,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": -0.110000006854534,
+        "position": [
+          0.120197050273418,
+          0.001656528795138,
+          -24.1599235534668
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 80,
+        "travelled": 109.967275961535,
+        "yaw": 0.00118529808241874
+      }
+    },
+    {
+      "step": 53,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          -55
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          0.120197050273418,
+          0.001656528795138,
+          -24.1599235534668
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 80,
+        "travelled": 109.967275961535,
+        "yaw": 0.00118529819883406
+      }
+    },
+    {
+      "step": 54,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.17,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 100.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          0.119804590940475,
+          0.00166423514019698,
+          -24.4910354614258
+        ],
+        "speed": 3.39992769062519,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 80,
+        "travelled": 110.298388100462,
+        "yaw": 0.00118529819883406
+      }
+    },
+    {
+      "step": 55,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          0.119464807212353,
+          0.00165202026255429,
+          -24.777702331543
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 81,
+        "travelled": 110.585055167903,
+        "yaw": 1.57118535041809
+      }
+    },
+    {
+      "step": 56,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.75,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -1.79831326007843,
+          0.00165445217862725,
+          -24.7769317626953
+        ],
+        "speed": 3.40000413358212,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 82,
+        "travelled": 112.502833363716,
+        "yaw": 1.57118535041809
+      }
+    },
+    {
+      "step": 57,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.25498008728027,
+          0.00165650760754943,
+          -24.7767505645752
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 82,
+        "travelled": 112.959500225377,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 58,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.65,
+        "key_down": [
+          "Shift_L",
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.25841355323792,
+          0.00165537628345191,
+          -16.3544654846191
+        ],
+        "speed": 4.73327681422234,
+        "sprinting": false,
+        "stamina": 0.706,
+        "steps": 87,
+        "travelled": 121.381786003825,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 59,
+      "request": {
+        "action": "input",
+        "hold": 0.06
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.25851154327393,
+          0.00166615378111601,
+          -16.1133575439453
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 0.706,
+        "steps": 88,
+        "travelled": 121.62289396592,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 60,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.95,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.25956845283508,
+          0.00166384852491319,
+          -13.5155696868896
+        ],
+        "speed": 3.39998267591,
+        "sprinting": false,
+        "stamina": 0.771333333333332,
+        "steps": 90,
+        "travelled": 124.220681999926,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 61,
+      "request": {
+        "action": "input",
+        "hold": 0.06
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.25977778434753,
+          0.00166616914793849,
+          -13.0022382736206
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 0.801666666666665,
+        "steps": 90,
+        "travelled": 124.734013449517,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 62,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.35,
+        "key_down": [
+          "Shift_L",
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.26017069816589,
+          0.00166389218065888,
+          -12.0389041900635
+        ],
+        "speed": 5.40000960230827,
+        "sprinting": true,
+        "stamina": 0.776999999999998,
+        "steps": 90,
+        "travelled": 125.697347616893,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 63,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          -785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          -2.26048469543457,
+          0.00166615494526923,
+          -11.2689027786255
+        ],
+        "speed": 0.0666618347167969,
+        "sprinting": false,
+        "stamina": 0.761999999999998,
+        "steps": 91,
+        "travelled": 126.467349094455,
+        "yaw": -1.57199990749359
+      }
+    },
+    {
+      "step": 64,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.4,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.36728882789612,
+          0.00166357751004398,
+          -11.263370513916
+        ],
+        "speed": 1.39999967068434,
+        "sprinting": false,
+        "stamina": 0.904333333333329,
+        "steps": 95,
+        "travelled": 131.095125966356,
+        "yaw": -1.57199990749359
+      }
+    },
+    {
+      "step": 65,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.0,
+        "key_down": [],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          785,
+          0
+        ],
+        "pointer": null,
+        "release": false,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.36728882789612,
+          0.00166357751004398,
+          -11.263370513916
+        ],
+        "speed": 1.39999967068434,
+        "sprinting": false,
+        "stamina": 0.904333333333329,
+        "steps": 95,
+        "travelled": 131.095125966356,
+        "yaw": -1.57199990749359
+      }
+    },
+    {
+      "step": 66,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 5.7,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.3727765083313,
+          0.00165192747954279,
+          7.98337745666504
+        ],
+        "speed": 2.73333571851254,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 109,
+        "travelled": 150.355193041381,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 67,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 0.12,
+        "key_down": [
+          "e"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "PLAYING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.37274765968323,
+          0.00165194971486926,
+          8.05448913574219
+        ],
+        "speed": 0.0,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 109,
+        "travelled": 150.42630472884,
+        "yaw": 3.14118528366089
+      }
+    },
+    {
+      "step": 68,
+      "request": {
+        "action": "input",
+        "button_down": [],
+        "button_up": [],
+        "click": [],
+        "hold": 1.4,
+        "key_down": [
+          "w"
+        ],
+        "key_up": [],
+        "lease": 10.0,
+        "move": [
+          0,
+          0
+        ],
+        "pointer": null,
+        "release": true,
+        "tap": []
+      },
+      "flow": "ENDING",
+      "pose": {
+        "crouched": false,
+        "flashlight": true,
+        "health": 45.0,
+        "height": 1.78,
+        "pitch": 0.0,
+        "position": [
+          2.37258958816528,
+          0.0016486452659592,
+          8.44226551055908
+        ],
+        "speed": 3.39998267591,
+        "sprinting": false,
+        "stamina": 1.0,
+        "steps": 110,
+        "travelled": 150.814081134857,
+        "yaw": 3.14118528366089
+      }
+    }
+  ]
+}

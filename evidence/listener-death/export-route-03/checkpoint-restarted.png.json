@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 46014.878447667,
+  "acquired_utc": "2026-09-05T08:37:46.676+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/listener-death/export-route-03/checkpoint-restarted.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "a323d05d6e5326fbfd060ccf6f3ca73de4400d5bd2e221fe668eab9bff618cc7",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 284156
+  },
+  "x_readback_ms": 31.74146800301969
+}

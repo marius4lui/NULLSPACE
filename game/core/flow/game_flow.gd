@@ -5,7 +5,7 @@ signal state_changed(previous: State, current: State, reason: StringName)
 signal operation_failed(result: StorageResult)
 signal load_started(snapshot: Dictionary, generation: int)
 
-enum State { MENU, LOADING, PLAYING, PAUSED, DEAD, ENDING, SETTINGS }
+enum State { MENU, LOADING, PLAYING, PAUSED, DEAD, ENDING, SETTINGS, DYING }
 
 var state: State = State.MENU
 var pending_generation: int = -1
@@ -82,6 +82,18 @@ func die() -> bool:
 	_transition(State.DEAD, &"death")
 	return true
 
+func begin_death() -> bool:
+	if state != State.PLAYING:
+		return false
+	_transition(State.DYING, &"lethal_hit")
+	return true
+
+func finish_death() -> bool:
+	if state != State.DYING:
+		return false
+	_transition(State.DEAD, &"death")
+	return true
+
 func end_campaign() -> bool:
 	if state != State.PLAYING:
 		return false
@@ -96,6 +108,8 @@ func return_to_menu() -> void:
 	_transition(State.MENU, &"menu")
 
 func _unhandled_input(event: InputEvent) -> void:
+	if state == State.DYING:
+		return # The concrete death sequence owns its minimum-duration skip action.
 	if event.is_action_pressed(&"pause", false):
 		if state == State.PLAYING:
 			pause_game()

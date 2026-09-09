@@ -26,8 +26,12 @@ Vor **Start** wird Easy, Medium, Hard oder Nightmare gewählt; Medium ist Standa
 
 Pistolenaufnahme und Stromschalter speichern automatisch. Nach Tod lässt sich der sichere Checkpoint neu starten. **Continue** erscheint bei einem gültigen, noch nicht abgeschlossenen Spielstand. **Start** beginnt eine neue Runde und ersetzt den kleinen Spielstand. Ein abgeschlossenes Spiel bleibt als beendet gespeichert; eine weitere Runde beginnt mit Start.
 
+Ein gültiger tödlicher Listener-Treffer löst eine kurze Griffsequenz aus. Nach 0,65 Sekunden kann sie mit **Enter oder Escape** übersprungen werden. Bei zu wenig Platz bleibt die Kamera an ihrem Ort. **Blood effects** und **Intense death animation** lassen sich unabhängig speichern. **Reduce motion** unterbindet den Kamerazug, Kopfbewegung und Kamerawackeln; auch beide Bewegungsregler auf null verhindern den Zug. Ohne intensive Bewegung folgt eine ruhige Abblendung. Die Bluteinstellung gilt weiterhin separat.
+
 Linux-Daten liegen unter `${XDG_DATA_HOME:-~/.local/share}/NULLSPACE/`: `saves/checkpoint-short.json`, `preferences/settings.json` und lokale Prüftelemetrie. Alte Entwicklungs-Spielstände `checkpoint.json` werden nicht überschrieben. Das Spiel benötigt kein Konto und sendet keine Telemetrie ins Netz.
 
 ## Noch offen
+
+v0.3 Beta Unstable ergänzt die Listener-Todesequenz. Auf Touch-Geräten lässt sie sich nach der kurzen Mindestdauer durch Antippen überspringen; am Desktop mit Enter/Escape. Blut und intensive Todesanimation sind getrennt einstellbar, reduzierte Bewegung verhindert das Heranziehen.
 
 Natürliche Erstspielzeit und Spannung, abschließende Audio-Hörprüfung, einzelne Präsentations-/Erstnutzungsruckler sowie zwei abschließende erfolgreiche Export-Durchläufe. Automatisierte Prüfungen und aufgezeichnetes Audio sind kein Beweis für subjektives Spielgefühl oder gehörte Audioqualität. Aktuelle Details: ISSUES.md und evidence/section/solo-e/ im Repository.

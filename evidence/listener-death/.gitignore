@@ -1,0 +1,4 @@
+# Retain isolated QA profiles locally; publish only explicit evidence copies.
+**/profile/
+# Full original captures remain local; complete compressed MP4 copies are published.
+**/*.mkv

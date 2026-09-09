@@ -1,0 +1,30 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{
+	"checks": 258,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"isolated_data": "/tmp/nullspace_core_tests-20260909094138551523",
+	"scope": "logical tests, not gameplay or experiential validation",
+	"suite": "M2 core"
+}
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"elapsed_seconds":1.0,"passed":true,"physics_tick":60,"render_frames":30,"scope":"headless logical scheduling only; no native frame-rate claim","suite":"shared-clock render-schedule probe"}
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"elapsed_seconds":1.0,"passed":true,"physics_tick":60,"render_frames":60,"scope":"headless logical scheduling only; no native frame-rate claim","suite":"shared-clock render-schedule probe"}
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"elapsed_seconds":1.0,"passed":true,"physics_tick":60,"render_frames":120,"scope":"headless logical scheduling only; no native frame-rate claim","suite":"shared-clock render-schedule probe"}
+Core logical and clock-schedule tests passed; log: /home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/releases/v0.3/logs/core.log

@@ -70,6 +70,7 @@ func _ready() -> void:
 	_check(saved["world"]["doors"][door.door_id] == "open", "Checkpoint stores stable semantic door state")
 	door.restore(false)
 	player.take_damage(100)
+	await get_tree().create_timer(1.0, true).timeout
 	GameFlow.continue_game()
 	await _frames(10)
 	_check(door.opened and GameFlow.state == NullGameFlow.State.PLAYING, "Death restore reinstates open door and safe player")

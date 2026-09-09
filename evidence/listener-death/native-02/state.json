@@ -1,0 +1,23 @@
+{
+  "cleanup_errors": [],
+  "defaults_after": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "ended_utc": "2026-09-05T08:04:49.287+00:00",
+  "error": "Another native QA session owns the GPU validation lease",
+  "experiential_review": "unverified",
+  "host_defaults_unchanged": false,
+  "method": "scripted_diagnostic",
+  "observed_or_heard": [],
+  "run_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/listener-death/native-02",
+  "schema": 1,
+  "started_utc": "2026-09-05T08:04:49.239+00:00",
+  "status": "failed",
+  "supervisor": {
+    "pid": 266245,
+    "process_group": 266245,
+    "session": 266245,
+    "start_ticks": 4403735
+  }
+}

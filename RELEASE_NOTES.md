@@ -1,4 +1,19 @@
-# v0.2 — Raw Beta
+# v0.3 — Beta Unstable
+
+Listener death feature integrated with current main, including difficulty modes and Android touch support.
+Download: https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3
+
+- A valid lethal Listener hit plays a guarded2.6-second grab, pull, finishing strike and collapse. Tight spaces use a short local death. Skip with Enter/Escape or a touch after the minimum duration; checkpoint restart clears the sequence.
+- Independent saved Blood effects and Intense death animation settings; Reduce motion overrides camera pulling. Existing death menu provides checkpoint restart or a new run with the selected difficulty, plus Main menu.
+- Linux and Windows x86-64 archives; signed offline Android ARM64 debug preview, versionCode4, package `dev.marius4lui.nullspace.preview`, using the existing preview signing key. No Gradle downloads.
+
+**Unstable prerelease, not a finished game.** Windows and physical Android validation remain unavailable; no heard-audio quality claim. Android retains the offline-template limitations described below. Known-route Linux completion is functional evidence, not a10–15minute first-play duration claim. See evidence/releases/v0.3/RELEASE.md for exact source, checks and artifacts.
+
+Extract desktop archives before launching. Android preview can update the same preview package; do not uninstall to resolve a signing mismatch because it deletes app data. Start replaces current progress. SHA256SUMS accompanies all downloads. Original credits/licences retained.
+
+---
+
+## v0.2 — Raw Beta (previous release)
 
 Second public prerelease: Android touch support plus the current main changes.
 Download: https://github.com/marius4lui/NULLSPACE/releases/tag/v0.2

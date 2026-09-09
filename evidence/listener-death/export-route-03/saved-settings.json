@@ -1,0 +1,9 @@
+{
+  "build_id": "0.5.0-flow-dev",
+  "content_version": 1,
+  "format_version": 1,
+  "kind": "settings",
+  "payload_json": "{\"ambience_volume\":0.8,\"blood_effects\":false,\"camera_shake\":0.5,\"center_dot\":true,\"display_mode\":\"windowed\",\"effects_volume\":0.8,\"fps_limit\":60,\"head_bob\":0.5,\"horizontal_fov\":88.0,\"intense_death\":false,\"invert_y\":false,\"master_volume\":0.8,\"mouse_sensitivity\":1.0,\"quality\":\"low\",\"reduced_flashes\":true,\"reduced_motion\":true,\"resolution\":[1920,1080],\"subtitles\":true,\"vsync\":true}",
+  "saved_utc": "2026-09-05T08:38:52",
+  "sha256": "d2e06e213407d1eb54e1be251571a4d0242d957a3d75136e89c2f4f8652a8bc9"
+}

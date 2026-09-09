@@ -1,0 +1,96 @@
+{
+  "source_commit": "11dcf11a6b30c6016f6691f91d86bc81d8c53f5c",
+  "exports": {
+    "linux": {
+      "file": "build/linux/nullspace.x86_64",
+      "sha256": "a958b459d16e5c4ec2747564307a406021dbbaafa4b19a3d7a6308400906a31c",
+      "build_info": "11dcf11a6b30c6016f6691f91d86bc81d8c53f5c\nEngine: 4.7.2.stable.official.ed1daf0bf\nPreset: Linux x86_64\n",
+      "native_tested": true
+    },
+    "windows": {
+      "file": "build/windows/NULLSPACE.exe",
+      "sha256": "2fd23ba540436e827ed587558c94eca348656c6c6e3b8d36ffb31c4489adec38",
+      "build_info": "11dcf11a6b30c6016f6691f91d86bc81d8c53f5c\nEngine: 4.7.2.stable.official.ed1daf0bf\nPreset: Windows x86_64\n",
+      "native_tested": false
+    }
+  },
+  "cleanup": {
+    "export-route-01": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "export-route-02": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "export-route-03": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "export-route-04": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "native-01": {
+      "status": "failed",
+      "error": "Another native QA session owns the GPU validation lease",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": null
+    },
+    "native-02": {
+      "status": "failed",
+      "error": "Another native QA session owns the GPU validation lease",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": null
+    },
+    "native-03": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "native-04": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "native-edges-01": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "native-final-edges": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    },
+    "native-final-matrix": {
+      "status": "stopped",
+      "error": null,
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true
+    }
+  },
+  "telemetry": [
+    "export-route-01/run_1788596926.69747_280762.jsonl",
+    "export-route-02/run_1788597249.54507_283672.jsonl",
+    "export-route-03/run_1788597310.00738_284156.jsonl",
+    "export-route-04/run_1788597682.71307_286611.jsonl",
+    "native-03/run_1788596034.787_271498.jsonl",
+    "native-04/run_1788596137.20671_273172.jsonl",
+    "native-edges-01/run_1788596177.94175_274292.jsonl",
+    "native-final-edges/run_1788596895.87475_280257.jsonl",
+    "native-final-matrix/run_1788596855.93387_279690.jsonl"
+  ]
+}

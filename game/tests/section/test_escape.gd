@@ -42,6 +42,7 @@ func _ready() -> void:
 			_check(saved.ok and saved.payload["progress"]["relays"][relay.relay_id], "Two-action physical relay commits power")
 			_check(section.exit_door.locked == (i == 0), "Exit needs BOTH separated circuits in either order")
 			section.player.take_damage(100)
+			await get_tree().create_timer(1.0, true).timeout
 			GameFlow.continue_game()
 			await _frames(10)
 			var expected: Vector3 = NullspaceSection.OFFICE_SAFE.origin if relay == section.office_relay else NullspaceSection.SERVICE_SAFE.origin

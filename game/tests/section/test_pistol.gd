@@ -61,6 +61,7 @@ func _ready() -> void:
 	_check("arrival_pistol" in saved["world"]["consumed_pickups"], "Consumed pickup persists")
 	gun.try_fire()
 	section.player.take_damage(100)
+	await get_tree().create_timer(1.0, true).timeout
 	GameFlow.continue_game()
 	await _frames(8)
 	_check(gun.snapshot() == saved["inventory"]["weapons"]["pistol"] and section.pistol_pickup.consumed,

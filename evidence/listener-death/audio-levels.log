@@ -1,0 +1,38 @@
+Input #0, matroska,webm, from 'evidence/listener-death/native-final-matrix/death-matrix.mkv':
+  Metadata:
+    ENCODER         : Lavf62.12.102
+  Duration: 00:00:34.52, start: 0.000000, bitrate: 5704 kb/s
+  Stream #0:0: Video: h264 (Constrained Baseline), yuv420p(tv, progressive), 1920x1080, 60 fps, 60 tbr, 1k tbn
+    Metadata:
+      ENCODER         : Lavc62.28.102 libx264
+      DURATION        : 00:00:34.217000000
+  Stream #0:1: Audio: flac, 48000 Hz, stereo, s16
+    Metadata:
+      ENCODER         : Lavc62.28.102 flac
+      DURATION        : 00:00:34.522000000
+[Parsed_volumedetect_0 @ 0x55eec2665600] n_samples: 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (flac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 pcm_s16le
+      DURATION        : 00:00:34.522000000
+[Parsed_volumedetect_0 @ 0x7fd694003d80] n_samples: 3313920
+[Parsed_volumedetect_0 @ 0x7fd694003d80] mean_volume: -41.1 dB
+[Parsed_volumedetect_0 @ 0x7fd694003d80] max_volume: -11.1 dB
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_11db: 10
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_12db: 9
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_13db: 42
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_14db: 85
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_15db: 138
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_16db: 308
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_17db: 392
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_18db: 625
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_19db: 720
+[Parsed_volumedetect_0 @ 0x7fd694003d80] histogram_20db: 1363
+[out#0/null @ 0x55eec26126c0] video:0KiB audio:6472KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:34.52 bitrate=N/A speed=2.59e+03x elapsed=0:00:00.01    

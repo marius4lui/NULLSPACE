@@ -87,6 +87,11 @@ func reset_at(anchor: Vector3) -> void:
 	_wounds = 0
 	_state_time = 0.0
 	_rest = 0.0
+	_perception_timer = 0.0
+	_attack_applied = false
+	_last_wound = -1000.0
+	_search_index = 0
+	_search_points.clear()
 	_path_timer = 0.0
 	_door_detour_time = 0.0
 	_blocked_time = 0.0
@@ -154,8 +159,10 @@ func _physics_process(delta: float) -> void:
 				_attack_applied = true
 				# Physical contact at impact time, not a cached visible flag or through-wall hit.
 				if _clear_attack():
-					player.take_damage(55.0)
+					player.take_damage(55.0, self)
 					Telemetry.record(&"listener_hit", {"health": player.health})
+					if GameFlow.state != NullGameFlow.State.PLAYING:
+						return
 			if _state_time >= 1.55:
 				_set_state(State.CHASING if sees_player else State.INVESTIGATING)
 		State.STAGGERED:

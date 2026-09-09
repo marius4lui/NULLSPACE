@@ -1,0 +1,129 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (12 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | NullGameFlow[39m[0m
+[   7% ] [90m[1mupdate_scripts_classes[22m | NullInputGate[39m[0m
+[  15% ] [90m[1mupdate_scripts_classes[22m | NullSettingsManager[39m[0m
+[  23% ] [90m[1mupdate_scripts_classes[22m | SettingsSchema[39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | EnvironmentSurfaceLibrary[39m[0m
+[  38% ] [90m[1mupdate_scripts_classes[22m | ShortMap[39m[0m
+[  46% ] [90m[1mupdate_scripts_classes[22m | SectionPlayer[39m[0m
+[  53% ] [90m[1mupdate_scripts_classes[22m | ListenerDeath[39m[0m
+[  61% ] [90m[1mupdate_scripts_classes[22m | NullspaceSection[39m[0m
+[  69% ] [90m[1mupdate_scripts_classes[22m | NullspaceSectionMenu[39m[0m
+[  76% ] [90m[1mupdate_scripts_classes[22m | SectionTouchControls[39m[0m
+[  84% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (25 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | app-icon.png[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | icon-background.svg[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | baseboard_basecolor.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | baseboard_normal.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | baseboard_orm.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | carpet_basecolor.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | carpet_normal.png[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | carpet_orm.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | ceiling_basecolor.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | ceiling_normal.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | ceiling_orm.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | diffuser_basecolor.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | diffuser_normal.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | diffuser_orm.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | fixture_detail_basecolor.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | fixture_detail_emission.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | fixture_detail_normal.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | fixture_detail_orm.png[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | painted_metal_basecolor.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | painted_metal_normal.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | painted_metal_orm.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | room_m4_macro.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | wallpaper_basecolor.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | wallpaper_normal.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | wallpaper_orm.png[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (25 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | wallpaper_orm.png[39m[0m
+[   3% ] [90m[1mreimport[22m | wallpaper_normal.png[39m[0m
+[   7% ] [90m[1mreimport[22m | wallpaper_basecolor.png[39m[0m
+[  11% ] [90m[1mreimport[22m | room_m4_macro.png[39m[0m
+[  15% ] [90m[1mreimport[22m | painted_metal_orm.png[39m[0m
+[  19% ] [90m[1mreimport[22m | painted_metal_normal.png[39m[0m
+[  23% ] [90m[1mreimport[22m | painted_metal_basecolor.png[39m[0m
+[  26% ] [90m[1mreimport[22m | fixture_detail_orm.png[39m[0m
+[  30% ] [90m[1mreimport[22m | fixture_detail_normal.png[39m[0m
+[  34% ] [90m[1mreimport[22m | fixture_detail_emission.png[39m[0m
+[  38% ] [90m[1mreimport[22m | fixture_detail_basecolor.png[39m[0m
+[  38% ] [90m[1mreimport[22m | fixture_detail_basecolor.png[39m[0m
+[  38% ] [90m[1mreimport[22m | fixture_detail_basecolor.png[39m[0m
+[  38% ] [90m[1mreimport[22m | fixture_detail_basecolor.png[39m[0m
+[  42% ] [90m[1mreimport[22m | diffuser_orm.png[39m[0m
+[  46% ] [90m[1mreimport[22m | diffuser_normal.png[39m[0m
+[  50% ] [90m[1mreimport[22m | diffuser_basecolor.png[39m[0m
+[  50% ] [90m[1mreimport[22m | diffuser_basecolor.png[39m[0m
+[  50% ] [90m[1mreimport[22m | diffuser_basecolor.png[39m[0m
+[  53% ] [90m[1mreimport[22m | ceiling_orm.png[39m[0m
+[  57% ] [90m[1mreimport[22m | ceiling_normal.png[39m[0m
+[  61% ] [90m[1mreimport[22m | ceiling_basecolor.png[39m[0m
+[  65% ] [90m[1mreimport[22m | carpet_orm.png[39m[0m
+[  69% ] [90m[1mreimport[22m | carpet_normal.png[39m[0m
+[  73% ] [90m[1mreimport[22m | carpet_basecolor.png[39m[0m
+[  76% ] [90m[1mreimport[22m | baseboard_orm.png[39m[0m
+[  80% ] [90m[1mreimport[22m | baseboard_normal.png[39m[0m
+[  80% ] [90m[1mreimport[22m | baseboard_normal.png[39m[0m
+[  80% ] [90m[1mreimport[22m | baseboard_normal.png[39m[0m
+[  80% ] [90m[1mreimport[22m | baseboard_normal.png[39m[0m
+[  84% ] [90m[1mreimport[22m | baseboard_basecolor.png[39m[0m
+[  88% ] [90m[1mreimport[22m | icon-background.svg[39m[0m
+[  92% ] [90m[1mreimport[22m | app-icon.png[39m[0m
+[  92% ] [90m[1mreimport[22m | app-icon.png[39m[0m
+[  92% ] [90m[1mreimport[22m | app-icon.png[39m[0m
+[  96% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (25 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+cannot connect to daemon at tcp:5037: Connection refused

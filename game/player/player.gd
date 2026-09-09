@@ -5,6 +5,7 @@ extends CharacterBody3D
 signal prompt_changed(text: String)
 signal flashlight_changed(enabled: bool)
 signal damaged
+signal lethal_hit(attacker: Listener)
 
 const STANDING_HEIGHT: float = 1.78
 const CROUCHED_HEIGHT: float = 1.10
@@ -49,6 +50,8 @@ func _ready() -> void:
 	_apply_settings(SettingsManager.snapshot())
 
 func _unhandled_input(event: InputEvent) -> void:
+	if GameFlow.state != NullGameFlow.State.PLAYING:
+		return
 	if event is InputEventMouseMotion:
 		if not InputGate.uses_touch():
 			_look(InputGate.look_delta(event))
@@ -149,6 +152,7 @@ func interaction_target() -> Node:
 
 func add_recoil(pitch: float, yaw: float) -> void:
 	var strength: float = float(_settings["camera_shake"])
+	if bool(_settings["reduced_motion"]): strength = 0
 	_pitch = clampf(_pitch + pitch * strength, -1.42, 1.42)
 	rotation.y += yaw * strength
 	head.rotation.x = _pitch
@@ -178,7 +182,7 @@ func restore_at(anchor: Transform3D, values: Dictionary) -> bool:
 	_invalidate_controls(InputGate.generation, &"restore")
 	return has_clearance()
 
-func take_damage(amount: float) -> void:
+func take_damage(amount: float, attacker: Listener = null) -> void:
 	if GameFlow.state != NullGameFlow.State.PLAYING or amount <= 0.0 or not is_finite(amount):
 		return
 	var actual: float = minf(amount, health)
@@ -187,12 +191,18 @@ func take_damage(amount: float) -> void:
 	damaged.emit()
 	EventHub.gameplay_metric.emit(&"damage", {"amount": actual})
 	if health <= 0.0:
-		GameFlow.die()
+		if lethal_hit.has_connections():
+			lethal_hit.emit(attacker)
+		else:
+			GameFlow.die()
 
 func _update_camera(delta: float, speed: float) -> void:
 	_injury = maxf(0.0, _injury - delta)
 	var bob: float = float(_settings["head_bob"])
 	var shake: float = float(_settings["camera_shake"])
+	if bool(_settings["reduced_motion"]):
+		bob = 0
+		shake = 0
 	var moving: float = minf(speed / TUNING.walk_speed, 1.3) if is_on_floor() else 0.0
 	var time: float = SimulationClock.sample().elapsed_seconds
 	head.position.y = _height - 0.14

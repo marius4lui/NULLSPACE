@@ -60,6 +60,7 @@ func _ready() -> void:
 			await _activate(section.emergency_relay)
 		_check(not section.exit_door.locked, id + " unlocks the exit after exactly its required switches")
 		section.player.take_damage(100)
+		await get_tree().create_timer(1.0).timeout
 		GameFlow.continue_game()
 		await _frames(10)
 		_check(GameFlow.state == NullGameFlow.State.PLAYING and section.difficulty_id == id

@@ -1,0 +1,3 @@
+{"error": "Another native QA session owns the GPU validation lease", "event": "session_failed", "monotonic": 43958.366389312, "utc": "2026-09-05T08:03:30.164+00:00"}
+{"event": "cleanup_started", "monotonic": 43958.366572855, "utc": "2026-09-05T08:03:30.164+00:00"}
+{"defaults_unchanged": false, "errors": [], "event": "cleanup_finished", "monotonic": 43958.394381354, "utc": "2026-09-05T08:03:30.192+00:00"}

@@ -1,5 +1,16 @@
 # Issues
 
+Listener death scoped update: wall-reaching arms, blood-off red tint, oversized
+blood and pre-death menu camera reset were found and corrected in this branch.
+Rendered matrix176 / edges79 and final headless death176/edges79/difficulty42 pass;
+final exported source7371e47 integrates main4250b49 and completes two fresh-start
+Medium routes after the last gameplay change. Fallback Restart also retains difficulty.
+Actual death/checkpoint restart/settings persistence also operated. Detailed
+scenarios, original failures and limitations: [report](evidence/listener-death/REPORT.md).
+No known blocking defect remains in this feature's exercised scenarios. Audio
+listening and native Windows remain unverified; general game duration/pacing
+issues below are not resolved by this scoped feature. Older0/2 entries below
+describe the pre-feature baseline, not these two later functional runs.
 Android scope 2026-09-08: ANDROID-001 open — no connected physical device; install/update, real multitouch/audio/thermal and final runs cannot yet be accepted. ANDROID-002 active — export and touch integration regression checks in progress. Existing DURATION-001 remains open; porting alone does not complete the approved game.
 
 Current GOAL_CONTRACT.md governs. No complete playable game/zero-defect claim. Full prior register and failures are archived and remain in evidence.

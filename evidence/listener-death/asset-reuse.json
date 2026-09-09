@@ -1,0 +1,30 @@
+{
+  "base": "2c1f97d",
+  "source": "320c014",
+  "prior_clips_unchanged": {
+    "attack": true,
+    "breathing": true,
+    "idle": true,
+    "listen": true,
+    "run": true,
+    "stagger": true,
+    "walk": true
+  },
+  "added_clips": [
+    "death_grab",
+    "death_local"
+  ],
+  "skin_joints": [
+    63,
+    63
+  ],
+  "mesh_attributes_unchanged": {
+    "POSITION": true,
+    "NORMAL": true,
+    "TEXCOORD_0": true,
+    "TANGENT": false,
+    "JOINTS_0": true,
+    "WEIGHTS_0": true
+  },
+  "tangent_max_absolute_difference": 0.00010000169277191162
+}

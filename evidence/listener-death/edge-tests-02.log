@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+EDGE_CASE Beside authored archive wall pull=true duration=2.6
+EDGE_CASE Through open authored doorway pull=true duration=2.6
+EDGE_CASE Facing away local fallback pull=false duration=0.85
+EDGE_CASE Crouched local fallback pull=false duration=0.85
+{"checks":77,"failures":[],"native":false,"suite":"Death actual wall/door"}
