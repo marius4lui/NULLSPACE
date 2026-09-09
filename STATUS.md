@@ -2,6 +2,9 @@
 
 ## v0.3 Beta Unstable — user authorized 2026-09-09
 
+[Published v0.3 prerelease](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3):
+Android ARM64 preview, Linux and Windows packages; all server digests verified.
+
 PR #4 merged into main1700f31, preserving Android/v0.2 and difficulty work.
 Version0.3.0-beta-unstable, Android preview versionCode4 with the existing key.
 All three builds and671 automated checks plus three clock probes pass. Rendered

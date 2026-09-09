@@ -7,6 +7,12 @@ was merged at07:44:07 UTC. Build/tag source is
 Subsequent evidence/status changes do not change runtime or packaged binaries.
 Release: [v0.3 Beta Unstable](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3).
 
+Publication complete: all three packages and SHA256SUMS uploaded, every GitHub
+asset digest/size matched the local file before publishing. The release is public,
+prerelease=true, draft=false, and was not marked latest stable. Tag v0.3 resolves
+to1700f31. [Published asset verification](publication.json). A transient DNS error
+and slow upload delayed delivery; the completed files were not replaced or rebuilt.
+
 ## Integration and tests
 
 Main had advanced through Android/v0.2. Mergece3e6a9 preserved Android controls,

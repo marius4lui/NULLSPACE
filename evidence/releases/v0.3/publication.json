@@ -1,0 +1,40 @@
+{
+  "id": 385317743,
+  "tag_name": "v0.3",
+  "name": "NULLSPACE v0.3 \u2014 Beta Unstable",
+  "draft": false,
+  "prerelease": true,
+  "published_at": "2026-09-09T08:05:04Z",
+  "html_url": "https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3",
+  "assets": [
+    {
+      "name": "NULLSPACE-v0.3-android-arm64-preview.apk",
+      "size": 109305065,
+      "state": "uploaded",
+      "digest": "sha256:9d8c3fd774bb6d497a82c4c5c3293655c6aca90c8b4242c7109790cfb20ed076",
+      "browser_download_url": "https://github.com/marius4lui/NULLSPACE/releases/download/v0.3/NULLSPACE-v0.3-android-arm64-preview.apk"
+    },
+    {
+      "name": "NULLSPACE-v0.3-linux-x86_64.tar.gz",
+      "size": 86689741,
+      "state": "uploaded",
+      "digest": "sha256:b5cfbd9882e207c06af330e84ee28b33d5f3806ab2a0dd55d6163c6a4dac0d6d",
+      "browser_download_url": "https://github.com/marius4lui/NULLSPACE/releases/download/v0.3/NULLSPACE-v0.3-linux-x86_64.tar.gz"
+    },
+    {
+      "name": "NULLSPACE-v0.3-windows-x86_64.zip",
+      "size": 96604545,
+      "state": "uploaded",
+      "digest": "sha256:f4fa564b83fa0e3a1a44c8bbc187f1d02ae4cfb00dd7c0b14dc44d99e4e86f39",
+      "browser_download_url": "https://github.com/marius4lui/NULLSPACE/releases/download/v0.3/NULLSPACE-v0.3-windows-x86_64.zip"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 308,
+      "state": "uploaded",
+      "digest": "sha256:5f1cffc50a8dadd1538d86136f82359ccf3c8df7206f1d7e77cd513895b69837",
+      "browser_download_url": "https://github.com/marius4lui/NULLSPACE/releases/download/v0.3/SHA256SUMS"
+    }
+  ],
+  "verified_against_local_files": true
+}
