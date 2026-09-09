@@ -1,0 +1,27 @@
+{
+  "allow_physical_input": false,
+  "command": [
+    "/home/marius/.local/share/nullspace/toolchains/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64",
+    "--path",
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/game",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "mobile",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--windowed",
+    "res://tests/section/test_listener_death.tscn",
+    "--",
+    "--touch-ui"
+  ],
+  "cwd": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death",
+  "height": 1080,
+  "icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+  "method": "scripted_diagnostic",
+  "startup_timeout": 60.0,
+  "weston": "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+  "width": 1920
+}

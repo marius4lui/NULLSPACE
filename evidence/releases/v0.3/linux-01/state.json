@@ -1,0 +1,300 @@
+{
+  "audio": {
+    "channel_map": "front-left,front-right",
+    "monitor": "nullspace_qa_c0fe36ce945dcdec.monitor",
+    "owner_module": 536870916,
+    "sample_specification": "float32le 2ch 48000Hz",
+    "sink_index": 230,
+    "sink_name": "nullspace_qa_c0fe36ce945dcdec",
+    "stream_ids": [],
+    "stream_pids": []
+  },
+  "authority": "/run/user/1000/nullspace-qa-erw9090h/Xauthority",
+  "capture": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "cleanup_errors": [],
+  "command": [
+    "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/build/linux/nullspace.x86_64",
+    "--display-driver",
+    "x11",
+    "--rendering-method",
+    "forward_plus",
+    "--rendering-driver",
+    "vulkan",
+    "--audio-driver",
+    "PulseAudio",
+    "--windowed"
+  ],
+  "compositor": {
+    "backend": "weston_headless_gl_fake_seat",
+    "command": [
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+      "--backend=headless",
+      "--renderer=gl",
+      "--fake-seat",
+      "--no-config",
+      "--socket=wayland-private",
+      "--width=1920",
+      "--height=1080",
+      "--refresh-rate=60000",
+      "--idle-time=0",
+      "--shell=kiosk-shell.so"
+    ],
+    "device_descriptors": [
+      "/dev/dri/renderD128",
+      "/dev/null"
+    ],
+    "executable": "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/bin/weston",
+    "executable_sha256": "b9f15748a1612c321896f3f2d24f6ea2417db7bedeb68a303cef28d007615747",
+    "host_parent_display": null,
+    "meaning": "Headless backend has no physical input/output or parent compositor; fake seat is protocol compatibility only.",
+    "module_hashes": {
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/color-lcms.so": "5dc15cc9d7abae94fbf3dcd2e136b365e46d559de3fff3a585ed1679bd73ad67",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/drm-backend.so": "4564e174102baf0126c5f51f3a59d02f67e3dc859151692e982580c8d01a6957",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/gl-renderer.so": "34850394518bf8e085fdf6d59b5efac5cc6182a2070d0592b42332d7565f1ccb",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/headless-backend.so": "1aa3669519b4953819afd7e1e64de87e8750650fed6d906971dbc3a1a65ed077",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/pipewire-backend.so": "92967b5edacf90da279b94b1f747e1455d6f76c06adb14efda0f0d1c1e2627e0",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/rdp-backend.so": "9359842032dc1c4f1ac38ac60a8517839da10bc00e14c2000c9a72b7f0b1ca8b",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/vnc-backend.so": "c5622e6a30b4f9ee6d05a48278b44f2954689bd0fdcd958e2ad1047dbb89930e",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/vulkan-renderer.so": "df97025db075ab8460b6eae06a7ca048640e10019af425d0f5d1a74fe3ebcba5",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/wayland-backend.so": "0192a67861ae3b530521a19e091661d8508d61df5ab088629717c96a1bc4cdfb",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/x11-backend.so": "411af33fdcbe1dc1b1da3a273097b6be46d8e4eb976607d28591500f24ed770b",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/libweston-15/xwayland.so": "367a1c1df16e84f0a47d6a6a022d87cd99c867a951b9ed0b45953899885f55c5",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/desktop-shell.so": "c96518fcc3555dc80e93c68c63189003221a2a719a92ecf37223e1d945ed8836",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/hmi-controller.so": "e512ff676afbb75f639148cb223764ede2a04e868ab22d8ef5fd5f065f094072",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/ivi-shell.so": "902ad87382db192d2d8427e538f990a0294fa9554fb346db1979c7b0ac85141a",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/kiosk-shell.so": "a73ced8ea7ecf7532b6a6616a216afb9a3110be4304f7d29a56f03c2faf9a859",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/libexec_weston.so": "dc4d58b305f7a25071d44eec14ae619d619e33f53b8a9a6d9b663a81cb538687",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/lua-shell.so": "fa6a7329b656ca2eb3cd312deb66602b472f6b4cb5bf2e460879e029b4b374b8",
+      "/home/marius/.local/share/nullspace/toolchains/weston-15.0.1-fedora44/usr/lib64/weston/systemd-notify.so": "596d819b7fabc63b88cd0f6799d28ab4d025c47effcce475e75ada8ac07bd53c"
+    },
+    "runtime": "/run/user/1000/nullspace-qa-erw9090h/wayland-runtime",
+    "socket": "/run/user/1000/nullspace-qa-erw9090h/wayland-runtime/wayland-private",
+    "socket_peer": {
+      "gid": 1000,
+      "pid": 15832,
+      "uid": 1000
+    },
+    "version": "weston 15.0.1"
+  },
+  "control_socket": "/run/user/1000/nullspace-qa-erw9090h/control.sock",
+  "controlled_provenance_valid": true,
+  "defaults_after": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "defaults_before": {
+    "sink": "alsa_output.pci-0000_04_00.6.HiFi__Speaker__sink",
+    "source": "alsa_input.pci-0000_04_00.6.HiFi__Mic1__source"
+  },
+  "display": ":2",
+  "ended_utc": "2026-09-09T07:47:02.433+00:00",
+  "executable_sha256": "33b94ee221b1e5fafc84f80f10364b545b2aa30b027acdd09912412afde5bd37",
+  "experiential_review": "unverified",
+  "game_git": {
+    "clean": false,
+    "commit": "1700f3184db551a74768556c9feccbccbd9269ec",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death"
+  },
+  "game_project": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/build/linux",
+  "game_source_hashes": {},
+  "gpu_icd": "/usr/share/vulkan/icd.d/radeon_icd.x86_64.json",
+  "harness_git": {
+    "clean": false,
+    "commit": "1700f3184db551a74768556c9feccbccbd9269ec",
+    "root": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death"
+  },
+  "harness_source_hashes": {
+    "analyze_fixture_media.py": "90c010791bca2736ba981c9c975bd46ea188d1e9580d0afc08663dd6edf5d2b7",
+    "capture_listener_death.py": "dedfd627f5558322072a5a01682762fe0db14aa84e83dc48021d3abddd9ee607",
+    "fixtures/input_render_audio/fixture.gd": "f700705f4d4982b559d9a1dd23ad524883370db9c9b0d8ca89377c47e2e61687",
+    "fixtures/input_render_audio/fixture.tscn": "1500aa2df74eb6e8b58f10673ae7b9780c0c814ae9d2febdb108920c67cfa3ec",
+    "fixtures/input_render_audio/project.godot": "64a0d543ce31341e1ff23356e42de3b8f78624a1bd650045b47957ccaaa4c863",
+    "fixtures/window_exit.py": "29e14d7a0133f7e83172ec895e74a9ff5c57230c7aa943fa2a3da42074158a8c",
+    "headless_backend.py": "7beea28b470dba1f1c61a26c776068a7306b43fe77529381086f74e5fbcf39b4",
+    "manifest.py": "719e633dca86e65a3aa54306b552066c35a06bc0842c81861bebd84d43e5f34c",
+    "media_capture.py": "2df134d6835beaa758fe4f6a4b677365bd27dc573be759963eba48ebe958d188",
+    "native.py": "d09cd3914896962b88eec34deef748a8aec1b9185fc2e0814c78a9ba7c8197ba",
+    "native_session.py": "6019f55647835242211fa475d2a7b2a5113f3376ab0d1ed5d0dadadd2404bc24",
+    "private_seat.py": "5d6141ae05b9a438363f11f6d31d38987b41c3d85222b6134e6da22740b1460d",
+    "prove_exit.py": "86454cb3427489fc44752a2b594156246914d87872048b96f1d4dc840b092f15",
+    "prove_fixture.py": "1edb665831c5ebc0d1a4a4ef1f73b799fc08e6ba207324b57e4eccf3d7626a97",
+    "prove_freshness.py": "116a7a4a0f65147c42c049d0bd5c8dc6010cfb6759796f80be57b091d3181b67",
+    "prove_safety.py": "15cb0d864441b10996490fa50547546ec163aa9943c80a0b8097ec3120e1b6ef",
+    "qa_common.py": "a528e789415f61ce916f0ca8854e3706b44e5dae52bb2cd3887100a5a894df35",
+    "recover_session.py": "28c02e4a2fa6e0cd7b1f4216d3af0d9f577a7a2d26380a87c60138df5200f633",
+    "replay_short_escape.py": "952874728e3778c3bd64eff572d1e01e3e1aa7aa0fc729a0a0adb294ec7aeb5d",
+    "tests/test_exit_lifecycle.py": "74ff4e643f1d130db88c1e0fc226992706aec02be5d0775d1267f1cbcb2c6d74",
+    "tests/test_freshness.py": "02d96f00ab7a5ce5b81e79e7ec1bfac55631b82092e62d1fef4e404ec1525c39",
+    "tests/test_safety.py": "8bcd8d19c32aa8550947b584ffa43ff66c64b2ec79504bd5ae07d1402e8d8de0",
+    "window_capture.py": "50c864519b2d0959550a9cfd6899e8487261b6f8c9b3c048028da273d88dfd48",
+    "x11_input.py": "548e3899ad4031304c42939bc6f9a4485e9a6497a39383966e7bb6c20f9accf6"
+  },
+  "host": {
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "os": "Linux 7.1.12-200.fc44.x86_64 x86_64 GNU/Linux",
+    "pipewire": "pipewire\nCompiled with libpipewire 1.6.8\nLinked with libpipewire 1.6.8",
+    "xwayland": "xorg-x11-server-Xwayland-24.1.13-1.fc44.x86_64"
+  },
+  "host_defaults_unchanged": true,
+  "method": "scripted_diagnostic",
+  "monitor": "nullspace_qa_c0fe36ce945dcdec.monitor",
+  "observed_or_heard": [],
+  "private_seat": {
+    "audits": 1159,
+    "devices": [
+      {
+        "attachment": 3,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 2,
+        "name": "Virtual core pointer",
+        "role": "master",
+        "use": 1,
+        "xtest_property": null
+      },
+      {
+        "attachment": 2,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 3,
+        "name": "Virtual core keyboard",
+        "role": "master",
+        "use": 2,
+        "xtest_property": null
+      },
+      {
+        "attachment": 2,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 4,
+        "name": "Virtual core XTEST pointer",
+        "role": "xtest",
+        "use": 3,
+        "xtest_property": 1
+      },
+      {
+        "attachment": 3,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 5,
+        "name": "Virtual core XTEST keyboard",
+        "role": "xtest",
+        "use": 4,
+        "xtest_property": 1
+      },
+      {
+        "attachment": 2,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 6,
+        "name": "xwayland-pointer:16",
+        "role": "inputless_protocol",
+        "use": 3,
+        "xtest_property": null
+      },
+      {
+        "attachment": 2,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 7,
+        "name": "xwayland-relative-pointer:16",
+        "role": "inputless_protocol",
+        "use": 3,
+        "xtest_property": null
+      },
+      {
+        "attachment": 2,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 8,
+        "name": "xwayland-pointer-gestures:16",
+        "role": "inputless_protocol",
+        "use": 3,
+        "xtest_property": null
+      },
+      {
+        "attachment": 3,
+        "device_enabled": 1,
+        "enabled": true,
+        "id": 9,
+        "name": "xwayland-keyboard:16",
+        "role": "inputless_protocol",
+        "use": 4,
+        "xtest_property": null
+      }
+    ],
+    "policy": "xtest_only_inputless_compositor",
+    "raw_counts": {
+      "key_press": 102,
+      "key_release": 102,
+      "motion": 44
+    }
+  },
+  "processes": {
+    "game": {
+      "exit_code": -15,
+      "pid": 15869,
+      "process_group": 15869,
+      "session": 15869,
+      "start_ticks": 64534
+    },
+    "weston": {
+      "exit_code": 0,
+      "pid": 15832,
+      "process_group": 15832,
+      "session": 15832,
+      "start_ticks": 64511
+    },
+    "xwayland": {
+      "exit_code": 0,
+      "pid": 15850,
+      "process_group": 15850,
+      "session": 15850,
+      "start_ticks": 64521
+    }
+  },
+  "profile": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/releases/v0.3/linux-01/profile",
+  "ready_utc": "2026-09-09T07:46:04.566+00:00",
+  "run_dir": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/releases/v0.3/linux-01",
+  "runtime_dir": "/run/user/1000/nullspace-qa-erw9090h",
+  "schema": 1,
+  "sink_module": "536870916",
+  "sink_name": "nullspace_qa_c0fe36ce945dcdec",
+  "started_utc": "2026-09-09T07:46:03.668+00:00",
+  "status": "stopped",
+  "supervisor": {
+    "pid": 15808,
+    "process_group": 15808,
+    "session": 15808,
+    "start_ticks": 64480
+  },
+  "vulkan_device_lines": [
+    "deviceType         = PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU",
+    "deviceName         = AMD Radeon 660M (RADV REMBRANDT)",
+    "driverName         = radv",
+    "driverInfo         = Mesa 26.1.8"
+  ],
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 15869
+  }
+}

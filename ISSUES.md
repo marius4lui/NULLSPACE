@@ -1,5 +1,12 @@
 # Issues
 
+v0.3 integration: Listener death and Android preferences/layout/input combined;
+minimum-gated touch skip and checkpoint restart pass. All671 automated assertions
+and three clock probes pass, with two successful full Linux export runs from main1700f31.
+No new blocking regression found in the exercised scenarios. Existing Android
+template/device, touch-fixture shutdown warning, listening and first-play duration
+limits remain open. [Release audit](evidence/releases/v0.3/RELEASE.md).
+
 Listener death scoped update: wall-reaching arms, blood-off red tint, oversized
 blood and pre-death menu camera reset were found and corrected in this branch.
 Rendered matrix176 / edges79 and final headless death176/edges79/difficulty42 pass;

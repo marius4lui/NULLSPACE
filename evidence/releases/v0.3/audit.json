@@ -1,0 +1,202 @@
+{
+  "source_commit": "1700f3184db551a74768556c9feccbccbd9269ec",
+  "runtime_tree": "984e4ae337e54788dbf663342eea12a403ec6d84",
+  "native_fixture_source": "ce3e6a9",
+  "runs": {
+    "native-mobile": {
+      "status": "stopped",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true,
+      "telemetry": "run_1788939714.42817_13868.jsonl",
+      "frame_windows": {
+        "count": 4,
+        "p50_range": [
+          16.663,
+          16.676
+        ],
+        "p95_range": [
+          17.008,
+          28.845
+        ],
+        "max": 939.485
+      }
+    },
+    "linux-01": {
+      "status": "stopped",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true,
+      "telemetry": "run_1788939965.99118_15869.jsonl",
+      "frame_windows": {
+        "count": 10,
+        "p50_range": [
+          16.662,
+          16.72
+        ],
+        "p95_range": [
+          16.913,
+          19.019
+        ],
+        "max": 47.34
+      },
+      "ending": [
+        {
+          "event": "escape_complete",
+          "flow": "PLAYING",
+          "focused": true,
+          "frame": 3161,
+          "input_provenance": "unverified_os_input",
+          "monotonic_usec": 56250198,
+          "paused": false,
+          "physics_tick": 3186,
+          "session_id": "536f76fcc6e6fb7e1217ddb4903b8c01",
+          "simulation_epoch": 1,
+          "simulation_seconds": 52.816666666665,
+          "simulation_tick": 3169,
+          "utc": "2026-09-09T07:47:00",
+          "values": {
+            "ammo": {
+              "chamber": 0,
+              "magazine": 0,
+              "owned": false,
+              "reserve": 0
+            },
+            "health": 45.0,
+            "seconds": 52.816666666665,
+            "shots": 0
+          }
+        }
+      ],
+      "boot_settings": {
+        "ambience_volume": 0.8,
+        "blood_effects": true,
+        "camera_shake": 0.5,
+        "center_dot": true,
+        "display_mode": "windowed",
+        "effects_volume": 0.8,
+        "fps_limit": 60,
+        "head_bob": 0.5,
+        "horizontal_fov": 88.0,
+        "intense_death": true,
+        "invert_y": false,
+        "master_volume": 0.8,
+        "mouse_sensitivity": 1.0,
+        "quality": "low",
+        "reduced_flashes": false,
+        "reduced_motion": false,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "subtitles": true,
+        "touch_opacity": 0.65,
+        "touch_sensitivity": 1.0,
+        "touch_size": 1.0,
+        "vsync": true
+      }
+    },
+    "linux-02": {
+      "status": "stopped",
+      "cleanup_errors": [],
+      "audio_defaults_unchanged": true,
+      "telemetry": "run_1788940024.06884_16129.jsonl",
+      "frame_windows": {
+        "count": 10,
+        "p50_range": [
+          16.659,
+          16.847
+        ],
+        "p95_range": [
+          16.895,
+          19.318
+        ],
+        "max": 27.623
+      },
+      "ending": [
+        {
+          "event": "escape_complete",
+          "flow": "PLAYING",
+          "focused": true,
+          "frame": 3205,
+          "input_provenance": "unverified_os_input",
+          "monotonic_usec": 55126964,
+          "paused": false,
+          "physics_tick": 3244,
+          "session_id": "1fe194505b223507c32a7aed93a2101b",
+          "simulation_epoch": 1,
+          "simulation_seconds": 52.8999999999983,
+          "simulation_tick": 3174,
+          "utc": "2026-09-09T07:47:58",
+          "values": {
+            "ammo": {
+              "chamber": 0,
+              "magazine": 0,
+              "owned": false,
+              "reserve": 0
+            },
+            "health": 45.0,
+            "seconds": 52.8999999999983,
+            "shots": 0
+          }
+        }
+      ],
+      "boot_settings": {
+        "ambience_volume": 0.8,
+        "blood_effects": false,
+        "camera_shake": 0.5,
+        "center_dot": true,
+        "display_mode": "windowed",
+        "effects_volume": 0.8,
+        "fps_limit": 60,
+        "head_bob": 0.5,
+        "horizontal_fov": 88.0,
+        "intense_death": false,
+        "invert_y": false,
+        "master_volume": 0.8,
+        "mouse_sensitivity": 1.0,
+        "quality": "low",
+        "reduced_flashes": true,
+        "reduced_motion": true,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "subtitles": true,
+        "touch_opacity": 0.65,
+        "touch_sensitivity": 1.0,
+        "touch_size": 1.0,
+        "vsync": true
+      }
+    }
+  },
+  "binaries": {
+    "linux": "33b94ee221b1e5fafc84f80f10364b545b2aa30b027acdd09912412afde5bd37",
+    "windows": "d127d4d3aae105c9c36006ecb45b494cc0d84e6df6a425e6b55619f26e5be59a",
+    "android": "9d8c3fd774bb6d497a82c4c5c3293655c6aca90c8b4242c7109790cfb20ed076"
+  },
+  "assets": {
+    "NULLSPACE-v0.3-android-arm64-preview.apk": {
+      "sha256": "9d8c3fd774bb6d497a82c4c5c3293655c6aca90c8b4242c7109790cfb20ed076",
+      "bytes": 109305065
+    },
+    "NULLSPACE-v0.3-linux-x86_64.tar.gz": {
+      "sha256": "b5cfbd9882e207c06af330e84ee28b33d5f3806ab2a0dd55d6163c6a4dac0d6d",
+      "bytes": 86689741
+    },
+    "NULLSPACE-v0.3-windows-x86_64.zip": {
+      "sha256": "f4fa564b83fa0e3a1a44c8bbc187f1d02ae4cfb00dd7c0b14dc44d99e4e86f39",
+      "bytes": 96604545
+    }
+  },
+  "video": {
+    "mkv": {
+      "sha256": "a8ca2790f3222ace59559b096ac5c6ecc449debf06884d9310b3b8deab217261",
+      "duration": 35.018,
+      "original_retained_locally": true
+    },
+    "mp4": {
+      "sha256": "e81b95811d10307d834ba41f4bc9fa0ed40bff1489c49ecbe0388688fbea85f4",
+      "duration": 35.018,
+      "original_retained_locally": false
+    }
+  }
+}

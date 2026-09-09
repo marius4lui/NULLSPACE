@@ -2,11 +2,12 @@
 
 ## v0.3 Beta Unstable — user authorized 2026-09-09
 
-PR #4 is being integrated with current main326eddf (Android/v0.2). Additive touch
-and death preferences are both retained; touch now skips death after its minimum.
+PR #4 merged into main1700f31, preserving Android/v0.2 and difficulty work.
 Version0.3.0-beta-unstable, Android preview versionCode4 with the existing key.
-Release checks/build/publication in progress; this is an unstable prerelease,
-not Android hardware or complete-game acceptance. Evidence: evidence/releases/v0.3/.
+All three builds and671 automated checks plus three clock probes pass. Rendered
+Mobile/touch death176 checks pass; two full Medium Linux export runs succeed after
+the last gameplay change (52.82/52.90s). This is an unstable prerelease, not Android
+hardware/listening/first-play acceptance. [Release evidence](evidence/releases/v0.3/RELEASE.md).
 
 Listener death task (feat/listener-death): implemented and tested in the existing
 section. Guarded2.6s grab/local fallback, independent persisted blood/intensity,
@@ -15,8 +16,8 @@ scene90, death176, edge79 and difficulty42 checks pass; rendered matrix/edge vid
 Final Linux export7371e47 integrates main4250b49 and has two successful fresh-start
 Medium functional runs after the last gameplay change (52.78/52.83s). Windows cross-export only; no heard-audio
 or10–15min first-play claim. [Evidence and batch record](evidence/listener-death/REPORT.md).
-[PR #4](https://github.com/marius4lui/NULLSPACE/pull/4) is open against main,
-not merged.20/20 batches; final integration checks complete. Main itself is preserved.
+[PR #4](https://github.com/marius4lui/NULLSPACE/pull/4) completed its original feature
+task in20/20 batches; subsequently merged by the user's v0.3 request on2026-09-09.
 
 The following records describe the raw-beta baseline before this scoped task;
 their broader first-play, pacing and listening gaps remain open:

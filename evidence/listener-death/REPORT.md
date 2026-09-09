@@ -1,5 +1,9 @@
 # Listener death — bounded implementation and validation
 
+Subsequent user authorization2026-09-09: PR #4 has now been merged into main as
+1700f31 for v0.3 Beta Unstable. [Release/integration checks](../releases/v0.3/RELEASE.md)
+supersede the delivery status below; this original20-batch feature record is retained.
+
 Task authority: user's attached goal-objective.md, 2026-09-05. This task adds the
 Listener death sequence, death screen and independent blood/intensity settings to
 the existing section. It does not claim to resolve the raw beta's prior duration,

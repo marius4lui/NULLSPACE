@@ -1,0 +1,33 @@
+{
+  "acquired_monotonic": 703.194009754,
+  "acquired_utc": "2026-09-09T07:47:01.987+00:00",
+  "composite": {
+    "method": "composite_redirect_automatic_owned_window",
+    "scope": "verified game window only; no root/subwindow-list redirection",
+    "version": [
+      0,
+      4
+    ],
+    "window_id": 6291458
+  },
+  "method": "composite_named_pixmap_getimage",
+  "path": "/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/evidence/releases/v0.3/linux-01/route-result.png",
+  "pixel_layout": "32-bit little-endian BGRX, RGB output",
+  "sha256": "1f332cb5dc4d239025176e09f2429d3f9a59944fed04206e91b733fbf01a8bc2",
+  "window": {
+    "focus_window_id": 6291458,
+    "focused": true,
+    "height": 1080,
+    "held_buttons": [],
+    "held_keys": [],
+    "pointer": [
+      960,
+      540
+    ],
+    "title": "NULLSPACE",
+    "width": 1920,
+    "window_id": 6291458,
+    "window_pid": 15869
+  },
+  "x_readback_ms": 38.27096299994537
+}

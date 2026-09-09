@@ -1,0 +1,2 @@
+warn: resource com.godot.game:mipmap/themed_icon for config 'anydpi-v26' is a file reference to 'res/mipmap-anydpi-v26/themed_icon.xml' but no such path exists.
+/home/marius/Projekte/Dev/NULLSPACE-worktrees/listener-death/build/android/NULLSPACE-android-offline-preview.apk
