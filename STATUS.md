@@ -2,13 +2,17 @@
 
 ## v0.3.1 Windows Start Hotfix — 2026-09-19
 
-Issue #5 tracks a Windows startup-focus defect in v0.2/v0.3. The game sampled
+[Published v0.3.1 prerelease](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3.1):
+native Windows and cross-exported Linux packages; all server digests verified.
+Issue #5 tracked a Windows startup-focus defect in v0.2/v0.3. The game sampled
 window focus before the native window became active, retained `focused=false`, and
 changed a zero-time new campaign from LOADING to PAUSED (`load_ready_unfocused`).
 The hotfix refreshes native focus at load completion while preserving explicit
 headless focus branches and genuine focus-loss pausing. Version 0.3.1 beta unstable,
-Android versionCode5. Release validation and publication evidence is recorded under
-`evidence/releases/v0.3.1/`.
+Android versionCode5; no new Android package was published for this desktop hotfix.
+Core260 plus three clock probes pass. The Windows release build reached PLAYING via
+`load_ready` at zero time, and the reporter manually confirmed Start works. Release
+validation and publication evidence is recorded under `evidence/releases/v0.3.1/`.
 
 ## v0.3 Beta Unstable — user authorized 2026-09-09
 
