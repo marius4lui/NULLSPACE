@@ -48,7 +48,15 @@ func touch_look(relative: Vector2, viewport_height: float) -> void:
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	focused = DisplayServer.get_name() == "headless" or DisplayServer.window_is_focused()
+	refresh_focus()
+
+func refresh_focus() -> bool:
+	# The Windows window can be created after autoload initialization, so the
+	# initial focus sample may be false even though the player is using the menu.
+	# Headless tests control this value directly to exercise both focus branches.
+	if DisplayServer.get_name() != "headless":
+		focused = DisplayServer.window_is_focused()
+	return focused
 
 func set_gameplay_enabled(enabled: bool, reason: StringName) -> void:
 	invalidate(reason)

@@ -199,6 +199,11 @@ func _test_settings() -> void:
 func _test_flow_and_input() -> void:
 	SaveSystem.storage_directory = _directory.path_join("flow")
 	InputGate.focused = true
+	if DisplayServer.get_name() == "headless":
+		_check(InputGate.refresh_focus(), "Headless focused load state remains controllable")
+		InputGate.focused = false
+		_check(not InputGate.refresh_focus(), "Headless unfocused load state remains controllable")
+		InputGate.focused = true
 	GameFlow.return_to_menu()
 	_check(not GameFlow.complete_load(100), "Unsolicited load completion rejected")
 	_check(not GameFlow.continue_game().ok and GameFlow.state == NullGameFlow.State.MENU, "Missing Continue leaves title active")

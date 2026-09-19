@@ -1,4 +1,14 @@
-# v0.3 — Beta Unstable
+# v0.3.1 — Windows Start Hotfix
+
+Hotfix for [#5](https://github.com/marius4lui/NULLSPACE/issues/5): Windows builds now refresh the actual game-window focus when a new game or checkpoint finishes loading. Starting a new campaign no longer opens the pause screen with **Resume** before gameplay begins. Genuine focus loss still keeps the loaded game paused.
+
+This prerelease contains the complete v0.3 game plus this focused startup fix. Windows is validated for title → Start → active gameplay on the reported machine. Other v0.3 limitations remain unchanged.
+
+Download: https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3.1
+
+---
+
+## v0.3 — Beta Unstable (previous release)
 
 Listener death feature integrated with current main, including difficulty modes and Android touch support.
 Download: https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3

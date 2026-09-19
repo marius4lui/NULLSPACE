@@ -37,10 +37,11 @@ func complete_load(generation: int) -> bool:
 	if state != State.LOADING or generation < 1 or generation != pending_generation:
 		return false
 	pending_generation = -1
+	var load_focused: bool = InputGate.refresh_focus()
 	# Focus can be lost during asynchronous world staging. Keep a ready world paused
 	# until an explicit focused Resume; never run it while gameplay owns no input.
-	_transition(State.PLAYING if InputGate.focused else State.PAUSED,
-		&"load_ready" if InputGate.focused else &"load_ready_unfocused")
+	_transition(State.PLAYING if load_focused else State.PAUSED,
+		&"load_ready" if load_focused else &"load_ready_unfocused")
 	return true
 
 func fail_load(generation: int, detail: String) -> bool:

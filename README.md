@@ -52,7 +52,7 @@ Minimum requirements are not established yet. Performance will be reported with 
 
 ## Current state
 
-**[Download v0.3 — Beta Unstable](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3)** · Listener death feature · Android ARM64 preview, Linux x86-64 and Windows x86-64 · Unstable prerelease.
+**[Download v0.3.1 — Windows Start Hotfix](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3.1)** · Fixes new campaigns opening on the Resume screen in Windows · Includes the complete v0.3 game · Unstable prerelease.
 
 Android adds touch movement/look/fire/actions, mobile graphics profiles and pause/resume handling. The signed debug preview is built from the local offline template. Physical installation, real-device controls/audio/performance and full runs remain unverified; see [Android build and limitations](tools/android/README.md). Existing main difficulty modes and website changes are preserved. This is not the final Android release.
 
