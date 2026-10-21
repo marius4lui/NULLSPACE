@@ -52,8 +52,11 @@ static func validate(snapshot: Dictionary) -> PackedStringArray:
 	if not player.get("flashlight_enabled") is bool or player.get("equipped_weapon") not in ["", "pistol"]:
 		errors.append("Invalid player equipment state.")
 	_validate_inventory(snapshot["inventory"], player, errors)
-	_validate_progress(snapshot["progress"], snapshot["world"], errors)
 	_validate_world(snapshot["world"], errors)
+	# Ending checks consume difficulty and emergency circuit flags. Reject malformed
+	# world values before interpreting them as gameplay state.
+	if errors.is_empty():
+		_validate_progress(snapshot["progress"], snapshot["world"], errors)
 	return errors
 
 static func normalize(snapshot: Dictionary) -> Dictionary:
